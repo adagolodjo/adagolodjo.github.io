@@ -5,8 +5,8 @@ layout: home
 # welcome !
 
 
-[about us](about.md)
+[about us][about.md]
 
-[eductation](educations.md)
+[eductation][educations.md]
 
-[publication](publications.md)
+[publication][publications.md]
