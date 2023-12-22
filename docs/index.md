@@ -2,10 +2,10 @@
 layout: home
 ---
 
-# welcome !
+# welcome to index.md !
 
-
-[about us][about.md]
+Link to :
+(about us)[about.md]
 
 [eductation][educations.md]
 
