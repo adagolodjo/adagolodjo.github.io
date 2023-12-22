@@ -1,7 +1,10 @@
-# welcome to index.md !
+---
+page : home
+---
+# welcome to index.md in docs folder ! 
 
 Link to :
-(about us)[about.md]
+[about us][about.md]
 
 [eductation][educations.md]
 
