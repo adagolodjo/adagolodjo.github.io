@@ -1,7 +1,3 @@
----
-layout: home
----
-
 # welcome to index.md !
 
 Link to :
