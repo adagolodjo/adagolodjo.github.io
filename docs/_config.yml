@@ -33,7 +33,7 @@ instagram_username: yadagolo
 # Build settings
 # theme: bulma-clean-theme
 # theme: minima 
-theme: minima 
+# theme: minima 
 # remote_theme: chrisrhymes/bulma-clean-theme
 plugins:
   - jekyll-feed
