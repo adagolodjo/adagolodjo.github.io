@@ -28,6 +28,13 @@ url: "https://adagolodjo.github.io/" # the base hostname & protocol for your sit
 twitter_username: pasDeX
 github_username: adagolodjo
 
+#----
+# Not in Jekyll minima 
+author: Yinoussa Adagolodjo 
+
+
+#----
+
 # Removed minima theme as it is a regular theme !!!!!
 # Build settings
 #theme: minima
