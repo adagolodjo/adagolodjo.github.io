@@ -38,7 +38,7 @@ linkedin_username: yinoussa-adagolodjo
 
 # Removed minima theme as it is a regular theme !!!!!
 # Build settings
-#theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
 
