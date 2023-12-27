@@ -4,6 +4,6 @@
 
 layout: home-teaching
 title: "Teaching"
-category: teaching
+category: Teaching
 ---
 # Welcom to index page !
