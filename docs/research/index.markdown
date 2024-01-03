@@ -6,4 +6,4 @@ layout: home-research
 title: "Research"
 category: Research
 ---
-# Welcom to research page !
+# Welcom to research Page!
