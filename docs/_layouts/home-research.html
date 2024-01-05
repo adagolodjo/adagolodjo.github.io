@@ -3,22 +3,24 @@ layout: default
 ---
 
 <div class="home">
-  {%- if page.title -%}
+  <!-- Comment this line in order to remove the title on the home page-->
+  <!-- {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+  {%- endif -%} -->
 
-  {{ content }} 
+   {{ content }} 
 
   {%- if site.posts.size > 0 -%}
-    <!-- This is the default, but I removed the posts-->
+    <!-- This is the default, but I removed the posts -->
     <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2> --> 
     <h2 class="post-list-heading">{{ page.list_title }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
         {%- if post.category=="Research" -%}
           <li>
+            <!-- Comment this line in order to remove the date on post-->
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <!-- <span class="post-meta">{{ post.date | date: date_format }}</span> -->
             <h3>
               <a class="post-link" href="{{ post.url | relative_url }}">
                 {{ post.title | escape }}
