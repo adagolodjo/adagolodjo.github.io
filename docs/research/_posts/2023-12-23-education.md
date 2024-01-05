@@ -2,7 +2,7 @@
 layout: post
 title:  "Eductation!"
 date:   2023-12-23 00:14:02 +0100
-categories: jekyll update
+category: Research
 ---
 
 # My CV
