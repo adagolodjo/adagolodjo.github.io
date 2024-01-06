@@ -21,12 +21,14 @@
 title: Adgolodjo 
 email: adagolodjo@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcom !
+  Associate Professor in Computer Science.
+  Research in Simulation and Soft Robotics. 
   
 baseurl: "" # "/docs" # the subpath of your site, e.g. /blog
 url: "" # "https://adagolodjo.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: pasDeX
 github_username: adagolodjo
+permalink: pretty
 
 #----
 # Not in Jekyll minima 
@@ -39,8 +41,21 @@ linkedin_username: yinoussa-adagolodjo
 # Removed minima theme as it is a regular theme !!!!!
 # Build settings
 # theme: minima
+theme: bulma-clean-theme
 plugins:
   - jekyll-feed
+  - jekyll-email-protect  # encode e-mails
+  - jekyll-feed           # RSS feed
+  - jekyll-inline-svg     # include svg for logo
+  - jekyll-loading-lazy   # lazy loading of images
+  - jekyll-scholar        # biblio
+  - jekyll-seo-tag        # tags for google, twitter,...
+  - jekyll-sitemap        # auto-sitemap
+  - jekyll-timeago        # relative dates (not used)
+  - jekyll-toc            # TOC (for lectures)
+  - jekyll-typogrify      # tyopgraphy filters (amp, copyright, quotes...)
+  - jemoji                # emoji management
+  - liquid_pluralize      # pluralize
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -50,14 +65,14 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
