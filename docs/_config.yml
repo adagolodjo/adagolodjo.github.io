@@ -42,7 +42,7 @@ linkedin_username: yinoussa-adagolodjo
 # Build settings
 # theme: minima
 # theme: bulma-clean-theme
-remove_theme: bulma-clean-theme
+remote_theme: chrisrhymes/bulma-clean-theme
 plugins:
   - jekyll-feed
   - jekyll-email-protect  # encode e-mails
