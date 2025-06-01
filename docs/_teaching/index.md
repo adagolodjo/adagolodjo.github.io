@@ -10,18 +10,18 @@ permalink: /teaching/
 ### Computer Science Department - University of Lille
 
 #### Spring 2024
-- **Robotics and Control Systems**
+- **[ROB401: Robotics and Control Systems](/teaching/courses/rob401/)**
   - Advanced topics in robotics control
   - Real-time systems and simulation
   - Practical applications in medical robotics
 
-- **Advanced Computer Graphics**
+- **[CG302: Advanced Computer Graphics](/teaching/courses/cg302/)**
   - 3D visualization techniques
   - Real-time rendering
   - Medical imaging applications
 
 #### Fall 2023
-- **Introduction to Computer Science**
+- **[CS101: Introduction to Computer Science](/teaching/courses/cs101/)**
   - Programming fundamentals
   - Algorithms and data structures
   - Problem-solving techniques
