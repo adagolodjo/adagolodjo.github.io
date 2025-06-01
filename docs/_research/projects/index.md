@@ -1,64 +1,79 @@
 ---
 layout: page
 title: Research Projects
+subtitle: Current Research Initiatives
 permalink: /research/projects/
-subtitle: Current and Past Research Projects
 ---
 
-## Current Projects
+## Active Research Projects
 
-### Real-time Simulation for Medical Training
+### [CONECT Project](/research/projects/conect/)
+**Control of Needle Insertion in Robotic Surgery**
 
-This project aims to develop advanced methods for real-time simulation of soft tissue deformation for medical training applications. We are developing novel algorithms that combine physics-based models with machine learning techniques to achieve both accuracy and computational efficiency.
+The CONECT project develops innovative solutions for robotic needle insertion procedures, combining:
+- Real-time FEM simulation
+- Augmented reality guidance
+- Robotic control strategies
+- Clinical validation
 
-**Funding**: National Science Foundation, 2023-2026
+[Learn more about CONECT](/research/projects/conect/)
 
-**Team Members**:
-- Prof. Yinoussa Adagolodjo (PI)
-- Doctoral Student Name
-- Doctoral Student Name
-- Master's Student Name
+### [ROBOCOP Project](/research/projects/robocop/)
+**Robotized Cochlear Implant Surgery**
 
-**Publications**:
-- Publication 1
-- Publication 2
+Revolutionizing cochlear implant procedures through:
+- High-precision robotics
+- Patient-specific planning
+- Real-time control systems
+- Safety-focused design
 
-[Learn more](/research/projects/medical-training/)
+[Learn more about ROBOCOP](/research/projects/robocop/)
 
-### Soft Robotics Control Systems
+### [COSSEROOTS Project](/research/projects/cosseroots/)
+**Advanced Control for Soft Robotics**
 
-This project focuses on developing control systems for soft robotic applications. We are investigating new approaches to modeling and controlling soft robots, which present unique challenges due to their continuous and compliant nature.
+Applying Cosserat theory to soft robotics:
+- Novel control strategies
+- Real-time modeling
+- Medical applications
+- Theoretical advances
 
-**Funding**: Department of Energy, 2022-2025
+[Learn more about COSSEROOTS](/research/projects/cosseroots/)
 
-**Team Members**:
-- Prof. Yinoussa Adagolodjo (PI)
-- Prof. Collaborator Name (Co-PI)
-- Doctoral Student Name
-- Master's Student Name
+## Research Impact
 
-**Publications**:
-- Publication 1
-- Publication 2
+Our projects contribute to:
+- Advanced surgical techniques
+- Medical device innovation
+- Theoretical robotics
+- Clinical practice improvement
 
-[Learn more](/research/projects/soft-robotics/)
+### Clinical Applications
+- Minimally invasive surgery
+- Precision medicine
+- Surgical training
+- Medical simulation
 
-## Past Projects
+### Technology Transfer
+- Software tools
+- Hardware prototypes
+- Clinical protocols
+- Training systems
 
-### Neural Network Acceleration of Physics Simulation
+## Future Directions
 
-This project explored the use of neural networks to accelerate physics-based simulation. We developed new methods for training neural networks to predict the behavior of complex physical systems, reducing computation time while maintaining accuracy.
+We are expanding our research into:
+- AI-enhanced surgical robotics
+- Advanced simulation techniques
+- Novel medical applications
+- Cross-disciplinary collaborations
 
-**Funding**: Industry Partner, 2020-2022
+## Get Involved
 
-**Team Members**:
-- Prof. Yinoussa Adagolodjo (PI)
-- Doctoral Student Name (now at Company X)
-- Master's Student Name (now at University Y)
+Interested in our research? We offer:
+- PhD positions
+- Postdoctoral fellowships
+- Research internships
+- Collaboration opportunities
 
-**Publications**:
-- Publication 1
-- Publication 2
-
-[Learn more](/research/projects/neural-physics/)
-
+[Contact us](/contact/) to discuss potential involvement in our projects.

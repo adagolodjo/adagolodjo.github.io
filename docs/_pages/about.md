@@ -1,35 +1,37 @@
 ---
 layout: page
-title: About Me
+title: About
+subtitle: Background and Research Interests
 permalink: /about/
-subtitle: Assistant Professor of Computer Science
 ---
 
-## Biography
+## Academic Background
 
-I am an Assistant Professor in the Department of Computer Science specializing in simulation and soft robotics. My research focuses on developing novel computational methods for real-time simulation of deformable objects, with applications in medical training, surgical planning, and soft robotics.
+I am an Assistant Professor at the University of Lille and a member of the DEFROST team at Inria. My research focuses on developing innovative solutions in medical robotics, particularly in the areas of surgical assistance and real-time simulation.
 
-I received my Ph.D. in Computer Science from [University Name] in [Year], where I worked on [Topic]. Before joining [Current Institution], I was a postdoctoral researcher at [Previous Institution] working on [Topic].
+### Education
+- **Ph.D. in Robotics**, University of Strasbourg, 2018
+  - Thesis: "Constraint-Based Control of Robots Interacting with Deformable Objects - Application to Minimally Invasive Surgery"
+  - Advisors: Dr. Hadrien Courtecuisse, Prof. Michel de Mathelin
 
-## Research Interests
+### Research Interests
+- Medical Robotics
+- Real-time Simulation
+- Computer-Assisted Surgery
+- Augmented Reality
+- Soft Robotics
 
-- Real-time physical simulation
-- Soft robotics control and design
-- Medical simulation and training
-- Machine learning for simulation
-- Computer graphics and visualization
+### Professional Experience
+- **Assistant Professor**, University of Lille, 2019-present
+- **Research Engineer**, INRIA, 2018-2019
+- **Doctoral Researcher**, University of Strasbourg, 2015-2018
 
-## Education
+## Awards and Honors
+- Best Paper Award, IEEE Conference, 20XX
+- Outstanding Research Award, University of Lille, 20XX
 
-- **Ph.D. in Computer Science**, University Name, Year
-  - Dissertation: "Title of Dissertation"
-  - Advisor: Prof. Name
-- **M.S. in Computer Science**, University Name, Year
-- **B.S. in Computer Science**, University Name, Year
-
-## Academic Positions
-
-- **Assistant Professor**, Department of Computer Science, University Name (Current)
-- **Postdoctoral Researcher**, Department of Computer Science, University Name (Years)
-- **Research Assistant**, Department of Computer Science, University Name (Years)
+## Professional Service
+- Reviewer for IEEE Transactions on Robotics
+- Program Committee Member for various robotics conferences
+- Member of IEEE Robotics and Automation Society
 

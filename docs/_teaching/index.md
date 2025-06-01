@@ -1,31 +1,38 @@
 ---
 layout: page
 title: Teaching
+subtitle: Courses and Educational Resources
 permalink: /teaching/
-subtitle: Courses, Philosophy, and Resources
 ---
-
-## Teaching Philosophy
-
-My teaching approach emphasizes hands-on learning, practical applications, and the development of critical thinking skills. I believe in creating an inclusive classroom environment where students from diverse backgrounds can thrive and contribute their unique perspectives.
-
-In technical courses, I focus on balancing theoretical foundations with practical implementation, giving students the tools they need to apply concepts to real-world problems. I incorporate project-based learning and encourage collaboration, as these reflect the way computer science is practiced professionally.
-
-I am committed to continually improving my teaching methods based on student feedback and educational research. I strive to stay current with developments in both computer science and pedagogical best practices.
 
 ## Current Courses
 
-{% for course in site.data.courses %}
-{% if course.semester contains "2024" %}
-<div class="course">
-  <h3>{{ course.code }}: {{ course.title }}</h3>
-  <p><strong>Semester:</strong> {{ course.semester }}</p>
-  <p><strong>Level:</strong> {{ course.level }}</p>
-  <p>{{ course.description }}</p>
-  <a href="/teaching/courses/{{ course.code | downcase }}/">Learn more</a>
-</div>
-{% endif %}
-{% endfor %}
+### Computer Science Department - University of Lille
+
+#### Spring 2024
+- **Robotics and Control Systems**
+  - Advanced topics in robotics control
+  - Real-time systems and simulation
+  - Practical applications in medical robotics
+
+- **Advanced Computer Graphics**
+  - 3D visualization techniques
+  - Real-time rendering
+  - Medical imaging applications
+
+#### Fall 2023
+- **Introduction to Computer Science**
+  - Programming fundamentals
+  - Algorithms and data structures
+  - Problem-solving techniques
+
+## Teaching Philosophy
+
+My teaching approach emphasizes:
+- Hands-on practical experience
+- Real-world applications
+- Interactive learning
+- Integration of research with teaching
 
 [View all courses](/teaching/courses/)
 

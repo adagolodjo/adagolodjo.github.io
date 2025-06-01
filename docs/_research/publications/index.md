@@ -1,73 +1,37 @@
 ---
 layout: page
 title: Publications
+subtitle: Academic Publications and Research Output
 permalink: /research/publications/
-subtitle: Journal Articles, Conference Papers, and Book Chapters
 ---
 
 ## Journal Articles
 
-{% for publication in site.data.publications %}
-{% if publication.journal %}
-<div class="publication">
-  <h3>{{ publication.title }}</h3>
-  <p class="authors">{{ publication.authors }}</p>
-  <p class="venue"><em>{{ publication.journal }}</em>, {{ publication.year }}, Vol. {{ publication.volume }}, Issue {{ publication.issue }}, Pages {{ publication.pages }}</p>
-  <p class="doi">DOI: <a href="https://doi.org/{{ publication.doi }}" target="_blank">{{ publication.doi }}</a></p>
-  <p class="abstract"><strong>Abstract:</strong> {{ publication.abstract }}</p>
-  <div class="tags">
-    {% for tag in publication.tags %}
-    <span class="tag">{{ tag }}</span>
-    {% endfor %}
-  </div>
-  {% if publication.pdf %}
-  <p class="pdf"><a href="{{ publication.pdf }}" target="_blank">[PDF]</a></p>
-  {% endif %}
-</div>
-{% endif %}
+{% assign journal_papers = site.data.publications | where: "type", "journal" | sort: "year" | reverse %}
+{% for paper in journal_papers %}
+### {{ paper.title }}
+**Authors:** {{ paper.authors }}  
+*{{ paper.journal }}* ({{ paper.year }}){% if paper.volume %}, {{ paper.volume }}{% endif %}{% if paper.issue %}({{ paper.issue }}){% endif %}{% if paper.pages %}: {{ paper.pages }}{% endif %}  
+{% if paper.doi %}[DOI: {{ paper.doi }}](https://doi.org/{{ paper.doi }}){% endif %}
 {% endfor %}
 
-## Conference Proceedings
+## Conference Presentations
 
-{% for publication in site.data.publications %}
-{% if publication.conference %}
-<div class="publication">
-  <h3>{{ publication.title }}</h3>
-  <p class="authors">{{ publication.authors }}</p>
-  <p class="venue"><em>{{ publication.conference }}</em>, {{ publication.year }}, Pages {{ publication.pages }}</p>
-  <p class="doi">DOI: <a href="https://doi.org/{{ publication.doi }}" target="_blank">{{ publication.doi }}</a></p>
-  <p class="abstract"><strong>Abstract:</strong> {{ publication.abstract }}</p>
-  <div class="tags">
-    {% for tag in publication.tags %}
-    <span class="tag">{{ tag }}</span>
-    {% endfor %}
-  </div>
-  {% if publication.pdf %}
-  <p class="pdf"><a href="{{ publication.pdf }}" target="_blank">[PDF]</a></p>
-  {% endif %}
-</div>
-{% endif %}
+{% assign conference_papers = site.data.publications | where: "type", "conference" | sort: "year" | reverse %}
+{% for paper in conference_papers %}
+### {{ paper.title }}
+**Authors:** {{ paper.authors }}  
+*{{ paper.conference }}* ({{ paper.year }}){% if paper.location %}, {{ paper.location }}{% endif %}  
+{% if paper.doi %}[DOI: {{ paper.doi }}](https://doi.org/{{ paper.doi }}){% endif %}
 {% endfor %}
 
-## Book Chapters
+## Preprints and Technical Reports
 
-{% for publication in site.data.publications %}
-{% if publication.book %}
-<div class="publication">
-  <h3>{{ publication.title }}</h3>
-  <p class="authors">{{ publication.authors }}</p>
-  <p class="venue">In <em>{{ publication.book }}</em>, {{ publication.editors }} (Eds.), {{ publication.publisher }}, {{ publication.year }}, Pages {{ publication.pages }}</p>
-  <p class="doi">DOI: <a href="https://doi.org/{{ publication.doi }}" target="_blank">{{ publication.doi }}</a></p>
-  <p class="abstract"><strong>Abstract:</strong> {{ publication.abstract }}</p>
-  <div class="tags">
-    {% for tag in publication.tags %}
-    <span class="tag">{{ tag }}</span>
-    {% endfor %}
-  </div>
-  {% if publication.pdf %}
-  <p class="pdf"><a href="{{ publication.pdf }}" target="_blank">[PDF]</a></p>
-  {% endif %}
-</div>
-{% endif %}
+{% assign preprints = site.data.publications | where: "type", "preprint" | sort: "year" | reverse %}
+{% for paper in preprints %}
+### {{ paper.title }}
+**Authors:** {{ paper.authors }}  
+*{{ paper.repository }}* ({{ paper.year }})  
+{% if paper.url %}[Available here]({{ paper.url }}){% endif %}
 {% endfor %}
 

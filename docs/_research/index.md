@@ -2,32 +2,38 @@
 layout: page
 title: Research
 permalink: /research/
-subtitle: Simulation, Soft Robotics, and Medical Applications
+subtitle: Research Interests and Projects
 ---
 
-## Research Overview
+## Research Areas
 
-My research focuses on developing computational methods for simulating and controlling complex physical systems, with a particular emphasis on soft, deformable objects. This work spans multiple disciplines, including computer science, robotics, and medical simulation.
+My research interests lie at the intersection of robotics, medical imaging, and simulation, with a particular focus on:
 
-### Key Research Areas
+- Surgical robotics and computer-assisted interventions
+- Real-time FEM simulation and inverse problems
+- Medical imaging and augmented reality
+- Soft robotics and deformable object manipulation
 
-#### Real-time Simulation
+## Current Projects
 
-We develop novel algorithms for real-time simulation of deformable objects, with applications in medical training, surgical planning, and virtual reality. Our approaches combine traditional physics-based methods with modern machine learning techniques to achieve both accuracy and computational efficiency.
+### CONECT Project
+The CONECT project focuses on developing innovative solutions for robotic needle insertion procedures. Key achievements include:
+- Development of a real-time finite element simulation framework
+- Integration of augmented reality for surgical guidance
+- Novel control strategies for robotic needle manipulation
+- Clinical validation studies in collaboration with medical partners
 
-[Learn more about our simulation research](/research/projects/#simulation)
+### ROBOCOP Project
+Research on cochlear implant robotization, including:
+- Design of specialized robotic systems for cochlear surgery
+- Development of patient-specific surgical planning tools
+- Integration of imaging modalities for precise guidance
 
-#### Soft Robotics
-
-Our soft robotics research focuses on designing and controlling robots made from compliant materials. These systems present unique challenges in modeling, simulation, and control, requiring new computational approaches that we are actively developing.
-
-[Learn more about our soft robotics research](/research/projects/#soft-robotics)
-
-#### Medical Applications
-
-We apply our simulation and robotics research to medical applications, including surgical training, patient-specific pre-operative planning, and medical device design. This work involves close collaboration with medical professionals to ensure clinical relevance.
-
-[Learn more about our medical applications research](/research/projects/#medical)
+### COSSEROOTS Project
+Application of Cosserat rod theory to soft robotics:
+- Mathematical modeling of continuum robots
+- Real-time control strategies for deformable manipulators
+- Experimental validation with prototype systems
 
 ## Research Projects
 

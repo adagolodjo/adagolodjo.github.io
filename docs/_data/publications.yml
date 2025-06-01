@@ -1,36 +1,29 @@
-- title: "Real-time Simulation of Soft Tissue Deformation using Neural Networks"
-  authors: "Adagolodjo, Y., Smith, J., and Johnson, A."
-  journal: "Journal of Computer Science"
-  year: 2024
-  volume: 15
-  issue: 3
-  pages: "112-130"
-  doi: "10.1000/journal.cs.2024.1234"
-  abstract: "This paper presents a novel approach to real-time simulation of soft tissue deformation using neural networks."
-  tags: ["Neural Networks", "Soft Tissue", "Real-time Simulation"]
-  pdf: "/assets/files/papers/soft-tissue-simulation-2024.pdf"
-  
-- title: "Interactive Soft Robotics: A New Paradigm"
-  authors: "Johnson, A., Adagolodjo, Y., and Williams, S."
-  journal: "IEEE Transactions on Robotics"
+- type: journal
   year: 2023
-  volume: 12
-  issue: 2
-  pages: "78-95"
-  doi: "10.1000/ieee.tr.2023.5678"
-  abstract: "We introduce a new paradigm for interactive soft robotics based on advanced simulation techniques."
-  tags: ["Soft Robotics", "Interactive Systems", "Simulation"]
-  pdf: "/assets/files/papers/interactive-soft-robotics-2023.pdf"
-  
-- title: "Advanced Surgical Simulation Using Mixed Reality"
-  authors: "Adagolodjo, Y., Thompson, R., and Davis, M."
-  journal: "Medical Image Analysis"
+  title: "Robots assisted surgical interventions in constrained anatomical spaces"
+  authors: "Y. Adagolodjo, N. Hafsa"
+  journal: "Studies in Health Technology and Informatics"
+  volume: "302"
+  pages: "217-221"
+  doi: "10.3233/SHTI230159"
+
+- type: journal
   year: 2022
-  volume: 8
-  issue: 4
-  pages: "205-221"
-  doi: "10.1000/med.ia.2022.9012"
-  abstract: "This work presents a mixed reality approach for advanced surgical simulation and training."
-  tags: ["Mixed Reality", "Surgical Simulation", "Medical Training"]
-  pdf: "/assets/files/papers/surgical-simulation-mr-2022.pdf"
+  title: "Real-time simulation for surgical navigation in robotic-assisted cochlear implant procedure"
+  authors: "Y. Adagolodjo, S. Cotin"
+  journal: "IEEE Transactions on Medical Robotics and Bionics"
+  volume: "4"
+  issue: "3"
+  pages: "659-670"
+  doi: "10.1109/TMRB.2022.3180577"
+
+- type: journal
+  year: 2019
+  title: "Constraint-based manipulation of deformable models in robotic surgery"
+  authors: "Y. Adagolodjo, L. Goffin, M. De Mathelin, H. Courtecuisse"
+  journal: "IEEE Robotics and Automation Letters"
+  volume: "4"
+  issue: "2"
+  pages: "1461-1468"
+  doi: "10.1109/LRA.2019.2895244"
 

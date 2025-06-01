@@ -1,91 +1,65 @@
 ---
 layout: page
 title: Research Collaborations
-permalink: /research/collaborations/
 subtitle: Academic and Industry Partnerships
+permalink: /research/collaborations/
 ---
 
 ## Academic Collaborations
 
-### Medical Simulation Consortium
+### DEFROST Team - Inria
+Our primary research collaboration is with the DEFROST team at Inria, focusing on:
+- Real-time simulation of deformable objects
+- Soft robotics control algorithms
+- Medical robotics applications
+- Advanced control strategies for continuum robots
 
-A multi-university initiative focused on advancing the state of the art in medical simulation technologies.
+### University Hospital of Strasbourg
+Long-standing collaboration in medical robotics:
+- Clinical validation studies
+- Surgical workflow analysis
+- Medical device development
+- Training system evaluation
+- Minimally invasive surgery research
 
-**Partner Institutions**:
-- University Name (Prof. Collaborator)
-- University Name (Prof. Collaborator)
-- University Name (Prof. Collaborator)
+### International Research Network
 
-**Projects**:
-- Haptic feedback systems for surgical training
-- Patient-specific simulation for pre-operative planning
-- VR/AR interfaces for medical education
+Active participation in international research initiatives:
+- **Surgical Robotics**: Development of novel surgical assistance systems
+- **Medical Simulation**: Advanced techniques for real-time simulation
+- **Soft Robotics**: Control and modeling of deformable robots
 
-**Funding**: National Institutes of Health, 2022-2025
+## Research Projects
 
-### Soft Robotics Network
+### Current Collaborative Projects
 
-An international collaboration dedicated to advancing the field of soft robotics through shared research initiatives and student exchanges.
+#### CONECT Project
+- Focus: Robotic needle insertion
+- Partners: University Hospital of Strasbourg, DEFROST Team
+- Applications: Minimally invasive surgery
 
-**Partner Institutions**:
-- University Name (Prof. Collaborator)
-- University Name (Prof. Collaborator)
-- University Name (Prof. Collaborator)
+#### ROBOCOP Project
+- Focus: Cochlear implant robotization
+- Partners: Medical device manufacturers
+- Applications: Hearing restoration surgery
 
-**Projects**:
-- Bio-inspired soft actuators
-- Control systems for compliant mechanisms
-- Simulation tools for soft robotic design
+#### COSSEROOTS Project
+- Focus: Soft robot control using Cosserat theory
+- Partners: DEFROST Team, International research groups
+- Applications: Medical interventions
 
-**Funding**: National Science Foundation, 2023-2026
+## Join Our Research Network
 
-## Industry Partnerships
+### Current Opportunities
+- PhD positions in medical robotics and simulation
+- Postdoctoral fellowships in soft robotics
+- Research internships
+- Joint project proposals
 
-### Medical Device Company
+### Areas of Interest
+- Medical robotics research
+- Real-time simulation technology
+- Clinical applications
+- Educational initiatives in surgical robotics
 
-Collaboration focused on developing simulation tools for training and device design validation.
-
-**Partner**: Company Name
-
-**Projects**:
-- Virtual training simulators for new devices
-- Physics-based models for device-tissue interaction
-- Performance evaluation metrics for surgical tools
-
-### Robotics Company
-
-Partnership focused on advancing control systems for next-generation soft robotic applications.
-
-**Partner**: Company Name
-
-**Projects**:
-- Real-time control algorithms for soft manipulators
-- Simulation environments for robotic testing
-- Machine learning approaches for adaptive control
-
-## International Collaborations
-
-### European Research Initiative on Simulation Technology
-
-A transatlantic collaboration focused on advancing simulation technologies across multiple domains.
-
-**Partner Institutions**:
-- University Name, Country (Prof. Collaborator)
-- University Name, Country (Prof. Collaborator)
-- University Name, Country (Prof. Collaborator)
-
-**Projects**:
-- Standards for simulation validation
-- Multi-physics modeling frameworks
-- Education and training initiatives
-
-## Collaboration Opportunities
-
-I am always interested in exploring new research collaborations with academic and industry partners. If you are interested in collaborating, please [contact me](/contact/) to discuss potential opportunities.
-
-Areas of particular interest include:
-- Medical simulation and training
-- Soft robotics
-- Real-time physics-based modeling
-- AI/ML for simulation
-
+[Contact us](/contact/) to discuss potential collaboration opportunities.

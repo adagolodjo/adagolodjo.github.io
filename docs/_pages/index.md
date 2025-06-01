@@ -1,22 +1,24 @@
 ---
 layout: page
 title: Yinoussa Adagolodjo
-subtitle: Assistant Professor of Computer Science
+subtitle: Assistant Professor at the University of Lille
 hero_image: /assets/images/hero.jpg
 hero_height: is-large
 ---
 
-## Welcome to my academic website
+## Welcome
 
-I am an Assistant Professor in Computer Science specializing in simulation and soft robotics. My research focuses on developing novel computational methods for real-time simulation of deformable objects, with applications in medical training, surgical planning, and soft robotics.
+I am an Assistant Professor at the University of Lille and a full member of the DEFROST team since 2019. My research focuses on robotics and augmented reality applications in healthcare, combining advanced simulation techniques with practical medical applications.
 
-### Research Highlights
+### Current Research Projects
 
-My research team is currently working on several exciting projects:
+- **CONECT Project**: My doctoral thesis project focused on integrating robotic technology in operating rooms for enhanced precision in needle insertion procedures. This work involves developing finite element simulations and augmented reality guidance systems for surgical assistance.
 
-- **Real-time Medical Simulation**: Developing fast and accurate methods for simulating soft tissue for surgical training
-- **Soft Robotics Control**: Creating new algorithms for controlling soft robotic systems
-- **Machine Learning for Physics Simulation**: Using neural networks to accelerate physics-based simulation
+- **ROBOCOP Project**: Working on cochlear implant robotization, exploring innovative approaches to improve hearing technologies.
+
+- **COSSEROOTS Project**: Applying Cosserat's theory to advance the control of slender deformation robots.
+
+My work bridges the gap between technology and healthcare, focusing on improving surgical outcomes and optimizing medical workflows through advanced simulation and robotic solutions.
 
 [Read more about my research](/research/)
 

@@ -1,70 +1,63 @@
 ---
 layout: page
 title: Curriculum Vitae
+subtitle: Academic and Professional Experience
 permalink: /cv/
-subtitle: Academic and Professional Background
 ---
-
-A full PDF version of my CV is available for download [here](/assets/files/cv.pdf).
 
 ## Education
 
-- **Ph.D. in Computer Science**, University Name, Year
-  - Dissertation: "Title of Dissertation"
-  - Advisor: Prof. Name
-- **M.S. in Computer Science**, University Name, Year
-- **B.S. in Computer Science**, University Name, Year
+### Doctorate in Robotics
+**University of Strasbourg** | 2015 - 2018
+- Thesis: "Constraint-Based Control of Robots Interacting with Deformable Objects - Application to Minimally Invasive Surgery"
+- Advisors: Dr. Hadrien Courtecuisse, Prof. Michel de Mathelin
+- Research Focus: Medical robotics, Real-time simulation, Surgical assistance
 
 ## Academic Positions
 
-- **Assistant Professor**, Department of Computer Science, University Name (Current)
-- **Postdoctoral Researcher**, Department of Computer Science, University Name (Years)
-- **Research Assistant**, Department of Computer Science, University Name (Years)
+### Assistant Professor
+**University of Lille** | 2019 - Present
+- Member of DEFROST team at Inria
+- Teaching: Robotics, Computer Graphics, Programming
+- Research: Medical robotics, Simulation, AR/VR
+
+### Research Engineer
+**INRIA** | 2018 - 2019
+- Development of real-time simulation algorithms
+- Implementation of robotics control systems
 
 ## Publications
 
-### Journal Articles
+[View complete publication list](/research/publications/)
 
-{% for publication in site.data.publications %}
-{% if publication.journal %}
-- {{ publication.authors }} ({{ publication.year }}). "{{ publication.title }}." *{{ publication.journal }}*, {{ publication.volume }}({{ publication.issue }}), {{ publication.pages }}. DOI: {{ publication.doi }}
-{% endif %}
+### Selected Publications
+{% for paper in site.data.publications limit:3 %}
+- {{ paper.authors }} ({{ paper.year }}). "{{ paper.title }}." *{{ paper.journal }}*.
 {% endfor %}
 
-### Conference Proceedings
+## Research Projects
 
-{% for publication in site.data.publications %}
-{% if publication.conference %}
-- {{ publication.authors }} ({{ publication.year }}). "{{ publication.title }}." In *{{ publication.conference }}*, {{ publication.pages }}. DOI: {{ publication.doi }}
-{% endif %}
-{% endfor %}
+### Principal Investigator
+- CONECT Project (2019-present)
+- ROBOCOP Project (2020-present)
+- COSSEROOTS Project (2021-present)
 
 ## Teaching Experience
 
-{% for course in site.data.courses %}
-- {{ course.semester }}: {{ course.code }} - {{ course.title }} ({{ course.level }})
-{% endfor %}
+### University of Lille (2019-present)
+- Robotics and Control Systems
+- Advanced Computer Graphics
+- Introduction to Computer Science
 
-## Grants and Funding
+## Professional Service
 
-- **Project Title**, Funding Agency, Amount, Years
-- **Project Title**, Funding Agency, Amount, Years
+### Editorial and Review Work
+- Reviewer for IEEE Transactions on Robotics
+- Program Committee Member for robotics conferences
 
-## Professional Activities
+### Professional Memberships
+- IEEE Robotics and Automation Society
+- ACM SIGGRAPH
 
-### Editorial Boards
-- Journal Name, Role, Years
-
-### Conference Organization
-- Conference Name, Role, Year
-
-### Program Committees
-- Conference Name, Year
-- Conference Name, Year
-
-## Skills
-
-- **Programming Languages**: C++, Python, MATLAB
-- **Frameworks & Libraries**: TensorFlow, PyTorch, OpenGL
-- **Tools**: Git, LaTeX, Unity3D, SOFA Framework
+[Download Full CV (PDF)](/assets/files/cv.pdf)
 
