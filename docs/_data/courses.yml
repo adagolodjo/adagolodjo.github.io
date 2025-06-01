@@ -1,0 +1,28 @@
+- code: "CS401"
+  title: "Advanced Computer Graphics"
+  semester: "Fall 2024"
+  level: "Graduate"
+  description: "This course covers advanced topics in computer graphics including physically-based rendering, real-time graphics, and GPU programming."
+  syllabus: "/assets/files/courses/cs401-syllabus.pdf"
+  
+- code: "CS301"
+  title: "Introduction to Computer Simulation"
+  semester: "Spring 2024"
+  level: "Undergraduate"
+  description: "An introduction to the principles and applications of computer simulation, with focus on physical and medical simulations."
+  syllabus: "/assets/files/courses/cs301-syllabus.pdf"
+  
+- code: "CS205"
+  title: "Fundamentals of Computer Graphics"
+  semester: "Fall 2023"
+  level: "Undergraduate"
+  description: "This course introduces students to the fundamental concepts of computer graphics including rendering, modeling, and animation."
+  syllabus: "/assets/files/courses/cs205-syllabus.pdf"
+  
+- code: "CS501"
+  title: "Advanced Topics in Medical Simulation"
+  semester: "Spring 2023"
+  level: "Graduate"
+  description: "This graduate-level course explores cutting-edge research in medical simulation, including haptic feedback, tissue modeling, and surgical planning."
+  syllabus: "/assets/files/courses/cs501-syllabus.pdf"
+

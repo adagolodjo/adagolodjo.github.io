@@ -1,0 +1,29 @@
+- name: Home
+  link: /
+- name: About
+  link: /about/
+- name: Research
+  link: /research/
+  dropdown:
+    - name: Publications
+      link: /research/publications/
+    - name: Projects
+      link: /research/projects/
+    - name: Collaborations
+      link: /research/collaborations/
+- name: Teaching
+  link: /teaching/
+  dropdown:
+    - name: Courses
+      link: /teaching/courses/
+    - name: Resources
+      link: /teaching/resources/
+- name: News
+  link: /news/
+- name: Blog
+  link: /blog/
+- name: CV
+  link: /cv/
+- name: Contact
+  link: /contact/
+

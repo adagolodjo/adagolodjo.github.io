@@ -59,6 +59,52 @@ plugins:
   - liquid_pluralize      # pluralize
 
 
+# Collections for academic website
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+  research:
+    output: true
+    permalink: /research/:path/
+  teaching:
+    output: true
+    permalink: /teaching/:path/
+  blog:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+  news:
+    output: true
+    permalink: /news/:year/:month/:day/:title/
+
+# Default layouts for different content types
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "research"
+    values:
+      layout: "research"
+  - scope:
+      path: ""
+      type: "teaching"
+    values:
+      layout: "teaching"
+  - scope:
+      path: ""
+      type: "blog"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "post"
+
 # SASS configuration for theme compatibility
 sass:
   sass_dir: _sass
