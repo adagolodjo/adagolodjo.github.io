@@ -5,20 +5,30 @@ source "https://rubygems.org"
 #
 #     bundle exec jekyll serve --livereload
 #
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-# gem "jekyll", "~> 4.3.2"
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
 
-# Removed minima theme as it is a regular theme !!!!!
-#gem "minima", "~> 2.5.1"
+# Lock to a specific version for compatibility
+gem "jekyll", "~> 3.9.3"
+gem "github-pages", "~> 228", group: :jekyll_plugins
+gem "webrick", "~> 1.8"
+gem "sassc", "~> 2.4.0"
 
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-sass-converter", "~> 1.5.2" # Keep the older version for GitHub Pages compatibility
+  gem "jekyll-feed", "~> 0.15.1"
+  gem "jekyll-remote-theme"
+  gem "jekyll-email-protect"
+  gem "jekyll-inline-svg"
+  gem "jekyll-loading-lazy"
+  gem "jekyll-scholar", "~> 5.16.0"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+  gem "jekyll-timeago"
+  gem "jekyll-toc"
+  gem "jekyll-typogrify"
+  gem "jemoji"
+  gem "liquid_pluralize"
+  gem "kramdown-parser-gfm" # Required for GitHub Flavored Markdown
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -34,6 +44,3 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
-
-gem "webrick", "~> 1.8"
-gem "bulma-clean-theme"

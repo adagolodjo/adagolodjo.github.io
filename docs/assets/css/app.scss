@@ -1,0 +1,24 @@
+---
+---
+
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set custom variables
+$primary: #188eac !default;
+$navbar-height: 4rem !default;
+$tabs-link-active-color: $primary !default;
+$tabs-link-active-border-bottom-color: $primary !default;
+
+// Import theme styles
+@import "main";
+
+// Custom styles
+.navbar-item {
+  img {
+    max-height: 3rem;
+  }
+}
+

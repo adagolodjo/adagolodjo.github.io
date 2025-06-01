@@ -42,7 +42,7 @@ linkedin_username: yinoussa-adagolodjo
 # Build settings
 # theme: minima
 # theme: bulma-clean-theme
-remote_theme: chrisrhymes/bulma-clean-theme
+remote_theme: chrisrhymes/bulma-clean-theme@v0.13.1
 plugins:
   - jekyll-feed
   - jekyll-email-protect  # encode e-mails
@@ -57,6 +57,16 @@ plugins:
   - jekyll-typogrify      # tyopgraphy filters (amp, copyright, quotes...)
   - jemoji                # emoji management
   - liquid_pluralize      # pluralize
+
+
+# SASS configuration for theme compatibility
+sass:
+  sass_dir: _sass
+  style: compressed
+  load_paths:
+    - _sass
+    - assets/css
+    - node_modules/bulma
 
 # Exclude from processing.
 # The following items will not be processed, by default.
