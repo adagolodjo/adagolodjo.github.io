@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Curriculum Vitae
+title: Education
 subtitle: Academic and Professional Experience
 permalink: /cv/
 ---
@@ -60,4 +60,3 @@ permalink: /cv/
 - ACM SIGGRAPH
 
 [Download Full CV (PDF)](/assets/files/cv.pdf)
-

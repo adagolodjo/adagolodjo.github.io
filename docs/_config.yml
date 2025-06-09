@@ -59,20 +59,26 @@ plugins:
   - liquid_pluralize      # pluralize
 
 
-# Collections for academic website
+# Collections for academic website - Activity-Based Organization
 collections:
   pages:
     output: true
     permalink: /:path/
-  research:
+  projects:
     output: true
-    permalink: /research/:path/
-  teaching:
+    permalink: /research/projects/:name/
+  publications:
     output: true
-    permalink: /teaching/:path/
-  blog:
+    permalink: /research/publications/:name/
+  courses:
     output: true
-    permalink: /blog/:year/:month/:day/:title/
+    permalink: /teaching/:name/
+  resources:
+    output: true
+    permalink: /resources/:path/
+  professional:
+    output: true
+    permalink: /professional/:path/
   news:
     output: true
     permalink: /news/:year/:month/:day/:title/
@@ -86,19 +92,29 @@ defaults:
       layout: "page"
   - scope:
       path: ""
-      type: "research"
+      type: "projects"
     values:
-      layout: "research"
+      layout: "project"
   - scope:
       path: ""
-      type: "teaching"
+      type: "publications"
     values:
-      layout: "teaching"
+      layout: "publication"
   - scope:
       path: ""
-      type: "blog"
+      type: "courses"
     values:
-      layout: "post"
+      layout: "course"
+  - scope:
+      path: ""
+      type: "resources"
+    values:
+      layout: "resource"
+  - scope:
+      path: ""
+      type: "professional"
+    values:
+      layout: "page"
   - scope:
       path: ""
       type: "news"
