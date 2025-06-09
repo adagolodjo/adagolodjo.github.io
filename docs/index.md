@@ -1,16 +1,17 @@
 ---
-layout: page
-title: Yinoussa Adagolodjo
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: home
+title: Adagolodjo
 subtitle: Assistant Professor at the University of Lille
 hero_image: /assets/images/hero.jpg
 hero_height: is-large
 ---
-
 ## Welcome
 
 I am an Assistant Professor at the University of Lille and a full member of the DEFROST team since 2019. My research focuses on robotics and augmented reality applications in healthcare, combining advanced simulation techniques with practical medical applications.
 
-### Current Research Projects
+### **Current Research Projects**
 
 - **CONECT Project**: My doctoral thesis project focused on integrating robotic technology in operating rooms for enhanced precision in needle insertion procedures. This work involves developing finite element simulations and augmented reality guidance systems for surgical assistance.
 
@@ -47,4 +48,3 @@ This semester I am teaching:
 {% endfor %}
 
 [View all publications](/research/publications/)
-
