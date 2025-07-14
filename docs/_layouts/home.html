@@ -3,34 +3,264 @@ layout: default
 ---
 
 <div class="home">
-  <!-- {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%} -->
+  <!-- Hero Section -->
+  <section class="hero is-primary is-bold is-large">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">
+          {{ site.author.name | default: site.title }}
+        </h1>
+        <h2 class="subtitle">
+          {{ site.description }}
+        </h2>
+        <div class="hero-buttons mt-5">
+          <a href="/about/" class="button is-white is-outlined is-medium mr-3">
+            <span class="icon">
+              <i class="fas fa-user"></i>
+            </span>
+            <span>About Me</span>
+          </a>
+          <a href="/contact/" class="button is-white is-medium">
+            <span class="icon">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span>Contact</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  {{ content }}
+  <!-- Profile Section (Summary) -->
+  <section class="section is-light">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-4">
+          <div class="profile-section">
+            <img src="/assets/images/profile.jpg" alt="Dr. Yinoussa Adagolodjo" class="profile-image">
+            <div class="profile-info">
+              <h3 class="title is-4">Dr. Yinoussa Adagolodjo</h3>
+              <p class="subtitle is-6">Assistant Professor</p>
+              <p class="has-text-grey">University of Lille</p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-8">
+          <div class="content">
+            <h2 class="title is-3 mb-4">Welcome to My Academic Portfolio</h2>
+            <p class="is-size-5 mb-4">
+              I am an Assistant Professor at the University of Lille and a full member of the DEFROST team since 2019. 
+              My research focuses on robotics and augmented reality applications in healthcare, combining advanced 
+              simulation techniques with practical medical applications.
+            </p>
+            <p class="is-size-5 mb-5">
+              Throughout my academic career, I have been deeply involved in pioneering projects that reflect a commitment 
+              to cutting-edge exploration and impactful innovation in medical robotics and healthcare technology.
+            </p>
+            <div class="buttons">
+              <a href="/about/" class="button is-primary is-medium">
+                <span class="icon">
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+                <span>Learn More</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-        {%- if post.category=="Research" -%}
-            <li>
-              {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-              <!-- <span class="post-meta">{{ post.date | date: date_format }}</span> -->
-              <h3>
-                <a class="post-link" href="{{ post.url | relative_url }}">
-                  {{ post.title | escape }}
+  <!-- Tabs Section -->
+  <section class="section">
+    <div class="container">
+      <div class="tabs is-toggle is-centered is-large mb-6" id="homeTabs">
+        <ul>
+          <li class="is-active" data-tab="projects"><a><span class="icon"><i class="fas fa-flask"></i></span> <span>Projects</span></a></li>
+          <li data-tab="publications"><a><span class="icon"><i class="fas fa-book"></i></span> <span>Publications</span></a></li>
+          <li data-tab="teaching"><a><span class="icon"><i class="fas fa-chalkboard-teacher"></i></span> <span>Teaching</span></a></li>
+        </ul>
+      </div>
+      <div id="tab-content-projects" class="tab-content">
+        <div class="project-grid">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="/assets/images/projects/conect.jpg" alt="CONECT Project">
+              </figure>
+            </div>
+            <div class="card-content">
+              <h3 class="title is-4">CONECT Project</h3>
+              <p class="subtitle is-6">Control of Needle Insertion in Robotic Surgery</p>
+              <div class="content">
+                <p>Real-time simulation and augmented reality guidance for precision surgery.</p>
+                <div class="tags">
+                  <span class="tag is-primary">Medical Robotics</span>
+                  <span class="tag is-info">Augmented Reality</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="/research/projects/conect/" class="button is-primary is-fullwidth">Learn More</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="/assets/images/projects/robocop.jpg" alt="ROBOCOP Project">
+              </figure>
+            </div>
+            <div class="card-content">
+              <h3 class="title is-4">ROBOCOP Project</h3>
+              <p class="subtitle is-6">Cochlear Implant Robotization</p>
+              <div class="content">
+                <p>Robotics for ear surgery and improvement of hearing technologies.</p>
+                <div class="tags">
+                  <span class="tag is-primary">Robotics</span>
+                  <span class="tag is-info">Healthcare</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="/research/projects/robocop/" class="button is-primary is-fullwidth">Learn More</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="/assets/images/projects/cosseroots.jpg" alt="COSSEROOTS Project">
+              </figure>
+            </div>
+            <div class="card-content">
+              <h3 class="title is-4">COSSEROOTS Project</h3>
+              <p class="subtitle is-6">Cosserat Theory for Soft Robotics Control</p>
+              <div class="content">
+                <p>Advanced control of deformable robots for surgery and industry.</p>
+                <div class="tags">
+                  <span class="tag is-primary">Soft Robotics</span>
+                  <span class="tag is-info">Modeling</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="/research/projects/cosseroots/" class="button is-primary is-fullwidth">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="has-text-centered mt-6">
+          <a href="/research/projects/" class="button is-primary is-large">
+            <span class="icon"><i class="fas fa-flask"></i></span>
+            <span>View All Projects</span>
+          </a>
+        </div>
+      </div>
+      <div id="tab-content-publications" class="tab-content is-hidden">
+        {% for publication in site.data.publications limit:3 %}
+        <div class="publication-item">
+          <h4 class="title is-5">{{ publication.title }}</h4>
+          <p class="subtitle is-6">{{ publication.authors }} ({{ publication.year }})</p>
+          <p class="has-text-grey">{{ publication.journal }}, {{ publication.volume }}({{ publication.issue }})</p>
+          {% if publication.doi %}
+          <a href="https://doi.org/{{ publication.doi }}" class="button is-small is-outlined mt-2">
+            <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+            <span>View Paper</span>
                 </a>
-              </h3>
-              {%- if site.show_excerpts -%}
-                {{ post.excerpt }}
-              {%- endif -%}
-            </li>
-        {%- endif -%}
-      {%- endfor -%}
-    </ul>
+          {% endif %}
+        </div>
+        {% endfor %}
+        <div class="has-text-centered mt-6">
+          <a href="/research/publications/" class="button is-primary is-large">
+            <span class="icon"><i class="fas fa-book"></i></span>
+            <span>View All Publications</span>
+          </a>
+        </div>
+      </div>
+      <div id="tab-content-teaching" class="tab-content is-hidden">
+        <div class="columns">
+          {% for course in site.data.courses limit:3 %}
+          <div class="column is-4">
+            <div class="card">
+              <div class="card-content">
+                <h3 class="title is-4">{{ course.code }}</h3>
+                <p class="subtitle is-6">{{ course.title }}</p>
+                <div class="content">
+                  <p>{{ course.description }}</p>
+                  <div class="tags">
+                    <span class="tag is-info">{{ course.level }}</span>
+                    <span class="tag is-light">{{ course.semester }}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="/teaching/courses/{{ course.code | downcase }}/" class="button is-outlined is-fullwidth">
+                  <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+                  <span>Course Details</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="has-text-centered mt-6">
+          <a href="/teaching/" class="button is-primary is-large">
+            <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
+            <span>View All Courses</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
-  {%- endif -%}
-
+  <!-- News Section (Summary) -->
+  <section class="section is-light">
+    <div class="container">
+      <h2 class="title is-3 mb-4">Recent News</h2>
+      <div class="columns">
+        {% for post in site.news limit:2 %}
+        <div class="column is-6">
+          <div class="box mb-4">
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>{{ post.title }}</strong>
+                    <br>
+                    <small class="has-text-grey">{{ post.date | date: "%B %d, %Y" }}</small>
+                    <br>
+                    {% if post.excerpt %}
+                      {{ post.excerpt | truncate: 150 }}
+                    {% endif %}
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="has-text-centered mt-4">
+        <a href="/news/" class="button is-outlined">
+          <span class="icon"><i class="fas fa-newspaper"></i></span>
+          <span>View All News</span>
+        </a>
+      </div>
+    </div>
+  </section>
 </div>
+
+<script>
+// Dynamic tabs for homepage
+const tabs = document.querySelectorAll('#homeTabs li');
+const tabContents = document.querySelectorAll('.tab-content');
+tabs.forEach(tab => {
+  tab.addEventListener('click', function() {
+    tabs.forEach(t => t.classList.remove('is-active'));
+    this.classList.add('is-active');
+    const tabName = this.getAttribute('data-tab');
+    tabContents.forEach(content => {
+      content.classList.add('is-hidden');
+    });
+    document.getElementById('tab-content-' + tabName).classList.remove('is-hidden');
+  });
+});
+</script>

@@ -3,7 +3,10 @@ layout: page
 title: CONECT Project
 subtitle: Control of Needle Insertion in Robotic Surgery
 permalink: /research/projects/conect/
+image: /assets/images/projects/conect.jpg
 ---
+
+![CONECT Project](/assets/images/projects/conect.jpg)
 
 ## Project Overview
 

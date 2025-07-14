@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<div class="columns is-multiline">
+    <div class="column is-12">
+        {% include pagination.html %}
+    </div>
+    {% for post in paginator.posts %}
+    <div class="column is-12">
+        {% include post-card.html %}
+    </div>
+    {% endfor %}
+    <div class="column is-12">
+        {% include pagination.html %}
+    </div>
+    <div class="column is-12">
+        {% include subscribe.html %}
+    </div>
+</div>
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mon Blog Technique</title>
+</head>
+<body>
+    <header>
+        <h1>Mon Blog Technique</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Sujet 1</h2>
+            <p>Contenu du sujet 1...</p>
+        </section>
+        <section>
+            <h2>Sujet 2</h2>
+            <p>Contenu du sujet 2...</p>
+        </section>
+        
+    </main>
+</body>
+</html> 
+
+-->

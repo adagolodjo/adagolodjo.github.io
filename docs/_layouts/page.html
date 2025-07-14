@@ -1,17 +1,58 @@
 ---
 layout: default
 ---
-<article class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
+<div class="page-content page-transition">
+  <!-- Page Header -->
+  <section class="section is-light">
+    <div class="container">
+      <div class="has-text-centered">
+        <h1 class="title is-2">{{ page.title }}</h1>
+        {% if page.subtitle %}
+        <p class="subtitle is-5 has-text-grey">{{ page.subtitle }}</p>
+        {% endif %}
+        {% if page.description %}
+        <p class="has-text-grey mt-3">{{ page.description }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
+  <!-- Main Content -->
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        {{ content }}
+      </div>
+    </div>
+  </section>
 
-</article>
+  <!-- Call to Action (if specified) -->
+  {% if page.show_cta %}
+  <section class="section is-dark">
+    <div class="container has-text-centered">
+      <h2 class="title is-3 has-text-white mb-4">Ready to Get Started?</h2>
+      <p class="subtitle is-5 has-text-light mb-5">
+        I'm always interested in discussing potential collaborations and opportunities.
+      </p>
+      <div class="buttons is-centered">
+        <a href="/contact/" class="button is-white is-outlined is-large mr-3">
+          <span class="icon">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span>Contact Me</span>
+        </a>
+        <a href="/about/" class="button is-white is-large">
+          <span class="icon">
+            <i class="fas fa-user"></i>
+          </span>
+          <span>Learn More</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+</div>
 
 
 <!-- Version copier de la page de bulma -->

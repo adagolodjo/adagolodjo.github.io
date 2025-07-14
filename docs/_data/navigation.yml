@@ -1,3 +1,5 @@
+- name: About
+  link: /about/
 - name: Research
   link: /research/
   dropdown:
@@ -38,6 +40,8 @@
       link: /resources/data/
     - name: Tutorials
       link: /resources/tutorials/
-- name: Contact & News
+- name: Contact
   link: /contact/
+- name: News
+  link: /news/
 
