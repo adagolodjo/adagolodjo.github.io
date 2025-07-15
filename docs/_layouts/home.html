@@ -1,545 +1,121 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Assistant Professor</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+---
+layout: default
+---
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            color: #333;
-            overflow-x: hidden;
-        }
+<div class="modern-hero">
+  <!-- Navigation -->
+  <nav class="hero-nav">
+    <div class="nav-left">
+      <a href="{{ '/' | relative_url }}" class="nav-item is-active">Home</a>
+      <a href="{{ '/about/' | relative_url }}" class="nav-item">About</a>
+      <a href="{{ '/research/projects/' | relative_url }}" class="nav-item">Projects</a>
+      <a href="{{ '/research/publications/' | relative_url }}" class="nav-item">Publications</a>
+    </div>
+    <div class="nav-center">
+      <div class="logo-circle">
+        <span>YA</span>
+      </div>
+    </div>
+    <div class="nav-right">
+      <a href="https://scholar.google.com/citations?user=YOUR_ID" class="social-icon" target="_blank" title="Google Scholar">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+      <a href="https://github.com/adagolodjo" class="social-icon" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" class="social-icon" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://orcid.org/YOUR_ORCID" class="social-icon" target="_blank" title="ORCID">
+        <i class="fab fa-orcid"></i>
+      </a>
+      <button class="theme-toggle" onclick="toggleDarkMode()" title="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Navigation */
-        nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: #667eea;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .logo {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background: rgba(0, 0, 0, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* Main content */
-        main {
-            margin-top: 80px;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        .hero {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            padding: 4rem 0;
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            padding: 12px 30px;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
-            color: white;
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #333;
-        }
-
-        /* Artist portrait */
-        .artist-portrait {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .portrait-container {
-            width: 400px;
-            height: 400px;
-            position: relative;
-            overflow: hidden;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            padding: 10px;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .portrait-image {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #ff9a9e, #fecfef, #fecfef);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .portrait-face {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60%;
-            height: 60%;
-            background: #f5f5f5;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: #333;
-        }
-
-        .paint-splashes {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-
-        .splash {
-            position: absolute;
-            border-radius: 50%;
-            animation: splashMove 8s ease-in-out infinite;
-        }
-
-        .splash-1 {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            top: 10%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .splash-2 {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
-            top: 20%;
-            right: 15%;
-            animation-delay: 2s;
-        }
-
-        .splash-3 {
-            width: 30px;
-            height: 30px;
-            background: linear-gradient(135deg, #feca57, #ff9ff3);
-            bottom: 20%;
-            left: 20%;
-            animation-delay: 4s;
-        }
-
-        /* Floating elements */
-        .floating-element {
-            position: absolute;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .lightbulb {
-            right: 10%;
-            top: 20%;
-            font-size: 3rem;
-            color: #feca57;
-            animation-delay: 1s;
-        }
-
-        .hire-badge {
-            position: absolute;
-            left: -50px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: #333;
-            color: white;
-            padding: 15px 25px;
-            border-radius: 50px;
-            font-weight: bold;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .hire-badge::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: -10px;
-            transform: translateY(-50%);
-            width: 0;
-            height: 0;
-            border-left: 10px solid #333;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-        }
-
-        .skills-orbit {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 500px;
-            height: 500px;
-            border: 2px dashed rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            animation: rotate 20s linear infinite;
-        }
-
-        .skill-tag {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: #333;
-            animation: counterRotate 20s linear infinite;
-        }
-
-        .skill-tag:nth-child(1) {
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .skill-tag:nth-child(2) {
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
-        }
-
-        .skill-tag:nth-child(3) {
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .skill-tag:nth-child(4) {
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        @keyframes splashMove {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            25% { transform: translate(10px, -10px) scale(1.1); }
-            50% { transform: translate(-5px, 10px) scale(0.9); }
-            75% { transform: translate(5px, 5px) scale(1.05); }
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: translateY(-50%) scale(1); }
-            50% { transform: translateY(-50%) scale(1.05); }
-        }
-
-        @keyframes rotate {
-            from { transform: translate(-50%, -50%) rotate(0deg); }
-            to { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-
-        @keyframes counterRotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(-360deg); }
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 2rem;
-            }
-
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .portrait-container {
-                width: 300px;
-                height: 300px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .skills-orbit {
-                width: 350px;
-                height: 350px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">YA</div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#articles">Teaching</a></li>
-                </ul>
-                <div class="social-links">
-                    <a href="#" title="Twitter">🐦</a>
-                    <a href="#" title="GitHub">🐙</a>
-                    <a href="#" title="LinkedIn">💼</a>
-                    <a href="#" title="Pinterest">📌</a>
-                    <a href="#" title="Dribbble">🎨</a>
-                    <a href="#" title="Theme">🌙</a>
-                </div>
+  <!-- Hero Content -->
+  <section class="hero-content">
+    <div class="hero-container">
+      <div class="hero-left">
+        <div class="artistic-portrait">
+          <div class="portrait-overlay">
+            <div class="watercolor-effect"></div>
+            <div class="geometric-shapes">
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+              <div class="shape shape-4"></div>
             </div>
+          </div>
+          <img src="/assets/images/profile.jpg" alt="{{ site.author.name }}" class="profile-image">
         </div>
-    </nav>
-
-    <!-- Main content -->
-    <main>
-        <div class="container">
-            <section class="hero">
-                <div class="hero-content">
-                    <h1>Turning Vision Into Reality With Math And Code.</h1>
-                    <p>
-                        As an Assistant professor at University of Lille 
-                        skilled full-stack developer, I am dedicated to turning ideas into 
-                        innovative web applications. Explore my latest projects and publications.  
-                  
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary">Resume 📄</a>
-                        <a href="#" class="btn btn-secondary">Contact</a>
-                    </div>
-                </div>
-
-                <div class="artist-portrait">
-                    <div class="hire-badge">
-                        <div style="text-align: center; line-height: 1.2;">
-                            <div style="font-size: 0.8rem;"></div>
-                            <div>Collaborations</div>
-                            <div style="font-size: 0.8rem;">Code & Math</div>
-                        </div>
-                    </div>
-                    
-                    <div class="portrait-container">
-                        <div class="portrait-image">
-                            <div class="portrait-face">👨‍💻</div>
-                            <div class="paint-splashes">
-                                <div class="splash splash-1"></div>
-                                <div class="splash splash-2"></div>
-                                <div class="splash splash-3"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skills-orbit">
-                        <div class="skill-tag">Soft Robots</div>
-                        <div class="skill-tag">Chirurgical Robots</div>
-                        <div class="skill-tag">Augmented Reality</div>
-                        <div class="skill-tag">Phisical Modeling</div>
-                        <!-- <div class="skill-tag">Augmented Reality</div> -->
-                    </div>
-                </div>
-            </section>
+        
+        <!-- Research Badge -->
+        <div class="hire-badge">
+          <div class="badge-text">
+            <span>Research</span>
+            <span>Collaboration</span>
+            <span>Available</span>
+          </div>
         </div>
+      </div>
+      
+      <div class="hero-right">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            Turning Ideas Into 
+            <span class="highlight">Innovation</span>
+            Through Research
+            <span class="highlight">And Technology</span>
+          </h1>
+          
+          <p class="hero-description">
+            As a dedicated researcher and assistant professor, I am passionate about 
+            advancing the frontiers of robotics and augmented reality in healthcare. 
+            Explore my latest projects and publications, showcasing expertise in 
+            soft robotics and medical simulation.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="/assets/cv.pdf" class="cta-button primary" target="_blank">
+              <span>Resume</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="{{ '/contact/' | relative_url }}" class="cta-button secondary">
+              Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Decorative Elements -->
+    <div class="decorative-elements">
+      <div class="lightbulb-icon">
+        <i class="fas fa-lightbulb"></i>
+      </div>
+      <div class="floating-particles">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+      </div>
+    </div>
+  </section>
+</div>
 
-        <div class="floating-element lightbulb">💡</div>
-    </main>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Dynamic paint splash animation
-        function createPaintSplash() {
-            const splashes = document.querySelectorAll('.splash');
-            splashes.forEach(splash => {
-                splash.addEventListener('animationiteration', () => {
-                    const colors = [
-                        'linear-gradient(135deg, #667eea, #764ba2)',
-                        'linear-gradient(135deg, #ff6b6b, #ee5a24)',
-                        'linear-gradient(135deg, #feca57, #ff9ff3)',
-                        'linear-gradient(135deg, #48cae4, #023e8a)',
-                        'linear-gradient(135deg, #f72585, #7209b7)'
-                    ];
-                    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-                    splash.style.background = randomColor;
-                });
-            });
-        }
-
-        // Initialize animations
-        createPaintSplash();
-
-        // Parallax effect for floating elements
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.floating-element');
-            
-            parallaxElements.forEach(element => {
-                const speed = element.dataset.speed || 0.5;
-                const yPos = -(scrolled * speed);
-                element.style.transform = `translateY(${yPos}px)`;
-            });
-        });
-    </script>
-</body>
-</html>
+<!-- Additional Content Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-two-thirds">
+        <div class="content">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

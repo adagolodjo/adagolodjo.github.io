@@ -1,0 +1,30 @@
+<nav class="hero-nav">
+  <div class="nav-left">
+    <a href="{{ '/' | relative_url }}" class="nav-item{% if page.url == '/' %} is-active{% endif %}">Home</a>
+    <a href="{{ '/about/' | relative_url }}" class="nav-item{% if page.url contains '/about/' %} is-active{% endif %}">About</a>
+    <a href="{{ '/research/projects/' | relative_url }}" class="nav-item{% if page.url contains '/research/projects/' %} is-active{% endif %}">Projects</a>
+    <a href="{{ '/research/publications/' | relative_url }}" class="nav-item{% if page.url contains '/research/publications/' %} is-active{% endif %}">Publications</a>
+  </div>
+  <div class="nav-center">
+    <div class="logo-circle">
+      <span>YA</span>
+    </div>
+  </div>
+  <div class="nav-right">
+    <a href="https://scholar.google.com/citations?user=YOUR_ID" class="social-icon" target="_blank" title="Google Scholar" rel="noopener">
+      <i class="fas fa-graduation-cap"></i>
+    </a>
+    <a href="https://github.com/adagolodjo" class="social-icon" target="_blank" title="GitHub" rel="noopener">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" class="social-icon" target="_blank" title="LinkedIn" rel="noopener">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://orcid.org/YOUR_ORCID" class="social-icon" target="_blank" title="ORCID" rel="noopener">
+      <i class="fab fa-orcid"></i>
+    </a>
+    <button class="theme-toggle" onclick="toggleDarkMode()" title="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
+  </div>
+</nav> 

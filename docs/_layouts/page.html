@@ -2,71 +2,54 @@
 layout: default
 ---
 
-<div class="page-content page-transition">
-  <!-- Page Header -->
-  <section class="section is-light">
-    <div class="container">
-      <div class="has-text-centered">
-        <h1 class="title is-2">{{ page.title }}</h1>
-        {% if page.subtitle %}
-        <p class="subtitle is-5 has-text-grey">{{ page.subtitle }}</p>
-        {% endif %}
-        {% if page.description %}
-        <p class="has-text-grey mt-3">{{ page.description }}</p>
-        {% endif %}
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Content -->
-  <section class="section">
-    <div class="container">
-      <div class="content">
-        {{ content }}
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action (if specified) -->
-  {% if page.show_cta %}
-  <section class="section is-dark">
-    <div class="container has-text-centered">
-      <h2 class="title is-3 has-text-white mb-4">Ready to Get Started?</h2>
-      <p class="subtitle is-5 has-text-light mb-5">
-        I'm always interested in discussing potential collaborations and opportunities.
-      </p>
-      <div class="buttons is-centered">
-        <a href="/contact/" class="button is-white is-outlined is-large mr-3">
-          <span class="icon">
-            <i class="fas fa-envelope"></i>
-          </span>
-          <span>Contact Me</span>
-        </a>
-        <a href="/about/" class="button is-white is-large">
-          <span class="icon">
-            <i class="fas fa-user"></i>
-          </span>
-          <span>Learn More</span>
-        </a>
-      </div>
-    </div>
-  </section>
-  {% endif %}
+<div style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+  {% include hero-nav.html %}
+  {% include hero.html %}
 </div>
+
+<!-- Main Content -->
+{% if page.about_fullwidth %}
+<section class="section" style="padding-left:0; padding-right:0;">
+  <div style="width:100vw; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw;">
+    {{ content }}
+  </div>
+</section>
+{% else %}
+<section class="section">
+  <div class="container">
+    <div class="content">
+      {{ content }} 
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Call to Action (if specified) -->
+{% if page.show_cta %}
+<section class="section is-dark">
+  <div class="container has-text-centered">
+    <h2 class="title is-3 has-text-white mb-4">Ready to Get Started?</h2>
+    <p class="subtitle is-5 has-text-light mb-5">
+      I'm always interested in discussing potential collaborations and opportunities.
+    </p>
+    <div class="buttons is-centered">
+      <a href="/contact/" class="button is-white is-outlined is-large mr-3">
+        <span class="icon">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span>Contact Me</span>
+      </a>
+      <a href="/about/" class="button is-white is-large">
+        <span class="icon">
+          <i class="fas fa-user"></i>
+        </span>
+        <span>Learn More</span>
+      </a>
+    </div>
+  </div>
+</section>
+{% endif %}
 
 
 <!-- Version copier de la page de bulma -->
 
-<!-- 
----
-layout: default
----
-
-{% if page.toc %}
-    {% assign contentsTitle = page.toc_title | default: 'Contents' %}
-    {% include toc.html html=content class='menu-list' h_min=2 h_max=3 contents_title=contentsTitle %}
-{% endif %}
-<div class="content">
-    {{ content }}
-</div>
--->

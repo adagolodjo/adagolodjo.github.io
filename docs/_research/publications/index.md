@@ -7,8 +7,8 @@ permalink: /research/publications/
 
 <div class="container">
   <div class="section">
-    <h1 class="title">Publications</h1>
-    <p class="subtitle">Publications automatically fetched from HAL (Hyper Articles en Ligne)</p>
+    <!-- <h1 class="title">Publications</h1> -->
+    <!-- <p class="subtitle">Publications automatically fetched from HAL (Hyper Articles en Ligne)</p> -->
     
     <!-- Loading indicator -->
     <div id="publications-loading" class="has-text-centered" style="display: none;">
@@ -24,50 +24,35 @@ permalink: /research/publications/
     <!-- Fallback: Manual publications if HAL fails -->
     <div id="manual-publications" style="display: none;">
       <h2>Selected Publications</h2>
-      
-      <h3>Journal Articles</h3>
-      {% assign journal_papers = site.data.publications | where: "type", "journal" | sort: "year" | reverse %}
-      {% for paper in journal_papers %}
-      <div class="publication-item">
-        <h4 class="publication-title">{{ paper.title }}</h4>
-        <p class="publication-authors">{{ paper.authors }}</p>
-        <p class="publication-venue">
-          <em>{{ paper.journal }}</em> ({{ paper.year }})
-          {% if paper.volume %}, Vol. {{ paper.volume }}{% endif %}
-          {% if paper.issue %}, Issue {{ paper.issue }}{% endif %}
-          {% if paper.pages %}, pp. {{ paper.pages }}{% endif %}
-        </p>
-        {% if paper.doi %}
-        <div class="publication-links">
-          <a href="https://doi.org/{{ paper.doi }}" class="button is-small is-primary" target="_blank">
-            <span class="icon"><i class="fas fa-external-link-alt"></i></span>
-            <span>DOI</span>
-          </a>
-        </div>
-        {% endif %}
+      <div class="publications-grid">
+        {% assign all_papers = site.data.publications | sort: "year" | reverse %}
+        {% for paper in all_papers %}
+          <div class="publication-item">
+            <h4 class="publication-title">{{ paper.title }}</h4>
+            <p class="publication-authors">{{ paper.authors }}</p>
+            <p class="publication-venue">
+              {% if paper.journal %}
+                <em>{{ paper.journal }}</em>
+              {% elsif paper.conference %}
+                <em>{{ paper.conference }}</em>
+              {% endif %}
+              ({{ paper.year }})
+              {% if paper.volume %}, Vol. {{ paper.volume }}{% endif %}
+              {% if paper.issue %}, Issue {{ paper.issue }}{% endif %}
+              {% if paper.pages %}, pp. {{ paper.pages }}{% endif %}
+              {% if paper.location %}, {{ paper.location }}{% endif %}
+            </p>
+            {% if paper.doi %}
+            <div class="publication-links">
+              <a href="https://doi.org/{{ paper.doi }}" class="button is-small is-primary" target="_blank" rel="noopener">
+                <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+                <span>DOI</span>
+              </a>
+            </div>
+            {% endif %}
+          </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-      
-      <h3>Conference Papers</h3>
-      {% assign conference_papers = site.data.publications | where: "type", "conference" | sort: "year" | reverse %}
-      {% for paper in conference_papers %}
-      <div class="publication-item">
-        <h4 class="publication-title">{{ paper.title }}</h4>
-        <p class="publication-authors">{{ paper.authors }}</p>
-        <p class="publication-venue">
-          <em>{{ paper.conference }}</em> ({{ paper.year }})
-          {% if paper.location %}, {{ paper.location }}{% endif %}
-        </p>
-        {% if paper.doi %}
-        <div class="publication-links">
-          <a href="https://doi.org/{{ paper.doi }}" class="button is-small is-primary" target="_blank">
-            <span class="icon"><i class="fas fa-external-link-alt"></i></span>
-            <span>DOI</span>
-          </a>
-        </div>
-        {% endif %}
-      </div>
-      {% endfor %}
     </div>
     
     <!-- Links to external profiles -->
@@ -146,6 +131,17 @@ permalink: /research/publications/
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.publications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 900px) {
+  .publications-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 

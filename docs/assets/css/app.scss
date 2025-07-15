@@ -1,5 +1,10 @@
 // Import Bulma CSS Framework
+@import "partials/variables";
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import "partials/typography";
+@import "partials/layout";
+@import "partials/components";
+@import "partials/hero";
 
 // Custom CSS variables for theme
 :root {
@@ -53,50 +58,6 @@
   box-shadow: var(--shadow);
   margin-bottom: 1rem;
   border-left: 4px solid var(--primary-color);
-}
-
-// Enhanced card styling
-.card {
-  background-color: var(--card-bg);
-  border-color: var(--border-color);
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-  }
-}
-
-// Navbar styling
-.navbar {
-  background-color: var(--card-bg);
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-  
-  &.is-scrolled {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-  }
-}
-
-// Button enhancements
-.button {
-  transition: all 0.3s ease;
-  
-  &:hover {
-    transform: translateY(-2px);
-  }
-}
-
-// Page transitions
-.page-transition {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 // Responsive design improvements

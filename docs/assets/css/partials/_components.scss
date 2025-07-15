@@ -1,18 +1,3 @@
-.hero {
-  background-image:
-    linear-gradient(rgba(33, 140, 116, 0.85), rgba(56, 173, 169, 0.85)),
-    url("https://source.unsplash.com/random/1600x900/?technology,robotics");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.hero .title,
-.hero .subtitle {
-  color: white;
-}
-
 .button.is-primary {
   background-color: $primary;
   border-color: $primary;
@@ -54,3 +39,15 @@
 .card:hover {
   box-shadow: 0 12px 40px rgba(33,140,116,0.15);
 } 
+
+
+.publications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 900px) {
+  .publications-grid {
+    grid-template-columns: 1fr;
+  }
+}
