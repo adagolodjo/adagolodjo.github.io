@@ -1,0 +1,143 @@
+---
+layout: default
+---
+
+{% include hero-nav.html %}
+
+<div class="modern-hero" style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+  <!-- Hero Content -->
+  <section class="hero-content">
+    <div class="hero-container container">
+      <div class="hero-left">
+        <div class="artistic-portrait">
+          <div class="portrait-overlay">
+            <div class="watercolor-effect"></div>
+            <div class="geometric-shapes">
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+              <div class="shape shape-4"></div>
+            </div>
+          </div>
+          <img src="/assets/images/notion-face.png" alt="{{ site.author.name }}" class="profile-image" loading="lazy">
+        </div>
+        <!-- Research Badge -->
+        <div class="hire-badge">
+          <div class="badge-text">
+            <span>Research</span>
+            <span>Collaboration</span>
+            <span>Available</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            {{ site.author.name }}<br>
+            <span class="highlight">Robotics & AR for Healthcare</span>
+          </h1>
+          <p class="hero-description">
+            Assistant Professor at University of Lille. Bridging robotics, simulation, and medical innovation.
+          </p>
+          <div class="hero-actions">
+            <a href="/assets/cv.pdf" class="cta-button primary" target="_blank" rel="noopener">
+              <span>Resume</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="{{ '/contact/' | relative_url }}" class="cta-button secondary">
+              Contact
+            </a>
+          </div>
+          <div class="quick-links" style="margin-top:1.5rem;">
+            <a href="{{ '/research/projects/' | relative_url }}">Projects</a> ·
+            <a href="{{ '/research/publications/' | relative_url }}">Publications</a> ·
+            <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Decorative Elements -->
+    <div class="decorative-elements">
+      <div class="lightbulb-icon">
+        <i class="fas fa-lightbulb"></i>
+      </div>
+      <div class="floating-particles">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Featured Projects Section -->
+<section class="featured-section" style="background: var(--card-bg); padding: 2rem 0;">
+  <div class="container">
+    <h2 class="title is-4" style="text-align:center; margin-bottom:2rem;">Featured Projects</h2>
+    <div class="columns is-multiline">
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="/assets/images/projects/conect.jpg" alt="CONECT Project" loading="lazy">
+            </figure>
+          </div>
+          <div class="card-content">
+            <h3 class="title is-5">CONECT Project</h3>
+            <p class="subtitle is-6">Control of Needle Insertion in Robotic Surgery</p>
+            <p>Integrating robotic technology in operating rooms for enhanced precision in needle insertion procedures, with real-time simulation and AR guidance.</p>
+            <a href="/research/projects/conect/" class="button is-primary is-small" rel="noopener">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="/assets/images/projects/robocop.jpg" alt="ROBOCOP Project" loading="lazy">
+            </figure>
+          </div>
+          <div class="card-content">
+            <h3 class="title is-5">ROBOCOP Project</h3>
+            <p class="subtitle is-6">Cochlear Implant Robotization</p>
+            <p>Innovative approaches to improve hearing technologies through advanced robotic assistance and precision surgical procedures.</p>
+            <a href="/research/projects/robocop/" class="button is-primary is-small" rel="noopener">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="/assets/images/projects/cosseroots.jpg" alt="COSSEROOTS Project" loading="lazy">
+            </figure>
+          </div>
+          <div class="card-content">
+            <h3 class="title is-5">COSSEROOTS Project</h3>
+            <p class="subtitle is-6">Cosserat Theory for Soft Robotics Control</p>
+            <p>Applying Cosserat's theory to advance the control of slender deformation robots for medical and industrial applications.</p>
+            <a href="/research/projects/cosseroots/" class="button is-primary is-small" rel="noopener">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:1rem;">
+      <a href="/research/projects/" class="button is-link is-light" rel="noopener">See all projects →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Additional Content Section -->
+<section class="content-section" style="background: var(--bg-color);">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-two-thirds">
+        <div class="content">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

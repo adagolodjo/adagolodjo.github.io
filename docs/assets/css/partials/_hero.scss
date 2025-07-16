@@ -1,0 +1,246 @@
+// Modern Hero Styles
+.modern-hero {
+  height: 100vh;
+  background: linear-gradient(135deg, $primary-dark 0%, $primary 50%, $primary-light 100%);
+  position: relative;
+  overflow: hidden;
+  color: white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(
+        circle at 20% 50%,
+        rgba($primary, 0.3) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 20%,
+        rgba($accent, 0.3) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 40% 80%,
+        rgba($primary-light, 0.3) 0%,
+        transparent 50%
+      );
+    z-index: 1;
+  }
+}
+
+// Navigation
+.hero-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba($primary-dark, 0.85);
+
+  .nav-left,
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover,
+    &.is-active {
+      color: $primary-light;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $primary-light;
+      }
+    }
+  }
+
+  .logo-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .social-icon {
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $primary-light;
+      transform: translateY(-2px);
+    }
+  }
+
+  .theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $primary-light;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// Hero Content
+.hero-content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  align-items: center;
+}
+
+// Left side - Artistic Portrait
+.hero-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.artistic-portrait {
+  position: relative;
+  width: 400px;
+  height: 500px;
+
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    position: relative;
+    z-index: 5;
+    filter: grayscale(20%);
+    transition: all 0.5s ease;
+
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }
+
+  .portrait-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .watercolor-effect {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: linear-gradient(
+      45deg,
+      rgba($accent, 0.4) 0%,
+      rgba($primary, 0.4) 30%,
+      rgba($primary-light, 0.4) 60%,
+      rgba($warning, 0.4) 100%
+    );
+    border-radius: 30px;
+    filter: blur(10px);
+    animation: colorShift 8s ease-in-out infinite;
+  }
+
+  .geometric-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+
+      &.shape-1 {
+        width: 60px;
+        height: 60px;
+        background: rgba($accent, 0.6);
+        top: 10%;
+        left: -10%;
+        animation-delay: 0s;
+      }
+
+      &.shape-2 {
+        width: 40px;
+        height: 40px;
+        background: rgba($primary-light, 0.6);
+        top: 60%;
+        right: -15%;
+        animation-delay: 2s;
+      }
+
+      &.shape-3 {
+        width: 80px;
+        height: 80px;
+        background: rgba($warning, 0.6);
+        bottom: 20%;
+        left: -20%;
+        animation-delay: 4s;
+      }
+
+      &.shape-4 {
+        width: 50px;
+        height: 50px;
+        background: rgba($primary, 0.6);
+        top: 30%;
+        right: -10%;
+        animation-delay: 1s;
+      }
+    }
+  }
+} 

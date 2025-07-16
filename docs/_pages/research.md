@@ -9,22 +9,7 @@ description: Overview of my research activities in simulation and soft robotics
 
 Welcome to my research hub. My work focuses on **Simulation and Soft Robotics**, with applications in medical robotics and robotic-assisted surgery.
 
-## Current Research Areas
 
-### 🤖 Medical Robotics
-- Robotic-assisted surgical interventions
-- Real-time simulation for surgical navigation
-- Constraint-based manipulation of deformable models
-
-### 🧠 Simulation & Modeling
-- Real-time deformation simulation
-- Physics-based modeling for soft tissues
-- Constraint-based approaches
-
-### 🔬 Soft Robotics
-- Continuum robots for medical applications
-- Bio-inspired robotic systems
-- Flexible and adaptive control systems
 
 ---
 

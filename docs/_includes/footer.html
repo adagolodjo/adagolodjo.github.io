@@ -1,35 +1,117 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h3 class="title is-4 has-text-white">Dr. Yinoussa Adagolodjo</h3>
+        <p class="has-text-light">
+          Assistant Professor at the University of Lille<br>
+          DEFROST Team, CRIStAL UMR 9189<br>
+          Specializing in robotics and augmented reality applications in healthcare
+        </p>
+      </div>
+      
+      <div class="column">
+        <h4 class="title is-5 has-text-white">Contact</h4>
+        <p class="has-text-light">
+          <strong>Email:</strong><br>
+          <a href="mailto:yinoussa.adagolodjo@univ-lille.fr" class="has-text-light">yinoussa.adagolodjo@univ-lille.fr</a><br>
+          <a href="mailto:yinoussa.adagolodjo@inria.fr" class="has-text-light">yinoussa.adagolodjo@inria.fr</a>
+        </p>
+        <p class="has-text-light">
+          <strong>Office:</strong><br>
+          University of Lille<br>
+          Bâtiment M3 extension<br>
+          59655 Villeneuve d'Ascq, France
+        </p>
+      </div>
+      
+      <div class="column">
+        <h4 class="title is-5 has-text-white">Quick Links</h4>
+        <ul class="has-text-light">
+          <li><a href="/about/" class="has-text-light">About</a></li>
+          <li><a href="/research/" class="has-text-light">Research</a></li>
+          <li><a href="/teaching/" class="has-text-light">Teaching</a></li>
+          <li><a href="/contact/" class="has-text-light">Contact</a></li>
         </ul>
       </div>
-
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
+      
+      <div class="column">
+        <h4 class="title is-5 has-text-white">Connect</h4>
+        <div class="buttons">
+          <a href="https://github.com/adagolodjo" class="button is-small is-outlined is-light" title="GitHub">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/in/yinoussa-adagolodjo" class="button is-small is-outlined is-light" title="LinkedIn">
+            <span class="icon">
+              <i class="fab fa-linkedin"></i>
+            </span>
+          </a>
+          <a href="https://scholar.google.com/citations?user=YOUR_ID" class="button is-small is-outlined is-light" title="Google Scholar">
+            <span class="icon">
+              <i class="fas fa-graduation-cap"></i>
+            </span>
+          </a>
+          <a href="https://www.researchgate.net/profile/YOUR_PROFILE" class="button is-small is-outlined is-light" title="ResearchGate">
+            <span class="icon">
+              <i class="fas fa-microscope"></i>
+            </span>
+          </a>
+        </div>
+        
+        <div class="mt-4">
+          <p class="has-text-light is-size-7">
+            <strong>Office Hours:</strong><br>
+            Tuesday: 14:00 - 16:00<br>
+            Thursday: 10:00 - 12:00<br>
+            Or by appointment
+          </p>
+        </div>
       </div>
     </div>
-
+    
+    <hr class="has-background-grey-light">
+    
+    <div class="columns is-mobile is-vcentered">
+      <div class="column">
+        <p class="has-text-light is-size-7">
+          © 2024 Dr. Yinoussa Adagolodjo. All rights reserved.
+        </p>
+      </div>
+      <div class="column is-narrow">
+        <p class="has-text-light is-size-7">
+          Built with <a href="https://jekyllrb.com/" class="has-text-light">Jekyll</a> and 
+          <a href="https://bulma.io/" class="has-text-light">Bulma</a>
+        </p>
+      </div>
+    </div>
   </div>
-
 </footer>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" class="scroll-to-top" title="Scroll to top">
+  <span class="icon">
+    <i class="fas fa-arrow-up"></i>
+  </span>
+</button>
+
+<script>
+  // Scroll to top functionality
+  const scrollToTopBtn = document.getElementById('scrollToTop');
+  
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.style.display = 'block';
+    } else {
+      scrollToTopBtn.style.display = 'none';
+    }
+  });
+  
+  scrollToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>

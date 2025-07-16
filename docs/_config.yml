@@ -1,62 +1,37 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: Adgolodjo
+# These are used to personalize your site. Access via {{ site.title }}, {{ site.email }}, etc.
+title: Adagolodjo
 email: adagolodjo_AT_protonmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Associate Professor in Computer Science.
+description: >-
+  Assistant Professor in Computer Science.
   Research in Simulation and Soft Robotics.
 
-baseurl: "" # "/docs" # the subpath of your site, e.g. /blog
-url: "" # "https://adagolodjo.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: pasDeX
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://adagolodjo.github.io" # the base hostname & protocol for your site
 github_username: adagolodjo
 permalink: pretty
 
-#----
-# Not in Jekyll minima
-author: Yinoussa Adagolodjo
-linkedin_username: yinoussa-adagolodjo
-# title_logo: /images/title-logo-image.png
+# Author and social info
+author:
+  name: Yinoussa Adagolodjo
+  linkedin: yinoussa-adagolodjo
+  # twitter: your_twitter
+  # title_logo: /images/title-logo-image.png
 
-#----
-
-# Removed minima theme as it is a regular theme !!!!!
-# Build settings
-# theme: minima
-# theme: bulma-clean-theme
+# Theme and plugins
 remote_theme: chrisrhymes/bulma-clean-theme@v0.13.1
 plugins:
   - jekyll-feed
-  - jekyll-email-protect # encode e-mails
-  - jekyll-feed # RSS feed
-  - jekyll-inline-svg # include svg for logo
-  - jekyll-loading-lazy # lazy loading of images
-  - jekyll-scholar # biblio
-  - jekyll-seo-tag # tags for google, twitter,...
-  - jekyll-sitemap # auto-sitemap
-  - jekyll-timeago # relative dates (not used)
-  - jekyll-toc # TOC (for lectures)
-  - jekyll-typogrify # tyopgraphy filters (amp, copyright, quotes...)
-  - jemoji # emoji management
-  - liquid_pluralize # pluralize
+  - jekyll-email-protect
+  - jekyll-inline-svg
+  - jekyll-loading-lazy
+  - jekyll-scholar
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-toc
+  - jekyll-typogrify
+  - jemoji
+  - liquid_pluralize
 
 # Collections for academic website - Activity-Based Organization
 collections:
@@ -69,6 +44,9 @@ collections:
   publications:
     output: true
     permalink: /research/publications/:name/
+  research:
+    output: true
+    permalink: /research/:path/
   courses:
     output: true
     permalink: /teaching/:name/
@@ -111,6 +89,11 @@ defaults:
       layout: "resource"
   - scope:
       path: ""
+      type: "research"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
       type: "professional"
     values:
       layout: "page"
@@ -122,21 +105,16 @@ defaults:
 
 # SASS configuration for theme compatibility
 sass:
-  sass_dir: _sass
   style: compressed
   load_paths:
-    - _sass
     - assets/css
     - node_modules/bulma
 
+# SEO and social media settings
+lang: en
+timezone: Europe/Paris
+
 # Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
 exclude:
   - .sass-cache/
   - .jekyll-cache/
