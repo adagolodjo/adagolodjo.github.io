@@ -6,196 +6,247 @@ permalink: /research/projects/
 description: "Explore Dr. Yinoussa Adagolodjo's research projects in robotics, augmented reality, and healthcare technology."
 ---
 
+<style>
+.projects-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: #fafbfc;
+  padding: 2rem 0;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2vw;
+}
+.project-card {
+  display: flex;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 2rem;
+  align-items: center;
+  gap: 2rem;
+  border: 1.5px solid #ececec;
+  transition: box-shadow 0.2s;
+}
+.project-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+}
+.project-image img, .project-image video {
+  width: 180px;
+  height: 135px;
+  object-fit: cover;
+  border-radius: 16px;
+  background: #f5f5f5;
+}
+.project-content {
+  flex: 1;
+}
+.project-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: #222;
+}
+.project-description {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+.project-tags {
+  display: flex;
+  gap: 1rem;
+}
+.tag {
+  background: #fafbfc;
+  border: 1.5px solid #dbe2ea;
+  color: #444;
+  border-radius: 12px;
+  padding: 0.4em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+}
+.pub-tags {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.7rem;
+  flex-wrap: wrap;
+}
+.pub-tag {
+  background: linear-gradient(135deg, #a3d8e6 0%, #7ba6c9 100%);
+  color: #222;
+  border-radius: 12px;
+  padding: 0.6em 1.4em;
+  font-size: 1.08em;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(50, 115, 220, 0.08);
+  border: none;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  display: inline-block;
+}
+.pub-tag:hover {
+  background: linear-gradient(135deg, #7ba6c9 0%, #a3d8e6 100%);
+  color: #0a2540;
+}
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.2rem;
+  }
+  .project-image img, .project-image video {
+    width: 100%;
+    height: 180px;
+  }
+}
+</style>
+
 ## Current Research Projects
 
 My research focuses on bridging the gap between advanced robotics technology and practical healthcare applications. Here are the key projects I'm currently working on:
 
-<div class="columns is-multiline" style="margin:0 0 2.5rem 0; max-width:1400px; margin-left:auto; margin-right:auto;">
-  <div class="column is-6-tablet is-6-desktop">
-    <div class="card" style="margin:0 1rem 2.2rem 1rem; min-height:440px; height:100%;">
-      <div class="card-image">
-        <figure class="image is-4by3" style="max-height:220px; overflow:hidden;">
-          <img src="/assets/images/projects/conect.jpg" alt="CONECT Project" style="object-fit:cover; height:220px;">
-        </figure>
+<section class="projects-section">
+<div class="projects-grid">
+  <!-- CONECT Project -->
+  <div class="project-card">
+    <div class="project-image">
+      <img src="/assets/images/projects/conect.jpg" alt="CONECT Project" style="width:100%;height:100%;object-fit:cover;border-radius:10px;aspect-ratio:4/3;">
+    </div>
+    <div class="project-content">
+      <h2 class="project-title">CONECT Project</h2>
+      <p class="project-description">My doctoral thesis project focused on integrating robotic technology in operating rooms for enhanced precision in needle insertion procedures. This work involves developing finite element simulations and augmented reality guidance systems for surgical assistance.</p>
+      <div class="project-tags">
+        <span class="tag">Medical Robotics</span>
+        <span class="tag">Augmented Reality</span>
+        <span class="tag">Surgical Assistance</span>
       </div>
-      <div class="card-content" style="padding:1rem 1rem 0.5rem 1rem; display:flex; flex-direction:column; height:calc(100% - 220px);">
-        <h3 class="title is-5" style="margin-bottom: 1.1rem;">CONECT Project</h3>
-        <p class="subtitle is-6" style="margin-top: -0.4rem; margin-bottom:0.5rem;">Control of Needle Insertion in Robotic Surgery</p>
-        <div class="content" style="font-size:0.98em; flex-grow:1;">
-          <p>
-            My doctoral thesis project focused on integrating robotic technology in operating rooms for enhanced precision 
-            in needle insertion procedures. This work involves developing finite element simulations and augmented reality 
-            guidance systems for surgical assistance.
-          </p>
-          <div class="tags" style="margin-top:0.5rem;">
-            <span class="tag is-primary">Medical Robotics</span>
-            <span class="tag is-info">Augmented Reality</span>
-            <span class="tag is-success">Surgical Assistance</span>
-          </div>
-          <div class="related-publications" style="margin-top:0.7rem;">
-            <strong>Related Publications:</strong>
-            <ul style="font-size:0.95em; margin-top:0.3rem;">
-              <li>Y. Adagolodjo, L. Goffin, M. De Mathelin, H. Courtecuisse (2019). "Constraint-based manipulation of deformable models in robotic surgery." <em>IEEE Robotics and Automation Letters</em>. <a href="https://doi.org/10.1109/LRA.2019.2895244" target="_blank" rel="noopener">DOI</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="card-footer" style="margin-top:0.5rem;">
-          <a href="/research/projects/conect/" class="button is-primary is-small is-fullwidth">Learn More</a>
-        </div>
+      <div class="pub-tags">
+        {% assign project_pubs = site.data.publications | where: "project", "conect" %}
+        {% for paper in project_pubs %}
+          <a href="https://doi.org/{{ paper.doi | strip }}" class="pub-tag" target="_blank" rel="noopener">{% if paper.journal contains "Robotics and Automation Letters" %}LRA{% elsif paper.journal contains "Medical Robotics and Bionics" %}TMRB{% elsif paper.journal contains "Health Technology and Informatics" %}SHTI{% else %}{{ paper.journal | split: ' ' | first }}{% endif %} {{ paper.year }}</a>
+        {% endfor %}
+      </div>
+      <div style="margin-top:1rem;">
+        <a href="/research/projects/conect/" class="button is-primary is-small" style="border-radius: 6px; font-weight: 500;">Learn More</a>
       </div>
     </div>
   </div>
-
-  <div class="column is-6-tablet is-6-desktop">
-    <div class="card" style="margin:0 1rem 2.2rem 1rem; min-height:440px; height:100%;">
-      <div class="card-image">
-        <figure class="image is-4by3" style="max-height:220px; overflow:hidden;">
-          <img src="/assets/images/projects/robocop.jpg" alt="ROBOCOP Project" style="object-fit:cover; height:220px;">
-        </figure>
+  <!-- ROBOCOP Project -->
+  <div class="project-card">
+    <div class="project-image" style="aspect-ratio: 4/3; width: 200px; height: 150px; position: relative;">
+      <video src="/assets/images/forceView.mp4" autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;border-radius:10px; aspect-ratio: 4/3;"></video>
+    </div>
+    <div class="project-content">
+      <h2 class="project-title">ROBOCOP Project</h2>
+      <p class="project-description">Working on cochlear implant robotization, exploring innovative approaches to improve hearing technologies through advanced robotic assistance and precision surgical procedures.</p>
+      <div class="project-tags">
+        <span class="tag">Hearing Technology</span>
+        <span class="tag">Surgical Robotics</span>
+        <span class="tag">Medical Devices</span>
       </div>
-      <div class="card-content" style="padding:1rem 1rem 0.5rem 1rem; display:flex; flex-direction:column; height:calc(100% - 220px);">
-        <h3 class="title is-5" style="margin-bottom: 1.1rem;">ROBOCOP Project</h3>
-        <p class="subtitle is-6" style="margin-top: -0.4rem; margin-bottom:0.5rem;">Cochlear Implant Robotization</p>
-        <div class="content" style="font-size:0.98em; flex-grow:1;">
-          <p>
-            Working on cochlear implant robotization, exploring innovative approaches to improve hearing technologies 
-            through advanced robotic assistance and precision surgical procedures.
-          </p>
-          <div class="tags" style="margin-top:0.5rem;">
-            <span class="tag is-primary">Hearing Technology</span>
-            <span class="tag is-info">Surgical Robotics</span>
-            <span class="tag is-success">Medical Devices</span>
-          </div>
-          <div class="related-publications" style="margin-top:0.7rem;">
-            <strong>Related Publications:</strong>
-            <ul style="font-size:0.95em; margin-top:0.3rem;">
-              <li>Y. Adagolodjo, S. Cotin (2022). "Real-time simulation for surgical navigation in robotic-assisted cochlear implant procedure." <em>IEEE Transactions on Medical Robotics and Bionics</em>. <a href="https://doi.org/10.1109/TMRB.2022.3180577" target="_blank" rel="noopener">DOI</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="card-footer" style="margin-top:0.5rem;">
-          <a href="/research/projects/robocop/" class="button is-primary is-small is-fullwidth">Learn More</a>
-        </div>
+      <div class="pub-tags">
+        {% assign project_pubs = site.data.publications | where: "project", "robocop" %}
+        {% for paper in project_pubs %}
+          <a href="https://doi.org/{{ paper.doi | strip }}" class="pub-tag" target="_blank" rel="noopener">{% if paper.journal contains "Robotics and Automation Letters" %}LRA{% elsif paper.journal contains "Medical Robotics and Bionics" %}TMRB{% elsif paper.journal contains "Health Technology and Informatics" %}SHTI{% else %}{{ paper.journal | split: ' ' | first }}{% endif %} {{ paper.year }}</a>
+        {% endfor %}
+      </div>
+      <div style="margin-top:1rem;">
+        <a href="/research/projects/robocop/" class="button is-primary is-small" style="border-radius: 6px; font-weight: 500;">Learn More</a>
       </div>
     </div>
   </div>
-
-  <div class="column is-6-tablet is-6-desktop">
-    <div class="card" style="margin:0 1rem 2.2rem 1rem; min-height:440px; height:100%;">
-      <div class="card-image">
-        <figure class="image is-4by3" style="max-height:220px; overflow:hidden;">
-          <img src="/assets/images/projects/cosseroots.jpg" alt="COSSEROOTS Project" style="object-fit:cover; height:220px;">
-        </figure>
+  <!-- COSSEROOTS Project -->
+  <div class="project-card">
+    <div class="project-image">
+      <img src="/assets/images/projects/cosseroots.jpg" alt="COSSEROOTS Project" style="width:100%;height:100%;object-fit:cover;border-radius:10px;aspect-ratio:4/3;">
+    </div>
+    <div class="project-content">
+      <h2 class="project-title">COSSEROOTS Project</h2>
+      <p class="project-description">Applying Cosserat's theory to advance the control of slender deformation robots. This innovative approach combines theoretical physics with practical robotics applications in medical and industrial settings.</p>
+      <div class="project-tags">
+        <span class="tag">Soft Robotics</span>
+        <span class="tag">Control Theory</span>
+        <span class="tag">Mathematical Modeling</span>
       </div>
-      <div class="card-content" style="padding:1rem 1rem 0.5rem 1rem; display:flex; flex-direction:column; height:calc(100% - 220px);">
-        <h3 class="title is-5" style="margin-bottom: 1.1rem;">COSSEROOTS Project</h3>
-        <p class="subtitle is-6" style="margin-top: -0.4rem; margin-bottom:0.5rem;">Cosserat Theory for Soft Robotics Control</p>
-        <div class="content" style="font-size:0.98em; flex-grow:1;">
-          <p>
-            Applying Cosserat's theory to advance the control of slender deformation robots. This innovative approach 
-            combines theoretical physics with practical robotics applications in medical and industrial settings.
-          </p>
-          <div class="tags" style="margin-top:0.5rem;">
-            <span class="tag is-primary">Soft Robotics</span>
-            <span class="tag is-info">Control Theory</span>
-            <span class="tag is-success">Mathematical Modeling</span>
-          </div>
-          <div class="related-publications" style="margin-top:0.7rem;">
-            <strong>Related Publications:</strong>
-            <ul style="font-size:0.95em; margin-top:0.3rem;">
-              <li>Y. Adagolodjo, N. Hafsa (2023). "Robots assisted surgical interventions in constrained anatomical spaces." <em>Studies in Health Technology and Informatics</em>. <a href="https://doi.org/10.3233/SHTI230159" target="_blank" rel="noopener">DOI</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="card-footer" style="margin-top:0.5rem;">
-          <a href="/research/projects/cosseroots/" class="button is-primary is-small is-fullwidth">Learn More</a>
-        </div>
+      <div class="pub-tags">
+        {% assign project_pubs = site.data.publications | where: "project", "cosseroots" %}
+        {% for paper in project_pubs %}
+          <a href="https://doi.org/{{ paper.doi | strip }}" class="pub-tag" target="_blank" rel="noopener">{% if paper.journal contains "Robotics and Automation Letters" %}LRA{% elsif paper.journal contains "Medical Robotics and Bionics" %}TMRB{% elsif paper.journal contains "Health Technology and Informatics" %}SHTI{% else %}{{ paper.journal | split: ' ' | first }}{% endif %} {{ paper.year }}</a>
+        {% endfor %}
+      </div>
+      <div style="margin-top:1rem;">
+        <a href="/research/projects/cosseroots/" class="button is-primary is-small" style="border-radius: 6px; font-weight: 500;">Learn More</a>
       </div>
     </div>
   </div>
-
-  <div class="column is-6-tablet is-6-desktop">
-    <div class="card" style="margin:0 1rem 2.2rem 1rem; min-height:440px; height:100%;">
-      <div class="card-image">
-        <figure class="image is-4by3" style="max-height:220px; overflow:hidden;">
-          <img src="/assets/images/projects/adagio.jpg" alt="ADAGIO Project" style="object-fit:cover; height:220px;">
-        </figure>
+  <!-- ADAGIO Project -->
+  <div class="project-card">
+    <div class="project-image">
+      <img src="/assets/images/projects/adagio.jpg" alt="ADAGIO Project" style="width:100%;height:100%;object-fit:cover;border-radius:10px;aspect-ratio:4/3;">
+    </div>
+    <div class="project-content">
+      <h2 class="project-title">ADAGIO Project</h2>
+      <p class="project-description">The ADAGIO project focuses on developing adaptive digital tools and AI-driven assistance for complex medical interventions and operations. (Description à personnaliser)</p>
+      <div class="project-tags">
+        <span class="tag">Digital Health</span>
+        <span class="tag">AI Assistance</span>
+        <span class="tag">Medical Interventions</span>
       </div>
-      <div class="card-content" style="padding:1rem 1rem 0.5rem 1rem; display:flex; flex-direction:column; height:calc(100% - 220px);">
-        <h3 class="title is-5" style="margin-bottom: 1.1rem;">ADAGIO Project</h3>
-        <p class="subtitle is-6" style="margin-top: -0.4rem; margin-bottom:0.5rem;">Adaptive Digital Assistance for Guided Interventions and Operations</p>
-        <div class="content" style="font-size:0.98em; flex-grow:1;">
-          <p>
-            The ADAGIO project focuses on developing adaptive digital tools and AI-driven assistance for complex medical interventions and operations. (Description à personnaliser)
-          </p>
-          <div class="tags" style="margin-top:0.5rem;">
-            <span class="tag is-primary">Digital Health</span>
-            <span class="tag is-info">AI Assistance</span>
-            <span class="tag is-success">Medical Interventions</span>
-          </div>
-        </div>
-        <div class="card-footer" style="margin-top:0.5rem;">
-          <a href="/research/projects/adagio/" class="button is-primary is-small is-fullwidth">Learn More</a>
-        </div>
+      <div style="margin-top:1rem;">
+        <a href="/research/projects/adagio/" class="button is-primary is-small" style="border-radius: 6px; font-weight: 500;">Learn More</a>
       </div>
     </div>
   </div>
-
-  <div class="column is-6-tablet is-6-desktop">
-    <div class="card" style="margin:0 1rem 2.2rem 1rem; min-height:440px; height:100%;">
-      <div class="card-image">
-        <figure class="image is-4by3" style="max-height:220px; overflow:hidden;">
-          <img src="/assets/images/projects/colon.jpg" alt="IRE Project" style="object-fit:cover; height:220px;">
-        </figure>
+  <!-- IRE Project -->
+  <div class="project-card">
+    <div class="project-image">
+      <img src="/assets/images/projects/colon.jpg" alt="IRE Project" style="width:100%;height:100%;object-fit:cover;border-radius:10px;aspect-ratio:4/3;">
+    </div>
+    <div class="project-content">
+      <h2 class="project-title">IRE Project</h2>
+      <p class="project-description">The IRE project develops AI-powered soft robotic endoscopes and digital twins for safer, more effective minimally invasive procedures. (Description à personnaliser)</p>
+      <div class="project-tags">
+        <span class="tag">Robotic Endoscopy</span>
+        <span class="tag">AI & Simulation</span>
+        <span class="tag">Healthcare Innovation</span>
       </div>
-      <div class="card-content" style="padding:1rem 1rem 0.5rem 1rem; display:flex; flex-direction:column; height:calc(100% - 220px);">
-        <h3 class="title is-5" style="margin-bottom: 1.1rem;">IRE Project</h3>
-        <p class="subtitle is-6" style="margin-top: -0.4rem; margin-bottom:0.5rem;">Intelligent Robotic Endoscopes for Healthcare</p>
-        <div class="content" style="font-size:0.98em; flex-grow:1;">
-          <p>
-            The IRE project develops AI-powered soft robotic endoscopes and digital twins for safer, more effective minimally invasive procedures. (Description à personnaliser)
-          </p>
-          <div class="tags" style="margin-top:0.5rem;">
-            <span class="tag is-primary">Robotic Endoscopy</span>
-            <span class="tag is-info">AI & Simulation</span>
-            <span class="tag is-success">Healthcare Innovation</span>
-          </div>
-        </div>
-        <div class="card-footer" style="margin-top:0.5rem;">
-          <a href="/research/projects/ire/" class="button is-primary is-small is-fullwidth" style="margin-bottom:0.5rem;">Learn More</a>
-          <a href="https://ire4health.eu/research/" class="button is-link is-small is-fullwidth" target="_blank" rel="noopener">Official Website &#8599;</a>
-        </div>
+      <div style="margin-top:1rem;">
+        <a href="/research/projects/ire/" class="button is-primary is-small" style="border-radius: 6px; font-weight: 500; margin-bottom:0.5rem;">Learn More</a>
+        <a href="https://ire4health.eu/research/" class="button is-link is-small" target="_blank" rel="noopener">Official Website &#8599;</a>
       </div>
     </div>
   </div>
-
-  <div class="column is-6-tablet is-6-desktop">
-    <div class="card" style="margin:0 1rem 2.2rem 1rem; min-height:440px; height:100%;">
-      <div class="card-image">
-        <figure class="image is-4by3" style="max-height:220px; overflow:hidden;">
-          <img src="/assets/images/projects/prostate-biopsy.jpg" alt="Prostate Biopsy Project" style="object-fit:cover; height:220px;">
-        </figure>
+  <!-- Prostate Biopsy Project -->
+  <div class="project-card">
+    <div class="project-image">
+      <img src="/assets/images/projects/prostate-biopsy.jpg" alt="Prostate Biopsy Project" style="width:100%;height:100%;object-fit:cover;border-radius:10px;aspect-ratio:4/3;">
+    </div>
+    <div class="project-content">
+      <h2 class="project-title">Prostate Biopsy Project</h2>
+      <p class="project-description">This project aims to improve the diagnosis of prostate cancer by combining AI-based image analysis and robotic assistance for targeted biopsies. The goal is to increase precision, reduce unnecessary interventions, and personalize patient care. (Description à personnaliser)</p>
+      <div class="project-tags">
+        <span class="tag">Medical Imaging</span>
+        <span class="tag">AI Diagnosis</span>
+        <span class="tag">Robotic Biopsy</span>
       </div>
-      <div class="card-content" style="padding:1rem 1rem 0.5rem 1rem; display:flex; flex-direction:column; height:calc(100% - 220px);">
-        <h3 class="title is-5" style="margin-bottom: 1.1rem;">Prostate Biopsy Project</h3>
-        <p class="subtitle is-6" style="margin-top: -0.4rem; margin-bottom:0.5rem;">AI & Robotic Assistance for Prostate Cancer Diagnosis</p>
-        <div class="content" style="font-size:0.98em; flex-grow:1;">
-          <p>
-            This project aims to improve the diagnosis of prostate cancer by combining AI-based image analysis and robotic assistance for targeted biopsies. The goal is to increase precision, reduce unnecessary interventions, and personalize patient care. (Description à personnaliser)
-          </p>
-          <div class="tags" style="margin-top:0.5rem;">
-            <span class="tag is-primary">Medical Imaging</span>
-            <span class="tag is-info">AI Diagnosis</span>
-            <span class="tag is-success">Robotic Biopsy</span>
-          </div>
-        </div>
-        <div class="card-footer" style="margin-top:0.5rem;">
-          <a href="https://www.inria.fr/fr/cancer-prostate-diagnostic-ia-robotique" class="button is-link is-small is-fullwidth" target="_blank" rel="noopener">Reference Article &#8599;</a>
-        </div>
+      <div style="margin-top:1rem;">
+        <a href="https://www.inria.fr/fr/cancer-prostate-diagnostic-ia-robotique" class="button is-link is-small" target="_blank" rel="noopener">Reference Article &#8599;</a>
       </div>
     </div>
   </div>
 </div>
+</section>
 
 ## Project Directory
 
