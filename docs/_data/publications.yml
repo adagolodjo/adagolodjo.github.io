@@ -6,6 +6,7 @@
   volume: "302"
   pages: "217-221"
   doi: "10.3233/SHTI230159"
+  project: cosseroots
 
 - type: journal
   year: 2022
@@ -16,6 +17,7 @@
   issue: "3"
   pages: "659-670"
   doi: "10.1109/TMRB.2022.3180577"
+  project: robocop
 
 - type: journal
   year: 2019
@@ -26,4 +28,5 @@
   issue: "2"
   pages: "1461-1468"
   doi: "10.1109/LRA.2019.2895244"
+  project: conect
 

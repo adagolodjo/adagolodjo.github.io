@@ -52,22 +52,10 @@
           </div>
         </div>
         
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
-            <span>Teaching</span>
-          </a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="{{ "/teaching/" | relative_url }}">
-              <span class="icon"><i class="fas fa-graduation-cap"></i></span>
-              <span>Overview</span>
-            </a>
-            <a class="navbar-item" href="{{ "/teaching/courses/" | relative_url }}">
-              <span class="icon"><i class="fas fa-book-open"></i></span>
-              <span>Courses</span>
-            </a>
-          </div>
-        </div>
+        <a class="navbar-item" href="{{ "/teaching/" | relative_url }}">
+          <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
+          <span>Teaching</span>
+        </a>
         
         <a class="navbar-item" href="{{ "/professional/" | relative_url }}">
           <span class="icon"><i class="fas fa-briefcase"></i></span>
