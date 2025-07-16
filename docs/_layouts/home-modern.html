@@ -73,61 +73,194 @@ layout: default
 </div>
 
 <!-- Featured Projects Section -->
-<section class="featured-section" style="background: var(--card-bg); padding: 2rem 0;">
-  <div class="container">
-    <h2 class="title is-4" style="text-align:center; margin-bottom:2rem;">Featured Projects</h2>
-    <div class="columns is-multiline">
-      <div class="column is-4">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="/assets/images/projects/conect.jpg" alt="CONECT Project" loading="lazy">
-            </figure>
-          </div>
-          <div class="card-content">
-            <h3 class="title is-5">CONECT Project</h3>
-            <p class="subtitle is-6">Control of Needle Insertion in Robotic Surgery</p>
-            <p>Integrating robotic technology in operating rooms for enhanced precision in needle insertion procedures, with real-time simulation and AR guidance.</p>
-            <a href="/research/projects/conect/" class="button is-primary is-small" rel="noopener">Learn More</a>
+<section class="featured-section" style="background: var(--card-bg); padding: 2rem 0; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <h2 class="title is-3" style="margin-bottom: 0.5rem; color: var(--text-color);">Featured Projects</h2>
+      <p class="subtitle is-5" style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+        Discover our cutting-edge research initiatives in medical robotics, augmented reality, and healthcare technology
+      </p>
+    </div>
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-image" style="aspect-ratio: 4/3; width: 200px; height: 150px; position: relative;">
+          <video src="/assets/images/forceView.mp4" autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;border-radius:10px; aspect-ratio: 4/3;"></video>
+        </div>
+        <div class="project-content">
+          <h2 class="project-title">ROBOCOP Project</h2>
+          <p class="project-description">Innovative approaches to improve hearing technologies through advanced robotic assistance and precision surgical procedures for cochlear implants.</p>
+          <div class="project-tags">
+            <span class="tag">Hearing Technology</span>
+            <span class="tag">Medical Devices</span>
           </div>
         </div>
       </div>
-      <div class="column is-4">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="/assets/images/projects/robocop.jpg" alt="ROBOCOP Project" loading="lazy">
-            </figure>
-          </div>
-          <div class="card-content">
-            <h3 class="title is-5">ROBOCOP Project</h3>
-            <p class="subtitle is-6">Cochlear Implant Robotization</p>
-            <p>Innovative approaches to improve hearing technologies through advanced robotic assistance and precision surgical procedures.</p>
-            <a href="/research/projects/robocop/" class="button is-primary is-small" rel="noopener">Learn More</a>
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="/assets/images/projects/ire.jpg" alt="IRE Project" loading="lazy">
+        </div>
+        <div class="project-content">
+          <h2 class="project-title">IRE Project</h2>
+          <p class="project-description">AI-powered soft robotic endoscopes and digital twins for safer, more effective minimally invasive procedures.</p>
+          <div class="project-tags">
+            <span class="tag">Surgical Robotics</span>
+            <span class="tag">Augmented Reality</span>
           </div>
         </div>
       </div>
-      <div class="column is-4">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="/assets/images/projects/cosseroots.jpg" alt="COSSEROOTS Project" loading="lazy">
-            </figure>
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="/assets/images/projects/conect.jpg" alt="CONECT Project" loading="lazy">
+        </div>
+        <div class="project-content">
+          <h2 class="project-title">CONECT Project</h2>
+          <p class="project-description">Integrating robotic technology in operating rooms for enhanced precision in needle insertion procedures, with real-time simulation and AR guidance systems.</p>
+          <div class="project-tags">
+            <span class="tag">Medical Robotics</span>
+            <span class="tag">Surgical Assistance</span>
           </div>
-          <div class="card-content">
-            <h3 class="title is-5">COSSEROOTS Project</h3>
-            <p class="subtitle is-6">Cosserat Theory for Soft Robotics Control</p>
-            <p>Applying Cosserat's theory to advance the control of slender deformation robots for medical and industrial applications.</p>
-            <a href="/research/projects/cosseroots/" class="button is-primary is-small" rel="noopener">Learn More</a>
+        </div>
+      </div>
+      <!-- Project 4 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="/assets/images/projects/cosseroots.jpg" alt="COSSEROOTS Project" loading="lazy">
+        </div>
+        <div class="project-content">
+          <h2 class="project-title">COSSEROOTS Project</h2>
+          <p class="project-description">Applying Cosserat's theory to advance the control of slender deformation robots for medical and industrial applications with mathematical precision.</p>
+          <div class="project-tags">
+            <span class="tag">Soft Robotics</span>
+            <span class="tag">Control Theory</span>
           </div>
         </div>
       </div>
     </div>
-    <div style="text-align:center; margin-top:1rem;">
-      <a href="/research/projects/" class="button is-link is-light" rel="noopener">See all projects →</a>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="/research/projects/" class="button is-link is-light is-medium" style="border-radius: 6px; font-weight: 500; padding: 1rem 2rem;" rel="noopener">
+        <span style="margin-right: 0.5rem;">See all projects</span>
+        <span style="font-size: 1.1em;">→</span>
+      </a>
     </div>
-  </div>
 </section>
+
+<style>
+:root {
+  --primary-color: #3273dc;
+  --info-color: #3298dc;
+  --success-color: #48c774;
+  --text-color: #363636;
+  --text-muted: #4a4a4a;
+  --card-bg: #fafafa;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border: none;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.button {
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.07);
+  align-items: center;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+.project-image {
+  flex-shrink: 0;
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-content {
+  flex: 1;
+}
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--text-color, #222);
+}
+.project-description {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--text-muted, #444);
+  text-align: justify;
+}
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.tag {
+  background: rgba(50, 115, 220, 0.13);
+  color: #3273dc;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(50, 115, 220, 0.18);
+}
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .project-image {
+    width: 100%;
+    height: 200px;
+  }
+  .project-title {
+    font-size: 1.1rem;
+  }
+}
+</style>
 
 <!-- Additional Content Section -->
 <section class="content-section" style="background: var(--bg-color);">
@@ -141,3 +274,4 @@ layout: default
     </div>
   </div>
 </section>
+
