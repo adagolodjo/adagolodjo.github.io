@@ -25,3 +25,29 @@ $dark-text: #eafafc;
 $dark-card-bg: #1a6e7e;
 $dark-border-color: #3bb6b0;
 $dark-shadow: 0 4px 24px rgba(59,182,176,0.20); 
+
+// Génération automatique des variables CSS à partir des SCSS
+:root {
+  --primary-color: #{$primary};
+  --primary-dark: #{$primary-dark};
+  --primary-light: #{$primary-light};
+  --accent: #{$accent};
+  --link: #{$link};
+  --info-color: #{$info};
+  --success-color: #{$success};
+  --warning-color: #{$warning};
+  --danger-color: #{$danger};
+  --card-bg: #{$card-bg};
+  --text-color: #{$text-color};
+  --text-muted: #{$text-muted};
+  --border-color: #{$border-color};
+  --shadow: #{$shadow};
+  --border-radius: #{$border-radius};
+}
+[data-theme="dark"] {
+  --bg-color: #{$dark-bg};
+  --text-color: #{$dark-text};
+  --card-bg: #{$dark-card-bg};
+  --border-color: #{$dark-border-color};
+  --shadow: #{$dark-shadow};
+} 

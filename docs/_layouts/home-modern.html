@@ -5,9 +5,7 @@ layout: default
 {% include hero-nav.html %}
 
 <!-- Ajout de la police Comic Neue depuis Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
-
-<div class="modern-hero comics-text" style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+<div class="modern-hero comics-text full-bleed">
   <!-- Hero Content -->
   <section class="hero-content">
     <div class="hero-container container">
@@ -35,34 +33,37 @@ layout: default
       </div>
       <div class="hero-right">
         <div class="hero-text">
-          <h1 class="hero-title">
-            {{ site.author.name }}<br>
-            <span class="highlight">Robotics & AR for Healthcare</span>
+          <h1 class="hero-title comics-glow">
+            <span class="hero-main-name">Yinoussa Adagolodjo</span><br>
+            <span class="highlight hero-multicolor">
+              <span class="hero-blue">Robotics</span> & <span class="hero-turquoise">AR</span> for <span class="hero-pink">Healthcare</span>
+            </span>
           </h1>
-          <p class="hero-description">
+          <p class="hero-description hero-desc-large">
             Assistant Professor at University of Lille. Bridging robotics, simulation, and medical innovation.
           </p>
           <div class="hero-actions">
-            <a href="/assets/cv.pdf" class="cta-button primary" target="_blank" rel="noopener">
+            <a href="/assets/cv.pdf" class="cta-button primary hero-btn" target="_blank" rel="noopener">
               <span>Resume</span>
               <i class="fas fa-external-link-alt"></i>
             </a>
-            <a href="{{ '/contact/' | relative_url }}" class="cta-button secondary">
+            <a href="{{ '/contact/' | relative_url }}" class="cta-button secondary hero-btn">
               Contact
             </a>
           </div>
-          <div class="quick-links" style="margin-top:1.5rem;">
-            <a href="{{ '/research/projects/' | relative_url }}">Projects</a> ·
-            <a href="{{ '/research/publications/' | relative_url }}">Publications</a> ·
-            <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
+          <div class="quick-links hero-quicklinks" style="margin-top:1.5rem;">
+            <a href="{{ '/research/projects/' | relative_url }}" class="hero-blue">Projects</a> ·
+            <a href="{{ '/research/publications/' | relative_url }}" class="hero-turquoise">Publications</a> ·
+            <a href="{{ '/teaching/' | relative_url }}" class="hero-pink">Teaching</a>
           </div>
         </div>
       </div>
     </div>
     <!-- Decorative Elements -->
     <div class="decorative-elements">
-      <div class="lightbulb-icon">
+      <div class="lightbulb-icon floating-bulb">
         <i class="fas fa-lightbulb"></i>
+        <span class="bulb-text">Research Collaboration<br>Available</span>
       </div>
       <div class="floating-particles">
         <div class="particle particle-1"></div>
@@ -76,18 +77,18 @@ layout: default
 </div>
 
 <!-- Featured Projects Section -->
-<section class="featured-section" style="background: var(--card-bg); padding: 2rem 0; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
-    <div style="text-align: center; margin-bottom: 3rem;">
-      <h2 class="title is-3" style="margin-bottom: 0.5rem; color: var(--text-color);">Featured Projects</h2>
-      <p class="subtitle is-5" style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+<section class="featured-section full-bleed">
+    <div class="featured-header">
+      <h2 class="title is-3 featured-title">Featured Projects</h2>
+      <p class="subtitle is-5 featured-subtitle">
         Discover our cutting-edge research initiatives in medical robotics, augmented reality, and healthcare technology
       </p>
     </div>
     <div class="projects-grid">
       <!-- Project 1 -->
       <div class="project-card">
-        <div class="project-image" style="aspect-ratio: 4/3; width: 200px; height: 150px; position: relative;">
-          <video src="/assets/images/forceView.mp4" autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;border-radius:10px; aspect-ratio: 4/3;"></video>
+        <div class="project-image project-image-video">
+          <video src="/assets/images/forceView.mp4" autoplay loop muted playsinline></video>
         </div>
         <div class="project-content">
           <h2 class="project-title">ROBOCOP Project</h2>
@@ -115,7 +116,7 @@ layout: default
       <!-- Project 3 -->
       <div class="project-card">
         <div class="project-image">
-          <img src="/assets/images/projects/conect.jpg" alt="CONECT Project" loading="lazy">
+          <img src="/assets/images/projects/liver_03.png" alt="CONECT Project" loading="lazy">
         </div>
         <div class="project-content">
           <h2 class="project-title">CONECT Project</h2>
@@ -141,10 +142,10 @@ layout: default
         </div>
       </div>
     </div>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="/research/projects/" class="button is-link is-light is-medium" style="border-radius: 6px; font-weight: 500; padding: 1rem 2rem;" rel="noopener">
-        <span style="margin-right: 0.5rem;">See all projects</span>
-        <span style="font-size: 1.1em;">→</span>
+    <div class="featured-footer">
+      <a href="/research/projects/" class="button is-link is-light is-medium featured-btn" rel="noopener">
+        <span class="mr-05">See all projects</span>
+        <span class="featured-arrow">→</span>
       </a>
     </div>
 </section>

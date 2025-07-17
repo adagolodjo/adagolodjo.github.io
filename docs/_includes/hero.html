@@ -1,12 +1,12 @@
-<section class="universal-hero" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 3rem 0 2rem 0; text-align: center;">
+<section class="universal-hero">
   <div class="container">
-    <img src="/assets/images/notion-face.png" alt="{{ site.author.name }}" class="profile-image" style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:1rem; box-shadow:0 4px 20px rgba(33,140,116,0.15);">
-    <h1 class="title is-2" style="color:white; margin-bottom:0.5rem;">{{ page.title | default: site.title }}</h1>
+    <img src="/assets/images/notion-face.png" alt="{{ site.author.name }}" class="profile-image">
+    <h1 class="title is-2">{{ page.title | default: site.title }}</h1>
     {% if page.subtitle %}
-      <p class="subtitle is-4" style="color: #64ffda; margin-bottom:0.5rem;">{{ page.subtitle }}</p>
+      <p class="subtitle is-4">{{ page.subtitle }}</p>
     {% endif %}
     {% if page.description %}
-      <p style="color:rgba(255,255,255,0.85); max-width:600px; margin:0 auto 1rem auto;">{{ page.description }}</p>
+      <p class="hero-description">{{ page.description }}</p>
     {% endif %}
   </div>
 </section> 
