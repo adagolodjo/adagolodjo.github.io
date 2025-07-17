@@ -5,29 +5,30 @@
 @import "partials/layout";
 @import "partials/components";
 @import "partials/hero";
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
 
 // Custom CSS variables for theme
 :root {
-  --primary-color: #3273dc;
-  --primary-dark: #2366d1;
-  --bg-color: #f8f9fa;
-  --text-color: #343a40;
-  --card-bg: #ffffff;
-  --border-color: #dee2e6;
-  --shadow: 0 2px 4px rgba(0,0,0,0.1);
+  --primary-color: #3bb6b0; /* turquoise principal */
+  --primary-dark: #1a6e7e;  /* bleu-vert foncé */
+  --bg-color: #eafafc;      /* bleu très pâle pour le fond général */
+  --text-color: #183642;    /* bleu-vert foncé pour le texte */
+  --card-bg: #e0f7fa;       /* bleu clair pour les cartes */
+  --border-color: #b2ebf2;  /* turquoise clair pour les bordures */
+  --shadow: 0 4px 24px rgba(59,182,176,0.10);
 }
 
 [data-theme="dark"] {
-  --bg-color: #1a1a1a;
-  --text-color: #ffffff;
-  --card-bg: #2d2d2d;
-  --border-color: #404040;
-  --shadow: 0 2px 4px rgba(255,255,255,0.1);
+  --bg-color: #183642;
+  --text-color: #eafafc;
+  --card-bg: #1a6e7e;
+  --border-color: #3bb6b0;
+  --shadow: 0 4px 24px rgba(59,182,176,0.20);
 }
 
 // Override Bulma variables
 .hero.is-primary {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(135deg, #1a6e7e 0%, #3bb6b0 50%, #b2ebf2 100%);
 }
 
 // Custom styles for better organization
@@ -74,7 +75,14 @@
 
 // Dark mode transitions
 body {
-  background-color: var(--bg-color);
+  background: linear-gradient(135deg, #eafafc 0%, #b2ebf2 100%);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif !important;
+}
+
+/* Style comics universel pour tous les éléments textuels */
+body, h1, h2, h3, h4, h5, h6, p, a, span, strong, em, li, ul, ol, button, .button, .tag, .title, .subtitle, .badge-text, .cta-button, .quick-links, label, input, textarea, blockquote, th, td {
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif !important;
+  letter-spacing: 0.5px;
 }

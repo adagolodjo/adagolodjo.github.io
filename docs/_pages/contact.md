@@ -6,6 +6,12 @@ permalink: /contact/
 description: "Contact Dr. Yinoussa Adagolodjo for research collaborations, student opportunities, and academic inquiries."
 ---
 
+<style>
+body, .card, .card-content, .content, .columns, .column, label, input, textarea, .button, p, h1, h2, h3, h4, h5, h6, ul, ol, li {
+  color: #183642 !important;
+}
+</style>
+
 <!-- Contact Page Modern Layout -->
 <div class="columns is-multiline" style="margin-bottom:2.5rem;">
   <!-- Contact Info -->

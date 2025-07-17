@@ -4,7 +4,10 @@ layout: default
 
 {% include hero-nav.html %}
 
-<div class="modern-hero" style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+<!-- Ajout de la police Comic Neue depuis Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
+<div class="modern-hero comics-text" style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
   <!-- Hero Content -->
   <section class="hero-content">
     <div class="hero-container container">
@@ -148,9 +151,9 @@ layout: default
 
 <style>
 :root {
-  --primary-color: #3273dc;
-  --info-color: #3298dc;
-  --success-color: #48c774;
+  --primary-color: #095c77;
+  --info-color: #225b64;
+  --success-color: #0e7989;
   --text-color: #363636;
   --text-muted: #4a4a4a;
   --card-bg: #fafafa;
@@ -158,13 +161,13 @@ layout: default
 
 .card {
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(7, 98, 112, 0.1);
   border: none;
   overflow: hidden;
 }
 
 .card:hover {
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 25px rgba(56, 125, 124, 0.15);
 }
 
 .button {
@@ -182,7 +185,7 @@ layout: default
   margin-bottom: 2rem;
 }
 .project-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(6, 141, 136, 0.119);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 15px;
@@ -237,12 +240,16 @@ layout: default
 }
 .tag {
   background: rgba(50, 115, 220, 0.13);
-  color: #3273dc;
+  color: #066363;
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid rgba(50, 115, 220, 0.18);
+  border: 1px solid rgba(10, 126, 139, 0.18);
+}
+.comics-text, .hero-title, .hero-description, .project-title, .project-description, .tag, .badge-text, .cta-button, .quick-links, .title, .subtitle, .button {
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif !important;
+  letter-spacing: 0.5px;
 }
 @media (max-width: 768px) {
   .projects-grid {
@@ -263,7 +270,7 @@ layout: default
 </style>
 
 <!-- Additional Content Section -->
-<section class="content-section" style="background: var(--bg-color);">
+<!-- <section class="content-section" style="background: var(--bg-color); color: #183642;">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-two-thirds">
@@ -273,5 +280,5 @@ layout: default
       </div>
     </div>
   </div>
-</section>
+</section> -->
 

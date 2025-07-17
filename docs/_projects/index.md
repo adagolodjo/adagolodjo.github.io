@@ -193,7 +193,7 @@ My research focuses on bridging the gap between advanced robotics technology and
   <!-- ADAGIO Project -->
   <div class="project-card">
     <div class="project-image">
-      <img src="/assets/images/projects/adagio.jpg" alt="ADAGIO Project" style="width:100%;height:100%;object-fit:cover;border-radius:10px;aspect-ratio:4/3;">
+      <img src="/assets/images/projects/bladder_2.jpg" alt="ADAGIO Project" style="width:100%;height:100%;object-fit:cover;border-radius:10px;aspect-ratio:4/3;">
     </div>
     <div class="project-content">
       <h2 class="project-title">ADAGIO Project</h2>
@@ -230,7 +230,7 @@ My research focuses on bridging the gap between advanced robotics technology and
   <!-- Prostate Biopsy Project -->
   <div class="project-card">
     <div class="project-image">
-      <img src="/assets/images/projects/prostate-biopsy.jpg" alt="Prostate Biopsy Project" style="width:100%;height:100%;object-fit:cover;border-radius:10px;aspect-ratio:4/3;">
+      <img src="/assets/images/projects/image_foie.jpg" alt="Prostate Biopsy Project" style="width:100%;height:100%;object-fit:cover;border-radius:10px;aspect-ratio:4/3;">
     </div>
     <div class="project-content">
       <h2 class="project-title">Prostate Biopsy Project</h2>
