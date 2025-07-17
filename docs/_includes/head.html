@@ -23,32 +23,7 @@
   <meta property="twitter:image" content="{{ page.image | default: '/assets/images/hero.jpg' | absolute_url }}">
   
   <!-- Dark Mode CSS Variables -->
-  <style>
-    :root {
-      --bg-color: #f8f9fa;
-      --text-color: #343a40;
-      --card-bg: #ffffff;
-      --border-color: #dee2e6;
-    }
-    
-    [data-theme="dark"] {
-      --bg-color: #1a1a1a;
-      --text-color: #ffffff;
-      --card-bg: #2d2d2d;
-      --border-color: #404040;
-    }
-    
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    
-    .card {
-      background-color: var(--card-bg);
-      border-color: var(--border-color);
-    }
-  </style>
+  <!-- (Variables et styles globaux désormais dans le SCSS centralisé) -->
   
   <title>{{ page.title | default: site.title }} - {{ site.author.name | default: site.title }}</title>
   

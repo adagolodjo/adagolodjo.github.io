@@ -15,55 +15,6 @@ permalink: /teaching/
   </div>
 </section>
 
-<style>
-.teaching-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin: 2.5rem 0;
-}
-.teaching-card {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-  padding: 1.5rem 2rem;
-  border: 1.5px solid #ececec;
-  transition: box-shadow 0.2s;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.teaching-card:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
-}
-.teaching-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #1a2540;
-}
-.teaching-meta {
-  font-size: 0.98rem;
-  color: #555;
-  margin-bottom: 0.7rem;
-}
-.teaching-desc {
-  font-size: 1.05rem;
-  color: #333;
-  margin-bottom: 1.1rem;
-}
-.teaching-links {
-  margin-top: auto;
-  display: flex;
-  gap: 1rem;
-}
-@media (max-width: 900px) {
-  .teaching-grid {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
-
 <div class="teaching-grid">
   <!-- Course blocks -->
   {% for course in site.data.courses %}
