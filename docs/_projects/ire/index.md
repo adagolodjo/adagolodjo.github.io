@@ -3,15 +3,18 @@ layout: page
 title: IRE Project
 subtitle: Intelligent Robotic Endoscopes
 permalink: /research/projects/ire/
-image: /assets/images/projects/conect.jpg
+image: /assets/images/projects/ire.jpg
 ---
+
+The IRE project focuses on developing innovative solutions for robotic endoscopy, combining real-time simulation with augmented reality guidance for enhanced surgical precision.
+
+<!--more-->
 
 ![IRE Project](/assets/images/projects/ire.jpg)
 
 ## Project Overview
 
-The IRE project focuses on developing innovative solutions for robotic endoscopy, combining real-time simulation with augmented reality guidance for enhanced surgical precision.
-
+Our research aims to revolutionize minimally invasive surgery through intelligent robotic endoscopes. By integrating advanced computer vision, machine learning, and real-time simulation, we're creating next-generation surgical tools that enhance precision and patient outcomes.
 
 ## Publications
 
@@ -22,13 +25,12 @@ The IRE project focuses on developing innovative solutions for robotic endoscopy
 {% endif %}
 {% endfor %}
 
-
 [Contact us](/contact/) for more information about this project.
 
 ## Roadmap
 
-- [ ] Optimiser l'algorithme de navigation endoscopique
-- [ ] Intégrer l'IA pour la détection de tissus
-- [ ] Réaliser des tests précliniques
-- [ ] Présenter le projet à une conférence médicale
+- [ ] Optimize endoscopic navigation algorithm
+- [ ] Integrate AI for tissue detection
+- [ ] Conduct preclinical trials
+- [ ] Present at medical conference
 

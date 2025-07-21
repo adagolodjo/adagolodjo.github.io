@@ -15,6 +15,18 @@ $border-color: #b2ebf2;
 $shadow: 0 4px 24px rgba(59,182,176,0.10);
 $border-radius: 8px;
 
+// Ajout de variables manquantes
+$transition-speed: 0.3s;
+$transition-easing: cubic-bezier(0.4, 0.0, 0.2, 1);
+$box-shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+$border-radius-large: 20px;
+
+// Variables pour les breakpoints responsive
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$widescreen: 1216px;
+
 // Typography
 $family-sans-serif: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
 $family-heading: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;

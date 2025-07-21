@@ -205,6 +205,8 @@
       position: absolute;
       border-radius: 50%;
       animation: float 6s ease-in-out infinite;
+      will-change: transform;
+      transform: translateZ(0); 
 
       &.shape-1 {
         width: 60px;
@@ -362,6 +364,11 @@
   0% { transform: translateY(0) scale(1) rotate(-2deg); }
   50% { transform: translateY(-18px) scale(1.04) rotate(4deg); }
   100% { transform: translateY(0) scale(1) rotate(-2deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(0, -10px, 0) rotate(5deg); }
 }
 
 // Responsive
