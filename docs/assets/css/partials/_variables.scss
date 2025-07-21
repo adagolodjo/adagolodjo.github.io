@@ -1,4 +1,8 @@
-// Palette principale
+// ===========================================
+// VARIABLES SCSS AMÉLIORÉES
+// ===========================================
+
+// Palette principale (inchangée)
 $primary: #3bb6b0;
 $primary-dark: #1a6e7e;
 $primary-light: #b2ebf2;
@@ -12,34 +16,91 @@ $card-bg: #e0f7fa;
 $text-color: #183642;
 $text-muted: #4a4a4a;
 $border-color: #b2ebf2;
-$shadow: 0 4px 24px rgba(59,182,176,0.10);
-$border-radius: 8px;
 
-// Ajout de variables manquantes
+// NOUVELLES VARIABLES POUR LA COHÉRENCE
+// =====================================
+
+// Animations et transitions
 $transition-speed: 0.3s;
+$transition-speed-fast: 0.15s;
+$transition-speed-slow: 0.5s;
 $transition-easing: cubic-bezier(0.4, 0.0, 0.2, 1);
-$box-shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
-$border-radius-large: 20px;
+$transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-// Variables pour les breakpoints responsive
+// Shadows améliorées
+$shadow-light: 0 2px 8px rgba(59,182,176,0.08);
+$shadow: 0 4px 24px rgba(59,182,176,0.10);
+$shadow-medium: 0 8px 32px rgba(59,182,176,0.15);
+$shadow-heavy: 0 16px 48px rgba(59,182,176,0.20);
+$shadow-colored: 0 4px 20px rgba(59,182,176,0.25);
+
+// Border radius système
+$border-radius-sm: 4px;
+$border-radius: 8px;
+$border-radius-md: 12px;
+$border-radius-lg: 16px;
+$border-radius-xl: 20px;
+$border-radius-full: 50%;
+
+// Spacing système (basé sur rem)
+$spacing-xs: 0.25rem;  // 4px
+$spacing-sm: 0.5rem;   // 8px
+$spacing-md: 1rem;     // 16px
+$spacing-lg: 1.5rem;   // 24px
+$spacing-xl: 2rem;     // 32px
+$spacing-2xl: 3rem;    // 48px
+$spacing-3xl: 4rem;    // 64px
+
+// Typography système
+$family-sans-serif: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+$family-heading: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+
+// Font weights
+$weight-light: 300;
+$weight-normal: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+$weight-black: 900;
+
+// Font sizes (système modulaire)
+$text-xs: 0.75rem;    // 12px
+$text-sm: 0.875rem;   // 14px
+$text-base: 1rem;     // 16px
+$text-lg: 1.125rem;   // 18px
+$text-xl: 1.25rem;    // 20px
+$text-2xl: 1.5rem;    // 24px
+$text-3xl: 1.875rem;  // 30px
+$text-4xl: 2.25rem;   // 36px
+$text-5xl: 3rem;      // 48px
+
+// Breakpoints responsive
 $mobile: 480px;
 $tablet: 768px;
 $desktop: 1024px;
 $widescreen: 1216px;
+$fullhd: 1408px;
 
-// Typography
-$family-sans-serif: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
-$family-heading: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+// Z-index système
+$z-dropdown: 1000;
+$z-sticky: 1020;
+$z-fixed: 1030;
+$z-modal-backdrop: 1040;
+$z-modal: 1050;
+$z-popover: 1060;
+$z-tooltip: 1070;
 
 // Dark mode
 $dark-bg: #183642;
 $dark-text: #eafafc;
 $dark-card-bg: #1a6e7e;
 $dark-border-color: #3bb6b0;
-$dark-shadow: 0 4px 24px rgba(59,182,176,0.20); 
+$dark-shadow: 0 4px 24px rgba(59,182,176,0.20);
 
-// Génération automatique des variables CSS à partir des SCSS
+// VARIABLES CSS GÉNÉRÉES AUTOMATIQUEMENT
+// ====================================
 :root {
+  // Couleurs
   --primary-color: #{$primary};
   --primary-dark: #{$primary-dark};
   --primary-light: #{$primary-light};
@@ -53,13 +114,115 @@ $dark-shadow: 0 4px 24px rgba(59,182,176,0.20);
   --text-color: #{$text-color};
   --text-muted: #{$text-muted};
   --border-color: #{$border-color};
+  
+  // Shadows
+  --shadow-light: #{$shadow-light};
   --shadow: #{$shadow};
+  --shadow-medium: #{$shadow-medium};
+  --shadow-heavy: #{$shadow-heavy};
+  --shadow-colored: #{$shadow-colored};
+  
+  // Border radius
+  --border-radius-sm: #{$border-radius-sm};
   --border-radius: #{$border-radius};
+  --border-radius-md: #{$border-radius-md};
+  --border-radius-lg: #{$border-radius-lg};
+  --border-radius-xl: #{$border-radius-xl};
+  --border-radius-full: #{$border-radius-full};
+  
+  // Transitions
+  --transition-speed: #{$transition-speed};
+  --transition-speed-fast: #{$transition-speed-fast};
+  --transition-speed-slow: #{$transition-speed-slow};
+  --transition-easing: #{$transition-easing};
+  --transition-bounce: #{$transition-bounce};
+  
+  // Spacing
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+  --spacing-2xl: #{$spacing-2xl};
+  --spacing-3xl: #{$spacing-3xl};
+  
+  // Typography
+  --text-xs: #{$text-xs};
+  --text-sm: #{$text-sm};
+  --text-base: #{$text-base};
+  --text-lg: #{$text-lg};
+  --text-xl: #{$text-xl};
+  --text-2xl: #{$text-2xl};
+  --text-3xl: #{$text-3xl};
+  --text-4xl: #{$text-4xl};
+  --text-5xl: #{$text-5xl};
 }
+
+// Mode sombre amélioré
 [data-theme="dark"] {
   --bg-color: #{$dark-bg};
   --text-color: #{$dark-text};
   --card-bg: #{$dark-card-bg};
   --border-color: #{$dark-border-color};
   --shadow: #{$dark-shadow};
-} 
+  --shadow-light: 0 2px 8px rgba(59,182,176,0.12);
+  --shadow-medium: 0 8px 32px rgba(59,182,176,0.25);
+  --shadow-heavy: 0 16px 48px rgba(59,182,176,0.35);
+}
+
+// MIXINS UTILES
+// =============
+
+// Mixin pour les transitions fluides
+@mixin smooth-transition($properties: all, $duration: $transition-speed, $easing: $transition-easing) {
+  transition: $properties $duration $easing;
+}
+
+// Mixin pour les hover effects
+@mixin hover-lift($lift: -4px, $shadow: $shadow-medium) {
+  @include smooth-transition(transform, box-shadow);
+  
+  &:hover {
+    transform: translateY($lift);
+    box-shadow: $shadow;
+  }
+}
+
+// Mixin pour le glassmorphism
+@mixin glass-effect($opacity: 0.1, $blur: 10px) {
+  background: rgba(255, 255, 255, $opacity);
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+// Mixin responsive
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: #{$mobile - 1}) { @content; }
+  }
+  @if $breakpoint == tablet {
+    @media (min-width: #{$mobile}) and (max-width: #{$desktop - 1}) { @content; }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: #{$desktop}) { @content; }
+  }
+  @if $breakpoint == widescreen {
+    @media (min-width: #{$widescreen}) { @content; }
+  }
+}
+
+// Mixin pour les animations performantes
+@mixin hardware-acceleration {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+// Mixin pour respecter les préférences d'animation
+@mixin respect-motion-preference {
+  @media (prefers-reduced-motion: reduce) {
+    animation: none !important;
+    transition: none !important;
+  }
+}
