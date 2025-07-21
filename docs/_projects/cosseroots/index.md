@@ -226,3 +226,10 @@ For more information about the COSSEROOTS project, opportunities for involvement
 
 *"The future of robotics lies in the ability to work with soft, deformable materials in ways that mimic the natural world."*
 
+## Roadmap
+
+- [ ] Finaliser le prototype de robot souple
+- [ ] Publier un article sur le contrôle Cosserat
+- [ ] Organiser un atelier avec les partenaires industriels
+- [ ] Développer une interface de simulation interactive
+

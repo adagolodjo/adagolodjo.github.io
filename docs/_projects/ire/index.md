@@ -25,3 +25,10 @@ The IRE project focuses on developing innovative solutions for robotic endoscopy
 
 [Contact us](/contact/) for more information about this project.
 
+## Roadmap
+
+- [ ] Optimiser l'algorithme de navigation endoscopique
+- [ ] Intégrer l'IA pour la détection de tissus
+- [ ] Réaliser des tests précliniques
+- [ ] Présenter le projet à une conférence médicale
+

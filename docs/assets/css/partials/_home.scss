@@ -137,4 +137,51 @@
   .project-title {
     font-size: 1.1rem;
   }
+}
+
+.about-footer-section {
+  background: #183642;
+  color: #fff;
+  padding: 3rem 0 2rem 0;
+  margin-top: 3rem;
+}
+.about-footer-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.about-footer-title {
+  font-size: 2.1rem;
+  font-weight: 900;
+  margin-bottom: 0.2em;
+  color: #fffde7;
+}
+.about-footer-role, .about-footer-specialty {
+  font-size: 1.15rem;
+  color: #e0e0e0;
+}
+.about-footer-contact, .about-footer-office, .about-footer-quicklinks, .about-footer-hours {
+  font-size: 1.05rem;
+  color: #fff;
+  margin-top: 0.5em;
+}
+.about-footer-contact a, .about-footer-quicklinks a {
+  color: #64ffda;
+  text-decoration: underline;
+  font-weight: 700;
+  margin: 0 0.2em;
+}
+.about-footer-contact a:hover, .about-footer-quicklinks a:hover {
+  color: #fffde7;
+  background: #3bb6b0;
+  border-radius: 6px;
+  padding: 0 0.2em;
+}
+@media (max-width: 600px) {
+  .about-footer-container { padding: 0 1rem; }
+  .about-footer-title { font-size: 1.3rem; }
+  .about-footer-role, .about-footer-specialty, .about-footer-contact, .about-footer-office, .about-footer-quicklinks, .about-footer-hours { font-size: 0.98rem; }
 } 

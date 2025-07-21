@@ -58,3 +58,10 @@ The CONECT project focuses on developing innovative solutions for robotic needle
 
 [Contact us](/contact/) for more information about this project.
 
+## Roadmap
+
+- [ ] Développer le module d'aide à la décision
+- [ ] Tester l'intégration avec les outils existants
+- [ ] Organiser un atelier utilisateur
+- [ ] Préparer une démonstration pour un congrès
+

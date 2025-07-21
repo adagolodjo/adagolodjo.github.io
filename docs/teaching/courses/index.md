@@ -112,3 +112,20 @@ I am committed to continually improving my teaching methods based on student fee
 - [Programming Help Sessions](https://example.edu/help-sessions)
 - [Academic Advising](https://example.edu/advising)
 
+## Cours disponibles
+
+- [Initiation à la recherche](/teaching/courses/initiation-recherche/)
+- [Logique/Informatique Industrielle](/teaching/courses/logique-industrielle/)
+- [Modélisation des systèmes de production](/teaching/courses/modelisation-production/)
+- [GR-711302 Automatique : Robotique](/teaching/courses/gr711302/)
+- [GR-712302 Programmation](/teaching/courses/gr712302/)
+- [Automatique : Régulation de Système](/teaching/courses/regulation-systeme/)
+- [Analyse numérique : Optimisation](/teaching/courses/analyse-optimisation/)
+- [Industrie 4.0](/teaching/courses/industrie4/)
+- [Tests et Maintenance](/teaching/courses/tests-maintenance/)
+- [Simulation Médical et Robotique Médicale](/teaching/courses/simulation-medicale/)
+- [Modeling & Real-Time Medical Simulation](/teaching/courses/modeling-simulation/)
+- [TP Robotino](/teaching/courses/tp-robotino/)
+- [Culture numérique](/teaching/courses/culture-numerique/)
+- [Cours de Maths Prod2A3](/teaching/courses/maths-prod2a3/)
+
