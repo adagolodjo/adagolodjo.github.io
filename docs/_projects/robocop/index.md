@@ -144,5 +144,12 @@ The ROBOCOP project represents a cutting-edge initiative in the field of cochlea
 - **Investment**: Investment and funding opportunities
 - **Partnership**: Strategic partnership arrangements
 
+## Roadmap
+
+- [ ] Finaliser le système de retour haptique
+- [ ] Lancer les essais cliniques
+- [ ] Déposer un brevet sur l'algorithme de trajectoire
+- [ ] Publier les résultats dans une revue internationale
+
 [Contact us](/contact/) for more information about this project and opportunities for involvement.
 

@@ -28,3 +28,10 @@ This project aims to improve the diagnosis of prostate cancer by combining AI-ba
 
 ## Contact
 For more information or collaboration opportunities, please [contact me](/contact/). 
+
+## Roadmap
+
+- [ ] Améliorer l'algorithme de détection IA
+- [ ] Valider la précision robotique sur modèles
+- [ ] Publier un guide clinique
+- [ ] Établir un partenariat avec un hôpital 

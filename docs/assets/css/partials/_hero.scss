@@ -1,246 +1,1347 @@
-// Modern Hero Styles
+// ===========================================
+// HERO SECTION AMÉLIORÉE - VERSION OPTIMISÉE
+// ===========================================
+
+// Variables CSS personnalisées pour une meilleure performance
+:root {
+  --hero-gradient-primary: linear-gradient(135deg, #{$primary-dark} 0%, #{$primary} 50%, #{$primary-light} 100%);
+  --hero-backdrop-blur: saturate(180%) blur(20px);
+  --hero-animation-speed: 0.6s;
+  --hero-floating-distance: 15px;
+  --hero-glow-primary: #{$primary}40;
+  --hero-glow-accent: #{$accent}60;
+}
+
+// ===========================================
+// HERO PRINCIPAL MODERNE
+// ===========================================
+
 .modern-hero {
   height: 100vh;
-  background: linear-gradient(135deg, $primary-dark 0%, $primary 50%, $primary-light 100%);
+  background: var(--hero-gradient-primary);
   position: relative;
   overflow: hidden;
   color: white;
+  isolation: isolate; // Crée un nouveau contexte de superposition
 
+  // Amélioration de l'overlay avec CSS moderne
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background:
-      radial-gradient(
-        circle at 20% 50%,
-        rgba($primary, 0.3) 0%,
-        transparent 50%
-      ),
-      radial-gradient(
-        circle at 80% 20%,
-        rgba($accent, 0.3) 0%,
-        transparent 50%
-      ),
-      radial-gradient(
-        circle at 40% 80%,
-        rgba($primary-light, 0.3) 0%,
-        transparent 50%
-      );
+    inset: 0;
+    background: 
+      radial-gradient(ellipse at 20% 50%, var(--hero-glow-primary) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, var(--hero-glow-accent) 0%, transparent 50%),
+      radial-gradient(ellipse at 40% 80%, #{$primary-light}40 0%, transparent 50%),
+      conic-gradient(from 45deg at 50% 50%, transparent 0deg, #{$accent}20 90deg, transparent 180deg);
     z-index: 1;
+    animation: gradientShift 12s ease-in-out infinite;
+  }
+
+  // Particules flottantes en arrière-plan
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 25% 25%, white 1px, transparent 1px),
+      radial-gradient(circle at 75% 75%, #{$primary-light} 1px, transparent 1px);
+    background-size: 100px 100px, 150px 150px;
+    opacity: 0.1;
+    animation: particleFloat 20s linear infinite;
+    z-index: 2;
   }
 }
 
-// Navigation
+// ===========================================
+// NAVIGATION MODERNE AVEC GLASSMORPHISM
+// ===========================================
+
 .hero-nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
-  padding: 1rem 2rem;
+  z-index: $z-fixed;
+  padding: var(--spacing-md) var(--spacing-xl);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background: rgba($primary-dark, 0.85);
+  backdrop-filter: var(--hero-backdrop-blur);
+  -webkit-backdrop-filter: var(--hero-backdrop-blur);
+  background: linear-gradient(180deg, #{$primary-dark}cc 0%, #{$primary-dark}99 100%);
+  border-bottom: 1px solid rgba(white, 0.1);
+  @include smooth-transition(all, var(--hero-animation-speed), cubic-bezier(0.4, 0, 0.2, 1));
 
+  // État scrollé avec morphing plus subtil
+  &.scrolled {
+    background: linear-gradient(180deg, #{$primary-dark}f5 0%, #{$primary-dark}e6 100%);
+    box-shadow: 
+      0 4px 32px rgba($primary-dark, 0.3),
+      0 1px 0 rgba(white, 0.1);
+    backdrop-filter: var(--hero-backdrop-blur) contrast(1.2);
+  }
+
+  // Conteneurs flexibles optimisés
   .nav-left,
   .nav-right {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: var(--spacing-lg);
+    
+    @include respond-to(mobile) {
+      gap: var(--spacing-md);
+    }
   }
 
+  // Items de navigation avec micro-interactions
   .nav-item {
     color: white;
     text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    font-weight: $weight-medium;
+    @include smooth-transition(all, 0.3s, cubic-bezier(0.4, 0, 0.2, 1));
     position: relative;
-
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    
+    // États interactifs améliorés
     &:hover,
-    &.is-active {
+    &:focus {
       color: $primary-light;
-
+      background: rgba(white, 0.1);
+      transform: translateY(-1px);
+      
       &::after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: 0;
         width: 100%;
-        height: 2px;
-        background: $primary-light;
+        opacity: 1;
+      }
+    }
+
+    // Indicateur actif moderne
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, $primary-light, $accent);
+      border-radius: 1px;
+      transform: translateX(-50%);
+      @include smooth-transition(all, 0.3s, cubic-bezier(0.4, 0, 0.2, 1));
+      opacity: 0;
+    }
+
+    &.is-active::after {
+      width: 80%;
+      opacity: 1;
+    }
+
+    // Accessibilité améliorée
+    &:focus-visible {
+      outline: 2px solid $primary-light;
+      outline-offset: 2px;
+    }
+  }
+
+  // Logo avec effet 3D subtil
+  .logo-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--border-radius-full);
+    border: 2px solid rgba(white, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: $weight-bold;
+    font-size: var(--text-xl);
+    background: linear-gradient(135deg, rgba(white, 0.1), rgba(white, 0.05));
+    @include smooth-transition(all, 0.4s, cubic-bezier(0.4, 0, 0.2, 1));
+    position: relative;
+    overflow: hidden;
+
+    // Effet de brillance
+    &::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(white, 0.1), transparent);
+      transform: rotate(45deg);
+      @include smooth-transition(transform, 0.6s);
+    }
+
+    &:hover {
+      transform: scale(1.1) rotate(5deg);
+      border-color: $primary-light;
+      box-shadow: 0 0 20px rgba($primary-light, 0.4);
+      
+      &::before {
+        transform: rotate(45deg) translate(50%, 50%);
       }
     }
   }
 
-  .logo-circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
-
+  // Icônes sociales avec animations fluides
   .social-icon {
     color: white;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
+    font-size: var(--text-xl);
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius-md);
+    @include smooth-transition(all, 0.3s, cubic-bezier(0.4, 0, 0.2, 1));
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle, rgba($primary-light, 0.2), transparent 70%);
+      opacity: 0;
+      @include smooth-transition(opacity, 0.3s);
+    }
 
     &:hover {
       color: $primary-light;
-      transform: translateY(-2px);
+      transform: translateY(-3px) scale(1.1);
+      
+      &::before {
+        opacity: 1;
+      }
     }
   }
 
+  // Toggle thème avec rotation fluide
   .theme-toggle {
-    background: none;
-    border: none;
+    background: linear-gradient(135deg, rgba(white, 0.1), rgba(white, 0.05));
+    border: 1px solid rgba(white, 0.2);
     color: white;
-    font-size: 1.2rem;
+    font-size: var(--text-lg);
     cursor: pointer;
-    transition: all 0.3s ease;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-md);
+    @include smooth-transition(all, 0.4s, cubic-bezier(0.4, 0, 0.2, 1));
 
     &:hover {
       color: $primary-light;
-      transform: rotate(180deg);
+      transform: rotate(180deg) scale(1.1);
+      background: linear-gradient(135deg, rgba($primary-light, 0.2), rgba($primary-light, 0.1));
     }
   }
 }
 
-// Hero Content
+// ===========================================
+// CONTENU HERO AVEC LAYOUT GRID MODERNE
+// ===========================================
+
 .hero-content {
   height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
   z-index: 10;
+  container-type: inline-size; // Container queries support
 }
 
 .hero-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  max-width: 1200px;
+  grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+  gap: var(--spacing-3xl);
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--spacing-xl);
   align-items: center;
+  width: 100%;
+
+  @container (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    text-align: center;
+  }
+
+  @include respond-to(tablet) {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    text-align: center;
+  }
 }
 
-// Left side - Artistic Portrait
+// ===========================================
+// PORTRAIT ARTISTIQUE AVEC EFFETS 3D
+// ===========================================
+
 .hero-left {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  perspective: 1000px; // Pour les effets 3D
 }
 
 .artistic-portrait {
   position: relative;
-  width: 400px;
-  height: 500px;
+  width: min(400px, 90vw);
+  height: min(500px, 60vh);
+  transform-style: preserve-3d;
 
+  // Image principale avec effets avancés
   .profile-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: var(--border-radius-xl);
     position: relative;
     z-index: 5;
-    filter: grayscale(20%);
-    transition: all 0.5s ease;
+    filter: grayscale(20%) contrast(1.1) brightness(1.05);
+    @include smooth-transition(all, 0.6s, cubic-bezier(0.4, 0, 0.2, 1));
+    box-shadow: 
+      0 20px 40px rgba($primary-dark, 0.3),
+      0 0 0 1px rgba(white, 0.1);
 
     &:hover {
-      filter: grayscale(0%);
+      filter: grayscale(0%) contrast(1.15) brightness(1.1);
+      transform: rotateY(5deg) rotateX(-2deg) translateZ(10px);
     }
   }
 
-  .portrait-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-  }
-
+  // Effet aquarelle amélioré avec morphing
   .watercolor-effect {
     position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    background: linear-gradient(
-      45deg,
-      rgba($accent, 0.4) 0%,
-      rgba($primary, 0.4) 30%,
-      rgba($primary-light, 0.4) 60%,
-      rgba($warning, 0.4) 100%
+    inset: -20px;
+    background: conic-gradient(
+      from 0deg,
+      rgba($accent, 0.4),
+      rgba($primary, 0.4),
+      rgba($primary-light, 0.4),
+      rgba($warning, 0.4),
+      rgba($accent, 0.4)
     );
-    border-radius: 30px;
-    filter: blur(10px);
-    animation: colorShift 8s ease-in-out infinite;
+    border-radius: 40px;
+    filter: blur(15px);
+    animation: watercolorMorph 10s ease-in-out infinite;
+    z-index: 1;
   }
 
+  // Formes géométriques avec physics-based animation
   .geometric-shapes {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     z-index: 3;
+    pointer-events: none;
 
     .shape {
       position: absolute;
-      border-radius: 50%;
-      animation: float 6s ease-in-out infinite;
+      border-radius: var(--border-radius-full);
+      backdrop-filter: blur(2px);
+      animation: physicsFloat 8s ease-in-out infinite;
 
       &.shape-1 {
         width: 60px;
         height: 60px;
-        background: rgba($accent, 0.6);
+        background: linear-gradient(135deg, rgba($accent, 0.8), rgba($accent, 0.4));
         top: 10%;
-        left: -10%;
+        left: -5%;
         animation-delay: 0s;
+        box-shadow: 0 0 20px rgba($accent, 0.3);
       }
 
       &.shape-2 {
         width: 40px;
         height: 40px;
-        background: rgba($primary-light, 0.6);
+        background: linear-gradient(135deg, rgba($primary-light, 0.8), rgba($primary-light, 0.4));
         top: 60%;
-        right: -15%;
+        right: -10%;
         animation-delay: 2s;
+        box-shadow: 0 0 15px rgba($primary-light, 0.3);
       }
 
       &.shape-3 {
         width: 80px;
         height: 80px;
-        background: rgba($warning, 0.6);
+        background: linear-gradient(135deg, rgba($warning, 0.8), rgba($warning, 0.4));
         bottom: 20%;
-        left: -20%;
+        left: -15%;
         animation-delay: 4s;
+        box-shadow: 0 0 25px rgba($warning, 0.3);
       }
 
       &.shape-4 {
         width: 50px;
         height: 50px;
-        background: rgba($primary, 0.6);
+        background: linear-gradient(135deg, rgba($primary, 0.8), rgba($primary, 0.4));
         top: 30%;
-        right: -10%;
+        right: -5%;
         animation-delay: 1s;
+        box-shadow: 0 0 18px rgba($primary, 0.3);
+      }
+
+      // Formes supplémentaires pour plus de dynamisme
+      &.shape-5 {
+        width: 35px;
+        height: 35px;
+        background: linear-gradient(135deg, rgba(white, 0.6), rgba(white, 0.2));
+        top: 5%;
+        right: 20%;
+        animation-delay: 3s;
+        box-shadow: 0 0 12px rgba(white, 0.2);
+      }
+
+      &.shape-6 {
+        width: 25px;
+        height: 25px;
+        background: linear-gradient(135deg, rgba($accent, 0.7), rgba($primary-light, 0.4));
+        bottom: 10%;
+        right: 10%;
+        animation-delay: 5s;
+        box-shadow: 0 0 10px rgba($accent, 0.2);
       }
     }
   }
-} 
+
+  // Effet de lumière cinématographique
+  .cinematic-light {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(white, 0.05) 0%,
+      rgba($primary-light, 0.03) 30%,
+      transparent 70%
+    );
+    animation: cinematicRotate 15s linear infinite;
+    z-index: 2;
+  }
+}
+
+// ===========================================
+// HERO UNIVERSEL AMÉLIORÉ
+// ===========================================
+
+.universal-hero {
+  background: 
+    radial-gradient(ellipse at top, rgba($primary, 0.1), transparent 50%),
+    linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: white;
+  padding: var(--spacing-3xl) 0 var(--spacing-xl) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  // Effet parallax subtil
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20v-40c11.046 0 20 8.954 20 20z'/%3E%3C/g%3E%3C/svg%3E");
+    animation: patternMove 30s linear infinite;
+  }
+
+  .profile-image {
+    width: 140px;
+    height: 140px;
+    border-radius: var(--border-radius-full);
+    object-fit: cover;
+    margin-bottom: var(--spacing-lg);
+    box-shadow: 
+      0 0 40px rgba($primary-light, 0.3),
+      0 0 0 3px rgba(white, 0.1);
+    @include smooth-transition(all, 0.4s);
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      transform: scale(1.08) translateY(-5px);
+      box-shadow: 
+        0 20px 60px rgba($primary-light, 0.4),
+        0 0 0 3px rgba($primary-light, 0.3);
+    }
+  }
+
+  .title.is-2 {
+    color: white;
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 0 2px 20px rgba($primary, 0.3);
+    position: relative;
+    z-index: 2;
+  }
+
+  .subtitle.is-4 {
+    color: #64ffda;
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 0 0 20px rgba(#64ffda, 0.4);
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-description {
+    color: rgba(255,255,255,0.9);
+    max-width: 700px;
+    margin: 0 auto var(--spacing-lg) auto;
+    line-height: 1.7;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+// ===========================================
+// TYPOGRAPHIE HERO AVEC EFFETS MODERNES
+// ===========================================
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: $weight-black;
+  line-height: 1.1;
+  margin-bottom: var(--spacing-xl);
+  letter-spacing: -0.02em; // Améliore la lisibilité
+  background: linear-gradient(135deg, white 0%, $primary-light 50%, white 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgba($primary-light, 0.3);
+  position: relative;
+
+  // Effet de brillance animée
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(white, 0.4), transparent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textShine 3s ease-in-out infinite;
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.hero-main-name {
+  font-size: clamp(1.8rem, 6vw, 3.2rem);
+  font-weight: $weight-black;
+  color: transparent;
+  background: linear-gradient(135deg, #fff 0%, $primary-light 50%, #fff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 0.3em;
+  filter: drop-shadow(0 0 10px rgba($primary-light, 0.3));
+}
+
+.hero-multicolor {
+  font-size: clamp(1.4rem, 5vw, 2.8rem);
+  font-weight: $weight-black;
+  letter-spacing: 0.02em;
+  display: block;
+  margin-bottom: 0.2em;
+}
+
+// Couleurs améliorées avec dégradés
+.hero-blue {
+  background: linear-gradient(135deg, #3be8ff 0%, #00bcd4 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 15px rgba(#3be8ff, 0.5));
+}
+
+.hero-turquoise {
+  background: linear-gradient(135deg, #64ffda 0%, #26a69a 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 15px rgba(#64ffda, 0.5));
+}
+
+.hero-pink {
+  background: linear-gradient(135deg, #e17ecf 0%, #c2185b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 15px rgba(#e17ecf, 0.5));
+}
+
+.hero-desc-large {
+  font-size: clamp(1.1rem, 3.5vw, 1.8rem);
+  color: rgba(255, 253, 231, 0.95);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.6;
+  font-weight: $weight-medium;
+  text-shadow: 0 2px 20px rgba($primary-dark, 0.5);
+  max-width: 600px;
+}
+
+// ===========================================
+// AMPOULE FLOTTANTE INTERACTIVE
+// ===========================================
+
+.floating-bulb {
+  position: absolute;
+  bottom: var(--spacing-2xl);
+  right: var(--spacing-2xl);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  @include smooth-transition(all, 0.4s, cubic-bezier(0.4, 0, 0.2, 1));
+  animation: bulbFloat 6s ease-in-out infinite;
+
+  &:hover {
+    transform: scale(1.1) translateY(-5px);
+    
+    .lightbulb-icon {
+      filter: drop-shadow(0 0 25px #ffd600) drop-shadow(0 0 50px #ffd60080);
+      transform: rotate(10deg);
+    }
+    
+    .bulb-text {
+      opacity: 1;
+      transform: translate(-50%, -50%) rotate(-10deg) scale(1.05);
+    }
+  }
+
+  @include respond-to(mobile) {
+    right: var(--spacing-lg);
+    bottom: var(--spacing-lg);
+    transform: scale(0.85);
+  }
+}
+
+.lightbulb-icon {
+  font-size: 4rem;
+  color: #ffd600;
+  filter: drop-shadow(0 0 20px rgba(#ffd600, 0.8));
+  @include smooth-transition(all, 0.3s);
+  position: relative;
+}
+
+.bulb-text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  font-weight: $weight-bold;
+  background: linear-gradient(135deg, rgba(#fffde7, 0.95), rgba(#fff9c4, 0.9));
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius-lg);
+  padding: 0.4em 0.8em;
+  box-shadow: 
+    0 4px 20px rgba(#ffd600, 0.3),
+    0 0 0 1px rgba(#ffd600, 0.2);
+  text-align: center;
+  pointer-events: none;
+  white-space: pre-line;
+  opacity: 0;
+  @include smooth-transition(all, 0.3s);
+  min-width: 120px;
+}
+
+// ===========================================
+// BOUTONS D'ACTION MODERNES
+// ===========================================
+
+.hero-actions {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  @include respond-to(mobile) {
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+}
+
+.hero-btn {
+  font-size: var(--text-lg);
+  font-weight: $weight-bold;
+  border-radius: 50px;
+  padding: 0.8em 2.5em;
+  margin: 0;
+  @include smooth-transition(all, 0.4s, cubic-bezier(0.4, 0, 0.2, 1));
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+
+  // Effet de vague au clic
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(white, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    @include smooth-transition(all, 0.6s);
+  }
+
+  &:active::before {
+    width: 300%;
+    height: 300%;
+  }
+
+  // Effet de brillance
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(white, 0.2), transparent);
+    @include smooth-transition(left, 0.6s);
+  }
+
+  &:hover::after {
+    left: 100%;
+  }
+}
+
+.cta-button.primary.hero-btn {
+  background: linear-gradient(135deg, $primary 0%, $primary-light 100%);
+  color: white;
+  box-shadow: 
+    0 8px 32px rgba($primary, 0.3),
+    0 0 0 1px rgba(white, 0.1);
+
+  &:hover {
+    background: linear-gradient(135deg, $primary-light 0%, $accent 100%);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 
+      0 12px 40px rgba($primary, 0.4),
+      0 0 0 1px rgba(white, 0.2);
+  }
+
+  &:active {
+    transform: translateY(-1px) scale(0.98);
+  }
+}
+
+.cta-button.secondary.hero-btn {
+  background: rgba(white, 0.1);
+  color: white;
+  border: 2px solid rgba(white, 0.3);
+  backdrop-filter: blur(10px);
+
+  &:hover {
+    background: rgba(white, 0.9);
+    color: $primary-dark;
+    border-color: rgba(white, 0.8);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(white, 0.2);
+  }
+
+  &:active {
+    transform: translateY(-1px) scale(0.98);
+  }
+}
+
+// ===========================================
+// LIENS RAPIDES INTERACTIFS
+// ===========================================
+
+.hero-quicklinks {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-start;
+  font-size: var(--text-lg);
+  font-weight: $weight-semibold;
+  margin-top: var(--spacing-xl);
+  flex-wrap: wrap;
+
+  @include respond-to(mobile) {
+    justify-content: center;
+  }
+
+  a {
+    text-decoration: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    @include smooth-transition(all, 0.3s);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(white, 0.1);
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(white, 0.1), rgba(white, 0.05));
+      opacity: 0;
+      @include smooth-transition(opacity, 0.3s);
+    }
+
+    &:hover {
+      transform: translateY(-2px) scale(1.05);
+      border-color: rgba(white, 0.3);
+      
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid $primary-light;
+      outline-offset: 2px;
+    }
+  }
+}
+
+// ===========================================
+// ANIMATIONS AVANCÉES ET OPTIMISÉES
+// ===========================================
+
+@keyframes gradientShift {
+  0%, 100% { 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    background-position: 100% 50%; 
+  }
+}
+
+@keyframes particleFloat {
+  0% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  33% { 
+    transform: translateY(-10px) rotate(120deg); 
+  }
+  66% { 
+    transform: translateY(-5px) rotate(240deg); 
+  }
+  100% { 
+    transform: translateY(0px) rotate(360deg); 
+  }
+}
+
+@keyframes watercolorMorph {
+  0%, 100% {
+    border-radius: 40px;
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    border-radius: 60px 30px;
+    transform: rotate(90deg) scale(1.05);
+  }
+  50% {
+    border-radius: 30px 60px;
+    transform: rotate(180deg) scale(0.95);
+  }
+  75% {
+    border-radius: 50px 40px 60px 30px;
+    transform: rotate(270deg) scale(1.02);
+  }
+}
+
+@keyframes physicsFloat {
+  0%, 100% { 
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1); 
+  }
+  16% { 
+    transform: translate3d(-8px, -15px, 0) rotate(15deg) scale(1.05); 
+  }
+  33% { 
+    transform: translate3d(12px, -8px, 0) rotate(-10deg) scale(0.95); 
+  }
+  50% { 
+    transform: translate3d(-5px, -20px, 0) rotate(20deg) scale(1.08); 
+  }
+  66% { 
+    transform: translate3d(10px, -5px, 0) rotate(-15deg) scale(0.92); 
+  }
+  83% { 
+    transform: translate3d(-3px, -12px, 0) rotate(8deg) scale(1.02); 
+  }
+}
+
+@keyframes cinematicRotate {
+  0% { 
+    transform: rotate(0deg) scale(1); 
+  }
+  100% { 
+    transform: rotate(360deg) scale(1.1); 
+  }
+}
+
+@keyframes patternMove {
+  0% { 
+    transform: translateX(0) translateY(0); 
+  }
+  100% { 
+    transform: translateX(40px) translateY(40px); 
+  }
+}
+
+@keyframes textShine {
+  0% { 
+    background-position: -200% center; 
+    opacity: 0;
+  }
+  50% { 
+    opacity: 1;
+  }
+  100% { 
+    background-position: 200% center; 
+    opacity: 0;
+  }
+}
+
+@keyframes bulbFloat {
+  0%, 100% { 
+    transform: translateY(0) scale(1) rotate(-2deg); 
+  }
+  25% { 
+    transform: translateY(-8px) scale(1.02) rotate(1deg); 
+  }
+  50% { 
+    transform: translateY(-15px) scale(1.05) rotate(3deg); 
+  }
+  75% { 
+    transform: translateY(-5px) scale(1.01) rotate(-1deg); 
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba($primary-light, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba($primary-light, 0.6);
+  }
+}
+
+@keyframes morphBorder {
+  0%, 100% {
+    border-radius: 50%;
+  }
+  25% {
+    border-radius: 40% 60% 70% 30%;
+  }
+  50% {
+    border-radius: 60% 40% 30% 70%;
+  }
+  75% {
+    border-radius: 30% 70% 40% 60%;
+  }
+}
+
+// ===========================================
+// COMPOSANTS ADDITIONNELS MODERNES
+// ===========================================
+
+// Indicateur de scroll moderne
+.scroll-indicator {
+  position: absolute;
+  bottom: var(--spacing-xl);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: rgba(white, 0.7);
+  cursor: pointer;
+  @include smooth-transition(all, 0.3s);
+
+  &:hover {
+    color: white;
+    transform: translateX(-50%) translateY(-5px);
+  }
+
+  .scroll-text {
+    font-size: var(--text-sm);
+    font-weight: $weight-medium;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    
+    @include respond-to(mobile) {
+      writing-mode: horizontal-tb;
+    }
+  }
+
+  .scroll-arrow {
+    width: 2px;
+    height: 30px;
+    background: linear-gradient(to bottom, transparent, white, transparent);
+    border-radius: 1px;
+    position: relative;
+    animation: scrollPulse 2s ease-in-out infinite;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 6px solid white;
+    }
+  }
+}
+
+// Badge de statut flottant
+.status-badge {
+  position: absolute;
+  top: var(--spacing-xl);
+  right: var(--spacing-xl);
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: rgba(white, 0.1);
+  backdrop-filter: blur(10px);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-full);
+  border: 1px solid rgba(white, 0.2);
+  color: white;
+  font-size: var(--text-sm);
+  font-weight: $weight-medium;
+  @include smooth-transition(all, 0.3s);
+
+  &:hover {
+    background: rgba(white, 0.15);
+    transform: scale(1.05);
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4ade80;
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  @include respond-to(mobile) {
+    top: auto;
+    bottom: var(--spacing-xl);
+    right: var(--spacing-md);
+    font-size: var(--text-xs);
+  }
+}
+
+// Effet de particules interactives
+.interactive-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+
+  .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(white, 0.6);
+    border-radius: 50%;
+    animation: particleDrift 15s linear infinite;
+
+    &:nth-child(1) { left: 10%; animation-delay: 0s; }
+    &:nth-child(2) { left: 20%; animation-delay: 2s; }
+    &:nth-child(3) { left: 30%; animation-delay: 4s; }
+    &:nth-child(4) { left: 40%; animation-delay: 6s; }
+    &:nth-child(5) { left: 50%; animation-delay: 8s; }
+    &:nth-child(6) { left: 60%; animation-delay: 10s; }
+    &:nth-child(7) { left: 70%; animation-delay: 12s; }
+    &:nth-child(8) { left: 80%; animation-delay: 14s; }
+  }
+}
+
+// Menu hamburger moderne pour mobile
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-md);
+  @include smooth-transition(all, 0.3s);
+
+  @include respond-to(mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+
+  .hamburger-line {
+    width: 20px;
+    height: 2px;
+    background: white;
+    margin: 2px 0;
+    @include smooth-transition(all, 0.3s);
+    border-radius: 1px;
+  }
+
+  &.is-active {
+    .hamburger-line {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
+
+  &:hover {
+    background: rgba(white, 0.1);
+  }
+}
+
+// Navigation mobile moderne
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba($primary-dark, 0.95), rgba($primary, 0.9));
+  backdrop-filter: blur(20px);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xl);
+  transform: translateY(-100%);
+  @include smooth-transition(transform, 0.4s, cubic-bezier(0.4, 0, 0.2, 1));
+  opacity: 0;
+
+  &.is-active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .mobile-nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: var(--text-2xl);
+    font-weight: $weight-bold;
+    @include smooth-transition(all, 0.3s);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+
+    &:hover {
+      color: $primary-light;
+      background: rgba(white, 0.1);
+      transform: scale(1.1);
+    }
+  }
+
+  .mobile-nav-close {
+    position: absolute;
+    top: var(--spacing-lg);
+    right: var(--spacing-lg);
+    background: none;
+    border: none;
+    color: white;
+    font-size: var(--text-2xl);
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-md);
+    @include smooth-transition(all, 0.3s);
+
+    &:hover {
+      background: rgba(white, 0.1);
+      transform: rotate(90deg);
+    }
+  }
+}
+
+// ===========================================
+// ANIMATIONS SUPPLÉMENTAIRES
+// ===========================================
+
+@keyframes scrollPulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1.2);
+  }
+}
+
+@keyframes particleDrift {
+  0% {
+    transform: translateY(100vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20vh) translateX(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// ===========================================
+// UTILITAIRES D'ANIMATION
+// ===========================================
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  @include smooth-transition(all, 0.6s, cubic-bezier(0.4, 0, 0.2, 1));
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &.delay-1 { transition-delay: 0.1s; }
+  &.delay-2 { transition-delay: 0.2s; }
+  &.delay-3 { transition-delay: 0.3s; }
+  &.delay-4 { transition-delay: 0.4s; }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+// ===========================================
+// THÈME SOMBRE AMÉLIORÉ
+// ===========================================
+
+@media (prefers-color-scheme: dark) {
+  .modern-hero {
+    --hero-gradient-primary: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  }
+  
+  .hero-nav.scrolled {
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.98) 0%, rgba(26, 26, 46, 0.95) 100%);
+  }
+}
+
+// ===========================================
+// ÉTATS DE FOCUS AMÉLIORÉS POUR L'ACCESSIBILITÉ
+// ===========================================
+
+.hero-nav .nav-item:focus-visible,
+.hero-btn:focus-visible,
+.hero-quicklinks a:focus-visible,
+.floating-bulb:focus-visible {
+  outline: 3px solid $primary-light;
+  outline-offset: 2px;
+  border-radius: var(--border-radius-md);
+}
+
+// ===========================================
+// OPTIMISATIONS PERFORMANCE
+// ===========================================
+
+.modern-hero,
+.artistic-portrait,
+.geometric-shapes .shape,
+.watercolor-effect {
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+// ===========================================
+// RESPECT DES PRÉFÉRENCES D'ANIMATION
+// ===========================================
+
+@include respect-motion-preference;
+
+@media (prefers-reduced-motion: reduce) {
+  .modern-hero::before,
+  .modern-hero::after,
+  .geometric-shapes .shape,
+  .watercolor-effect,
+  .floating-bulb,
+  .scroll-indicator .scroll-arrow,
+  .interactive-particles .particle {
+    animation: none;
+  }
+  
+  .hero-btn::before,
+  .hero-btn::after {
+    transition: none;
+  }
+  
+  .artistic-portrait .profile-image:hover {
+    transform: none;
+  }
+}

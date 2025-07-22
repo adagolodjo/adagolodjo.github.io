@@ -157,3 +157,34 @@ For questions or support, please contact:
 ---
 
 **Last Updated**: January 2024 
+
+# Structure des styles et thème
+
+## Où ajouter/modifier les styles ?
+
+- **Tous les styles sont centralisés dans `docs/assets/css/`**
+- Le fichier principal est `app.scss` qui importe tous les partiels (dans `partials/`).
+- **Variables de thème** (couleurs, polices, etc.) : dans `partials/_variables.scss` (génère aussi les variables CSS pour le JS/dark mode).
+- **Styles par page/section** :
+  - `partials/_home.scss` : page d'accueil et sections featured
+  - `partials/_teaching.scss` : page teaching
+  - `partials/_publications.scss` : page publications
+  - `partials/_contact.scss` : page contact
+  - `partials/_404.scss` : page 404
+  - `partials/_hero.scss` : hero commun à plusieurs pages
+- **Dark mode** : géré via variables CSS dans `:root` et `[data-theme="dark"]` (voir `_variables.scss`)
+- **Polices** : importées une seule fois dans `app.scss`
+
+## Bonnes pratiques
+- **Ne pas ajouter de styles inline** dans les layouts, includes ou pages.
+- **Ajouter/modifier les styles** dans le partiel SCSS correspondant.
+- **Utiliser les variables de thème** pour garantir la cohérence visuelle.
+- **Pour un nouveau style de page**, créer un nouveau fichier dans `partials/` et l'importer dans `app.scss`.
+
+## Build
+- Le SCSS est compilé automatiquement en CSS lors du build Jekyll.
+- Si besoin, supprimer le fichier `app.css.map` pour forcer une régénération propre.
+
+---
+
+Pour toute question ou évolution, modifier ce README ou commenter dans le code ! 

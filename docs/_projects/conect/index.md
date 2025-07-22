@@ -58,3 +58,10 @@ The CONECT project focuses on developing innovative solutions for robotic needle
 
 [Contact us](/contact/) for more information about this project.
 
+## Roadmap
+
+- [ ] Intégrer la réalité augmentée au prototype
+- [ ] Tester la précision de l'insertion d'aiguille
+- [ ] Rédiger un rapport de validation clinique
+- [ ] Déployer le système en salle d'opération simulée
+

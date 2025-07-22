@@ -1,53 +1,322 @@
-.button.is-primary {
-  background-color: $primary;
-  border-color: $primary;
-  color: white;
+// Variables pour faciliter la maintenance
+$card-bg: #fff;
+$card-border-radius: 12px;
+$card-padding: 1.75rem;
+$card-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+$card-shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
+$transition-duration: 0.3s;
+$transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+
+// Animation pour l'apparition progressive des cartes
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.button.is-primary:hover {
-  background-color: darken($primary, 10%);
-  border-color: darken($primary, 10%);
-}
-
-.button.is-outlined {
-  border-color: $primary;
-  color: $primary;
-  background: transparent;
-}
-
-.button.is-outlined:hover {
-  background: $primary;
-  color: white;
-}
-
-.tag.is-primary {
-  background-color: $primary;
-  color: white;
-}
-
-.tag.is-info {
-  background-color: $accent;
-  color: white;
-}
-
-.card {
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(33,140,116,0.08);
-  border: none;
-}
-
-.card:hover {
-  box-shadow: 0 12px 40px rgba(33,140,116,0.15);
-} 
-
-
-.publications-grid {
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-@media (max-width: 900px) {
-  .publications-grid {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+  padding: 2.5rem 0;
+  
+  // Responsive design
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+  
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 3rem;
+  }
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: $card-bg;
+  border-radius: $card-border-radius;
+  padding: $card-padding;
+  box-shadow: $card-shadow;
+  transition: all $transition-duration $transition-easing;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  animation: fadeInUp 0.6s ease-out;
+  
+  // Effet de bordure subtile au hover
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: $card-border-radius;
+    padding: 2px;
+    background: linear-gradient(135deg, transparent 0%, rgba($primary, 0.1) 50%, transparent 100%);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity $transition-duration $transition-easing;
+  }
+
+  &:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: $card-shadow-hover;
+    border-color: rgba($primary, 0.15);
+    
+    &::before {
+      opacity: 1;
+    }
+    
+    .project-image {
+      transform: scale(1.05);
+      
+      &::after {
+        opacity: 0.3;
+      }
+    }
+    
+    .project-title a {
+      color: darken($primary, 10%);
+    }
+  }
+
+  // Animation d'apparition décalée pour chaque carte
+  @for $i from 1 through 12 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+
+  .project-image {
+    position: relative;
+    display: block;
+    width: calc(100% + #{$card-padding * 2});
+    height: 220px;
+    margin: -$card-padding -$card-padding 1.5rem -$card-padding;
+    overflow: hidden;
+    border-radius: $card-border-radius $card-border-radius 0 0;
+    transition: transform $transition-duration $transition-easing;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba($primary, 0.1) 0%, rgba($primary, 0.2) 100%);
+      opacity: 0;
+      transition: opacity $transition-duration $transition-easing;
+    }
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform $transition-duration $transition-easing;
+    }
+  }
+
+  .project-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    
+    a {
+      color: $primary;
+      text-decoration: none;
+      position: relative;
+      transition: color $transition-duration $transition-easing;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: $primary;
+        transition: width $transition-duration $transition-easing;
+      }
+      
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .project-subtitle {
+    font-size: 1.1rem;
+    color: $grey;
+    font-weight: 400;
+    margin-bottom: 0;
+    opacity: 0.8;
+  }
+
+  .project-card-content {
+    flex-grow: 1;
+    margin: 1.25rem 0 1.5rem 0;
+    
+    p {
+      color: $text;
+      line-height: 1.7;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Tags/technologies utilisées
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    
+    .tag {
+      display: inline-block;
+      background: rgba($primary, 0.1);
+      color: $primary;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border: 1px solid rgba($primary, 0.2);
+      transition: all $transition-duration $transition-easing;
+      
+      &:hover {
+        background: rgba($primary, 0.15);
+        transform: translateY(-1px);
+      }
+    }
+  }
+
+  .project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .button {
+    align-self: flex-start;
+    padding: 0.75rem 1.5rem;
+    background: $primary;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all $transition-duration $transition-easing;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    &:hover {
+      background: darken($primary, 8%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba($primary, 0.3);
+      
+      &::before {
+        left: 100%;
+      }
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  // État de chargement
+  &.loading {
+    .project-image {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+      
+      img {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+// Animation de chargement
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+// Variante de carte compacte
+.project-card--compact {
+  .project-image {
+    height: 160px;
+  }
+  
+  .project-title {
+    font-size: 1.3rem;
+  }
+  
+  .project-card-content {
+    margin: 1rem 0;
+    
+    p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+// Variante de carte mise en avant
+.project-card--featured {
+  border: 2px solid rgba($primary, 0.2);
+  background: linear-gradient(135deg, rgba($primary, 0.02) 0%, rgba($primary, 0.05) 100%);
+  
+  &::before {
+    background: linear-gradient(135deg, rgba($primary, 0.2) 0%, rgba($primary, 0.4) 50%, rgba($primary, 0.2) 100%);
+  }
+  
+  .project-title {
+    color: darken($primary, 10%);
   }
 }

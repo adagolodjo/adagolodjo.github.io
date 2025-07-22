@@ -24,15 +24,18 @@ document.addEventListener('DOMContentLoaded', function() {
         Department of Computer Science<br>
         DEFROST Team<br>
         CRIStAL UMR 9189<br>
-        Bâtiment M3 extension<br>
+        Bâtiment Polytech<br>
         59655 Villeneuve d'Ascq, France</p>
         <hr>
         <p><strong>Contact</strong><br>
         <span>For all inquiries, please use the contact form below or connect via social/academic profiles.</span></p>
         <hr>
         <p><strong>Office Hours</strong><br>
-        Tuesday: 14:00 - 16:00<br>
-        Thursday: 10:00 - 12:00<br>
+        Monday: 8:00 - 18:00<br>
+        Tuesday: 8:00 - 18:00<br>
+        Wednesday: 8:00 - 18:00<br>
+        Thursday: 8:00 - 18:00<br>
+        Friday: 8:00 - 18:00<br>
         Or by appointment</p>
         <hr>
         <p><strong>Social & Academic Profiles</strong><br>
