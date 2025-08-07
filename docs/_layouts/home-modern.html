@@ -4,9 +4,8 @@ layout: default
 
 {% include hero-nav.html %}
 
-<!-- Ajout de la police Comic Neue depuis Google Fonts -->
+<!-- Hero Section -->
 <div class="modern-hero comics-text full-bleed">
-  <!-- Hero Content -->
   <section class="hero-content">
     <div class="hero-container container">
       <div class="hero-left">
@@ -22,26 +21,31 @@ layout: default
           </div>
           <img src="/assets/images/notion-face.png" alt="{{ site.author.name }}" class="profile-image" loading="lazy">
         </div>
+        
         <!-- Research Badge -->
         <div class="hire-badge">
           <div class="badge-text">
-            <span>Research</span>
-            <span>Collaboration</span>
-            <span>Available</span>
+            <span>Under</span>
+            <span>Construction</span>
           </div>
         </div>
       </div>
+      
       <div class="hero-right">
         <div class="hero-text">
           <h1 class="hero-title comics-glow">
             <span class="hero-main-name">Yinoussa Adagolodjo</span><br>
             <span class="highlight hero-multicolor">
-              <span class="hero-blue">Robotics</span> & <span class="hero-turquoise">AR</span> for <span class="hero-pink">Healthcare</span>
+              <span class="hero-blue">Robotics</span> & 
+              <span class="hero-turquoise">AR</span> for 
+              <span class="hero-pink">Healthcare</span>
             </span>
           </h1>
+          
           <p class="hero-description hero-desc-large">
-            Assistant Professor at University of Lille. Bridging robotics, simulation, and medical innovation.
+            Assistant Professor at University of Lille. Bridging robotics, simulation, and medical innovation through cutting-edge research and technology.
           </p>
+          
           <div class="hero-actions">
             <a href="/assets/cv.pdf" class="cta-button primary hero-btn" target="_blank" rel="noopener">
               <span>Resume</span>
@@ -51,7 +55,8 @@ layout: default
               Contact
             </a>
           </div>
-          <div class="quick-links hero-quicklinks" style="margin-top:1.5rem;">
+          
+          <div class="quick-links hero-quicklinks">
             <a href="{{ '/research/projects/' | relative_url }}" class="hero-blue">Projects</a> ·
             <a href="{{ '/research/publications/' | relative_url }}" class="hero-turquoise">Publications</a> ·
             <a href="{{ '/teaching/' | relative_url }}" class="hero-pink">Teaching</a>
@@ -59,11 +64,14 @@ layout: default
         </div>
       </div>
     </div>
+    
     <!-- Decorative Elements -->
     <div class="decorative-elements">
-      <div class="lightbulb-icon floating-bulb">
-        <i class="fas fa-lightbulb"></i>
-        <span class="bulb-text">Research Collaboration<br>Available</span>
+      <div class="floating-bulb">
+        <div class="lightbulb-icon">
+          <i class="fas fa-lightbulb"></i>
+          <span class="bulb-text">Under<br>Construction</span>
+        </div>
       </div>
       <div class="floating-particles">
         <div class="particle particle-1"></div>
@@ -78,122 +86,225 @@ layout: default
 
 <!-- Featured Projects Section -->
 <section class="featured-section full-bleed">
-    <div class="featured-header">
-      <h2 class="title is-3 featured-title">Featured Projects</h2>
-      <p class="subtitle is-5 featured-subtitle">
-        Discover our cutting-edge research initiatives in medical simulation, deformable robotics, medical robotics and augmented reality
-      </p>
-    </div>
-    <div class="projects-grid">
-      <!-- Project 1 -->
-      <div class="project-card">
-        <div class="project-image project-image-video">
-          <video src="/assets/images/forceView.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="project-content">
-          <h2 class="project-title">ROBOCOP Project</h2>
-          <p class="project-description">Innovative approaches to improve hearing technologies through advanced robotic assistance and precision surgical procedures for cochlear implants.</p>
-          <div class="project-tags">
-            <span class="tag">Hearing Technology</span>
-            <span class="tag">Medical Devices</span>
+  <div class="featured-header">
+    <h2 class="title is-3 featured-title">Featured Projects</h2>
+    <p class="subtitle is-5 featured-subtitle">
+      Discover our cutting-edge research initiatives in medical simulation, 
+      deformable robotics, medical robotics and augmented reality
+    </p>
+  </div>
+  
+  <div class="projects-grid">
+    <!-- Project 1: ROBOCOP -->
+    <div class="project-card" data-project="robocop">
+      <div class="project-image project-image-video">
+        <video src="/assets/images/forceView.mp4" autoplay loop muted playsinline loading="lazy"></video>
+        <div class="project-overlay">
+          <div class="overlay-content">
+            <i class="fas fa-play-circle"></i>
+            <span>View Demo</span>
           </div>
         </div>
       </div>
-      <!-- Project 2 -->
-      <div class="project-card">
-        <div class="project-image">
-          <img src="/assets/images/projects/ire.jpg" alt="IRE Project" loading="lazy">
+      <div class="project-content">
+        <h2 class="project-title">ROBOCOP Project</h2>
+        <p class="project-description">
+          Innovative approaches to improve hearing technologies through advanced 
+          robotic assistance and precision surgical procedures for cochlear implants.
+        </p>
+        <div class="project-tags">
+          <span class="tag tag-primary">Hearing Technology</span>
+          <span class="tag tag-secondary">Medical Devices</span>
         </div>
-        <div class="project-content">
-          <h2 class="project-title">IRE Project</h2>
-          <p class="project-description">AI-powered soft robotic endoscopes and digital twins for safer, more effective minimally invasive procedures.</p>
-          <div class="project-tags">
-            <span class="tag">Surgical Robotics</span>
-            <span class="tag">Augmented Reality</span>
-          </div>
-        </div>
-      </div>
-      <!-- Project 3 -->
-      <div class="project-card">
-        <div class="project-image">
-          <img src="/assets/images/projects/liver_03.png" alt="CONECT Project" loading="lazy">
-        </div>
-        <div class="project-content">
-          <h2 class="project-title">CONECT Project</h2>
-          <p class="project-description">Integrating robotic technology in operating rooms for enhanced precision in needle insertion procedures, with real-time simulation and AR guidance systems.</p>
-          <div class="project-tags">
-            <span class="tag">Medical Robotics</span>
-            <span class="tag">Surgical Assistance</span>
-          </div>
-        </div>
-      </div>
-      <!-- Project 4 -->
-      <div class="project-card">
-        <div class="project-image">
-          <img src="/assets/images/projects/cosseroots.jpg" alt="Prostate Project" loading="lazy">
-        </div>
-        <div class="project-content">
-          <h2 class="project-title">COSSEROOTS Project</h2>
-          <p class="project-description"> We are developing a soft robotic model designed to mimic the mechanical behavior of a healthy human prostate. The system can be actuated to replicate pathological conditions such as benign prostatic hyperplasia or the presence of carcinoma, enabling realistic simulation for medical research and training.</p>
-          <div class="project-tags">
-            <span class="tag">Soft Robotics</span>
-            <span class="tag">Control Theory</span>
-          </div>
+        <div class="project-meta">
+          <span class="project-status active">Active</span>
+          <span class="project-year">2023-2026</span>
         </div>
       </div>
     </div>
-    <div class="featured-footer">
-      <a href="/research/projects/" class="button is-link is-light is-medium featured-btn" rel="noopener">
-        <span class="mr-05">See all projects</span>
-        <span class="featured-arrow">→</span>
-      </a>
+    
+    <!-- Project 2: IRE -->
+    <div class="project-card" data-project="ire">
+      <div class="project-image">
+        <img src="/assets/images/projects/ire.jpg" alt="IRE Project" loading="lazy">
+        <div class="project-overlay">
+          <div class="overlay-content">
+            <i class="fas fa-eye"></i>
+            <span>View Details</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-content">
+        <h2 class="project-title">IRE Project</h2>
+        <p class="project-description">
+          AI-powered soft robotic endoscopes and digital twins for safer, 
+          more effective minimally invasive procedures.
+        </p>
+        <div class="project-tags">
+          <span class="tag tag-accent">Surgical Robotics</span>
+          <span class="tag tag-tertiary">Augmented Reality</span>
+        </div>
+        <div class="project-meta">
+          <span class="project-status active">Active</span>
+          <span class="project-year">2022-2025</span>
+        </div>
+      </div>
     </div>
-</section>
-
-<!-- Additional Content Section -->
-<!-- <section class="content-section" style="background: var(--bg-color); color: #183642;">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-two-thirds">
-        <div class="content">
-          {{ content }}
+    
+    <!-- Project 3: CONECT -->
+    <div class="project-card" data-project="conect">
+      <div class="project-image">
+        <img src="/assets/images/projects/liver_03.png" alt="CONECT Project" loading="lazy">
+        <div class="project-overlay">
+          <div class="overlay-content">
+            <i class="fas fa-microscope"></i>
+            <span>Explore Research</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-content">
+        <h2 class="project-title">CONECT Project</h2>
+        <p class="project-description">
+          Integrating robotic technology in operating rooms for enhanced precision 
+          in needle insertion procedures, with real-time simulation and AR guidance systems.
+        </p>
+        <div class="project-tags">
+          <span class="tag tag-primary">Medical Robotics</span>
+          <span class="tag tag-secondary">Surgical Assistance</span>
+        </div>
+        <div class="project-meta">
+          <span class="project-status completed">Completed</span>
+          <span class="project-year">2020-2023</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Project 4: COSSEROOTS -->
+    <div class="project-card" data-project="cosseroots">
+      <div class="project-image">
+        <img src="/assets/images/projects/cosseroots.jpg" alt="COSSEROOTS Project" loading="lazy">
+        <div class="project-overlay">
+          <div class="overlay-content">
+            <i class="fas fa-robot"></i>
+            <span>View Innovation</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-content">
+        <h2 class="project-title">COSSEROOTS Project</h2>
+        <p class="project-description">
+          Developing a soft robotic model designed to mimic the mechanical behavior 
+          of a healthy human prostate, enabling realistic simulation for medical research and training.
+        </p>
+        <div class="project-tags">
+          <span class="tag tag-accent">Soft Robotics</span>
+          <span class="tag tag-tertiary">Control Theory</span>
+        </div>
+        <div class="project-meta">
+          <span class="project-status active">Active</span>
+          <span class="project-year">2021-2024</span>
         </div>
       </div>
     </div>
   </div>
-</section> -->
+  
+  <div class="featured-footer">
+    <a href="/research/projects/" class="button is-link is-light is-medium featured-btn" rel="noopener">
+      <span class="mr-05">See all projects</span>
+      <span class="featured-arrow">→</span>
+    </a>
+  </div>
+</section>
 
-<!-- About Section (footer style) -->
+<!-- About Footer Section -->
 <section class="about-footer-section">
   <div class="about-footer-container">
-    <h2 class="about-footer-title">Dr. Yinoussa Adagolodjo</h2>
-    <div class="about-footer-role">Assistant Professor at the University of Lille<br>DEFROST Team, CRIStAL UMR 9189</div>
-    <div class="about-footer-specialty">Specializing in robotics and augmented reality applications in healthcare</div>
-    <div class="about-footer-contact">
-      <strong>Contact</strong><br>
-      <span>Email:</span><br>
-      <a href="mailto:mail2@example.com">mail 2</a><br>
-      <a href="mailto:mail1@example.com">mail 1</a>
+    <div class="about-footer-grid">
+      <!-- Main Info -->
+      <div class="about-footer-main">
+        <h2 class="about-footer-title">Dr. Yinoussa Adagolodjo</h2>
+        <div class="about-footer-role">
+          Assistant Professor at the University of Lille<br>
+          <span class="team-highlight">DEFROST Team, CRIStAL UMR 9189</span>
+        </div>
+        <div class="about-footer-specialty">
+          Specializing in robotics and augmented reality applications in healthcare
+        </div>
+      </div>
+      
+      <!-- Contact Info -->
+      <div class="about-footer-contact">
+        <h3 class="footer-section-title">Contact</h3>
+        <div class="contact-group">
+          <span class="contact-label">Email:</span>
+          <a href="mailto:mail2@example.com" class="contact-link">mail 2</a>
+          <a href="mailto:mail1@example.com" class="contact-link">mail 1</a>
+        </div>
+      </div>
+      
+      <!-- Office Info -->
+      <div class="about-footer-office">
+        <h3 class="footer-section-title">Office</h3>
+        <div class="office-address">
+          University of Lille<br>
+          Batiment Polytech<br>
+          59655 Villeneuve d'Ascq, France
+        </div>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="about-footer-quicklinks">
+        <h3 class="footer-section-title">Quick Links</h3>
+        <nav class="footer-nav">
+          <a href="/about/" class="footer-nav-link">About</a>
+          <a href="/research/" class="footer-nav-link">Research</a>
+          <a href="/teaching/" class="footer-nav-link">Teaching</a>
+          <a href="/contact/" class="footer-nav-link">Contact</a>
+        </nav>
+      </div>
+      
+      <!-- Office Hours -->
+      <div class="about-footer-hours">
+        <h3 class="footer-section-title">Office Hours</h3>
+        <div class="office-schedule">
+          <div class="schedule-item">
+            <span class="day">Tuesday:</span>
+            <span class="time">14:00 - 16:00</span>
+          </div>
+          <div class="schedule-item">
+            <span class="day">Thursday:</span>
+            <span class="time">10:00 - 12:00</span>
+          </div>
+          <div class="schedule-note">Or by appointment</div>
+        </div>
+      </div>
+      
+      <!-- Social Links -->
+      <div class="about-footer-social">
+        <h3 class="footer-section-title">Connect</h3>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="ResearchGate">
+            <i class="fab fa-researchgate"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Google Scholar">
+            <i class="fas fa-graduation-cap"></i>
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="about-footer-office">
-      <strong>Office:</strong><br>
-      University of Lille<br>
-      Batiment Polytech<br>
-      59655 Villeneuve d'Ascq, France
-    </div>
-    <div class="about-footer-quicklinks">
-      <strong>Quick Links</strong><br>
-      <a href="/about/">About</a> ·
-      <a href="/research/">Research</a> ·
-      <a href="/teaching/">Teaching</a> ·
-      <a href="/contact/">Contact</a>
-    </div>
-    <div class="about-footer-hours">
-      <strong>Office Hours:</strong><br>
-      Tuesday: 14:00 - 16:00<br>
-      Thursday: 10:00 - 12:00<br>
-      Or by appointment
+    
+    <!-- Copyright -->
+    <div class="about-footer-bottom">
+      <p>&copy; {{ 'now' | date: "%Y" }} Dr. Yinoussa Adagolodjo. All rights reserved.</p>
+      <p class="footer-note">
+        Built with <i class="fas fa-heart text-red"></i> using Jekyll and modern web technologies.
+      </p>
     </div>
   </div>
 </section>
-
