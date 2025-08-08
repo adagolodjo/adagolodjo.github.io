@@ -1,0 +1,50 @@
+{% assign page_title = page.title | default: site.title %}
+{% assign page_description = page.description | default: site.description %}
+{% assign page_image = page.image | default: '/assets/images/hero.jpg' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.author.name | escape }}",
+  "url": "{{ page.url | absolute_url }}",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "University of Lille"
+  },
+  "jobTitle": "Assistant Professor",
+  "description": "{{ site.description | strip_newlines | escape }}"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.title | escape }}",
+  "url": "{{ site.url }}",
+  "urlTemplate": "{{ site.url }}{?s}",
+  "publisher": {
+    "@type": "Person",
+    "name": "{{ site.author.name | escape }}"
+  },
+  "inLanguage": "{{ page.lang | default: site.lang | default: 'en' }}"
+}
+</script>
+{% if page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ page_title | escape }}",
+  "description": "{{ page_description | strip_html | strip_newlines | escape }}",
+  "image": "{{ page_image | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name | escape }}"
+  },
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "mainEntityOfPage": "{{ page.url | absolute_url }}"
+}
+</script>
+{% endif %}
+
+

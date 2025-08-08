@@ -303,17 +303,14 @@ My research focuses on bridging the gap between advanced robotics technology and
 <script src="/assets/js/hal-publications.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // This assumes your hal-publications.js script exposes a function to fetch and render.
-    // Adjust if the function name is different.
-    if (typeof loadPublications === "function") {
-      loadPublications({
-        halId: 'yinoussa-adagolodjo', // Replace with your HAL ID
-        containerId: 'publications-list',
-        filterYearId: 'filter-year',
-        filterAuthorId: 'filter-author',
-        filterKeywordId: 'filter-keyword',
-        filterTypeId: 'filter-type'
-      });
-    }
+    const fetcher = new HALPublicationsFetcher({
+      halId: 'yinoussa-adagolodjo',
+      containerId: 'publications-list',
+      filterYearId: 'filter-year',
+      filterAuthorId: 'filter-author',
+      filterKeywordId: 'filter-keyword',
+      filterTypeId: 'filter-type'
+    });
+    fetcher.fetchPublications();
   });
-</script> 
+  </script>

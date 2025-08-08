@@ -1,4 +1,4 @@
-// Import Bulma CSS Framework
+// Import variables first, then Bulma from local node_modules (no CDN)
 @import "partials/variables";
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 @import "partials/hero";
@@ -7,7 +7,7 @@
 @import "partials/home";
 @import "partials/contact";
 @import "partials/404";
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+// Font loaded via <link> in head for better performance
 
 // Custom CSS variables for theme
 :root {

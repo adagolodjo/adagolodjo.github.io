@@ -19,7 +19,7 @@ layout: default
               <div class="shape shape-4"></div>
             </div>
           </div>
-          <img src="/assets/images/notion-face.png" alt="{{ site.author.name }}" class="profile-image" loading="lazy">
+          <img src="/assets/images/notion-face.png" alt="{{ site.author.name }}" class="profile-image" loading="lazy" width="512" height="512">
         </div>
         
         <!-- Research Badge -->
@@ -68,8 +68,8 @@ layout: default
     <!-- Decorative Elements -->
     <div class="decorative-elements">
       <div class="floating-bulb">
-        <div class="lightbulb-icon">
-          <i class="fas fa-lightbulb"></i>
+           <div class="lightbulb-icon" aria-hidden="true">
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
           <span class="bulb-text">Under<br>Construction</span>
         </div>
       </div>
@@ -98,7 +98,7 @@ layout: default
     <!-- Project 1: ROBOCOP -->
     <div class="project-card" data-project="robocop">
       <div class="project-image project-image-video">
-        <video src="/assets/images/forceView.mp4" autoplay loop muted playsinline loading="lazy"></video>
+        <video src="/assets/images/forceView.mp4" autoplay loop muted playsinline preload="metadata" poster="/assets/images/projects/robocop.jpg"></video>
         <div class="project-overlay">
           <div class="overlay-content">
             <i class="fas fa-play-circle"></i>
@@ -126,7 +126,7 @@ layout: default
     <!-- Project 2: IRE -->
     <div class="project-card" data-project="ire">
       <div class="project-image">
-        <img src="/assets/images/projects/ire.jpg" alt="IRE Project" loading="lazy">
+        <img src="/assets/images/projects/ire.jpg" alt="IRE Project" loading="lazy" width="800" height="600">
         <div class="project-overlay">
           <div class="overlay-content">
             <i class="fas fa-eye"></i>
@@ -154,7 +154,7 @@ layout: default
     <!-- Project 3: CONECT -->
     <div class="project-card" data-project="conect">
       <div class="project-image">
-        <img src="/assets/images/projects/liver_03.png" alt="CONECT Project" loading="lazy">
+        <img src="/assets/images/projects/liver_03.png" alt="CONECT Project" loading="lazy" width="800" height="600">
         <div class="project-overlay">
           <div class="overlay-content">
             <i class="fas fa-microscope"></i>
@@ -182,7 +182,7 @@ layout: default
     <!-- Project 4: COSSEROOTS -->
     <div class="project-card" data-project="cosseroots">
       <div class="project-image">
-        <img src="/assets/images/projects/cosseroots.jpg" alt="COSSEROOTS Project" loading="lazy">
+        <img src="/assets/images/projects/cosseroots.jpg" alt="COSSEROOTS Project" loading="lazy" width="800" height="600">
         <div class="project-overlay">
           <div class="overlay-content">
             <i class="fas fa-robot"></i>

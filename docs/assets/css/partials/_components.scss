@@ -38,6 +38,27 @@ $transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
+// Accessible skip link
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  background: #111;
+  color: #fff;
+  border-radius: 6px;
+  z-index: 10000;
+}
+
 .project-card {
   position: relative;
   display: flex;

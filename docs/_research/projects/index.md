@@ -6,26 +6,24 @@ permalink: /research/projects/
 
 # Current Research Projects
 
+{% assign more_sep = '<' | append: '!--more-->' | append: '>' %}
+
 <div class="projects-grid">
 {% for project in site.projects %}
   {% if project.path contains "index.md" %}
-    <div class="project-card">
-      {% if project.image %}
-        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+    {% capture excerpt %}
+      {% if project.content contains more_sep %}
+        {{ project.content | split: more_sep | first | strip_html | truncatewords: 30 }}
+      {% else %}
+        {{ project.content | strip_html | truncatewords: 30 }}
       {% endif %}
-      <div class="project-card-content">
-        <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
-        {% if project.subtitle %}
-          <h3>{{ project.subtitle }}</h3>
-        {% endif %}
-        {% if project.content contains '<!--more-->' %}
-          <p>{{ project.content | split:'<!--more-->' | first | strip_html | truncatewords: 30 }}</p>
-        {% else %}
-          <p>{{ project.content | strip_html | truncatewords: 30 }}</p>
-        {% endif %}
-      </div>
-      <p><a href="{{ project.url | relative_url }}" class="button is-primary">Learn More</a></p>
-    </div>
+    {% endcapture %}
+    {% include project-card.html 
+      title=project.title 
+      subtitle=project.subtitle 
+      url=project.url 
+      image=project.image 
+      excerpt=excerpt %}
   {% endif %}
 {% endfor %}
-</div> 
+</div>
