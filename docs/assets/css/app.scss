@@ -6,6 +6,7 @@
 @import "partials/publications";
 @import "partials/home";
 @import "partials/contact";
+@import "partials/blog";
 @import "partials/404";
 // Font loaded via <link> in head for better performance
 
@@ -14,7 +15,7 @@
   --primary-color: #3bb6b0; /* turquoise principal */
   --primary-dark: #1a6e7e;  /* bleu-vert foncé */
   --bg-color: #eafafc;      /* bleu très pâle pour le fond général */
-  --text-color: #183642;    /* bleu-vert foncé pour le texte */
+  --text-color: #008080;    /* TEAL COLOR for the text */
   --card-bg: #e0f7fa;       /* bleu clair pour les cartes */
   --border-color: #b2ebf2;  /* turquoise clair pour les bordures */
   --shadow: 0 4px 24px rgba(59,182,176,0.10);
@@ -83,8 +84,54 @@ body {
   font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif !important;
 }
 
+/* Fix for white text on white background issue in main content - using teal */
+.section .content {
+  color: #008080 !important;  /* Teal color for all text */
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #008080 !important;  /* Teal for headings */
+  }
+  
+  p, li, span, div {
+    color: #008080 !important;  /* Teal for paragraphs and lists */
+  }
+  
+  a {
+    color: #006666 !important;  /* Darker teal for links */
+    
+    &:hover {
+      color: #004d4d !important;  /* Even darker teal for hover */
+    }
+  }
+}
+
 /* Style comics universel pour tous les éléments textuels */
 body, h1, h2, h3, h4, h5, h6, p, a, span, strong, em, li, ul, ol, button, .button, .tag, .title, .subtitle, .badge-text, .cta-button, .quick-links, label, input, textarea, blockquote, th, td {
   font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif !important;
   letter-spacing: 0.5px;
+}
+
+/* OVERRIDE: Force teal text color for main content (highest priority) */
+body .section .content {
+  color: #008080 !important;  /* Teal color for all text */
+}
+body .section .content h1,
+body .section .content h2,
+body .section .content h3,
+body .section .content h4,
+body .section .content h5,
+body .section .content h6 {
+  color: #008080 !important;  /* Teal for headings */
+}
+body .section .content p,
+body .section .content li,
+body .section .content span,
+body .section .content div {
+  color: #008080 !important;  /* Teal for paragraphs and lists */
+}
+body .section .content a {
+  color: #006666 !important;  /* Darker teal for links */
+}
+body .section .content a:hover {
+  color: #004d4d !important;  /* Even darker teal for hover */
 }

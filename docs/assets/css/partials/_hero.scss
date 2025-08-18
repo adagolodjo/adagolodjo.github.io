@@ -427,12 +427,15 @@
 .universal-hero {
   background: 
     radial-gradient(ellipse at top, rgba($primary, 0.1), transparent 50%),
-    linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  color: white;
+    linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%) !important;
+  color: white !important;
   padding: var(--spacing-3xl) 0 var(--spacing-xl) 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  
+  // Ensure dark background overrides body background
+  background-attachment: fixed;
 
   // Effet parallax subtil
   &::before {
@@ -465,7 +468,7 @@
   }
 
   .title.is-2 {
-    color: white;
+    color: white !important;
     margin-bottom: var(--spacing-sm);
     text-shadow: 0 2px 20px rgba($primary, 0.3);
     position: relative;
@@ -473,7 +476,7 @@
   }
 
   .subtitle.is-4 {
-    color: #64ffda;
+    color: #64ffda !important;
     margin-bottom: var(--spacing-sm);
     text-shadow: 0 0 20px rgba(#64ffda, 0.4);
     position: relative;
@@ -481,12 +484,21 @@
   }
 
   .hero-description {
-    color: rgba(255,255,255,0.9);
+    color: rgba(255,255,255,0.9) !important;
     max-width: 700px;
     margin: 0 auto var(--spacing-lg) auto;
     line-height: 1.7;
     position: relative;
     z-index: 2;
+  }
+  
+  // Ensure all text elements are white
+  * {
+    color: inherit !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p, span, div {
+    color: white !important;
   }
 }
 

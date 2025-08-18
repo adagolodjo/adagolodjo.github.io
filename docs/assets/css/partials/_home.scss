@@ -181,6 +181,26 @@
   }
 }
 
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border-radius: 20px;
+  transition: all var(--transition-medium);
+  
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: inherit;
+    transform: translateY(-5px);
+  }
+  
+  &:focus {
+    outline: 2px solid var(--accent-cyan);
+    outline-offset: 4px;
+  }
+}
+
 .project-card {
   @include glass-morphism(0.119);
   @include hover-lift(8px, 1.02);
@@ -308,6 +328,53 @@
   aspect-ratio: 4/3;
 }
 
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  z-index: 3;
+  border-radius: 15px;
+  
+  .project-link:hover & {
+    opacity: 1;
+  }
+}
+
+.overlay-content {
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transform: translateY(10px);
+  transition: transform var(--transition-medium);
+  
+  .project-link:hover & {
+    transform: translateY(0);
+  }
+  
+  i {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  span {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
 .project-content {
   flex: 1;
   z-index: 2;
@@ -382,6 +449,47 @@
       transform: translateX(100%);
     }
   }
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid rgba(6, 141, 136, 0.1);
+  
+  @media (max-width: 768px) {
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+}
+
+.project-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  
+  &.active {
+    background: rgba(76, 175, 80, 0.15);
+    color: #2e7d32;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+  }
+  
+  &.completed {
+    background: rgba(96, 125, 139, 0.15);
+    color: #455a64;
+    border: 1px solid rgba(96, 125, 139, 0.3);
+  }
+}
+
+.project-year {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-weight: 500;
 }
 
 // ===== FEATURED SECTION =====
