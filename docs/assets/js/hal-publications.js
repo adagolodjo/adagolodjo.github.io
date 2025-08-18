@@ -73,7 +73,8 @@ class HALPublicationsFetcher {
             }
         } catch (error) {
             console.error('Error fetching publications:', error);
-            this.showError('Error loading publications');
+            // Don't show error since we have fallback Jekyll publications
+            // this.showError('Error loading publications');
         } finally {
             // Hide loading indicator
             if (this.loadingIndicator) {
@@ -135,7 +136,7 @@ class HALPublicationsFetcher {
 
         // Journal Articles
         if (grouped.journal.length > 0) {
-            html += '<h2>Journal Articles</h2>';
+            html += '<h2>Journal Articles (from HAL)</h2>';
             grouped.journal.forEach(pub => {
                 html += this.renderJournalArticle(pub);
             });
@@ -143,7 +144,7 @@ class HALPublicationsFetcher {
 
         // Conference Papers
         if (grouped.conference.length > 0) {
-            html += '<h2>Conference Papers</h2>';
+            html += '<h2>Conference Papers (from HAL)</h2>';
             grouped.conference.forEach(pub => {
                 html += this.renderConferencePaper(pub);
             });
@@ -151,7 +152,7 @@ class HALPublicationsFetcher {
 
         // Book Chapters
         if (grouped.chapter.length > 0) {
-            html += '<h2>Book Chapters</h2>';
+            html += '<h2>Book Chapters (from HAL)</h2>';
             grouped.chapter.forEach(pub => {
                 html += this.renderBookChapter(pub);
             });
@@ -159,13 +160,19 @@ class HALPublicationsFetcher {
 
         // Other Publications
         if (grouped.other.length > 0) {
-            html += '<h2>Other Publications</h2>';
+            html += '<h2>Other Publications (from HAL)</h2>';
             grouped.other.forEach(pub => {
                 html += this.renderOtherPublication(pub);
             });
         }
 
         this.publicationsContainer.innerHTML = html;
+        
+        // Hide manual publications when HAL data is successfully loaded
+        const manualPublications = document.getElementById('manual-publications');
+        if (manualPublications && publications.length > 0) {
+            manualPublications.style.display = 'none';
+        }
     }
 
     populateFilters(publications) {

@@ -15,11 +15,11 @@ permalink: /research/publications/
     
     <!-- Publications container -->
     <div id="hal-publications">
-      <!-- Publications will be loaded here by JavaScript -->
+      <!-- HAL publications will be loaded here by JavaScript if available -->
     </div>
     
-    <!-- Fallback: Manual publications if HAL fails -->
-    <div id="manual-publications" style="display: none;">
+    <!-- Jekyll data publications (shown by default) -->
+    <div id="manual-publications">
       <h2>Selected Publications</h2>
       <div class="publications-grid">
         {% assign all_papers = site.data.publications | sort: "year" | reverse %}
