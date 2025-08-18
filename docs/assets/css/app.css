@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
-@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap");
 :root {
   --primary-color: #3bb6b0;
   --primary-dark: #1a6e7e;
@@ -100,14 +99,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  backdrop-filter: var(--hero-backdrop-blur);
   -webkit-backdrop-filter: var(--hero-backdrop-blur);
+  backdrop-filter: var(--hero-backdrop-blur);
   background: linear-gradient(180deg, #1a6e7ecc 0%, #1a6e7e99 100%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all var(--hero-animation-speed) cubic-bezier(0.4, 0, 0.2, 1); }
   .hero-nav.scrolled {
     background: linear-gradient(180deg, #1a6e7ef5 0%, #1a6e7ee6 100%);
     box-shadow: 0 4px 32px rgba(26, 110, 126, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: var(--hero-backdrop-blur) contrast(1.2);
     backdrop-filter: var(--hero-backdrop-blur) contrast(1.2); }
   .hero-nav .nav-left,
   .hero-nav .nav-right {
@@ -284,6 +284,7 @@
     .artistic-portrait .geometric-shapes .shape {
       position: absolute;
       border-radius: var(--border-radius-full);
+      -webkit-backdrop-filter: blur(2px);
       backdrop-filter: blur(2px);
       animation: physicsFloat 8s ease-in-out infinite; }
       .artistic-portrait .geometric-shapes .shape.shape-1 {
@@ -396,9 +397,9 @@
   line-height: 1.1;
   margin-bottom: var(--spacing-xl);
   letter-spacing: -0.02em;
+  -webkit-background-clip: text;
   background: linear-gradient(135deg, white 0%, #b2ebf2 50%, white 100%);
   background-clip: text;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 40px rgba(178, 235, 242, 0.3);
   position: relative; }
@@ -406,9 +407,9 @@
     content: attr(data-text);
     position: absolute;
     inset: 0;
+    -webkit-background-clip: text;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     background-clip: text;
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textShine 3s ease-in-out infinite;
     opacity: 0; }
@@ -419,9 +420,9 @@
   font-size: clamp(1.8rem, 6vw, 3.2rem);
   font-weight: 900;
   color: transparent;
+  -webkit-background-clip: text;
   background: linear-gradient(135deg, #fff 0%, #b2ebf2 50%, #fff 100%);
   background-clip: text;
-  -webkit-background-clip: text;
   letter-spacing: 0.05em;
   display: block;
   margin-bottom: 0.3em;
@@ -435,23 +436,23 @@
   margin-bottom: 0.2em; }
 
 .hero-blue {
+  -webkit-background-clip: text;
   background: linear-gradient(135deg, #3be8ff 0%, #00bcd4 100%);
   background-clip: text;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 0 15px rgba(59, 232, 255, 0.5)); }
 
 .hero-turquoise {
+  -webkit-background-clip: text;
   background: linear-gradient(135deg, #64ffda 0%, #26a69a 100%);
   background-clip: text;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 0 15px rgba(100, 255, 218, 0.5)); }
 
 .hero-pink {
+  -webkit-background-clip: text;
   background: linear-gradient(135deg, #e17ecf 0%, #c2185b 100%);
   background-clip: text;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 0 15px rgba(225, 126, 207, 0.5)); }
 
@@ -505,6 +506,7 @@
   font-size: 0.9rem;
   font-weight: 700;
   background: linear-gradient(135deg, rgba(255, 253, 231, 0.95), rgba(255, 249, 196, 0.9));
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: var(--border-radius-lg);
   padding: 0.4em 0.8em;
@@ -512,7 +514,7 @@
   text-align: center;
   pointer-events: none;
   white-space: pre-line;
-  opacity: 0;
+  opacity: 1;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   min-width: 120px; }
 
@@ -585,6 +587,7 @@
   background: rgba(255, 255, 255, 0.1);
   color: white;
   border: 2px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px); }
   .cta-button.secondary.hero-btn:hover {
     background: rgba(255, 255, 255, 0.9);
@@ -613,6 +616,7 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1); }
     .hero-quicklinks a::before {
@@ -767,6 +771,7 @@
   align-items: center;
   gap: var(--spacing-xs);
   background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--border-radius-full);
@@ -868,6 +873,7 @@
   width: 100%;
   height: 100vh;
   background: linear-gradient(135deg, rgba(26, 110, 126, 0.95), rgba(59, 182, 176, 0.9));
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   z-index: 9999;
   display: flex;

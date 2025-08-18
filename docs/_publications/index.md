@@ -100,4 +100,4 @@ permalink: /research/publications/
 </div>
 
 <!-- Load HAL publications script -->
-<script src="{{ '/assets/js/hal-publications.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/hal-publications.js' | relative_url }}" defer></script>

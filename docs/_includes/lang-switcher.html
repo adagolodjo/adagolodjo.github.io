@@ -1,0 +1,12 @@
+{% assign current_url = page.url %}
+{% if current_url == '/' %}
+  <a href="/fr/" class="nav-item" title="Passer en français" aria-label="Passer en français">FR</a>
+{% elsif current_url contains '/fr/' %}
+  {% assign en_url = current_url | remove_first: '/fr' %}
+  <a href="{{ en_url }}" class="nav-item" title="Switch to English" aria-label="Switch language to English">EN</a>
+{% else %}
+  {% assign fr_url = current_url | replace_first: '/', '/fr/' %}
+  <a href="{{ fr_url }}" class="nav-item" title="Passer en français" aria-label="Passer en français">FR</a>
+{% endif %}
+
+

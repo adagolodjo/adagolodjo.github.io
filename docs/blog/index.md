@@ -7,7 +7,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
 
 ## Recent Posts
 
-{% for post in site.blog limit:5 %}
+{% for post in site.posts limit:5 %}
 <div class="post-preview">
   <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
   <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
@@ -20,13 +20,14 @@ subtitle: Thoughts on Research, Teaching, and Technology
 
 <div class="tags">
   {% for category in site.categories %}
-  <a href="/blog/categories/{{ category[0] | slugify }}/" class="tag">{{ category[0] }}</a>
+  <a href="/blog/categories/#{{ category[0] | slugify }}" class="tag">{{ category[0] }}</a>
   {% endfor %}
+  <a href="/blog/categories/" class="tag is-light">View all</a>
 </div>
 
 ## Archives
 
-{% assign postsByYear = site.blog | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 {% for year in postsByYear %}
 <h3>{{ year.name }}</h3>
 <ul>
