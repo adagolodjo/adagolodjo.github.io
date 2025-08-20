@@ -89,44 +89,32 @@ Lille, France
 
 ---
 
-## Selected Publications
+## Publications
 
-### Journal Articles
+### Complete Publication List
+- **Google Scholar Profile:** [https://scholar.google.com/citations?user=ZBdWJ9EAAAAJ](https://scholar.google.com/citations?user=ZBdWJ9EAAAAJ)
+- Complete list of publications, citations, and h-index available on Google Scholar
+
+### Recent Highlights
 
 **2023**
-- **Y. Adagolodjo**, N. Hafsa. "Robots assisted surgical interventions in constrained anatomical spaces." *Studies in Health Technology and Informatics*, vol. 302, pp. 217-221, 2023. DOI: [10.3233/SHTI230159](https://doi.org/10.3233/SHTI230159)
+- **Y. Adagolodjo**, N. Hafsa. "Robots assisted surgical interventions in constrained anatomical spaces." *Studies in Health Technology and Informatics*
 
 **2022**
-- **Y. Adagolodjo**, S. Cotin. "Real-time simulation for surgical navigation in robotic-assisted cochlear implant procedure." *IEEE Transactions on Medical Robotics and Bionics*, vol. 4, no. 3, pp. 659-670, 2022. DOI: [10.1109/TMRB.2022.3180577](https://doi.org/10.1109/TMRB.2022.3180577)
+- **Y. Adagolodjo**, S. Cotin. "Real-time simulation for surgical navigation in robotic-assisted cochlear implant procedure." *IEEE Transactions on Medical Robotics and Bionics*
 
 **2019**
-- **Y. Adagolodjo**, L. Goffin, M. De Mathelin, H. Courtecuisse. "Constraint-based manipulation of deformable models in robotic surgery." *IEEE Robotics and Automation Letters*, vol. 4, no. 2, pp. 1461-1468, 2019. DOI: [10.1109/LRA.2019.2895244](https://doi.org/10.1109/LRA.2019.2895244)
+- **Y. Adagolodjo**, L. Goffin, M. De Mathelin, H. Courtecuisse. "Constraint-based manipulation of deformable models in robotic surgery." *IEEE Robotics and Automation Letters*
 
 ---
 
 ## Teaching Experience
 
-### Current Courses (Fall 2024)
-
-#### Graduate Level Courses
-- **INITIATION-RECHERCHE:** Initiation à la recherche *(Research methodology and scientific presentation)*
-- **MODELISATION-PRODUCTION:** Modélisation des systèmes de production *(Production systems modeling)*
-- **GR-711302:** Automatique : Robotique *(Automatic control systems applied to robotics)*
-- **GR-712302:** Programmation *(Advanced programming for engineering applications)*
-- **AUTOMATIQUE-REGULATION:** Automatique: Régulation de Système *(System regulation and control theory)*
-- **ANALYSE-NUMERIQUE:** Analyse numérique : Optimisation *(Numerical analysis and optimization)*
-- **INDUSTRIE-40:** Industrie 4.0 *(Introduction to Industry 4.0 and smart manufacturing)*
-- **TESTS-MAINTENANCE:** Tests et Maintenance *(Software testing and system maintenance)*
-- **SIMULATION-MEDICALE:** Simulation Médicale et Robotique Médicale *(Medical simulation and robotics)*
-- **MODELING-MEDICAL-SIM:** Modeling & Real-Time Medical Simulation *(Advanced medical simulation)*
-
-#### Undergraduate Level Courses
-- **LOGIQUE-INDUSTRIELLE:** Logique/Informatique Industrielle *(Industrial logic and computer systems)*
-
-### Teaching Load Summary
-- **Course Management:** Teaching 11 courses across graduate and undergraduate levels
-- **Total Contact Hours:** Approximately 200+ hours of lectures, practicals, and tutorials per semester
-- **Specialization Areas:** Robotics, automation, medical simulation, programming, numerical optimization
+### Course Portfolio
+- **Teaching Load:** 11 courses across graduate and undergraduate levels (Fall 2024)
+- **Contact Hours:** 200+ hours of lectures, practicals, and tutorials per semester
+- **Course Details:** Complete course descriptions, syllabi, and resources available at:
+  - [https://adagolodjo.github.io/teaching/](https://adagolodjo.github.io/teaching/)
 
 ### Teaching Areas
 - **Medical Robotics:** Medical simulation, robotics applications, real-time systems
@@ -135,13 +123,38 @@ Lille, France
 - **Industry 4.0:** Smart manufacturing, IoT, modern industrial systems
 - **Research Methods:** Research methodology, scientific presentation, academic writing
 
+### Software Tools Integration
+- **Simulation:** SOFA framework for real-time simulation in medical applications
+- **Programming:** Modern development environments and version control systems
+- **Visualization:** 3D modeling and visualization tools for engineering education
+
+---
+
+## Software Development
+
+### Open Source Contributions
+
+#### Cosserat Plugin for SOFA (2019–Present)
+**Main Developer** | *Open Source Project*
+
+- Lead developer of the Cosserat plugin for SOFA simulation framework
+- Implementation of Cosserat rod theory for soft robotics simulation
+- **Repository:** [https://github.com/SofaDefrost/Cosserat](https://github.com/SofaDefrost/Cosserat)
+- Used in research projects and by the international soft robotics community
+- C++ implementation with Python bindings for accessibility
+
+### Technical Contributions
+- **Core Features:** Cosserat rod mechanics, Real-time deformation simulation, Integration with SOFA ecosystem
+- **Community Impact:** Widely adopted by researchers in soft robotics and continuum mechanics
+- **Documentation:** Comprehensive examples, tutorials, and API documentation
+
 ---
 
 ## Technical Skills
 
 - **Programming:** C++, Python, MATLAB, JavaScript, LaTeX
 - **Robotics:** ROS, Real-time control systems, Kinematics and dynamics
-- **Simulation:** FEM, GPU acceleration, Real-time physics simulation
+- **Simulation:** FEM, GPU acceleration, Real-time physics simulation, SOFA framework
 - **Graphics:** 3D visualization, Augmented reality, OpenGL, WebGL
 - **Tools:** Git, Docker, Jekyll, Bulma CSS framework
 - **Platforms:** Linux, macOS, High-performance computing
@@ -166,6 +179,33 @@ Lille, France
 - Bio-inspired robotic systems
 - Flexible and adaptive control systems
 - Cosserat theory applications
+
+---
+
+## Invited Talks and Presentations
+
+### December 2024 | Journées Scientifiques Inria Chile 2024
+**Invited Speaker** | *Santiago, Chile (December 4-6, 2024)*
+
+- **Title:** "Bridging the Gap: From Biomechanical Simulations to Adaptive Surgical Robotics"
+- Official pre-event of the AI Action Summit
+- International conference on AI challenges and opportunities
+- Presented to leading French and Chilean scientists
+
+### December 2024 | LACORO 2024
+**Invited Speaker** | *Rancagua, Chile (December 9-13, 2024)*
+
+- 9th Latin American Conference on Robotics
+- International robotics conference in the Southern Hemisphere
+- Presentation on medical robotics and simulation technologies
+
+### March 2024 | CAIR Hong Kong AI and Robotics in Healthcare Forum
+**Invited Speaker** | *Hong Kong (March 28-29, 2024)*
+
+- Centre for Artificial Intelligence and Robotics (CAIR), Hong Kong Institute of Science & Innovation
+- Chinese Academy of Sciences international forum
+- Focus on innovative applications of AI and robotics in medical field
+- International gathering of experts on healthcare technology
 
 ---
 

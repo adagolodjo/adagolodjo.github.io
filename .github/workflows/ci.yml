@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master, refactor/site-structure ]
+  pull_request:
+    branches: [ main, master, refactor/site-structure ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install linters
+        run: |
+          npm i -g markdownlint-cli@0.41.x stylelint@15.x stylelint-scss@5.x
+      - name: Install dependencies
+        run: |
+          cd docs
+          bundle install --jobs 4 --retry 3
+      - name: Pre-fetch HAL publications cache
+        run: |
+          mkdir -p docs/assets/data
+          curl -s "https://api.archives-ouvertes.fr/search/?q=authFullName_t:adagolodjo&rows=100&format=json&fl=title_s,authFullName_s,producedDate_s,journalTitle_s,bookTitle_s,conferenceTitle_s,doiId_s,halId_s,uri_s,abstract_s,keyword_s,publicationDate_s,docType_s,volume_s,issue_s,page_s,isbn_s,issn_s" -o docs/assets/data/hal-publications.json || true
+      - name: Lint markdown
+        run: |
+          markdownlint "**/*.md" --ignore node_modules --ignore docs/_site || true
+      - name: Lint styles
+        run: |
+          npx stylelint "docs/assets/css/**/*.scss" || true
+      - name: Build site
+        run: |
+          cd docs
+          bundle exec jekyll build
+      - name: Link checker (basic)
+        run: |
+          pipx install linkchecker || python3 -m pip install --user linkchecker || true
+          linkchecker ./docs/_site --ignore-url=mailto: || true
+  lighthouse:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Lighthouse CI
+        run: npm i -g @lhci/cli@0.13.x
+      - name: Run Lighthouse CI (local)
+        run: |
+          npx http-server ./docs/_site -p 8080 &
+          sleep 2
+          lhci autorun --collect.url=http://localhost:8080 --assert.assertions='categories:performance>0.7,categories:accessibility>0.8' || true
+
+
