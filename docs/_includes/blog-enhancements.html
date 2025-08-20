@@ -1,0 +1,407 @@
+<!-- Enhanced Blog Features -->
+
+<!-- Reading Progress Bar -->
+<div class="reading-progress-container">
+  <div class="reading-progress-bar" id="reading-progress"></div>
+</div>
+
+<!-- Table of Contents (for long posts) -->
+<div class="toc-container" id="toc-container" style="display: none;">
+  <div class="toc-header">
+    <h4>Table of Contents</h4>
+    <button class="button is-small" id="toc-toggle">
+      <span class="icon">
+        <i class="fas fa-chevron-up"></i>
+      </span>
+    </button>
+  </div>
+  <nav class="toc-nav" id="toc-nav"></nav>
+</div>
+
+<!-- Related Posts Section -->
+<div class="related-posts-section">
+  <h3 class="title is-4">
+    <span class="icon is-medium">
+      <i class="fas fa-link"></i>
+    </span>
+    Related Posts
+  </h3>
+  <div class="related-posts-grid" id="related-posts">
+    <!-- Dynamically populated -->
+  </div>
+</div>
+
+<!-- Blog Series Navigator -->
+<div class="series-navigator" id="series-navigator" style="display: none;">
+  <div class="box">
+    <h4 class="title is-5">
+      <span class="icon">
+        <i class="fas fa-list"></i>
+      </span>
+      Post Series
+    </h4>
+    <div class="series-info">
+      <p><strong id="series-title"></strong></p>
+      <p class="has-text-grey">Part <span id="series-current"></span> of <span id="series-total"></span></p>
+    </div>
+    <div class="series-navigation">
+      <button class="button is-outlined" id="series-prev" style="display: none;">
+        <span class="icon">
+          <i class="fas fa-chevron-left"></i>
+        </span>
+        <span>Previous</span>
+      </button>
+      <button class="button is-outlined" id="series-next" style="display: none;">
+        <span>Next</span>
+        <span class="icon">
+          <i class="fas fa-chevron-right"></i>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Enhanced Social Sharing -->
+<div class="social-sharing-enhanced">
+  <h4 class="title is-6">Share this post</h4>
+  <div class="buttons are-medium">
+    <button class="button is-twitter" data-platform="twitter">
+      <span class="icon">
+        <i class="fab fa-twitter"></i>
+      </span>
+      <span>Tweet</span>
+    </button>
+    <button class="button is-linkedin" data-platform="linkedin">
+      <span class="icon">
+        <i class="fab fa-linkedin"></i>
+      </span>
+      <span>Share</span>
+    </button>
+    <button class="button is-reddit" data-platform="reddit">
+      <span class="icon">
+        <i class="fab fa-reddit"></i>
+      </span>
+      <span>Reddit</span>
+    </button>
+    <button class="button is-light" id="copy-link">
+      <span class="icon">
+        <i class="fas fa-link"></i>
+      </span>
+      <span>Copy Link</span>
+    </button>
+  </div>
+</div>
+
+<!-- Comments Section (placeholder for future integration) -->
+<div class="comments-section">
+  <div class="comments-header">
+    <h3 class="title is-4">
+      <span class="icon is-medium">
+        <i class="fas fa-comments"></i>
+      </span>
+      Discussion
+    </h3>
+    <p class="subtitle">Join the conversation about this post</p>
+  </div>
+  
+  <!-- Placeholder for comment system integration -->
+  <div class="notification is-info is-light">
+    <p><strong>Coming Soon:</strong> Interactive comment system will be available here.</p>
+    <p>For now, feel free to <a href="/contact/">contact me directly</a> to share your thoughts!</p>
+  </div>
+</div>
+
+<style>
+/* Reading Progress Bar */
+.reading-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #3273dc, #23d160);
+  width: 0%;
+  transition: width 0.1s ease;
+}
+
+/* Table of Contents */
+.toc-container {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-width: 250px;
+  z-index: 100;
+}
+
+.toc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.toc-nav {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.toc-nav a {
+  display: block;
+  padding: 0.25rem 0;
+  color: #4a4a4a;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.toc-nav a:hover {
+  color: #3273dc;
+}
+
+.toc-nav a.active {
+  color: #3273dc;
+  font-weight: 600;
+}
+
+/* Related Posts */
+.related-posts-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.related-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Series Navigator */
+.series-navigator {
+  margin-bottom: 2rem;
+}
+
+.series-info {
+  margin-bottom: 1rem;
+}
+
+.series-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Enhanced Social Sharing */
+.social-sharing-enhanced {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+}
+
+.button.is-twitter {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.button.is-linkedin {
+  background-color: #0077b5;
+  color: white;
+}
+
+.button.is-reddit {
+  background-color: #ff4500;
+  color: white;
+}
+
+/* Comments Section */
+.comments-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #eee;
+}
+
+.comments-header {
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .toc-container {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .related-posts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .series-navigation {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .social-sharing-enhanced .buttons {
+    flex-direction: column;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Reading Progress Bar
+  function updateReadingProgress() {
+    const post = document.querySelector('.post-content');
+    if (!post) return;
+    
+    const windowHeight = window.innerHeight;
+    const documentHeight = post.offsetHeight;
+    const scrollTop = window.pageYOffset;
+    const progress = (scrollTop / (documentHeight - windowHeight)) * 100;
+    
+    document.getElementById('reading-progress').style.width = Math.min(progress, 100) + '%';
+  }
+  
+  window.addEventListener('scroll', updateReadingProgress);
+  
+  // Table of Contents Generation
+  function generateTOC() {
+    const headings = document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4');
+    if (headings.length < 3) return; // Only show TOC for posts with 3+ headings
+    
+    const tocNav = document.getElementById('toc-nav');
+    const tocContainer = document.getElementById('toc-container');
+    
+    headings.forEach((heading, index) => {
+      const id = `heading-${index}`;
+      heading.id = id;
+      
+      const link = document.createElement('a');
+      link.href = `#${id}`;
+      link.textContent = heading.textContent;
+      link.style.paddingLeft = (parseInt(heading.tagName.charAt(1)) - 2) * 15 + 'px';
+      
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        heading.scrollIntoView({ behavior: 'smooth' });
+      });
+      
+      tocNav.appendChild(link);
+    });
+    
+    tocContainer.style.display = 'block';
+    
+    // Highlight current section
+    function highlightCurrentSection() {
+      let current = '';
+      headings.forEach(heading => {
+        if (heading.getBoundingClientRect().top <= 100) {
+          current = heading.id;
+        }
+      });
+      
+      tocNav.querySelectorAll('a').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', highlightCurrentSection);
+  }
+  
+  // TOC Toggle
+  const tocToggle = document.getElementById('toc-toggle');
+  if (tocToggle) {
+    tocToggle.addEventListener('click', function() {
+      const tocNav = document.getElementById('toc-nav');
+      const icon = this.querySelector('i');
+      
+      if (tocNav.style.display === 'none') {
+        tocNav.style.display = 'block';
+        icon.className = 'fas fa-chevron-up';
+      } else {
+        tocNav.style.display = 'none';
+        icon.className = 'fas fa-chevron-down';
+      }
+    });
+  }
+  
+  // Related Posts (simple implementation based on categories)
+  function showRelatedPosts() {
+    const currentCategories = window.postCategories || [];
+    const relatedContainer = document.getElementById('related-posts');
+    
+    // This would typically fetch from Jekyll data or API
+    // For now, showing placeholder
+    relatedContainer.innerHTML = `
+      <div class="card">
+        <div class="card-content">
+          <p class="title is-6">Related posts will appear here</p>
+          <p class="subtitle is-7">Based on categories and tags</p>
+        </div>
+      </div>
+    `;
+  }
+  
+  // Enhanced Social Sharing
+  document.querySelectorAll('[data-platform]').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const platform = this.dataset.platform;
+      const url = encodeURIComponent(window.location.href);
+      const title = encodeURIComponent(document.title);
+      
+      let shareUrl = '';
+      switch (platform) {
+        case 'twitter':
+          shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+          break;
+        case 'linkedin':
+          shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+          break;
+        case 'reddit':
+          shareUrl = `https://reddit.com/submit?url=${url}&title=${title}`;
+          break;
+      }
+      
+      if (shareUrl) {
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+      }
+    });
+  });
+  
+  // Copy Link functionality
+  const copyLinkBtn = document.getElementById('copy-link');
+  if (copyLinkBtn) {
+    copyLinkBtn.addEventListener('click', function() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const originalText = this.innerHTML;
+        this.innerHTML = '<span class="icon"><i class="fas fa-check"></i></span><span>Copied!</span>';
+        this.classList.add('is-success');
+        
+        setTimeout(() => {
+          this.innerHTML = originalText;
+          this.classList.remove('is-success');
+        }, 2000);
+      });
+    });
+  }
+  
+  // Initialize features
+  generateTOC();
+  showRelatedPosts();
+});
+</script>

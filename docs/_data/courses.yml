@@ -1,20 +1,104 @@
-- code: ROB401
-  title: "Advanced Robotics and Control"
-  semester: "Spring 2024"
-  description: "Advanced topics in robotics control, real-time systems, and medical robotics applications"
-  syllabus: "/teaching/courses/rob401/"
+- code: SIMULATION-MEDICALE
+  title: "Simulation Médical et Robotique Médicale"
+  semester: "Fall 2024"
+  description: "Medical simulation techniques and medical robotics applications"
+  syllabus: "/teaching/courses/simulation-medicale/"
   level: "Graduate"
+  hours_cm: "10"
+  evaluation: "Exposé, Note de Classe"
 
-- code: CG302
-  title: "Computer Graphics and Visualization"
-  semester: "Spring 2024"
-  description: "3D visualization, real-time rendering, and medical imaging applications"
-  syllabus: "/teaching/courses/cg302/"
-  level: "Undergraduate"
+- code: MODELING-MEDICAL-SIM
+  title: "Modeling & Real-Time Medical Simulation"
+  semester: "Fall 2024"
+  description: "Advanced modeling techniques for real-time medical simulation systems"
+  syllabus: "/teaching/courses/modeling-medical-sim/"
+  level: "Graduate"
+  evaluation: "Exposé, Note de Classe"
+  start_date: "1 octobre 2024"
+  resources: "https://www.notion.so/Simulation-M-dicale-1944d150dfba80f0a850cd2be969c1ff"
 
-- code: CS101
-  title: "Introduction to Computer Science"
-  semester: "Fall 2023"
-  description: "Programming fundamentals, algorithms, and problem-solving techniques"
-  syllabus: "/teaching/courses/cs101/"
+- code: INITIATION-RECHERCHE
+  title: "Initiation à la recherche"
+  semester: "Fall 2024"
+  description: "Introduction to research methodology and scientific presentation skills"
+  syllabus: "/teaching/courses/initiation-recherche/"
+  level: "Graduate"
+  hours_cm: "12.5"
+  hours_tp: "0"
+  evaluation: "Exposé"
+
+- code: LOGIQUE-INDUSTRIELLE
+  title: "Logique/Informatique Industrielle"
+  semester: "Fall 2024"
+  description: "Industrial logic and computer systems for automation and control"
+  syllabus: "/teaching/courses/logique-industrielle/"
   level: "Undergraduate"
+  hours_cm: "27.5"
+  hours_tp: "12"
+  evaluation: "DS, Note de Classe, Note de TP"
+
+- code: MODELISATION-PRODUCTION
+  title: "Modélisation des systèmes de production"
+  semester: "Fall 2024"
+  description: "Modeling and analysis of production systems and manufacturing processes"
+  syllabus: "/teaching/courses/modelisation-production/"
+  level: "Graduate"
+  hours_cm: "27.5"
+  evaluation: "DS, Note de Classe, Note de TP"
+
+- code: GR-711302
+  title: "Automatique : Robotique"
+  semester: "Fall 2024"
+  description: "Automatic control systems applied to robotics with hands-on practical work"
+  syllabus: "/teaching/courses/gr-711302/"
+  level: "Graduate"
+  hours_tp: "21"
+  evaluation: "Note de Classe, Note de rapport"
+
+- code: GR-712302
+  title: "Programmation"
+  semester: "Fall 2024"
+  description: "Advanced programming concepts and techniques for engineering applications"
+  syllabus: "/teaching/courses/gr-712302/"
+  level: "Graduate"
+  hours_tp: "20"
+  evaluation: "Note de Classe, Note de rapport"
+
+- code: AUTOMATIQUE-REGULATION
+  title: "Automatique: Régulation de Système"
+  semester: "Fall 2024"
+  description: "System regulation and automatic control theory with practical applications"
+  syllabus: "/teaching/courses/automatique-regulation/"
+  level: "Graduate"
+  hours_tp: "32"
+  evaluation: "Note de Classe, Note de rapport"
+
+- code: ANALYSE-NUMERIQUE
+  title: "Analyse numérique : Optimisation"
+  semester: "Fall 2024"
+  description: "Numerical analysis and optimization methods for engineering problems"
+  syllabus: "/teaching/courses/analyse-numerique/"
+  level: "Graduate"
+  hours_tp: "16"
+  evaluation: "Note de Classe, Note de rapport"
+
+- code: INDUSTRIE-40
+  title: "Industrie 4.0"
+  semester: "Fall 2024"
+  description: "Introduction to Industry 4.0 concepts, IoT, and smart manufacturing"
+  syllabus: "/teaching/courses/industrie-40/"
+  level: "Graduate"
+  hours_cm: "4.5"
+  hours_tp: "6"
+  evaluation: "Exposé, Note de Classe"
+
+- code: TESTS-MAINTENANCE
+  title: "Tests et Maintenance"
+  semester: "Fall 2024"
+  description: "Software testing methodologies and system maintenance practices"
+  syllabus: "/teaching/courses/tests-maintenance/"
+  level: "Graduate"
+  hours_tp: "8"
+  hours_td: "21.1"
+  evaluation: "Note de rapport"
+  status: "Pending"
