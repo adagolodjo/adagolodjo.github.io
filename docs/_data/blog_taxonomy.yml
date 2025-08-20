@@ -1,0 +1,187 @@
+# Blog Taxonomy Configuration
+# This file defines the structure for blog categories and tags
+
+# Main Categories
+categories:
+  research:
+    name: "Research"
+    description: "Research findings, papers, and academic insights"
+    icon: "fas fa-microscope"
+    color: "#3273dc"
+    
+  teaching:
+    name: "Teaching"
+    description: "Educational content, course materials, and teaching experiences"
+    icon: "fas fa-chalkboard-teacher"
+    color: "#23d160"
+    
+  projects:
+    name: "Projects"
+    description: "Technical projects, software development, and implementations"
+    icon: "fas fa-code"
+    color: "#ff3860"
+    
+  news:
+    name: "News"
+    description: "Announcements, updates, and news about research and academia"
+    icon: "fas fa-newspaper"
+    color: "#ffdd57"
+    
+  technical:
+    name: "Technical"
+    description: "Technical tutorials, how-tos, and programming guides"
+    icon: "fas fa-laptop-code"
+    color: "#209cee"
+    
+  reviews:
+    name: "Reviews"
+    description: "Paper reviews, book reviews, and academic commentary"
+    icon: "fas fa-star"
+    color: "#ff470f"
+
+# Detailed Tags for better content discovery
+tags:
+  # Research Tags
+  - name: "simulation"
+    category: "research"
+    description: "Computer simulation and modeling"
+    
+  - name: "soft-robotics"
+    category: "research"
+    description: "Soft robotics research and applications"
+    
+  - name: "medical-robotics"
+    category: "research"
+    description: "Medical and surgical robotics"
+    
+  - name: "finite-element"
+    category: "research"
+    description: "Finite Element Method and analysis"
+    
+  - name: "publications"
+    category: "research"
+    description: "Published papers and research outputs"
+    
+  # Teaching Tags
+  - name: "algorithms"
+    category: "teaching"
+    description: "Algorithm design and analysis"
+    
+  - name: "programming"
+    category: "teaching"
+    description: "Programming languages and concepts"
+    
+  - name: "computer-graphics"
+    category: "teaching"
+    description: "Computer graphics and visualization"
+    
+  - name: "course-materials"
+    category: "teaching"
+    description: "Educational resources and materials"
+    
+  - name: "student-projects"
+    category: "teaching"
+    description: "Student work and project showcases"
+    
+  # Technical Tags
+  - name: "python"
+    category: "technical"
+    description: "Python programming and libraries"
+    
+  - name: "cpp"
+    category: "technical"
+    description: "C++ programming and development"
+    
+  - name: "sofa"
+    category: "technical"
+    description: "SOFA simulation framework"
+    
+  - name: "jekyll"
+    category: "technical"
+    description: "Jekyll and static site generation"
+    
+  - name: "web-development"
+    category: "technical"
+    description: "Web technologies and development"
+    
+  # Project Tags
+  - name: "open-source"
+    category: "projects"
+    description: "Open source software and contributions"
+    
+  - name: "collaboration"
+    category: "projects"
+    description: "Collaborative projects and partnerships"
+    
+  - name: "funding"
+    category: "projects"
+    description: "Funded research projects and grants"
+
+# Blog Series Configuration
+series:
+  soft_robotics_intro:
+    name: "Introduction to Soft Robotics"
+    description: "A comprehensive guide to getting started with soft robotics research"
+    posts: []
+    
+  teaching_best_practices:
+    name: "Teaching Best Practices"
+    description: "Effective strategies for computer science education"
+    posts: []
+    
+  simulation_fundamentals:
+    name: "Simulation Fundamentals"
+    description: "Core concepts in computer simulation and modeling"
+    posts: []
+
+# Featured Post Types
+featured_types:
+  - name: "Latest Research"
+    priority: 1
+    criteria: "category:research AND recent:30days"
+    
+  - name: "Popular Tutorial"
+    priority: 2
+    criteria: "category:technical AND views:high"
+    
+  - name: "Course Highlight"
+    priority: 3
+    criteria: "category:teaching AND featured:true"
+
+# Auto-tagging Rules (for content analysis)
+auto_tagging_rules:
+  - keywords: ["SOFA", "simulation", "finite element"]
+    tags: ["sofa", "simulation", "finite-element"]
+    
+  - keywords: ["Python", "programming", "tutorial"]
+    tags: ["python", "programming", "technical"]
+    
+  - keywords: ["teaching", "course", "student"]
+    tags: ["course-materials", "teaching"]
+    
+  - keywords: ["paper", "publication", "research"]
+    tags: ["publications", "research"]
+
+# Display Configuration
+display:
+  posts_per_page: 6
+  posts_per_load: 3
+  show_reading_time: true
+  show_word_count: true
+  enable_comments: false  # Set to true when comment system is implemented
+  enable_ratings: false   # For future feature
+  
+  # Sidebar configuration
+  sidebar:
+    show_stats: true
+    show_categories: true
+    show_recent_activity: true
+    show_popular_posts: true
+    show_archives: true
+    
+  # Search configuration
+  search:
+    enable_instant_search: true
+    search_in_content: true
+    search_in_tags: true
+    min_search_length: 2

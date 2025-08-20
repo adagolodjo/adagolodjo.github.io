@@ -3,6 +3,9 @@ layout: post
 title: "New Research Project: Advanced Soft Robotics Control"
 date: 2024-05-30
 categories: [research, projects]
+tags: [soft-robotics, control-systems, simulation, machine-learning, funding]
+author: Adagolodjo Yinoussa
+excerpt: "Launch of our new research project focused on advanced control strategies for soft robots using real-time simulation and machine learning techniques."
 ---
 
 We are excited to announce the launch of our new research project focused on advanced control strategies for soft robots. This project, funded by [Funding Agency], will explore novel approaches to controlling deformable robots using real-time simulation and machine learning techniques.

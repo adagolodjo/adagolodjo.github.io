@@ -1,8 +1,11 @@
 ---
 layout: post
-title:  "Eductation!"
-date:   2023-12-23 00:14:02 +0100
-category: Research
+title: "Academic Background and CV"
+date: 2023-12-23 00:14:02 +0100
+categories: [teaching]
+tags: [career, education, cv]
+author: Adagolodjo Yinoussa
+excerpt: "Overview of academic background, work experience, and professional qualifications."
 ---
 
 # My CV

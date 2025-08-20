@@ -473,6 +473,12 @@ subtitle: Thoughts on Research, Teaching, and Technology
   </div>
 </div>
 
+<!-- Include Blog Enhancements -->
+{% include blog-enhancements.html %}
+
+<!-- Include Blog Improvements -->
+{% include blog-improvements.html %}
+
 <!-- Enhanced CSS -->
 <style>
 /* Loading Skeleton Animations */

@@ -33,6 +33,11 @@
     {%- include google-analytics.html -%}
   {%- endif -%}
   
+  <!-- Page-specific head includes -->
+  {%- if page.head_include -%}
+    {{ page.head_include }}
+  {%- endif -%}
+  
   <!-- Dark Mode Toggle Script -->
   <script>
     function toggleDarkMode() {
