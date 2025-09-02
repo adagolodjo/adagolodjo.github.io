@@ -1,0 +1,1119 @@
+// Research Page Styles
+// ====================
+
+// Research Hero Section
+.research-hero {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .hero-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .hero-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .hero-intro {
+      margin-bottom: 4rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .hero-title {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        text-align: center;
+        width: 100%;
+      }
+
+      .hero-subtitle {
+        font-size: 1.5rem;
+        font-weight: 300;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+        opacity: 0.9;
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    .research-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+      justify-items: center;
+
+      .stat-card {
+        background: rgba(255,255,255,0.1);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 2rem 1.5rem;
+        text-align: center;
+        border: 1px solid rgba(255,255,255,0.2);
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+          background: rgba(255,255,255,0.15);
+          border-color: rgba(255,255,255,0.3);
+        }
+
+        .stat-icon {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+          opacity: 0.8;
+        }
+
+        .stat-number {
+          font-size: 3rem;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+          background: linear-gradient(45deg, #fff, #b2ebf2);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        .stat-label {
+          font-size: 1rem;
+          font-weight: 500;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+// Research Domains Navigation
+.research-domains {
+  padding: 4rem 0;
+  background: #f8f9ff;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .domains-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+  }
+
+  .domain-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+    .domain-filter {
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 50px;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #666;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      &:hover {
+        border-color: #667eea;
+        color: #667eea;
+        transform: translateY(-2px);
+      }
+
+      &.active {
+        background: #667eea;
+        border-color: #667eea;
+        color: white;
+      }
+
+      i {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+// Research Overview Section
+.research-overview {
+  padding: 6rem 0;
+  background: white;
+
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+
+    .overview-content {
+      max-width: 600px;
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      .section-subtitle {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .philosophy-text {
+        margin-bottom: 3rem;
+
+        p {
+          font-size: 1.1rem;
+          line-height: 1.7;
+          color: #555;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .key-metrics {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+
+        .metric {
+          text-align: center;
+          padding: 1.5rem;
+          background: #f8f9ff;
+          border-radius: 12px;
+
+          .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+          }
+
+          .metric-label {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .overview-visual {
+      .focus-areas-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+
+        .focus-card {
+          background: white;
+          border-radius: 16px;
+          padding: 2rem;
+          text-align: center;
+          box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+          transition: all 0.3s ease;
+          border: 1px solid #e2e8f0;
+
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 64px rgba(0,0,0,0.12);
+          }
+
+          .focus-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+
+            &.gradient-medical {
+              background: linear-gradient(135deg, #667eea, #764ba2);
+            }
+
+            &.gradient-simulation {
+              background: linear-gradient(135deg, #48bb78, #38a169);
+            }
+
+            &.gradient-ar {
+              background: linear-gradient(135deg, #ed8936, #dd6b20);
+            }
+
+            &.gradient-soft {
+              background: linear-gradient(135deg, #9f7aea, #805ad5);
+            }
+          }
+
+          h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+          }
+
+          .focus-progress {
+            background: #e2e8f0;
+            border-radius: 10px;
+            height: 8px;
+            overflow: hidden;
+
+            .progress-bar {
+              height: 100%;
+              background: linear-gradient(90deg, #667eea, #764ba2);
+              border-radius: 10px;
+              transition: width 1.5s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Research Timeline
+.research-timeline {
+  padding: 6rem 0;
+  background: #f8f9ff;
+
+  .timeline-header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+  }
+
+  .timeline-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, #667eea, #764ba2);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+
+      &:nth-child(odd) {
+        flex-direction: row;
+      }
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .timeline-dot {
+        width: 60px;
+        height: 60px;
+        background: white;
+        border: 4px solid #667eea;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: #667eea;
+        z-index: 10;
+        position: relative;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      }
+
+      .timeline-content {
+        flex: 1;
+        background: white;
+        border-radius: 16px;
+        padding: 2rem;
+        margin: 0 2rem;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+        border: 1px solid #e2e8f0;
+
+        .timeline-date {
+          font-size: 1rem;
+          font-weight: 600;
+          color: #667eea;
+          margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #333;
+          margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+          font-size: 1rem;
+          color: #666;
+          line-height: 1.6;
+          margin-bottom: 1.5rem;
+        }
+
+        .timeline-achievements {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+
+          .achievement-tag {
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Featured Projects Grid
+.featured-projects {
+  padding: 6rem 0;
+  background: white;
+
+  .projects-header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border: 1px solid #e2e8f0;
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 64px rgba(0,0,0,0.12);
+      }
+
+      &.featured {
+        grid-column: span 2;
+      }
+
+      &.flagship {
+        grid-column: span 2;
+        background: linear-gradient(135deg, #f8f9ff, #e8f4f8);
+      }
+
+      .project-image {
+        position: relative;
+        height: 250px;
+        overflow: hidden;
+
+        img,
+        video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+      }
+
+      &:hover .project-image img,
+      &:hover .project-image video {
+        transform: scale(1.05);
+      }
+
+      .project-overlay {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .project-status {
+          background: rgba(0,0,0,0.8);
+          color: white;
+          padding: 0.25rem 0.75rem;
+          border-radius: 20px;
+          font-size: 0.8rem;
+          font-weight: 500;
+
+          &.active {
+            background: rgba(72, 187, 120, 0.9);
+          }
+
+          &.completed {
+            background: rgba(59, 130, 246, 0.9);
+          }
+
+          &.research {
+            background: rgba(237, 137, 54, 0.9);
+          }
+
+          &.flagship {
+            background: rgba(139, 92, 246, 0.9);
+          }
+        }
+
+        .project-impact {
+          background: rgba(255,255,255,0.9);
+          color: #333;
+          padding: 0.25rem 0.75rem;
+          border-radius: 20px;
+          font-size: 0.8rem;
+          font-weight: 500;
+        }
+      }
+
+      .project-content {
+        padding: 2rem;
+
+        .project-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 1rem;
+
+          .project-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+            margin: 0;
+          }
+
+          .project-year {
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+          }
+        }
+
+        .project-description {
+          font-size: 1rem;
+          color: #666;
+          line-height: 1.6;
+          margin-bottom: 1.5rem;
+        }
+
+        .project-highlights {
+          margin-bottom: 1.5rem;
+
+          .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #555;
+
+            i {
+              color: #667eea;
+              width: 16px;
+            }
+          }
+        }
+
+        .project-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-bottom: 2rem;
+
+          .tag {
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+          }
+        }
+
+        .project-actions {
+          display: flex;
+          gap: 1rem;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
+
+// Button Styles
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+
+  &.large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+.btn-primary {
+  background: #667eea;
+  color: white;
+
+  &:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+  }
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+
+  &:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+  }
+}
+
+// Research Impact & Metrics
+.research-impact {
+  padding: 6rem 0;
+  background: #f8f9ff;
+
+  .impact-header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+  }
+
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .impact-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 64px rgba(0,0,0,0.12);
+      }
+
+      .impact-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        font-size: 1.5rem;
+        color: white;
+      }
+
+      .impact-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+
+      .impact-label {
+        font-size: 1.1rem;
+        color: #666;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      .impact-trend {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+
+        &.positive {
+          color: #48bb78;
+        }
+
+        i {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+// Research News Section
+.research-news {
+  padding: 6rem 0;
+  background: white;
+
+  .news-header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+  }
+
+  .news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .news-featured {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      border: 1px solid #e2e8f0;
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 0;
+
+      .news-image {
+        position: relative;
+        height: 100%;
+        min-height: 300px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .news-category {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          background: #667eea;
+          color: white;
+          padding: 0.25rem 0.75rem;
+          border-radius: 20px;
+          font-size: 0.8rem;
+          font-weight: 500;
+        }
+      }
+
+      .news-content {
+        padding: 2rem;
+
+        .news-meta {
+          display: flex;
+          gap: 1rem;
+          margin-bottom: 1rem;
+          font-size: 0.9rem;
+          color: #666;
+        }
+
+        .news-title {
+          font-size: 1.8rem;
+          font-weight: 700;
+          color: #333;
+          margin-bottom: 1rem;
+          line-height: 1.3;
+        }
+
+        .news-excerpt {
+          font-size: 1rem;
+          color: #666;
+          line-height: 1.6;
+          margin-bottom: 1.5rem;
+        }
+
+        .news-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-bottom: 2rem;
+
+          .news-tag {
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+          }
+        }
+
+        .news-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: #667eea;
+          text-decoration: none;
+          font-weight: 500;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: #5a67d8;
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+
+      .news-card {
+        background: white;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 16px 64px rgba(0,0,0,0.12);
+        }
+
+        .news-date {
+          font-size: 0.9rem;
+          color: #667eea;
+          font-weight: 500;
+          margin-bottom: 1rem;
+        }
+
+        .news-title {
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+        }
+
+        .news-excerpt {
+          font-size: 0.95rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+    .news-actions {
+      text-align: center;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+// Call to Action
+.research-cta {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .focus-areas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .research-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .focus-areas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-container::before {
+    left: 2rem;
+  }
+
+  .timeline-item {
+    flex-direction: row !important;
+  }
+
+  .timeline-content {
+    margin-left: 4rem;
+    margin-right: 0;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card.featured,
+  .project-card.flagship {
+    grid-column: span 1;
+  }
+
+  .news-featured {
+    grid-template-columns: 1fr;
+  }
+
+  .news-image {
+    min-height: 200px;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .research-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .domain-filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .key-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    padding: 0 0.5rem;
+  }
+}
+
+// Animation Classes
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
