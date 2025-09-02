@@ -1,18 +1,47 @@
 // Advanced Research Page JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
-  initializeAdvancedFeatures();
+  try {
+    initializeAdvancedFeatures();
+  } catch (error) {
+    console.error('Error initializing research page features:', error);
+  }
 });
 
 function initializeAdvancedFeatures() {
-  animateCounters();
-  initializeScrollAnimations();
-  initializeFiltering();
-  initializeCollaborationNetwork();
-  initializePublicationsEnhanced();
-  initializeResourcesInteractivity();
-  loadResearchNews();
-  setupMetricsCharts();
+  // Only initialize features if elements exist
+  if (document.querySelector('.citation-number, .stat-number, .pub-stat-number')) {
+    animateCounters();
+  }
+  
+  if (document.querySelector('.metric-card, .news-card, .resource-item, .publication-item')) {
+    initializeScrollAnimations();
+  }
+  
+  if (document.getElementById('publication-search') || document.getElementById('author-filter')) {
+    initializeFiltering();
+  }
+  
+  // Initialize other features only if their containers exist
+  if (document.querySelector('.collaboration-network')) {
+    initializeCollaborationNetwork();
+  }
+  
+  if (document.querySelector('.publications-enhanced')) {
+    initializePublicationsEnhanced();
+  }
+  
+  if (document.querySelector('.resources-interactive')) {
+    initializeResourcesInteractivity();
+  }
+  
+  if (document.querySelector('.news-grid')) {
+    loadResearchNews();
+  }
+  
+  if (document.querySelector('.metrics-charts')) {
+    setupMetricsCharts();
+  }
 }
 
 // Counter Animation for Metrics
@@ -358,9 +387,30 @@ function animateNewsCards() {
   const newsCards = document.querySelectorAll('.news-card');
   newsCards.forEach((card, index) => {
     setTimeout(() => {
-      card.classList.add('slide-up');
-    }, index * 200);
+      card.classList.add('fade-in');
+    }, index * 100);
   });
+}
+
+// Fallback functions for missing features
+function initializeCollaborationNetwork() {
+  // Placeholder for collaboration network feature
+  console.log('Collaboration network feature not implemented yet');
+}
+
+function initializePublicationsEnhanced() {
+  // Placeholder for enhanced publications feature
+  console.log('Enhanced publications feature not implemented yet');
+}
+
+function initializeResourcesInteractivity() {
+  // Placeholder for resources interactivity feature
+  console.log('Resources interactivity feature not implemented yet');
+}
+
+function setupMetricsCharts() {
+  // Placeholder for metrics charts feature
+  console.log('Metrics charts feature not implemented yet');
 }
 
 // Metrics Charts Setup
