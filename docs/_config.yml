@@ -1,3 +1,4 @@
+
 # Site settings
 # These are used to personalize your site. Access via {{ site.title }}, {{ site.email }}, etc.
 title: Adagolodjo
@@ -127,3 +128,5 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+port: 4002

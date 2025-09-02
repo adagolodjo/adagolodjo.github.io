@@ -548,22 +548,22 @@ image: /assets/images/projects/logique-industrielle.jpg
   .course-hero h1 {
     font-size: 2.5rem;
   }
-  
+
   .nav-links {
     justify-content: flex-start;
     overflow-x: auto;
     padding-bottom: 0.5rem;
   }
-  
+
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .timeline {
     padding-left: 1rem;
   }
-  
+
   .timeline-item {
     margin-left: 1rem;
   }
@@ -580,8 +580,8 @@ image: /assets/images/projects/logique-industrielle.jpg
     <h1>⚙️ Logique/Informatique Industrielle</h1>
     <p class="subtitle">Systèmes logiques et informatiques pour l'automatisation industrielle</p>
     <div class="hero-badges">
-      <span class="hero-badge">📚 Niveau Licence</span>
-      <span class="hero-badge">⏱️ 27.5h CM + 12h TP</span>
+      <span class="hero-badge">📚 Niveau BAC+4 </span>
+      <span class="hero-badge">⏱️ 22h CMTD + 12h TP</span>
       <span class="hero-badge">🎯 Automatisation</span>
       <span class="hero-badge">👥 Systèmes industriels</span>
     </div>
@@ -593,6 +593,7 @@ image: /assets/images/projects/logique-industrielle.jpg
     <a href="#presentation" class="nav-link active">📋 Présentation</a>
     <a href="#objectifs" class="nav-link">🎯 Objectifs</a>
     <a href="#planning" class="nav-link">📅 Planning</a>
+    <a href="#cas-pratiques" class="nav-link">🏢 Cas pratiques</a>
     <a href="#evaluation" class="nav-link">📊 Évaluation</a>
     <a href="#ressources" class="nav-link">📚 Ressources</a>
     <a href="#contact" class="nav-link">📞 Contact</a>
@@ -604,9 +605,9 @@ image: /assets/images/projects/logique-industrielle.jpg
     <div class="section-icon">📋</div>
     <h2 class="section-title">Présentation du cours</h2>
   </div>
-  
+
   <p style="font-size: 1.1rem; line-height: 1.7; color: #555; margin-bottom: 2rem;">
-    Ce cours présente les fondements de la logique industrielle et des systèmes informatiques dédiés à l'automatisation. Les étudiants découvriront les automates programmables industriels (API), les systèmes SCADA, et les protocoles de communication industriels. Une forte composante pratique permet de maîtriser les outils de programmation et de configuration des systèmes automatisés.
+    Ce cours aborde la **description de la commande séquentielle des Systèmes Automatisés de Production (SAP)**. Les étudiants découvriront l'outil **GRAFCET** pour la modélisation, apprendront à implémenter sur **Automates Programmables Industriels (API)**, et maîtriseront la gestion des **modes de fonctionnement** avec le guide GEMMA. Une approche pratique avec des études de cas industriels concrets permet d'acquérir les compétences essentielles de l'automatisation moderne.
   </p>
 
   <div class="info-box">
@@ -618,7 +619,7 @@ image: /assets/images/projects/logique-industrielle.jpg
   </div>
 
   <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">✅ Prérequis</h3>
-  
+
   <div class="prerequisite-item">
     <div class="prerequisite-icon">⚡</div>
     <div>
@@ -626,7 +627,7 @@ image: /assets/images/projects/logique-industrielle.jpg
       <p style="margin: 0; color: #666; font-size: 0.95rem;">Notions d'électricité, schémas électriques, composants de base</p>
     </div>
   </div>
-  
+
   <div class="prerequisite-item">
     <div class="prerequisite-icon">💻</div>
     <div>
@@ -664,28 +665,28 @@ image: /assets/images/projects/logique-industrielle.jpg
 
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>🔧 Comprendre les systèmes automatisés</h4>
-      <p>Maîtriser l'architecture et le fonctionnement des systèmes d'automatisation industrielle.</p>
+      <h4>🏢 Comprendre les Systèmes Automatisés de Production (SAP)</h4>
+      <p>Maîtriser l'architecture Partie Opérative / Partie Commande et les enjeux de l'automatisation industrielle.</p>
     </div>
     <div class="objective-card">
-      <h4>⚙️ Programmer des automates</h4>
-      <p>Concevoir et implémenter des programmes pour automates programmables industriels (API/PLC).</p>
+      <h4>📈 Maîtriser l'outil GRAFCET</h4>
+      <p>Concevoir et analyser des systèmes séquentiels avec l'outil GRAFCET (normes IEC 60848), structures parallèles et temporisations.</p>
     </div>
     <div class="objective-card">
-      <h4>📡 Configurer les communications</h4>
-      <p>Mettre en œuvre les protocoles de communication industriels (Modbus, Profibus, Ethernet/IP).</p>
+      <h4>🔧 Implémenter sur Automates Programmables</h4>
+      <p>Programmer des API en Ladder et Structured Text, gérer les E/S analogiques et numériques.</p>
     </div>
     <div class="objective-card">
-      <h4>🖥️ Développer des interfaces HMI</h4>
-      <p>Créer des interfaces homme-machine pour la supervision et le contrôle des processus.</p>
+      <h4>📡 Appréhender les communications industrielles</h4>
+      <p>Mettre en œuvre les protocoles Modbus, Profibus et réseaux Ethernet industriels pour l'intégration système.</p>
     </div>
     <div class="objective-card">
-      <h4>🔍 Diagnostiquer et maintenir</h4>
-      <p>Identifier les pannes et assurer la maintenance préventive des systèmes automatisés.</p>
+      <h4>⚙️ Gérer les modes avec GEMMA</h4>
+      <p>Appliquer le guide GEMMA pour la gestion des modes de marche et d'arrêt, modes dégradés et sécurités.</p>
     </div>
     <div class="objective-card">
-      <h4>📊 Optimiser les performances</h4>
-      <p>Analyser et améliorer l'efficacité des systèmes de production automatisés.</p>
+      <h4>📊 Résoudre des cas industriels concrets</h4>
+      <p>Analyser et concevoir des solutions d'automatisation : station de lavage, ligne pharmaceutique, parking intelligent.</p>
     </div>
   </div>
 </section>
@@ -697,40 +698,124 @@ image: /assets/images/projects/logique-industrielle.jpg
   </div>
   <div class="timeline">
     <div class="timeline-item">
-      <div class="timeline-week">Semaines 1-2</div>
+      <div class="timeline-week">Chapitre 1 : Systèmes Automatisés de Production</div>
       <div class="timeline-content">
-        <h4>Introduction aux systèmes automatisés</h4>
-        <div class="timeline-details">Architecture des systèmes, capteurs, actionneurs, automates programmables.</div>
+        <h4>Introduction aux SAP et automatisation</h4>
+        <div class="timeline-details">Définition des SAP, architecture PO/PC, objectifs de l'automatisation, domaines d'application industriels.</div>
       </div>
     </div>
     <div class="timeline-item">
-      <div class="timeline-week">Semaines 3-4</div>
+      <div class="timeline-week">Chapitre 2 : Logique Combinatoire vs Séquentielle</div>
       <div class="timeline-content">
-        <h4>Programmation Ladder et Grafcet</h4>
-        <div class="timeline-details">Langages de programmation des API, structures de programmes, fonctions logiques.</div>
+        <h4>Algèbre de Boole et logique séquentielle</h4>
+        <div class="timeline-details">Rappels booléens, différences combinatoire/séquentiel, outils de description, chronogrammes.</div>
       </div>
     </div>
     <div class="timeline-item">
-      <div class="timeline-week">Semaines 5-6</div>
+      <div class="timeline-week">Chapitre 3 : Les Bases du GRAFCET</div>
       <div class="timeline-content">
-        <h4>Communications industrielles</h4>
-        <div class="timeline-details">Protocoles Modbus, Profibus, Ethernet industriel, réseaux de terrain.</div>
+        <h4>Fondements du GRAFCET (IEC 60848)</h4>
+        <div class="timeline-details">Étapes, transitions, réceptivités, structures ET/OU, règles d'évolution, temporisations.</div>
       </div>
     </div>
     <div class="timeline-item">
-      <div class="timeline-week">Semaines 7-8</div>
+      <div class="timeline-week">Chapitre 4 : Concepts Avancés GRAFCET</div>
       <div class="timeline-content">
-        <h4>Supervision et HMI</h4>
-        <div class="timeline-details">Systèmes SCADA, interfaces homme-machine, alarmes et historiques.</div>
+        <h4>Structures complexes et actions avancées</h4>
+        <div class="timeline-details">Parallélisme, compteurs, variables, actions conditionnelles, macro-étapes, forçage.</div>
       </div>
     </div>
     <div class="timeline-item">
-      <div class="timeline-week">Semaines 9-10</div>
+      <div class="timeline-week">Chapitre 5 : Études de Cas Industrielles</div>
       <div class="timeline-content">
-        <h4>Projet pratique</h4>
-        <div class="timeline-details">Conception et réalisation d'un système automatisé complet avec supervision.</div>
+        <h4>Applications pratiques</h4>
+        <div class="timeline-details">Station de lavage, ligne pharmaceutique, parking intelligent, arbitrage de ressources.</div>
       </div>
     </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Chapitre 6 : Automates Programmables (API)</div>
+      <div class="timeline-content">
+        <h4>Implémentation sur API</h4>
+        <div class="timeline-details">Architecture API, cycle de fonctionnement, programmation Ladder/ST, du GRAFCET au code.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Chapitre 7 : Sécurité et Normes</div>
+      <div class="timeline-content">
+        <h4>Sécurité fonctionnelle et SIL</h4>
+        <div class="timeline-details">Normes IEC 61508/61511, niveaux SIL, architectures redondantes, GRAFCET sécuritaire.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Chapitre 8 : Systèmes Complexes et GEMMA</div>
+      <div class="timeline-content">
+        <h4>Coordination et modes de fonctionnement</h4>
+        <div class="timeline-details">Structuration multi-niveaux, guide GEMMA, modes dégradés, synchronisation multi-postes.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Chapitre 9 : Industrie 4.0 et Intelligence</div>
+      <div class="timeline-content">
+        <h4>GRAFCET intelligent et maintenance prédictive</h4>
+        <div class="timeline-details">IoT, GRAFCET auto-adaptatif, maintenance prédictive, métriques TRS/OEE.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Chapitre 10 : Évaluation et Projets</div>
+      <div class="timeline-content">
+        <h4>Exercices pratiques et mini-projets</h4>
+        <div class="timeline-details">QCM, exercices porte de garage, projet ascenseur intelligent, auto-évaluation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cas-pratiques" class="section-card">
+  <div class="section-header">
+    <div class="section-icon">🏢</div>
+    <h2 class="section-title">Études de Cas Industrielles</h2>
+  </div>
+
+  <p style="font-size: 1.05rem; margin-bottom: 2rem; color: #555;">
+    Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'industrie pour illustrer les concepts GRAFCET et d'automatisation. Ces exemples concrets permettent de comprendre les défis et solutions de l'automatisation moderne.
+  </p>
+
+  <div class="objectives-grid">
+    <div class="objective-card">
+      <h4>🚗 Station de Lavage Automatique</h4>
+      <p><strong>Système sécurisé</strong> avec détection véhicule, cycle optimisé (5 min max), gestion modes économiques et interface client intuitive. GRAFCET complet avec phases brossage, rinçage, séchage.</p>
+    </div>
+    <div class="objective-card">
+      <h4>💊 Ligne Pharmaceutique</h4>
+      <p><strong>Traçabilité complète</strong> (lot, date, heure), contrôle qualité à chaque étape, validation avant progression, rejet automatique des défauts. Contraintes réglementaires strictes.</p>
+    </div>
+    <div class="objective-card">
+      <h4>🅿️ Parking Intelligent IoT</h4>
+      <p><strong>Innovations Industrie 4.0</strong> : capteurs IoT, IA intégrée, optimisation attribution place optimale, paiement connecté (QR code, NFC), analytics temps réel.</p>
+    </div>
+    <div class="objective-card">
+      <h4>🚢 Port Automatisé</h4>
+      <p><strong>Système complexe</strong> avec 3 grues, 20 AGV, 5 zones stockage. Algorithme d'optimisation avec gestion priorités dynamiques. Coût immobilisation : 5000€/heure. ROI < 18 mois.</p>
+    </div>
+    <div class="objective-card">
+      <h4>🚗 Ligne Automobile</h4>
+      <p><strong>Multi-postes synchronisés</strong> : 6 postes en série (soudage, assemblage, peinture), 2 robots mobiles partagés, 3 convoyeurs, système contrôle qualité global.</p>
+    </div>
+    <div class="objective-card">
+      <h4>🏠 Porte de Garage Intelligente</h4>
+      <p><strong>Projet pratique</strong> : télécommande, fins de course, sécurité photocellule, éclairage automatique 2 minutes, mode hiver avec préchauffage moteur. Exercice d'évaluation.</p>
+    </div>
+  </div>
+
+  <div class="info-box" style="margin-top: 2rem;">
+    <h4>📈 Bénéfices Mesurés de l'Automatisation</h4>
+    <p>
+      <strong>Productivité</strong> : +15 à 30% en moyenne • 
+      <strong>Qualité</strong> : Réduction erreurs humaines -40% • 
+      <strong>Sécurité</strong> : -60% accidents industriels • 
+      <strong>Disponibilité</strong> : 24h/24 fonctionnement possible • 
+      <strong>ROI</strong> : Retour sur investissement < 3 ans typique
+    </p>
   </div>
 </section>
 
@@ -765,27 +850,48 @@ image: /assets/images/projects/logique-industrielle.jpg
   </div>
   <div class="resources-grid">
     <div class="resource-card">
-      <div class="resource-icon">📖</div>
+      <div class="resource-icon">📄</div>
+      <h4>Supports de cours</h4>
+      <ul>
+        <li><a href="./logique_sequentielle_grafcet_v02_09_25.pdf" target="_blank">📊 Logique séquentielle et Grafcet (PDF)</a></li>
+      </ul>
+    </div>
+    <div class="resource-card">
+      <div class="resource-icon">📚</div>
       <h4>Manuels de référence</h4>
       <ul>
-        <li><a href="#" target="_blank">Automates programmables industriels - Dunod</a></li>
-        <li><a href="#" target="_blank">Systèmes automatisés - Hachette Technique</a></li>
+        <li><a href="https://www.dunod.com/sciences-techniques/automates-programmables-industriels" target="_blank">Automates programmables industriels - Dunod</a></li>
+        <li><a href="https://fr.wikipedia.org/wiki/Automate_programmable_industriel" target="_blank">Automate programmable industriel (Wikipedia)</a></li>
+        <li><a href="https://fr.wikipedia.org/wiki/Grafcet" target="_blank">GRAFCET (Wikipedia)</a></li>
       </ul>
     </div>
     <div class="resource-card">
       <div class="resource-icon">💻</div>
-      <h4>Logiciels utilisés</h4>
+      <h4>Logiciels et outils</h4>
       <ul>
-        <li><a href="#" target="_blank">TIA Portal (Siemens)</a></li>
-        <li><a href="#" target="_blank">RSLogix 5000 (Rockwell)</a></li>
+        <li><a href="https://new.siemens.com/global/en/products/automation/industry-software/automation-software/tia-portal.html" target="_blank">TIA Portal (Siemens)</a></li>
+        <li><a href="https://www.rockwellautomation.com/en-us/products/software/factorytalk/designsuite/studio-5000.html" target="_blank">Studio 5000 (Rockwell)</a></li>
+        <li><a href="https://www.schneider-electric.com/en/product-range/1056-ecostruxure-machine-expert/" target="_blank">EcoStruxure Machine Expert (Schneider)</a></li>
       </ul>
     </div>
     <div class="resource-card">
       <div class="resource-icon">🔧</div>
-      <h4>Documentation technique</h4>
+      <h4>Normes et standards</h4>
       <ul>
-        <li><a href="#" target="_blank">Protocoles industriels</a></li>
-        <li><a href="#" target="_blank">Normes IEC 61131</a></li>
+        <li><a href="https://webstore.iec.ch/publication/3684" target="_blank">IEC 60848 - GRAFCET</a></li>
+        <li><a href="https://webstore.iec.ch/publication/4552" target="_blank">IEC 61131 - Automates programmables</a></li>
+        <li><a href="https://webstore.iec.ch/publication/22273" target="_blank">IEC 61508 - Sécurité fonctionnelle</a></li>
+        <li><a href="https://www.afe.asso.fr/" target="_blank">AFCET - Association GRAFCET</a></li>
+      </ul>
+    </div>
+    <div class="resource-card">
+      <div class="resource-icon">🌍</div>
+      <h4>Ressources industrielles</h4>
+      <ul>
+        <li><a href="https://www.siemens.com/global/en/products/automation.html" target="_blank">Siemens - Automation industrielle</a></li>
+        <li><a href="https://www.rockwellautomation.com/en-us.html" target="_blank">Rockwell Automation</a></li>
+        <li><a href="https://www.schneider-electric.com/en/work/solutions/for-business/industrial-automation/" target="_blank">Schneider Electric - Automation</a></li>
+        <li><a href="https://www.omron.com/global/en/products/category/automation-systems/" target="_blank">Omron - Automation Systems</a></li>
       </ul>
     </div>
   </div>
