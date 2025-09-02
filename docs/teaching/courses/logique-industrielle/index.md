@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Logique/Informatique Industrielle
-subtitle: Systèmes logiques et informatiques pour l'automatisation
+title: Logique Séquentielle - SAP et Grafcet
+subtitle: Description de la commande séquentielle des SAP
 permalink: /teaching/courses/logique-industrielle/
 image: /assets/images/projects/logique-industrielle.jpg
 ---
@@ -577,10 +577,10 @@ image: /assets/images/projects/logique-industrielle.jpg
 
 <div class="course-hero">
   <div class="course-hero-content">
-    <h1>⚙️ Logique/Informatique Industrielle</h1>
-    <p class="subtitle">Systèmes logiques et informatiques pour l'automatisation industrielle</p>
+    <h1>⚙️ Logique Séquentielle - SAP et Grafcet</h1>
+    <p class="subtitle">Description de la commande séquentielle des SAP </p>
     <div class="hero-badges">
-      <span class="hero-badge">📚 Niveau BAC+4 </span>
+      <span class="hero-badge">📚 Niveau Licence/BAC+4 </span>
       <span class="hero-badge">⏱️ 22h CMTD + 12h TP</span>
       <span class="hero-badge">🎯 Automatisation</span>
       <span class="hero-badge">👥 Systèmes industriels</span>
@@ -607,13 +607,13 @@ image: /assets/images/projects/logique-industrielle.jpg
   </div>
 
   <p style="font-size: 1.1rem; line-height: 1.7; color: #555; margin-bottom: 2rem;">
-    Ce cours aborde la **description de la commande séquentielle des Systèmes Automatisés de Production (SAP)**. Les étudiants découvriront l'outil **GRAFCET** pour la modélisation, apprendront à implémenter sur **Automates Programmables Industriels (API)**, et maîtriseront la gestion des **modes de fonctionnement** avec le guide GEMMA. Une approche pratique avec des études de cas industriels concrets permet d'acquérir les compétences essentielles de l'automatisation moderne.
+    Ce cours aborde la <b>description de la commande séquentielle des Systèmes Automatisés de Production (SAP)</b>. Les étudiants découvriront l'outil <b>GRAFCET</b> pour la modélisation, apprendront à implémenter sur <b>Automates Programmables Industriels (API)</b>, et maîtriseront la gestion des <b>modes de fonctionnement</b> avec le guide GEMMA. Une approche pratique avec des études de cas industriels concrets permet d'acquérir les compétences essentielles de l'automatisation moderne.
   </p>
 
   <div class="info-box">
     <h4>📊 Informations générales</h4>
-    <p><strong>Durée :</strong> 27.5h de cours magistraux + 12h de travaux pratiques<br>
-    <strong>Volume de travail personnel estimé :</strong> 40-50 heures<br>
+    <p><strong>Durée :</strong> 22h de CMTD  + 22h de travaux pratiques<br>
+    <strong>Volume de travail personnel estimé :</strong> = temps_consacré * attention<br>
     <strong>Langue d'enseignement :</strong> Français<br>
     <strong>Évaluation :</strong> DS, Note de Classe, Note de TP</p>
   </div>
@@ -623,8 +623,8 @@ image: /assets/images/projects/logique-industrielle.jpg
   <div class="prerequisite-item">
     <div class="prerequisite-icon">⚡</div>
     <div>
-      <strong>Électrotechnique de base</strong>
-      <p style="margin: 0; color: #666; font-size: 0.95rem;">Notions d'électricité, schémas électriques, composants de base</p>
+      <strong>Algèbre de Boole</strong>
+      <p style="margin: 0; color: #666; font-size: 0.95rem;">Notions d'Algèbre de Boole, Tableau de Véritée, fonction cannonique, Tablea de Karneau</p>
     </div>
   </div>
 
@@ -810,10 +810,10 @@ image: /assets/images/projects/logique-industrielle.jpg
   <div class="info-box" style="margin-top: 2rem;">
     <h4>📈 Bénéfices Mesurés de l'Automatisation</h4>
     <p>
-      <strong>Productivité</strong> : +15 à 30% en moyenne • 
-      <strong>Qualité</strong> : Réduction erreurs humaines -40% • 
-      <strong>Sécurité</strong> : -60% accidents industriels • 
-      <strong>Disponibilité</strong> : 24h/24 fonctionnement possible • 
+      <strong>Productivité</strong> : +15 à 30% en moyenne •
+      <strong>Qualité</strong> : Réduction erreurs humaines -40% •
+      <strong>Sécurité</strong> : -60% accidents industriels •
+      <strong>Disponibilité</strong> : 24h/24 fonctionnement possible •
       <strong>ROI</strong> : Retour sur investissement < 3 ans typique
     </p>
   </div>
