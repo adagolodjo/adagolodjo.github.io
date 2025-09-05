@@ -206,9 +206,9 @@ subtitle: Current and Past Courses
 
 .btn-primary:hover { background: #2980b9; }
 .btn-secondary:hover { background: #5a6268; }
-.btn-outline:hover { 
-  background: var(--secondary-color); 
-  color: white; 
+.btn-outline:hover {
+  background: var(--secondary-color);
+  color: white;
 }
 
 .teaching-philosophy {
@@ -332,21 +332,21 @@ subtitle: Current and Past Courses
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .course-meta {
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }
-  
+
   .page-header {
     margin: -1rem -0.5rem 2rem -0.5rem;
     padding: 1.5rem 1rem;
   }
-  
+
   .page-header h1 {
     font-size: 2rem;
   }
-  
+
   .stats-bar {
     flex-direction: column;
     gap: 1rem;
@@ -495,7 +495,7 @@ subtitle: Current and Past Courses
     <span class="icon">💡</span>
     <h2>Philosophie Pédagogique</h2>
   </div>
-  
+
   <p>Mon approche pédagogique privilégie l'apprentissage par la pratique, les applications concrètes et le développement de l'esprit critique. Je m'efforce de créer un environnement d'apprentissage inclusif où les étudiants de tous horizons peuvent s'épanouir et apporter leurs perspectives uniques.</p>
 
   <p>Dans les cours techniques, je m'attache à équilibrer les fondements théoriques avec la mise en pratique, donnant aux étudiants les outils nécessaires pour appliquer les concepts à des problèmes du monde réel. J'intègre l'apprentissage par projets et encourage la collaboration, car ces méthodes reflètent la pratique professionnelle de l'informatique.</p>
@@ -523,21 +523,21 @@ subtitle: Current and Past Courses
     <p>Aide personnalisée et sessions de groupe</p>
     <a href="https://example.edu/tutoring" target="_blank">Accéder au centre →</a>
   </div>
-  
+
   <div class="resource-card">
     <div class="icon">💻</div>
     <h3>Sessions de Programmation</h3>
     <p>Aide technique et debugging</p>
     <a href="https://example.edu/help-sessions" target="_blank">Voir les créneaux →</a>
   </div>
-  
+
   <div class="resource-card">
     <div class="icon">📋</div>
     <h3>Conseil Académique</h3>
     <p>Orientation et planification d'études</p>
     <a href="https://example.edu/advising" target="_blank">Prendre RDV →</a>
   </div>
-  
+
   <div class="resource-card">
     <div class="icon">📖</div>
     <h3>Bibliothèque Numérique</h3>
@@ -551,13 +551,13 @@ subtitle: Current and Past Courses
     <span class="icon">🇫🇷</span>
     <h2>Catalogue Complet des Cours</h2>
   </div>
-  
+
   <div class="french-courses-grid">
     <a href="/teaching/courses/initiation-recherche/" class="french-course-link">
       🔍 Initiation à la recherche
     </a>
     <a href="/teaching/courses/logique-industrielle/" class="french-course-link">
-      ⚙️ Logique/Informatique Industrielle
+      ⚙️ Logique Séquentielle - SAP et Grafcet
     </a>
     <a href="/teaching/courses/modelisation-production/" class="french-course-link">
       🏭 Modélisation des systèmes de production
@@ -602,11 +602,11 @@ subtitle: Current and Past Courses
 function filterCourses(level) {
   const cards = document.querySelectorAll('#current-courses .course-card');
   const tabs = document.querySelectorAll('.filter-tab');
-  
+
   // Update active tab
   tabs.forEach(tab => tab.classList.remove('active'));
   event.target.classList.add('active');
-  
+
   // Filter cards
   cards.forEach(card => {
     const cardLevel = card.getAttribute('data-level');
@@ -660,4 +660,3 @@ I am committed to continually improving my teaching methods based on student fee
 - [TP Robotino](/teaching/courses/tp-robotino/)
 - [Culture numérique](/teaching/courses/culture-numerique/)
 - [Cours de Maths Prod2A3](/teaching/courses/maths-prod2a3/)
-

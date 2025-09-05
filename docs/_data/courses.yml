@@ -1,3 +1,13 @@
+- code: LOGIQUE-INDUSTRIELLE
+  title: "Logique Séquentielle – SAP et Grafcet"
+  semester: "Fall 2024"
+  description: "Industrial logic and computer systems for automation and control"
+  syllabus: "/teaching/courses/logique-industrielle/"
+  level: "Undergraduate"
+  hours_cm: "22"
+  hours_tp: "22"
+  evaluation: "DS, Note de Classe, Note de TP"
+
 - code: SIMULATION-MEDICALE
   title: "Simulation Médical et Robotique Médicale"
   semester: "Fall 2024"
@@ -26,16 +36,6 @@
   hours_cm: "12.5"
   hours_tp: "0"
   evaluation: "Exposé"
-
-- code: LOGIQUE-INDUSTRIELLE
-  title: "Logique/Informatique Industrielle"
-  semester: "Fall 2024"
-  description: "Industrial logic and computer systems for automation and control"
-  syllabus: "/teaching/courses/logique-industrielle/"
-  level: "Undergraduate"
-  hours_cm: "27.5"
-  hours_tp: "12"
-  evaluation: "DS, Note de Classe, Note de TP"
 
 - code: MODELISATION-PRODUCTION
   title: "Modélisation des systèmes de production"
