@@ -1,6 +1,6 @@
-- code: LOGIQUE-INDUSTRIELLE
+- code: DU-823220
   title: "Logique Séquentielle – SAP et Grafcet"
-  semester: "Fall 2024"
+  semester: "S3"
   description: "Industrial logic and computer systems for automation and control"
   syllabus: "/teaching/courses/logique-industrielle/"
   level: "Undergraduate"
@@ -27,9 +27,9 @@
   start_date: "1 octobre 2024"
   resources: "https://www.notion.so/Simulation-M-dicale-1944d150dfba80f0a850cd2be969c1ff"
 
-- code: INITIATION-RECHERCHE
+- code: DU-822150
   title: "Initiation à la recherche"
-  semester: "Fall 2024"
+  semester: "S2"
   description: "Introduction to research methodology and scientific presentation skills"
   syllabus: "/teaching/courses/initiation-recherche/"
   level: "Graduate"
@@ -37,18 +37,19 @@
   hours_tp: "0"
   evaluation: "Exposé"
 
-- code: MODELISATION-PRODUCTION
+- code: DU-822240
   title: "Modélisation des systèmes de production"
-  semester: "Fall 2024"
+  semester: "S2"
   description: "Modeling and analysis of production systems and manufacturing processes"
   syllabus: "/teaching/courses/modelisation-production/"
   level: "Graduate"
   hours_cm: "27.5"
+  hours_tp: "16"
   evaluation: "DS, Note de Classe, Note de TP"
 
 - code: GR-711302
   title: "Automatique : Robotique"
-  semester: "Fall 2024"
+  semester: "S1"
   description: "Automatic control systems applied to robotics with hands-on practical work"
   syllabus: "/teaching/courses/gr-711302/"
   level: "Graduate"
@@ -64,27 +65,27 @@
   hours_tp: "20"
   evaluation: "Note de Classe, Note de rapport"
 
-- code: AUTOMATIQUE-REGULATION
+- code: GR-713301
   title: "Automatique: Régulation de Système"
-  semester: "Fall 2024"
+  semester: "S3"
   description: "System regulation and automatic control theory with practical applications"
-  syllabus: "/teaching/courses/automatique-regulation/"
+  syllabus: "/teaching/courses/gr-713301/"
   level: "Graduate"
   hours_tp: "32"
   evaluation: "Note de Classe, Note de rapport"
 
-- code: ANALYSE-NUMERIQUE
+- code: GR-713302
   title: "Analyse numérique : Optimisation"
-  semester: "Fall 2024"
+  semester: "S3"
   description: "Numerical analysis and optimization methods for engineering problems"
-  syllabus: "/teaching/courses/analyse-numerique/"
+  syllabus: "/teaching/courses/gr-713302/"
   level: "Graduate"
   hours_tp: "16"
   evaluation: "Note de Classe, Note de rapport"
 
-- code: INDUSTRIE-40
-  title: "Industrie 4.0"
-  semester: "Fall 2024"
+- code: GR-715201
+  title: "Usine 4.0"
+  semester: "S5"
   description: "Introduction to Industry 4.0 concepts, IoT, and smart manufacturing"
   syllabus: "/teaching/courses/industrie-40/"
   level: "Graduate"
@@ -102,3 +103,61 @@
   hours_td: "21.1"
   evaluation: "Note de rapport"
   status: "Pending"
+
+# Nouveaux cours de la filière Génie Industriel
+- code: DU-822110
+  title: "Mathématiques pour l'ingénieur"
+  semester: "S2"
+  description: "Advanced mathematics for engineering including Taylor series, differential equations, Fourier series, and Fourier transforms with practical applications"
+  syllabus: "/teaching/courses/mathematiques-ingenieur/"
+  level: "Graduate"
+  hours_cm: "18.75"
+  hours_tp: "20"
+  evaluation: "DS, Note de Classe, Note de TP"
+
+- code: DU-822160
+  title: "Introduction à la Sécurité Informatique"
+  semester: "S2"
+  description: "Introduction to cybersecurity fundamentals, data protection, authentication systems, and security best practices"
+  syllabus: "/teaching/courses/du-822160/"
+  level: "Graduate"
+  hours_cm: "6"
+  evaluation: "DS, Note de Classe"
+
+- code: DU-825250
+  title: "Usine Connectée"
+  semester: "S5"
+  description: "Connected factory concepts, IoT integration, and smart manufacturing systems with focus on industrial applications"
+  syllabus: "/teaching/courses/du-825250/"
+  level: "Graduate"
+  hours_cm: "10"
+  evaluation: "Exposé, Note de Classe"
+
+- code: DU-812170
+  title: "Culture Numérique et Sécurité des Données"
+  semester: "S2"
+  description: "Digital culture and data security covering cybersecurity fundamentals, data protection, GDPR compliance, and modern security practices"
+  syllabus: "/teaching/courses/du-812170/"
+  level: "Formation Continue"
+  hours_cm: "2.5"
+  evaluation: "Exposé, Note de Classe"
+
+- code: DU-816260
+  title: "Usine Connectée"
+  semester: "S6"
+  description: "Advanced connected factory concepts for continuous education, focusing on IoT implementation and smart manufacturing"
+  syllabus: "/teaching/courses/du-816260/"
+  level: "Formation Continue"
+  hours_cm: "7.5"
+  evaluation: "Exposé, Note de Classe"
+
+# Nouveau cours Master Automatique/Robotique
+- code: OA-ROBOTIQUE-MEDICALE
+  title: "Robotique médicale"
+  semester: "S3"
+  description: "Medical robotics applications including surgical robots, rehabilitation systems, and medical simulation"
+  syllabus: "/teaching/courses/robotique-medicale/"
+  level: "Master"
+  hours_td: "4"
+  hours_tp: "8"
+  evaluation: "Note de Classe, Note de rapport"

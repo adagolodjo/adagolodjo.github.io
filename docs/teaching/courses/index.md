@@ -378,6 +378,17 @@ subtitle: Current and Past Courses
 }
 </style>
 
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb-nav" style="margin-bottom: 2rem; padding: 1rem; background: var(--light-bg); border-radius: 8px;">
+  <ol style="list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+    <li><a href="/" style="color: var(--secondary-color); text-decoration: none;">🏠 Accueil</a></li>
+    <li style="color: #999;">›</li>
+    <li><a href="/teaching/" style="color: var(--secondary-color); text-decoration: none;">📚 Enseignement</a></li>
+    <li style="color: #999;">›</li>
+    <li style="color: var(--primary-color); font-weight: 600;">Cours</li>
+  </ol>
+</nav>
+
 <div class="page-header">
   <h1>📚 Enseignement & Cours</h1>
   <p class="subtitle">Formation académique et développement des compétences</p>
@@ -407,10 +418,39 @@ subtitle: Current and Past Courses
   <h2>Cours Actuels</h2>
 </div>
 
+<!-- Bénéfices de recherche -->
+<div class="search-section" style="margin-bottom: 2rem; padding: 1.5rem; background: white; border-radius: var(--border-radius); box-shadow: var(--card-shadow);">
+  <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 250px;">
+      <input type="text" id="courseSearch" placeholder="🔍 Rechercher un cours..." 
+             style="width: 100%; padding: 0.75rem 1rem; border: 2px solid var(--border-medium); border-radius: 25px; font-size: 0.95rem; background: var(--light-bg);" 
+             onkeyup="searchCourses()">
+    </div>
+    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+      <select id="semesterFilter" onchange="applyCombinedFilters()" 
+              style="padding: 0.5rem 1rem; border: 2px solid var(--border-medium); border-radius: 8px; background: white;">
+        <option value="all">📅 Tous les semestres</option>
+        <option value="S1">S1</option>
+        <option value="S2">S2</option>
+        <option value="S3">S3</option>
+        <option value="Fall 2024">Fall 2024</option>
+      </select>
+      <select id="typeFilter" onchange="applyCombinedFilters()" 
+              style="padding: 0.5rem 1rem; border: 2px solid var(--border-medium); border-radius: 8px; background: white;">
+        <option value="all">🎯 Tous les types</option>
+        <option value="CM">Cours Magistraux</option>
+        <option value="TP">Travaux Pratiques</option>
+        <option value="TD">Travaux Dirigés</option>
+      </select>
+    </div>
+  </div>
+</div>
+
 <div class="filter-tabs">
   <button class="filter-tab active" onclick="filterCourses('all')">Tous</button>
   <button class="filter-tab" onclick="filterCourses('undergraduate')">Licence</button>
   <button class="filter-tab" onclick="filterCourses('graduate')">Master</button>
+  <button class="filter-tab" onclick="filterCourses('formation continue')">Formation Continue</button>
   <button class="filter-tab" onclick="filterCourses('doctoral')">Doctorat</button>
 </div>
 
@@ -519,30 +559,30 @@ subtitle: Current and Past Courses
 <div class="resources-grid">
   <div class="resource-card">
     <div class="icon">👥</div>
-    <h3>Centre de Tutorat</h3>
-    <p>Aide personnalisée et sessions de groupe</p>
-    <a href="https://example.edu/tutoring" target="_blank">Accéder au centre →</a>
+    <h3>Université de Lille</h3>
+    <p>Portail étudiant et services pédagogiques</p>
+    <a href="https://www.univ-lille.fr/etudes/" target="_blank">Accéder au portail →</a>
   </div>
 
   <div class="resource-card">
     <div class="icon">💻</div>
-    <h3>Sessions de Programmation</h3>
-    <p>Aide technique et debugging</p>
-    <a href="https://example.edu/help-sessions" target="_blank">Voir les créneaux →</a>
+    <h3>Polytech Lille</h3>
+    <p>Ressources techniques et laboratoires</p>
+    <a href="https://www.polytech-lille.fr/" target="_blank">Voir les ressources →</a>
   </div>
 
   <div class="resource-card">
     <div class="icon">📋</div>
-    <h3>Conseil Académique</h3>
-    <p>Orientation et planification d'études</p>
-    <a href="https://example.edu/advising" target="_blank">Prendre RDV →</a>
+    <h3>Moodle Lille</h3>
+    <p>Plateforme de cours en ligne</p>
+    <a href="https://moodle.univ-lille.fr/" target="_blank">Se connecter →</a>
   </div>
 
   <div class="resource-card">
     <div class="icon">📖</div>
-    <h3>Bibliothèque Numérique</h3>
-    <p>Accès aux ressources académiques</p>
-    <a href="https://example.edu/library" target="_blank">Explorer →</a>
+    <h3>Bibliothèque Universitaire</h3>
+    <p>Ressources académiques et documentation</p>
+    <a href="https://www.univ-lille.fr/bibliotheques/" target="_blank">Explorer →</a>
   </div>
 </div>
 
@@ -562,19 +602,16 @@ subtitle: Current and Past Courses
     <a href="/teaching/courses/modelisation-production/" class="french-course-link">
       🏭 Modélisation des systèmes de production
     </a>
-    <a href="/teaching/courses/gr711302/" class="french-course-link">
+    <a href="/teaching/courses/gr-711302/" class="french-course-link">
       🤖 GR-711302 Automatique : Robotique
     </a>
-    <a href="/teaching/courses/gr712302/" class="french-course-link">
+    <a href="/teaching/courses/gr-712302/" class="french-course-link">
       💻 GR-712302 Programmation
     </a>
-    <a href="/teaching/courses/regulation-systeme/" class="french-course-link">
-      🎛️ Automatique : Régulation de Système
-    </a>
-    <a href="/teaching/courses/analyse-optimisation/" class="french-course-link">
+    <a href="/teaching/courses/analyse-numerique/" class="french-course-link">
       📊 Analyse numérique : Optimisation
     </a>
-    <a href="/teaching/courses/industrie4/" class="french-course-link">
+    <a href="/teaching/courses/industrie-40/" class="french-course-link">
       🏭 Industrie 4.0
     </a>
     <a href="/teaching/courses/tests-maintenance/" class="french-course-link">
@@ -583,41 +620,175 @@ subtitle: Current and Past Courses
     <a href="/teaching/courses/simulation-medicale/" class="french-course-link">
       🏥 Simulation Médical et Robotique Médicale
     </a>
-    <a href="/teaching/courses/modeling-simulation/" class="french-course-link">
+    <a href="/teaching/courses/modeling-medical-sim/" class="french-course-link">
       🧬 Modeling & Real-Time Medical Simulation
-    </a>
-    <a href="/teaching/courses/tp-robotino/" class="french-course-link">
-      🤖 TP Robotino
-    </a>
-    <a href="/teaching/courses/culture-numerique/" class="french-course-link">
-      💻 Culture numérique
-    </a>
-    <a href="/teaching/courses/maths-prod2a3/" class="french-course-link">
-      📐 Cours de Maths Prod2A3
     </a>
   </div>
 </div>
 
 <script>
+// Variables globales pour les filtres
+let currentLevelFilter = 'all';
+let currentSearchTerm = '';
+let currentSemesterFilter = 'all';
+let currentTypeFilter = 'all';
+
 function filterCourses(level) {
-  const cards = document.querySelectorAll('#current-courses .course-card');
+  currentLevelFilter = level;
   const tabs = document.querySelectorAll('.filter-tab');
 
   // Update active tab
   tabs.forEach(tab => tab.classList.remove('active'));
   event.target.classList.add('active');
 
-  // Filter cards
-  cards.forEach(card => {
-    const cardLevel = card.getAttribute('data-level');
-    if (level === 'all' || cardLevel === level) {
+  applyCombinedFilters();
+}
+
+function searchCourses() {
+  currentSearchTerm = document.getElementById('courseSearch').value.toLowerCase();
+  applyCombinedFilters();
+}
+
+function applyCombinedFilters() {
+  const cards = document.querySelectorAll('#current-courses .course-card');
+  const allCards = document.querySelectorAll('.course-card'); // Inclut aussi les cours précédents
+  
+  currentSemesterFilter = document.getElementById('semesterFilter')?.value || 'all';
+  currentTypeFilter = document.getElementById('typeFilter')?.value || 'all';
+  
+  let visibleCount = 0;
+  
+  allCards.forEach(card => {
+    const cardLevel = card.getAttribute('data-level') || '';
+    const cardTitle = card.querySelector('.course-title')?.textContent.toLowerCase() || '';
+    const cardCode = card.querySelector('.course-code')?.textContent.toLowerCase() || '';
+    const cardDesc = card.querySelector('.course-desc')?.textContent.toLowerCase() || '';
+    const cardSemester = card.querySelector('[data-semester]')?.getAttribute('data-semester') || '';
+    
+    // Filtres de niveau
+    const levelMatch = currentLevelFilter === 'all' || cardLevel === currentLevelFilter;
+    
+    // Filtre de recherche textuelle
+    const searchMatch = currentSearchTerm === '' || 
+                       cardTitle.includes(currentSearchTerm) || 
+                       cardCode.includes(currentSearchTerm) ||
+                       cardDesc.includes(currentSearchTerm);
+    
+    // Filtre de semestre
+    const semesterMatch = currentSemesterFilter === 'all' || cardSemester.includes(currentSemesterFilter);
+    
+    if (levelMatch && searchMatch && semesterMatch) {
       card.style.display = 'flex';
       card.style.animation = 'fadeIn 0.3s ease-in';
+      visibleCount++;
     } else {
       card.style.display = 'none';
     }
   });
+  
+  // Afficher un message si aucun résultat
+  updateNoResultsMessage(visibleCount);
 }
+
+function updateNoResultsMessage(count) {
+  let messageDiv = document.getElementById('no-results-message');
+  
+  if (count === 0) {
+    if (!messageDiv) {
+      messageDiv = document.createElement('div');
+      messageDiv.id = 'no-results-message';
+      messageDiv.style.cssText = `
+        text-align: center;
+        padding: 3rem;
+        background: var(--light-bg);
+        border-radius: var(--border-radius);
+        margin: 2rem 0;
+        color: #666;
+      `;
+      messageDiv.innerHTML = `
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🔍</div>
+        <h3 style="margin-bottom: 0.5rem;">Aucun cours trouvé</h3>
+        <p>Essayez de modifier vos critères de recherche ou de filtrage.</p>
+        <button onclick="clearAllFilters()" style="margin-top: 1rem; padding: 0.5rem 1rem; background: var(--secondary-color); color: white; border: none; border-radius: 8px; cursor: pointer;">Réinitialiser les filtres</button>
+      `;
+      document.getElementById('current-courses').parentNode.appendChild(messageDiv);
+    }
+    messageDiv.style.display = 'block';
+  } else {
+    if (messageDiv) {
+      messageDiv.style.display = 'none';
+    }
+  }
+}
+
+function clearAllFilters() {
+  // Réinitialiser tous les filtres
+  currentLevelFilter = 'all';
+  currentSearchTerm = '';
+  currentSemesterFilter = 'all';
+  currentTypeFilter = 'all';
+  
+  // Réinitialiser les contrôles UI
+  document.getElementById('courseSearch').value = '';
+  if (document.getElementById('semesterFilter')) {
+    document.getElementById('semesterFilter').value = 'all';
+  }
+  if (document.getElementById('typeFilter')) {
+    document.getElementById('typeFilter').value = 'all';
+  }
+  
+  // Réinitialiser les onglets
+  const tabs = document.querySelectorAll('.filter-tab');
+  tabs.forEach(tab => tab.classList.remove('active'));
+  tabs[0].classList.add('active'); // Premier onglet "Tous"
+  
+  // Appliquer les filtres
+  applyCombinedFilters();
+}
+
+// Fonction pour compter et afficher les statistiques
+function updateCourseStats() {
+  const allCourses = document.querySelectorAll('.course-card').length;
+  const currentCourses = document.querySelectorAll('#current-courses .course-card').length;
+  
+  // Mettre à jour les statistiques si l'élément existe
+  const statsElement = document.querySelector('.stat-item h3');
+  if (statsElement && allCourses > 0) {
+    statsElement.textContent = `${allCourses}+`;
+  }
+}
+
+// Fonction pour ajouter des raccourcis clavier
+function setupKeyboardShortcuts() {
+  document.addEventListener('keydown', function(e) {
+    // Ctrl/Cmd + K pour focus sur la recherche
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      document.getElementById('courseSearch')?.focus();
+    }
+    
+    // Echap pour clear la recherche
+    if (e.key === 'Escape') {
+      const searchInput = document.getElementById('courseSearch');
+      if (searchInput && searchInput === document.activeElement) {
+        clearAllFilters();
+      }
+    }
+  });
+}
+
+// Initialisation au chargement de la page
+document.addEventListener('DOMContentLoaded', function() {
+  updateCourseStats();
+  setupKeyboardShortcuts();
+  
+  // Ajouter des attributs de données pour faciliter le filtrage
+  const courseCards = document.querySelectorAll('.course-card');
+  courseCards.forEach(card => {
+    const semesterText = card.querySelector('.meta-item')?.textContent || '';
+    card.setAttribute('data-semester', semesterText);
+  });
+});
 
 // Add CSS animation
 const style = document.createElement('style');
@@ -625,6 +796,27 @@ style.textContent = `
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .search-section input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  }
+  
+  .course-card {
+    transition: var(--transition);
+  }
+  
+  @media (max-width: 768px) {
+    .search-section > div {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .search-section input {
+      margin-bottom: 1rem;
+    }
   }
 `;
 document.head.appendChild(style);
@@ -640,23 +832,23 @@ I am committed to continually improving my teaching methods based on student fee
 
 ## Student Resources
 
-- [Department Tutoring Center](https://example.edu/tutoring)
-- [Programming Help Sessions](https://example.edu/help-sessions)
-- [Academic Advising](https://example.edu/advising)
+- [Université de Lille - Études](https://www.univ-lille.fr/etudes/)
+- [Polytech Lille - Ressources](https://www.polytech-lille.fr/)
+- [Moodle Lille - Plateforme pédagogique](https://moodle.univ-lille.fr/)
 
 ## Cours disponibles
 
 - [Initiation à la recherche](/teaching/courses/initiation-recherche/)
 - [Logique/Informatique Industrielle](/teaching/courses/logique-industrielle/)
 - [Modélisation des systèmes de production](/teaching/courses/modelisation-production/)
-- [GR-711302 Automatique : Robotique](/teaching/courses/gr711302/)
-- [GR-712302 Programmation](/teaching/courses/gr712302/)
-- [Automatique : Régulation de Système](/teaching/courses/regulation-systeme/)
-- [Analyse numérique : Optimisation](/teaching/courses/analyse-optimisation/)
-- [Industrie 4.0](/teaching/courses/industrie4/)
+- [GR-711302 Automatique : Robotique](/teaching/courses/gr-711302/)
+- [GR-712302 Programmation](/teaching/courses/gr-712302/)
+- [GR-713301 Automatique : Regulation de Système](/teaching/courses/regulation-systeme/)
+- [Analyse numérique : Optimisation](/teaching/courses/analyse-numerique/)
+- [Industrie 4.0](/teaching/courses/industrie-40/)
 - [Tests et Maintenance](/teaching/courses/tests-maintenance/)
 - [Simulation Médical et Robotique Médicale](/teaching/courses/simulation-medicale/)
-- [Modeling & Real-Time Medical Simulation](/teaching/courses/modeling-simulation/)
+- [Modeling & Real-Time Medical Simulation](/teaching/courses/modeling-medical-sim/)
 - [TP Robotino](/teaching/courses/tp-robotino/)
 - [Culture numérique](/teaching/courses/culture-numerique/)
 - [Cours de Maths Prod2A3](/teaching/courses/maths-prod2a3/)

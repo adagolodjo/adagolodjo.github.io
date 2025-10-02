@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "Industrie 4.0"
-subtitle: "Introduction aux concepts de l'Industrie 4.0, IoT et fabrication intelligente"
-permalink: /teaching/courses/industrie-40/
-image: /assets/images/projects/industrie-40.jpg
+title: "DU-825250 Usine Connectée"
+subtitle: "Concepts d'usine connectée et systèmes IoT industriels"
+permalink: /teaching/courses/du-825250/
+image: /assets/images/projects/usine-connectee.jpg
 ---
 
 <style>
@@ -13,8 +13,8 @@ image: /assets/images/projects/industrie-40.jpg
   --accent-color: #e74c3c;
   --success-color: #27ae60;
   --warning-color: #f39c12;
-  --industry-color: #e67e22;
-  --tech-color: #1abc9c;
+  --smart-factory-color: #16a085;
+  --iot-color: #2980b9;
   --light-bg: #f8f9fa;
   --card-shadow: 0 4px 20px rgba(0,0,0,0.08);
   --card-shadow-hover: 0 12px 40px rgba(0,0,0,0.15);
@@ -23,7 +23,7 @@ image: /assets/images/projects/industrie-40.jpg
 }
 
 .course-hero {
-  background: linear-gradient(135deg, var(--industry-color) 0%, var(--tech-color) 100%);
+  background: linear-gradient(135deg, var(--smart-factory-color) 0%, var(--iot-color) 100%);
   color: white;
   padding: 4rem 2rem;
   border-radius: var(--border-radius);
@@ -141,7 +141,7 @@ image: /assets/images/projects/industrie-40.jpg
 .section-icon {
   font-size: 2rem;
   margin-right: 1rem;
-  color: var(--industry-color);
+  color: var(--smart-factory-color);
 }
 
 .section-title {
@@ -173,7 +173,7 @@ image: /assets/images/projects/industrie-40.jpg
 
 .info-box {
   background: linear-gradient(135deg, #fff3cd, #d1ecf1);
-  border-left: 4px solid var(--industry-color);
+  border-left: 4px solid var(--smart-factory-color);
   padding: 1.5rem;
   border-radius: 8px;
   margin: 2rem 0;
@@ -243,7 +243,7 @@ image: /assets/images/projects/industrie-40.jpg
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--industry-color), var(--tech-color));
+  background: linear-gradient(90deg, var(--smart-factory-color), var(--iot-color));
 }
 
 .eval-item:hover {
@@ -254,7 +254,7 @@ image: /assets/images/projects/industrie-40.jpg
 .eval-percentage {
   font-size: 3rem;
   font-weight: 700;
-  color: var(--industry-color);
+  color: var(--smart-factory-color);
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -278,23 +278,23 @@ image: /assets/images/projects/industrie-40.jpg
 }
 
 .resource-card {
-  background: rgba(230, 126, 34, 0.1);
+  background: rgba(22, 160, 133, 0.1);
   backdrop-filter: blur(10px);
   padding: 2rem;
   border-radius: 16px;
-  border: 1px solid rgba(230, 126, 34, 0.2);
+  border: 1px solid rgba(22, 160, 133, 0.2);
   transition: var(--transition);
 }
 
 .resource-card:hover {
-  background: rgba(230, 126, 34, 0.2);
+  background: rgba(22, 160, 133, 0.2);
   transform: translateY(-5px);
 }
 
 .resource-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--industry-color);
+  color: var(--smart-factory-color);
 }
 
 .contact-info {
@@ -308,33 +308,58 @@ image: /assets/images/projects/industrie-40.jpg
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background: rgba(230, 126, 34, 0.1);
+  background: rgba(22, 160, 133, 0.1);
   border-radius: 12px;
   transition: var(--transition);
 }
 
 .contact-item:hover {
-  background: rgba(230, 126, 34, 0.2);
+  background: rgba(22, 160, 133, 0.2);
 }
 
 .contact-icon {
   font-size: 1.5rem;
-  color: var(--industry-color);
+  color: var(--smart-factory-color);
 }
 
-.tech-stack {
+.themes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
   margin-top: 1.5rem;
 }
 
-.tech-item {
-  background: rgba(26, 188, 156, 0.1);
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  border: 1px solid rgba(26, 188, 156, 0.2);
+.theme-card {
+  background: rgba(22, 160, 133, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--smart-factory-color);
+  transition: var(--transition);
+}
+
+.theme-card:hover {
+  background: rgba(22, 160, 133, 0.1);
+  transform: translateY(-3px);
+}
+
+.competences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.competence-card {
+  background: rgba(41, 128, 185, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--iot-color);
+  transition: var(--transition);
+}
+
+.competence-card:hover {
+  background: rgba(41, 128, 185, 0.1);
+  transform: translateX(8px);
 }
 
 @keyframes float {
@@ -365,13 +390,13 @@ image: /assets/images/projects/industrie-40.jpg
 
 <div class="course-hero">
   <div class="course-hero-content">
-    <h1>Industrie 4.0</h1>
-    <p class="subtitle">Introduction aux concepts de l'Industrie 4.0, IoT et fabrication intelligente</p>
+    <h1>Usine Connectée</h1>
+    <p class="subtitle">Concepts d'usine connectée et systèmes IoT industriels</p>
     <div class="hero-badges">
-      <span class="hero-badge">🏭 INDUSTRIE-40</span>
-      <span class="hero-badge">⏱️ 4.5h CM + 6h TP</span>
-      <span class="hero-badge">🎆 Graduate</span>
-      <span class="hero-badge">🔥 Technologies Avancées</span>
+      <span class="hero-badge">🏢 DU-825250</span>
+      <span class="hero-badge">⏱️ 10h CM</span>
+      <span class="hero-badge">🎧 Graduate</span>
+      <span class="hero-badge">📅 Semestre 5</span>
     </div>
   </div>
 </div>
@@ -380,8 +405,9 @@ image: /assets/images/projects/industrie-40.jpg
   <div class="nav-links">
     <a href="#objectifs" class="nav-link">🎧 Objectifs</a>
     <a href="#programme" class="nav-link">📚 Programme</a>
+    <a href="#themes" class="nav-link">📈 Thèmes</a>
+    <a href="#competences" class="nav-link">🔧 Compétences</a>
     <a href="#evaluation" class="nav-link">📊 Évaluation</a>
-    <a href="#technologies" class="nav-link">💻 Technologies</a>
     <a href="#ressources" class="nav-link">💾 Ressources</a>
     <a href="#contact" class="nav-link">📞 Contact</a>
   </div>
@@ -393,10 +419,10 @@ image: /assets/images/projects/industrie-40.jpg
     <h2 class="section-title">Description du cours</h2>
   </div>
   
-  <p class="lead">Ce cours introduit les étudiants aux concepts et technologies qui propulsent la Quatrième Révolution Industrielle (Industrie 4.0). Les étudiants exploreront comment les systèmes cyber-physiques, l'Internet des Objets (IoT), l'intelligence artificielle et l'analyse de données transforment les processus de fabrication et industriels.</p>
+  <p class="lead">Ce cours explore les concepts d'usine connectée, l'intégration IoT et les systèmes de fabrication intelligente avec un focus sur les applications industrielles. Les étudiants découvriront comment les technologies numériques transforment les processus de production et créent de nouvelles opportunités d'optimisation.</p>
   
   <div class="info-box">
-    <strong>🎆 Prérequis:</strong> Connaissances de base des processus de fabrication, compétences en programmation (Python ou similaire), compréhension des réseaux informatiques et familiarité avec les concepts de bases de données.
+    <strong>🎆 Prérequis:</strong> Connaissances de base en automatique, réseaux industriels et informatique. Une familiarité avec les concepts de l'Industrie 4.0 est recommandée.
   </div>
 </div>
 
@@ -408,23 +434,23 @@ image: /assets/images/projects/industrie-40.jpg
   
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>🔧 Principes fondamentaux</h4>
-      <p>Comprendre les principes fondamentaux et les piliers de l'Industrie 4.0.</p>
+      <h4>🏢 Concepts d'usine connectée</h4>
+      <p>Maîtriser les principes fondamentaux des usines connectées et leur architecture technologique.</p>
     </div>
     
     <div class="objective-card">
-      <h4>📊 Impact de la transformation</h4>
-      <p>Analyser l'impact de la transformation numérique sur les processus de fabrication.</p>
+      <h4>📱 Technologies IoT industrielles</h4>
+      <p>Comprendre et appliquer les technologies IoT spécifiques au domaine industriel.</p>
     </div>
     
     <div class="objective-card">
-      <h4>💻 Solutions IoT</h4>
-      <p>Concevoir et implémenter des solutions IoT pour les applications industrielles.</p>
+      <h4>📊 Analyse de données</h4>
+      <p>Analyser et exploiter les données générées par les systèmes industriels connectés.</p>
     </div>
     
     <div class="objective-card">
-      <h4>🔍 Évaluation des systèmes</h4>
-      <p>Évaluer les avantages et les défis des systèmes de fabrication intelligente.</p>
+      <h4>🔒 Sécurité industrielle</h4>
+      <p>Évaluer et intégrer les aspects de cybersécurité dans les environnements industriels connectés.</p>
     </div>
   </div>
 </div>
@@ -435,81 +461,112 @@ image: /assets/images/projects/industrie-40.jpg
     <h2 class="section-title">Programme détaillé</h2>
   </div>
   
-  <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">🎧 Cours Magistraux (CM - 4.5h)</h3>
-  
   <div class="timeline">
     <div class="timeline-item">
-      <h4>🔍 Module 1: Introduction à l'Industrie 4.0</h4>
+      <h4>🔍 Séances 1-2: Fondamentaux de l'usine connectée</h4>
       <ul>
-        <li>Contexte historique : De l'Industrie 1.0 à 4.0</li>
-        <li>Technologies clés et facteurs facilitateurs</li>
-        <li>Transformation numérique dans la fabrication</li>
+        <li>Evolution de l'industrie : de 1.0 à 4.0</li>
+        <li>Architecture des systèmes industriels connectés</li>
+        <li>Modèles de référence (RAMI 4.0, IIRA)</li>
+        <li>Enjeux et bénéfices de la connectivité</li>
       </ul>
-      <p><strong>Durée:</strong> 1.5h CM</p>
+      <p><strong>Durée:</strong> 3h CM</p>
     </div>
     
     <div class="timeline-item">
-      <h4>📊 Module 2: Systèmes Cyber-Physiques (CPS)</h4>
+      <h4>📱 Séances 3-4: IoT industriel (IIoT)</h4>
       <ul>
-        <li>Architecture et composants des CPS</li>
-        <li>Intégration des systèmes physiques et numériques</li>
-        <li>Surveillance et contrôle en temps réel</li>
+        <li>Capteurs et actionneurs intelligents</li>
+        <li>Protocoles de communication industriels</li>
+        <li>Gateways et edge computing</li>
+        <li>Plateformes IoT et cloud industriel</li>
       </ul>
-      <p><strong>Durée:</strong> 1h CM</p>
+      <p><strong>Durée:</strong> 3h CM</p>
     </div>
     
     <div class="timeline-item">
-      <h4>💻 Module 3: Internet des Objets (IoT) Industriel</h4>
+      <h4>📊 Séances 5-6: Données et intelligence artificielle</h4>
       <ul>
-        <li>Fondamentaux de l'IoT industriel (IIoT)</li>
-        <li>Réseaux de capteurs et collecte de données</li>
-        <li>Protocoles de communication et standards</li>
+        <li>Big data industriel et analytics</li>
+        <li>Maintenance prédictive et qualité 4.0</li>
+        <li>IA et apprentissage automatique</li>
+        <li>Jumeaux numériques (Digital Twins)</li>
       </ul>
-      <p><strong>Durée:</strong> 1h CM</p>
+      <p><strong>Durée:</strong> 2h CM</p>
     </div>
     
     <div class="timeline-item">
-      <h4>🧠 Module 4: Analyse de données et IA</h4>
+      <h4>🔒 Séance 7: Sécurité et défis</h4>
       <ul>
-        <li>Big data dans la fabrication</li>
-        <li>Applications de l'apprentissage automatique</li>
-        <li>Maintenance prédictive et contrôle qualité</li>
+        <li>Cybersécurité dans l'industrie 4.0</li>
+        <li>Protection des données industrielles</li>
+        <li>Défis organisationnels et humains</li>
+        <li>Perspectives d'avenir et tendances</li>
       </ul>
-      <p><strong>Durée:</strong> 1h CM</p>
+      <p><strong>Durée:</strong> 2h CM</p>
     </div>
   </div>
+</div>
+
+<div class="section-card" id="themes">
+  <div class="section-header">
+    <div class="section-icon">📈</div>
+    <h2 class="section-title">Thèmes abordés</h2>
+  </div>
   
-  <h3 style="color: var(--tech-color); margin: 2rem 0 1rem;">🔧 Travaux Pratiques (TP - 6h)</h3>
-  
-  <div class="timeline">
-    <div class="timeline-item">
-      <h4>🔮 TP 1: Implémentation de capteurs IoT</h4>
-      <ul>
-        <li>Expérience pratique avec les capteurs industriels</li>
-        <li>Acquisition et traitement des données</li>
-        <li>Protocoles de communication (MQTT, OPC-UA)</li>
-      </ul>
-      <p><strong>Durée:</strong> 2h TP</p>
+  <div class="themes-grid">
+    <div class="theme-card">
+      <h4>🏢 Concepts Industry 4.0</h4>
+      <p>Principes fondamentaux, architectures de référence et modèles d'organisation des usines connectées.</p>
     </div>
     
-    <div class="timeline-item">
-      <h4>🎆 TP 2: Simulation de fabrication intelligente</h4>
-      <ul>
-        <li>Concepts de jumeaux numériques</li>
-        <li>Simulation de processus de fabrication</li>
-        <li>Optimisation des performances avec l'analyse de données</li>
-      </ul>
-      <p><strong>Durée:</strong> 2h TP</p>
+    <div class="theme-card">
+      <h4>📱 IoT industriel</h4>
+      <p>Technologies, protocoles, capteurs intelligents et infrastructures de communication pour l'industrie.</p>
     </div>
     
-    <div class="timeline-item">
-      <h4>📈 TP 3: Étude de cas Industrie 4.0</h4>
-      <ul>
-        <li>Analyse de projets de transformation industrielle réels</li>
-        <li>Conception d'un concept d'usine intelligente</li>
-        <li>Présentation des solutions proposées</li>
-      </ul>
-      <p><strong>Durée:</strong> 2h TP</p>
+    <div class="theme-card">
+      <h4>🔗 Intégration systèmes</h4>
+      <p>Méthodes d'intégration des systèmes de fabrication intelligente et interopérabilité.</p>
+    </div>
+    
+    <div class="theme-card">
+      <h4>📊 Analyse de données</h4>
+      <p>Big data industriel, analytics avancés, machine learning et intelligence artificielle appliquée.</p>
+    </div>
+    
+    <div class="theme-card">
+      <h4>🔒 Cybersécurité</h4>
+      <p>Sécurité des systèmes industriels connectés, protection des données et gestion des risques.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-card" id="competences">
+  <div class="section-header">
+    <div class="section-icon">🔧</div>
+    <h2 class="section-title">Compétences développées</h2>
+  </div>
+  
+  <div class="competences-grid">
+    <div class="competence-card">
+      <h4>🔧 Conception systèmes IoT</h4>
+      <p>Capacité à concevoir et dimensionner des systèmes IoT industriels adaptés aux besoins spécifiques.</p>
+    </div>
+    
+    <div class="competence-card">
+      <h4>🔗 Intégration technologique</h4>
+      <p>Maîtrise de l'intégration de capteurs, réseaux et systèmes dans l'environnement industriel.</p>
+    </div>
+    
+    <div class="competence-card">
+      <h4>📊 Analyse données production</h4>
+      <p>Compétence en analyse et exploitation des données de production pour l'optimisation des processus.</p>
+    </div>
+    
+    <div class="competence-card">
+      <h4>⚙️ Optimisation processus</h4>
+      <p>Capacité à optimiser les processus industriels grâce aux technologies de l'usine connectée.</p>
     </div>
   </div>
 </div>
@@ -524,52 +581,13 @@ image: /assets/images/projects/industrie-40.jpg
     <div class="eval-item">
       <span class="eval-percentage">70%</span>
       <h4 class="eval-title">Exposé</h4>
-      <p class="eval-description">Présentation de projet final sur une stratégie d'implémentation Industrie 4.0</p>
+      <p class="eval-description">Présentation d'un projet d'usine connectée ou d'étude de cas industriel</p>
     </div>
     
     <div class="eval-item">
       <span class="eval-percentage">30%</span>
       <h4 class="eval-title">Note de classe</h4>
-      <p class="eval-description">Participation active en cours et séances pratiques, évaluations continues</p>
-    </div>
-  </div>
-</div>
-
-<div class="section-card" id="technologies">
-  <div class="section-header">
-    <div class="section-icon">💻</div>
-    <h2 class="section-title">Technologies et outils</h2>
-  </div>
-  
-  <div class="tech-stack">
-    <div class="tech-item">
-      <h5>📱 Plateformes IoT</h5>
-      <p>Arduino, Raspberry Pi, Node-RED</p>
-    </div>
-    
-    <div class="tech-item">
-      <h5>🏭 Logiciels de simulation</h5>
-      <p>Factory I/O, Plant Simulation</p>
-    </div>
-    
-    <div class="tech-item">
-      <h5>📊 Visualisation données</h5>
-      <p>Grafana, Power BI, Tableau</p>
-    </div>
-    
-    <div class="tech-item">
-      <h5>🔗 Protocoles industriels</h5>
-      <p>MQTT, OPC-UA, Modbus</p>
-    </div>
-    
-    <div class="tech-item">
-      <h5>☁️ Plateformes cloud</h5>
-      <p>AWS IoT, Azure IoT, Google Cloud</p>
-    </div>
-    
-    <div class="tech-item">
-      <h5>🐍 Programmation</h5>
-      <p>Python, JavaScript, C++</p>
+      <p class="eval-description">Participation active, discussions et évaluations continues sur les concepts abordés</p>
     </div>
   </div>
 </div>
@@ -583,32 +601,34 @@ image: /assets/images/projects/industrie-40.jpg
   <div class="resources-grid">
     <div class="resource-card">
       <div class="resource-icon">📚</div>
-      <h4>Documentation technique</h4>
+      <h4>Documentation spécialisée</h4>
       <ul>
-        <li>Études de cas industriels et livres blancs</li>
-        <li>Documentation des plateformes Industrie 4.0</li>
-        <li>Rapports professionnels de l'industrie</li>
+        <li>Guides et standards industriels (VDI, IEC)</li>
+        <li>Livres blancs et rapports d'expertise</li>
+        <li>Documentations techniques des solutions</li>
+        <li>Études de cas réels d'usines connectées</li>
       </ul>
     </div>
     
     <div class="resource-card">
-      <div class="resource-icon">🔍</div>
-      <h4>Recherche actuelle</h4>
+      <div class="resource-icon">💻</div>
+      <h4>Outils et plateformes</h4>
       <ul>
-        <li>Recherche actuelle en fabrication intelligente</li>
-        <li>Articles scientifiques et publications</li>
-        <li>Conférences et webinaires spécialisés</li>
+        <li>Simulateurs d'usines connectées</li>
+        <li>Plateformes IoT industrielles</li>
+        <li>Outils de modélisation et jumeaux numériques</li>
+        <li>Solutions d'analyse de données</li>
       </ul>
     </div>
     
     <div class="resource-card">
-      <div class="resource-icon">💼</div>
-      <h4>Perspectives carrière</h4>
+      <div class="resource-icon">🌐</div>
+      <h4>Veille technologique</h4>
       <ul>
-        <li>Conseil en digitalisation industrielle</li>
-        <li>Conception d'usines intelligentes</li>
-        <li>Développement de solutions IoT</li>
-        <li>Gestion de la transformation digitale</li>
+        <li>Actualités de l'industrie 4.0</li>
+        <li>Retours d'expérience industriels</li>
+        <li>Conférences et salons spécialisés</li>
+        <li>Communautés professionnelles</li>
       </ul>
     </div>
   </div>
@@ -633,7 +653,7 @@ image: /assets/images/projects/industrie-40.jpg
       <div class="contact-icon">✉️</div>
       <div>
         <strong>Email</strong><br>
-        <a href="/contact/">Utiliser le formulaire de contact</a>
+        Utiliser le formulaire de contact sur la page d'accueil
       </div>
     </div>
     
@@ -641,7 +661,7 @@ image: /assets/images/projects/industrie-40.jpg
       <div class="contact-icon">🏢</div>
       <div>
         <strong>Lieu des cours</strong><br>
-        Laboratoire Technologies Avancées, UFR Sciences
+        Centre de Recherche Industrie 4.0, UFR Sciences
       </div>
     </div>
     
@@ -649,7 +669,7 @@ image: /assets/images/projects/industrie-40.jpg
       <div class="contact-icon">🕰️</div>
       <div>
         <strong>Permanences</strong><br>
-        Sur rendez-vous - Consulter la page de contact
+        Mardis 9h-11h ou sur rendez-vous par email
       </div>
     </div>
   </div>

@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Modélisation des systèmes de production
-subtitle: Outils et méthodes pour la production industrielle
-permalink: /teaching/courses/modelisation-production/
-image: /assets/images/projects/modelisation-production.jpg
+title: "GR-713301 Automatique: Régulation de Système"
+subtitle: "Théorie du contrôle automatique et régulation de système"
+permalink: /teaching/courses/gr-713301/
+image: /assets/images/projects/automatique-regulation.jpg
 ---
 
 <style>
@@ -13,7 +13,7 @@ image: /assets/images/projects/modelisation-production.jpg
   --accent-color: #e74c3c;
   --success-color: #27ae60;
   --warning-color: #f39c12;
-  --production-color: #e67e22;
+  --automation-color: #9b59b6;
   --light-bg: #f8f9fa;
   --card-shadow: 0 4px 20px rgba(0,0,0,0.08);
   --card-shadow-hover: 0 12px 40px rgba(0,0,0,0.15);
@@ -22,7 +22,7 @@ image: /assets/images/projects/modelisation-production.jpg
 }
 
 .course-hero {
-  background: linear-gradient(135deg, var(--production-color) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, var(--automation-color) 0%, var(--secondary-color) 100%);
   color: white;
   padding: 4rem 2rem;
   border-radius: var(--border-radius);
@@ -140,7 +140,7 @@ image: /assets/images/projects/modelisation-production.jpg
 .section-icon {
   font-size: 2rem;
   margin-right: 1rem;
-  color: var(--production-color);
+  color: var(--automation-color);
 }
 
 .section-title {
@@ -172,7 +172,7 @@ image: /assets/images/projects/modelisation-production.jpg
 
 .info-box {
   background: linear-gradient(135deg, #fff3cd, #d1ecf1);
-  border-left: 4px solid var(--production-color);
+  border-left: 4px solid var(--automation-color);
   padding: 1.5rem;
   border-radius: 8px;
   margin: 2rem 0;
@@ -242,7 +242,7 @@ image: /assets/images/projects/modelisation-production.jpg
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--production-color), var(--secondary-color));
+  background: linear-gradient(90deg, var(--automation-color), var(--secondary-color));
 }
 
 .eval-item:hover {
@@ -253,7 +253,7 @@ image: /assets/images/projects/modelisation-production.jpg
 .eval-percentage {
   font-size: 3rem;
   font-weight: 700;
-  color: var(--production-color);
+  color: var(--automation-color);
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -277,23 +277,23 @@ image: /assets/images/projects/modelisation-production.jpg
 }
 
 .resource-card {
-  background: rgba(230, 126, 34, 0.1);
+  background: rgba(155, 89, 182, 0.1);
   backdrop-filter: blur(10px);
   padding: 2rem;
   border-radius: 16px;
-  border: 1px solid rgba(230, 126, 34, 0.2);
+  border: 1px solid rgba(155, 89, 182, 0.2);
   transition: var(--transition);
 }
 
 .resource-card:hover {
-  background: rgba(230, 126, 34, 0.2);
+  background: rgba(155, 89, 182, 0.2);
   transform: translateY(-5px);
 }
 
 .resource-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--production-color);
+  color: var(--automation-color);
 }
 
 .contact-info {
@@ -307,18 +307,18 @@ image: /assets/images/projects/modelisation-production.jpg
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background: rgba(230, 126, 34, 0.1);
+  background: rgba(155, 89, 182, 0.1);
   border-radius: 12px;
   transition: var(--transition);
 }
 
 .contact-item:hover {
-  background: rgba(230, 126, 34, 0.2);
+  background: rgba(155, 89, 182, 0.2);
 }
 
 .contact-icon {
   font-size: 1.5rem;
-  color: var(--production-color);
+  color: var(--automation-color);
 }
 
 @keyframes float {
@@ -349,176 +349,222 @@ image: /assets/images/projects/modelisation-production.jpg
 
 <div class="course-hero">
   <div class="course-hero-content">
-    <h1>🏭 Modélisation des systèmes de production</h1>
-    <p class="subtitle">Méthodes et outils pour optimiser la production industrielle</p>
+    <h1>Automatique: Régulation de Système</h1>
+    <p class="subtitle">Théorie du contrôle automatique et régulation de système</p>
     <div class="hero-badges">
-      <span class="hero-badge">🎓 Niveau Master</span>
-      <span class="hero-badge">⏱️ 10 semaines</span>
-      <span class="hero-badge">📊 Études de cas</span>
-      <span class="hero-badge">🛠️ Simulation</span>
+      <span class="hero-badge">🏭 GR-713301</span>
+      <span class="hero-badge">⏱️ 32h TP</span>
+      <span class="hero-badge">📅 Semestre 3</span>
+      <span class="hero-badge">🔧 Niveau Graduate</span>
     </div>
   </div>
 </div>
 
 <nav class="course-nav">
   <div class="nav-links">
-    <a href="#presentation" class="nav-link active">📋 Présentation</a>
-    <a href="#objectifs" class="nav-link">🎯 Objectifs</a>
-    <a href="#planning" class="nav-link">📅 Planning</a>
+    <a href="#objectifs" class="nav-link">🎧 Objectifs</a>
+    <a href="#programme" class="nav-link">📚 Programme</a>
     <a href="#evaluation" class="nav-link">📊 Évaluation</a>
-    <a href="#ressources" class="nav-link">📚 Ressources</a>
+    <a href="#ressources" class="nav-link">💾 Ressources</a>
     <a href="#contact" class="nav-link">📞 Contact</a>
   </div>
 </nav>
 
-<section id="presentation" class="section-card">
+<div class="section-card" id="description">
   <div class="section-header">
-    <div class="section-icon">📋</div>
-    <h2 class="section-title">Présentation du cours</h2>
+    <div class="section-icon">🎛️</div>
+    <h2 class="section-title">Description du cours</h2>
   </div>
-  <p style="font-size: 1.1rem; line-height: 1.7; color: #555; margin-bottom: 2rem;">
-    Ce cours présente les méthodes de modélisation et d'optimisation des systèmes de production industrielle. Les étudiants apprendront à analyser, modéliser et simuler des processus industriels pour améliorer la performance globale.
-  </p>
+  
+  <p class="lead">Ce cours couvre la théorie du contrôle automatique et la régulation de système avec des applications pratiques. Les étudiants acquerront les compétences nécessaires pour concevoir et implémenter des systèmes de régulation automatique dans un contexte industriel.</p>
+  
   <div class="info-box">
-    <h4>📊 Informations générales</h4>
-    <p><strong>Durée :</strong> 10 semaines (30h CM + 20h TD/TP)<br>
-    <strong>Volume de travail personnel estimé :</strong> 50-60 heures<br>
-    <strong>Langue d'enseignement :</strong> Français<br>
-    <strong>Prérequis académiques :</strong> Mathématiques appliquées, gestion industrielle</p>
+    <strong>🎆 Prérequis:</strong> Connaissances de base en mathématiques appliquées, physique et traitement du signal. Une bonne maîtrise des outils informatiques est recommandée.
   </div>
-</section>
+</div>
 
-<section id="objectifs" class="section-card">
+<div class="section-card" id="objectifs">
   <div class="section-header">
-    <div class="section-icon">🎯</div>
+    <div class="section-icon">🎧</div>
     <h2 class="section-title">Objectifs pédagogiques</h2>
   </div>
+  
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>🏭 Modéliser un système de production</h4>
-      <p>Représenter les processus industriels à l’aide d’outils adaptés.</p>
+      <h4>🔧 Maîtrise des concepts</h4>
+      <p>Comprendre les principes fondamentaux de la régulation automatique et les différents types de contrôleurs.</p>
     </div>
+    
     <div class="objective-card">
-      <h4>📈 Optimiser les flux et ressources</h4>
-      <p>Analyser et améliorer l’utilisation des ressources et la productivité.</p>
+      <h4>📊 Analyse de systèmes</h4>
+      <p>Savoir analyser la stabilité et les performances d'un système bouclé à l'aide des outils appropriés.</p>
     </div>
+    
     <div class="objective-card">
-      <h4>🛠️ Utiliser des outils de simulation</h4>
-      <p>Mettre en œuvre des logiciels de simulation pour tester des scénarios industriels.</p>
+      <h4>🔧 Conception pratique</h4>
+      <p>Dimensionner et implémenter des régulateurs adaptés aux spécifications du cahier des charges.</p>
     </div>
+    
     <div class="objective-card">
-      <h4>📊 Résoudre des études de cas</h4>
-      <p>Appliquer les méthodes vues à des cas concrets issus de l’industrie.</p>
+      <h4>💻 Outils de simulation</h4>
+      <p>Utiliser les logiciels de simulation (MATLAB/Simulink) pour la modélisation et la validation des systèmes.</p>
     </div>
   </div>
-</section>
+</div>
 
-<section id="planning" class="section-card">
-  <div class="section-header">
-    <div class="section-icon">📅</div>
-    <h2 class="section-title">Planning du cours</h2>
-  </div>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-week">Semaines 1-2</div>
-      <div class="timeline-content">
-        <h4>Introduction à la modélisation</h4>
-        <div class="timeline-details">Principes de base, outils de représentation, modélisation de flux.</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-week">Semaines 3-5</div>
-      <div class="timeline-content">
-        <h4>Outils de simulation</h4>
-        <div class="timeline-details">Logiciels de simulation, modélisation de scénarios, validation.</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-week">Semaines 6-8</div>
-      <div class="timeline-content">
-        <h4>Optimisation des systèmes</h4>
-        <div class="timeline-details">Méthodes d’optimisation, analyse de performance, indicateurs clés.</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-week">Semaines 9-10</div>
-      <div class="timeline-content">
-        <h4>Études de cas</h4>
-        <div class="timeline-details">Application des méthodes à des cas réels, restitution des résultats.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="evaluation" class="section-card">
-  <div class="section-header">
-    <div class="section-icon">📊</div>
-    <h2 class="section-title">Modalités d’évaluation</h2>
-  </div>
-  <div class="evaluation-grid">
-    <div class="eval-item">
-      <span class="eval-percentage">50%</span>
-      <div class="eval-title">Études de cas</div>
-      <div class="eval-description">Résolution de cas industriels, rapport écrit et présentation.</div>
-    </div>
-    <div class="eval-item">
-      <span class="eval-percentage">30%</span>
-      <div class="eval-title">Contrôles</div>
-      <div class="eval-description">Évaluations régulières sur la compréhension des outils et méthodes.</div>
-    </div>
-    <div class="eval-item">
-      <span class="eval-percentage">20%</span>
-      <div class="eval-title">Examen final</div>
-      <div class="eval-description">Épreuve écrite sur l’ensemble du cours.</div>
-    </div>
-  </div>
-</section>
-
-<section id="ressources" class="section-card">
+<div class="section-card" id="programme">
   <div class="section-header">
     <div class="section-icon">📚</div>
-    <h2 class="section-title">Ressources et supports</h2>
+    <h2 class="section-title">Programme détaillé</h2>
   </div>
+  
+  <div class="timeline">
+    <div class="timeline-item">
+      <h4>🔍 TP 1-2: Introduction à l'automatique</h4>
+      <ul>
+        <li>Concepts de base : système, signal, boucle fermée</li>
+        <li>Modélisation des systèmes linéaires</li>
+        <li>Fonction de transfert et réponse temporelle</li>
+        <li>Introduction à MATLAB/Simulink</li>
+      </ul>
+      <p><strong>Durée:</strong> 8h TP</p>
+    </div>
+    
+    <div class="timeline-item">
+      <h4>📊 TP 3-4: Analyse des systèmes</h4>
+      <ul>
+        <li>Stabilité des systèmes linéaires</li>
+        <li>Critères de stabilité (Routh-Hurwitz, Nyquist)</li>
+        <li>Marge de gain et marge de phase</li>
+        <li>Réponse fréquentielle (Bode, Nyquist)</li>
+      </ul>
+      <p><strong>Durée:</strong> 8h TP</p>
+    </div>
+    
+    <div class="timeline-item">
+      <h4>🔧 TP 5-6: Synthèse des correcteurs</h4>
+      <ul>
+        <li>Régulateurs P, PI, PID</li>
+        <li>Méthodes de réglage (Ziegler-Nichols, placement de pôles)</li>
+        <li>Correction par avance de phase et retard de phase</li>
+        <li>Régulateurs RST</li>
+      </ul>
+      <p><strong>Durée:</strong> 8h TP</p>
+    </div>
+    
+    
+    <div class="timeline-item">
+      <h4>🎆 TP 7-8: Applications pratiques</h4>
+      <ul>
+        <li>Régulation de température</li>
+        <li>Contrôle de position et vitesse</li>
+        <li>Systèmes multi-variables</li>
+        <li>Validation expérimentale sur maquettes</li>
+      </ul>
+      <p><strong>Durée:</strong> 8h TP</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-card" id="evaluation">
+  <div class="section-header">
+    <div class="section-icon">📊</div>
+    <h2 class="section-title">Modalités d'évaluation</h2>
+  </div>
+  
+  <div class="evaluation-grid">
+    <div class="eval-item">
+      <span class="eval-percentage">60%</span>
+      <h4 class="eval-title">Note de classe</h4>
+      <p class="eval-description">Évaluations continues pendant les séances de TP, participation et compréhension</p>
+    </div>
+    
+    <div class="eval-item">
+      <span class="eval-percentage">40%</span>
+      <h4 class="eval-title">Note de rapport</h4>
+      <p class="eval-description">Rapport d'étude sur un projet de régulation automatique au choix</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-card" id="ressources">
+  <div class="section-header">
+    <div class="section-icon">💾</div>
+    <h2 class="section-title">Ressources pédagogiques</h2>
+  </div>
+  
   <div class="resources-grid">
     <div class="resource-card">
-      <div class="resource-icon">📖</div>
-      <h4>Supports de cours</h4>
+      <div class="resource-icon">📚</div>
+      <h4>Documentation technique</h4>
       <ul>
-        <li><a href="https://nextcloud.example.com/s/modelisation-production" target="_blank">Accès Nextcloud (supports de cours)</a></li>
+        <li>Polycopié de cours et de TP</li>
+        <li>Formulaires et aides-mémoires</li>
+        <li>Fiches techniques des composants</li>
       </ul>
     </div>
+    
     <div class="resource-card">
-      <div class="resource-icon">🔗</div>
+      <div class="resource-icon">💻</div>
+      <h4>Logiciels et outils</h4>
+      <ul>
+        <li>MATLAB/Simulink (licence étudiante)</li>
+        <li>Scilab (logiciel libre)</li>
+        <li>Python (librairies de contrôle)</li>
+        <li>Maquettes pédagogiques</li>
+      </ul>
+    </div>
+    
+    <div class="resource-card">
+      <div class="resource-icon">📄</div>
       <h4>Ressources complémentaires</h4>
       <ul>
-        <li><a href="https://fr.wikipedia.org/wiki/Mod%C3%A9lisation_des_processus" target="_blank">Modélisation des processus (Wikipedia)</a></li>
-        <li><a href="https://www.simul8.com/" target="_blank">Simul8 (logiciel de simulation)</a></li>
+        <li>Bibliographie spécialisée</li>
+        <li>Tutoriels vidéo</li>
+        <li>Exercices supplémentaires</li>
+        <li>Projets d'approfondissement</li>
       </ul>
     </div>
   </div>
-</section>
+</div>
 
-<section id="contact" class="section-card">
+<div class="section-card" id="contact">
   <div class="section-header">
     <div class="section-icon">📞</div>
-    <h2 class="section-title">Contact & encadrement</h2>
+    <h2 class="section-title">Informations de contact</h2>
   </div>
+  
   <div class="contact-info">
     <div class="contact-item">
-      <span class="contact-icon">👨‍🏫</span>
-      <span><strong>Responsable du cours :</strong> Dr. Yinoussa Adagolodjo</span>
+      <div class="contact-icon">👨‍🏫</div>
+      <div>
+        <strong>Enseignant responsable</strong><br>
+        Dr. Yinoussa Adagolodjo
+      </div>
     </div>
+    
     <div class="contact-item">
-      <span class="contact-icon">✉️</span>
-      <span><strong>Email :</strong> Remplir formulaire de contact sur la page d'accueil</span>
+      <div class="contact-icon">✉️</div>
+      <div>
+        <strong>Email</strong><br>
+        Utiliser le formulaire de contact sur la page d'accueil
+      </div>
     </div>
+    
     <div class="contact-item">
-      <span class="contact-icon">🏢</span>
-      <span><strong>Bureau :</strong> Bâtiment Polytech, Université de Lille</span>
+      <div class="contact-icon">🏢</div>
+      <div>
+        <strong>Lieu des TP</strong><br>
+        Laboratoire d'Automatique, UFR Sciences
+      </div>
     </div>
+    
     <div class="contact-item">
-      <span class="contact-icon">⏰</span>
-      <span><strong>Permanence :</strong> Sur rendez-vous (contact par email)</span>
+      <div class="contact-icon">🕰️</div>
+      <div>
+        <strong>Horaires</strong><br>
+        Créneaux variables selon planning - Consulter l'emploi du temps
+      </div>
     </div>
   </div>
-</section> 
+</div>
