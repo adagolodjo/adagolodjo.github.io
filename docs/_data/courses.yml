@@ -56,6 +56,15 @@
   hours_tp: "21"
   evaluation: "Note de Classe, Note de rapport"
 
+- code: GBA3-ROBOTIQUE-ABB
+  title: "TP Robotique ABB IRB140"
+  semester: "2025-2026"
+  description: "Simulation et programmation robotique industrielle avec RobotStudio, RAPID et GRAFCET. Applications en génie biologique et alimentaire."
+  syllabus: "/teaching/courses/gba3-robotique-abb/"
+  level: "Undergraduate"
+  hours_tp: "7"
+  evaluation: "Livrables (40%), Implication (25%), Réalisation (25%), Sauvegarde (10%)"
+
 - code: GR-712302
   title: "Programmation"
   semester: "Fall 2024"

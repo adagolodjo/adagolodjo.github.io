@@ -441,6 +441,7 @@ image: /assets/images/projects/robotique.jpg
     <a href="#presentation" class="nav-link active">📋 Présentation</a>
     <a href="#objectifs" class="nav-link">🎯 Objectifs</a>
     <a href="#planning" class="nav-link">📅 Planning</a>
+    <a href="#organisation" class="nav-link">📅 Organisation</a>
     <a href="#exercices" class="nav-link">🔧 Exercices</a>
     <a href="#evaluation" class="nav-link">📊 Évaluation</a>
     <a href="#securite" class="nav-link">⚠️ Sécurité</a>
@@ -475,6 +476,21 @@ image: /assets/images/projects/robotique.jpg
     <strong>Lieu :</strong> Salles C301 / C302<br>
     <strong>Format :</strong> Groupes de TP<br>
     <strong>Matériel :</strong> Station RobotStudio + Robot ABB IRB 140</p>
+    
+    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(230, 126, 34, 0.1); border-radius: 8px; border-left: 4px solid var(--robotics-color);">
+      <h5 style="color: var(--robotics-color); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        📄 Document TP Complet
+      </h5>
+      <p style="margin-bottom: 1rem; font-size: 0.95rem;">Le document PDF détaillé avec toutes les étapes, captures d'écran et instructions complètes est disponible :</p>
+      <a href="https://nextcloud.univ-lille.fr/index.php/s/9FB727j462rFDjE" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         style="display: inline-flex; align-items: center; gap: 0.5rem; background: #2c3e50; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: var(--transition); box-shadow: 0 2px 8px rgba(44, 62, 80, 0.3);"
+         onmouseover="this.style.background='#1a252f'; this.style.transform='translateY(-2px)'" 
+         onmouseout="this.style.background='#2c3e50'; this.style.transform='translateY(0)'">
+        📥 Accéder au PDF du TP (Nextcloud)
+      </a>
+    </div>
   </div>
 
   <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">✅ Prérequis</h3>
@@ -572,6 +588,166 @@ image: /assets/images/projects/robotique.jpg
       </div>
     </div>
   </div>
+</section>
+
+<section id="organisation" class="section-card">
+  <div class="section-header">
+    <div class="section-icon">📅</div>
+    <h2 class="section-title">Organisation du TP</h2>
+  </div>
+
+  <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+    🏢 Lieu et modalités
+  </h3>
+  
+  <div class="objectives-grid">
+    <div class="objective-card">
+      <h4>📍 Salles</h4>
+      <p>C301 / C302</p>
+    </div>
+    <div class="objective-card">
+      <h4>👥 Format</h4>
+      <p>Groupes de TP</p>
+    </div>
+    <div class="objective-card">
+      <h4>🛠️ Matériel</h4>
+      <p>Station RobotStudio + Robot ABB IRB 140</p>
+    </div>
+    <div class="objective-card">
+      <h4>👨‍🏫 Encadrement</h4>
+      <p>Enseignant</p>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <h4>📋 Critères d'évaluation détaillés (4 notes)</h4>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+      
+      <div style="background: white; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #3498db; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <h5 style="color: #3498db; margin-bottom: 1rem; font-size: 1.1rem; font-weight: 600;">📄 Note 1 : Livrables (40%)</h5>
+        <ul class="checklist" style="font-size: 0.95rem;">
+          <li>Compte-rendu final (rendu dernière séance)</li>
+          <li>GRAFCET complet et documenté</li>
+          <li>Qualité de la documentation technique</li>
+          <li>Réponses aux questions de réflexion</li>
+        </ul>
+      </div>
+      
+      <div style="background: white; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #27ae60; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <h5 style="color: #27ae60; margin-bottom: 1rem; font-size: 1.1rem; font-weight: 600;">🤝 Note 2 : Implication en séance (25%)</h5>
+        <ul class="checklist" style="font-size: 0.95rem;">
+          <li>Participation active aux activités</li>
+          <li>Collaboration efficace au sein du groupe</li>
+          <li>Concentration sur le TP</li>
+        </ul>
+        <div class="warning-box" style="margin-top: 1rem; font-size: 0.9rem;">
+          <h6 style="color: var(--warning-color); margin: 0; font-size: 0.9rem;">⚠️ Attention</h6>
+          <p style="margin: 0.5rem 0 0 0;">Le temps passé sur vos portables personnels = temps non consacré au TP</p>
+        </div>
+      </div>
+      
+      <div style="background: white; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #e67e22; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <h5 style="color: #e67e22; margin-bottom: 1rem; font-size: 1.1rem; font-weight: 600;">🎯 Note 3 : Réalisation finale (25%)</h5>
+        <ul class="checklist" style="font-size: 0.95rem;">
+          <li>Niveau de développement atteint</li>
+          <li>Fonctionnalités implémentées</li>
+          <li>Qualité de l'exécution (simulation + réel)</li>
+          <li>Gestion des difficultés techniques</li>
+        </ul>
+        <p style="margin-top: 1rem; font-style: italic; color: #666; font-size: 0.9rem;">
+          <strong>Note importante :</strong> Les pannes matérielles sont prises en compte dans l'évaluation
+        </p>
+      </div>
+      
+      <div style="background: white; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #9b59b6; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <h5 style="color: #9b59b6; margin-bottom: 1rem; font-size: 1.1rem; font-weight: 600;">💾 Note 4 : Sauvegarde et fermeture (10%)</h5>
+        <ul class="checklist" style="font-size: 0.95rem;">
+          <li>Sauvegarde correcte des fichiers de travail</li>
+          <li>Fermeture propre des applications</li>
+          <li>Arrêt correct de la station de travail</li>
+          <li>Respect du matériel partagé</li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="safety-alert">
+    <h4><span>🚨</span> Conséquences d'une mauvaise fermeture</h4>
+    <ul class="checklist">
+      <li>Perte de temps pour les étudiants suivants</li>
+      <li>Risque de corruption des fichiers</li>
+      <li>Dysfonctionnement des applications</li>
+      <li>Impact sur la note de groupe</li>
+    </ul>
+  </div>
+
+  <h3 style="color: var(--primary-color); margin: 2rem 0 1.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+    ✅ Procédure de fin de séance
+  </h3>
+  
+  <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 2rem; border-radius: var(--border-radius); border-left: 4px solid var(--success-color); margin: 2rem 0;">
+    <h4 style="color: var(--success-color); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+      📋 Check-list obligatoire
+    </h4>
+    <ul class="checklist">
+      <li><strong>Sauvegarder</strong> tous les fichiers dans le dossier dédié</li>
+      <li><strong>Exporter</strong> les programmes vers le répertoire du groupe</li>
+      <li><strong>Fermer</strong> RobotStudio proprement</li>
+      <li><strong>Fermer</strong> Program Maker</li>
+      <li><strong>Arrêter</strong> le contrôleur virtuel</li>
+      <li><strong>Déconnecter</strong> le robot réel (si utilisé)</li>
+      <li><strong>Éteindre</strong> l'écran et l'unité centrale</li>
+      <li><strong>Ranger</strong> l'espace de travail</li>
+    </ul>
+  </div>
+
+  <h4 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">📁 Convention de nommage des fichiers</h4>
+  <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.9rem; line-height: 1.6; border-left: 4px solid var(--secondary-color);">
+    Dossier principal : <strong>GBA3_TP_Robotique_Groupe[X]</strong><br>
+    ├── Séance1/<br>
+    │&nbsp;&nbsp;&nbsp;├── [Nom1]_[Nom2]_Exercice1.rspag<br>
+    │&nbsp;&nbsp;&nbsp;└── [Nom1]_[Nom2]_Programme1.prg<br>
+    └── Séance2/<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;├── [Nom1]_[Nom2]_Exercice2.rspag<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;├── [Nom1]_[Nom2]_Programme2.prg<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;└── [Nom1]_[Nom2]_GRAFCET.pdf
+  </div>
+
+  <h3 style="color: var(--primary-color); margin: 2rem 0 1.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+    🌟 Conseils pour réussir
+  </h3>
+  
+  <div class="objectives-grid">
+    <div class="objective-card">
+      <h4>📆 Avant le TP</h4>
+      <ul class="checklist">
+        <li>Relire les pré-requis</li>
+        <li>Préparer ses questions</li>
+        <li>Apporter une clé USB (sauvegarde supplémentaire)</li>
+      </ul>
+    </div>
+    <div class="objective-card">
+      <h4>⏳ Pendant le TP</h4>
+      <ul class="checklist">
+        <li>Écouter les consignes attentivement</li>
+        <li>Poser des questions en cas de doute</li>
+        <li>Documenter au fur et à mesure</li>
+        <li>Tester régulièrement les programmes</li>
+        <li>Sauvegarder fréquemment</li>
+      </ul>
+    </div>
+    <div class="objective-card">
+      <h4>✅ Après le TP</h4>
+      <ul class="checklist">
+        <li>Finaliser le compte-rendu</li>
+        <li>Vérifier les fichiers sauvegardés</li>
+        <li>Préparer les questions pour la séance suivante</li>
+      </ul>
+    </div>
+  </div>
+
 </section>
 
 <section id="exercices" class="section-card">
@@ -726,6 +902,18 @@ image: /assets/images/projects/robotique.jpg
         <li><strong>Contrôleur virtuel</strong> : Simulation comportement réel</li>
         <li><strong>I/O Simulator</strong> : Test des entrées/sorties</li>
       </ul>
+    </div>
+    <div class="objective-card">
+      <h4>📄 Document officiel du TP</h4>
+      <p>Accédez au document PDF complet du TP avec toutes les étapes détaillées :</p>
+      <a href="https://nextcloud.univ-lille.fr/index.php/s/9FB727j462rFDjE" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         style="display: inline-flex; align-items: center; gap: 0.5rem; background: #2c3e50; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 1rem; transition: var(--transition); box-shadow: 0 2px 8px rgba(44, 62, 80, 0.2);"
+         onmouseover="this.style.background='#1a252f'" 
+         onmouseout="this.style.background='#2c3e50'">
+        📥 Télécharger le PDF du TP
+      </a>
     </div>
     <div class="objective-card">
       <h4>📁 Convention de nommage</h4>
