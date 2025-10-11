@@ -605,6 +605,9 @@ subtitle: Current and Past Courses
     <a href="/teaching/courses/gr-711302/" class="french-course-link">
       🤖 GR-711302 Automatique : Robotique
     </a>
+    <a href="/teaching/courses/gba3-robotique-abb/" class="french-course-link">
+      🦾 TP Robotique ABB IRB140 - GBA3
+    </a>
     <a href="/teaching/courses/gr-712302/" class="french-course-link">
       💻 GR-712302 Programmation
     </a>
@@ -842,6 +845,7 @@ I am committed to continually improving my teaching methods based on student fee
 - [Logique/Informatique Industrielle](/teaching/courses/logique-industrielle/)
 - [Modélisation des systèmes de production](/teaching/courses/modelisation-production/)
 - [GR-711302 Automatique : Robotique](/teaching/courses/gr-711302/)
+- [TP Robotique ABB IRB140 - GBA3](/teaching/courses/gba3-robotique-abb/)
 - [GR-712302 Programmation](/teaching/courses/gr-712302/)
 - [GR-713301 Automatique : Regulation de Système](/teaching/courses/regulation-systeme/)
 - [Analyse numérique : Optimisation](/teaching/courses/analyse-numerique/)
