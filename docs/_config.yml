@@ -21,7 +21,7 @@ author:
   # title_logo: /images/title-logo-image.png
 
 # Theme and plugins
-# remote_theme: chrisrhymes/bulma-clean-theme@v0.13.1  # Temporarily commented out due to SSL issues
+# remote_theme: chrisrhymes/bulma-clean-theme@v0.13.1  # Temporarily disabled due to SSL certificate issues
 plugins:
   - jekyll-feed
   - jekyll-email-protect

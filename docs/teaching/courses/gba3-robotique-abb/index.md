@@ -475,6 +475,21 @@ image: /assets/images/projects/robotique.jpg
     <strong>Lieu :</strong> Salles C301 / C302<br>
     <strong>Format :</strong> Groupes de TP<br>
     <strong>Matériel :</strong> Station RobotStudio + Robot ABB IRB 140</p>
+    
+    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(230, 126, 34, 0.1); border-radius: 8px; border-left: 4px solid var(--robotics-color);">
+      <h5 style="color: var(--robotics-color); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        📄 Document TP Complet
+      </h5>
+      <p style="margin-bottom: 1rem; font-size: 0.95rem;">Le document PDF détaillé avec toutes les étapes, captures d'écran et instructions complètes est disponible :</p>
+      <a href="https://nextcloud.univ-lille.fr/index.php/s/9FB727j462rFDjE" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--robotics-color); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: var(--transition); box-shadow: 0 2px 8px rgba(230, 126, 34, 0.3);"
+         onmouseover="this.style.background='#d35400'; this.style.transform='translateY(-2px)'" 
+         onmouseout="this.style.background='var(--robotics-color)'; this.style.transform='translateY(0)'">
+        📥 Accéder au PDF du TP (Nextcloud)
+      </a>
+    </div>
   </div>
 
   <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">✅ Prérequis</h3>
@@ -726,6 +741,18 @@ image: /assets/images/projects/robotique.jpg
         <li><strong>Contrôleur virtuel</strong> : Simulation comportement réel</li>
         <li><strong>I/O Simulator</strong> : Test des entrées/sorties</li>
       </ul>
+    </div>
+    <div class="objective-card">
+      <h4>📄 Document officiel du TP</h4>
+      <p>Accédez au document PDF complet du TP avec toutes les étapes détaillées :</p>
+      <a href="https://nextcloud.univ-lille.fr/index.php/s/9FB727j462rFDjE" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--robotics-color); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 1rem; transition: var(--transition);"
+         onmouseover="this.style.background='#d35400'" 
+         onmouseout="this.style.background='var(--robotics-color)'">
+        📥 Télécharger le PDF du TP
+      </a>
     </div>
     <div class="objective-card">
       <h4>📁 Convention de nommage</h4>
