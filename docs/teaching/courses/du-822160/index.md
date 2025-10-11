@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "Industrie 4.0"
-subtitle: "Introduction aux concepts de l'Industrie 4.0, IoT et fabrication intelligente"
-permalink: /teaching/courses/industrie-40/
-image: /assets/images/projects/industrie-40.jpg
+title: "DU-822160 Introduction à la Sécurité Informatique"
+subtitle: "Fondamentaux de la cybersécurité et protection des données"
+permalink: /teaching/courses/du-822160/
+image: /assets/images/projects/securite-informatique.jpg
 ---
 
 <style>
@@ -13,8 +13,8 @@ image: /assets/images/projects/industrie-40.jpg
   --accent-color: #e74c3c;
   --success-color: #27ae60;
   --warning-color: #f39c12;
-  --industry-color: #e67e22;
-  --tech-color: #1abc9c;
+  --security-color: #8e44ad;
+  --danger-color: #e74c3c;
   --light-bg: #f8f9fa;
   --card-shadow: 0 4px 20px rgba(0,0,0,0.08);
   --card-shadow-hover: 0 12px 40px rgba(0,0,0,0.15);
@@ -23,7 +23,7 @@ image: /assets/images/projects/industrie-40.jpg
 }
 
 .course-hero {
-  background: linear-gradient(135deg, var(--industry-color) 0%, var(--tech-color) 100%);
+  background: linear-gradient(135deg, var(--security-color) 0%, var(--danger-color) 100%);
   color: white;
   padding: 4rem 2rem;
   border-radius: var(--border-radius);
@@ -141,7 +141,7 @@ image: /assets/images/projects/industrie-40.jpg
 .section-icon {
   font-size: 2rem;
   margin-right: 1rem;
-  color: var(--industry-color);
+  color: var(--security-color);
 }
 
 .section-title {
@@ -173,10 +173,19 @@ image: /assets/images/projects/industrie-40.jpg
 
 .info-box {
   background: linear-gradient(135deg, #fff3cd, #d1ecf1);
-  border-left: 4px solid var(--industry-color);
+  border-left: 4px solid var(--security-color);
   padding: 1.5rem;
   border-radius: 8px;
   margin: 2rem 0;
+}
+
+.warning-box {
+  background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+  border-left: 4px solid var(--danger-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  border: 1px solid rgba(231, 76, 60, 0.2);
 }
 
 .timeline {
@@ -243,7 +252,7 @@ image: /assets/images/projects/industrie-40.jpg
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--industry-color), var(--tech-color));
+  background: linear-gradient(90deg, var(--security-color), var(--danger-color));
 }
 
 .eval-item:hover {
@@ -254,7 +263,7 @@ image: /assets/images/projects/industrie-40.jpg
 .eval-percentage {
   font-size: 3rem;
   font-weight: 700;
-  color: var(--industry-color);
+  color: var(--security-color);
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -278,23 +287,23 @@ image: /assets/images/projects/industrie-40.jpg
 }
 
 .resource-card {
-  background: rgba(230, 126, 34, 0.1);
+  background: rgba(142, 68, 173, 0.1);
   backdrop-filter: blur(10px);
   padding: 2rem;
   border-radius: 16px;
-  border: 1px solid rgba(230, 126, 34, 0.2);
+  border: 1px solid rgba(142, 68, 173, 0.2);
   transition: var(--transition);
 }
 
 .resource-card:hover {
-  background: rgba(230, 126, 34, 0.2);
+  background: rgba(142, 68, 173, 0.2);
   transform: translateY(-5px);
 }
 
 .resource-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--industry-color);
+  color: var(--security-color);
 }
 
 .contact-info {
@@ -308,33 +317,38 @@ image: /assets/images/projects/industrie-40.jpg
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background: rgba(230, 126, 34, 0.1);
+  background: rgba(142, 68, 173, 0.1);
   border-radius: 12px;
   transition: var(--transition);
 }
 
 .contact-item:hover {
-  background: rgba(230, 126, 34, 0.2);
+  background: rgba(142, 68, 173, 0.2);
 }
 
 .contact-icon {
   font-size: 1.5rem;
-  color: var(--industry-color);
+  color: var(--security-color);
 }
 
-.tech-stack {
+.security-topics {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
   margin-top: 1.5rem;
 }
 
-.tech-item {
-  background: rgba(26, 188, 156, 0.1);
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  border: 1px solid rgba(26, 188, 156, 0.2);
+.security-topic {
+  background: rgba(142, 68, 173, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--security-color);
+  transition: var(--transition);
+}
+
+.security-topic:hover {
+  background: rgba(142, 68, 173, 0.1);
+  transform: translateY(-3px);
 }
 
 @keyframes float {
@@ -365,13 +379,13 @@ image: /assets/images/projects/industrie-40.jpg
 
 <div class="course-hero">
   <div class="course-hero-content">
-    <h1>Industrie 4.0</h1>
-    <p class="subtitle">Introduction aux concepts de l'Industrie 4.0, IoT et fabrication intelligente</p>
+    <h1>Introduction à la Sécurité Informatique</h1>
+    <p class="subtitle">Fondamentaux de la cybersécurité et protection des données</p>
     <div class="hero-badges">
-      <span class="hero-badge">🏭 INDUSTRIE-40</span>
-      <span class="hero-badge">⏱️ 4.5h CM + 6h TP</span>
-      <span class="hero-badge">🎆 Graduate</span>
-      <span class="hero-badge">🔥 Technologies Avancées</span>
+      <span class="hero-badge">🔒 DU-822160</span>
+      <span class="hero-badge">⏱️ 6h CM</span>
+      <span class="hero-badge">🎧 Graduate</span>
+      <span class="hero-badge">🔮 Semestre 2</span>
     </div>
   </div>
 </div>
@@ -380,8 +394,8 @@ image: /assets/images/projects/industrie-40.jpg
   <div class="nav-links">
     <a href="#objectifs" class="nav-link">🎧 Objectifs</a>
     <a href="#programme" class="nav-link">📚 Programme</a>
+    <a href="#themes" class="nav-link">🔮 Thèmes</a>
     <a href="#evaluation" class="nav-link">📊 Évaluation</a>
-    <a href="#technologies" class="nav-link">💻 Technologies</a>
     <a href="#ressources" class="nav-link">💾 Ressources</a>
     <a href="#contact" class="nav-link">📞 Contact</a>
   </div>
@@ -389,14 +403,18 @@ image: /assets/images/projects/industrie-40.jpg
 
 <div class="section-card" id="description">
   <div class="section-header">
-    <div class="section-icon">🏢</div>
+    <div class="section-icon">🔒</div>
     <h2 class="section-title">Description du cours</h2>
   </div>
   
-  <p class="lead">Ce cours introduit les étudiants aux concepts et technologies qui propulsent la Quatrième Révolution Industrielle (Industrie 4.0). Les étudiants exploreront comment les systèmes cyber-physiques, l'Internet des Objets (IoT), l'intelligence artificielle et l'analyse de données transforment les processus de fabrication et industriels.</p>
+  <p class="lead">Ce cours propose une introduction aux fondamentaux de la cybersécurité, couvrant la protection des données, les systèmes d'authentification et les meilleures pratiques de sécurité informatique. Les étudiants acquerront les connaissances de base nécessaires pour comprendre et évaluer les risques de sécurité dans les environnements numériques.</p>
+  
+  <div class="warning-box">
+    <strong>⚠️ Attention:</strong> Ce cours traite de concepts de sécurité à des fins éducatives uniquement. Toute utilisation malveillante des techniques présentées est strictement interdite et contraire à l'éthique professionnelle.
+  </div>
   
   <div class="info-box">
-    <strong>🎆 Prérequis:</strong> Connaissances de base des processus de fabrication, compétences en programmation (Python ou similaire), compréhension des réseaux informatiques et familiarité avec les concepts de bases de données.
+    <strong>🎆 Prérequis:</strong> Connaissances de base en informatique, réseaux et systèmes d'exploitation. Une familiarité avec les concepts de programmation est recommandée.
   </div>
 </div>
 
@@ -408,23 +426,23 @@ image: /assets/images/projects/industrie-40.jpg
   
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>🔧 Principes fondamentaux</h4>
-      <p>Comprendre les principes fondamentaux et les piliers de l'Industrie 4.0.</p>
+      <h4>🔮 Comprendre les menaces</h4>
+      <p>Identifier et analyser les principales menaces de sécurité informatique et leurs impacts potentiels.</p>
     </div>
     
     <div class="objective-card">
-      <h4>📊 Impact de la transformation</h4>
-      <p>Analyser l'impact de la transformation numérique sur les processus de fabrication.</p>
+      <h4>🔐 Maîtriser l'authentification</h4>
+      <p>Comprendre les mécanismes d'authentification, d'autorisation et de gestion des identités numériques.</p>
     </div>
     
     <div class="objective-card">
-      <h4>💻 Solutions IoT</h4>
-      <p>Concevoir et implémenter des solutions IoT pour les applications industrielles.</p>
+      <h4>🛡️ Appliquer la protection</h4>
+      <p>Mettre en œuvre des mesures de protection des données et des systèmes d'information.</p>
     </div>
     
     <div class="objective-card">
-      <h4>🔍 Évaluation des systèmes</h4>
-      <p>Évaluer les avantages et les défis des systèmes de fabrication intelligente.</p>
+      <h4>📈 Évaluer les risques</h4>
+      <p>Effectuer des évaluations de risques de sécurité et proposer des solutions appropriées.</p>
     </div>
   </div>
 </div>
@@ -435,81 +453,77 @@ image: /assets/images/projects/industrie-40.jpg
     <h2 class="section-title">Programme détaillé</h2>
   </div>
   
-  <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">🎧 Cours Magistraux (CM - 4.5h)</h3>
-  
   <div class="timeline">
     <div class="timeline-item">
-      <h4>🔍 Module 1: Introduction à l'Industrie 4.0</h4>
+      <h4>🔍 Séance 1: Introduction à la cybersécurité</h4>
       <ul>
-        <li>Contexte historique : De l'Industrie 1.0 à 4.0</li>
-        <li>Technologies clés et facteurs facilitateurs</li>
-        <li>Transformation numérique dans la fabrication</li>
+        <li>Définitions et enjeux de la sécurité informatique</li>
+        <li>Panorama des menaces actuelles</li>
+        <li>Principaux acteurs et motivations</li>
+        <li>Cadre légal et réglementaire (RGPD, etc.)</li>
       </ul>
-      <p><strong>Durée:</strong> 1.5h CM</p>
+      <p><strong>Durée:</strong> 2h CM</p>
     </div>
     
     <div class="timeline-item">
-      <h4>📊 Module 2: Systèmes Cyber-Physiques (CPS)</h4>
+      <h4>🔐 Séance 2: Authentification et cryptographie</h4>
       <ul>
-        <li>Architecture et composants des CPS</li>
-        <li>Intégration des systèmes physiques et numériques</li>
-        <li>Surveillance et contrôle en temps réel</li>
+        <li>Principes de l'authentification forte</li>
+        <li>Gestion des mots de passe et des clés</li>
+        <li>Cryptographie symétrique et asymétrique</li>
+        <li>Certificats numériques et PKI</li>
       </ul>
-      <p><strong>Durée:</strong> 1h CM</p>
+      <p><strong>Durée:</strong> 2h CM</p>
     </div>
     
     <div class="timeline-item">
-      <h4>💻 Module 3: Internet des Objets (IoT) Industriel</h4>
+      <h4>🛡️ Séance 3: Protection et bonnes pratiques</h4>
       <ul>
-        <li>Fondamentaux de l'IoT industriel (IIoT)</li>
-        <li>Réseaux de capteurs et collecte de données</li>
-        <li>Protocoles de communication et standards</li>
+        <li>Sécurité des réseaux et pare-feu</li>
+        <li>Détection d'intrusion et monitoring</li>
+        <li>Sauvegarde et plan de continuité</li>
+        <li>Bonnes pratiques organisationnelles</li>
       </ul>
-      <p><strong>Durée:</strong> 1h CM</p>
-    </div>
-    
-    <div class="timeline-item">
-      <h4>🧠 Module 4: Analyse de données et IA</h4>
-      <ul>
-        <li>Big data dans la fabrication</li>
-        <li>Applications de l'apprentissage automatique</li>
-        <li>Maintenance prédictive et contrôle qualité</li>
-      </ul>
-      <p><strong>Durée:</strong> 1h CM</p>
+      <p><strong>Durée:</strong> 2h CM</p>
     </div>
   </div>
+</div>
+
+<div class="section-card" id="themes">
+  <div class="section-header">
+    <div class="section-icon">🔮</div>
+    <h2 class="section-title">Thèmes abordés</h2>
+  </div>
   
-  <h3 style="color: var(--tech-color); margin: 2rem 0 1rem;">🔧 Travaux Pratiques (TP - 6h)</h3>
-  
-  <div class="timeline">
-    <div class="timeline-item">
-      <h4>🔮 TP 1: Implémentation de capteurs IoT</h4>
-      <ul>
-        <li>Expérience pratique avec les capteurs industriels</li>
-        <li>Acquisition et traitement des données</li>
-        <li>Protocoles de communication (MQTT, OPC-UA)</li>
-      </ul>
-      <p><strong>Durée:</strong> 2h TP</p>
+  <div class="security-topics">
+    <div class="security-topic">
+      <h4>🛡️ Fondamentaux de la cybersécurité</h4>
+      <p>Concepts de base, terminologie, enjeux économiques et stratégiques de la sécurité informatique.</p>
     </div>
     
-    <div class="timeline-item">
-      <h4>🎆 TP 2: Simulation de fabrication intelligente</h4>
-      <ul>
-        <li>Concepts de jumeaux numériques</li>
-        <li>Simulation de processus de fabrication</li>
-        <li>Optimisation des performances avec l'analyse de données</li>
-      </ul>
-      <p><strong>Durée:</strong> 2h TP</p>
+    <div class="security-topic">
+      <h4>📊 Protection des données</h4>
+      <p>Confidentialité, intégrité, disponibilité, anonymisation, pseudonymisation et conformité RGPD.</p>
     </div>
     
-    <div class="timeline-item">
-      <h4>📈 TP 3: Étude de cas Industrie 4.0</h4>
-      <ul>
-        <li>Analyse de projets de transformation industrielle réels</li>
-        <li>Conception d'un concept d'usine intelligente</li>
-        <li>Présentation des solutions proposées</li>
-      </ul>
-      <p><strong>Durée:</strong> 2h TP</p>
+    <div class="security-topic">
+      <h4>🔑 Authentification et autorisation</h4>
+      <p>Mécanismes d'authentification, gestion des identités, contrôle d'accès et single sign-on.</p>
+    </div>
+    
+    <div class="security-topic">
+      <h4>🔐 Cryptographie de base</h4>
+      <p>Algorithmes de chiffrement, signatures numériques, hachage et applications pratiques.</p>
+    </div>
+    
+    <div class="security-topic">
+      <h4>🌐 Sécurité des réseaux</h4>
+      <p>Protocoles sécurisés, VPN, pare-feu, détection d'intrusion et analyse de trafic.</p>
+    </div>
+    
+    <div class="security-topic">
+      <h4>✅ Bonnes pratiques</h4>
+      <p>Politiques de sécurité, sensibilisation utilisateur, gestion des incidents et audits.</p>
     </div>
   </div>
 </div>
@@ -523,53 +537,14 @@ image: /assets/images/projects/industrie-40.jpg
   <div class="evaluation-grid">
     <div class="eval-item">
       <span class="eval-percentage">70%</span>
-      <h4 class="eval-title">Exposé</h4>
-      <p class="eval-description">Présentation de projet final sur une stratégie d'implémentation Industrie 4.0</p>
+      <h4 class="eval-title">Devoir Surveillé</h4>
+      <p class="eval-description">Épreuve écrite portant sur l'ensemble des concepts abordés en cours</p>
     </div>
     
     <div class="eval-item">
       <span class="eval-percentage">30%</span>
       <h4 class="eval-title">Note de classe</h4>
-      <p class="eval-description">Participation active en cours et séances pratiques, évaluations continues</p>
-    </div>
-  </div>
-</div>
-
-<div class="section-card" id="technologies">
-  <div class="section-header">
-    <div class="section-icon">💻</div>
-    <h2 class="section-title">Technologies et outils</h2>
-  </div>
-  
-  <div class="tech-stack">
-    <div class="tech-item">
-      <h5>📱 Plateformes IoT</h5>
-      <p>Arduino, Raspberry Pi, Node-RED</p>
-    </div>
-    
-    <div class="tech-item">
-      <h5>🏭 Logiciels de simulation</h5>
-      <p>Factory I/O, Plant Simulation</p>
-    </div>
-    
-    <div class="tech-item">
-      <h5>📊 Visualisation données</h5>
-      <p>Grafana, Power BI, Tableau</p>
-    </div>
-    
-    <div class="tech-item">
-      <h5>🔗 Protocoles industriels</h5>
-      <p>MQTT, OPC-UA, Modbus</p>
-    </div>
-    
-    <div class="tech-item">
-      <h5>☁️ Plateformes cloud</h5>
-      <p>AWS IoT, Azure IoT, Google Cloud</p>
-    </div>
-    
-    <div class="tech-item">
-      <h5>🐍 Programmation</h5>
-      <p>Python, JavaScript, C++</p>
+      <p class="eval-description">Participation active, exercices pratiques et évaluations continues</p>
     </div>
   </div>
 </div>
@@ -585,30 +560,32 @@ image: /assets/images/projects/industrie-40.jpg
       <div class="resource-icon">📚</div>
       <h4>Documentation technique</h4>
       <ul>
-        <li>Études de cas industriels et livres blancs</li>
-        <li>Documentation des plateformes Industrie 4.0</li>
-        <li>Rapports professionnels de l'industrie</li>
+        <li>Supports de cours et présentations</li>
+        <li>Guides de bonnes pratiques</li>
+        <li>Référentiels de sécurité (ISO 27001, NIST)</li>
+        <li>Veille sécurité et actualités</li>
       </ul>
     </div>
     
     <div class="resource-card">
-      <div class="resource-icon">🔍</div>
-      <h4>Recherche actuelle</h4>
+      <div class="resource-icon">🔧</div>
+      <h4>Outils et technologies</h4>
       <ul>
-        <li>Recherche actuelle en fabrication intelligente</li>
-        <li>Articles scientifiques et publications</li>
-        <li>Conférences et webinaires spécialisés</li>
+        <li>Simulateurs de cyberattaques</li>
+        <li>Outils d'analyse de vulnérabilités</li>
+        <li>Plateformes de test (machines virtuelles)</li>
+        <li>Logiciels de cryptographie</li>
       </ul>
     </div>
     
     <div class="resource-card">
-      <div class="resource-icon">💼</div>
-      <h4>Perspectives carrière</h4>
+      <div class="resource-icon">📋</div>
+      <h4>Ressources complémentaires</h4>
       <ul>
-        <li>Conseil en digitalisation industrielle</li>
-        <li>Conception d'usines intelligentes</li>
-        <li>Développement de solutions IoT</li>
-        <li>Gestion de la transformation digitale</li>
+        <li>Études de cas réels d'incidents</li>
+        <li>Rapports d'expert et analyses</li>
+        <li>Formations en ligne et certifications</li>
+        <li>Communautés et forums spécialisés</li>
       </ul>
     </div>
   </div>
@@ -633,7 +610,7 @@ image: /assets/images/projects/industrie-40.jpg
       <div class="contact-icon">✉️</div>
       <div>
         <strong>Email</strong><br>
-        <a href="/contact/">Utiliser le formulaire de contact</a>
+        Utiliser le formulaire de contact sur la page d'accueil
       </div>
     </div>
     
@@ -641,7 +618,7 @@ image: /assets/images/projects/industrie-40.jpg
       <div class="contact-icon">🏢</div>
       <div>
         <strong>Lieu des cours</strong><br>
-        Laboratoire Technologies Avancées, UFR Sciences
+        Amphithéâtre Informatique, UFR Math-Info
       </div>
     </div>
     
@@ -649,7 +626,7 @@ image: /assets/images/projects/industrie-40.jpg
       <div class="contact-icon">🕰️</div>
       <div>
         <strong>Permanences</strong><br>
-        Sur rendez-vous - Consulter la page de contact
+        Après les cours ou sur rendez-vous par email
       </div>
     </div>
   </div>
