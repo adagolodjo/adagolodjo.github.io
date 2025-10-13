@@ -594,8 +594,8 @@ image: /assets/images/projects/logique-industrielle.jpg
     <a href="#objectifs" class="nav-link">🎯 Objectifs</a>
     <a href="#planning" class="nav-link">📅 Planning</a>
     <a href="#cas-pratiques" class="nav-link">🏢 Cas pratiques</a>
-    <a href="#evaluation" class="nav-link">📊 Évaluation</a>
     <a href="#ressources" class="nav-link">📚 Ressources</a>
+    <a href="#evaluation" class="nav-link">📊 Évaluation</a>
     <a href="#contact" class="nav-link">📞 Contact</a>
   </div>
 </nav>
@@ -819,30 +819,6 @@ image: /assets/images/projects/logique-industrielle.jpg
   </div>
 </section>
 
-<section id="evaluation" class="section-card">
-  <div class="section-header">
-    <div class="section-icon">📊</div>
-    <h2 class="section-title">Modalités d'évaluation</h2>
-  </div>
-  <div class="evaluation-grid">
-    <div class="eval-item">
-      <span class="eval-percentage">40%</span>
-      <div class="eval-title">Devoir Surveillé (DS)</div>
-      <div class="eval-description">Examen écrit sur les concepts théoriques et la programmation d'automates.</div>
-    </div>
-    <div class="eval-item">
-      <span class="eval-percentage">35%</span>
-      <div class="eval-title">Note de TP</div>
-      <div class="eval-description">Évaluation des travaux pratiques, projets et réalisations techniques.</div>
-    </div>
-    <div class="eval-item">
-      <span class="eval-percentage">25%</span>
-      <div class="eval-title">Note de Classe</div>
-      <div class="eval-description">Participation, interrogations, qualité du travail en séance.</div>
-    </div>
-  </div>
-</section>
-
 <section id="ressources" class="section-card">
   <div class="section-header">
     <div class="section-icon">📚</div>
@@ -856,6 +832,7 @@ image: /assets/images/projects/logique-industrielle.jpg
         <li><a href="https://nextcloud.univ-lille.fr/index.php/s/pLjf4fwdAG3YNNN" target="_blank" rel="noopener noreferrer">📊 Logique séquentielle et Grafcet (PDF)</a></li>
         <li><a href="./exercice_cours_partie_3.pdf" target="_blank">📝 Exercices Cours Partie 3 (PDF)</a></li>
         <li><a href="./sujets_grafcet_1.pdf" target="_blank">📋 Sujets GRAFCET 1 (PDF)</a></li>
+        <li><a href="https://nextcloud.univ-lille.fr/index.php/s/EsZQd6gipb8dstp" target="_blank" rel="noopener noreferrer">🤖 IA Génératives et Automatisation (PDF)</a></li>
       </ul>
     </div>
     <div class="resource-card">
@@ -895,6 +872,30 @@ image: /assets/images/projects/logique-industrielle.jpg
         <li><a href="https://www.schneider-electric.com/en/work/solutions/for-business/industrial-automation/" target="_blank">Schneider Electric - Automation</a></li>
         <li><a href="https://www.omron.com/global/en/products/category/automation-systems/" target="_blank">Omron - Automation Systems</a></li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<section id="evaluation" class="section-card">
+  <div class="section-header">
+    <div class="section-icon">📊</div>
+    <h2 class="section-title">Modalités d'évaluation</h2>
+  </div>
+  <div class="evaluation-grid">
+    <div class="eval-item">
+      <span class="eval-percentage">40%</span>
+      <div class="eval-title">Devoir Surveillé (DS)</div>
+      <div class="eval-description">Examen écrit sur les concepts théoriques et la programmation d'automates.</div>
+    </div>
+    <div class="eval-item">
+      <span class="eval-percentage">35%</span>
+      <div class="eval-title">Note de TP</div>
+      <div class="eval-description">Évaluation des travaux pratiques, projets et réalisations techniques.</div>
+    </div>
+    <div class="eval-item">
+      <span class="eval-percentage">25%</span>
+      <div class="eval-title">Note de Classe</div>
+      <div class="eval-description">Participation, interrogations, qualité du travail en séance.</div>
     </div>
   </div>
 </section>
