@@ -853,7 +853,7 @@ image: /assets/images/projects/logique-industrielle.jpg
       <div class="resource-icon">📄</div>
       <h4>Supports de cours</h4>
       <ul>
-        <li><a href="./logique_sequentielle_grafcet_v02_09_25.pdf" target="_blank">📊 Logique séquentielle et Grafcet (PDF)</a></li>
+        <li><a href="https://nextcloud.univ-lille.fr/index.php/s/pLjf4fwdAG3YNNN" target="_blank" rel="noopener noreferrer">📊 Logique séquentielle et Grafcet (PDF)</a></li>
         <li><a href="./exercice_cours_partie_3.pdf" target="_blank">📝 Exercices Cours Partie 3 (PDF)</a></li>
         <li><a href="./sujets_grafcet_1.pdf" target="_blank">📋 Sujets GRAFCET 1 (PDF)</a></li>
       </ul>
