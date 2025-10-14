@@ -832,14 +832,6 @@ image: /assets/images/projects/logique-industrielle.jpg
         <li><a href="https://nextcloud.univ-lille.fr/index.php/s/pLjf4fwdAG3YNNN" target="_blank" rel="noopener noreferrer">📊 Logique séquentielle et Grafcet (PDF)</a></li>
         <li><a href="./exercice_cours_partie_3.pdf" target="_blank">📝 Exercices Cours Partie 3 (PDF)</a></li>
         <li><a href="./sujets_grafcet_1.pdf" target="_blank">📋 Sujets GRAFCET 1 (PDF)</a></li>
-        <li><a href="https://nextcloud.univ-lille.fr/index.php/s/EsZQd6gipb8dstp" target="_blank" rel="noopener noreferrer">🤖 IA Génératives et Automatisation (PDF)</a></li>
-      </ul>
-    </div>
-    <div class="resource-card">
-      <div class="resource-icon">📁</div>
-      <h4>Projets et évaluations</h4>
-      <ul>
-        <li><a href="https://nextcloud.univ-lille.fr/index.php/s/JJE9imY56iZDwpx" target="_blank" rel="noopener noreferrer">📝 Consignes pour le projet (PDF)</a></li>
       </ul>
     </div>
     <div class="resource-card">
