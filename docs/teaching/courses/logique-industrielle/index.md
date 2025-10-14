@@ -836,6 +836,13 @@ image: /assets/images/projects/logique-industrielle.jpg
       </ul>
     </div>
     <div class="resource-card">
+      <div class="resource-icon">📁</div>
+      <h4>Projets et évaluations</h4>
+      <ul>
+        <li><a href="https://nextcloud.univ-lille.fr/index.php/s/JJE9imY56iZDwpx" target="_blank" rel="noopener noreferrer">📝 Consignes pour le projet (PDF)</a></li>
+      </ul>
+    </div>
+    <div class="resource-card">
       <div class="resource-icon">📚</div>
       <h4>Manuels de référence</h4>
       <ul>
