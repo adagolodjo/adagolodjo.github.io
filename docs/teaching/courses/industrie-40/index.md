@@ -380,9 +380,9 @@ image: /assets/images/projects/industrie-40.jpg
   <div class="nav-links">
     <a href="#objectifs" class="nav-link">🎧 Objectifs</a>
     <a href="#programme" class="nav-link">📚 Programme</a>
+    <a href="#ressources" class="nav-link">💾 Ressources</a>
     <a href="#evaluation" class="nav-link">📊 Évaluation</a>
     <a href="#technologies" class="nav-link">💻 Technologies</a>
-    <a href="#ressources" class="nav-link">💾 Ressources</a>
     <a href="#contact" class="nav-link">📞 Contact</a>
   </div>
 </nav>
@@ -514,6 +514,165 @@ image: /assets/images/projects/industrie-40.jpg
   </div>
 </div>
 
+<div class="section-card" id="ressources">
+  <div class="section-header">
+    <div class="section-icon">💾</div>
+    <h2 class="section-title">Ressources pédagogiques</h2>
+  </div>
+  
+  <!-- Ressources du cours par partie -->
+  <div style="margin-bottom: 3rem;">
+    <h3 style="color: var(--industry-color); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
+      <span>📁</span> Supports de cours
+    </h3>
+    
+    <div class="timeline" style="margin-left: 0; padding-left: 0;">
+      <div class="timeline-item" style="margin-left: 0; border-left: 4px solid var(--industry-color); background: linear-gradient(135deg, rgba(230, 126, 34, 0.1), rgba(230, 126, 34, 0.05));">
+        <h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--industry-color);">
+          <span>📊</span> Partie 1 : Introduction à l'Industrie 4.0
+        </h4>
+        <p>Contexte historique, technologies clés et transformation numérique</p>
+        <div style="margin-top: 1rem;">
+          <a href="https://nextcloud.univ-lille.fr/index.php/s/PLiRRWmcHcE62jJ" 
+             class="nav-link" 
+             style="display: inline-flex; background: var(--industry-color); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; transition: var(--transition);" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            <span style="margin-right: 0.5rem;">📥</span>
+            Télécharger les supports (PDF + exercices)
+          </a>
+        </div>
+      </div>
+      
+      <div class="timeline-item" style="margin-left: 0; border-left: 4px solid var(--industry-color); background: linear-gradient(135deg, rgba(230, 126, 34, 0.1), rgba(230, 126, 34, 0.05));">
+        <h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--industry-color);">
+          <span>🤖</span> IA Génératives et Automatisation
+        </h4>
+        <p>Applications des intelligences artificielles génératives dans l'industrie 4.0</p>
+        <div style="margin-top: 1rem;">
+          <a href="https://nextcloud.univ-lille.fr/index.php/s/EsZQd6gipb8dstp" 
+             class="nav-link" 
+             style="display: inline-flex; background: var(--industry-color); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; transition: var(--transition);" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            <span style="margin-right: 0.5rem;">📥</span>
+            Télécharger le document IA (PDF)
+          </a>
+        </div>
+      </div>
+      
+      <div class="timeline-item" style="margin-left: 0; border-left: 4px solid #95a5a6; background: rgba(149, 165, 166, 0.1); opacity: 0.7;">
+        <h4 style="display: flex; align-items: center; gap: 0.5rem; color: #7f8c8d;">
+          <span>🔧</span> Partie 2 : Systèmes Cyber-Physiques (CPS)
+        </h4>
+        <p>Architecture, intégration et surveillance en temps réel</p>
+        <div style="margin-top: 1rem;">
+          <span style="display: inline-flex; background: #95a5a6; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500;">
+            <span style="margin-right: 0.5rem;">⏳</span>
+            Bientôt disponible
+          </span>
+        </div>
+      </div>
+      
+      <div class="timeline-item" style="margin-left: 0; border-left: 4px solid #95a5a6; background: rgba(149, 165, 166, 0.1); opacity: 0.7;">
+        <h4 style="display: flex; align-items: center; gap: 0.5rem; color: #7f8c8d;">
+          <span>📡</span> Partie 3 : Internet des Objets (IoT) Industriel
+        </h4>
+        <p>IIoT, réseaux de capteurs et protocoles de communication</p>
+        <div style="margin-top: 1rem;">
+          <span style="display: inline-flex; background: #95a5a6; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500;">
+            <span style="margin-right: 0.5rem;">⏳</span>
+            Bientôt disponible
+          </span>
+        </div>
+      </div>
+      
+      <div class="timeline-item" style="margin-left: 0; border-left: 4px solid #95a5a6; background: rgba(149, 165, 166, 0.1); opacity: 0.7;">
+        <h4 style="display: flex; align-items: center; gap: 0.5rem; color: #7f8c8d;">
+          <span>🧠</span> Partie 4 : Analyse de données et IA
+        </h4>
+        <p>Big data, apprentissage automatique et maintenance prédictive</p>
+        <div style="margin-top: 1rem;">
+          <span style="display: inline-flex; background: #95a5a6; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500;">
+            <span style="margin-right: 0.5rem;">⏳</span>
+            Bientôt disponible
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Section Projets et évaluations -->
+  <div style="margin-bottom: 3rem;">
+    <h3 style="color: var(--tech-color); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
+      <span>📁</span> Projets et évaluations
+    </h3>
+    
+    <div class="timeline" style="margin-left: 0; padding-left: 0;">
+      <div class="timeline-item" style="margin-left: 0; border-left: 4px solid var(--tech-color); background: linear-gradient(135deg, rgba(26, 188, 156, 0.1), rgba(26, 188, 156, 0.05));">
+        <h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--tech-color);">
+          <span>📝</span> Consignes pour le projet
+        </h4>
+        <p>Attendus, modalités et critères d'évaluation du projet final</p>
+        <div style="margin-top: 1rem;">
+          <a href="https://nextcloud.univ-lille.fr/index.php/s/JJE9imY56iZDwpx" 
+             class="nav-link" 
+             style="display: inline-flex; background: var(--tech-color); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; transition: var(--transition);" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            <span style="margin-right: 0.5rem;">📥</span>
+            Télécharger les consignes (PDF)
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Ressources complémentaires -->
+  <div>
+    <h3 style="color: var(--secondary-color); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
+      <span>📚</span> Ressources complémentaires
+    </h3>
+    
+    <div class="resources-grid">
+      <div class="resource-card">
+        <div class="resource-icon">📚</div>
+        <h4>Documentation technique</h4>
+        <ul>
+          <li>Études de cas industriels et livres blancs</li>
+          <li>Documentation des plateformes Industrie 4.0</li>
+          <li>Rapports professionnels de l'industrie</li>
+        </ul>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">🔍</div>
+        <h4>Recherche actuelle</h4>
+        <ul>
+          <li>Recherche actuelle en fabrication intelligente</li>
+          <li>Articles scientifiques et publications</li>
+          <li>Conférences et webinaires spécialisés</li>
+        </ul>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">💼</div>
+        <h4>Perspectives carrière</h4>
+        <ul>
+          <li>Conseil en digitalisation industrielle</li>
+          <li>Conception d'usines intelligentes</li>
+          <li>Développement de solutions IoT</li>
+          <li>Gestion de la transformation digitale</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="info-box" style="margin-top: 2rem;">
+    <strong>📌 Note importante :</strong> Les ressources sont hébergées sur Nextcloud de l'Université de Lille. Vous aurez besoin de vos identifiants universitaires pour accéder aux contenus protégés. En cas de problème d'accès, contactez l'enseignant.
+  </div>
+</div>
+
 <div class="section-card" id="evaluation">
   <div class="section-header">
     <div class="section-icon">📊</div>
@@ -571,123 +730,6 @@ image: /assets/images/projects/industrie-40.jpg
       <h5>🐍 Programmation</h5>
       <p>Python, JavaScript, C++</p>
     </div>
-  </div>
-</div>
-
-<div class="section-card" id="ressources">
-  <div class="section-header">
-    <div class="section-icon">💾</div>
-    <h2 class="section-title">Ressources pédagogiques</h2>
-  </div>
-  
-  <!-- Ressources du cours par partie -->
-  <div style="margin-bottom: 3rem;">
-    <h3 style="color: var(--industry-color); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
-      <span>📁</span> Ressources du cours
-    </h3>
-    
-    <div class="timeline" style="margin-left: 0; padding-left: 0;">
-      <div class="timeline-item" style="margin-left: 0; border-left: 4px solid var(--industry-color); background: linear-gradient(135deg, rgba(230, 126, 34, 0.1), rgba(230, 126, 34, 0.05));">
-        <h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--industry-color);">
-          <span>📖</span> Partie 1 : Introduction à l'Industrie 4.0
-        </h4>
-        <p>Contexte historique, technologies clés et transformation numérique</p>
-        <div style="margin-top: 1rem;">
-          <a href="https://nextcloud.univ-lille.fr/index.php/s/PLiRRWmcHcE62jJ" 
-             class="nav-link" 
-             style="display: inline-flex; background: var(--industry-color); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; transition: var(--transition);" 
-             target="_blank" 
-             rel="noopener noreferrer">
-            <span style="margin-right: 0.5rem;">📥</span>
-            Télécharger les supports (PDF + exercices)
-          </a>
-        </div>
-      </div>
-      
-      <div class="timeline-item" style="margin-left: 0; border-left: 4px solid #95a5a6; background: rgba(149, 165, 166, 0.1); opacity: 0.7;">
-        <h4 style="display: flex; align-items: center; gap: 0.5rem; color: #7f8c8d;">
-          <span>🔧</span> Partie 2 : Systèmes Cyber-Physiques (CPS)
-        </h4>
-        <p>Architecture, intégration et surveillance en temps réel</p>
-        <div style="margin-top: 1rem;">
-          <span style="display: inline-flex; background: #95a5a6; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500;">
-            <span style="margin-right: 0.5rem;">⏳</span>
-            Bientôt disponible
-          </span>
-        </div>
-      </div>
-      
-      <div class="timeline-item" style="margin-left: 0; border-left: 4px solid #95a5a6; background: rgba(149, 165, 166, 0.1); opacity: 0.7;">
-        <h4 style="display: flex; align-items: center; gap: 0.5rem; color: #7f8c8d;">
-          <span>📡</span> Partie 3 : Internet des Objets (IoT) Industriel
-        </h4>
-        <p>IIoT, réseaux de capteurs et protocoles de communication</p>
-        <div style="margin-top: 1rem;">
-          <span style="display: inline-flex; background: #95a5a6; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500;">
-            <span style="margin-right: 0.5rem;">⏳</span>
-            Bientôt disponible
-          </span>
-        </div>
-      </div>
-      
-      <div class="timeline-item" style="margin-left: 0; border-left: 4px solid #95a5a6; background: rgba(149, 165, 166, 0.1); opacity: 0.7;">
-        <h4 style="display: flex; align-items: center; gap: 0.5rem; color: #7f8c8d;">
-          <span>🧠</span> Partie 4 : Analyse de données et IA
-        </h4>
-        <p>Big data, apprentissage automatique et maintenance prédictive</p>
-        <div style="margin-top: 1rem;">
-          <span style="display: inline-flex; background: #95a5a6; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500;">
-            <span style="margin-right: 0.5rem;">⏳</span>
-            Bientôt disponible
-          </span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="info-box" style="margin-top: 2rem;">
-      <strong>📌 Note importante :</strong> Les ressources sont hébergées sur Nextcloud de l'Université de Lille. Vous aurez besoin de vos identifiants universitaires pour accéder aux contenus protégés. En cas de problème d'accès, contactez l'enseignant.
-    </div>
-  </div>
-  
-  <!-- Ressources complémentaires -->
-  <div>
-    <h3 style="color: var(--secondary-color); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
-      <span>📚</span> Ressources complémentaires
-    </h3>
-    
-    <div class="resources-grid">
-      <div class="resource-card">
-        <div class="resource-icon">📚</div>
-        <h4>Documentation technique</h4>
-        <ul>
-          <li>Études de cas industriels et livres blancs</li>
-          <li>Documentation des plateformes Industrie 4.0</li>
-          <li>Rapports professionnels de l'industrie</li>
-        </ul>
-      </div>
-      
-      <div class="resource-card">
-        <div class="resource-icon">🔍</div>
-        <h4>Recherche actuelle</h4>
-        <ul>
-          <li>Recherche actuelle en fabrication intelligente</li>
-          <li>Articles scientifiques et publications</li>
-          <li>Conférences et webinaires spécialisés</li>
-        </ul>
-      </div>
-      
-      <div class="resource-card">
-        <div class="resource-icon">💼</div>
-        <h4>Perspectives carrière</h4>
-        <ul>
-          <li>Conseil en digitalisation industrielle</li>
-          <li>Conception d'usines intelligentes</li>
-          <li>Développement de solutions IoT</li>
-          <li>Gestion de la transformation digitale</li>
-        </ul>
-      </div>
-    </div>
-  </div>
 </div>
 
 <div class="section-card" id="contact">
