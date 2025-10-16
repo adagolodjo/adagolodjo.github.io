@@ -353,7 +353,7 @@ image: /assets/images/projects/automatique-regulation.jpg
     <p class="subtitle">Théorie du contrôle automatique et régulation de système</p>
     <div class="hero-badges">
       <span class="hero-badge">🏭 GR-713301</span>
-      <span class="hero-badge">⏱️ 32h TP</span>
+      <span class="hero-badge">⏱️ 16h TP</span>
       <span class="hero-badge">📅 Semestre 3</span>
       <span class="hero-badge">🔧 Niveau Graduate</span>
     </div>
@@ -427,7 +427,7 @@ image: /assets/images/projects/automatique-regulation.jpg
         <li>Validation par simulation sous Simulink</li>
         <li>Functions : extract(), rech_ech(), interpole(), p_ordre(), broida()</li>
       </ul>
-      <p><strong>Durée:</strong> 8h TP • <strong>Lieu:</strong> Salle B302 (simulation)</p>
+      <p><strong>Durée:</strong> 4h TP • <strong>Lieu:</strong> Salle B302 (simulation)</p>
     </div>
     
     <div class="timeline-item">
@@ -438,7 +438,7 @@ image: /assets/images/projects/automatique-regulation.jpg
         <li>Régulation analogique P et numérique PI</li>
         <li>Régulateur de Smith pour compensation du retard</li>
       </ul>
-      <p><strong>Durée:</strong> 8h TP • <strong>Lieu:</strong> Salle C008 (temps réel)</p>
+      <p><strong>Durée:</strong> 4h TP • <strong>Lieu:</strong> Salle C008 (temps réel)</p>
     </div>
     
     <div class="timeline-item">
@@ -449,7 +449,7 @@ image: /assets/images/projects/automatique-regulation.jpg
         <li>Régulation PID avec analyse de robustesse</li>
         <li>Tests de rejet de perturbation et adaptabilité</li>
       </ul>
-      <p><strong>Durée:</strong> 8h TP • <strong>Lieu:</strong> Salle C008 (temps réel)</p>
+      <p><strong>Durée:</strong> 4h TP • <strong>Lieu:</strong> Salle C008 (temps réel)</p>
     </div>
     
     <div class="timeline-item">
@@ -460,7 +460,7 @@ image: /assets/images/projects/automatique-regulation.jpg
         <li>Analyse de l'effet de la charge et tests de robustesse</li>
         <li>Validation théorique et optimisation des performances</li>
       </ul>
-      <p><strong>Durée:</strong> 8h TP • <strong>Lieu:</strong> Salle C008 (temps réel)</p>
+      <p><strong>Durée:</strong> 4h TP • <strong>Lieu:</strong> Salle C008 (temps réel)</p>
     </div>
   </div>
 </div>
@@ -541,6 +541,7 @@ image: /assets/images/projects/automatique-regulation.jpg
         <li><strong>Procédures expérimentales :</strong> Protocoles step-by-step</li>
         <li><strong>Méthodes d'identification :</strong> Premier ordre et Broïda</li>
         <li><strong>Consignes sécurité :</strong> Manipulations en conditions réelles</li>
+        <li><strong>📥 <a href="https://nextcloud.univ-lille.fr/index.php/s/Cj6tFw3gFrspLkc" target="_blank" rel="noopener" style="color: var(--automation-color); text-decoration: none; font-weight: bold;">Télécharger les supports PDF</a></strong></li>
       </ul>
     </div>
   </div>
@@ -556,8 +557,8 @@ image: /assets/images/projects/automatique-regulation.jpg
     <div class="contact-item">
       <div class="contact-icon">👨‍🏫</div>
       <div>
-        <strong>Enseignant responsable</strong><br>
-        Dr. Yinoussa Adagolodjo
+        <strong>Équipe enseignante</strong><br>
+        Prof. Jean-Yves Dieulot & Dr. Yinoussa Adagolodjo
       </div>
     </div>
     
