@@ -94,15 +94,15 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
         
         <div class="key-metrics">
           <div class="metric">
-            <div class="metric-value">95%</div>
+            <div class="metric-value">96%</div>
             <div class="metric-label">Simulation Accuracy</div>
           </div>
           <div class="metric">
-            <div class="metric-value">40+</div>
+            <div class="metric-value">50+</div>
             <div class="metric-label">Hospital Partners</div>
           </div>
           <div class="metric">
-            <div class="metric-value">15</div>
+            <div class="metric-value">18</div>
             <div class="metric-label">Patents Filed</div>
           </div>
         </div>
