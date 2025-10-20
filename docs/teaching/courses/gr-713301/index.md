@@ -541,6 +541,7 @@ image: /assets/images/projects/automatique-regulation.jpg
         <li><strong>Procédures expérimentales :</strong> Protocoles step-by-step</li>
         <li><strong>Méthodes d'identification :</strong> Premier ordre et Broïda</li>
         <li><strong>Consignes sécurité :</strong> Manipulations en conditions réelles</li>
+        <li><strong>📚 <a href="https://nextcloud.univ-lille.fr/index.php/s/QeEH255YiJeEMmT" target="_blank" rel="noopener" style="color: var(--automation-color); text-decoration: none; font-weight: bold;">Rappels Matlab</a></strong> - Cours théorique de base</li>
         <li><strong>📥 <a href="https://nextcloud.univ-lille.fr/index.php/s/Cj6tFw3gFrspLkc" target="_blank" rel="noopener" style="color: var(--automation-color); text-decoration: none; font-weight: bold;">Télécharger les supports PDF</a></strong></li>
       </ul>
     </div>
