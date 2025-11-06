@@ -840,9 +840,9 @@ image: /assets/images/projects/logique-industrielle.jpg
       <div class="resource-icon">📚</div>
       <h4>Manuels de référence</h4>
       <ul>
-        <li><a href="https://www.dunod.com/sciences-techniques/automates-programmables-industriels" target="_blank">Automates programmables industriels - Dunod</a></li>
-        <li><a href="https://fr.wikipedia.org/wiki/Automate_programmable_industriel" target="_blank">Automate programmable industriel (Wikipedia)</a></li>
-        <li><a href="https://fr.wikipedia.org/wiki/Grafcet" target="_blank">GRAFCET (Wikipedia)</a></li>
+        <li>Du Grafcet au réseau de Pétri (2° Ed.) - Claude Foulard, Hassane Alla, René David (1992)</li>
+        <li><a href="https://www.technologuepro.com/cours-automate-programmable-industriel/Cours-Grafcet-notions-de-base.htm" target="_blank">Cours Grafcet - Notions de base (TechnologuePro)</a></li>
+        <li><a href="https://www.technologuepro.com/cours-automate-programmable-industriel/Les-automates-programmables-industriels-API.htm" target="_blank">Les automates programmables industriels - API (TechnologuePro)</a></li>
       </ul>
     </div>
     <div class="resource-card">
