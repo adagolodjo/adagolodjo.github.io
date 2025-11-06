@@ -831,6 +831,7 @@ image: /assets/images/projects/logique-industrielle.jpg
       <ul>
         <li><a href="https://nextcloud.univ-lille.fr/index.php/s/pqtkmsterkeYdJA" target="_blank" rel="noopener noreferrer">📊 Logique séquentielle et Grafcet (PDF)</a></li>
         <li><a href="https://nextcloud.univ-lille.fr/index.php/s/KyQsrfbqgLCFf2s" target="_blank" rel="noopener noreferrer">📋 TD Grafcet - Gestion de priorités (PDF)</a></li>
+        <li><a href="https://nextcloud.univ-lille.fr/index.php/s/AztKTgwstE5y4mq" target="_blank" rel="noopener noreferrer">✅ Correction exercice 1 - Priorités (PDF)</a></li>
         <li><a href="./exercice_cours_partie_3.pdf" target="_blank">📝 Exercices Cours Partie 3 (PDF)</a></li>
         <li><a href="./sujets_grafcet_1.pdf" target="_blank">📋 Sujets GRAFCET 1 (PDF)</a></li>
       </ul>
