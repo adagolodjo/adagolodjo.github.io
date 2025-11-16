@@ -843,6 +843,9 @@ image: /assets/images/projects/logique-industrielle.jpg
         <li>Du Grafcet au réseau de Pétri (2° Ed.) - Claude Foulard, Hassane Alla, René David (1992)</li>
         <li><a href="https://www.technologuepro.com/cours-automate-programmable-industriel/Cours-Grafcet-notions-de-base.htm" target="_blank">Cours Grafcet - Notions de base (TechnologuePro)</a></li>
         <li><a href="https://www.technologuepro.com/cours-automate-programmable-industriel/Les-automates-programmables-industriels-API.htm" target="_blank">Les automates programmables industriels - API (TechnologuePro)</a></li>
+        <li><a href="http://robert.cireddu.free.fr/Ressources/AII/Rappels%20sur%20le%20GRAFCET/index.htm" target="_blank">Rappels sur le GRAFCET</a></li>
+        <li><a href="https://www.youtube.com/@prof_lepep" target="_blank">Quelques resources vidéo</a></li>
+
       </ul>
     </div>
     <div class="resource-card">
@@ -874,6 +877,7 @@ image: /assets/images/projects/logique-industrielle.jpg
         <li><a href="https://www.omron.com/global/en/products/category/automation-systems/" target="_blank">Omron - Automation Systems</a></li>
       </ul>
     </div>
+
   </div>
 </section>
 
