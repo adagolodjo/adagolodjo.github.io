@@ -834,6 +834,8 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/AztKTgwstE5y4mq" target="_blank" rel="noopener noreferrer">✅ Correction exercice 1 - Priorités (PDF)</a></li>
 <li><a href="./exercice_cours_partie_3.pdf" target="_blank">📝 Exercices Cours Partie 3 (PDF)</a></li>
 <li><a href="./sujets_grafcet_1.pdf" target="_blank">📋 Sujets GRAFCET 1 (PDF)</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/y33aTe6XRxZrtjL" target="_blank" rel="noopener noreferrer">📐 Partie 5 : Grafcet - Structuration Systèmes complexes (PDF)</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/y33aTe6XRxZrtjL" target="_blank" rel="noopener noreferrer">⚙️ Partie 6 : Grafcet - Mise en œuvre de la commande (PDF)</a></li>
 </ul>
 </div>
 <div class="resource-card">
