@@ -837,6 +837,35 @@ image: /assets/images/projects/logique-industrielle.jpg
       </ul>
     </div>
     <div class="resource-card">
+      <div class="resource-icon">🔬</div>
+      <h4>Documents de TP</h4>
+      <ul>
+        <li><strong>🏢 Ascenseur</strong>
+          <ul style="margin-top: 0.5rem;">
+            <li><a href="https://nextcloud.univ-lille.fr/index.php/s/7cpEk4QAoxWmeTr" target="_blank">Sujet TP Ascenseur (PDF)</a></li>
+            <li><a href="#" target="_blank">Cahier des charges Ascenseur (PDF)</a></li>
+          </ul>
+        </li>
+        <li><strong>🚦 Traffic Train</strong>
+          <ul style="margin-top: 0.5rem;">
+            <li><a href="https://nextcloud.univ-lille.fr/index.php/s/H5Q5MCj7dWKjnXi" target="_blank">Sujet TP Traffic Train (PDF)</a></li>
+            <li><a href="#" target="_blank">Schéma réseau ferroviaire (PDF)</a></li>
+          </ul>
+        </li>
+        <li><strong>⚙️ TP Festo Persage</strong>
+          <ul style="margin-top: 0.5rem;">
+            <li><a href="https://nextcloud.univ-lille.fr/index.php/s/ftetmkJjcT5cWTG" target="_blank" rel="noopener noreferrer">📁 Documents TP Festo Persage</a></li>
+          </ul>
+        </li>
+        <li><strong>📦 Tri de Caisses</strong>
+          <ul style="margin-top: 0.5rem;">
+            <li><a href="https://nextcloud.univ-lille.fr/index.php/s/GpCJMEAEMJH2jkH" target="_blank">Sujet TP Tri de Caisses (PDF)</a></li>
+            <li><a href="#" target="_blank">Cahier des charges Tri (PDF)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="resource-card">
       <div class="resource-icon">📚</div>
       <h4>Manuels de référence</h4>
       <ul>
