@@ -871,6 +871,12 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/iwWdNAfMrjg2Bmc" target="_blank">Annex 1 - Programming PLCs with Unity Pro (PDF)</a></li>
 </ul>
 </li>
+<li><strong>🤖 Robotino</strong>
+<ul style="margin-top: 0.5rem;">
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/XLd68t4skomc2cE" target="_blank" rel="noopener noreferrer">Sujet TP Robotino (PDF)</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/YFS42JgSxKiYEnY" target="_blank" rel="noopener noreferrer">Data-sheet Robotino (PDF)</a></li>
+</ul>
+</li>
 
 </ul>
 </div>
