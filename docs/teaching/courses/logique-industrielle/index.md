@@ -873,8 +873,10 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 </li>
 <li><strong>🤖 Robotino</strong>
 <ul style="margin-top: 0.5rem;">
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/PF6dff7Z8DBKkRE" target="_blank" rel="noopener noreferrer">Cours Robotino (PDF)</a></li>
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/XLd68t4skomc2cE" target="_blank" rel="noopener noreferrer">Sujet TP Robotino (PDF)</a></li>
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/YFS42JgSxKiYEnY" target="_blank" rel="noopener noreferrer">Data-sheet Robotino (PDF)</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/JMDBfGGDx5pNQGo" target="_blank" rel="noopener noreferrer">🎥 Vidéo tutoriel Robotino</a></li>
 </ul>
 </li>
 
