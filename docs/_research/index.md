@@ -228,196 +228,54 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
     </div>
     
     <div class="projects-grid">
-      <!-- CONECT Project -->
-      <div class="project-card featured" data-category="medical-robotics simulation" data-aos="fade-up" data-aos-delay="100">
+      <!-- Active Prostate Phantom / Prostate Biopsy -->
+      <div class="project-card" data-category="ai-healthcare medical-robotics" data-aos="fade-up" data-aos-delay="50">
         <div class="project-image">
-          <img src="/assets/images/projects/conect.jpg" alt="CONECT Project" loading="lazy">
+          <img src="/assets/images/projects/image_foie.jpg" alt="Prostate Biopsy Project" loading="lazy">
           <div class="project-overlay">
-            <div class="project-status active">Active</div>
-            <div class="project-impact">High Impact</div>
+            <div class="project-status research">Research</div>
+            <div class="project-impact">Clinical Trial</div>
           </div>
         </div>
         <div class="project-content">
           <div class="project-header">
-            <h3 class="project-title">CONECT Project</h3>
-            <div class="project-year">2015-2019</div>
+            <h3 class="project-title">Active prostate phantom for prostate biopsy</h3>
+            <div class="project-year">2023-Present</div>
           </div>
-          <p class="project-description">Pioneering integration of robotic technology in operating rooms for enhanced precision in needle insertion procedures. Features advanced finite element simulations and augmented reality guidance systems for surgical assistance.</p>
+          <p class="project-description">Developing a multi-chamber, pneumatically actuated active prostate phantom to realistically simulate the prostate and guide targeted biopsies. Provides a training and validation platform, robotic assistance and improved prostate cancer diagnosis. The phantom is designed to be used in a clinical setting to validate the accuracy of the prostate biopsy procedure.</p>
           
           <div class="project-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-search-plus"></i>
+              <span>Enhanced detection accuracy</span>
+            </div>
             <div class="highlight-item">
               <i class="fas fa-bullseye"></i>
-              <span>95% accuracy improvement</span>
+              <span>Targeted precision</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-clock"></i>
-              <span>50% faster procedures</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fas fa-shield-alt"></i>
-              <span>Enhanced patient safety</span>
+              <i class="fas fa-user-check"></i>
+              <span>Personalized care</span>
             </div>
           </div>
           
           <div class="project-tags">
-            <span class="tag medical-robotics">Medical Robotics</span>
-            <span class="tag simulation">AR Guidance</span>
-            <span class="tag ai-healthcare">Surgical AI</span>
+            <span class="tag ai-healthcare">Medical Imaging</span>
+            <span class="tag medical-robotics">AI Diagnosis</span>
+            <span class="tag simulation">Robotic Biopsy</span>
           </div>
           
           <div class="project-actions">
-            <a href="/research/projects/conect/" class="btn-primary">
-              <span>Explore Project</span>
-              <i class="fas fa-arrow-right"></i>
-            </a>
-            <button class="btn-secondary" data-modal="conect-video">
-              <i class="fas fa-play"></i>
-              <span>Watch Demo</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- ROBOCOP Project -->
-      <div class="project-card" data-category="medical-robotics" data-aos="fade-up" data-aos-delay="200">
-        <div class="project-image">
-          <video src="/assets/images/forceView.mp4" autoplay loop muted playsinline loading="lazy"></video>
-          <div class="project-overlay">
-            <div class="project-status completed">Completed</div>
-            <div class="project-impact">Clinical Impact</div>
-          </div>
-        </div>
-        <div class="project-content">
-          <div class="project-header">
-            <h3 class="project-title">ROBOCOP Project</h3>
-            <div class="project-year">2019-2021</div>
-          </div>
-          <p class="project-description">Revolutionary cochlear implant robotization project, exploring innovative approaches to improve hearing technologies through advanced robotic assistance and precision surgical procedures.</p>
-          
-          <div class="project-highlights">
-            <div class="highlight-item">
-              <i class="fas fa-ear"></i>
-              <span>Improved hearing outcomes</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fas fa-robot"></i>
-              <span>Autonomous positioning</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fas fa-user-md"></i>
-              <span>Surgeon assistance</span>
-            </div>
-          </div>
-          
-          <div class="project-tags">
-            <span class="tag medical-robotics">Hearing Tech</span>
-            <span class="tag simulation">Surgical Robotics</span>
-            <span class="tag ai-healthcare">Medical Devices</span>
-          </div>
-          
-          <div class="project-actions">
-            <a href="/research/projects/robocop/" class="btn-primary">
-              <span>Learn More</span>
-              <i class="fas fa-arrow-right"></i>
+            <a href="https://www.inria.fr/fr/cancer-prostate-diagnostic-ia-robotique" class="btn-secondary" target="_blank" rel="noopener">
+              <span>Reference Article</span>
+              <i class="fas fa-external-link-alt"></i>
             </a>
           </div>
         </div>
       </div>
 
-      <!-- COSSEROOTS Project -->
-      <div class="project-card" data-category="soft-robotics simulation" data-aos="fade-up" data-aos-delay="300">
-        <div class="project-image">
-          <img src="/assets/images/projects/cosseroots.jpg" alt="COSSEROOTS Project" loading="lazy">
-          <div class="project-overlay">
-            <div class="project-status active">Active</div>
-            <div class="project-impact">Innovation Award</div>
-          </div>
-        </div>
-        <div class="project-content">
-          <div class="project-header">
-            <h3 class="project-title">COSSEROOTS Project</h3>
-            <div class="project-year">2021-Present</div>
-          </div>
-          <p class="project-description">Applying Cosserat's theory to advance the control of slender deformation robots. This innovative approach combines theoretical physics with practical robotics applications in medical and industrial settings.</p>
-          
-          <div class="project-highlights">
-            <div class="highlight-item">
-              <i class="fas fa-wave-square"></i>
-              <span>Advanced control theory</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fas fa-cogs"></i>
-              <span>Flexible manipulation</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fas fa-industry"></i>
-              <span>Industrial applications</span>
-            </div>
-          </div>
-          
-          <div class="project-tags">
-            <span class="tag soft-robotics">Soft Robotics</span>
-            <span class="tag simulation">Control Theory</span>
-            <span class="tag ai-healthcare">Mathematical Modeling</span>
-          </div>
-          
-          <div class="project-actions">
-            <a href="/research/projects/cosseroots/" class="btn-primary">
-              <span>Discover More</span>
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ADAGIO Project -->
-      <div class="project-card" data-category="ai-healthcare simulation" data-aos="fade-up" data-aos-delay="400">
-        <div class="project-image">
-          <img src="/assets/images/projects/bladder_2.jpg" alt="ADAGIO Project" loading="lazy">
-          <div class="project-overlay">
-            <div class="project-status active">Active</div>
-            <div class="project-impact">AI Innovation</div>
-          </div>
-        </div>
-        <div class="project-content">
-          <div class="project-header">
-            <h3 class="project-title">ADAGIO Project</h3>
-            <div class="project-year">2022-Present</div>
-          </div>
-          <p class="project-description">Developing adaptive digital tools and AI-driven assistance for complex medical interventions. This project focuses on creating intelligent systems that learn and adapt to surgical environments.</p>
-          
-          <div class="project-highlights">
-            <div class="highlight-item">
-              <i class="fas fa-brain"></i>
-              <span>Adaptive AI systems</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fas fa-laptop-medical"></i>
-              <span>Digital health tools</span>
-            </div>
-            <div class="highlight-item">
-              <i class="fas fa-user-nurse"></i>
-              <span>Clinical integration</span>
-            </div>
-          </div>
-          
-          <div class="project-tags">
-            <span class="tag ai-healthcare">Digital Health</span>
-            <span class="tag medical-robotics">AI Assistance</span>
-            <span class="tag simulation">Medical Interventions</span>
-          </div>
-          
-          <div class="project-actions">
-            <a href="/research/projects/adagio/" class="btn-primary">
-              <span>View Details</span>
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- IRE Project -->
-      <div class="project-card flagship" data-category="soft-robotics ai-healthcare" data-aos="fade-up" data-aos-delay="500">
+      <!-- IRE Project (Flagship, current) -->
+      <div class="project-card flagship" data-category="soft-robotics ai-healthcare" data-aos="fade-up" data-aos-delay="150">
         <div class="project-image">
           <img src="/assets/images/projects/colon.jpg" alt="IRE Project" loading="lazy">
           <div class="project-overlay">
@@ -466,48 +324,190 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
         </div>
       </div>
 
-      <!-- Prostate Biopsy Project -->
-      <div class="project-card" data-category="ai-healthcare medical-robotics" data-aos="fade-up" data-aos-delay="600">
+      <!-- ADAGIO Project (AI & assistance) -->
+      <div class="project-card" data-category="ai-healthcare simulation" data-aos="fade-up" data-aos-delay="250">
         <div class="project-image">
-          <img src="/assets/images/projects/image_foie.jpg" alt="Prostate Biopsy Project" loading="lazy">
+          <img src="/assets/images/projects/bladder_2.jpg" alt="ADAGIO Project" loading="lazy">
           <div class="project-overlay">
-            <div class="project-status research">Research</div>
-            <div class="project-impact">Clinical Trial</div>
+            <div class="project-status active">Active</div>
+            <div class="project-impact">AI Innovation</div>
           </div>
         </div>
         <div class="project-content">
           <div class="project-header">
-            <h3 class="project-title">AI-Guided Prostate Biopsy</h3>
-            <div class="project-year">2023-Present</div>
+            <h3 class="project-title">ADAGIO Project</h3>
+            <div class="project-year">2026-Present</div>
           </div>
-          <p class="project-description">Improving prostate cancer diagnosis through AI-based image analysis and robotic assistance for targeted biopsies. Focuses on increasing precision, reducing unnecessary interventions, and personalizing patient care.</p>
+          <p class="project-description">Developing adaptive digital tools and AI-driven assistance for complex medical interventions. This project focuses on creating intelligent systems that learn and adapt to surgical environments.</p>
           
           <div class="project-highlights">
             <div class="highlight-item">
-              <i class="fas fa-search-plus"></i>
-              <span>Enhanced detection accuracy</span>
+              <i class="fas fa-brain"></i>
+              <span>Adaptive AI systems</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-bullseye"></i>
-              <span>Targeted precision</span>
+              <i class="fas fa-laptop-medical"></i>
+              <span>Digital health tools</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-user-check"></i>
-              <span>Personalized care</span>
+              <i class="fas fa-user-nurse"></i>
+              <span>Clinical integration</span>
             </div>
           </div>
           
           <div class="project-tags">
-            <span class="tag ai-healthcare">Medical Imaging</span>
-            <span class="tag medical-robotics">AI Diagnosis</span>
-            <span class="tag simulation">Robotic Biopsy</span>
+            <span class="tag ai-healthcare">Digital Health</span>
+            <span class="tag medical-robotics">AI Assistance</span>
+            <span class="tag simulation">Medical Interventions</span>
           </div>
           
           <div class="project-actions">
-            <a href="https://www.inria.fr/fr/cancer-prostate-diagnostic-ia-robotique" class="btn-secondary" target="_blank" rel="noopener">
-              <span>Reference Article</span>
-              <i class="fas fa-external-link-alt"></i>
+            <a href="/research/projects/adagio/" class="btn-primary">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
             </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- COSSEROOTS Project (soft robotics) -->
+      <div class="project-card" data-category="soft-robotics simulation" data-aos="fade-up" data-aos-delay="350">
+        <div class="project-image">
+          <img src="/assets/images/projects/cosseroots.jpg" alt="COSSEROOTS Project" loading="lazy">
+          <div class="project-overlay">
+            <div class="project-status active">Active</div>
+            <div class="project-impact">Innovation Award</div>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">COSSEROOTS Project</h3>
+            <div class="project-year">2021-Present</div>
+          </div>
+          <p class="project-description">Applying Cosserat's theory to advance the control of slender deformation robots. This innovative approach combines theoretical physics with practical robotics applications in medical and industrial settings.</p>
+          
+          <div class="project-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-wave-square"></i>
+              <span>Advanced control theory</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-cogs"></i>
+              <span>Flexible manipulation</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-industry"></i>
+              <span>Industrial applications</span>
+            </div>
+          </div>
+          
+          <div class="project-tags">
+            <span class="tag soft-robotics">Soft Robotics</span>
+            <span class="tag simulation">Control Theory</span>
+            <span class="tag ai-healthcare">Mathematical Modeling</span>
+          </div>
+          
+          <div class="project-actions">
+            <a href="/research/projects/cosseroots/" class="btn-primary">
+              <span>Discover More</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROBOCOP Project (completed clinical impact) -->
+      <div class="project-card" data-category="medical-robotics" data-aos="fade-up" data-aos-delay="450">
+        <div class="project-image">
+          <video src="/assets/images/forceView.mp4" autoplay loop muted playsinline loading="lazy"></video>
+          <div class="project-overlay">
+            <div class="project-status completed">Completed</div>
+            <div class="project-impact">Clinical Impact</div>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">ROBOCOP Project</h3>
+            <div class="project-year">2019-2021</div>
+          </div>
+          <p class="project-description">Revolutionary cochlear implant robotization project, exploring innovative approaches to improve hearing technologies through advanced robotic assistance and precision surgical procedures.</p>
+          
+          <div class="project-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-ear"></i>
+              <span>Improved hearing outcomes</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-robot"></i>
+              <span>Autonomous positioning</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-user-md"></i>
+              <span>Surgeon assistance</span>
+            </div>
+          </div>
+          
+          <div class="project-tags">
+            <span class="tag medical-robotics">Hearing Tech</span>
+            <span class="tag simulation">Surgical Robotics</span>
+            <span class="tag ai-healthcare">Medical Devices</span>
+          </div>
+          
+          <div class="project-actions">
+            <a href="/research/projects/robocop/" class="btn-primary">
+              <span>Learn More</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONECT Project (foundational work) -->
+      <div class="project-card featured" data-category="medical-robotics simulation" data-aos="fade-up" data-aos-delay="550">
+        <div class="project-image">
+          <img src="/assets/images/projects/conect.jpg" alt="CONECT Project" loading="lazy">
+          <div class="project-overlay">
+            <div class="project-status active">Active</div>
+            <div class="project-impact">High Impact</div>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">CONECT Project</h3>
+            <div class="project-year">2015-2019</div>
+          </div>
+          <p class="project-description">Pioneering integration of robotic technology in operating rooms for enhanced precision in needle insertion procedures. Features advanced finite element simulations and augmented reality guidance systems for surgical assistance.</p>
+          
+          <div class="project-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-bullseye"></i>
+              <span>95% accuracy improvement</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-clock"></i>
+              <span>50% faster procedures</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-shield-alt"></i>
+              <span>Enhanced patient safety</span>
+            </div>
+          </div>
+          
+          <div class="project-tags">
+            <span class="tag medical-robotics">Medical Robotics</span>
+            <span class="tag simulation">AR Guidance</span>
+            <span class="tag ai-healthcare">Surgical AI</span>
+          </div>
+          
+          <div class="project-actions">
+            <a href="/research/projects/conect/" class="btn-primary">
+              <span>Explore Project</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <button class="btn-secondary" data-modal="conect-video">
+              <i class="fas fa-play"></i>
+              <span>Watch Demo</span>
+            </button>
           </div>
         </div>
       </div>
