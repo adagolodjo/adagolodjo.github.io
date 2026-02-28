@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Robotique médicale
-subtitle: Applications robotiques en médecine et systèmes de rééducation
+title: Module IA Robotique & Santé
+subtitle: Intelligence artificielle, robotique médicale et systèmes de rééducation
 permalink: /teaching/courses/robotique-medicale/
 image: /assets/images/projects/robotique-medicale.jpg
 ---
@@ -198,8 +198,8 @@ image: /assets/images/projects/robotique-medicale.jpg
 
 <div class="course-hero">
   <div class="course-hero-content">
-    <h1>🏥 Robotique médicale</h1>
-    <p class="subtitle">Applications robotiques en médecine et systèmes de rééducation</p>
+    <h1>🏥 Module IA Robotique & Santé</h1>
+    <p class="subtitle">Intelligence artificielle, robotique médicale et systèmes de rééducation</p>
     <div class="hero-badges">
       <span class="hero-badge">🎓 Master</span>
       <span class="hero-badge">⏱️ 4h TD + 8h TP</span>
@@ -216,7 +216,7 @@ image: /assets/images/projects/robotique-medicale.jpg
   </div>
   
   <p style="font-size: 1.1rem; line-height: 1.7; color: #555; margin-bottom: 2rem;">
-    Ce cours explore les applications avancées de la robotique dans le domaine médical, incluant les <strong>robots chirurgicaux</strong>, les <strong>systèmes de rééducation</strong> et les <strong>dispositifs d'assistance</strong>. Les étudiants découvriront les défis technologiques et éthiques de l'intégration robotique en médecine, avec un focus sur la sécurité, la précision et l'interaction homme-robot dans un contexte médical.
+    Ce cours explore les applications avancées de la robotique et de l'intelligence artificielle dans le domaine médical, incluant les <strong>robots chirurgicaux</strong>, les <strong>systèmes de rééducation</strong> et les <strong>dispositifs d'assistance intelligents</strong>. Les étudiants découvriront les défis technologiques, éthiques et réglementaires de l'intégration conjointe IA–robotique en médecine, avec un focus sur la sécurité, la précision et l'interaction homme-robot dans un contexte médical.
   </p>
 
   <div class="info-box">

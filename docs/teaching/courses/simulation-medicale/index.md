@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Simulation Médicale et Robotique Médicale
-subtitle: Applications de la simulation et robotique en médecine
+title: Simulation Médicale
+subtitle: Applications de la simulation en médecine
 permalink: /teaching/courses/simulation-medicale/
 image: /assets/images/projects/simulation-medicale.jpg
 ---
@@ -459,13 +459,13 @@ image: /assets/images/projects/simulation-medicale.jpg
 
 <div class="course-hero">
   <div class="course-hero-content">
-    <h1>🏥 Simulation Médicale et Robotique Médicale</h1>
-    <p class="subtitle">Applications avancées de la simulation et robotique en médecine</p>
+    <h1>🏥 Simulation Médicale</h1>
+    <p class="subtitle">Applications avancées de la simulation en médecine</p>
     <div class="hero-badges">
       <span class="hero-badge">🎓 Niveau Graduate</span>
       <span class="hero-badge">⏱️ 10h CM</span>
       <span class="hero-badge">🎯 Médecine</span>
-      <span class="hero-badge">🤖 Robotique médicale</span>
+      <span class="hero-badge">🧪 Simulation numérique</span>
     </div>
   </div>
 </div>
@@ -488,7 +488,7 @@ image: /assets/images/projects/simulation-medicale.jpg
   </div>
   
   <p style="font-size: 1.1rem; line-height: 1.7; color: #555; margin-bottom: 2rem;">
-    Ce cours explore les applications de la simulation numérique et de la robotique dans le domaine médical. Les étudiants découvriront les enjeux spécifiques de la modélisation des tissus biologiques, des systèmes de simulation chirurgicale, et des robots médicaux. Une approche pluridisciplinaire associe informatique, mécanique, et sciences biomédicales pour adresser les défis technologiques de la médecine moderne.
+    Ce cours explore les applications de la simulation numérique dans le domaine médical. Les étudiants découvriront les enjeux spécifiques de la modélisation des tissus biologiques et des systèmes de simulation chirurgicale. Une approche pluridisciplinaire associe informatique, mécanique, et sciences biomédicales pour adresser les défis technologiques de la médecine moderne.
   </p>
 
   <div class="info-box">
@@ -529,7 +529,7 @@ image: /assets/images/projects/simulation-medicale.jpg
     <span class="skill-tag">Simulation temps réel</span>
     <span class="skill-tag">SOFA Framework</span>
     <span class="skill-tag">Modélisation tissus</span>
-    <span class="skill-tag">Robotique chirurgicale</span>
+    <span class="skill-tag">Planification chirurgicale</span>
     <span class="skill-tag">Interaction haptique</span>
   </div>
 </section>
@@ -547,7 +547,7 @@ image: /assets/images/projects/simulation-medicale.jpg
   <div class="objectives-grid">
     <div class="objective-card">
       <h4>🏥 Comprendre les enjeux médicaux</h4>
-      <p>Identifier les besoins spécifiques de la simulation et robotique en contexte médical.</p>
+      <p>Identifier les besoins spécifiques de la simulation numérique en contexte médical.</p>
     </div>
     <div class="objective-card">
       <h4>🧬 Modéliser les tissus biologiques</h4>
@@ -558,8 +558,8 @@ image: /assets/images/projects/simulation-medicale.jpg
       <p>Développer des algorithmes de simulation compatibles avec les contraintes temporelles.</p>
     </div>
     <div class="objective-card">
-      <h4>🤖 Intégrer la robotique médicale</h4>
-      <p>Concevoir des systèmes robotiques pour la chirurgie assistée et la rééducation.</p>
+      <h4>🩺 Concevoir des scénarios de formation</h4>
+      <p>Définir et structurer des scénarios de simulation clinique pour la formation et l'entraînement.</p>
     </div>
     <div class="objective-card">
       <h4>👋 Développer l'interaction haptique</h4>
@@ -602,8 +602,8 @@ image: /assets/images/projects/simulation-medicale.jpg
     <div class="timeline-item">
       <div class="timeline-week">Séance 4</div>
       <div class="timeline-content">
-        <h4>Robotique chirurgicale</h4>
-        <div class="timeline-details">Robots Da Vinci, chirurgie laparoscopique, télé-opération avec retour de force.</div>
+        <h4>Cas d'étude en simulation chirurgicale</h4>
+        <div class="timeline-details">Simulateurs chirurgicaux, scénarios de formation, analyse de cas cliniques.</div>
       </div>
     </div>
     <div class="timeline-item">
@@ -625,7 +625,7 @@ image: /assets/images/projects/simulation-medicale.jpg
     <div class="eval-item">
       <span class="eval-percentage">70%</span>
       <div class="eval-title">Exposé</div>
-      <div class="eval-description">Présentation d'un projet de recherche en simulation ou robotique médicale.</div>
+      <div class="eval-description">Présentation d'un projet de recherche ou d'un cas d'étude en simulation médicale.</div>
     </div>
     <div class="eval-item">
       <span class="eval-percentage">30%</span>
@@ -665,7 +665,7 @@ image: /assets/images/projects/simulation-medicale.jpg
       <ul>
         <li>Simulation hépatique temps réel</li>
         <li>Entraînement chirurgie cardiaque</li>
-        <li>Robotique de rééducation</li>
+        <li>Simulateurs de rééducation</li>
       </ul>
     </div>
   </div>

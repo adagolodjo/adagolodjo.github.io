@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Modeling & Real-Time Medical Simulation
-subtitle: Techniques avancées de modélisation pour la simulation médicale temps réel
+title: Robotique médicale
+subtitle: Applications robotiques et simulation pour la santé
 permalink: /teaching/courses/modeling-medical-sim/
 image: /assets/images/projects/modeling-medical-sim.jpg
 ---
@@ -459,12 +459,12 @@ image: /assets/images/projects/modeling-medical-sim.jpg
 
 <div class="course-hero">
   <div class="course-hero-content">
-    <h1>⚕️ Modeling & Real-Time Medical Simulation</h1>
-    <p class="subtitle">Techniques avancées de modélisation pour la simulation médicale temps réel</p>
+    <h1>🏥 Robotique médicale</h1>
+    <p class="subtitle">Applications robotiques et simulation pour la santé</p>
     <div class="hero-badges">
       <span class="hero-badge">🎓 Niveau Graduate</span>
       <span class="hero-badge">📅 1er octobre 2024</span>
-      <span class="hero-badge">🎯 Simulation temps réel</span>
+      <span class="hero-badge">🤖 Robotique médicale</span>
       <span class="hero-badge">🏥 Applications médicales</span>
     </div>
   </div>
@@ -488,12 +488,12 @@ image: /assets/images/projects/modeling-medical-sim.jpg
   </div>
   
   <p style="font-size: 1.1rem; line-height: 1.7; color: #555; margin-bottom: 2rem;">
-    Ce cours avancé explore les techniques de modélisation de pointe spécifiquement conçues pour les systèmes de simulation médicale temps réel. Les étudiants apprendront les fondements théoriques et l'implémentation pratique des algorithmes de simulation utilisés dans la formation médicale, la planification chirurgicale et les applications thérapeutiques.
+    Ce cours avancé explore les principes et applications de la robotique médicale : robots chirurgicaux, systèmes de rééducation et dispositifs d'assistance. Les étudiants apprendront comment modéliser, contrôler et simuler ces systèmes pour la formation médicale, la planification d'interventions et l'aide au geste thérapeutique.
   </p>
 
   <div class="info-box">
     <h4>📊 Informations générales</h4>
-    <p><strong>Code du cours :</strong> MODELING-MEDICAL-SIM<br>
+    <p><strong>Code du cours :</strong> ROBOTIQUE-MEDICALE<br>
     <strong>Niveau :</strong> Graduate<br>
     <strong>Semestre :</strong> Automne 2024<br>
     <strong>Date de début :</strong> 1er octobre 2024<br>
@@ -535,12 +535,12 @@ image: /assets/images/projects/modeling-medical-sim.jpg
   </div>
 
   <div class="skills-tags">
-    <span class="skill-tag">SOFA Framework</span>
-    <span class="skill-tag">Éléments finis</span>
+    <span class="skill-tag">Robotique chirurgicale</span>
+    <span class="skill-tag">Robots de rééducation</span>
+    <span class="skill-tag">Contrôle et commande</span>
+    <span class="skill-tag">Perception & vision</span>
+    <span class="skill-tag">IA pour la santé</span>
     <span class="skill-tag">Simulation temps réel</span>
-    <span class="skill-tag">Modélisation tissus</span>
-    <span class="skill-tag">GPU Computing</span>
-    <span class="skill-tag">Haptique médical</span>
   </div>
 </section>
 
@@ -556,28 +556,28 @@ image: /assets/images/projects/modeling-medical-sim.jpg
 
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>🏥 Comprendre la simulation médicale</h4>
-      <p>Maîtriser les principes fondamentaux de la simulation temps réel dans les contextes médicaux.</p>
+      <h4>🏥 Comprendre la robotique médicale</h4>
+      <p>Maîtriser les principes fondamentaux des robots médicaux et de leurs domaines d'application.</p>
     </div>
     <div class="objective-card">
-      <h4>🧬 Implémenter des modèles tissulaires</h4>
-      <p>Développer des algorithmes efficaces pour la modélisation et déformation des tissus mous.</p>
+      <h4>🧬 Modéliser l'interaction avec le patient</h4>
+      <p>Développer des modèles adaptés aux interactions robot–patient (tissus, mouvements, contraintes de sécurité).</p>
     </div>
     <div class="objective-card">
-      <h4>⚡ Optimiser pour le temps réel</h4>
-      <p>Concevoir et optimiser des systèmes de simulation pour applications médicales interactives.</p>
+      <h4>⚡ Concevoir des lois de commande</h4>
+      <p>Concevoir et analyser des lois de commande pour des robots médicaux sûrs et performants.</p>
     </div>
     <div class="objective-card">
       <h4>⚖️ Évaluer les compromis</h4>
-      <p>Analyser les compromis entre précision et performance dans les scénarios temps réel.</p>
+      <p>Analyser les compromis entre précision, temps réel, ergonomie et sécurité dans les scénarios médicaux.</p>
     </div>
     <div class="objective-card">
       <h4>🎯 Appliquer aux domaines médicaux</h4>
-      <p>Utiliser les techniques de simulation dans des domaines spécifiques (chirurgie, rééducation, formation).</p>
+      <p>Mettre en œuvre des solutions robotiques en chirurgie, rééducation et assistance au geste.</p>
     </div>
     <div class="objective-card">
-      <h4>🔬 Valider les modèles</h4>
-      <p>Développer des méthodes de validation et vérification pour les simulateurs médicaux.</p>
+      <h4>🔬 Valider les systèmes</h4>
+      <p>Développer des méthodes de test, validation et évaluation clinique de systèmes robotiques médicaux.</p>
     </div>
   </div>
 </section>
@@ -591,29 +591,29 @@ image: /assets/images/projects/modeling-medical-sim.jpg
     <div class="timeline-item">
       <div class="timeline-week">Module 1</div>
       <div class="timeline-content">
-        <h4>Fondements de la simulation médicale</h4>
-        <div class="timeline-details">Principes de simulation basée sur la physique, contraintes temps réel, exigences médicales et validation.</div>
+        <h4>Fondements de la robotique médicale</h4>
+        <div class="timeline-details">Typologie des robots médicaux, architecture générale, exigences cliniques et contraintes de sécurité.</div>
       </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-week">Module 2</div>
       <div class="timeline-content">
-        <h4>Modélisation des tissus mous</h4>
-        <div class="timeline-details">Mécanique des milieux continus pour tissus biologiques, méthodes des éléments finis temps réel, systèmes masse-ressort.</div>
+        <h4>Capteurs, perception et interaction</h4>
+        <div class="timeline-details">Capteurs de position et d'effort, vision par ordinateur, interfaces homme–robot et retour haptique.</div>
       </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-week">Module 3</div>
       <div class="timeline-content">
-        <h4>Implémentation temps réel</h4>
-        <div class="timeline-details">Schémas d'intégration numérique, techniques d'accélération GPU, multi-threading et optimisation mémoire.</div>
+        <h4>Commande et temps réel</h4>
+        <div class="timeline-details">Loi de commande, contrôle en position/force, contraintes temps réel et sûreté de fonctionnement.</div>
       </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-week">Module 4</div>
       <div class="timeline-content">
-        <h4>Applications médicales</h4>
-        <div class="timeline-details">Systèmes de simulation chirurgicale, intégration de retour haptique, modélisation patient-spécifique.</div>
+        <h4>Applications cliniques et simulation</h4>
+        <div class="timeline-details">Cas d'usage en chirurgie, rééducation et assistance, appui sur la simulation pour la conception et la formation.</div>
       </div>
     </div>
   </div>
@@ -628,7 +628,7 @@ image: /assets/images/projects/modeling-medical-sim.jpg
     <div class="eval-item">
       <span class="eval-percentage">70%</span>
       <div class="eval-title">Exposé</div>
-      <div class="eval-description">Présentation d'un sujet de recherche lié à la simulation médicale avec démonstration technique.</div>
+      <div class="eval-description">Présentation d'un sujet de recherche ou d'un projet lié à la robotique médicale avec démonstration technique.</div>
     </div>
     <div class="eval-item">
       <span class="eval-percentage">30%</span>

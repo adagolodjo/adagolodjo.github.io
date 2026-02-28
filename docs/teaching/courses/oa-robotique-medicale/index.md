@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Robotique médicale
+title: Module IA Robotique & Santé
 subtitle: Redirection vers la page de cours
 permalink: /teaching/courses/oa-robotique-medicale/
 redirect_to: /teaching/courses/robotique-medicale/

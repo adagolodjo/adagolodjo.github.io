@@ -283,15 +283,15 @@ Ma philosophie d'enseignement s'articule autour de **l'apprentissage par la prat
   <div class="courses-grid">
     <div class="course-card">
       <div class="course-code">SIMULATION-MEDICALE</div>
-      <div class="course-title">Simulation Médicale et Robotique Médicale</div>
+      <div class="course-title">Simulation Médicale</div>
       <div class="course-desc">Applications de la simulation et robotique en médecine, technologies de pointe pour la santé.</div>
       <a href="/teaching/courses/simulation-medicale/" class="btn btn-primary">📖 Détails du cours</a>
     </div>
     
     <div class="course-card">
-      <div class="course-code">MODELING-MEDICAL-SIM</div>
-      <div class="course-title">Modeling & Real-Time Medical Simulation</div>
-      <div class="course-desc">Techniques avancées de modélisation pour les systèmes de simulation médicale temps réel.</div>
+      <div class="course-code">ROBOTIQUE-MEDICALE</div>
+      <div class="course-title">Robotique médicale</div>
+      <div class="course-desc">Conception et utilisation de robots médicaux (chirurgie, rééducation, assistance), appuyées par la simulation et l'IA pour la santé.</div>
       <a href="/teaching/courses/modeling-medical-sim/" class="btn btn-primary">📖 Détails du cours</a>
     </div>
   </div>

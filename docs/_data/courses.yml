@@ -9,7 +9,7 @@
   evaluation: "DS, Note de Classe, Note de TP"
 
 - code: SIMULATION-MEDICALE
-  title: "Simulation Médical et Robotique Médicale"
+  title: "Simulation Médicale"
   semester: "Fall 2024"
   description: "Medical simulation techniques and medical robotics applications"
   syllabus: "/teaching/courses/simulation-medicale/"
@@ -17,8 +17,8 @@
   hours_cm: "10"
   evaluation: "Exposé, Note de Classe"
 
-- code: MODELING-MEDICAL-SIM
-  title: "Modeling & Real-Time Medical Simulation"
+- code: ROBOTIQUE-MEDICALE
+  title: "Robotique médicale"
   semester: "Fall 2024"
   description: "Advanced modeling techniques for real-time medical simulation systems"
   syllabus: "/teaching/courses/modeling-medical-sim/"
@@ -162,7 +162,7 @@
 
 # Nouveau cours Master Automatique/Robotique
 - code: OA-ROBOTIQUE-MEDICALE
-  title: "Robotique médicale"
+  title: "Module IA Robotique & Santé"
   semester: "S3"
   description: "Medical robotics applications including surgical robots, rehabilitation systems, and medical simulation"
   syllabus: "/teaching/courses/robotique-medicale/"
