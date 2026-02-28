@@ -370,6 +370,52 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
         </div>
       </div>
 
+      <!-- Growing Robot (vine robots for endoscopy) -->
+      <div class="project-card" data-category="soft-robotics simulation" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-image">
+          <img src="/assets/images/projects/growing-robot.jpg" alt="Growing Robot Project" loading="lazy">
+          <div class="project-overlay">
+            <div class="project-status active">Active</div>
+            <div class="project-impact">Vine Robots</div>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">Growing Robot</h3>
+            <div class="project-year">2023-Present</div>
+          </div>
+          <p class="project-description">Designing and modeling vine-inspired growing robots for endoscopic and cardiovascular procedures, using eversion-based soft robotics to safely navigate complex anatomical pathways with minimal invasiveness.</p>
+          
+          <div class="project-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-route"></i>
+              <span>Natural orifice navigation</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-heart"></i>
+              <span>Cardiovascular applications</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-feather"></i>
+              <span>Low-contact soft interaction</span>
+            </div>
+          </div>
+          
+          <div class="project-tags">
+            <span class="tag soft-robotics">Vine Robots</span>
+            <span class="tag simulation">Eversion Modeling</span>
+            <span class="tag medical-robotics">Endoscopic Robotics</span>
+          </div>
+          
+          <div class="project-actions">
+            <a href="/research/projects/growing-robot/" class="btn-primary">
+              <span>Explore Project</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <!-- COSSEROOTS Project (soft robotics) -->
       <div class="project-card" data-category="soft-robotics simulation" data-aos="fade-up" data-aos-delay="350">
         <div class="project-image">
