@@ -1,11 +1,11 @@
 ---
 layout: page
 title: Growing Robot
-subtitle: Eversion-Based Soft Robotics for Medical Applications
+subtitle: Vine-Inspired Soft Robot for Endoscopic and Cardiovascular Procedures
 permalink: /research/projects/growing-robot/
 image: /assets/images/projects/growing-robot.jpg
-description: "Development of innovative growing robots using eversion principles for medical applications, including TAVI procedures and minimally invasive interventions."
-start_date: 2022-01-01
+description: "Development of innovative vine-inspired growing robots using eversion principles for endoscopic and cardiovascular medical applications, including TAVI procedures and minimally invasive interventions."
+start_date: 2023-01-01
 status: active
 keywords: ["Growing Robots", "Soft Robotics", "Eversion", "TAVI", "Medical Robotics", "Kinematics", "Quasi-Statics"]
 ---
@@ -196,9 +196,9 @@ Growing robots offer revolutionary advantages for TAVI procedures:
 
 ## Project Timeline
 
-- **2022**: Project initiation and concept development
-- **2023**: Kinematic modeling and RoboSoft publication
-- **2024**: Material studies and Hamlyn Symposium presentation
+- **2023**: Project initiation, concept development and early kinematic modeling
+- **2024**: RoboSoft publication and advanced eversion modeling
+- **2025**: Material studies and Hamlyn Symposium presentation
 - **Ongoing**: Clinical validation and technology refinement
 - **Future**: Regulatory approval and clinical implementation
 
