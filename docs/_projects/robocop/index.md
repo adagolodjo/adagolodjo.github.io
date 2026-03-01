@@ -1,23 +1,69 @@
 ---
 layout: page
 title: ROBOCOP Project
-subtitle: Cochlear Implant Robotization
+subtitle: Robotic Co-Manipulation for Prostate Biopsy
 permalink: /research/projects/robocop/
 image: /assets/images/projects/robocop.jpg
-description: "Advanced research project focusing on cochlear implant robotization and hearing technology improvement through robotic assistance."
+description: "The ROBOCOP project aims to develop a new generation of robotic assistants for prostate biopsy, enhancing accuracy while maintaining surgeon autonomy through shared control."
+start_date: 2017-01-01
+status: completed
+keywords: ["Robotic Biopsy", "Co-Manipulation", "Prostate Cancer", "Shared Control", "Interventional Radiology"]
 ---
 
-![ROBOCOP Project](/assets/images/projects/robocop.jpg)
+<div class="project-hero-section">
+  <div class="project-hero-glow"></div>
+  <div class="project-hero-grid">
+    <div class="hero-left">
+      <div class="project-badges">
+        <span class="badge-glass"><i class="fas fa-check" style="font-size: 0.6rem; margin-right: 6px; position: relative; top: -2px;"></i> Completed</span>
+        <span class="badge-glass">2017-2021</span>
+      </div>
+      <h1 class="project-title-hero">{{ page.title }}</h1>
+      <p class="project-subtitle-hero">{{ page.description }}</p>
+      
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+        {% for tag in page.keywords limit:3 %}
+          <span style="background: rgba(255,255,255,0.1); padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; color: #a5b4fc;">#{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    
+    <div class="hero-right">
+      <div class="project-hero-image-wrapper">
+        <img src="{{ page.image }}" alt="{{ page.title }}">
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Project Overview
 
-The ROBOCOP project represents a cutting-edge initiative in the field of cochlear implant robotization, exploring innovative approaches to improve hearing technologies through advanced robotic assistance and precision surgical procedures.
+The ROBOCOP project successfully developed a new generation of robotic assistants for prostate biopsy. The system uses a co-manipulation approach where the robot and the surgeon share control of the ultrasound probe, combining human expertise with robotic precision.
 
-### Research Goals
-- Develop robotic systems for cochlear implant surgery
-- Improve precision and safety in hearing restoration procedures
-- Create real-time monitoring systems for surgical guidance
-- Validate robotic assistance in clinical environments
+<div class="features-grid">
+  <div class="feature-glass-card">
+    <i class="fas fa-handshake feature-icon"></i>
+    <h3>Co-Manipulation</h3>
+    <p>Surgeon and robot share control of the ultrasound probe, maintaining physician autonomy while enhancing stability.</p>
+  </div>
+  <div class="feature-glass-card">
+    <i class="fas fa-bullseye feature-icon"></i>
+    <h3>Needle Guidance</h3>
+    <p>Precise targeting mechanism for the biopsy needle ensures accurate sampling of suspected tumors.</p>
+  </div>
+  <div class="feature-glass-card">
+    <i class="fas fa-layer-group feature-icon"></i>
+    <h3>Image Fusion</h3>
+    <p>Real-time elastic registration fuses pre-operative MRI with intra-operative ultrasound.</p>
+  </div>
+</div>
+
+## Clinical Impact
+
+- 🎯 **Targeting Accuracy**: improved from 10mm to 3mm
+- 🧠 **Cognitive Load**: Significant reduction compared to cognitive fusion
+- ⏳ **Procedure Time**: Maintained standard duration
+- 👨‍⚕️ **Integration**: Seamless alignment with clinical workflow
 
 ## Technical Innovations
 
