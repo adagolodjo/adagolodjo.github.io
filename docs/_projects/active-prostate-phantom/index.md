@@ -10,11 +10,60 @@ status: active
 keywords: ["Medical Simulation", "Robotic Surgery", "Phantom Development", "Prostate Cancer", "Haptic Feedback"]
 ---
 
-![Active Prostate Phantom]({{ page.image | relative_url }})
+<div class="project-hero-section">
+  <div class="project-hero-glow"></div>
+  <div class="project-hero-grid">
+    <div class="hero-left">
+      <div class="project-badges">
+        <span class="badge-glass active"><i class="fas fa-circle" style="font-size: 0.6rem; margin-right: 6px; position: relative; top: -2px;"></i> {{ page.status }}</span>
+        <span class="badge-glass">Started 2023</span>
+      </div>
+      <h1 class="project-title-hero">{{ page.title }}</h1>
+      <p class="project-subtitle-hero">{{ page.description }}</p>
+
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+        {% for tag in page.keywords limit:3 %}
+          <span style="background: rgba(255,255,255,0.1); padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; color: #a5b4fc;">#{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    
+    <div class="hero-right">
+      <div class="project-hero-image-wrapper">
+        <img src="{{ page.image }}" alt="{{ page.title }}">
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Project Overview
 
 The Active Prostate Phantom project focuses on developing an advanced pneumatically actuated prostate phantom with multiple independently controlled chambers. This innovative phantom allows for precise volumetric adjustments to replicate both asymmetric and symmetric benign prostatic hyperplasia (BPH), providing a realistic platform for medical training and robotic system validation.
+
+<div class="features-grid">
+  <div class="feature-glass-card">
+    <i class="fas fa-lungs feature-icon"></i>
+    <h3>Multiple Chambers</h3>
+    <p>Independently controlled pneumatic chambers for precise volume adjustments and dynamic conditions.</p>
+  </div>
+  <div class="feature-glass-card">
+    <i class="fas fa-user-md feature-icon"></i>
+    <h3>Realistic Simulation</h3>
+    <p>Based on MRI dataset analysis for accurate modeling of physical measurements and anatomy.</p>
+  </div>
+  <div class="feature-glass-card">
+    <i class="fas fa-microscope feature-icon"></i>
+    <h3>Validation Platform</h3>
+    <p>Designed for testing robotic-assisted systems and training via accurate FEM integration.</p>
+  </div>
+</div>
+
+## Technical Approach
+
+- 📐 **Design Methodology**: Shape analysis of magnetic resonance imaging (MRI) datasets
+- 💻 **Modeling**: Finite element method (FEM) for accurate simulation
+- ✅ **Validation**: 3D reconstruction and physical measurement comparison
+- ⚙️ **Control System**: Pneumatic actuation with independent chamber control
 
 **Project Start Date:** November 2023
 
@@ -36,6 +85,7 @@ The Active Prostate Phantom project focuses on developing an advanced pneumatica
 ## Research Results
 
 The simulation results demonstrated strong agreement with physical measurements:
+
 - **Forward Modeling**: Average error of 3.47%
 - **Inverse Modeling**: Average error of 1.41%
 
@@ -44,6 +94,7 @@ These results validate the phantom's potential as a reliable platform for roboti
 ## Publications
 
 ### Conference Papers
+
 - **"Active Prostate Phantom with Multiple Chambers"** (2025)
   - Authors: Sizhe Tian, Yinoussa Adagolodjo, Jeremie Dequidt
   - Conference: IROS 2025 (IEEE/RSJ International Conference on Intelligent Robots and Systems)
@@ -57,18 +108,21 @@ These results validate the phantom's potential as a reliable platform for roboti
 ## Applications
 
 ### Medical Training
+
 - Digital rectal examination (DRE) training
 - Prostate biopsy procedure training
 - Medical student education
 - Continuing medical education programs
 
 ### Robotic System Validation
+
 - Calibration of robotic-assisted surgical systems
 - Testing of medical robotic procedures
 - Validation of haptic feedback systems
 - Research platform for new medical technologies
 
 ### Research Applications
+
 - Prostate cancer diagnosis research
 - Benign prostatic hyperplasia (BPH) studies
 - Medical simulation development
@@ -93,6 +147,7 @@ These results validate the phantom's potential as a reliable platform for roboti
 ## Collaborations
 
 This project involves collaboration with:
+
 - Research teams in medical robotics
 - Medical training institutions
 - Healthcare professionals specializing in urology
@@ -101,6 +156,7 @@ This project involves collaboration with:
 ## Impact
 
 The Active Prostate Phantom addresses critical needs in:
+
 - **Medical Education**: Providing realistic training scenarios
 - **Robotic Surgery**: Enabling precise system calibration and validation
 - **Patient Safety**: Reducing risks through improved training

@@ -11,29 +11,137 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
 
 <!-- Custom Styles for Research Page -->
 <style>
-  :root {
-    --primary-bg: #0f172a;
-    --card-bg: rgba(255, 255, 255, 0.03);
-    --card-border: rgba(255, 255, 255, 0.08);
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --accent-blue: #3b82f6;
-    --accent-purple: #8b5cf6;
-    --accent-teal: #14b8a6;
-    --gradient-primary: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  /* ===========================
+     ENHANCED: Animated Hero
+  =========================== */
+  @keyframes heroGradientResearch {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  @keyframes heroParticle {
+    0% { transform: translateY(0) scale(1); opacity: 0.6; }
+    100% { transform: translateY(-80px) scale(0.5); opacity: 0; }
   }
 
-  @keyframes float {
-    0% { transform: translateY(0px) rotate(0deg); }
-    100% { transform: translateY(-10px) rotate(2deg); }
+  /* ===========================
+     ENHANCED: Project Cards — Glassmorphism
+  =========================== */
+  .project-card, .focus-card, .news-card, .impact-card {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
   }
-  
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); filter: blur(4px); }
-    to { opacity: 1; transform: translateY(0); filter: blur(0); }
+
+  .project-card {
+    animation: fadeInUp 0.6s ease-out backwards;
   }
-  
-  /* Hero Section */
+
+  .project-card:hover, .focus-card:hover, .news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  }
+
+  /* ===========================
+     ENHANCED: Project Image
+  =========================== */
+  .project-image {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+  }
+
+  .project-image img, .project-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .project-card:hover .project-image img,
+  .project-card:hover .project-image video {
+    transform: scale(1.08);
+  }
+
+  .project-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-description { flex-grow: 1; }
+
+  /* ===========================
+     ENHANCED: Tags with Glow
+  =========================== */
+  .tag, .news-tag, .achievement-tag {
+    background: #f1f5f9;
+    color: #334155;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.25s;
+  }
+
+  .tag.soft-robotics { background: rgba(20,184,166,0.12); color: #0d9488; }
+  .tag.medical-robotics { background: rgba(239,68,68,0.1); color: #dc2626; }
+  .tag.simulation { background: rgba(59,130,246,0.12); color: #2563eb; }
+  .tag.ai-healthcare { background: rgba(139,92,246,0.12); color: #7c3aed; }
+
+  .tag:hover, .project-card:hover .tag {
+    filter: brightness(1.1);
+    box-shadow: 0 2px 8px rgba(59,130,246,0.2);
+  }
+
+  /* ===========================
+     ENHANCED: Domain Filters — Glow on Active
+  =========================== */
+  .domain-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+
+  .domain-filter {
+    background: #f1f5f9;
+    color: #475569;
+    border: 1.5px solid transparent;
+    padding: 0.65rem 1.4rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .domain-filter:hover {
+    background: #e2e8f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  .domain-filter.active {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 8px 20px rgba(59,130,246,0.4), 0 0 0 4px rgba(59,130,246,0.15);
+  }
+
+  /* ===========================
+     ENHANCED: Hero Section
+  =========================== */
   .research-hero {
     position: relative;
     padding: 6rem 2rem 4rem;
@@ -41,31 +149,34 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
     color: var(--text-primary);
     border-radius: 20px;
     margin-bottom: 3rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3);
   }
-  
+
   .hero-background {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: #0b1120;
+    background: linear-gradient(135deg, #0b1120, #15073a, #07253a);
+    background-size: 300% 300%;
+    animation: heroGradientResearch 12s ease infinite;
     z-index: 0;
   }
-  
+
   .hero-particles {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     pointer-events: none;
     z-index: 1;
   }
-  
+
   .hero-gradient {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 40%);
+    background: radial-gradient(circle at 80% 20%, rgba(139,92,246,0.2) 0%, transparent 45%),
+                radial-gradient(circle at 20% 80%, rgba(59,130,246,0.2) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(20,184,166,0.05) 0%, transparent 60%);
     z-index: 2;
   }
-  
+
   .hero-content {
     position: relative;
     z-index: 3;
@@ -73,128 +184,87 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
     margin: 0 auto;
     text-align: center;
   }
-  
+
   .hero-title {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 800;
     letter-spacing: -0.025em;
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #60a5fa, #a78bfa, #34d399);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 1rem;
     line-height: 1.2;
   }
-  
+
   .hero-subtitle {
-    font-size: 1.25rem;
-    color: var(--text-secondary);
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.65);
     max-width: 600px;
     margin: 0 auto 3rem;
   }
-  
-  /* Stats Cards */
+
+  /* ===========================
+     ENHANCED: Stat Cards
+  =========================== */
   .research-stats {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
   }
-  
+
   .stat-card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-radius: 16px;
     padding: 1.5rem 2rem;
-    min-width: 200px;
+    min-width: 180px;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   }
-  
+
   .stat-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    transform: translateY(-6px);
+    border-color: rgba(139,92,246,0.4);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35), 0 0 30px rgba(139,92,246,0.15);
   }
-  
+
   .stat-icon {
     font-size: 2rem;
-    color: var(--accent-blue);
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 1rem;
   }
-  
+
   .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--text-primary);
+    color: #fff;
     line-height: 1;
     margin-bottom: 0.5rem;
   }
-  
+
   .stat-label {
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--text-secondary);
+    color: rgba(255,255,255,0.5);
   }
-  
-  /* general card aesthetics */
-  .project-card, .focus-card, .news-card, .impact-card {
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    overflow: hidden;
-    border: 1px solid rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .project-card {
-    animation: fadeInUp 0.6s ease-out backwards;
-  }
-  
-  .project-card:hover, .focus-card:hover, .news-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.12);
-  }
-  
-  .project-image {
-    position: relative;
-    overflow: hidden;
-    height: 220px;
-  }
-  
-  .project-image img, .project-image video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-  }
-  
-  .project-card:hover .project-image img, .project-card:hover .project-image video {
-    transform: scale(1.05);
-  }
-  
-  .project-content {
-    padding: 1.5rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .project-description {
-    flex-grow: 1;
-  }
-  
-  /* Carousel Styles */
+
+  /* ===========================
+     ENHANCED: Carousel
+  =========================== */
   .carousel-wrapper {
     position: relative;
     max-width: 100%;
     margin: 0 -1rem;
     padding: 0 1rem;
   }
-  
+
   .projects-carousel-container {
     display: flex;
     gap: 2rem;
@@ -202,21 +272,19 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     padding-bottom: 2rem;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
-  
-  .projects-carousel-container::-webkit-scrollbar {
-    display: none;
-  }
-  
+
+  .projects-carousel-container::-webkit-scrollbar { display: none; }
+
   .projects-carousel-container .project-card {
     min-width: 320px;
     max-width: 400px;
     flex: 0 0 auto;
     scroll-snap-align: center;
   }
-  
+
   .carousel-nav {
     display: flex;
     justify-content: center;
@@ -224,9 +292,9 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
     margin-top: -1rem;
     margin-bottom: 2rem;
   }
-  
+
   .carousel-btn {
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
     border: none;
     color: white;
     width: 60px;
@@ -237,76 +305,30 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4), 0 4px 6px -2px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 10px 20px rgba(59,130,246,0.35);
     font-size: 1.5rem;
   }
-  
+
   .carousel-btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.5), 0 10px 10px -5px rgba(59, 130, 246, 0.3);
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 20px 35px rgba(59,130,246,0.5), 0 0 20px rgba(139,92,246,0.3);
   }
-  
-  /* Progress bars */
+
+  /* ===========================
+     ENHANCED: Progress Bars
+  =========================== */
   .progress-bar {
     width: 0;
     transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-    background: var(--gradient-primary);
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #14b8a6);
     height: 6px;
     border-radius: 3px;
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 12px rgba(59,130,246,0.6), 0 0 4px rgba(139,92,246,0.4);
   }
-  
-  /* Domain Filters */
-  .domain-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin: 2rem 0;
-  }
-  
-  .domain-filter {
-    background: #f1f5f9;
-    color: #475569;
-    border: 1px solid transparent;
-    padding: 0.75rem 1.5rem;
-    border-radius: 9999px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .domain-filter:hover {
-    background: #e2e8f0;
-    transform: translateY(-2px);
-  }
-  
-  .domain-filter.active {
-    background: var(--accent-blue);
-    color: white;
-    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4);
-  }
-  
-  /* Tags */
-  .tag, .news-tag, .achievement-tag {
-    background: #f1f5f9;
-    color: #334155;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  
-  .project-highlight i {
-    color: var(--accent-purple);
-  }
-  
-  /* Buttons */
+
+  /* ===========================
+     ENHANCED: Buttons
+  =========================== */
   .btn-primary, .btn-secondary {
     display: inline-flex;
     align-items: center;
@@ -318,62 +340,63 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
     transition: all 0.3s ease;
     text-decoration: none;
   }
-  
+
   .btn-primary {
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
     color: white;
-    box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.39);
+    box-shadow: 0 4px 14px rgba(59,130,246,0.4);
   }
-  
+
   .btn-primary:hover {
-    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+    color: white;
+    box-shadow: 0 6px 22px rgba(59,130,246,0.6), 0 0 20px rgba(139,92,246,0.25);
     transform: translateY(-2px);
   }
-  
+
   .btn-secondary {
     background: white;
     color: #1e293b;
     border: 1px solid #e2e8f0;
   }
-  
+
   .btn-secondary:hover {
-    border-color: #cbd5e1;
-    background: #f8fafc;
+    border-color: #3b82f6;
+    background: #eff6ff;
+    color: #1d4ed8;
     transform: translateY(-2px);
   }
-  
-  /* Dark mode compatibility fixes for content area */
+
+  /* ===========================
+     ENHANCED: misc
+  =========================== */
+  .project-highlight i { color: #8b5cf6; }
+
+  @keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-10px) rotate(2deg); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); filter: blur(4px); }
+    to { opacity: 1; transform: translateY(0); filter: blur(0); }
+  }
+
+  /* ===========================
+     DARK MODE
+  =========================== */
   @media (prefers-color-scheme: dark) {
     .project-card, .focus-card, .news-card, .impact-card {
-      background: #1e293b;
+      background: rgba(30,41,59,0.95);
       border-color: #334155;
       color: #f8fafc;
     }
-    .project-card p, .focus-card p, .news-card p {
-      color: #cbd5e1;
-    }
-    .project-card h3, .focus-card h3, .news-card h3 {
-      color: #ffffff;
-    }
-    .btn-secondary {
-      background: #334155;
-      color: #f8fafc;
-      border-color: #475569;
-    }
-    .btn-secondary:hover {
-      background: #475569;
-    }
-    .tag, .news-tag, .achievement-tag {
-      background: #334155;
-      color: #cbd5e1;
-    }
-    .domain-filter {
-      background: #334155;
-      color: #cbd5e1;
-    }
-    .domain-filter:hover {
-      background: #475569;
-    }
+    .project-card p, .focus-card p, .news-card p { color: #cbd5e1; }
+    .project-card h3, .focus-card h3, .news-card h3 { color: #ffffff; }
+    .btn-secondary { background: #334155; color: #f8fafc; border-color: #475569; }
+    .btn-secondary:hover { background: #475569; border-color: #8b5cf6; }
+    .tag, .news-tag, .achievement-tag { background: #334155; color: #cbd5e1; }
+    .domain-filter { background: #334155; color: #cbd5e1; }
+    .domain-filter:hover { background: #475569; }
   }
 </style>
 
@@ -611,7 +634,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
             <h3 class="project-title">Active prostate phantom for prostate biopsy</h3>
             <div class="project-year">2023-Present</div>
           </div>
-          <p class="project-description">Developing a multi-chamber, pneumatically actuated active prostate phantom to realistically simulate the prostate and guide targeted biopsies. Provides a training and validation platform, robotic assistance and improved prostate cancer diagnosis. The phantom is designed to be used in a clinical setting to validate the accuracy of the prostate biopsy procedure.</p>
+          <p class="project-description">Pneumatically actuated active prostate phantom for training and validation of targeted biopsy procedures, improving prostate cancer diagnosis accuracy.</p>
           
           <div class="project-highlights">
             <div class="highlight-item">
@@ -635,20 +658,20 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
           </div>
           
           <div class="project-actions">
-            <a href="https://www.inria.fr/fr/cancer-prostate-diagnostic-ia-robotique" class="btn-primary" target="_blank" rel="noopener">
+            <a href="/research/projects/active-prostate-phantom/" class="btn-primary">
+              <span>Explore Project</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="https://www.inria.fr/fr/cancer-prostate-diagnostic-ia-robotique" class="btn-secondary" target="_blank" rel="noopener">
               <span>Reference Article</span>
               <i class="fas fa-external-link-alt"></i>
             </a>
-            <button class="btn-secondary" data-modal="prostate-video">
-              <i class="fas fa-play"></i>
-              <span>Watch Demo</span>
-            </button>
           </div>
         </div>
       </div>
 
-      <!-- IRE Project (Flagship, current) -->
-      <div class="project-card flagship" data-category="soft-robotics ai-healthcare" data-aos="fade-up" data-aos-delay="150">
+      <!-- IRE Project -->
+      <div class="project-card" data-category="soft-robotics ai-healthcare" data-aos="fade-up" data-aos-delay="150">
         <div class="project-image">
           <img src="/assets/images/projects/colon.jpg" alt="IRE Project" loading="lazy">
           <div class="project-overlay">
@@ -661,7 +684,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
             <h3 class="project-title">IRE Project</h3>
             <div class="project-year">2023-Present</div>
           </div>
-          <p class="project-description">Revolutionary development of AI-powered soft robotic endoscopes and digital twins for safer, more effective minimally invasive procedures. This flagship project represents the future of endoscopic surgery.</p>
+          <p class="project-description">AI-powered soft robotic endoscopes and digital twins for safer, more effective minimally invasive procedures.</p>
           
           <div class="project-highlights">
             <div class="highlight-item">
@@ -711,7 +734,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
             <h3 class="project-title">ADAGIO Project</h3>
             <div class="project-year">2026-Present</div>
           </div>
-          <p class="project-description">Developing adaptive digital tools and AI-driven assistance for complex medical interventions. This project focuses on creating intelligent systems that learn and adapt to surgical environments.</p>
+          <p class="project-description">Adaptive AI-driven tools and intelligent systems for complex medical interventions, designed to learn and adapt to diverse surgical environments.</p>
           
           <div class="project-highlights">
             <div class="highlight-item">
@@ -761,7 +784,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
             <h3 class="project-title">Growing Robot</h3>
             <div class="project-year">2023-Present</div>
           </div>
-          <p class="project-description">Designing and modeling vine-inspired growing robots for endoscopic and cardiovascular procedures, using eversion-based soft robotics to safely navigate complex anatomical pathways with minimal invasiveness.</p>
+          <p class="project-description">Vine-inspired growing robots for endoscopic and cardiovascular procedures using eversion-based soft robotics to navigate complex anatomical pathways.</p>
           
           <div class="project-highlights">
             <div class="highlight-item">
@@ -811,7 +834,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
             <h3 class="project-title">COSSEROOTS Project</h3>
             <div class="project-year">2021-Present</div>
           </div>
-          <p class="project-description">Applying Cosserat's theory to advance the control of slender deformation robots. This innovative approach combines theoretical physics with practical robotics applications in medical and industrial settings.</p>
+          <p class="project-description">Applying Cosserat's theory to advance control of slender deformable robots for medical and industrial applications.</p>
           
           <div class="project-highlights">
             <div class="highlight-item">
@@ -863,7 +886,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
             <h3 class="project-title">ROBOCOP Project</h3>
             <div class="project-year">2019-2021</div>
           </div>
-          <p class="project-description">Revolutionary cochlear implant robotization project, exploring innovative approaches to improve hearing technologies through advanced robotic assistance and precision surgical procedures.</p>
+          <p class="project-description">Cochlear implant robotization project using advanced robotic assistance and precision surgical procedures to improve hearing technologies.</p>
           
           <div class="project-highlights">
             <div class="highlight-item">
@@ -913,7 +936,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
             <h3 class="project-title">CONECT Project</h3>
             <div class="project-year">2015-2019</div>
           </div>
-          <p class="project-description">Pioneering integration of robotic technology in operating rooms for enhanced precision in needle insertion procedures. Features advanced finite element simulations and augmented reality guidance systems for surgical assistance.</p>
+          <p class="project-description">Pioneering robotic integration in operating rooms for needle insertion precision, featuring finite element simulations and augmented reality guidance.</p>
           
           <div class="project-highlights">
             <div class="highlight-item">
