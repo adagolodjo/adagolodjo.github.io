@@ -708,7 +708,11 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 <div class="timeline-week">Chapitre 2 : Logique Combinatoire vs Séquentielle</div>
 <div class="timeline-content">
 <h4>Algèbre de Boole et logique séquentielle</h4>
-<div class="timeline-details">Rappels booléens, différences combinatoire/séquentiel, outils de description, chronogrammes.</div>
+<div class="timeline-details">Rappels booléens, différences combinatoire/séquentiel, outils de description, chronogrammes.
+<ul>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/w8ZSmFqDbCi5q9J" target="_blank" rel="noopener noreferrer">📊 Parie 2 (PDF)</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="timeline-item">
