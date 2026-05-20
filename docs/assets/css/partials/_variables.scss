@@ -110,6 +110,7 @@ $dark-shadow: 0 4px 24px rgba(139,69,19,0.20);
   --success-color: #{$success};
   --warning-color: #{$warning};
   --danger-color: #{$danger};
+  --bg-color: #{$card-bg};
   --card-bg: #{$card-bg};
   --text-color: #{$text-color};
   --text-muted: #{$text-muted};
@@ -160,7 +161,7 @@ $dark-shadow: 0 4px 24px rgba(139,69,19,0.20);
 
 // Mode sombre amélioré Ayuthaya
 [data-theme="dark"] {
-  --bg-color: #{$dark-bg};
+  --bg-color: #{$dark-bg};   // dark background
   --text-color: #{$dark-text};
   --card-bg: #{$dark-card-bg};
   --border-color: #{$dark-border-color};
