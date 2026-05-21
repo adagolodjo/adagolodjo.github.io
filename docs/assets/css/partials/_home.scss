@@ -4,10 +4,10 @@
 // la palette Ayuthaya (celle-ci est importée avant _home.scss dans app.scss).
 :root {
   // Couleurs secondaires propres à _home.scss (absentes de _variables.scss)
-  --primary-accent: #066363;
+  --primary-accent: #014D50;
   --secondary-color: #3273dc;
   --secondary-light: rgba(50, 115, 220, 0.13);
-  --text-light: #666;
+  --text-light: #4A7A7C;
 
   // Effets glass (absents de _variables.scss)
   --glass-bg: rgba(255, 255, 255, 0.15);
@@ -21,8 +21,8 @@
   // Accents spéciaux
   --accent-cyan: #64ffda;
   --accent-yellow: #fffde7;
-  --dark-bg: #183642;
-  --dark-primary: #3bb6b0;
+  --dark-bg: #01272A;
+  --dark-primary: #48AAAD;
 
   // Spacing supplémentaire (--spacing-2xl existe dans _variables.scss ; xxl = alias local)
   --spacing-xxl: 3rem;

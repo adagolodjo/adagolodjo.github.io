@@ -13,7 +13,7 @@
 
 // Bulma hero color override
 .hero.is-primary {
-  background: linear-gradient(135deg, #5D2F0A 0%, #8B4513 50%, #D2B48C 100%);
+  background: linear-gradient(135deg, #013A3C 0%, #016064 50%, #48AAAD 100%);
 }
 
 .profile-section {
@@ -57,7 +57,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #FDF5E6 0%, #F5DEB3 100%);
+  background: linear-gradient(135deg, #F0FAFA 0%, #E0F7FA 100%);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
   font-family: $family-sans-serif;

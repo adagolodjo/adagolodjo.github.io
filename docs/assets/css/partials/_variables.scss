@@ -2,20 +2,20 @@
 // VARIABLES SCSS AMÉLIORÉES
 // ===========================================
 
-// Palette Ayuthaya - couleurs plus traditionnelles et élégantes
-$primary: #8B4513; // Saddle Brown - couleur terre cuite traditionnelle
-$primary-dark: #5D2F0A; // Dark Brown
-$primary-light: #D2B48C; // Tan - couleur sable doré
-$accent: #CD853F; // Peru - accent doré
-$link: #B8860B; // Dark Golden Rod
-$info: #4682B4; // Steel Blue
+// Palette Ocean & Teal
+$primary: #016064; // Ocean
+$primary-dark: #013A3C; // Dark Ocean
+$primary-light: #48AAAD; // Teal
+$accent: #5CC8CB; // Light Teal - accent
+$link: #017F83; // Medium Ocean
+$info: #0097A7; // Cyan
 $success: #228B22; // Forest Green
 $warning: #DAA520; // Golden Rod
 $danger: #B22222; // Fire Brick
-$card-bg: #FDF5E6; // Old Lace - fond crème
-$text-color: #2F4F4F; // Dark Slate Gray - plus lisible
-$text-muted: #696969; // Dim Gray
-$border-color: #DEB887; // Burlywood - bordure dorée
+$card-bg: #F0FAFA; // Very light teal - fond
+$text-color: #1A3A3C; // Dark Teal - lisible
+$text-muted: #4A7A7C; // Muted Teal
+$border-color: #48AAAD; // Teal - bordure
 
 // NOUVELLES VARIABLES POUR LA COHÉRENCE
 // =====================================
@@ -27,12 +27,12 @@ $transition-speed-slow: 0.5s;
 $transition-easing: cubic-bezier(0.4, 0.0, 0.2, 1);
 $transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-// Shadows Ayuthaya - tons terre
-$shadow-light: 0 2px 8px rgba(139,69,19,0.08);
-$shadow: 0 4px 24px rgba(139,69,19,0.10);
-$shadow-medium: 0 8px 32px rgba(139,69,19,0.15);
-$shadow-heavy: 0 16px 48px rgba(139,69,19,0.20);
-$shadow-colored: 0 4px 20px rgba(139,69,19,0.25);
+// Shadows Ocean - tons mer
+$shadow-light: 0 2px 8px rgba(1,96,100,0.08);
+$shadow: 0 4px 24px rgba(1,96,100,0.10);
+$shadow-medium: 0 8px 32px rgba(1,96,100,0.15);
+$shadow-heavy: 0 16px 48px rgba(1,96,100,0.20);
+$shadow-colored: 0 4px 20px rgba(1,96,100,0.25);
 
 // Border radius système
 $border-radius-sm: 4px;
@@ -90,12 +90,12 @@ $z-modal: 1050;
 $z-popover: 1060;
 $z-tooltip: 1070;
 
-// Dark mode Ayuthaya
-$dark-bg: #2F1B14; // Dark brown background
-$dark-text: #F5DEB3; // Wheat color text
-$dark-card-bg: #3E2723; // Dark brown card background
-$dark-border-color: #8D6E63; // Medium brown border
-$dark-shadow: 0 4px 24px rgba(139,69,19,0.20);
+// Dark mode Ocean
+$dark-bg: #01272A; // Very dark ocean background
+$dark-text: #E0F7FA; // Light cyan text
+$dark-card-bg: #013A3C; // Dark ocean card background
+$dark-border-color: #48AAAD; // Teal border
+$dark-shadow: 0 4px 24px rgba(1,96,100,0.20);
 
 // VARIABLES CSS GÉNÉRÉES AUTOMATIQUEMENT
 // ====================================
@@ -159,16 +159,16 @@ $dark-shadow: 0 4px 24px rgba(139,69,19,0.20);
   --text-5xl: #{$text-5xl};
 }
 
-// Mode sombre amélioré Ayuthaya
+// Mode sombre Ocean
 [data-theme="dark"] {
-  --bg-color: #{$dark-bg};   // dark background
+  --bg-color: #{$dark-bg};
   --text-color: #{$dark-text};
   --card-bg: #{$dark-card-bg};
   --border-color: #{$dark-border-color};
   --shadow: #{$dark-shadow};
-  --shadow-light: 0 2px 8px rgba(139,69,19,0.12);
-  --shadow-medium: 0 8px 32px rgba(139,69,19,0.25);
-  --shadow-heavy: 0 16px 48px rgba(139,69,19,0.35);
+  --shadow-light: 0 2px 8px rgba(1,96,100,0.12);
+  --shadow-medium: 0 8px 32px rgba(1,96,100,0.25);
+  --shadow-heavy: 0 16px 48px rgba(1,96,100,0.35);
 }
 
 // MIXINS UTILES
