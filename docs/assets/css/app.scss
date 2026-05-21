@@ -1,6 +1,6 @@
 // Import variables first, then Bulma from local node_modules (no CDN)
 @import "partials/variables";
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import "bulma";
 @import "partials/hero";
 @import "partials/teaching";
 @import "partials/publications";
@@ -9,37 +9,16 @@
 @import "partials/contact";
 @import "partials/blog";
 @import "partials/404";
-@import "partials/dashboard";
-// Font loaded via <link> in head for better performance
+@import "partials/components";
 
-// Custom CSS variables for Ayuthaya theme
-:root {
-  --primary-color: #8B4513; /* terre cuite traditionnelle */
-  --primary-dark: #5D2F0A;  /* brun foncé */
-  --bg-color: #FDF5E6;      /* crème pour le fond général */
-  --text-color: #2F4F4F;    /* gris ardoise foncé pour le texte */
-  --card-bg: #FDF5E6;       /* crème pour les cartes */
-  --border-color: #DEB887;  /* bordure dorée */
-  --shadow: 0 4px 24px rgba(139,69,19,0.10);
-}
-
-[data-theme="dark"] {
-  --bg-color: #2F1B14;
-  --text-color: #F5DEB3;
-  --card-bg: #3E2723;
-  --border-color: #8D6E63;
-  --shadow: 0 4px 24px rgba(139,69,19,0.20);
-}
-
-// Override Bulma variables for Ayuthaya
+// Bulma hero color override
 .hero.is-primary {
-  background: linear-gradient(135deg, #5D2F0A 0%, #8B4513 50%, #D2B48C 100%);
+  background: linear-gradient(135deg, #013A3C 0%, #016064 50%, #48AAAD 100%);
 }
 
-// Custom styles for better organization
 .profile-section {
   text-align: center;
-  
+
   .profile-image {
     width: 200px;
     height: 200px;
@@ -66,74 +45,45 @@
   border-left: 4px solid var(--primary-color);
 }
 
-// Responsive design improvements
 @media (max-width: 768px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .profile-section .profile-image {
     width: 150px;
     height: 150px;
   }
 }
 
-// Dark mode transitions
 body {
-  background: linear-gradient(135deg, #FDF5E6 0%, #F5DEB3 100%);
+  background: linear-gradient(135deg, #F0FAFA 0%, #E0F7FA 100%);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: 'Ayuthaya', Georgia, serif !important;
-}
-
-/* Fix for white text on white background issue in main content - using Ayuthaya colors */
-.section .content {
-  color: #2F4F4F !important;  /* Dark slate gray for all text */
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: #2F4F4F !important;  /* Dark slate gray for headings */
-  }
-  
-  p, li, span, div {
-    color: #2F4F4F !important;  /* Dark slate gray for paragraphs and lists */
-  }
-  
-  a {
-    color: #B8860B !important;  /* Dark golden rod for links */
-    
-    &:hover {
-      color: #8B4513 !important;  /* Saddle brown for hover */
-    }
-  }
-}
-
-/* Style Ayuthaya universel pour tous les éléments textuels */
-body, h1, h2, h3, h4, h5, h6, p, a, span, strong, em, li, ul, ol, button, .button, .tag, .title, .subtitle, .badge-text, .cta-button, .quick-links, label, input, textarea, blockquote, th, td {
-  font-family: 'Ayuthaya', Georgia, serif !important;
+  font-family: $family-sans-serif;
   letter-spacing: 0.2px;
 }
 
-/* OVERRIDE: Force Ayuthaya text colors for main content (highest priority) */
+// Form elements require explicit font-family (browsers skip inheritance)
+input, textarea, button, select {
+  font-family: inherit;
+  letter-spacing: inherit;
+}
+
+// Content area — override Bulma color defaults with theme variables
+// Uses body + two classes for specificity without !important
 body .section .content {
-  color: #2F4F4F !important;  /* Dark slate gray for all text */
-}
-body .section .content h1,
-body .section .content h2,
-body .section .content h3,
-body .section .content h4,
-body .section .content h5,
-body .section .content h6 {
-  color: #2F4F4F !important;  /* Dark slate gray for headings */
-}
-body .section .content p,
-body .section .content li,
-body .section .content span,
-body .section .content div {
-  color: #2F4F4F !important;  /* Dark slate gray for paragraphs and lists */
-}
-body .section .content a {
-  color: #B8860B !important;  /* Dark golden rod for links */
-}
-body .section .content a:hover {
-  color: #8B4513 !important;  /* Saddle brown for hover */
+  color: var(--text-color);
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+  }
+
+  a {
+    color: var(--link);
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
 }

@@ -552,7 +552,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const toast = document.createElement('div');
     toast.className = `notification is-${type} toast`;
     toast.innerHTML = `
-      <button class="delete"></button>
+      <button class="delete" aria-label="Close"></button>
       ${message}
     `;
     
