@@ -6,42 +6,19 @@
     - name: Active Projects
       link: /research/projects/
     - name: Publications & Papers
-      link: /research/publications/
+      link: /publications/
     - name: Software & Datasets
       link: /research/software/
     - name: Research Group
       link: /research/group/
+- name: Publications
+  link: /publications/
 - name: Teaching & Mentoring
   link: /teaching/
   dropdown:
     - name: Courses
       link: /teaching/courses/
-    - name: Student Projects
-      link: /teaching/projects/
-    - name: Supervision
-      link: /teaching/supervision/
-- name: Professional
-  link: /professional/
-  dropdown:
-    - name: About Me
-      link: /professional/about/
-    - name: CV & Experience
-      link: /professional/cv/
-    - name: Service & Reviews
-      link: /professional/service/
-    - name: Talks & Presentations
-      link: /professional/talks/
-- name: Resources
-  link: /resources/
-  dropdown:
-    - name: Code & Tools
-      link: /resources/tools/
-    - name: Datasets
-      link: /resources/data/
-    - name: Tutorials
-      link: /resources/tutorials/
 - name: Contact
   link: /contact/
 - name: News
   link: /news/
-

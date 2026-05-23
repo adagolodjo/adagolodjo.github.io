@@ -597,7 +597,7 @@ subtitle: Current and Past Courses
       🔍 Initiation à la recherche
     </a>
     <a href="/teaching/courses/logique-industrielle/" class="french-course-link">
-      ⚙️ Logique Séquentielle - SAP et Grafcet
+      ⚙️ Logique Séquentielle – SAP et Grafcet
     </a>
     <a href="/teaching/courses/modelisation-production/" class="french-course-link">
       🏭 Modélisation des systèmes de production
@@ -606,25 +606,40 @@ subtitle: Current and Past Courses
       🤖 GR-711302 Automatique : Robotique
     </a>
     <a href="/teaching/courses/gba3-robotique-abb/" class="french-course-link">
-      🦾 TP Robotique ABB IRB140 - GBA3
+      🦾 TP Robotique ABB IRB140 – GBA3
     </a>
     <a href="/teaching/courses/gr-712302/" class="french-course-link">
       💻 GR-712302 Programmation
+    </a>
+    <a href="/teaching/courses/gr-713301/" class="french-course-link">
+      🎛️ GR-713301 Automatique : Régulation
     </a>
     <a href="/teaching/courses/analyse-numerique/" class="french-course-link">
       📊 Analyse numérique : Optimisation
     </a>
     <a href="/teaching/courses/industrie-40/" class="french-course-link">
-      🏭 Industrie 4.0
+      🏭 Usine Connectée &amp; Industrie 4.0
     </a>
     <a href="/teaching/courses/tests-maintenance/" class="french-course-link">
       🔧 Tests et Maintenance
     </a>
     <a href="/teaching/courses/simulation-medicale/" class="french-course-link">
-      🏥 Simulation Médical et Robotique Médicale
+      🏥 Simulation Médicale
     </a>
-    <a href="/teaching/courses/modeling-medical-sim/" class="french-course-link">
-      🧬 Modeling & Real-Time Medical Simulation
+    <a href="/teaching/courses/robotique-medicale/" class="french-course-link">
+      🤖 Module IA Robotique &amp; Santé
+    </a>
+    <a href="/teaching/courses/mathematiques-ingenieur/" class="french-course-link">
+      📐 Mathématiques pour l'ingénieur
+    </a>
+    <a href="/teaching/courses/du-822160/" class="french-course-link">
+      🔐 Sécurité Informatique
+    </a>
+    <a href="/teaching/courses/du-812170/" class="french-course-link">
+      💾 Culture Numérique &amp; Sécurité des Données
+    </a>
+    <a href="/teaching/courses/du-816260/" class="french-course-link">
+      🏭 Usine Connectée (Formation Continue)
     </a>
   </div>
 </div>
@@ -842,17 +857,18 @@ I am committed to continually improving my teaching methods based on student fee
 ## Cours disponibles
 
 - [Initiation à la recherche](/teaching/courses/initiation-recherche/)
-- [Logique/Informatique Industrielle](/teaching/courses/logique-industrielle/)
+- [Logique Séquentielle – SAP et Grafcet](/teaching/courses/logique-industrielle/)
 - [Modélisation des systèmes de production](/teaching/courses/modelisation-production/)
 - [GR-711302 Automatique : Robotique](/teaching/courses/gr-711302/)
-- [TP Robotique ABB IRB140 - GBA3](/teaching/courses/gba3-robotique-abb/)
+- [TP Robotique ABB IRB140 – GBA3](/teaching/courses/gba3-robotique-abb/)
 - [GR-712302 Programmation](/teaching/courses/gr-712302/)
-- [GR-713301 Automatique : Regulation de Système](/teaching/courses/regulation-systeme/)
-- [Analyse numérique : Optimisation](/teaching/courses/analyse-numerique/)
-- [Industrie 4.0](/teaching/courses/industrie-40/)
+- [GR-713301 Automatique : Régulation de Système](/teaching/courses/gr-713301/)
+- [GR-713302 Analyse numérique : Optimisation](/teaching/courses/analyse-numerique/)
+- [Usine Connectée & Industrie 4.0](/teaching/courses/industrie-40/)
 - [Tests et Maintenance](/teaching/courses/tests-maintenance/)
-- [Simulation Médical et Robotique Médicale](/teaching/courses/simulation-medicale/)
-- [Modeling & Real-Time Medical Simulation](/teaching/courses/modeling-medical-sim/)
-- [TP Robotino](/teaching/courses/tp-robotino/)
-- [Culture numérique](/teaching/courses/culture-numerique/)
-- [Cours de Maths Prod2A3](/teaching/courses/maths-prod2a3/)
+- [Simulation Médicale](/teaching/courses/simulation-medicale/)
+- [Module IA Robotique & Santé](/teaching/courses/robotique-medicale/)
+- [Mathématiques pour l'ingénieur](/teaching/courses/mathematiques-ingenieur/)
+- [Introduction à la Sécurité Informatique](/teaching/courses/du-822160/)
+- [Culture Numérique & Sécurité des Données](/teaching/courses/du-812170/)
+- [Usine Connectée – Formation Continue](/teaching/courses/du-816260/)

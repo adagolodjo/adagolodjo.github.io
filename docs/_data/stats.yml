@@ -1,0 +1,17 @@
+# Academic stats — auto-updated weekly by GitHub Actions
+# Source: Semantic Scholar API (https://api.semanticscholar.org)
+# Author ID: 2251436
+# Last manual update: 2025-05-22
+#
+# NOTE: Numbers from Semantic Scholar may differ slightly from Google Scholar
+# or ResearchGate because each database indexes a different corpus of papers.
+# Google Scholar: 285 citations, h-index 7
+# ResearchGate  : 254 citations, h-index 8
+# Semantic Scholar (automated source): see below
+
+updated: "2025-05-22"
+citations: 285        # Google Scholar (manually set — overwritten by GH Actions)
+h_index: 8            # ResearchGate  (manually set — overwritten by GH Actions)
+paper_count: 18       # HAL archive
+source: "Mixed (Google Scholar + ResearchGate)"
+semantic_scholar_author_id: "2251436"

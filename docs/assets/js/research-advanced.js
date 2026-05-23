@@ -196,7 +196,7 @@ function renderCollaborationNetwork(container) {
     line.setAttribute('y1', sourceNode.y);
     line.setAttribute('x2', targetNode.x);
     line.setAttribute('y2', targetNode.y);
-    line.setAttribute('stroke', '#e2e8f0');
+    line.setAttribute('stroke', 'rgba(72,170,173,0.3)');
     line.setAttribute('stroke-width', '2');
     svg.appendChild(line);
   });
@@ -209,9 +209,9 @@ function renderCollaborationNetwork(container) {
     circle.setAttribute('r', node.type === 'institution' ? '15' : '10');
     
     const colors = {
-      institution: '#667eea',
-      collaborator: '#48bb78',
-      project: '#ed8936'
+      institution: '#016064',   // Ocean primary
+      collaborator: '#48AAAD',  // Teal
+      project: '#5CC8CB'        // Light Teal
     };
     
     circle.setAttribute('fill', colors[node.type]);
@@ -234,7 +234,7 @@ function renderCollaborationNetwork(container) {
     text.setAttribute('y', node.y + 25);
     text.setAttribute('text-anchor', 'middle');
     text.setAttribute('font-size', '12');
-    text.setAttribute('fill', '#666');
+    text.setAttribute('fill', '#4A7A7C');
     text.textContent = node.label;
     svg.appendChild(text);
   });
@@ -458,7 +458,7 @@ function renderCitationChart(container) {
     rect.setAttribute('y', y);
     rect.setAttribute('width', barWidth);
     rect.setAttribute('height', barHeight);
-    rect.setAttribute('fill', '#667eea');
+    rect.setAttribute('fill', '#016064');
     rect.setAttribute('rx', '4');
     
     // Add animation
@@ -473,7 +473,7 @@ function renderCitationChart(container) {
     text.setAttribute('y', 160);
     text.setAttribute('text-anchor', 'middle');
     text.setAttribute('font-size', '12');
-    text.setAttribute('fill', '#666');
+    text.setAttribute('fill', '#4A7A7C');
     text.textContent = d.year;
     svg.appendChild(text);
     
@@ -483,7 +483,7 @@ function renderCitationChart(container) {
     countText.setAttribute('y', y - 5);
     countText.setAttribute('text-anchor', 'middle');
     countText.setAttribute('font-size', '11');
-    countText.setAttribute('fill', '#333');
+    countText.setAttribute('fill', '#1A3A3C');
     countText.textContent = d.citations;
     svg.appendChild(countText);
   });
@@ -494,11 +494,11 @@ function renderCitationChart(container) {
 function renderTimelineChart(container) {
   // Simple timeline visualization
   const events = [
-    { year: '2018', event: 'PhD Started', color: '#667eea' },
-    { year: '2020', event: 'First Publication', color: '#48bb78' },
-    { year: '2022', event: 'PhD Defense', color: '#ed8936' },
-    { year: '2023', event: 'Assistant Professor', color: '#9f7aea' },
-    { year: '2024', event: 'Research Grant', color: '#38b2ac' }
+    { year: '2018', event: 'PhD Started',        color: '#016064' },
+    { year: '2020', event: 'First Publication',  color: '#48AAAD' },
+    { year: '2022', event: 'PhD Defense',        color: '#0097A7' },
+    { year: '2023', event: 'Assistant Professor', color: '#013A3C' },
+    { year: '2024', event: 'Research Grant',     color: '#5CC8CB' }
   ];
   
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -534,7 +534,7 @@ function renderTimelineChart(container) {
     yearText.setAttribute('text-anchor', 'middle');
     yearText.setAttribute('font-size', '12');
     yearText.setAttribute('font-weight', '600');
-    yearText.setAttribute('fill', '#333');
+    yearText.setAttribute('fill', '#1A3A3C');
     yearText.textContent = event.year;
     svg.appendChild(yearText);
     
@@ -544,7 +544,7 @@ function renderTimelineChart(container) {
     eventText.setAttribute('y', '115');
     eventText.setAttribute('text-anchor', 'middle');
     eventText.setAttribute('font-size', '10');
-    eventText.setAttribute('fill', '#666');
+    eventText.setAttribute('fill', '#4A7A7C');
     eventText.textContent = event.event;
     svg.appendChild(eventText);
   });

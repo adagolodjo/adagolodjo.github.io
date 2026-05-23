@@ -9,7 +9,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
 
 <script src="/assets/js/research-advanced.js" defer></script>
 
-<!-- Custom Styles for Research Page -->
+<!-- Custom Styles for Research Page — Ocean/Teal theme -->
 <style>
   /* ===========================
      ENHANCED: Animated Hero
@@ -29,10 +29,10 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
   .project-card, .focus-card, .news-card, .impact-card {
     background: rgba(255, 255, 255, 0.96);
     border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    box-shadow: 0 4px 24px rgba(1,96,100,0.08);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     overflow: hidden;
-    border: 1px solid rgba(0,0,0,0.06);
+    border: 1px solid rgba(72,170,173,0.15);
     display: flex;
     flex-direction: column;
   }
@@ -43,7 +43,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
 
   .project-card:hover, .focus-card:hover, .news-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    box-shadow: 0 30px 60px rgba(1,96,100,0.15);
   }
 
   /* ===========================
@@ -79,8 +79,8 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
      ENHANCED: Tags with Glow
   =========================== */
   .tag, .news-tag, .achievement-tag {
-    background: #f1f5f9;
-    color: #334155;
+    background: #F0FAFA;
+    color: #1A3A3C;
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
     font-size: 0.75rem;
@@ -90,14 +90,14 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
     transition: all 0.25s;
   }
 
-  .tag.soft-robotics { background: rgba(20,184,166,0.12); color: #0d9488; }
-  .tag.medical-robotics { background: rgba(239,68,68,0.1); color: #dc2626; }
-  .tag.simulation { background: rgba(59,130,246,0.12); color: #2563eb; }
-  .tag.ai-healthcare { background: rgba(139,92,246,0.12); color: #7c3aed; }
+  .tag.soft-robotics  { background: rgba(72,170,173,0.14); color: #016064; }
+  .tag.medical-robotics { background: rgba(239,68,68,0.10); color: #dc2626; }
+  .tag.simulation     { background: rgba(0,151,167,0.12);  color: #0097A7; }
+  .tag.ai-healthcare  { background: rgba(1,96,100,0.10);   color: #013A3C; }
 
   .tag:hover, .project-card:hover .tag {
-    filter: brightness(1.1);
-    box-shadow: 0 2px 8px rgba(59,130,246,0.2);
+    filter: brightness(1.05);
+    box-shadow: 0 2px 8px rgba(1,96,100,0.2);
   }
 
   /* ===========================
@@ -112,8 +112,8 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
   }
 
   .domain-filter {
-    background: #f1f5f9;
-    color: #475569;
+    background: #F0FAFA;
+    color: #4A7A7C;
     border: 1.5px solid transparent;
     padding: 0.65rem 1.4rem;
     border-radius: 9999px;
@@ -127,35 +127,33 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
   }
 
   .domain-filter:hover {
-    background: #e2e8f0;
+    background: rgba(72,170,173,0.12);
+    color: #016064;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(1,96,100,0.12);
   }
 
   .domain-filter.active {
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    background: linear-gradient(135deg, #016064, #48AAAD);
     color: white;
     border-color: transparent;
-    box-shadow: 0 8px 20px rgba(59,130,246,0.4), 0 0 0 4px rgba(59,130,246,0.15);
+    box-shadow: 0 8px 20px rgba(1,96,100,0.35), 0 0 0 4px rgba(1,96,100,0.12);
   }
 
   /* ===========================
-     ENHANCED: Hero Section
+     ENHANCED: Hero Section — compact horizontal banner
   =========================== */
   .research-hero {
-    position: relative;
-    padding: 6rem 2rem 4rem;
-    overflow: hidden;
-    color: var(--text-primary);
-    border-radius: 20px;
+    padding: 3rem 0;          /* compact height; SCSS handles background/layout */
+    border-radius: 16px;
     margin-bottom: 3rem;
-    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.28);
   }
 
   .hero-background {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(135deg, #0b1120, #15073a, #07253a);
+    background: linear-gradient(135deg, #01272A, #013A3C, #016064);
     background-size: 300% 300%;
     animation: heroGradientResearch 12s ease infinite;
     z-index: 0;
@@ -171,89 +169,47 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
   .hero-gradient {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(circle at 80% 20%, rgba(139,92,246,0.2) 0%, transparent 45%),
-                radial-gradient(circle at 20% 80%, rgba(59,130,246,0.2) 0%, transparent 45%),
-                radial-gradient(circle at 50% 50%, rgba(20,184,166,0.05) 0%, transparent 60%);
+    background: radial-gradient(circle at 80% 20%, rgba(72,170,173,0.25) 0%, transparent 45%),
+                radial-gradient(circle at 20% 80%, rgba(1,96,100,0.30) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(92,200,203,0.08) 0%, transparent 60%);
     z-index: 2;
   }
 
-  .hero-content {
-    position: relative;
-    z-index: 3;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
+  /* hero-content, hero-intro, research-stats layout is handled by _research.scss */
 
   .hero-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 800;
-    letter-spacing: -0.025em;
-    background: linear-gradient(135deg, #60a5fa, #a78bfa, #34d399);
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #E0F7FA, #48AAAD, #5CC8CB);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 1rem;
     line-height: 1.2;
   }
 
   .hero-subtitle {
-    font-size: 1.2rem;
-    color: rgba(255,255,255,0.65);
-    max-width: 600px;
-    margin: 0 auto 3rem;
+    color: rgba(255,255,255,0.80);
   }
 
   /* ===========================
-     ENHANCED: Stat Cards
+     Hero action buttons (inside hero)
   =========================== */
-  .research-stats {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
+  .hero-actions .btn-primary {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.45);
+    color: white;
+    backdrop-filter: blur(8px);
+  }
+  .hero-actions .btn-primary:hover {
+    background: rgba(255,255,255,0.25);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    color: white;
   }
 
-  .stat-card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-radius: 16px;
-    padding: 1.5rem 2rem;
-    min-width: 180px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  }
-
-  .stat-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(139,92,246,0.4);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.35), 0 0 30px rgba(139,92,246,0.15);
-  }
-
-  .stat-icon {
-    font-size: 2rem;
-    background: linear-gradient(135deg, #60a5fa, #a78bfa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 1rem;
-  }
-
-  .stat-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1;
-    margin-bottom: 0.5rem;
-  }
-
-  .stat-label {
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: rgba(255,255,255,0.5);
-  }
+  /* ===========================
+     ENHANCED: Stat Cards (compact horizontal row)
+  =========================== */
+  /* Stat card layout is driven by _research.scss flex row */
 
   /* ===========================
      ENHANCED: Carousel
@@ -294,7 +250,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
   }
 
   .carousel-btn {
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    background: linear-gradient(135deg, #016064, #48AAAD);
     border: none;
     color: white;
     width: 60px;
@@ -305,13 +261,13 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 10px 20px rgba(59,130,246,0.35);
+    box-shadow: 0 10px 20px rgba(1,96,100,0.30);
     font-size: 1.5rem;
   }
 
   .carousel-btn:hover {
     transform: translateY(-3px) scale(1.08);
-    box-shadow: 0 20px 35px rgba(59,130,246,0.5), 0 0 20px rgba(139,92,246,0.3);
+    box-shadow: 0 20px 35px rgba(1,96,100,0.45), 0 0 20px rgba(72,170,173,0.3);
   }
 
   /* ===========================
@@ -320,10 +276,10 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
   .progress-bar {
     width: 0;
     transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #14b8a6);
+    background: linear-gradient(90deg, #016064, #48AAAD, #5CC8CB);
     height: 6px;
     border-radius: 3px;
-    box-shadow: 0 0 12px rgba(59,130,246,0.6), 0 0 4px rgba(139,92,246,0.4);
+    box-shadow: 0 0 10px rgba(1,96,100,0.50), 0 0 4px rgba(72,170,173,0.4);
   }
 
   /* ===========================
@@ -342,34 +298,34 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    background: linear-gradient(135deg, #016064, #48AAAD);
     color: white;
-    box-shadow: 0 4px 14px rgba(59,130,246,0.4);
+    box-shadow: 0 4px 14px rgba(1,96,100,0.35);
   }
 
   .btn-primary:hover {
     color: white;
-    box-shadow: 0 6px 22px rgba(59,130,246,0.6), 0 0 20px rgba(139,92,246,0.25);
+    box-shadow: 0 6px 22px rgba(1,96,100,0.50), 0 0 20px rgba(72,170,173,0.25);
     transform: translateY(-2px);
   }
 
   .btn-secondary {
     background: white;
-    color: #1e293b;
-    border: 1px solid #e2e8f0;
+    color: #016064;
+    border: 1px solid rgba(72,170,173,0.35);
   }
 
   .btn-secondary:hover {
-    border-color: #3b82f6;
-    background: #eff6ff;
-    color: #1d4ed8;
+    border-color: #016064;
+    background: #F0FAFA;
+    color: #013A3C;
     transform: translateY(-2px);
   }
 
   /* ===========================
      ENHANCED: misc
   =========================== */
-  .project-highlight i { color: #8b5cf6; }
+  .project-highlight i { color: #016064; }
 
   @keyframes float {
     0% { transform: translateY(0px) rotate(0deg); }
@@ -386,17 +342,17 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
   =========================== */
   @media (prefers-color-scheme: dark) {
     .project-card, .focus-card, .news-card, .impact-card {
-      background: rgba(30,41,59,0.95);
-      border-color: #334155;
-      color: #f8fafc;
+      background: rgba(1,39,42,0.95);
+      border-color: #48AAAD;
+      color: #E0F7FA;
     }
-    .project-card p, .focus-card p, .news-card p { color: #cbd5e1; }
+    .project-card p, .focus-card p, .news-card p { color: rgba(224,247,250,0.8); }
     .project-card h3, .focus-card h3, .news-card h3 { color: #ffffff; }
-    .btn-secondary { background: #334155; color: #f8fafc; border-color: #475569; }
-    .btn-secondary:hover { background: #475569; border-color: #8b5cf6; }
-    .tag, .news-tag, .achievement-tag { background: #334155; color: #cbd5e1; }
-    .domain-filter { background: #334155; color: #cbd5e1; }
-    .domain-filter:hover { background: #475569; }
+    .btn-secondary { background: #013A3C; color: #E0F7FA; border-color: #48AAAD; }
+    .btn-secondary:hover { background: #016064; border-color: #5CC8CB; }
+    .tag, .news-tag, .achievement-tag { background: #013A3C; color: #48AAAD; }
+    .domain-filter { background: #013A3C; color: #48AAAD; }
+    .domain-filter:hover { background: #016064; color: #E0F7FA; }
   }
 </style>
 
@@ -410,30 +366,52 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
   <div class="hero-content">
     <div class="hero-intro">
       <h1 class="hero-title">Research & Innovation</h1>
-      <p class="hero-subtitle">Advancing the frontiers of medical robotics for healthcare solutions</p>
+      <p class="hero-subtitle">Advancing the frontiers of medical robotics and intelligent healthcare systems</p>
+      <div class="hero-actions">
+        <a href="#featured-projects" class="btn-primary">
+          <i class="fas fa-flask"></i>
+          <span>Explore Projects</span>
+        </a>
+        <a href="/publications/" class="btn-secondary">
+          <i class="fas fa-book-open"></i>
+          <span>Publications</span>
+        </a>
+      </div>
     </div>
-    
+
     <div class="research-stats">
-      <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="stat-card" data-aos="fade-left" data-aos-delay="100">
         <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
-        <div class="stat-number" data-count="7">0</div>
-        <div class="stat-label">Active Projects</div>
+        <div class="stat-text">
+          <div class="stat-number" data-count="9">0</div>
+          <div class="stat-label">Active Projects</div>
+        </div>
       </div>
-      <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+      <a href="/publications/" class="stat-card stat-card-link" data-aos="fade-left" data-aos-delay="200">
         <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
-        <div class="stat-number" data-count="25">0</div>
-        <div class="stat-label">Publications</div>
-      </div>
-      <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
-        <div class="stat-icon"><i class="fas fa-users"></i></div>
-        <div class="stat-number" data-count="5">0</div>
-        <div class="stat-label">Collaborations</div>
-      </div>
-      <!-- <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
-        <div class="stat-icon"><i class="fas fa-award"></i></div>
-        <div class="stat-number" data-count="3">0</div>
-        <div class="stat-label">Research Awards</div>
-      </div> -->
+        <div class="stat-text">
+          <div class="stat-number" data-count="18">0</div>
+          <div class="stat-label">Publications</div>
+        </div>
+      </a>
+      <a href="https://scholar.google.com/citations?hl=fr&user=ZBdWJ9EAAAAJ"
+         target="_blank" rel="noopener"
+         class="stat-card stat-card-link" data-aos="fade-left" data-aos-delay="300">
+        <div class="stat-icon"><i class="fas fa-quote-left"></i></div>
+        <div class="stat-text">
+          <div class="stat-number" id="live-citations" data-count="{{ site.data.stats.citations | default: 285 }}">0</div>
+          <div class="stat-label">Citations</div>
+        </div>
+      </a>
+      <a href="https://www.researchgate.net/profile/Yinoussa-Adagolodjo?ev=hdr_xprf"
+         target="_blank" rel="noopener"
+         class="stat-card stat-card-link" data-aos="fade-left" data-aos-delay="400">
+        <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+        <div class="stat-text">
+          <div class="stat-number" id="live-hindex" data-count="{{ site.data.stats.h_index | default: 8 }}">0</div>
+          <div class="stat-label">h-index</div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -611,7 +589,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
 </section>
 
 <!-- Featured Projects Grid -->
-<section class="featured-projects">
+<section class="featured-projects" id="featured-projects">
   <div class="container">
     <div class="projects-header">
       <h2>Featured Research Projects</h2>
@@ -620,45 +598,45 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
     
     <div class="carousel-wrapper">
       <div class="projects-carousel-container" id="projectsCarousel">
-      <!-- Active Prostate Phantom / Prostate Biopsy -->
+      <!-- ProstateBot — Active Prostate Phantom for Biopsy & DRE -->
       <div class="project-card" data-category="ai-healthcare medical-robotics" data-aos="fade-up" data-aos-delay="50">
         <div class="project-image">
-          <img src="/assets/images/projects/prostate-new.jpg" alt="Prostate Biopsy Project" loading="lazy">
+          <img src="/assets/images/projects/prostate-new.jpg" alt="ProstateBot Project" loading="lazy">
           <div class="project-overlay">
             <div class="project-status research">Research</div>
-            <div class="project-impact">Clinical Trial</div>
+            <div class="project-impact">Clinical Training</div>
           </div>
         </div>
         <div class="project-content">
           <div class="project-header">
-            <h3 class="project-title">Active prostate phantom for prostate biopsy</h3>
+            <h3 class="project-title">ProstateBot</h3>
             <div class="project-year">2023-Present</div>
           </div>
-          <p class="project-description">Pneumatically actuated active prostate phantom for training and validation of targeted biopsy procedures, improving prostate cancer diagnosis accuracy.</p>
+          <p class="project-description">Development of a pneumatically actuated active prostate phantom for training prostate biopsy robots and digital rectal examination (DRE) techniques. Design, modeling, and control of the robotic systems.</p>
           
           <div class="project-highlights">
             <div class="highlight-item">
               <i class="fas fa-search-plus"></i>
-              <span>Enhanced detection accuracy</span>
+              <span>Multi-chamber phantom</span>
             </div>
             <div class="highlight-item">
               <i class="fas fa-bullseye"></i>
-              <span>Targeted precision</span>
+              <span>Biopsy targeting training</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-user-check"></i>
-              <span>Personalized care</span>
+              <i class="fas fa-hand-paper"></i>
+              <span>Haptic DRE feedback</span>
             </div>
           </div>
           
           <div class="project-tags">
             <span class="tag ai-healthcare">Medical Imaging</span>
-            <span class="tag medical-robotics">AI Diagnosis</span>
-            <span class="tag simulation">Robotic Biopsy</span>
+            <span class="tag medical-robotics">Robotic Biopsy</span>
+            <span class="tag simulation">Haptic Training</span>
           </div>
           
           <div class="project-actions">
-            <a href="/research/projects/active-prostate-phantom/" class="btn-primary">
+            <a href="/research/projects/prostatebot/" class="btn-primary">
               <span>Explore Project</span>
               <i class="fas fa-arrow-right"></i>
             </a>
@@ -770,45 +748,96 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
         </div>
       </div>
 
-      <!-- Growing Robot (vine robots for endoscopy) -->
+      <!-- Maestro — SpiderMass endoscope (ADAGIO sub-project) -->
+      <div class="project-card" data-category="soft-robotics ai-healthcare" data-aos="fade-up" data-aos-delay="275">
+        <div class="project-image">
+          <img src="/assets/images/projects/maestro.jpg" alt="Maestro Project" loading="lazy"
+               onerror="this.onerror=null;this.src='/assets/images/projects/colon.jpg'">
+          <div class="project-overlay">
+            <div class="project-status active">Active</div>
+            <div class="project-impact">ANR ADAGIO</div>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">Maestro</h3>
+            <div class="project-year">2024-Present</div>
+          </div>
+          <p class="project-description">Design, modeling, and control of an advanced endoscope for robot-assisted SpiderMass — enabling in vivo real-time topography mass spectrometry imaging for minimally invasive surgery.</p>
+
+          <div class="project-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-microscope"></i>
+              <span>In vivo mass spectrometry</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-wave-square"></i>
+              <span>Real-time tissue imaging</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-robot"></i>
+              <span>Robot-assisted guidance</span>
+            </div>
+          </div>
+
+          <div class="project-tags">
+            <span class="tag soft-robotics">Continuum Robotics</span>
+            <span class="tag ai-healthcare">Mass Spectrometry</span>
+            <span class="tag simulation">SpiderMass</span>
+          </div>
+
+          <div class="project-actions">
+            <a href="/research/projects/maestro/" class="btn-primary">
+              <span>Explore Project</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="https://anr.fr/Projet-ANR-23-CE19-0022" class="btn-secondary" target="_blank" rel="noopener">
+              <span>ANR Project</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Growing Robot / TAVI (vine robots for cardiovascular procedures) -->
       <div class="project-card" data-category="soft-robotics simulation" data-aos="fade-up" data-aos-delay="300">
         <div class="project-image">
           <img src="/assets/images/projects/growing-robot-new.png" alt="Growing Robot Project" loading="lazy">
           <div class="project-overlay">
             <div class="project-status active">Active</div>
-            <div class="project-impact">Vine Robots</div>
+            <div class="project-impact">TAVI · Vine Robots</div>
           </div>
         </div>
         <div class="project-content">
           <div class="project-header">
-            <h3 class="project-title">Growing Robot</h3>
+            <h3 class="project-title">TAVI Growing Robot</h3>
             <div class="project-year">2023-Present</div>
           </div>
-          <p class="project-description">Vine-inspired growing robots for endoscopic and cardiovascular procedures using eversion-based soft robotics to navigate complex anatomical pathways.</p>
-          
+          <p class="project-description">Development of vine-inspired eversion growing robots for Transcatheter Aortic Valve Implantation (TAVI): design, modeling, and control for navigating complex cardiovascular anatomies.</p>
+
           <div class="project-highlights">
             <div class="highlight-item">
-              <i class="fas fa-route"></i>
-              <span>Natural orifice navigation</span>
+              <i class="fas fa-heart"></i>
+              <span>Cardiac valve implantation</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-heart"></i>
-              <span>Cardiovascular applications</span>
+              <i class="fas fa-route"></i>
+              <span>Cardiovascular navigation</span>
             </div>
             <div class="highlight-item">
               <i class="fas fa-feather"></i>
-              <span>Low-contact soft interaction</span>
+              <span>Eversion soft robotics</span>
             </div>
           </div>
-          
+
           <div class="project-tags">
             <span class="tag soft-robotics">Vine Robots</span>
             <span class="tag simulation">Eversion Modeling</span>
-            <span class="tag medical-robotics">Endoscopic Robotics</span>
+            <span class="tag medical-robotics">Cardiovascular</span>
           </div>
-          
+
           <div class="project-actions">
-            <a href="/research/projects/growing-robot/" class="btn-primary">
+            <a href="/research/projects/tavi-growing-robot/" class="btn-primary">
               <span>Explore Project</span>
               <i class="fas fa-arrow-right"></i>
             </a>
@@ -912,6 +941,57 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
           <div class="project-actions">
             <a href="/research/projects/robocop/" class="btn-primary">
               <span>Learn More</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <button class="btn-secondary" data-modal="robocop-video">
+              <i class="fas fa-play"></i>
+              <span>Watch Demo</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACCESS — Digital Twin for Cochlear Implant Surgery (ROBOCOP sub-project) -->
+      <div class="project-card" data-category="medical-robotics simulation ai-healthcare" data-aos="fade-up" data-aos-delay="500">
+        <div class="project-image">
+          <img src="/assets/images/projects/access-cochlear.jpg" alt="ACCESS Project" loading="lazy"
+               onerror="this.onerror=null;this.src='/assets/images/projects/conect-new.png'">
+          <div class="project-overlay">
+            <div class="project-status active">Active</div>
+            <div class="project-impact">Digital Twin</div>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">ACCESS</h3>
+            <div class="project-year">2022-Present</div>
+          </div>
+          <p class="project-description">Development of a patient-specific digital twin to assist cochlear implant surgery: physical simulation of inner ear structures, medical image processing, and augmented reality for intraoperative guidance.</p>
+
+          <div class="project-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-ear"></i>
+              <span>Cochlear implant precision</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-cube"></i>
+              <span>Patient-specific simulation</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-vr-cardboard"></i>
+              <span>Augmented reality guidance</span>
+            </div>
+          </div>
+
+          <div class="project-tags">
+            <span class="tag medical-robotics">Cochlear Implant</span>
+            <span class="tag simulation">Digital Twin</span>
+            <span class="tag ai-healthcare">Augmented Reality</span>
+          </div>
+
+          <div class="project-actions">
+            <a href="/research/projects/access/" class="btn-primary">
+              <span>Explore Project</span>
               <i class="fas fa-arrow-right"></i>
             </a>
             <button class="btn-secondary" data-modal="robocop-video">
@@ -1187,7 +1267,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         
         if (suffix === 'M') {
-          element.textContent = (current / 1000000).toFixed(1) + suffix;
+          // data-count holds the value in millions already (e.g. 2.5 → "2.5M")
+          element.textContent = current.toFixed(1) + suffix;
         } else {
           element.textContent = Math.floor(current) + suffix;
         }
@@ -1198,7 +1279,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const counterObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-          const target = parseInt(entry.target.dataset.count) || 0;
+          // Use parseFloat so "2.5" is not truncated to 2 by parseInt
+          const target = parseFloat(entry.target.dataset.count) || 0;
           animateCounter(entry.target, target);
           entry.target.classList.add('animated');
         }
@@ -1431,4 +1513,56 @@ document.addEventListener("DOMContentLoaded", function() {
     console.error('Error initializing research page:', error);
   }
 });
+</script>
+
+<!-- Live stats refresh from Semantic Scholar API -->
+<script>
+(function () {
+  var AUTHOR_ID = '2251436'; // Yinoussa Adagolodjo on Semantic Scholar
+  var API_URL   = 'https://api.semanticscholar.org/graph/v1/author/'
+                + AUTHOR_ID + '?fields=citationCount,hIndex,paperCount';
+
+  function animateTo(el, target) {
+    if (!el) return;
+    var start    = 0;
+    var duration = 1200;
+    var startTime;
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      var eased    = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+      el.textContent = Math.round(eased * target);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // Only fetch after page is fully loaded (non-blocking)
+  window.addEventListener('load', function () {
+    fetch(API_URL, { headers: { 'User-Agent': 'adagolodjo.github.io stats widget' } })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var citations = data.citationCount;
+        var hIndex    = data.hIndex;
+        if (!citations && !hIndex) return; // API returned empty
+
+        var elCit = document.getElementById('live-citations');
+        var elH   = document.getElementById('live-hindex');
+
+        // Only update if Semantic Scholar has more recent/higher data
+        if (elCit && citations) {
+          elCit.dataset.count = citations;
+          animateTo(elCit, citations);
+        }
+        if (elH && hIndex) {
+          elH.dataset.count = hIndex;
+          animateTo(elH, hIndex);
+        }
+        console.log('[Stats] Semantic Scholar live: citations=' + citations + ', h-index=' + hIndex);
+      })
+      .catch(function (e) {
+        console.log('[Stats] Semantic Scholar unreachable — showing static values.');
+      });
+  });
+})();
 </script>

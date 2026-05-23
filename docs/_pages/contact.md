@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
         Or by appointment</p>
         <hr>
         <p><strong>Social & Academic Profiles</strong><br>
-          <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener">Google Scholar</a> ·
-          <a href="https://www.researchgate.net/profile/YOUR_PROFILE" target="_blank" rel="noopener">ResearchGate</a> ·
+          <a href="https://scholar.google.com/citations?hl=fr&user=ZBdWJ9EAAAAJ" target="_blank" rel="noopener">Google Scholar</a> ·
+          <a href="https://www.researchgate.net/profile/Yinoussa-Adagolodjo?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a> ·
           <a href="https://www.linkedin.com/in/yinoussa-adagolodjo" target="_blank" rel="noopener">LinkedIn</a> ·
           <a href="https://orcid.org/YOUR_ORCID" target="_blank" rel="noopener">ORCID</a>
         </p>

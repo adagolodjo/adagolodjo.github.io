@@ -1,320 +1,404 @@
+% ============================================================
+%  Yinoussa Adagolodjo — Curriculum Vitae
+%  Template : moderncv (banking style) + Ocean/Teal theme
+%  Compile  : pdflatex cv_yinoussa_adagolodjo.tex  (x2)
+% ============================================================
 \documentclass[11pt,a4paper,sans]{moderncv}
 
-% ModernCV themes
-\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+% ── Style ────────────────────────────────────────────────────
+\moderncvstyle{banking}   % clean, bar-style section headers
+\moderncvcolor{blue}      % base (overridden below)
 
-% Character encoding
+% Ocean/Teal theme — matching adagolodjo.github.io
+% color0 = body text  |  color1 = section bars & icons
+% color2 = name/title/links
+\definecolor{color0}{HTML}{1A3A3C}
+\definecolor{color1}{HTML}{016064}
+\definecolor{color2}{HTML}{016064}
+\definecolor{cvlight}{HTML}{48AAAD}
+\definecolor{cvdark}{HTML}{013A3C}
+\definecolor{cvbg}{HTML}{E0F7FA}
+
+% ── Encoding & fonts ─────────────────────────────────────────
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 
-% Adjust the page margins
-\usepackage[scale=0.75]{geometry}
+% ── Page layout ──────────────────────────────────────────────
+\usepackage[
+  top=1.6cm, bottom=1.4cm,
+  left=1.6cm, right=1.6cm
+]{geometry}
 
-% Personal data
+% ── Packages ─────────────────────────────────────────────────
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{mdframed}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor   = color1,
+  linkcolor  = color1,
+  pdftitle   = {CV -- Yinoussa Adagolodjo},
+  pdfauthor  = {Yinoussa Adagolodjo}
+}
+
+% ── Personal data ─────────────────────────────────────────────
 \firstname{Yinoussa}
 \lastname{Adagolodjo}
 \title{Assistant Professor in Computer Science}
-\address{University of Lille}{DEFROST Team, Inria}{Lille, France}
-\phone[mobile]{+33~(0)~xxx~xxx~xxx} % Replace with actual phone
+\address{DEFROST Team, Inria \textperiodcentered{} University of Lille}{Villeneuve-d'Ascq, France}
 \email{adagolodjo@protonmail.com}
 \homepage{adagolodjo.github.io}
 \social[linkedin]{yinoussa-adagolodjo}
 \social[github]{adagolodjo}
-\extrainfo{Research in Medical Robotics, Simulation and Soft Robotics}
-% \photo[64pt][0.4pt]{picture} % Replace with actual photo if desired
+\extrainfo{%
+  \faGraduationCap~\href{https://scholar.google.com/citations?hl=fr&user=ZBdWJ9EAAAAJ}{Google Scholar}%
+  \quad\textbar\quad%
+  \faFlask~\href{https://www.researchgate.net/profile/Yinoussa-Adagolodjo}{ResearchGate}%
+  \quad\textbar\quad%
+  \faArchive~\href{https://hal.science/search/index?q=Adagolodjo}{HAL Science}%
+}
 
-%----------------------------------------------------------------------------------------
-%	COVER LETTER
-%----------------------------------------------------------------------------------------
+% ── Custom commands ───────────────────────────────────────────
 
-% To remove the cover letter, comment out this entire block
+% Metrics banner
+\newcommand{\metricsbar}{%
+  \vspace{4pt}
+  \begin{mdframed}[
+    backgroundcolor = cvbg,
+    linecolor       = color1,
+    linewidth       = 1pt,
+    roundcorner     = 6pt,
+    innertopmargin  = 7pt,
+    innerbottommargin = 7pt,
+    innerleftmargin = 14pt,
+    innerrightmargin = 14pt
+  ]
+  \centering
+  {\color{color1}\Large\bfseries 285}~{\color{color1}\small Citations}
+  \quad{\color{cvlight}\textbar}\quad
+  {\color{color1}\Large\bfseries 8}~{\color{color1}\small h-index}
+  \quad{\color{cvlight}\textbar}\quad
+  {\color{color1}\Large\bfseries 18}~{\color{color1}\small Publications}
+  \quad{\color{cvlight}\textbar}\quad
+  {\color{color1}\small
+    \href{https://scholar.google.com/citations?hl=fr&user=ZBdWJ9EAAAAJ}{\textit{GScholar}} \textperiodcentered{}
+    \href{https://www.researchgate.net/profile/Yinoussa-Adagolodjo}{\textit{ResearchGate}} \textperiodcentered{}
+    \href{https://hal.science/search/index?q=Adagolodjo}{\textit{HAL}}
+  }
+  \end{mdframed}
+  \vspace{2pt}
+}
 
-% \clearpage
-%
-% \recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
-% \date{\today} % Letter date
-% \opening{Dear Sir or Madam,} % Opening greeting
-% \closing{Sincerely yours,} % Closing phrase
-% \enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
-%
-% \makelettertitle % Print letter title
-%
-% \makeletterclosing % Print letter signature
+% Publication entry: \pub{year}{title}{authors}{venue+links}
+\newcommand{\pub}[4]{%
+  \cvitem{#1}{%
+    \textbf{#2}\\[-2pt]
+    {\small\color{color1!80!black} #3}\\[-2pt]
+    {\small\itshape #4}
+  }
+}
 
-%----------------------------------------------------------------------------------------
+% Single-author / thesis entry
+\newcommand{\pubshort}[3]{%
+  \cvitem{#1}{\textbf{#2}\\[-2pt]{\small\itshape #3}}
+}
 
+% ─────────────────────────────────────────────────────────────
 \begin{document}
+\makecvtitle
+\vspace{-8pt}
+\metricsbar
 
-%----------------------------------------------------------------------------------------
-%	CURRICULUM VITAE
-%----------------------------------------------------------------------------------------
-
-\makecvtitle % Print the CV title
-
-%----------------------------------------------------------------------------------------
-%	RESEARCH INTERESTS
-%----------------------------------------------------------------------------------------
-
+% ── Research Interests ────────────────────────────────────────
 \section{Research Interests}
-\cvitem{Primary}{Medical Robotics, Real-time Simulation, Computer-Assisted Surgery}
-\cvitem{Secondary}{Augmented Reality, Soft Robotics, Constraint-Based Control}
-\cvitem{Applications}{Robotic-assisted surgical interventions, Surgical navigation, Minimally invasive surgery}
+\cvitem{Primary}{Medical Robotics, Real-time Finite Element Simulation, Computer-Assisted Surgery}
+\cvitem{Secondary}{Soft Robotics, Augmented Reality, Constraint-Based Control, Haptic Rendering}
+\cvitem{Applications}{Robotic needle insertion \textperiodcentered{} Cochlear implant robotization \textperiodcentered{} Surgical AR \textperiodcentered{} Continuum robot control}
 
-%----------------------------------------------------------------------------------------
-%	PROFESSIONAL EXPERIENCE
-%----------------------------------------------------------------------------------------
-
+% ── Professional Experience ───────────────────────────────────
 \section{Professional Experience}
 
-\cventry{2022--Present}{Assistant Professor}{University of Lille}{Lille, France}{DEFROST Team, Inria}{
-\begin{itemize}
-\item Research in medical robotics and real-time simulation for healthcare applications
-\item Teaching advanced robotics and computer graphics courses
-\item Supervision of PhD students and research projects
-\item Development of innovative solutions for surgical assistance and robotic navigation
-\end{itemize}}
+\cventry{2022--present}%
+  {Assistant Professor in Computer Science}%
+  {University of Lille \textperiodcentered{} DEFROST Team, Inria}%
+  {Lille, France}{}%
+  {\begin{itemize}[noitemsep,topsep=2pt]
+    \item Research in medical robotics and real-time simulation for healthcare
+    \item Supervision of PhD students and postdoctoral researchers
+    \item Teaching: 200+ contact hours/semester \textperiodcentered{} 11 courses (medical robotics, automation, programming, Industry~4.0)
+    \item PI and permanent member of ROBOCOP and IRE (European) research projects
+  \end{itemize}}
 
-\cventry{2019--2022}{Research Engineer}{Inria}{Strasbourg, France}{}{
-\begin{itemize}
-\item Development of constraint-based control systems for medical robotics
-\item Real-time simulation algorithms for deformable object manipulation
-\item Collaboration with medical professionals on surgical robotics applications
-\end{itemize}}
+\cventry{2019--2022}%
+  {Postdoctoral Research Engineer}%
+  {Inria \textperiodcentered{} DEFROST Team}%
+  {Lille, France}{}%
+  {\begin{itemize}[noitemsep,topsep=2pt]
+    \item Constraint-based control for soft and hybrid robotic systems (ROBOCOP, COSSEROOTS)
+    \item Real-time FEM simulation for robotic cochlear implant insertion
+    \item Lead developer of the \href{https://github.com/SofaDefrost/Cosserat}{Cosserat plugin for SOFA} (open source, C++ + Python)
+  \end{itemize}}
 
-\cventry{2015--2018}{Doctoral Researcher}{University of Strasbourg}{Strasbourg, France}{}{
-\begin{itemize}
-\item Research on constraint-based control of robots interacting with deformable objects
-\item Application to minimally invasive surgery
-\item Development of novel algorithms for real-time simulation and control
-\end{itemize}}
+\cventry{2015--2018}%
+  {Doctoral Researcher}%
+  {ICube Laboratory \textperiodcentered{} University of Strasbourg}%
+  {Strasbourg, France}{}%
+  {\begin{itemize}[noitemsep,topsep=2pt]
+    \item PhD: robotic needle insertion using inverse FEM simulation (CONECT project)
+    \item Augmented reality for open liver surgery and deformable organ registration
+    \item Advisors: Dr.\ Hadrien Courtecuisse, Prof.\ Michel de Mathelin
+  \end{itemize}}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-
+% ── Education ─────────────────────────────────────────────────
 \section{Education}
 
-\cventry{2018}{Ph.D. in Robotics}{University of Strasbourg}{Strasbourg, France}{}{
-Thesis: "Constraint-Based Control of Robots Interacting with Deformable Objects - Application to Minimally Invasive Surgery"\\
-Advisors: Dr. Hadrien Courtecuisse, Prof. Michel de Mathelin}
+\cventry{2018}%
+  {Ph.D.\ in Robotics \& Computer Science}%
+  {University of Strasbourg}%
+  {Strasbourg, France}{}%
+  {Thesis: \textit{``CONECT --- Couplage de la rObotique et de la simulatioN mEdical pour des proCedures automaTisees''}\\
+   Advisors: Dr.\ H.\ Courtecuisse \textperiodcentered{} Prof.\ M.\ de Mathelin}
 
-% Add other degrees if known
-% \cventry{year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
-
-%----------------------------------------------------------------------------------------
-%	RESEARCH PROJECTS
-%----------------------------------------------------------------------------------------
-
+% ── Research Projects ─────────────────────────────────────────
 \section{Research Projects}
 
-\cventry{2024--Present}{IRE Project}{Team Member}{}{Intelligent Robotic Endoscopes (European Project)}{
-\begin{itemize}
-\item Development of innovative solutions for robotic endoscopy
-\item Real-time simulation with augmented reality guidance for surgical precision
-\item Integration of computer vision and machine learning for next-generation surgical tools
-\item Focus on minimally invasive surgery and enhanced patient outcomes
-\end{itemize}}
+\cventry{01-2026--present}%
+  {ADAGIO --- tendon-Actuated continuum robots for enDoscopic drAinage of the Gallbladder In acute chOlecystitis }%
+  {National project \textperiodcentered{} Team Member}{}{}%
+  {Developing a stabilization method for stent placement through the precise control of continuous robots.}
 
-\cventry{2021--2022}{COSSEROOTS Project}{Postdoctoral Researcher}{}{Cosserat Theory for Soft Robotics Control}{
-\begin{itemize}
-\item Development of advanced control strategies for soft robots using Cosserat theory
-\item Real-time simulation systems for deformable objects
-\item Applications to medical robotics and industrial settings
-\end{itemize}}
+\cventry{2024--present}%
+  {Maestro --- Advanced Endoscope for Robot-Assisted SpiderMass Imaging}%
+  {ANR ADAGIO \textperiodcentered{} PI}{}{}%
+  {Design, modeling, and control of advanced endoscopes for in vivo real-time topography mass spectrometry imaging (SpiderMass) in robot-assisted minimally invasive surgery.}
 
-\cventry{2019--Present}{ROBOCOP Project}{Postdoctoral Researcher (2019-2022), Permanent Team Member (2022-Present)}{}{Cochlear Implant Robotization}{
-\begin{itemize}
-\item Robotic systems for cochlear implant surgery
-\item Real-time monitoring systems for surgical guidance
-\item Clinical validation and safety protocols
-\end{itemize}}
+\cventry{2024--present}%
+  {IRE --- Intelligent Robotic Endoscopes}%
+  {European Project \textperiodcentered{} Team Member}{}{}%
+  {Soft robotic endoscopy with real-time AR guidance, computer vision, and ML for minimally invasive surgery.}
 
-\cventry{2015--2018}{CONECT Project}{Doctoral Researcher}{}{Control of Needle Insertion in Robotic Surgery}{
-\begin{itemize}
-\item Real-time simulation for soft tissue deformation during needle insertion
-\item Augmented reality guidance for enhanced surgical precision
-\item Integration of force feedback and robotic control systems
-\end{itemize}}
+\cventry{2023--present}%
+  {ProstateBot --- Active Prostate Phantom for Biopsy \& DRE Training}%
+  {ANR \textperiodcentered{} PI}{}{}%
+  {Pneumatically actuated prostate phantom for training prostate biopsy robots and digital rectal examination (DRE) techniques. Design, modeling, and control of the robotic systems. Supervision of Sizhe Tian.}
 
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
+\cventry{2023--present}%
+  {TAVI Growing Robot --- Transcatheter Aortic Valve Implantation}%
+  {Research Project \textperiodcentered{} PI}{}{}%
+  {Vine-inspired eversion growing robots for Transcatheter Aortic Valve Implantation (TAVI): design, modeling, and control for cardiovascular navigation in constrained anatomical spaces.}
 
+\cventry{2022--present}%
+  {ACCESS --- Digital Twin for Cochlear Implant Surgery}%
+  {ANR ROBOCOP \textperiodcentered{} PI}{}{}%
+  {Patient-specific digital twin for cochlear implant surgery: physical simulation, medical image processing, and augmented reality for intraoperative surgical guidance.}
+
+\cventry{2019--present}%
+  {ROBOCOP --- Robotic Cochlear Implant Procedure}%
+  {Inria \textperiodcentered{} PI since 2022}{}{}%
+  {Automated cochlear implant insertion via real-time FEM simulation, surgical navigation, and safety protocols.}
+
+\cventry{2021--2022}%
+  {COSSEROOTS --- Cosserat Theory for Soft Robotics Control}%
+  {Postdoctoral Researcher}{}{}%
+  {Advanced control strategies for continuum soft robots using Cosserat rod theory.}
+
+\cventry{2015--2018}%
+  {CONECT --- Control of Robotic Needle Insertion}%
+  {Doctoral Researcher}{}{}%
+  {Real-time inverse FEM simulation for robotic needle control in deformable tissue with AR guidance.}
+
+% ── Publications ──────────────────────────────────────────────
 \section{Publications}
 
-\subsection{Complete Publication List}
-\cvitem{Google Scholar}{Complete list of publications, citations, and h-index available at:}
-\cvitem{}{\url{https://scholar.google.com/citations?user=ZBdWJ9EAAAAJ}}
+\cvitem{}{\small\color{color1}
+  Full list with citation metrics:
+  \href{https://hal.science/search/index?q=Adagolodjo}{\faArchive~HAL}
+  \textperiodcentered{}
+  \href{https://scholar.google.com/citations?hl=fr&user=ZBdWJ9EAAAAJ}{\faGraduationCap~Google Scholar}
+  \textperiodcentered{}
+  \href{https://www.researchgate.net/profile/Yinoussa-Adagolodjo}{\faFlask~ResearchGate}
+}
 
-%\subsection{Recent Highlights}
-%\cvitem{2023}{\textbf{Y. Adagolodjo}, N. Hafsa. "Robots assisted surgical interventions in constrained anatomical spaces." \textit{Studies in Health Technology and Informatics}}
-%\cvitem{2022}{\textbf{Y. Adagolodjo}, S. Cotin. "Real-time simulation for surgical navigation in robotic-assisted cochlear implant procedure." \textit{IEEE Transactions on Medical Robotics and Bionics}}
-%\cvitem{2019}{\textbf{Y. Adagolodjo}, L. Goffin, M. De Mathelin, H. Courtecuisse. "Constraint-based manipulation of deformable models in robotic surgery." \textit{IEEE Robotics and Automation Letters}}
+\subsection{Journal Articles}
 
-%----------------------------------------------------------------------------------------
-%	TEACHING
-%----------------------------------------------------------------------------------------
+\pub{2023}%
+  {Robots assisted surgical interventions in constrained anatomical spaces}%
+  {\textbf{Y.\,Adagolodjo}, N.\,Hafsa}%
+  {\textit{Studies in Health Technology and Informatics}, vol.\,302, pp.\,217--221.
+   \href{https://doi.org/10.3233/SHTI230159}{\color{color1}DOI}}
 
+
+\pub{2022}%
+  {Planning of soft-rigid Hybrid arms in Contact with Compliant Environment}%
+  {E.\,Coevoet, \textbf{Y.\,Adagolodjo}, M.\,Lin, C.\,Duriez, F.\,Ficuciello}%
+  {\textit{IEEE Robotics and Automation Letters}.
+   \href{https://doi.org/10.1109/LRA.2022.3152322}{\color{color1}DOI}
+   \textperiodcentered{}
+   \href{https://inria.hal.science/hal-03729071v1}{\color{color1}HAL}}
+
+\pub{2021}%
+  {Coupling numerical deformable models in global and reduced coordinates for soft robot kinematics}%
+  {\textbf{Y.\,Adagolodjo}, F.\,Renda, C.\,Duriez}%
+  {\textit{IEEE Robotics and Automation Letters}.
+   \href{https://doi.org/10.1109/LRA.2021.3061977}{\color{color1}DOI}
+   \textperiodcentered{}
+   \href{https://hal.science/hal-03192168v1}{\color{color1}HAL}}
+
+\pub{2019}%
+  {Robotic Insertion of Flexible Needle in Deformable Structures Using Inverse Finite Element Simulation}%
+  {\textbf{Y.\,Adagolodjo}, L.\,Goffin, M.\,de Mathelin, H.\,Courtecuisse}%
+  {\textit{IEEE Transactions on Robotics}.
+   \href{https://doi.org/10.1109/TRO.2019.2897858}{\color{color1}DOI}
+   \textperiodcentered{}
+   \href{https://inria.hal.science/hal-02144487v1}{\color{color1}HAL}}
+
+\pub{2019}%
+  {Constraint-based manipulation of deformable models in robotic surgery}%
+  {\textbf{Y.\,Adagolodjo}, L.\,Goffin, M.\,de Mathelin, H.\,Courtecuisse}%
+  {\textit{IEEE Robotics and Automation Letters}, 4(2), pp.\,1461--1468.
+   \href{https://doi.org/10.1109/LRA.2019.2895244}{\color{color1}DOI}}
+
+\subsection{Conference Papers}
+
+\pub{2025}%
+  {Active Prostate Phantom with Multiple Chambers}%
+  {S.\,Tian, \textbf{Y.\,Adagolodjo}, J.\,Dequidt}%
+  {\textit{IROS 2025 --- IEEE/RSJ Int.\ Conf.\ on Intelligent Robots and Systems}.
+   \href{https://hal.science/hal-05216849v1}{\color{color1}HAL}}
+
+\pub{2025}%
+  {In silicone and in silico: toward evaluation of pacemaker lead implantation}%
+  {T.\,Moupfouma, Q.\,Peyron, \textbf{Y.\,Adagolodjo}, S.\,Caubet, J.-F.\,Ollivier, C.\,Duriez}%
+  {\textit{RoboSoft 2025 --- IEEE Int.\ Conf.\ on Soft Robotics}.
+   \href{https://doi.org/10.1109/RoboSoft63089.2025.11020816}{\color{color1}DOI}
+   \textperiodcentered{}
+   \href{https://hal.science/hal-05153184v1}{\color{color1}HAL}}
+
+\pub{2024}%
+  {Enhancing TAVI Robot Flexibility Using Semi-Extensible Materials}%
+  {F.\,Przybylski, \textbf{Y.\,Adagolodjo}, J.\,Dequidt, C.\,Duriez, P.\,Berthet-Rayne}%
+  {\textit{HSMR 2024 --- Hamlyn Symposium on Medical Robotics}.
+   \href{https://hal.science/hal-04646160v1}{\color{color1}HAL}}
+
+\pub{2023}%
+  {3D Kinematics and Quasi-Statics of a Growing Robot Eversion}%
+  {F.\,Przybylski, \textbf{Y.\,Adagolodjo}, A.\,Mira, G.\,Cerruti, J.\,Dequidt, C.\,Duriez, P.\,Berthet-Rayne}%
+  {\textit{RoboSoft 2023 --- IEEE Int.\ Conf.\ on Soft Robotics}.
+   \href{https://doi.org/10.1109/RoboSoft55895.2023.10122073}{\color{color1}DOI}
+   \textperiodcentered{}
+   \href{https://hal.science/hal-04390298v1}{\color{color1}HAL}}
+
+\pub{2023}%
+  {Smart electrode array for cochlear implants}%
+  {A.\,Itawi, S.\,Ghenna, \ldots, \textbf{Y.\,Adagolodjo}, \ldots, C.\,Duriez, E.\,Cattan}%
+  {\textit{IEEE MEMS 2023 --- Int.\ Conf.\ on Micro Electro Mechanical Systems}.
+   \href{https://doi.org/10.1109/MEMS49605.2023.10052348}{\color{color1}DOI}
+   \textperiodcentered{}
+   \href{https://inria.hal.science/hal-03946253v1}{\color{color1}HAL}}
+
+\pub{2018}%
+  {Marker-based Registration for Large Deformations --- Application to Open Liver Surgery}%
+  {\textbf{Y.\,Adagolodjo}, N.\,Golse, E.\,Vibert, M.\,de Mathelin, S.\,Cotin, H.\,Courtecuisse}%
+  {\textit{ICRA 2018 --- IEEE Int.\ Conf.\ on Robotics and Automation}.
+   \href{https://inria.hal.science/hal-01792837v1}{\color{color1}HAL}}
+
+\pub{2017}%
+  {Silhouette-based Pose Estimation for Deformable Organs --- Application to Surgical Augmented Reality}%
+  {\textbf{Y.\,Adagolodjo}, R.\,Trivisonne, N.\,Haouchine, S.\,Cotin, H.\,Courtecuisse}%
+  {\textit{IROS 2017 --- IEEE/RSJ Int.\ Conf.\ on Intelligent Robots and Systems}.
+   \href{https://hal.science/hal-01578815v1}{\color{color1}HAL}}
+
+\pub{2016}%
+  {Inverse real-time Finite Element simulation for robotic control of flexible needle insertion}%
+  {\textbf{Y.\,Adagolodjo}, L.\,Goffin, M.\,de Mathelin, H.\,Courtecuisse}%
+  {\textit{IROS 2016 --- IEEE/RSJ Int.\ Conf.\ on Intelligent Robots and Systems}.
+   \href{https://hal.science/hal-01353925v1}{\color{color1}HAL}}
+
+\pub{2015}%
+  {Haptic Rendering of Hyperelastic Models with Friction}%
+  {H.\,Courtecuisse, \textbf{Y.\,Adagolodjo}, H.\,Delingette, C.\,Duriez}%
+  {\textit{IROS 2015 --- IEEE/RSJ Int.\ Conf.\ on Intelligent Robots and Systems}.
+   \href{https://doi.org/10.1109/IROS.2015.7353432}{\color{color1}DOI}
+   \textperiodcentered{}
+   \href{https://hal.science/hal-01184113v1}{\color{color1}HAL}}
+
+\subsection{PhD Thesis}
+
+\pubshort{2018}%
+  {CONECT --- Couplage de la rObotique et de la simulatioN mEdical pour des proCedures automaTisees}%
+  {Ph.D.\ Thesis, University of Strasbourg.
+   \href{https://inria.hal.science/tel-01939268v1}{\color{color1}HAL tel-01939268}}
+
+% ── Invited Talks ─────────────────────────────────────────────
+\section{Invited Talks \& Keynotes}
+
+\cventry{Dec.\ 2024}%
+  {Journees Scientifiques Inria Chile 2024}%
+  {Santiago, Chile}{}{}%
+  {\textit{``Bridging the Gap: From Biomechanical Simulations to Adaptive Surgical Robotics''}\\
+   Official pre-event of the AI Action Summit.}
+
+\cventry{Dec.\ 2024}%
+  {LACORO 2024 --- 9th Latin American Conference on Robotics}%
+  {Rancagua, Chile}{}{}%
+  {\textit{``From biomechanical simulation to deformable robot control''}}
+
+\cventry{Mar.\ 2024}%
+  {CAIR Hong Kong AI and Robotics in Healthcare Forum}%
+  {Hong Kong}{}{}%
+  {\textit{``Exploring the Frontiers of Deformable Robotics: Physics-based Modeling, Simulation and Control''}\\
+   Centre for Artificial Intelligence and Robotics, Chinese Academy of Sciences.}
+
+% ── Teaching ──────────────────────────────────────────────────
 \section{Teaching Experience}
 
-\subsection{\textbf{Course Portfolio}}
-\cvitem{Teaching Load}{11 courses across graduate and undergraduate levels (Fall 2024)}
-\cvitem{Contact Hours}{200+ hours of lectures, practicals, and tutorials per semester}
-\cvitem{Course Details}{Complete course descriptions, syllabi, and resources available at:}
-\cvitem{}{\url{https://adagolodjo.github.io/teaching/}}
+\cvitem{Load}{200+ contact hours/semester \textperiodcentered{} 11 courses \textperiodcentered{} Graduate \& undergraduate levels (Fall~2024)}
+\cvitem{Areas}{Medical Robotics \& Simulation \textperiodcentered{} Automatic Control \textperiodcentered{} Industrial Logic \textperiodcentered{} Advanced Programming \textperiodcentered{} Numerical Analysis \textperiodcentered{} Optimization \textperiodcentered{} Industry~4.0 \textperiodcentered{} Research Methods}
+\cvitem{Website}{\href{https://adagolodjo.github.io/teaching/}{adagolodjo.github.io/teaching}}
 
-\subsection{\textbf{Teaching Areas}}
-\cvitem{Medical Robotics}{Medical simulation, robotics applications, real-time systems}
-\cvitem{Automation \& Control}{Automatic control, system regulation, industrial logic}
-\cvitem{Programming \& Optimization}{Advanced programming, numerical analysis, optimization methods}
-\cvitem{Industry 4.0}{Smart manufacturing, IoT, modern industrial systems}
-\cvitem{Research Methods}{Research methodology, scientific presentation, academic writing}
+% ── Software ──────────────────────────────────────────────────
+\section{Open Source Software}
 
-\subsection{\textbf{Software Tools Integration}}
-\cvitem{Simulation}{SOFA framework for real-time simulation in medical applications}
-\cvitem{Programming}{Modern development environments and version control systems}
-\cvitem{Visualization}{3D modeling and visualization tools for engineering education}
+\cventry{2019--present}%
+  {Lead Developer}%
+  {Cosserat Plugin for SOFA Framework}%
+  {Open Source \textperiodcentered{} C++ / Python}{}%
+  {Real-time Cosserat rod mechanics for soft and continuum robot simulation.
+   Internationally adopted by the soft robotics community.\\
+   \href{https://github.com/SofaDefrost/Cosserat}{\texttt{github.com/SofaDefrost/Cosserat}}}
 
-%----------------------------------------------------------------------------------------
-%	SOFTWARE DEVELOPMENT
-%----------------------------------------------------------------------------------------
-
-\section{Software Development}
-
-\subsection{\textbf{Open Source Contributions}}
-\cventry{2019--Present}{Main Developer}{Cosserat Plugin for SOFA}{Open Source Project}{}{
-\begin{itemize}
-\item Lead developer of the Cosserat plugin for SOFA simulation framework
-\item Implementation of Cosserat rod theory for soft robotics simulation
-\item Repository: \url{https://github.com/SofaDefrost/Cosserat}
-\item Used in research projects and by the international soft robotics community
-\item C++ implementation with Python bindings for accessibility
-\end{itemize}}
-
-\subsection{\textbf{Technical Contributions}}
-\cvitem{Core Features}{Cosserat rod mechanics, Real-time deformation simulation, Integration with SOFA ecosystem}
-\cvitem{Community Impact}{Widely adopted by researchers in soft robotics and continuum mechanics}
-\cvitem{Documentation}{Comprehensive examples, tutorials, and API documentation}
-
-%----------------------------------------------------------------------------------------
-%	TECHNICAL SKILLS
-%----------------------------------------------------------------------------------------
-
+% ── Technical Skills ──────────────────────────────────────────
 \section{Technical Skills}
 
 \cvitem{Programming}{C++, Python, MATLAB, JavaScript, LaTeX}
-\cvitem{Robotics}{ROS, Real-time control systems, Kinematics and dynamics}
-\cvitem{Simulation}{FEM, GPU acceleration, Real-time physics simulation, SOFA framework}
-\cvitem{Graphics}{3D visualization, Augmented reality, OpenGL, WebGL}
-\cvitem{Tools}{Git, Docker, Jekyll, Bulma CSS framework}
-\cvitem{Platforms}{Linux, macOS, High-performance computing}
+\cvitem{Frameworks}{SOFA (real-time FEM) \textperiodcentered{} ROS \textperiodcentered{} OpenGL / WebGL}
+\cvitem{Methods}{Finite Element Method \textperiodcentered{} Cosserat rod theory \textperiodcentered{} GPU computing \textperiodcentered{} Constraint-based control}
+\cvitem{Tools}{Git \textperiodcentered{} Docker \textperiodcentered{} Jekyll \textperiodcentered{} Linux / macOS}
 
-%----------------------------------------------------------------------------------------
-%	RESEARCH EXPERTISE
-%----------------------------------------------------------------------------------------
+% ── Languages ─────────────────────────────────────────────────
+\section{Languages}
+\cvitemwithcomment{French}{Native speaker}{}
+\cvitemwithcomment{English}{Fluent}{Professional working proficiency}
+\cvitemwithcomment{Yoruba}{Native speaker}{}
+\cvitemwithcomment{Bassar}{Native speaker}{}
 
-\section{Research Expertise}
-
-\subsection{Medical Robotics}
-\cvitem{}{Robotic-assisted surgical interventions, Real-time simulation for surgical navigation, Constraint-based manipulation of deformable models}
-
-\subsection{Simulation \& Modeling}
-\cvitem{}{Real-time deformation simulation, Physics-based modeling for soft tissues, Constraint-based approaches, GPU-accelerated computation}
-
-\subsection{Soft Robotics}
-\cvitem{}{Continuum robots for medical applications, Bio-inspired robotic systems, Flexible and adaptive control systems, Cosserat theory applications}
-
-%----------------------------------------------------------------------------------------
-%	INVITED TALKS AND PRESENTATIONS
-%----------------------------------------------------------------------------------------
-
-\section{Invited Talks and Presentations}
-
-\cventry{December 2024}{Invited Speaker}{Journées Scientifiques Inria Chile 2024}{Santiago, Chile}{December 4-6, 2024}{
-\begin{itemize}
-\item Title: "Bridging the Gap: From Biomechanical Simulations to Adaptive Surgical Robotics"
-\item Official pre-event of the AI Action Summit
-\item International conference on AI challenges and opportunities
-\item Presented to leading French and Chilean scientists
-\end{itemize}}
-
-\cventry{December 2024}{Invited Speaker}{LACORO 2024}{Rancagua, Chile}{December 9-13, 2024}{
-\begin{itemize}
-\item Title: "From biomechanical simulation to deformable robot control"
-\item 9th Latin American Conference on Robotics
-\item International robotics conference in the Southern Hemisphere
-\item Presentation on medical robotics and simulation technologies
-\end{itemize}}
-
-\cventry{March 2024}{Invited Speaker}{CAIR Hong Kong AI and Robotics in Healthcare Forum}{Hong Kong}{March 28-29, 2024}{
-\begin{itemize}
-\item Title: "Exploring the Frontiers of Deformable Robotics: from Physics-based Modeling and Real-time Simulation to Control and Contacts Handling"
-\item Centre for Artificial Intelligence and Robotics (CAIR), Hong Kong Institute of Science \& Innovation
-\item Chinese Academy of Sciences international forum
-\item Focus on innovative applications of AI and robotics in medical field
-\item International gathering of experts on healthcare technology
-\end{itemize}}
-
-%----------------------------------------------------------------------------------------
-%	PROFESSIONAL SERVICE
-%----------------------------------------------------------------------------------------
-
+% ── Professional Service ──────────────────────────────────────
 \section{Professional Service}
 
-\subsection{\textbf{Journal Reviewing}}
-\cvitem{}{IEEE Transactions on Robotics}
-\cvitem{}{IEEE Transactions on Medical Robotics and Bionics}
-\cvitem{}{Various robotics and medical technology journals}
+\cvitem{Journals}{%
+  Reviewer for \textit{IEEE Transactions on Robotics} \textperiodcentered{}
+  \textit{IEEE Trans.\ on Medical Robotics and Bionics} \textperiodcentered{}
+  \textit{IEEE Robotics and Automation Letters}}
 
-\subsection{\textbf{Conference Activities}}
-\cvitem{}{Program Committee Member for robotics conferences}
-\cvitem{}{Reviewer for IEEE International Conference on Robotics and Automation}
-\cvitem{}{Reviewer for IEEE International Conference on Intelligent Robots and System}
-\cvitem{}{Reviewer for International Conference on Medical Robotics}
+\cvitem{Conferences}{%
+  Reviewer for ICRA \textperiodcentered{} IROS \textperiodcentered{} Int.\ Conf.\ on Medical Robotics}
 
-
-\subsection{Professional Memberships}
-\cvitem{}{IEEE Robotics and Automation Society}
-
-
-%----------------------------------------------------------------------------------------
-%	LANGUAGES
-%----------------------------------------------------------------------------------------
-
-\section{Languages}
-\cvitemwithcomment{French}{Native}{}
-\cvitemwithcomment{English}{Fluent}{Professional working proficiency}
-\cvitemwithcomment{Yoruba}{Native}{}
-\cvitemwithcomment{Bassar}{Native}{}
-% Add other languages if applicable
-
-%----------------------------------------------------------------------------------------
-%	INTERESTS
-%----------------------------------------------------------------------------------------
-
-\section{Interests}
-\cvitem{Academic}{Medical technology innovation, Healthcare robotics, Surgical simulation}
-\cvitem{Technical}{Open source software, Web development, High-performance computing}
-
-%----------------------------------------------------------------------------------------
-
-\clearpage
-
-%----------------------------------------------------------------------------------------
-%	COMPLETE PUBLICATION LIST (if space allows)
-%----------------------------------------------------------------------------------------
-
-% Uncomment if you want a complete publication list on a separate page
-%
-% \section{Complete Publication List}
-%
-% \subsection{Journal Articles}
-% [Add complete list of journal papers]
-%
-% \subsection{Conference Papers}
-% [Add complete list of conference papers]
-%
-% \subsection{Patents}
-% [Add any patents]
+\cvitem{Membership}{IEEE Robotics and Automation Society}
 
 \end{document}
