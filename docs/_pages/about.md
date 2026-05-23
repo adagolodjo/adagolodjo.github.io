@@ -71,7 +71,7 @@ about_fullwidth: false
 ## Contact
 
 Interested in collaboration or learning more?  
-[Contact me](/contact/) or connect on [Google Scholar](https://scholar.google.com/citations?user=YOUR_ID).
+[Contact me](/contact/) or connect on [Google Scholar](https://scholar.google.com/citations?hl=fr&user=ZBdWJ9EAAAAJ).
 
 ---
 

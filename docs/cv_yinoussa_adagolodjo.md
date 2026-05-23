@@ -97,9 +97,6 @@ Lille, France
 
 ### Recent Highlights
 
-**2023**
-- **Y. Adagolodjo**, N. Hafsa. "Robots assisted surgical interventions in constrained anatomical spaces." *Studies in Health Technology and Informatics*
-
 **2022**
 - **Y. Adagolodjo**, S. Cotin. "Real-time simulation for surgical navigation in robotic-assisted cochlear implant procedure." *IEEE Transactions on Medical Robotics and Bionics*
 

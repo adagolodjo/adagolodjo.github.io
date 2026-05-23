@@ -6,11 +6,13 @@
     - name: Active Projects
       link: /research/projects/
     - name: Publications & Papers
-      link: /research/publications/
+      link: /publications/
     - name: Software & Datasets
       link: /research/software/
     - name: Research Group
       link: /research/group/
+- name: Publications
+  link: /publications/
 - name: Teaching & Mentoring
   link: /teaching/
   dropdown:
