@@ -1,524 +1,531 @@
 ---
 layout: page
-title: Modélisation des systèmes de production
-subtitle: Outils et méthodes pour la production industrielle
+title: Logique Industrielle
+subtitle: Approche par Compétences (APC)
 permalink: /teaching/courses/modelisation-production/
-image: /assets/images/projects/modelisation-production.jpg
 ---
 
 <style>
 :root {
-  --primary-color: #2c3e50;
-  --secondary-color: #3498db;
-  --accent-color: #e74c3c;
-  --success-color: #27ae60;
-  --warning-color: #f39c12;
-  --production-color: #e67e22;
-  --light-bg: #f8f9fa;
-  --card-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  --card-shadow-hover: 0 12px 40px rgba(0,0,0,0.15);
-  --border-radius: 16px;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --teal:        #016064;
+  --teal-dark:   #013A3C;
+  --teal-light:  #48AAAD;
+  --teal-pale:   #E0F7FA;
+  --teal-mid:    #5CC8CB;
+  --amber:       #f59e0b;
+  --amber-pale:  #fffbeb;
+  --card-radius: 14px;
+  --shadow:      0 4px 18px rgba(1,96,100,0.10);
 }
 
-.course-hero {
-  background: linear-gradient(135deg, var(--production-color) 0%, var(--secondary-color) 100%);
-  color: white;
-  padding: 4rem 2rem;
-  border-radius: var(--border-radius);
-  margin-bottom: 3rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+/* Hero */
+.li-hero {
+  background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 60%, var(--teal-light) 100%);
+  color: white; padding: 2.5rem 2rem 2rem; border-radius: 0 0 2rem 2rem;
+  margin-bottom: 2rem; text-align: center;
+}
+.li-hero h1 { color: white; font-size: 2rem; margin-bottom: .3rem; }
+.li-hero .sub { color: var(--teal-mid); font-size: 1.05rem; margin-bottom: .8rem; }
+.li-badges { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin-top: .8rem; }
+.li-badge {
+  background: rgba(255,255,255,.15); color: white;
+  padding: .3rem .85rem; border-radius: 20px; font-size: .8rem; font-weight: 600;
 }
 
-.course-hero::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='white' fill-opacity='0.1'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20v20h40V20c0-11.046-8.954-20-20-20z'/%3E%3C/g%3E%3C/svg%3E");
-  animation: float 20s linear infinite;
-  z-index: 1;
+/* Info bar */
+.li-infobar {
+  display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;
+  background: white; border-radius: var(--card-radius); padding: 1.2rem 1.5rem;
+  box-shadow: var(--shadow); margin-bottom: 2rem;
+}
+.li-info { text-align: center; }
+.li-info-val { font-size: 1.5rem; font-weight: 700; color: var(--teal); }
+.li-info-lbl { font-size: .75rem; color: #666; margin-top: .15rem; }
+
+/* Section titles */
+.li-section {
+  display: flex; align-items: center; gap: .6rem;
+  font-size: 1.2rem; font-weight: 700; color: var(--teal-dark);
+  border-bottom: 2px solid var(--teal-light);
+  padding-bottom: .4rem; margin: 2rem 0 1.2rem;
 }
 
-.course-hero-content {
-  position: relative;
-  z-index: 2;
+/* Competence cards */
+.li-comp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+.li-comp-card {
+  background: white; border-radius: var(--card-radius); box-shadow: var(--shadow);
+  padding: 1.3rem 1.5rem; border-top: 4px solid var(--teal-light);
 }
-
-.course-hero h1 {
-  color: white;
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 300;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+.li-comp-card.c1 { border-top-color: #3b82f6; }
+.li-comp-card.c2 { border-top-color: var(--teal); }
+.li-comp-card.c3 { border-top-color: var(--amber); }
+.li-comp-title { font-weight: 700; font-size: 1rem; color: var(--teal-dark); margin-bottom: .3rem; }
+.li-comp-badge {
+  display: inline-block; padding: .2rem .6rem; border-radius: 12px;
+  font-size: .72rem; font-weight: 700; margin-bottom: .6rem;
 }
+.c1 .li-comp-badge { background: #dbeafe; color: #1d4ed8; }
+.c2 .li-comp-badge { background: var(--teal-pale); color: var(--teal-dark); }
+.c3 .li-comp-badge { background: var(--amber-pale); color: #92400e; }
+.li-comp-verbs { font-size: .82rem; color: #555; font-style: italic; margin-bottom: .7rem; }
+.li-comp-skills { margin: 0 0 0 1rem; padding: 0; }
+.li-comp-skills li { font-size: .83rem; color: #444; line-height: 1.7; }
 
-.course-hero .subtitle {
-  font-size: 1.3rem;
-  opacity: 0.95;
-  margin-bottom: 2rem;
+/* Sessions accordion-style */
+.li-sessions { display: flex; flex-direction: column; gap: .6rem; }
+.li-session {
+  background: white; border-radius: 10px; box-shadow: var(--shadow);
+  border-left: 4px solid var(--teal-light); padding: .9rem 1.2rem;
 }
-
-.hero-badges {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+.li-session.c1 { border-left-color: #3b82f6; }
+.li-session.c2 { border-left-color: var(--teal); }
+.li-session.c3 { border-left-color: var(--amber); }
+.li-session.c12 { border-left-color: #8b5cf6; }
+.li-session.c23 { border-left-color: #10b981; }
+.li-session-head { display: flex; align-items: center; gap: .7rem; margin-bottom: .35rem; }
+.li-session-num { font-weight: 700; color: var(--teal-dark); font-size: .9rem; min-width: 50px; }
+.li-session-title { font-weight: 600; color: #222; font-size: .92rem; }
+.li-session-tag {
+  margin-left: auto; font-size: .7rem; font-weight: 700; padding: .15rem .5rem;
+  border-radius: 10px; white-space: nowrap;
 }
+.tag-c1  { background: #dbeafe; color: #1d4ed8; }
+.tag-c2  { background: var(--teal-pale); color: var(--teal-dark); }
+.tag-c3  { background: var(--amber-pale); color: #92400e; }
+.tag-c12 { background: #ede9fe; color: #5b21b6; }
+.tag-c23 { background: #d1fae5; color: #065f46; }
+.li-session-obj { margin: 0 0 0 1.1rem; padding: 0; }
+.li-session-obj li { font-size: .82rem; color: #555; line-height: 1.65; }
 
-.hero-badge {
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-weight: 500;
-  border: 1px solid rgba(255,255,255,0.3);
+/* TP cards */
+.li-tp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.li-tp-card {
+  background: white; border-radius: var(--card-radius); box-shadow: var(--shadow);
+  padding: 1.2rem 1.4rem; border-top: 4px solid var(--teal);
 }
-
-.course-nav {
-  background: white;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  position: sticky;
-  top: 20px;
-  z-index: 100;
+.li-tp-card.star { border-top-color: var(--amber); background: var(--amber-pale); }
+.li-tp-num { font-size: .72rem; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: .06em; margin-bottom: .3rem; }
+.li-tp-card.star .li-tp-num { color: #92400e; }
+.li-tp-title { font-weight: 700; color: var(--teal-dark); margin-bottom: .4rem; font-size: .95rem; }
+.li-tp-context { font-size: .83rem; color: #666; font-style: italic; margin-bottom: .6rem; border-left: 3px solid var(--teal-light); padding-left: .6rem; }
+.li-tp-obj { margin: 0 0 .7rem 1rem; padding: 0; }
+.li-tp-obj li { font-size: .82rem; color: #444; line-height: 1.65; }
+.li-tp-deliverable {
+  background: var(--teal-pale); border-radius: 8px; padding: .45rem .7rem;
+  font-size: .8rem; color: var(--teal-dark);
 }
+.li-tp-card.star .li-tp-deliverable { background: #fef3c7; }
 
-.nav-links {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+/* Table */
+.li-table { width: 100%; border-collapse: collapse; font-size: .85rem; margin-bottom: 1.5rem; }
+.li-table th { background: var(--teal); color: white; padding: .6rem .8rem; text-align: left; }
+.li-table td { padding: .55rem .8rem; border-bottom: 1px solid #e0f7fa; vertical-align: top; }
+.li-table tr:hover td { background: var(--teal-pale); }
+.li-table .star-row td { background: var(--amber-pale); font-weight: 600; }
+
+/* Bridge box */
+.li-bridge {
+  background: linear-gradient(135deg, var(--teal-pale) 0%, #fff 100%);
+  border: 2px solid var(--teal-light); border-radius: var(--card-radius);
+  padding: 1.3rem 1.6rem; margin: 1.5rem 0;
 }
+.li-bridge h4 { color: var(--teal-dark); margin-bottom: .5rem; }
+.li-bridge ul { margin: 0 0 0 1.1rem; }
+.li-bridge li { font-size: .88rem; color: #444; line-height: 1.8; }
 
-.nav-link {
-  padding: 0.75rem 1.5rem;
-  background: var(--light-bg);
-  color: var(--primary-color);
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: 500;
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+/* PDF links */
+.li-pdf-btn {
+  display: inline-flex; align-items: center; gap: .3rem;
+  font-size: .72rem; font-weight: 600;
+  padding: .2rem .65rem; border-radius: 8px;
+  text-decoration: none; transition: background .2s, color .2s;
+  border: 1.5px solid var(--teal-light);
+  color: var(--teal); background: var(--teal-pale);
+  white-space: nowrap;
 }
-
-.nav-link:hover, .nav-link.active {
-  background: var(--secondary-color);
-  color: white;
-  transform: translateY(-2px);
+.li-pdf-btn:hover { background: var(--teal); color: white; border-color: var(--teal); }
+.li-pdf-btn.placeholder {
+  border-style: dashed; opacity: .5;
+  color: #888; background: #f5f5f5; border-color: #ccc;
+  cursor: not-allowed; pointer-events: none;
 }
-
-.section-card {
-  background: white;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  padding: 2.5rem;
-  margin-bottom: 2rem;
-  transition: var(--transition);
+/* Resources grid */
+.li-resources {
+  background: white; border-radius: var(--card-radius);
+  box-shadow: var(--shadow); padding: 1.3rem 1.5rem;
+  margin-bottom: 1.8rem;
 }
+.li-resources h4 { color: var(--teal-dark); font-size: .88rem; font-weight: 700; margin: .8rem 0 .5rem; }
+.li-resources h4:first-child { margin-top: 0; }
+.li-res-row { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: .3rem; }
 
-.section-card:hover {
-  box-shadow: var(--card-shadow-hover);
-}
-
-.section-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--light-bg);
-}
-
-.section-icon {
-  font-size: 2rem;
-  margin-right: 1rem;
-  color: var(--production-color);
-}
-
-.section-title {
-  color: var(--primary-color);
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.objectives-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.objective-card {
-  background: var(--light-bg);
-  padding: 1.5rem;
-  border-radius: 12px;
-  border-left: 4px solid var(--success-color);
-  transition: var(--transition);
-}
-
-.objective-card:hover {
-  transform: translateX(8px);
-  background: #e8f5e8;
-}
-
-.info-box {
-  background: linear-gradient(135deg, #fff3cd, #d1ecf1);
-  border-left: 4px solid var(--production-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin: 2rem 0;
-}
-
-.timeline {
-  position: relative;
-  padding-left: 2rem;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 15px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--secondary-color);
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 2rem;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  margin-left: 2rem;
-  border-left: 4px solid var(--secondary-color);
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -2.75rem;
-  top: 1.5rem;
-  width: 12px;
-  height: 12px;
-  background: var(--secondary-color);
-  border-radius: 50%;
-  border: 3px solid white;
-  box-shadow: 0 0 0 3px var(--secondary-color);
-}
-
-.evaluation-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.eval-item {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: linear-gradient(135deg, var(--light-bg), white);
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-
-.eval-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--production-color), var(--secondary-color));
-}
-
-.eval-item:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--card-shadow-hover);
-}
-
-.eval-percentage {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--production-color);
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.eval-title {
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.eval-description {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.resources-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.resource-card {
-  background: rgba(230, 126, 34, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 16px;
-  border: 1px solid rgba(230, 126, 34, 0.2);
-  transition: var(--transition);
-}
-
-.resource-card:hover {
-  background: rgba(230, 126, 34, 0.2);
-  transform: translateY(-5px);
-}
-
-.resource-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: var(--production-color);
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  background: rgba(230, 126, 34, 0.1);
-  border-radius: 12px;
-  transition: var(--transition);
-}
-
-.contact-item:hover {
-  background: rgba(230, 126, 34, 0.2);
-}
-
-.contact-icon {
-  font-size: 1.5rem;
-  color: var(--production-color);
-}
-
-@keyframes float {
-  0% { transform: translateX(-50px); }
-  100% { transform: translateX(calc(100vw + 50px)); }
-}
-
-@media (max-width: 768px) {
-  .course-hero h1 {
-    font-size: 2.5rem;
-  }
-  
-  .nav-links {
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
-  }
-  
-  .timeline {
-    padding-left: 1rem;
-  }
-  
-  .timeline-item {
-    margin-left: 1rem;
-  }
+@media (max-width: 600px) {
+  .li-comp-grid, .li-tp-grid { grid-template-columns: 1fr; }
+  .li-infobar { gap: .7rem; }
 }
 </style>
 
-<div class="course-hero">
-  <div class="course-hero-content">
-    <h1>🏭 Modélisation des systèmes de production</h1>
-    <p class="subtitle">Méthodes et outils pour optimiser la production industrielle</p>
-    <div class="hero-badges">
-      <span class="hero-badge">🎓 Niveau Master</span>
-      <span class="hero-badge">⏱️ 10 semaines</span>
-      <span class="hero-badge">📊 Études de cas</span>
-      <span class="hero-badge">🛠️ Simulation</span>
-    </div>
+<!-- Hero -->
+<div class="li-hero">
+  <h1><i class="fas fa-microchip"></i> Logique Industrielle</h1>
+  <p class="sub">Approche par Compétences (APC)</p>
+  <p style="color:rgba(255,255,255,.85); max-width:580px; margin:.5rem auto 0;">
+    De l'algèbre de Boole aux systèmes automatisés — concevoir, simuler et implémenter la logique combinatoire et séquentielle, en Python et Logisim.
+  </p>
+  <div class="li-badges">
+    <span class="li-badge"><i class="fas fa-graduation-cap"></i> Licence</span>
+    <span class="li-badge"><i class="fas fa-calendar"></i> Semestre 2</span>
+    <span class="li-badge"><i class="fab fa-python"></i> Python</span>
+    <span class="li-badge">Logisim Evolution</span>
+    <span class="li-badge">Passerelle SAP →</span>
   </div>
 </div>
 
-<nav class="course-nav">
-  <div class="nav-links">
-    <a href="#presentation" class="nav-link active">📋 Présentation</a>
-    <a href="#objectifs" class="nav-link">🎯 Objectifs</a>
-    <a href="#planning" class="nav-link">📅 Planning</a>
-    <a href="#evaluation" class="nav-link">📊 Évaluation</a>
-    <a href="#ressources" class="nav-link">📚 Ressources</a>
-    <a href="#contact" class="nav-link">📞 Contact</a>
+<!-- Info bar -->
+<div class="li-infobar">
+  <div class="li-info">
+    <div class="li-info-val">10</div>
+    <div class="li-info-lbl">séances CTD (×2h)</div>
   </div>
-</nav>
+  <div class="li-info">
+    <div class="li-info-val">4</div>
+    <div class="li-info-lbl">séances TP (×2h)</div>
+  </div>
+  <div class="li-info">
+    <div class="li-info-val">28h</div>
+    <div class="li-info-lbl">volume total</div>
+  </div>
+  <div class="li-info">
+    <div class="li-info-val">3</div>
+    <div class="li-info-lbl">compétences (C1–C3)</div>
+  </div>
+</div>
 
-<section id="presentation" class="section-card">
-  <div class="section-header">
-    <div class="section-icon">📋</div>
-    <h2 class="section-title">Présentation du cours</h2>
+<!-- ═══ RESSOURCES PDF — Remplacer href="#" par le lien Nextcloud ═══ -->
+<div class="li-section"><i class="fas fa-folder-open"></i> Ressources du cours</div>
+<div class="li-resources">
+  <h4><i class="fas fa-chalkboard"></i> Supports CTD</h4>
+  <div class="li-res-row">
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 1 — Numération</a>
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 2 — Algèbre de Boole</a>
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 3 — Karnaugh</a>
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 4 — Circuits intégrés</a>
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 5 — Additionneurs</a>
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 6 — Comparateurs</a>
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 7 — Codeurs/Décodeurs</a>
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 8 — MUX/DEMUX</a>
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 9 — Séquentiel</a>
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 10 — SAP & I4.0</a>
   </div>
-  <p style="font-size: 1.1rem; line-height: 1.7; color: #555; margin-bottom: 2rem;">
-    Ce cours présente les méthodes de modélisation et d'optimisation des systèmes de production industrielle. Les étudiants apprendront à analyser, modéliser et simuler des processus industriels pour améliorer la performance globale.
-  </p>
-  <div class="info-box">
-    <h4>📊 Informations générales</h4>
-    <p><strong>Durée :</strong> 10 semaines (30h CM + 20h TD/TP)<br>
-    <strong>Volume de travail personnel estimé :</strong> 50-60 heures<br>
-    <strong>Langue d'enseignement :</strong> Français<br>
-    <strong>Prérequis académiques :</strong> Mathématiques appliquées, gestion industrielle</p>
+  <h4><i class="fas fa-flask"></i> Sujets de TP</h4>
+  <div class="li-res-row">
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> TP 1 — Python Portes</a>
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> TP 2 — Logisim</a>
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> TP 3 — Système de péage ⭐</a>
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> TP 4 — Bilan SAP</a>
   </div>
-</section>
+  <h4><i class="fas fa-book"></i> Documents complémentaires</h4>
+  <div class="li-res-row">
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> Fiches de compétences APC</a>
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> Fiche mémo — Karnaugh</a>
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> Datasheets CI (7400, 7483, 7485…)</a>
+  </div>
+</div>
+<!-- ═══════════════════════════════════════════════════════════════ -->
 
-<section id="objectifs" class="section-card">
-  <div class="section-header">
-    <div class="section-icon">🎯</div>
-    <h2 class="section-title">Objectifs pédagogiques</h2>
-  </div>
-  <div class="objectives-grid">
-    <div class="objective-card">
-      <h4>🏭 Modéliser un système de production</h4>
-      <p>Représenter les processus industriels à l’aide d’outils adaptés.</p>
-    </div>
-    <div class="objective-card">
-      <h4>📈 Optimiser les flux et ressources</h4>
-      <p>Analyser et améliorer l’utilisation des ressources et la productivité.</p>
-    </div>
-    <div class="objective-card">
-      <h4>🛠️ Utiliser des outils de simulation</h4>
-      <p>Mettre en œuvre des logiciels de simulation pour tester des scénarios industriels.</p>
-    </div>
-    <div class="objective-card">
-      <h4>📊 Résoudre des études de cas</h4>
-      <p>Appliquer les méthodes vues à des cas concrets issus de l’industrie.</p>
-    </div>
-  </div>
-</section>
+<!-- Situation cible -->
+<div class="li-bridge">
+  <h4><i class="fas fa-bullseye"></i> Situation professionnelle cible</h4>
+  <p style="font-size:.9rem; color:#333;">Un technicien ou ingénieur doit <strong>concevoir, analyser et valider la partie commande d'un système automatisé numérique</strong> — de la spécification fonctionnelle jusqu'à l'implantation sur circuit intégré ou logiciel.</p>
+</div>
 
-<section id="planning" class="section-card">
-  <div class="section-header">
-    <div class="section-icon">📅</div>
-    <h2 class="section-title">Planning du cours</h2>
-  </div>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-week">Semaines 1-2</div>
-      <div class="timeline-content">
-        <h4>Introduction à la modélisation</h4>
-        <div class="timeline-details">Principes de base, outils de représentation, modélisation de flux.</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-week">Semaines 3-5</div>
-      <div class="timeline-content">
-        <h4>Outils de simulation</h4>
-        <div class="timeline-details">Logiciels de simulation, modélisation de scénarios, validation.</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-week">Semaines 6-8</div>
-      <div class="timeline-content">
-        <h4>Optimisation des systèmes</h4>
-        <div class="timeline-details">Méthodes d’optimisation, analyse de performance, indicateurs clés.</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-week">Semaines 9-10</div>
-      <div class="timeline-content">
-        <h4>Études de cas</h4>
-        <div class="timeline-details">Application des méthodes à des cas réels, restitution des résultats.</div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Compétences -->
+<div class="li-section"><i class="fas fa-trophy"></i> Les trois compétences du module</div>
+<div class="li-comp-grid">
 
-<section id="evaluation" class="section-card">
-  <div class="section-header">
-    <div class="section-icon">📊</div>
-    <h2 class="section-title">Modalités d’évaluation</h2>
+  <div class="li-comp-card c1">
+    <div class="li-comp-badge">C1</div>
+    <div class="li-comp-title">Modéliser et analyser des systèmes logiques combinatoires</div>
+    <div class="li-comp-verbs">Traduire · Simplifier · Justifier · Vérifier</div>
+    <ul class="li-comp-skills">
+      <li>Systèmes de numération et codages (binaire, hexa, BCD)</li>
+      <li>Algèbre de Boole : axiomes, De Morgan, consensus</li>
+      <li>Tables de vérité et formes canoniques (SOP/POS)</li>
+      <li>Tableaux de Karnaugh (2 à 4 variables)</li>
+      <li>Technologie TTL/CMOS</li>
+    </ul>
   </div>
-  <div class="evaluation-grid">
-    <div class="eval-item">
-      <span class="eval-percentage">50%</span>
-      <div class="eval-title">Études de cas</div>
-      <div class="eval-description">Résolution de cas industriels, rapport écrit et présentation.</div>
-    </div>
-    <div class="eval-item">
-      <span class="eval-percentage">30%</span>
-      <div class="eval-title">Contrôles</div>
-      <div class="eval-description">Évaluations régulières sur la compréhension des outils et méthodes.</div>
-    </div>
-    <div class="eval-item">
-      <span class="eval-percentage">20%</span>
-      <div class="eval-title">Examen final</div>
-      <div class="eval-description">Épreuve écrite sur l’ensemble du cours.</div>
-    </div>
-  </div>
-</section>
 
-<section id="ressources" class="section-card">
-  <div class="section-header">
-    <div class="section-icon">📚</div>
-    <h2 class="section-title">Ressources et supports</h2>
+  <div class="li-comp-card c2">
+    <div class="li-comp-badge">C2</div>
+    <div class="li-comp-title">Concevoir et simuler des circuits logiques combinatoires et séquentiels</div>
+    <div class="li-comp-verbs">Assembler · Simuler · Déboguer · Implémenter</div>
+    <ul class="li-comp-skills">
+      <li>Additionneurs, comparateurs (7483, 7485)</li>
+      <li>Codeurs, décodeurs (74LS138, 74LS139)</li>
+      <li>Multiplexeurs / démultiplexeurs</li>
+      <li>Simulation Logisim Evolution (chronogrammes)</li>
+      <li>Implémentation Python avec tests unitaires</li>
+    </ul>
   </div>
-  <div class="resources-grid">
-    <div class="resource-card">
-      <div class="resource-icon">📖</div>
-      <h4>Supports de cours</h4>
-      <ul>
-        <li><a href="https://nextcloud.example.com/s/modelisation-production" target="_blank">Accès Nextcloud (supports de cours)</a></li>
-      </ul>
-    </div>
-    <div class="resource-card">
-      <div class="resource-icon">🔗</div>
-      <h4>Ressources complémentaires</h4>
-      <ul>
-        <li><a href="https://fr.wikipedia.org/wiki/Mod%C3%A9lisation_des_processus" target="_blank">Modélisation des processus (Wikipedia)</a></li>
-        <li><a href="https://www.simul8.com/" target="_blank">Simul8 (logiciel de simulation)</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
 
-<section id="contact" class="section-card">
-  <div class="section-header">
-    <div class="section-icon">📞</div>
-    <h2 class="section-title">Contact & encadrement</h2>
+  <div class="li-comp-card c3">
+    <div class="li-comp-badge">C3</div>
+    <div class="li-comp-title">Décrire et préparer la commande d'un système automatisé</div>
+    <div class="li-comp-verbs">Identifier · Distinguer · Décrire · Préparer</div>
+    <ul class="li-comp-skills">
+      <li>Logique combinatoire vs séquentielle</li>
+      <li>Machine à états finis (FSM) — diagramme d'états</li>
+      <li>Structure d'un système automatisé (PO / PC)</li>
+      <li>Lien API → IoT → Jumeau numérique</li>
+      <li><em>Passerelle vers le module SAP (S3)</em></li>
+    </ul>
   </div>
-  <div class="contact-info">
-    <div class="contact-item">
-      <span class="contact-icon">👨‍🏫</span>
-      <span><strong>Responsable du cours :</strong> Dr. Yinoussa Adagolodjo</span>
+
+</div>
+
+<!-- CTD sessions -->
+<div class="li-section"><i class="fas fa-chalkboard-teacher"></i> Cours-TD — 10 séances × 2h</div>
+<div class="li-sessions">
+
+  <div class="li-session c1">
+    <div class="li-session-head">
+      <span class="li-session-num">CTD 1</span>
+      <span class="li-session-title">Systèmes de numération et codages</span>
+      <span class="li-session-tag tag-c1">C1</span>
+      <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> PDF</a>
     </div>
-    <div class="contact-item">
-      <span class="contact-icon">✉️</span>
-      <span><strong>Email :</strong> Remplir formulaire de contact sur la page d'accueil</span>
-    </div>
-    <div class="contact-item">
-      <span class="contact-icon">🏢</span>
-      <span><strong>Bureau :</strong> Bâtiment Polytech, Université de Lille</span>
-    </div>
-    <div class="contact-item">
-      <span class="contact-icon">⏰</span>
-      <span><strong>Permanence :</strong> Sur rendez-vous (contact par email)</span>
-    </div>
+    <ol class="li-session-obj">
+      <li>Convertir entre les bases 2, 10 et 16</li>
+      <li>Coder en BCD et en complément à 2</li>
+      <li>Justifier le choix d'un codage pour une application industrielle</li>
+    </ol>
   </div>
-</section> 
+
+  <div class="li-session c1">
+    <div class="li-session-head">
+      <span class="li-session-num">CTD 2</span>
+      <span class="li-session-title">Algèbre de Boole & portes logiques</span>
+      <span class="li-session-tag tag-c1">C1</span>
+      <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> PDF</a>
+    </div>
+    <ol class="li-session-obj">
+      <li>Appliquer les axiomes et théorèmes booléens</li>
+      <li>Utiliser De Morgan et le consensus pour simplifier</li>
+      <li>Construire la table de vérité d'une expression multi-variables</li>
+    </ol>
+  </div>
+
+  <div class="li-session c1">
+    <div class="li-session-head">
+      <span class="li-session-num">CTD 3</span>
+      <span class="li-session-title">Simplification par tableaux de Karnaugh</span>
+      <span class="li-session-tag tag-c1">C1</span>
+      <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> PDF</a>
+    </div>
+    <ol class="li-session-obj">
+      <li>Simplifier 2 à 4 variables par tableau de Karnaugh</li>
+      <li>Exploiter les cas indéterminés (<em>don't care</em>)</li>
+      <li>Comparer résultat Karnaugh vs simplification algébrique</li>
+    </ol>
+  </div>
+
+  <div class="li-session c12">
+    <div class="li-session-head">
+      <span class="li-session-num">CTD 4</span>
+      <span class="li-session-title">Technologie des circuits intégrés</span>
+      <span class="li-session-tag tag-c12">C1+C2</span>
+      <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> PDF</a>
+    </div>
+    <ol class="li-session-obj">
+      <li>Lire une datasheet (fan-out, niveaux logiques)</li>
+      <li>Distinguer familles TTL et CMOS</li>
+      <li>Réaliser une fonction avec portes NAND uniquement (CI 7400)</li>
+    </ol>
+  </div>
+
+  <div class="li-session c2">
+    <div class="li-session-head">
+      <span class="li-session-num">CTD 5</span>
+      <span class="li-session-title">Additionneurs binaires</span>
+      <span class="li-session-tag tag-c2">C2</span>
+      <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> PDF</a>
+    </div>
+    <ol class="li-session-obj">
+      <li>Concevoir le demi-additionneur et l'additionneur complet 1 bit</li>
+      <li>Cascader 4 additionneurs 1 bit → additionneur 4 bits</li>
+      <li>Analyser le CI 7483 et vérifier par rapport à la conception manuelle</li>
+    </ol>
+  </div>
+
+  <div class="li-session c2">
+    <div class="li-session-head">
+      <span class="li-session-num">CTD 6</span>
+      <span class="li-session-title">Comparateurs</span>
+      <span class="li-session-tag tag-c2">C2</span>
+      <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> PDF</a>
+    </div>
+    <ol class="li-session-obj">
+      <li>Concevoir un comparateur 1 bit (A=B, A&gt;B, A&lt;B)</li>
+      <li>Analyser le CI 7485 (entrées de cascade, cas d'égalité)</li>
+      <li>Identifier l'usage dans un système de contrôle (seuil)</li>
+    </ol>
+  </div>
+
+  <div class="li-session c2">
+    <div class="li-session-head">
+      <span class="li-session-num">CTD 7</span>
+      <span class="li-session-title">Codeurs & décodeurs</span>
+      <span class="li-session-tag tag-c2">C2</span>
+      <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> PDF</a>
+    </div>
+    <ol class="li-session-obj">
+      <li>Concevoir et analyser un codeur/décodeur 2 bits</li>
+      <li>Étudier les CI 74LS138 (3→8) et 74LS139 (2→4)</li>
+      <li>Dimensionner un décodeur pour affichage ou sélection mémoire</li>
+    </ol>
+  </div>
+
+  <div class="li-session c2">
+    <div class="li-session-head">
+      <span class="li-session-num">CTD 8</span>
+      <span class="li-session-title">Multiplexeurs & démultiplexeurs</span>
+      <span class="li-session-tag tag-c2">C2</span>
+      <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> PDF</a>
+    </div>
+    <ol class="li-session-obj">
+      <li>Concevoir un MUX 4→1 et un DEMUX 1→4 à partir de portes</li>
+      <li>Réaliser une fonction combinatoire quelconque via MUX</li>
+      <li>Associer MUX et décodeurs pour des fonctions complexes</li>
+    </ol>
+  </div>
+
+  <div class="li-session c23">
+    <div class="li-session-head">
+      <span class="li-session-num">CTD 9</span>
+      <span class="li-session-title">Introduction aux systèmes séquentiels</span>
+      <span class="li-session-tag tag-c23">C2+C3</span>
+      <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> PDF</a>
+    </div>
+    <ol class="li-session-obj">
+      <li>Distinguer circuit combinatoire vs séquentiel (notion d'état)</li>
+      <li>Décrire bascules RS, D et JK</li>
+      <li>Modéliser un système simple (distributeur, feu bicolore) par diagramme d'états</li>
+    </ol>
+  </div>
+
+  <div class="li-session c3">
+    <div class="li-session-head">
+      <span class="li-session-num">CTD 10</span>
+      <span class="li-session-title">Systèmes automatisés & ouverture Industrie 4.0</span>
+      <span class="li-session-tag tag-c3">C3</span>
+      <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> PDF</a>
+    </div>
+    <ol class="li-session-obj">
+      <li>Décrire la structure d'un système automatisé (PO / PC)</li>
+      <li>Situer les circuits dans la chaîne API → IoT → Jumeau numérique</li>
+      <li>Lier les séquences vues en cours aux outils futurs du module SAP</li>
+    </ol>
+  </div>
+
+</div>
+
+<!-- TP -->
+<div class="li-section"><i class="fas fa-flask"></i> Travaux Pratiques — 4 séances × 2h</div>
+<div class="li-tp-grid">
+
+  <div class="li-tp-card">
+    <div class="li-tp-num">TP 1 — C1 + C2</div>
+    <div class="li-tp-title">Portes logiques et additionneurs en Python</div>
+    <div class="li-tp-context">Sans bibliothèque externe, implémenter les briques de base de la logique numérique et valider par tests unitaires.</div>
+    <ol class="li-tp-obj">
+      <li>Implémenter AND, OR, NOT, NAND, NOR, XOR</li>
+      <li>Construire demi-additionneur et additionneur 1 bit</li>
+      <li>Cascader → additionneur 4 bits, vérifier les résultats</li>
+      <li>Tests unitaires reproduisant les tables de vérité</li>
+    </ol>
+    <a href="#" class="li-pdf-btn placeholder" style="margin-bottom:.5rem;"><i class="fas fa-file-pdf"></i> Sujet PDF</a>
+    <div class="li-tp-deliverable"><i class="fas fa-file-code"></i> Script Python commenté + rapport de tests (100% verts)</div>
+  </div>
+
+  <div class="li-tp-card">
+    <div class="li-tp-num">TP 2 — C2</div>
+    <div class="li-tp-title">Simulation de circuits sous Logisim Evolution</div>
+    <div class="li-tp-context">Reproduire dans Logisim les circuits des CTD, exploiter la simulation et les chronogrammes.</div>
+    <ol class="li-tp-obj">
+      <li>Câbler et simuler un additionneur 4 bits à partir de portes</li>
+      <li>Réaliser un décodeur 3→8 (équivalent 74LS138)</li>
+      <li>Analyser les chronogrammes, identifier un dysfonctionnement</li>
+      <li>Comparer câblage Logisim vs implémentation Python (TP 1)</li>
+    </ol>
+    <a href="#" class="li-pdf-btn placeholder" style="margin-bottom:.5rem;"><i class="fas fa-file-pdf"></i> Sujet PDF</a>
+    <div class="li-tp-deliverable"><i class="fas fa-file-alt"></i> Fichier <code>.circ</code> + captures chronogrammes annotées</div>
+  </div>
+
+  <div class="li-tp-card star">
+    <div class="li-tp-num">TP 3 ⭐ — C2 + C3 — TP INTÉGRATEUR</div>
+    <div class="li-tp-title">Système de péage</div>
+    <div class="li-tp-context">Péage routier : pièces acceptées 10c–2€, barrière s'ouvre dès paiement complet, affichage du reste à payer en temps réel.</div>
+    <ol class="li-tp-obj">
+      <li>Identifier entrées, sorties et états du système</li>
+      <li>Concevoir le circuit de cumul (additionneur + registre) dans Logisim</li>
+      <li>Concevoir le comparateur et la logique de déclenchement</li>
+      <li>Simuler l'affichage du reste sur décodeur 7 segments</li>
+      <li>Diagramme d'états + machine à états Python</li>
+    </ol>
+    <a href="#" class="li-pdf-btn placeholder" style="margin-bottom:.5rem;"><i class="fas fa-file-pdf"></i> Sujet PDF</a>
+    <div class="li-tp-deliverable"><i class="fas fa-star"></i> Logisim + diagramme d'états + script Python + rapport 2 pages</div>
+  </div>
+
+  <div class="li-tp-card">
+    <div class="li-tp-num">TP 4 — C3</div>
+    <div class="li-tp-title">Bilan intégrateur & mise en perspective SAP</div>
+    <div class="li-tp-context">Synthétiser les apprentissages et préparer conceptuellement la transition vers le module SAP (maquette train, ascenseur, tapis de tri, Robotinho).</div>
+    <ol class="li-tp-obj">
+      <li>Modéliser par diagramme d'états un système automatisé simple</li>
+      <li>Distinguer commande (ce module) vs séquencement (SAP)</li>
+      <li>Argumenter oralement : logique câblée vs logique programmée</li>
+      <li>Positionner les compétences dans le contexte Industrie 4.0</li>
+    </ol>
+    <a href="#" class="li-pdf-btn placeholder" style="margin-bottom:.5rem;"><i class="fas fa-file-pdf"></i> Sujet PDF</a>
+    <div class="li-tp-deliverable"><i class="fas fa-comments"></i> Présentation orale 10 min + diagramme d'états annoté</div>
+  </div>
+
+</div>
+
+<!-- Tableau de bord -->
+<div class="li-section"><i class="fas fa-table"></i> Tableau de bord — Vue d'ensemble</div>
+<div style="overflow-x:auto;">
+<table class="li-table">
+  <thead>
+    <tr><th>#</th><th>Thème principal</th><th>Objectif terminal</th><th>Comp.</th><th>Outil</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>CTD 1</td><td>Numération & codages</td><td>Convertir et justifier un codage</td><td>C1</td><td>Cours + TD</td></tr>
+    <tr><td>CTD 2</td><td>Algèbre de Boole</td><td>Simplifier par algèbre + De Morgan</td><td>C1</td><td>Cours + TD</td></tr>
+    <tr><td>CTD 3</td><td>Tableaux de Karnaugh</td><td>Simplifier 2–4 variables</td><td>C1</td><td>Cours + TD</td></tr>
+    <tr><td>CTD 4</td><td>Circuits intégrés 7400</td><td>Réaliser une fonction avec NAND</td><td>C1+C2</td><td>Cours + TD</td></tr>
+    <tr><td>CTD 5</td><td>Additionneurs binaires</td><td>Cascader des additionneurs 1 bit</td><td>C2</td><td>Cours + TD</td></tr>
+    <tr><td>CTD 6</td><td>Comparateurs</td><td>Analyser le 7485, usage en contrôle</td><td>C2</td><td>Cours + TD</td></tr>
+    <tr><td>CTD 7</td><td>Codeurs / Décodeurs</td><td>Dimensionner un décodeur 74LS138</td><td>C2</td><td>Cours + TD</td></tr>
+    <tr><td>CTD 8</td><td>MUX / DEMUX</td><td>Réaliser une fonction via MUX</td><td>C2</td><td>Cours + TD</td></tr>
+    <tr><td>CTD 9</td><td>Systèmes séquentiels</td><td>Modéliser par diagramme d'états</td><td>C2+C3</td><td>Cours + TD</td></tr>
+    <tr><td>CTD 10</td><td>SAP & Industrie 4.0</td><td>Lien logique → API → IoT</td><td>C3</td><td>Cours + TD</td></tr>
+    <tr><td>TP 1</td><td>Portes & additionneurs Python</td><td>Tests unitaires 100% verts</td><td>C1+C2</td><td>Python</td></tr>
+    <tr><td>TP 2</td><td>Circuits Logisim</td><td>Déboguer par chronogrammes</td><td>C2</td><td>Logisim</td></tr>
+    <tr class="star-row"><td>TP 3 ⭐</td><td>Système de péage</td><td>Intégrer C1+C2+C3 sur cas réel</td><td>C2+C3</td><td>Logisim + Python</td></tr>
+    <tr><td>TP 4</td><td>Bilan & mise en perspective</td><td>Distinguer commande / séquencement</td><td>C3</td><td>Oral + schéma</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- Passerelle SAP -->
+<div class="li-bridge">
+  <h4><i class="fas fa-arrow-right"></i> Continuité — Module SAP (S3)</h4>
+  <p style="font-size:.88rem; color:#555; margin-bottom:.6rem;">Ce module pose les bases conceptuelles du module <strong>Logique Séquentielle – SAP et Grafcet</strong> du semestre suivant. Les systèmes travaillés incluent :</p>
+  <ul>
+    <li>Maquette train, ascenseur, tapis de tri</li>
+    <li>Système de perçage Festo</li>
+    <li>Robotinho</li>
+  </ul>
+</div>

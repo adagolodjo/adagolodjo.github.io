@@ -202,7 +202,7 @@
       }
 
       .research-stats {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         min-width: 0;
         width: 100%;
         gap: 0.75rem;
@@ -215,6 +215,14 @@
           .stat-text { align-items: center; }
         }
       }
+    }
+  }
+
+  // Very small phones: single-column stats
+  @media (max-width: 480px) {
+    .hero-content .research-stats {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
     }
   }
 }
