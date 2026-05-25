@@ -38,13 +38,13 @@
   evaluation: "Exposé"
 
 - code: DU-822240
-  title: "Modélisation des systèmes de production"
+  title: "Logique Industrielle"
   semester: "S2"
-  description: "Modeling and analysis of production systems and manufacturing processes"
+  description: "Logique combinatoire et séquentielle : algèbre de Boole, Karnaugh, circuits intégrés, simulation sous Logisim, implémentation Python — passerelle vers le module SAP"
   syllabus: "/teaching/courses/modelisation-production/"
   level: "Undergraduate"
-  hours_cm: "27.5"
-  hours_tp: "16"
+  hours_cm: "20"
+  hours_tp: "8"
   evaluation: "DS, Note de Classe, Note de TP"
 
 - code: GR-711302
