@@ -441,8 +441,8 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
         <i class="fas fa-desktop"></i>
         <span>Modeling & Simulation</span>
       </button>
-      <button class="domain-filter" data-filter="ai-healthcare">
-        <i class="fas fa-brain"></i>
+      <button class="domain-filter" data-filter="augmented-reality">
+        <i class="fas fa-vr-cardboard"></i>
         <span>Augmented Reality</span>
       </button>
     </div>
@@ -952,7 +952,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
       </div>
 
       <!-- ACCESS — Digital Twin for Cochlear Implant Surgery (ROBOCOP sub-project) -->
-      <div class="project-card" data-category="medical-robotics simulation ai-healthcare" data-aos="fade-up" data-aos-delay="500">
+      <div class="project-card" data-category="medical-robotics simulation ai-healthcare augmented-reality" data-aos="fade-up" data-aos-delay="500">
         <div class="project-image">
           <img src="/assets/images/projects/access-cochlear.jpg" alt="ACCESS Project" loading="lazy"
                onerror="this.onerror=null;this.src='/assets/images/projects/conect-new.png'">
@@ -1003,7 +1003,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
       </div>
 
       <!-- CONECT Project (foundational work) -->
-      <div class="project-card featured" data-category="medical-robotics simulation" data-aos="fade-up" data-aos-delay="550">
+      <div class="project-card featured" data-category="medical-robotics simulation augmented-reality" data-aos="fade-up" data-aos-delay="550">
         <div class="project-image">
           <img src="/assets/images/projects/conect-new.png" alt="CONECT Project" loading="lazy">
           <div class="project-overlay">
