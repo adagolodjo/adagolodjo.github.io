@@ -145,6 +145,82 @@
     }
   }
 
+  // ── Dropdown nav ──────────────────────────────────────────
+  .nav-dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    &:hover .nav-dropdown-menu,
+    &:focus-within .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    > .nav-item::after {
+      // keep the underline indicator but also add chevron space
+    }
+  }
+
+  .nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 50%;
+    transform: translateX(-50%) translateY(-6px);
+    background: #{$primary-dark}f5;
+    border: 1px solid rgba(white, 0.15);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 8px 32px rgba($primary-dark, 0.4);
+    padding: 0.4rem 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+    z-index: 1000;
+
+    a {
+      display: block;
+      color: rgba(white, 0.9);
+      text-decoration: none;
+      padding: 0.55rem 1.25rem;
+      font-size: 0.875rem;
+      font-weight: $weight-medium;
+      white-space: nowrap;
+      transition: background 0.18s, color 0.18s;
+
+      &:hover, &:focus {
+        background: rgba(white, 0.12);
+        color: $primary-light;
+      }
+    }
+
+    // Small triangle pointer
+    &::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid rgba(white, 0.15);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid #{$primary-dark}f5;
+    }
+  }
+  // ── End dropdown nav ──────────────────────────────────────
+
   // Logo avec effet 3D subtil
   .logo-circle {
     width: 50px;

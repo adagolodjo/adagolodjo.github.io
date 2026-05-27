@@ -7,6 +7,8 @@
       link: /research/projects/
     - name: Publications
       link: /publications/
+    - name: Software & Code
+      link: /research/software/
 - name: Teaching
   link: /teaching/
   dropdown:
