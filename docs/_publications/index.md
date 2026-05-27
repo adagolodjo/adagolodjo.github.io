@@ -634,9 +634,9 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo â€
      target="_blank" rel="noopener" class="pub-profile-btn pub-profile-rg">
     <i class="fas fa-flask"></i> ResearchGate
   </a>
-  <a href="https://orcid.org/YOUR_ORCID"
+  <a href="https://www.semanticscholar.org/author/Yinoussa-Adagolodjo/2251436"
      target="_blank" rel="noopener" class="pub-profile-btn pub-profile-orcid">
-    <i class="fab fa-orcid"></i> ORCID
+    <i class="fas fa-atom"></i> Semantic Scholar
   </a>
 </div>
 

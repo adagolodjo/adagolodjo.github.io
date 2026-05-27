@@ -5,20 +5,14 @@
   dropdown:
     - name: Active Projects
       link: /research/projects/
-    - name: Publications & Papers
+    - name: Publications
       link: /publications/
-    - name: Software & Datasets
-      link: /research/software/
-    - name: Research Group
-      link: /research/group/
-- name: Publications
-  link: /publications/
-- name: Teaching & Mentoring
+- name: Teaching
   link: /teaching/
   dropdown:
     - name: Courses
       link: /teaching/courses/
+- name: Blog & News
+  link: /blog/
 - name: Contact
   link: /contact/
-- name: News
-  link: /news/

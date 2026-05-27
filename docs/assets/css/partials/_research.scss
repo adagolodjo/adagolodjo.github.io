@@ -2,6 +2,16 @@
 // ====================
 // Ocean/Teal theme — uses $primary (#016064), $primary-dark (#013A3C), $primary-light (#48AAAD)
 
+// AOS FIX — the Bulma .content wrapper prevents IntersectionObserver from detecting
+// scroll position correctly. Force all data-aos elements visible on this page.
+// CSS transitions are preserved; only the initial hidden state is overridden.
+.page-content [data-aos],
+.content [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
 // Research Hero Section — compact horizontal banner
 .research-hero {
   position: relative;

@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <a href="https://scholar.google.com/citations?hl=fr&user=ZBdWJ9EAAAAJ" target="_blank" rel="noopener">Google Scholar</a> ·
           <a href="https://www.researchgate.net/profile/Yinoussa-Adagolodjo?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a> ·
           <a href="https://www.linkedin.com/in/yinoussa-adagolodjo" target="_blank" rel="noopener">LinkedIn</a> ·
-          <a href="https://orcid.org/YOUR_ORCID" target="_blank" rel="noopener">ORCID</a>
+          <a href="https://hal.science/search/index?q=Adagolodjo" target="_blank" rel="noopener">HAL Science</a>
         </p>
       </div>
     </div>
@@ -70,36 +70,73 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="card" style="margin-bottom:2rem;">
   <div class="card-content">
     <h2 class="title is-5">Contact Form</h2>
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="contact">
-      <p style="display:none;">
-        <label>Don’t fill this out if you're human: <input name="bot-field"></label>
-      </p>
+    <!--
+      FORMSPREE SETUP (one-time, free):
+      1. Go to https://formspree.io and sign up / log in
+      2. Create a new form → copy your form ID (e.g. "xpwzvgkr")
+      3. Replace VOTRE_ID_FORMSPREE below with that ID
+      Without this step the form will redirect to the Formspree website.
+    -->
+    <form action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+      <!-- honeypot anti-spam -->
+      <input type="text" name="_gotcha" style="display:none">
+      <!-- redirect after success -->
+      <input type="hidden" name="_next" value="{{ site.url }}/contact/?sent=1">
+
       <div class="field">
-        <label class="label">Name</label>
+        <label class="label" for="contact-name">Name</label>
         <div class="control">
-          <input class="input" type="text" name="name" required>
+          <input class="input" id="contact-name" type="text" name="name" placeholder="Your full name" required>
         </div>
       </div>
       <div class="field">
-        <label class="label">Email</label>
+        <label class="label" for="contact-email">Email</label>
         <div class="control">
-          <input class="input" type="email" name="email" required>
+          <input class="input" id="contact-email" type="email" name="email" placeholder="your@email.com" required>
         </div>
       </div>
       <div class="field">
-        <label class="label">Message</label>
+        <label class="label" for="contact-subject">Subject</label>
         <div class="control">
-          <textarea class="textarea" name="message" rows="5" required></textarea>
+          <div class="select is-fullwidth">
+            <select id="contact-subject" name="subject">
+              <option value="Research collaboration">Research collaboration</option>
+              <option value="PhD / Postdoc application">PhD / Postdoc application</option>
+              <option value="Student internship">Student internship</option>
+              <option value="Industry partnership">Industry partnership</option>
+              <option value="General inquiry">General inquiry</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label" for="contact-message">Message</label>
+        <div class="control">
+          <textarea class="textarea" id="contact-message" name="message" rows="6" placeholder="Describe your inquiry, collaboration idea, or question…" required></textarea>
         </div>
       </div>
       <div class="field is-grouped">
         <div class="control">
-          <button class="button is-link" type="submit">Send</button>
+          <button class="button is-primary" type="submit">
+            <span class="icon"><i class="fas fa-paper-plane"></i></span>
+            <span>Send Message</span>
+          </button>
         </div>
       </div>
     </form>
-    <p style="font-size:0.95rem; color:#888; margin-top:0.5rem;">Your email address will not be displayed or shared. Messages are sent directly to the site owner.</p>
+    <p style="font-size:0.88rem; color:#888; margin-top:0.75rem;">
+      <i class="fas fa-lock" style="color:#48AAAD;margin-right:0.3rem;"></i>
+      Your email address will not be displayed or shared. Messages are sent directly and securely.
+    </p>
+    <!-- Success banner (shown after redirect with ?sent=1) -->
+    <div id="form-success" style="display:none;" class="notification is-success is-light mt-4">
+      <i class="fas fa-check-circle"></i> Thank you! Your message has been sent. I’ll reply within 24–48 hours.
+    </div>
+    <script>
+      if (window.location.search.includes(‘sent=1’)) {
+        document.getElementById(‘form-success’).style.display = ‘block’;
+      }
+    </script>
   </div>
 </div>
 

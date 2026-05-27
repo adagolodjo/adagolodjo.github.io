@@ -18,5 +18,5 @@ permalink: /news/
 ---
 {% endfor %}
 
-[View all news posts](/news/archive/)
+[View all posts](/blog/)
 
