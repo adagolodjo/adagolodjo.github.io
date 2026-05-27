@@ -73,7 +73,8 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
     display: flex;
     flex-direction: column;
   }
-  .project-description { flex-grow: 1; }
+  .project-description { flex-grow: 0; }
+  .project-actions { margin-top: auto; padding-top: 1rem; }
 
   /* ===========================
      ENHANCED: Tags with Glow
@@ -223,6 +224,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
 
   .projects-carousel-container {
     display: flex;
+    align-items: stretch;
     gap: 2rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -425,7 +427,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
     </div>
     
     <div class="domain-filters">
-      <button class="domain-filter active" data-filter="all">
+      <button class="domain-filter active" data-filter="all" onclick="document.getElementById('featured-projects').scrollIntoView({behavior:'smooth'})">
         <i class="fas fa-th-large"></i>
         <span>All Research</span>
       </button>
@@ -458,21 +460,21 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
         <p class="section-subtitle">Bridging the gap between cutting-edge technology and real-world healthcare solutions</p>
         
         <div class="philosophy-text">
-          <p>My research mission centers on developing intelligent robotic systems that enhance surgical precision, improve patient outcomes, and transform healthcare delivery. By combining advanced simulation techniques, and innovative robotic designs, we're creating the next generation of medical technologies.</p>
+          <p>My research mission centers on developing real-time simulation tools and robotic systems that make minimally invasive procedures safer and more precise. By combining finite element methods, Cosserat rod theory, and constraint-based control with clinical insight, I work on soft &amp; continuum robots, needle insertion guidance, and augmented reality overlays for the operating room.</p>
         </div>
         
         <div class="key-metrics">
           <div class="metric">
-            <div class="metric-value">96%</div>
-            <div class="metric-label">Simulation Accuracy</div>
+            <div class="metric-value">18+</div>
+            <div class="metric-label">Publications</div>
           </div>
           <div class="metric">
-            <div class="metric-value">50+</div>
-            <div class="metric-label">Hospital Partners</div>
+            <div class="metric-value">9</div>
+            <div class="metric-label">Active Projects</div>
           </div>
           <div class="metric">
-            <div class="metric-value">18</div>
-            <div class="metric-label">Patents Filed</div>
+            <div class="metric-value">8</div>
+            <div class="metric-label">h-index</div>
           </div>
         </div>
       </div>
@@ -564,7 +566,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
           <div class="timeline-achievements">
             <span class="achievement-tag">Medical Breakthrough</span>
             <span class="achievement-tag">5 Publications</span>
-            <span class="achievement-tag">Clinical Trials</span>
+            <span class="achievement-tag">ROBOCOP Project</span>
           </div>
         </div>
       </div>
@@ -579,8 +581,8 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
           <p class="timeline-description">Contributes to several cutting-edge projects, including COSSEROOTS, IRE and ADAGIO, pushing the boundaries of soft robotics for medical applications.</p>
           <div class="timeline-achievements">
             <span class="achievement-tag">Assistant Professor</span>
-            <span class="achievement-tag">15+ Publications</span>
-            <span class="achievement-tag">€2M+ Funding</span>
+            <span class="achievement-tag">18+ Publications</span>
+            <span class="achievement-tag">3 ANR Projects</span>
           </div>
         </div>
       </div>
@@ -1091,11 +1093,11 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
         <div class="impact-icon">
           <i class="fas fa-quote-right"></i>
         </div>
-        <div class="impact-number" data-count="450">0</div>
+        <div class="impact-number" id="live-citations-impact" data-count="{{ site.data.stats.citations | default: 285 }}">0</div>
         <div class="impact-label">Citations</div>
         <div class="impact-trend positive">
-          <i class="fas fa-arrow-up"></i>
-          <span>+25% this year</span>
+          <i class="fas fa-graduation-cap"></i>
+          <span>Google Scholar</span>
         </div>
       </div>
       
@@ -1103,120 +1105,96 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
         <div class="impact-icon">
           <i class="fas fa-chart-line"></i>
         </div>
-        <div class="impact-number" data-count="8">0</div>
+        <div class="impact-number" data-count="{{ site.data.stats.h_index | default: 8 }}">0</div>
         <div class="impact-label">H-Index</div>
         <div class="impact-trend positive">
           <i class="fas fa-arrow-up"></i>
-          <span>Growing</span>
+          <span>ResearchGate</span>
         </div>
       </div>
       
       <div class="impact-card" data-aos="fade-up" data-aos-delay="300">
         <div class="impact-icon">
-          <i class="fas fa-hospital"></i>
+          <i class="fas fa-microphone-alt"></i>
         </div>
-        <div class="impact-number" data-count="12">0</div>
-        <div class="impact-label">Clinical Trials</div>
+        <div class="impact-number" data-count="4">0</div>
+        <div class="impact-label">Invited Talks</div>
         <div class="impact-trend positive">
-          <i class="fas fa-check-circle"></i>
-          <span>Active</span>
+          <i class="fas fa-globe"></i>
+          <span>2024 – 2025</span>
         </div>
       </div>
       
       <div class="impact-card" data-aos="fade-up" data-aos-delay="400">
         <div class="impact-icon">
-          <i class="fas fa-euro-sign"></i>
+          <i class="fas fa-project-diagram"></i>
         </div>
-        <div class="impact-number" data-count="2.5" data-suffix="M">0</div>
-        <div class="impact-label">Funding Secured</div>
+        <div class="impact-number" data-count="9">0</div>
+        <div class="impact-label">Active Projects</div>
         <div class="impact-trend positive">
-          <i class="fas fa-trophy"></i>
-          <span>Multiple grants</span>
+          <i class="fas fa-flask"></i>
+          <span>ANR · Inria · EU</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Latest Research News -->
+<!-- Recent Highlights -->
 <section class="research-news">
   <div class="container">
     <div class="news-header">
-      <h2>Latest Research News</h2>
-      <p>Stay updated with our recent breakthroughs and developments</p>
+      <h2>Recent Highlights</h2>
+      <p>Key milestones and outputs from the lab</p>
     </div>
     
     <div class="news-container">
-      <div class="news-featured" data-aos="fade-up">
-        <div class="news-image">
-          <img src="/assets/images/projects/ire.jpg" alt="Latest Research" loading="lazy">
-          <div class="news-category">Breaking News</div>
-        </div>
-        <div class="news-content">
-          <div class="news-meta">
-            <span class="news-date">December 2024</span>
-            <span class="news-author">Dr. Yinoussa Adagolodjo</span>
-          </div>
-          <h3 class="news-title">Revolutionary AI-Powered Surgical Robotics Grant Awarded</h3>
-          <p class="news-excerpt">Our research team has been awarded a prestigious €1.2M grant to develop next-generation AI algorithms for soft robotic systems in surgical applications. This groundbreaking project will integrate machine learning with advanced haptic feedback systems to create unprecedented surgical precision.</p>
+      <div class="news-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px,1fr));">
+        <div class="news-card">
+          <div class="news-date">2025</div>
+          <h3 class="news-title">New ANR ADAGIO project</h3>
+          <p class="news-excerpt">Kick-off of the ADAGIO project (ANR), developing an advanced robotic endoscope for SpiderMass in-vivo mass spectrometry imaging during minimally invasive surgery.</p>
           <div class="news-tags">
-            <span class="news-tag">Major Funding</span>
-            <span class="news-tag">AI Innovation</span>
-            <span class="news-tag">Surgical Robotics</span>
-          </div>
-          <a href="#" class="news-link">
-            <span>Read Full Story</span>
-            <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-      
-      <div class="news-grid">
-        <div class="news-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="news-date">November 2024</div>
-          <h3 class="news-title">ICRA 2025 Paper Acceptance</h3>
-          <p class="news-excerpt">Our paper on "Real-time Adaptive FEM Simulation for Soft Tissue Modeling in Robotic Surgery" has been accepted for presentation at IEEE ICRA 2025.</p>
-          <div class="news-tags">
-            <span class="news-tag">Publication</span>
-            <span class="news-tag">Conference</span>
+            <span class="news-tag">ANR Funding</span>
+            <span class="news-tag">Soft Robotics</span>
           </div>
         </div>
         
-        <div class="news-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="news-date">October 2024</div>
-          <h3 class="news-title">PhD Defense Success</h3>
-          <p class="news-excerpt">Congratulations to our PhD student on successfully defending "Adaptive Control Strategies for Continuum Robots in Medical Applications" with highest honors.</p>
+        <div class="news-card">
+          <div class="news-date">2023–2026</div>
+          <h3 class="news-title">ROBOCOP — cochlear implant robotics</h3>
+          <p class="news-excerpt">Active phase of ROBOCOP: robotization of cochlear implant insertion with force-feedback control and patient-specific digital twin (ACCESS sub-project).</p>
           <div class="news-tags">
-            <span class="news-tag">Thesis Defense</span>
-            <span class="news-tag">Academic Success</span>
+            <span class="news-tag">Medical Robotics</span>
+            <span class="news-tag">Digital Twin</span>
           </div>
         </div>
         
-        <div class="news-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="news-date">September 2024</div>
-          <h3 class="news-title">International Workshop Leadership</h3>
-          <p class="news-excerpt">Successfully co-organized the International Workshop on Soft Robotics and Medical Applications, bringing together 150+ researchers worldwide.</p>
+        <div class="news-card">
+          <div class="news-date">2022–2025</div>
+          <h3 class="news-title">IRE — smart robotic endoscopy</h3>
+          <p class="news-excerpt">IRE project delivers AI-powered soft robotic endoscopes with digital twin technology for safer, more effective minimally invasive colonoscopy.</p>
           <div class="news-tags">
-            <span class="news-tag">Workshop</span>
-            <span class="news-tag">Community Leadership</span>
+            <span class="news-tag">Endoscopy</span>
+            <span class="news-tag">AI</span>
           </div>
         </div>
         
-        <div class="news-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="news-date">August 2024</div>
-          <h3 class="news-title">Clinical Trial Milestone</h3>
-          <p class="news-excerpt">Our robotic-assisted cochlear implant system achieved 98% success rate in Phase II clinical trials, marking a significant breakthrough.</p>
+        <div class="news-card">
+          <div class="news-date">2021–2024</div>
+          <h3 class="news-title">COSSEROOTS — Cosserat rod control</h3>
+          <p class="news-excerpt">COSSEROOTS advances real-time control of slender deformable robots using Cosserat's theory, with applications in medical and industrial settings.</p>
           <div class="news-tags">
-            <span class="news-tag">Clinical Success</span>
-            <span class="news-tag">Medical Breakthrough</span>
+            <span class="news-tag">Control Theory</span>
+            <span class="news-tag">Continuum Robots</span>
           </div>
         </div>
       </div>
     </div>
     
     <div class="news-actions">
-      <a href="/news/" class="btn-primary">
-        <span>View All News</span>
+      <a href="/blog/" class="btn-primary">
+        <span>Blog &amp; News</span>
         <i class="fas fa-newspaper"></i>
       </a>
       <a href="/publications/" class="btn-secondary">
