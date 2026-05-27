@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Speaker at COSUR 2025: Summer School on Control of Surgical Robots"
-date: 2024-08-20
+date: 2025-08-20
 categories: [news, conference, education]
 tags: [summer-school, surgical-robots, finite-element-method, medical-robotics, cosur, control-systems]
 author: Adagolodjo Yinoussa
