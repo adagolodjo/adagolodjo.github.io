@@ -3,8 +3,8 @@
 # Author ID: 2251436
 # To update manually: python3 scripts/fetch_stats.py
 
-updated: "2026-05-25"
-citations: 189
+updated: "2026-06-01"
+citations: 192
 h_index: 7
 paper_count: 12
 source: "Semantic Scholar"
