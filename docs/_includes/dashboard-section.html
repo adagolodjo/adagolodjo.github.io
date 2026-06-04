@@ -1,26 +1,30 @@
-<div class="dashboard-container">
-  <!-- Hero Section -->
-  <section class="hero is-primary is-bold dashboard-hero">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">Academic Dashboard</h1>
-        <p class="subtitle">Research Impact, Publications & Projects Overview</p>
-      </div>
-    </div>
-  </section>
+{% comment %}
+  dashboard-section.html
+  All metrics, publications, projects and courses are pulled dynamically
+  from _data/stats.yml, _data/publications.yml, _data/courses.yml and site.projects.
+  No hardcoded/placeholder data.
+{% endcomment %}
 
-  <!-- Research Impact Metrics -->
+{% assign pubs        = site.data.publications | sort: "year" | reverse %}
+{% assign recent_pubs = pubs | limit: 3 %}
+{% assign all_projects = site.projects | where_exp: "p", "p.path contains 'index'" %}
+{% assign project_count = all_projects | size %}
+
+<div class="dashboard-container">
+
+  <!-- ── Research Impact Metrics ────────────────────────────── -->
   <section class="section dashboard-metrics">
     <div class="container">
       <h2 class="title is-3 has-text-centered mb-6">Research Impact</h2>
       <div class="columns is-multiline is-centered">
+
         <!-- Publications -->
         <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
           <div class="card metric-card has-text-centered">
             <div class="card-content">
-              <p class="metric-number counter" data-count="45">45</p>
+              <p class="metric-number counter" data-count="{{ site.data.stats.paper_count }}">{{ site.data.stats.paper_count }}</p>
               <p class="metric-label">Publications</p>
-              <p class="metric-subtitle is-size-7 has-text-grey">Journal & Conference Papers</p>
+              <p class="metric-subtitle is-size-7 has-text-grey">Journal &amp; Conference Papers</p>
             </div>
           </div>
         </div>
@@ -29,9 +33,9 @@
         <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
           <div class="card metric-card has-text-centered">
             <div class="card-content">
-              <p class="metric-number counter" data-count="512">512</p>
+              <p class="metric-number counter" data-count="{{ site.data.stats.citations }}">{{ site.data.stats.citations }}</p>
               <p class="metric-label">Citations</p>
-              <p class="metric-subtitle is-size-7 has-text-grey">Research Impact</p>
+              <p class="metric-subtitle is-size-7 has-text-grey">Google Scholar</p>
             </div>
           </div>
         </div>
@@ -40,7 +44,7 @@
         <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
           <div class="card metric-card has-text-centered">
             <div class="card-content">
-              <p class="metric-number" style="color: var(--primary-color);">14</p>
+              <p class="metric-number">{{ site.data.stats.h_index }}</p>
               <p class="metric-label">h-Index</p>
               <p class="metric-subtitle is-size-7 has-text-grey">Research Influence</p>
             </div>
@@ -51,17 +55,26 @@
         <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
           <div class="card metric-card has-text-centered">
             <div class="card-content">
-              <p class="metric-number counter" data-count="8">8</p>
+              <p class="metric-number counter" data-count="{{ project_count }}">{{ project_count }}</p>
               <p class="metric-label">Active Projects</p>
               <p class="metric-subtitle is-size-7 has-text-grey">Ongoing Research</p>
             </div>
           </div>
         </div>
+
       </div>
+
+      <!-- Source note -->
+      <p class="has-text-centered is-size-7 has-text-grey mt-3">
+        <i class="fas fa-sync-alt"></i>&nbsp;
+        Data source: Google Scholar &amp; ResearchGate —
+        last updated {{ site.data.stats.updated }}.
+        <a href="https://scholar.google.com/citations?hl=fr&user=ZBdWJ9EAAAAJ" target="_blank" rel="noopener">Verify ↗</a>
+      </p>
     </div>
   </section>
 
-  <!-- Publications Chart -->
+  <!-- ── Publications Over Time (Chart.js) ──────────────────── -->
   <section class="section dashboard-chart">
     <div class="container">
       <h2 class="title is-3 has-text-centered mb-6">Publications Over Time</h2>
@@ -71,170 +84,114 @@
     </div>
   </section>
 
-  <!-- Recent Publications -->
+  <!-- ── Recent Publications (dynamic) ─────────────────────── -->
   <section class="section dashboard-publications">
     <div class="container">
       <h2 class="title is-3 has-text-centered mb-6">Recent Publications</h2>
       <div class="columns is-multiline">
-        <!-- Publication Item 1 -->
+        {% for pub in recent_pubs %}
         <div class="column is-full">
           <div class="card publication-item">
             <div class="card-content">
               <div class="level is-mobile">
                 <div class="level-left">
                   <div>
-                    <p class="title is-5">Augmented Reality Navigation in Surgical Interventions</p>
-                    <p class="subtitle is-6"><strong>2026</strong> | IEEE Transactions on Medical Imaging</p>
+                    <p class="title is-5">{{ pub.title }}</p>
+                    <p class="subtitle is-6 has-text-grey">
+                      <strong>{{ pub.year }}</strong>
+                      {% if pub.journal %} | {{ pub.journal }}{% endif %}
+                      {% if pub.conference %} | {{ pub.conference }}{% endif %}
+                    </p>
+                    <p class="is-size-7 has-text-grey" style="margin-bottom:0.5rem;">
+                      {{ pub.authors | truncatewords: 8 }}
+                    </p>
                     <div class="tags mt-2">
-                      <span class="tag is-primary">Journal</span>
-                      <span class="tag is-info">AR</span>
-                      <span class="tag is-info">Surgery</span>
+                      {% if pub.type == "journal" %}
+                        <span class="tag is-primary">Journal</span>
+                      {% elsif pub.type == "conference" %}
+                        <span class="tag is-success">Conference</span>
+                      {% elsif pub.type == "workshop" %}
+                        <span class="tag is-warning">Workshop</span>
+                      {% else %}
+                        <span class="tag is-light">{{ pub.type | capitalize }}</span>
+                      {% endif %}
+                      {% for kw in pub.keywords limit:2 %}
+                        <span class="tag is-info is-light">{{ kw }}</span>
+                      {% endfor %}
                     </div>
                   </div>
                 </div>
                 <div class="level-right">
                   <div class="buttons">
-                    <a href="#" class="button is-small is-outlined">DOI</a>
-                    <a href="#" class="button is-small is-outlined">Cite</a>
+                    {% if pub.hal_url %}
+                      <a href="{{ pub.hal_url }}" target="_blank" rel="noopener" class="button is-small is-outlined">HAL</a>
+                    {% endif %}
+                    {% if pub.doi %}
+                      <a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener" class="button is-small is-outlined">DOI</a>
+                    {% endif %}
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Publication Item 2 -->
-        <div class="column is-full">
-          <div class="card publication-item">
-            <div class="card-content">
-              <div class="level is-mobile">
-                <div class="level-left">
-                  <div>
-                    <p class="title is-5">Haptic Feedback Systems for Robotic Surgery</p>
-                    <p class="subtitle is-6"><strong>2025</strong> | International Conference on Robotics (ICRA)</p>
-                    <div class="tags mt-2">
-                      <span class="tag is-success">Conference</span>
-                      <span class="tag is-info">Robotics</span>
-                      <span class="tag is-info">Haptics</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="level-right">
-                  <div class="buttons">
-                    <a href="#" class="button is-small is-outlined">DOI</a>
-                    <a href="#" class="button is-small is-outlined">Cite</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Publication Item 3 -->
-        <div class="column is-full">
-          <div class="card publication-item">
-            <div class="card-content">
-              <div class="level is-mobile">
-                <div class="level-left">
-                  <div>
-                    <p class="title is-5">Virtual Reality for Medical Training and Education</p>
-                    <p class="subtitle is-6"><strong>2024</strong> | Journal of Medical Education Technology</p>
-                    <div class="tags mt-2">
-                      <span class="tag is-primary">Journal</span>
-                      <span class="tag is-info">VR</span>
-                      <span class="tag is-info">Education</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="level-right">
-                  <div class="buttons">
-                    <a href="#" class="button is-small is-outlined">DOI</a>
-                    <a href="#" class="button is-small is-outlined">Cite</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
       <div class="has-text-centered mt-5">
-        <a href="/publications/" class="button is-primary is-outlined">View All Publications</a>
+        <a href="/publications/" class="button is-primary is-outlined">
+          <span class="icon"><i class="fas fa-book-open"></i></span>
+          <span>View All {{ site.data.stats.paper_count }} Publications</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Featured Projects -->
+  <!-- ── Featured Projects (dynamic) ───────────────────────── -->
   <section class="section dashboard-projects">
     <div class="container">
       <h2 class="title is-3 has-text-centered mb-6">Featured Projects</h2>
       <div class="columns is-multiline">
-        <!-- Project 1 -->
+        {% for project in all_projects limit:3 %}
         <div class="column is-one-third-desktop is-half-tablet is-full-mobile">
           <div class="card project-card">
+            {% if project.image %}
+            <div class="card-image">
+              <figure class="image is-3by2">
+                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" loading="lazy">
+              </figure>
+            </div>
+            {% endif %}
             <div class="card-content">
-              <p class="title is-5">SurgAR</p>
-              <p class="subtitle is-6 has-text-grey">Surgical Augmented Reality</p>
-              <p class="mb-3">Developing AR visualization tools for real-time surgical guidance and training.</p>
+              <p class="title is-5">{{ project.title }}</p>
+              {% if project.subtitle %}
+              <p class="subtitle is-6 has-text-grey">{{ project.subtitle }}</p>
+              {% endif %}
+              {% capture excerpt %}{{ project.content | strip_html | truncatewords: 20 }}{% endcapture %}
+              <p class="mb-3 is-size-7">{{ excerpt }}</p>
               <div class="tags">
-                <span class="tag is-primary">AR</span>
-                <span class="tag is-info">Healthcare</span>
-                <span class="tag is-success">Active</span>
+                <span class="tag is-primary is-light">Active</span>
               </div>
             </div>
             <footer class="card-footer">
-              <a href="#" class="card-footer-item">Learn More</a>
+              <a href="{{ project.url | relative_url }}" class="card-footer-item">Learn More →</a>
             </footer>
           </div>
         </div>
-
-        <!-- Project 2 -->
-        <div class="column is-one-third-desktop is-half-tablet is-full-mobile">
-          <div class="card project-card">
-            <div class="card-content">
-              <p class="title is-5">HaptoMed</p>
-              <p class="subtitle is-6 has-text-grey">Haptic Medical Interfaces</p>
-              <p class="mb-3">Designing haptic feedback systems for minimally invasive surgery and remote manipulation.</p>
-              <div class="tags">
-                <span class="tag is-primary">Robotics</span>
-                <span class="tag is-info">Haptics</span>
-                <span class="tag is-success">Active</span>
-              </div>
-            </div>
-            <footer class="card-footer">
-              <a href="#" class="card-footer-item">Learn More</a>
-            </footer>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="column is-one-third-desktop is-half-tablet is-full-mobile">
-          <div class="card project-card">
-            <div class="card-content">
-              <p class="title is-5">AR4Edu</p>
-              <p class="subtitle is-6 has-text-grey">AR Educational Platform</p>
-              <p class="mb-3">Building interactive AR tools for medical education and skill training programs.</p>
-              <div class="tags">
-                <span class="tag is-primary">AR</span>
-                <span class="tag is-info">Education</span>
-                <span class="tag is-success">Active</span>
-              </div>
-            </div>
-            <footer class="card-footer">
-              <a href="#" class="card-footer-item">Learn More</a>
-            </footer>
-          </div>
-        </div>
+        {% endfor %}
       </div>
       <div class="has-text-centered mt-5">
-        <a href="/projects/" class="button is-primary is-outlined">View All Projects</a>
+        <a href="/research/projects/" class="button is-primary is-outlined">
+          <span class="icon"><i class="fas fa-flask"></i></span>
+          <span>View All {{ project_count }} Projects</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Teaching Overview -->
+  <!-- ── Teaching & Courses (dynamic) ──────────────────────── -->
   <section class="section dashboard-teaching">
     <div class="container">
-      <h2 class="title is-3 has-text-centered mb-6">Teaching & Courses</h2>
+      <h2 class="title is-3 has-text-centered mb-6">Teaching &amp; Courses</h2>
       <div class="columns">
         <div class="column is-two-thirds">
           <div class="card teaching-card">
@@ -242,27 +199,25 @@
               <table class="table is-fullwidth">
                 <thead>
                   <tr>
-                    <th>Course Code</th>
+                    <th>Code</th>
                     <th>Title</th>
-                    <th>Semester</th>
+                    <th>Level</th>
                   </tr>
                 </thead>
                 <tbody>
+                  {% for course in site.data.courses limit:5 %}
                   <tr>
-                    <td><strong>INFO501</strong></td>
-                    <td>Robotics and Automation</td>
-                    <td>Spring 2026</td>
+                    <td><strong>{{ course.code }}</strong></td>
+                    <td>
+                      {% if course.syllabus %}
+                        <a href="{{ course.syllabus }}">{{ course.title }}</a>
+                      {% else %}
+                        {{ course.title }}
+                      {% endif %}
+                    </td>
+                    <td>{{ course.level }}</td>
                   </tr>
-                  <tr>
-                    <td><strong>INFO502</strong></td>
-                    <td>Augmented Reality Applications</td>
-                    <td>Fall 2025</td>
-                  </tr>
-                  <tr>
-                    <td><strong>INFO503</strong></td>
-                    <td>Healthcare Technology Seminar</td>
-                    <td>Spring 2025</td>
-                  </tr>
+                  {% endfor %}
                 </tbody>
               </table>
             </div>
@@ -271,35 +226,39 @@
         <div class="column is-one-third">
           <div class="card teaching-stats">
             <div class="card-content has-text-centered">
-              <p class="heading">Students Taught</p>
-              <p class="title">150+</p>
+              <p class="heading">Courses</p>
+              <p class="title">{{ site.data.courses | size }}</p>
               <hr>
-              <p class="heading">Courses Developed</p>
-              <p class="title">8</p>
+              <p class="heading">Department</p>
+              <p class="title" style="font-size:1.1rem;">Polytech<br>Lille</p>
               <hr>
-              <p class="heading">Average Rating</p>
-              <p class="title">4.8/5.0</p>
+              <p class="heading">Team</p>
+              <p class="title" style="font-size:1rem;">DEFROST<br><span style="font-size:0.8rem;opacity:.8;">Inria / CRIStAL</span></p>
             </div>
           </div>
         </div>
       </div>
       <div class="has-text-centered mt-5">
-        <a href="/teaching/" class="button is-primary is-outlined">View Teaching Page</a>
+        <a href="/teaching/" class="button is-primary is-outlined">
+          <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
+          <span>View Teaching Page</span>
+        </a>
       </div>
     </div>
   </section>
-</div>
 
-<!-- Chart.js Script -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+</div><!-- /.dashboard-container -->
+
+<!-- ── Chart.js ───────────────────────────────────────────────── -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js" defer></script>
 <script>
-  // Counter Animation
-  document.querySelectorAll('.counter').forEach(counter => {
-    const target = parseInt(counter.getAttribute('data-count'));
-    let current = 0;
-    const increment = Math.ceil(target / 30);
-    
-    const timer = setInterval(() => {
+/* Counter animation */
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.counter').forEach(function (counter) {
+    var target = parseInt(counter.getAttribute('data-count'), 10);
+    var current = 0;
+    var increment = Math.max(1, Math.ceil(target / 40));
+    var timer = setInterval(function () {
       current += increment;
       if (current >= target) {
         counter.textContent = target;
@@ -310,44 +269,63 @@
     }, 30);
   });
 
-  // Publications Chart
-  const ctx = document.getElementById('publicationsChart').getContext('2d');
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['2020', '2021', '2022', '2023', '2024', '2025', '2026'],
-      datasets: [{
-        label: 'Journal Papers',
-        data: [3, 4, 5, 6, 7, 8, 9],
-        backgroundColor: 'rgba(54, 162, 235, 0.7)',
-        borderColor: 'rgba(54, 162, 235, 1)',
-        borderWidth: 2
-      }, {
-        label: 'Conference Papers',
-        data: [2, 3, 4, 5, 4, 5, 6],
-        backgroundColor: 'rgba(75, 192, 192, 0.7)',
-        borderColor: 'rgba(75, 192, 192, 1)',
-        borderWidth: 2
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: true,
-      plugins: {
-        legend: {
-          display: true,
-          position: 'top'
-        }
+  /* Publications chart — data generated by Jekyll Liquid */
+  {% assign chart_years = "2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025" | split: "," %}
+  var chartLabels   = [{% for y in chart_years %}"{{ y }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var journalData   = [{% for y in chart_years %}{% assign yp = site.data.publications | where: "year", y | where: "type", "journal" %}{{ yp | size }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var conferenceData = [{% for y in chart_years %}{% assign yp = site.data.publications | where: "year", y | where: "type", "conference" %}{{ yp | size }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var posterData    = [{% for y in chart_years %}{% assign yp = site.data.publications | where: "year", y | where: "type", "poster" %}{{ yp | size }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+
+  var ctx = document.getElementById('publicationsChart');
+  if (ctx) {
+    new Chart(ctx.getContext('2d'), {
+      type: 'bar',
+      data: {
+        labels: chartLabels,
+        datasets: [
+          {
+            label: 'Journal Papers',
+            data: journalData,
+            backgroundColor: 'rgba(1, 96, 100, 0.75)',
+            borderColor: '#016064',
+            borderWidth: 2,
+            borderRadius: 4
+          },
+          {
+            label: 'Conference Papers',
+            data: conferenceData,
+            backgroundColor: 'rgba(72, 170, 173, 0.75)',
+            borderColor: '#48AAAD',
+            borderWidth: 2,
+            borderRadius: 4
+          },
+          {
+            label: 'Poster / Workshop',
+            data: posterData,
+            backgroundColor: 'rgba(1, 58, 60, 0.45)',
+            borderColor: '#013A3C',
+            borderWidth: 1,
+            borderRadius: 4
+          }
+        ]
       },
-      scales: {
-        y: {
-          beginAtZero: true,
-          title: {
-            display: true,
-            text: 'Number of Publications'
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+          legend: { display: true, position: 'top' },
+          tooltip: { mode: 'index', intersect: false }
+        },
+        scales: {
+          x: { stacked: false },
+          y: {
+            beginAtZero: true,
+            ticks: { stepSize: 1 },
+            title: { display: true, text: 'Publications' }
           }
         }
       }
-    }
-  });
+    });
+  }
+});
 </script>
