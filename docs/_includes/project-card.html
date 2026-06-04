@@ -1,0 +1,15 @@
+<div class="project-card" tabindex="0">
+  <div class="project-image">
+    {% if image %}
+      <img src="{{ image | relative_url }}" alt="{{ title }}" loading="lazy" width="400" height="300">
+    {% endif %}
+  </div>
+  <div class="project-card-content">
+    <h2 class="project-title"><a href="{{ url | relative_url }}">{{ title }}</a></h2>
+    {% if subtitle %}<h3 class="project-subtitle">{{ subtitle }}</h3>{% endif %}
+    {% if excerpt %}<p>{{ excerpt }}</p>{% endif %}
+    <p><a href="{{ url | relative_url }}" class="button is-primary">Learn More</a></p>
+  </div>
+</div>
+
+

@@ -1,0 +1,372 @@
+---
+layout: default
+---
+
+<!-- Under Construction ribbon -->
+<style>
+.wip-ribbon-wrap {
+  position: fixed;
+  top: 0; right: 0;
+  width: 150px; height: 150px;
+  overflow: hidden;
+  z-index: 9999;
+  pointer-events: none;
+}
+.wip-ribbon {
+  position: absolute;
+  top: 36px; right: -38px;
+  width: 170px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 7px 0;
+  transform: rotate(45deg);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  pointer-events: auto;
+}
+.wip-ribbon span { display: block; font-size: 1rem; margin-bottom: 1px; }
+</style>
+<div class="wip-ribbon-wrap" title="Site en cours de construction">
+  <div class="wip-ribbon">
+    <span>🚧</span>
+    Work in Progress
+  </div>
+</div>
+
+<!-- Hero Section -->
+<div class="modern-hero comics-text full-bleed">
+  <section class="hero-content">
+    <div class="hero-container">
+      <div class="hero-left">
+        <div class="artistic-portrait">
+          <div class="portrait-overlay">
+            <div class="watercolor-effect"></div>
+            <div class="geometric-shapes">
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+              <div class="shape shape-4"></div>
+            </div>
+          </div>
+          <img src="/assets/images/notion-face.png" alt="{{ site.author.name }}" class="profile-image" loading="lazy" width="512" height="512">
+        </div>
+        
+
+      </div>
+      
+      <div class="hero-right">
+        <div class="hero-text">
+          <h1 class="hero-title comics-glow">
+            <span class="hero-main-name">Yinoussa Adagolodjo</span><br>
+            <span class="highlight hero-multicolor">
+              <span class="hero-blue">Robotics</span> & 
+              <span class="hero-turquoise">AR</span> for 
+              <span class="hero-pink">Healthcare</span>
+            </span>
+          </h1>
+          
+          <p class="hero-description hero-desc-large">
+            Designing the future of surgery — through real-time simulation, soft robotics, and augmented reality for minimally invasive healthcare.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="/assets/cv_yinoussa_adagolodjo.pdf" class="cta-button primary hero-btn" target="_blank" rel="noopener">
+              <span>Resume</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="{{ '/contact/' | relative_url }}" class="cta-button secondary hero-btn">
+              Contact
+            </a>
+          </div>
+          
+          <div class="quick-links hero-quicklinks">
+            <a href="{{ '/research/projects/' | relative_url }}" class="hero-blue">Projects</a> ·
+            <a href="{{ '/publications/' | relative_url }}" class="hero-turquoise">Publications</a> ·
+            <a href="{{ '/teaching/' | relative_url }}" class="hero-pink">Teaching</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Decorative Elements -->
+    <div class="decorative-elements">
+      <div class="floating-bulb">
+        <div class="lightbulb-icon" aria-hidden="true">
+          <i class="fas fa-lightbulb" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="floating-particles">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Stats Bar Section -->
+<section class="home-stats-bar full-bleed">
+  <div class="home-stats-inner">
+    <div class="home-stat-item">
+      <span class="home-stat-number">18+</span>
+      <span class="home-stat-label">Publications</span>
+    </div>
+    <div class="home-stat-divider" aria-hidden="true"></div>
+    <div class="home-stat-item">
+      <span class="home-stat-number">9</span>
+      <span class="home-stat-label">Active Projects</span>
+    </div>
+    <div class="home-stat-divider" aria-hidden="true"></div>
+    <div class="home-stat-item">
+      <span class="home-stat-number">200+</span>
+      <span class="home-stat-label">Teaching Hours</span>
+    </div>
+    <div class="home-stat-divider" aria-hidden="true"></div>
+    <div class="home-stat-item">
+      <span class="home-stat-number">10+</span>
+      <span class="home-stat-label">Years Research</span>
+    </div>
+    <div class="home-stat-divider" aria-hidden="true"></div>
+    <div class="home-stat-item">
+      <span class="home-stat-number">3</span>
+      <span class="home-stat-label">PhD / Postdoc Supervised</span>
+    </div>
+  </div>
+</section>
+
+<!-- About Teaser Section -->
+<section class="home-about-teaser full-bleed">
+  <div class="home-about-inner">
+    <div class="home-about-avatar">
+      <img src="/assets/images/notion-face.png" alt="Dr. Yinoussa Adagolodjo" loading="lazy" width="220" height="220">
+    </div>
+    <div class="home-about-body">
+      <p class="home-about-label"><i class="fas fa-user-circle"></i> About me</p>
+      <h2 class="home-about-title">Robotics research at the frontier of medicine</h2>
+      <p class="home-about-desc">
+        I am an Assistant Professor at the <strong>University of Lille</strong> within the
+        <strong>DEFROST</strong> team (Inria / CRIStAL UMR 9189). My work focuses on
+        real-time deformable object simulation, needle insertion guidance, soft &amp; continuum
+        robotics, and augmented reality for surgical assistance. The goal: make minimally
+        invasive procedures safer, more precise, and more accessible.
+      </p>
+      <div class="home-about-badges">
+        <span class="home-badge"><i class="fas fa-university"></i> Univ. Lille</span>
+        <span class="home-badge"><i class="fas fa-flask"></i> DEFROST · Inria</span>
+        <span class="home-badge"><i class="fas fa-atom"></i> CRIStAL UMR 9189</span>
+      </div>
+      <a href="{{ '/about/' | relative_url }}" class="home-about-cta">
+        Full biography <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="featured-section full-bleed">
+  <div class="featured-header">
+    <h2 class="title is-3 featured-title">Featured Projects</h2>
+    <p class="subtitle is-5 featured-subtitle">
+      From prostate phantoms to cochlear implants — a selection of ongoing and
+      completed projects at the intersection of robotics, simulation, and healthcare.
+    </p>
+  </div>
+  
+  <div class="projects-grid">
+    <!-- Project 1: Active Prostate Phantom -->
+    <a href="/research/projects/active-prostate-phantom/" class="project-link">
+      <div class="project-card" data-project="active-prostate-phantom">
+        <div class="project-image">
+          <img src="/assets/images/projects/prostate-new.jpg" alt="Active Prostate Phantom" loading="lazy" width="800" height="600">
+          <div class="project-overlay">
+            <div class="overlay-content">
+              <i class="fas fa-heart-pulse"></i>
+              <span>Explore Project</span>
+            </div>
+          </div>
+        </div>
+      <div class="project-content">
+        <h3 class="project-title">Active Prostate Phantom</h3>
+        <p class="project-description">
+          Multi-chamber pneumatically actuated prostate phantom for realistic 
+          medical training and robotic system validation in healthcare applications.
+        </p>
+        <div class="project-tags">
+          <span class="tag tag-primary">Medical Simulation</span>
+          <span class="tag tag-accent">Phantom Development</span>
+        </div>
+        <div class="project-meta">
+          <span class="project-status active">Active</span>
+          <span class="project-year">2023-Present</span>
+        </div>
+      </div>
+      </div>
+    </a>
+    
+    <!-- Project 2: Growing Robot -->
+    <a href="/research/projects/growing-robot/" class="project-link">
+      <div class="project-card" data-project="growing-robot">
+        <div class="project-image">
+          <img src="/assets/images/projects/growing-robot-new.png" alt="Growing Robot" loading="lazy" width="800" height="600">
+          <div class="project-overlay">
+            <div class="overlay-content">
+              <i class="fas fa-seedling"></i>
+              <span>Explore Innovation</span>
+            </div>
+          </div>
+        </div>
+      <div class="project-content">
+        <h3 class="project-title">Growing Robot</h3>
+        <p class="project-description">
+          Eversion-based soft robotics for TAVI procedures and minimally invasive 
+          medical interventions using innovative growing and deployment mechanisms.
+        </p>
+        <div class="project-tags">
+          <span class="tag tag-primary">Soft Robotics</span>
+          <span class="tag tag-secondary">TAVI</span>
+        </div>
+        <div class="project-meta">
+          <span class="project-status active">Active</span>
+          <span class="project-year">2022-Present</span>
+        </div>
+      </div>
+      </div>
+    </a>
+    
+    <!-- Project 3: IRE -->
+  <a href="/research/projects/ire/" class="project-link">
+    <div class="project-card" data-project="ire">
+      <div class="project-image">
+        <img src="/assets/images/projects/colon.jpg" alt="IRE Project" loading="lazy" width="800" height="600">
+        <div class="project-overlay">
+          <div class="overlay-content">
+            <i class="fas fa-eye"></i>
+            <span>View Details</span>
+          </div>
+        </div>
+      </div>
+    <div class="project-content">
+      <h3 class="project-title">IRE Project</h3>
+      <p class="project-description">
+        AI-powered soft robotic endoscopes and digital twins for safer, 
+        more effective minimally invasive procedures.
+      </p>
+      <div class="project-tags">
+        <span class="tag tag-accent">Surgical Robotics</span>
+        <span class="tag tag-tertiary">Augmented Reality</span>
+      </div>
+      <div class="project-meta">
+        <span class="project-status active">Active</span>
+        <span class="project-year">2022-2025</span>
+      </div>
+    </div>
+    </div>
+  </a>
+    <!-- Project 2: ROBOCOP -->
+    <a href="/research/projects/robocop/" class="project-link">
+      <div class="project-card" data-project="robocop">
+        <div class="project-image project-image-video">
+          <video src="/assets/images/forceView.mp4" autoplay loop muted playsinline preload="metadata" poster="/assets/images/projects/robocop.jpg" width="800" height="600"></video>
+          <div class="project-overlay">
+            <div class="overlay-content">
+              <i class="fas fa-play-circle"></i>
+              <span>View Demo</span>
+            </div>
+          </div>
+        </div>
+      <div class="project-content">
+        <h3 class="project-title">ROBOCOP Project</h3>
+        <p class="project-description">
+          Innovative approaches to improve hearing technologies through advanced 
+          robotic assistance and precision surgical procedures for cochlear implants.
+        </p>
+        <div class="project-tags">
+          <span class="tag tag-primary">Hearing Technology</span>
+          <span class="tag tag-secondary">Medical Devices</span>
+        </div>
+        <div class="project-meta">
+          <span class="project-status active">Active</span>
+          <span class="project-year">2023-2026</span>
+        </div>
+      </div>
+      </div>
+    </a>
+    
+    
+    <!-- Project 3: CONECT -->
+    <a href="/research/projects/conect/" class="project-link">
+      <div class="project-card" data-project="conect">
+        <div class="project-image">
+          <img src="/assets/images/projects/conect-new.png" alt="CONECT Project" loading="lazy" width="800" height="600">
+          <div class="project-overlay">
+            <div class="overlay-content">
+              <i class="fas fa-microscope"></i>
+              <span>Explore Research</span>
+            </div>
+          </div>
+        </div>
+      <div class="project-content">
+        <h3 class="project-title">CONECT Project</h3>
+        <p class="project-description">
+          Integrating robotic technology in operating rooms for enhanced precision 
+          in needle insertion procedures, with real-time simulation and AR guidance systems.
+        </p>
+        <div class="project-tags">
+          <span class="tag tag-primary">Medical Robotics</span>
+          <span class="tag tag-secondary">Surgical Assistance</span>
+        </div>
+        <div class="project-meta">
+          <span class="project-status completed">Completed</span>
+          <span class="project-year">2020-2023</span>
+        </div>
+      </div>
+      </div>
+    </a>
+    
+    <!-- Project 4: COSSEROOTS -->
+    <a href="/research/projects/cosseroots/" class="project-link">
+      <div class="project-card" data-project="cosseroots">
+        <div class="project-image">
+          <img src="/assets/images/projects/cosseroots-new.png" alt="COSSEROOTS Project" loading="lazy" width="800" height="600">
+          <div class="project-overlay">
+            <div class="overlay-content">
+              <i class="fas fa-robot"></i>
+              <span>View Innovation</span>
+            </div>
+          </div>
+        </div>
+      <div class="project-content">
+        <h3 class="project-title">COSSEROOTS Project</h3>
+        <p class="project-description">
+          Developing a soft robotic model designed to mimic the mechanical behavior 
+          of a healthy human prostate, enabling realistic simulation for medical research and training.
+        </p>
+        <div class="project-tags">
+          <span class="tag tag-accent">Soft Robotics</span>
+          <span class="tag tag-tertiary">Control Theory</span>
+        </div>
+        <div class="project-meta">
+          <span class="project-status active">Active</span>
+          <span class="project-year">2021-2024</span>
+        </div>
+      </div>
+      </div>
+    </a>
+    
+  </div>
+  
+  <div class="featured-footer">
+    <a href="/research/projects/" class="button is-link is-light is-medium featured-btn" rel="noopener">
+      <span class="mr-05">See all projects</span>
+      <span class="featured-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+{{- "" -}}{{- "<!-- site-footer included by default.html outside .wrapper -->" -}}

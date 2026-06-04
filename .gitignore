@@ -1,5 +1,56 @@
-_site
-.sass-cache
-.jekyll-cache
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
 .jekyll-metadata
-vendor
+
+# Bundler
+vendor/
+.bundle/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node modules (if using any Node.js tools)
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Backup files
+*.bak
+*.backup
+docs/assets/css/app.css.map
+docs/cv_yinoussa_adagolodjo.out
+docs/.ruby-version
+docs/99_archived/prof.md.back
+docs/_pages/research_old.md
+docs/cv_yinoussa_adagolodjo.pdf
+docs/cv_yinoussa_adagolodjo.aux
+docs/notion_courses/229acbee-43ed-4099-9360-dea43c01dda1_Export-107f406a-22b3-4095-9f91-41dad8ca79b1/Teaching 4c8844645aa944f5ac827235ca5d4aea.csv
+docs/notion_courses/229acbee-43ed-4099-9360-dea43c01dda1_Export-107f406a-22b3-4095-9f91-41dad8ca79b1/Teaching 4c8844645aa944f5ac827235ca5d4aea.pdf
+docs/package-lock.json
+improving_site.md
+WARP.md

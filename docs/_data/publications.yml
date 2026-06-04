@@ -1,0 +1,193 @@
+# Publications list — synchronized with HAL Science
+# https://hal.science/search/index?q=Adagolodjo
+# Author: Yinoussa Adagolodjo
+# Last updated: May 2025
+
+- type: conference
+  year: 2025
+  title: "Active Prostate Phantom with Multiple Chambers"
+  authors: "Sizhe Tian, Yinoussa Adagolodjo, Jeremie Dequidt"
+  conference: "IROS 2025 – IEEE/RSJ International Conference on Intelligent Robots and Systems"
+  hal_id: "hal-05216849"
+  hal_url: "https://hal.science/hal-05216849v1"
+  abstract: "Pneumatically actuated prostate phantom with multiple independently controlled chambers for simulating benign prostatic hyperplasia with validated FEM modeling."
+  keywords: ["Medical Robots", "Soft Robotics", "FEM Simulation"]
+
+- type: conference
+  year: 2025
+  title: "In silicone and in silico: toward evaluation of pacemaker lead implantation"
+  authors: "Thomas Moupfouma, Quentin Peyron, Yinoussa Adagolodjo, Sylvain Caubet, Jean-François Ollivier, Christian Duriez"
+  conference: "RoboSoft 2025 – IEEE International Conference on Soft Robotics"
+  hal_id: "hal-05153184"
+  hal_url: "https://hal.science/hal-05153184v1"
+  doi: "10.1109/RoboSoft63089.2025.11020816"
+  abstract: "Soft robotic phantom integrating a beating ventricle with instrumented apex and biomechanical simulation for pacemaker device evaluation."
+  keywords: ["Soft Robotics", "Medical Simulation", "Biomechanics"]
+
+- type: workshop
+  year: 2024
+  title: "Using Haptic Feedback in Digital Rectal Examination Training"
+  authors: "Sizhe Tian, Yinoussa Adagolodjo, Jeremie Dequidt"
+  conference: "Workshop on Haptics and Simulation"
+  hal_id: "hal-04886503"
+  hal_url: "https://hal.science/hal-04886503v1"
+  doi: "10.5281/zenodo.12549463"
+  abstract: "FEM-based digital simulation with haptic feedback for prostate cancer screening training with realistic mechanical property replication."
+  keywords: ["Medical Simulation", "Haptic Feedback", "Augmented Reality"]
+
+- type: conference
+  year: 2024
+  title: "Enhancing TAVI Robot Flexibility Using Semi-Extensible Materials"
+  authors: "Flavie Przybylski, Yinoussa Adagolodjo, Jérémie Dequidt, Christian Duriez, Pierre Berthet-Rayne"
+  conference: "HSMR 2024 – Hamlyn Symposium on Medical Robotics"
+  hal_id: "hal-04646160"
+  hal_url: "https://hal.science/hal-04646160v1"
+  abstract: "Growing robot using silicone-coated materials for transcatheter aortic valve implantation with improved navigation and reduced tissue perforation risk."
+  keywords: ["Medical Robotics", "Soft Robotics", "TAVI"]
+
+- type: journal
+  year: 2023
+  title: "Robots assisted surgical interventions in constrained anatomical spaces"
+  authors: "Yinoussa Adagolodjo, N. Hafsa"
+  journal: "Studies in Health Technology and Informatics"
+  volume: "302"
+  pages: "217-221"
+  doi: "10.3233/SHTI230159"
+  keywords: ["Surgical Robotics", "Constrained Spaces", "Medical Robotics"]
+
+- type: conference
+  year: 2023
+  title: "3D Kinematics and Quasi-Statics of a Growing Robot Eversion"
+  authors: "Flavie Przybylski, Yinoussa Adagolodjo, Anna Mîra, Giulio Cerruti, Jérémie Dequidt, Christian Duriez, Pierre Berthet-Rayne"
+  conference: "RoboSoft 2023 – IEEE International Conference on Soft Robotics"
+  hal_id: "hal-04390298"
+  hal_url: "https://hal.science/hal-04390298v1"
+  doi: "10.1109/RoboSoft55895.2023.10122073"
+  abstract: "Combined kinematic and quasi-static modeling using Cosserat rod models and FEA to parameterize inflatable device deployment behavior."
+  keywords: ["Growing Robots", "Kinematics", "Cosserat Rod", "Soft Robotics"]
+
+- type: conference
+  year: 2023
+  title: "Smart electrode array for cochlear implants"
+  authors: "Ahmad Itawi, Sofiane Ghenna, Guillaume Tourrel, Sébastien Grondel, Cedric Plesse, Giao Tran Minh Nguyen, Frederic Vidal, Yinoussa Adagolodjo, Lingxiao Xun, Gang Zheng, Alexandre Kruszewski, Christian Duriez, Eric Cattan"
+  conference: "IEEE MEMS 2023 – International Conference on Micro Electro Mechanical Systems"
+  hal_id: "hal-03946253"
+  hal_url: "https://inria.hal.science/hal-03946253v1"
+  doi: "10.1109/MEMS49605.2023.10052348"
+  abstract: "Functionalized electrode array with electronic conducting polymer micro-actuators able to bend under electrical stimulation, reducing cochlear implant insertion trauma."
+  keywords: ["Cochlear Implant", "MEMS", "Electroactive Polymer"]
+
+
+- type: journal
+  year: 2022
+  title: "Planning of soft-rigid Hybrid arms in Contact with Compliant Environment"
+  authors: "Eulalie Coevoet, Yinoussa Adagolodjo, Meichun Lin, Christian Duriez, Fanny Ficuciello"
+  journal: "IEEE Robotics and Automation Letters"
+  hal_id: "hal-03729071"
+  hal_url: "https://inria.hal.science/hal-03729071v1"
+  doi: "10.1109/LRA.2022.3152322"
+  abstract: "Hybridized rigid-soft robot system with FEM modeling for automated transrectal prostate biopsy with force-limited interaction control."
+  keywords: ["Soft Robotics", "Hybrid Arms", "Motion Planning"]
+
+- type: poster
+  year: 2022
+  title: "How electroactive polymer can be used for cochlear implants micro-robotization?"
+  authors: "Ahmad Itawi, Sofiane Ghenna, Guillaume Tourrel, Sébastien Grondel, Cedric Plesse, Giao Tran Minh Nguyen, Frederic Vidal, Yinoussa Adagolodjo, Alexandre Kruszewski, Lingxiao Xun, Gang Zheng, Christian Duriez, Eric Cattan"
+  conference: "Workshop on Biomaterial Innovations Toward Repair of the Human Body"
+  hal_id: "hal-03839266"
+  hal_url: "https://hal.science/hal-03839266v1"
+  keywords: ["Cochlear Implant", "Electroactive Polymer", "Micro-robotics"]
+
+- type: journal
+  year: 2021
+  title: "Coupling numerical deformable models in global and reduced coordinates for soft robot kinematics"
+  authors: "Yinoussa Adagolodjo, Federico Renda, Christian Duriez"
+  journal: "IEEE Robotics and Automation Letters"
+  hal_id: "hal-03192168"
+  hal_url: "https://hal.science/hal-03192168v1"
+  doi: "10.1109/LRA.2021.3061977"
+  abstract: "Combined FEM and Discrete Cosserat Modeling approach for soft robot mechanics, actuation, kinematics, and contact simulation."
+  keywords: ["Soft Robotics", "FEM", "Cosserat Model", "Kinematics"]
+
+- type: journal
+  year: 2019
+  title: "Robotic Insertion of Flexible Needle in Deformable Structures Using Inverse Finite Element Simulation"
+  authors: "Yinoussa Adagolodjo, Laurent Goffin, Michel de Mathelin, Hadrien Courtecuisse"
+  journal: "IEEE Transactions on Robotics"
+  hal_id: "hal-02144487"
+  hal_url: "https://inria.hal.science/hal-02144487v1"
+  doi: "10.1109/TRO.2019.2897858"
+  abstract: "Real-time inverse FE simulation for robotic needle control accounting for tissue and needle deformations using constraint-based interaction models."
+  keywords: ["Needle Insertion", "FEM", "Robotics", "Deformable Models"]
+
+- type: journal
+  year: 2019
+  title: "Constraint-based manipulation of deformable models in robotic surgery"
+  authors: "Yinoussa Adagolodjo, Laurent Goffin, Michel de Mathelin, Hadrien Courtecuisse"
+  journal: "IEEE Robotics and Automation Letters"
+  volume: "4"
+  issue: "2"
+  pages: "1461-1468"
+  doi: "10.1109/LRA.2019.2895244"
+  keywords: ["Robotic Surgery", "Deformable Models", "Constraints"]
+
+- type: thesis
+  year: 2018
+  title: "Couplage de la rObotique et de la simulatioN mEdical pour des proCédures automaTisées (CONECT)"
+  authors: "Yinoussa Adagolodjo"
+  conference: "PhD Thesis — Université de Strasbourg"
+  hal_id: "tel-01939268"
+  hal_url: "https://inria.hal.science/tel-01939268v1"
+  abstract: "PhD thesis on autonomous robotic system for flexible needle insertion with inverse FE simulation, corrective and predictive steps, and AR surgical guidance."
+  keywords: ["Needle Insertion", "FEM", "Robotic Surgery", "Augmented Reality"]
+
+- type: conference
+  year: 2018
+  title: "Marker-based Registration for Large Deformations – Application to Open Liver Surgery"
+  authors: "Yinoussa Adagolodjo, Nicolas Golse, Eric Vibert, Michel de Mathelin, Stéphane Cotin, Hadrien Courtecuisse"
+  conference: "ICRA 2018 – IEEE International Conference on Robotics and Automation"
+  hal_id: "hal-01792837"
+  hal_url: "https://inria.hal.science/hal-01792837v1"
+  abstract: "AR system for open liver surgery with marker tracking and real-time model deformation for tumor localization during hepatic resection."
+  keywords: ["Augmented Reality", "Non-rigid Registration", "Liver Surgery"]
+
+- type: conference
+  year: 2017
+  title: "Silhouette-based Pose Estimation for Deformable Organs – Application to Surgical Augmented Reality"
+  authors: "Yinoussa Adagolodjo, Raffaella Trivisonne, Nazim Haouchine, Stéphane Cotin, Hadrien Courtecuisse"
+  conference: "IROS 2017 – IEEE/RSJ International Conference on Intelligent Robots and Systems"
+  hal_id: "hal-01578815"
+  hal_url: "https://hal.science/hal-01578815v1"
+  abstract: "Semi-automatic deformable model registration using 2D silhouettes from monocular camera with projective constraints for real-time surgical AR."
+  keywords: ["Augmented Reality", "Deformable Models", "Pose Estimation"]
+
+- type: conference
+  year: 2016
+  title: "Inverse real-time Finite Element simulation for robotic control of flexible needle insertion"
+  authors: "Yinoussa Adagolodjo, Laurent Goffin, Michel de Mathelin, Hadrien Courtecuisse"
+  conference: "IROS 2016 – IEEE/RSJ International Conference on Intelligent Robots and Systems"
+  hal_id: "hal-01353925"
+  hal_url: "https://hal.science/hal-01353925v1"
+  abstract: "Inverse FE simulation method providing real-time robot displacements to maintain needle trajectory on deformable tissue phantom."
+  keywords: ["Needle Insertion", "FEM", "Robotic Control", "Medical Robotics"]
+
+- type: conference
+  year: 2015
+  title: "Haptic Rendering of Hyperelastic Models with Friction"
+  authors: "Hadrien Courtecuisse, Yinoussa Adagolodjo, Hervé Delingette, Christian Duriez"
+  conference: "IROS 2015 – IEEE/RSJ International Conference on Intelligent Robots and Systems"
+  hal_id: "hal-01184113"
+  hal_url: "https://hal.science/hal-01184113v1"
+  doi: "10.1109/IROS.2015.7353432"
+  abstract: "Implicit time integration and asynchronous preconditioning for real-time haptic rendering of hyperelastic materials with contact friction."
+  keywords: ["Haptic Rendering", "Hyperelastic Models", "Friction", "Real-time"]
+
+- type: poster
+  year: 2015
+  title: "Domain Decomposition for real time Simulation of needle insertion"
+  authors: "Yinoussa Adagolodjo, Hadrien Courtecuisse, Raffaella Trivisonne, Laurent Goffin, Stephane Bordas, Michel de Mathelin"
+  conference: "DD23 – International Conference on Domain Decomposition Methods"
+  hal_id: "hal-01229514"
+  hal_url: "https://inria.hal.science/hal-01229514v1"
+  abstract: "Domain decomposition method for FE mesh to optimize GPU computing around the needle insertion contact problem."
+  keywords: ["Domain Decomposition", "Needle Insertion", "GPU Computing", "FEM"]

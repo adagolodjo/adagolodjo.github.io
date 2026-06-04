@@ -2,33 +2,120 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+<div class="modern-hero">
+  <!-- Navigation -->
+  <nav class="hero-nav">
+    <div class="nav-left">
+      <a href="{{ '/' | relative_url }}" class="nav-item is-active">Home</a>
+      <a href="{{ '/about/' | relative_url }}" class="nav-item">About</a>
+      <a href="{{ '/research/projects/' | relative_url }}" class="nav-item">Projects</a>
+      <a href="{{ '/research/publications/' | relative_url }}" class="nav-item">Publications</a>
+    </div>
+    <div class="nav-center">
+      <div class="logo-circle">
+        <span>YA</span>
+      </div>
+    </div>
+    <div class="nav-right">
+      <a href="https://scholar.google.com/citations?hl=fr&user=ZBdWJ9EAAAAJ" class="social-icon" target="_blank" title="Google Scholar">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+      <a href="https://github.com/adagolodjo" class="social-icon" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" class="social-icon" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://orcid.org/YOUR_ORCID" class="social-icon" target="_blank" title="ORCID">
+        <i class="fab fa-orcid"></i>
+      </a>
+      <button class="theme-toggle" onclick="toggleDarkMode()" title="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
 
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
-
+  <!-- Hero Content -->
+  <section class="hero-content">
+    <div class="hero-container">
+      <div class="hero-left">
+        <div class="artistic-portrait">
+          <div class="portrait-overlay">
+            <div class="watercolor-effect"></div>
+            <div class="geometric-shapes">
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+              <div class="shape shape-4"></div>
+            </div>
+          </div>
+          <img src="/assets/images/profile.jpg" alt="{{ site.author.name }}" class="profile-image">
+        </div>
+        
+        <!-- Research Badge -->
+        <div class="hire-badge">
+          <div class="badge-text">
+            <span>Research</span>
+            <span>Collaboration</span>
+            <span>Avai-lable</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-right">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            Turning Ideas Into 
+            <span class="highlight">Innovation</span>
+            Through Research
+            <span class="highlight">And Technology</span>
+          </h1>
+          
+          <p class="hero-description">
+            As a dedicated researcher and assistant professor, I am passionate about 
+            advancing the frontiers of robotics and augmented reality in healthcare. 
+            Explore my latest projects and publications, showcasing expertise in 
+            soft robotics and medical simulation.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="/assets/cv_yinoussa_adagolodjo.pdf" class="cta-button primary" target="_blank">
+              <span>Resume</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="{{ '/contact/' | relative_url }}" class="cta-button secondary">
+              Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Decorative Elements -->
+    <div class="decorative-elements">
+      <div class="lightbulb-icon">
+        <i class="fas fa-lightbulb"></i>
+      </div>
+      <div class="floating-particles">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+      </div>
+    </div>
+  </section>
 </div>
+
+<!-- Additional Content Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-two-thirds">
+        <div class="content">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

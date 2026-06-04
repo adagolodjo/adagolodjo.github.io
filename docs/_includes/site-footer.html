@@ -1,0 +1,123 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <!-- Column 1 : Identité -->
+    <div class="footer-col footer-identity">
+      <div class="footer-logo-wrap">
+        <span class="footer-initials" aria-hidden="true">YA</span>
+        <div>
+          <h2 class="footer-name">Dr. Yinoussa Adagolodjo</h2>
+          <p class="footer-role">Assistant Professor · Université de Lille</p>
+        </div>
+      </div>
+      <p class="footer-team">
+        <i class="fas fa-flask"></i>
+        DEFROST Team — CRIStAL UMR 9189
+      </p>
+      <p class="footer-tagline">Robotics &amp; AR for Healthcare</p>
+      <a href="/assets/cv_yinoussa_adagolodjo.pdf" class="footer-cv-btn" target="_blank" rel="noopener">
+        <i class="fas fa-file-alt"></i> Download CV
+      </a>
+    </div>
+
+    <!-- Column 2 : Navigation -->
+    <div class="footer-col footer-nav-col">
+      <h3 class="footer-col-title">Navigation</h3>
+      <nav class="footer-nav-list">
+        <a href="{{ '/about/' | relative_url }}" class="footer-nav-link">
+          <i class="fas fa-user"></i> About
+        </a>
+        <a href="{{ '/research/' | relative_url }}" class="footer-nav-link">
+          <i class="fas fa-microscope"></i> Research
+        </a>
+        <a href="{{ '/publications/' | relative_url }}" class="footer-nav-link">
+          <i class="fas fa-book-open"></i> Publications
+        </a>
+        <a href="{{ '/teaching/' | relative_url }}" class="footer-nav-link">
+          <i class="fas fa-chalkboard-teacher"></i> Teaching
+        </a>
+        <a href="{{ '/contact/' | relative_url }}" class="footer-nav-link">
+          <i class="fas fa-envelope"></i> Contact
+        </a>
+      </nav>
+    </div>
+
+    <!-- Column 3 : Contact & Bureau -->
+    <div class="footer-col footer-contact-col">
+      <h3 class="footer-col-title">Contact</h3>
+      <ul class="footer-contact-list">
+        <li>
+          <i class="fas fa-envelope footer-icon"></i>
+          <span class="footer-email-wrap">
+            {%- assign _em = "yinoussa.adagolodjo@univ-lille.fr" -%}
+            <a href="mailto:{{ _em | encode_email }}" title="{{ _em | encode_email }}" class="footer-email-link">
+              Écrire un email <i class="fas fa-external-link-alt" style="font-size:0.7em;opacity:0.6;"></i>
+            </a>
+          </span>
+        </li>
+        <li>
+          <i class="fas fa-map-marker-alt footer-icon"></i>
+          <span>
+            Bâtiment Polytech<br>
+            59655 Villeneuve d'Ascq<br>
+            France
+          </span>
+        </li>
+        <li>
+          <i class="fas fa-clock footer-icon"></i>
+          <span>Lun–Ven &nbsp;08:00–18:00<br>
+            <small>ou sur rendez-vous</small>
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Column 4 : Profils académiques & réseaux -->
+    <div class="footer-col footer-social-col">
+      <h3 class="footer-col-title">Connect</h3>
+      <div class="footer-social-grid">
+        <a href="https://www.linkedin.com/in/yinoussa-adagolodjo/"
+           class="footer-social-btn linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/adagolodjo"
+           class="footer-social-btn github" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="https://scholar.google.com/citations?user=ZBdWJ9EAAAAJ&hl=fr"
+           class="footer-social-btn scholar" target="_blank" rel="noopener" aria-label="Google Scholar">
+          <i class="fas fa-graduation-cap"></i>
+          <span>Scholar</span>
+        </a>
+        <a href="https://www.researchgate.net/profile/Yinoussa-Adagolodjo"
+           class="footer-social-btn researchgate" target="_blank" rel="noopener" aria-label="ResearchGate">
+          <i class="fab fa-researchgate"></i>
+          <span>ResearchGate</span>
+        </a>
+        <a href="https://hal.science/search/index?q=Adagolodjo"
+           class="footer-social-btn hal" target="_blank" rel="noopener" aria-label="HAL Science">
+          <i class="fas fa-archive"></i>
+          <span>HAL</span>
+        </a>
+        <a href="https://www.inria.fr/fr/defrost"
+           class="footer-social-btn inria" target="_blank" rel="noopener" aria-label="DEFROST Team">
+          <i class="fas fa-robot"></i>
+          <span>DEFROST</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Barre de bas de page -->
+  <div class="footer-bottom">
+    <span class="footer-copy">
+      &copy; {{ 'now' | date: "%Y" }} Dr. Yinoussa Adagolodjo — Tous droits réservés
+    </span>
+    <span class="footer-built">
+      Fait avec <i class="fas fa-heart footer-heart"></i> · Jekyll &amp; GitHub Pages
+    </span>
+  </div>
+</footer>

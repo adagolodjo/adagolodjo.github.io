@@ -1,0 +1,12 @@
+<section class="universal-hero">
+  <div class="container">
+    <img src="/assets/images/notion-face.png" alt="{{ site.author.name }}" class="profile-image">
+    <h1 class="title is-2">{{ page.title | default: site.title }}</h1>
+    {% if page.subtitle %}
+      <p class="subtitle is-4">{{ page.subtitle }}</p>
+    {% endif %}
+    {% if page.description %}
+      <p class="hero-description">{{ page.description }}</p>
+    {% endif %}
+  </div>
+</section> 

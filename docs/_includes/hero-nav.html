@@ -1,0 +1,56 @@
+<nav class="hero-nav" role="navigation" aria-label="Primary">
+  <div class="nav-left">
+    <a href="{{ '/' | relative_url }}" class="nav-item{% if page.url == '/' %} is-active{% endif %}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+    <a href="{{ '/about/' | relative_url }}" class="nav-item{% if page.url contains '/about/' %} is-active{% endif %}" {% if page.url contains '/about/' %}aria-current="page"{% endif %}>About</a>
+    <span class="nav-dropdown">
+      <a href="{{ '/research/' | relative_url }}" class="nav-item{% if page.url contains '/research/' %} is-active{% endif %}" {% if page.url contains '/research/' %}aria-current="page"{% endif %}>Research ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="{{ '/research/' | relative_url }}">Overview</a>
+        <a href="{{ '/research/projects/' | relative_url }}">Active Projects</a>
+        <a href="{{ '/publications/' | relative_url }}">Publications</a>
+        <a href="{{ '/research/software/' | relative_url }}">Software &amp; Code</a>
+      </div>
+    </span>
+    <a href="{{ '/teaching/' | relative_url }}" class="nav-item{% if page.url contains '/teaching/' %} is-active{% endif %}" {% if page.url contains '/teaching/' %}aria-current="page"{% endif %}>Teaching</a>
+    <a href="{{ '/blog/' | relative_url }}" class="nav-item{% if page.url contains '/blog/' %} is-active{% endif %}" {% if page.url contains '/blog/' %}aria-current="page"{% endif %}>Blog & News</a>
+  </div>
+  <div class="nav-center">
+    <div class="logo-circle">
+      <span>YA</span>
+    </div>
+  </div>
+  <div class="nav-right">
+    <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    <a href="https://scholar.google.com/citations?hl=fr&user=ZBdWJ9EAAAAJ" class="social-icon" target="_blank" title="Google Scholar" rel="noopener">
+      <i class="fas fa-graduation-cap"></i>
+    </a>
+    <a href="https://github.com/adagolodjo" class="social-icon" target="_blank" title="GitHub" rel="noopener">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" class="social-icon" target="_blank" title="LinkedIn" rel="noopener">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://hal.science/search/index?q=Adagolodjo" class="social-icon" target="_blank" title="HAL Science" rel="noopener">
+      <i class="fas fa-archive"></i>
+    </a>
+    <button class="theme-toggle" onclick="toggleDarkMode()" title="Toggle theme" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
+    {% include lang-switcher.html %}
+  </div>
+  <div id="mobile-nav" class="mobile-nav" hidden>
+    <a class="mobile-nav-item" href="{{ '/' | relative_url }}">Home</a>
+    <a class="mobile-nav-item" href="{{ '/about/' | relative_url }}">About</a>
+    <a class="mobile-nav-item" href="{{ '/research/' | relative_url }}">Research</a>
+    <a class="mobile-nav-item" href="{{ '/research/projects/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Active Projects</a>
+    <a class="mobile-nav-item" href="{{ '/publications/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Publications</a>
+    <a class="mobile-nav-item" href="{{ '/research/software/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Software &amp; Code</a>
+    <a class="mobile-nav-item" href="{{ '/teaching/' | relative_url }}">Teaching</a>
+    <a class="mobile-nav-item" href="{{ '/blog/' | relative_url }}">Blog & News</a>
+    <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+  </div>
+</nav> 

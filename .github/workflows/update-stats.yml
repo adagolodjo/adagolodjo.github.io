@@ -1,0 +1,48 @@
+name: Update Academic Stats
+
+# Runs every Monday at 07:00 UTC (08:00 Paris time)
+# Can also be triggered manually from the Actions tab
+on:
+  schedule:
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write   # needed to commit _data/stats.yml
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # No extra dependencies needed — script uses only stdlib
+
+      - name: Fetch stats from Semantic Scholar
+        id: fetch
+        run: |
+          python3 scripts/fetch_stats.py
+          echo "stats_updated=true" >> $GITHUB_OUTPUT
+
+      - name: Show updated stats
+        run: cat docs/_data/stats.yml
+
+      - name: Commit if stats changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet docs/_data/stats.yml; then
+            echo "No changes — stats are already up to date."
+          else
+            git add docs/_data/stats.yml
+            git commit -m "chore(stats): auto-update academic metrics [skip ci]"
+            git push
+            echo "Stats updated and pushed."
+          fi

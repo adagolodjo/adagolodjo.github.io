@@ -1,0 +1,20 @@
+- name: About
+  link: /about/
+- name: Research
+  link: /research/
+  dropdown:
+    - name: Active Projects
+      link: /research/projects/
+    - name: Publications
+      link: /publications/
+    - name: Software & Code
+      link: /research/software/
+- name: Teaching
+  link: /teaching/
+  dropdown:
+    - name: Courses
+      link: /teaching/courses/
+- name: Blog & News
+  link: /blog/
+- name: Contact
+  link: /contact/

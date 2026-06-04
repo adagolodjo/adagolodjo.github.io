@@ -1,0 +1,92 @@
+---
+---
+@charset "UTF-8";
+// Import variables first, then Bulma from local node_modules (no CDN)
+@import "partials/variables";
+@import "bulma";
+@import "partials/hero";
+@import "partials/teaching";
+@import "partials/publications";
+@import "partials/research";
+@import "partials/home";
+@import "partials/contact";
+@import "partials/blog";
+@import "partials/404";
+@import "partials/components";
+
+// Bulma hero color override
+.hero.is-primary {
+  background: linear-gradient(135deg, #013A3C 0%, #016064 50%, #48AAAD 100%);
+}
+
+.profile-section {
+  text-align: center;
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+  }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.publication-item {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-section .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+body {
+  background: linear-gradient(135deg, #F0FAFA 0%, #E0F7FA 100%);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: $family-sans-serif;
+  letter-spacing: 0.2px;
+}
+
+// Form elements require explicit font-family (browsers skip inheritance)
+input, textarea, button, select {
+  font-family: inherit;
+  letter-spacing: inherit;
+}
+
+// Content area — override Bulma color defaults with theme variables
+// Uses body + two classes for specificity without !important
+body .section .content {
+  color: var(--text-color);
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+  }
+
+  a {
+    color: var(--link);
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}

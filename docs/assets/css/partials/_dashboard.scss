@@ -1,0 +1,259 @@
+// Dashboard Styles
+// ============================================================
+
+.dashboard-container {
+  margin-top: 2rem;
+}
+
+.dashboard-hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color, #209cee));
+}
+
+// Metrics Section
+.dashboard-metrics {
+  background-color: var(--light-bg, #fafafa);
+  padding: 3rem 1.5rem;
+}
+
+.metric-card {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+  }
+  
+  .metric-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+  }
+  
+  .metric-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0.5rem 0;
+  }
+  
+  .metric-subtitle {
+    color: var(--text-secondary, #7a7a7a);
+  }
+}
+
+// Chart Section
+.dashboard-chart {
+  padding: 3rem 1.5rem;
+  background-color: var(--card-bg, #fff);
+}
+
+.chart-container {
+  position: relative;
+  height: 400px;
+  max-width: 1000px;
+  margin: 0 auto;
+  
+  @media screen and (max-width: 768px) {
+    height: 300px;
+  }
+}
+
+// Publications Section
+.dashboard-publications {
+  background-color: var(--light-bg, #fafafa);
+  padding: 3rem 1.5rem;
+}
+
+.publication-item {
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .buttons {
+    gap: 0.5rem;
+  }
+}
+
+// Projects Section
+.dashboard-projects {
+  background-color: var(--card-bg, #fff);
+  padding: 3rem 1.5rem;
+}
+
+.project-card {
+  height: 100%;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.5rem;
+  }
+  
+  .title {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+  }
+  
+  .tags {
+    margin-top: auto;
+  }
+  
+  .card-footer {
+    border-top: 1px solid var(--border-color, #e0e0e0);
+    
+    a {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background-color: var(--primary-color);
+        color: white;
+      }
+    }
+  }
+}
+
+// Teaching Section
+.dashboard-teaching {
+  background-color: var(--light-bg, #fafafa);
+  padding: 3rem 1.5rem;
+}
+
+.teaching-card {
+  margin-bottom: 1.5rem;
+  
+  .table {
+    margin-bottom: 0;
+    
+    thead {
+      background-color: var(--primary-color);
+      
+      tr th {
+        color: white;
+        font-weight: 600;
+        border-color: var(--primary-color);
+      }
+    }
+    
+    tbody tr {
+      border-bottom: 1px solid var(--border-color, #e0e0e0);
+      
+      &:hover {
+        background-color: var(--light-bg, #fafafa);
+      }
+    }
+  }
+}
+
+.teaching-stats {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color, #209cee));
+  color: white;
+  
+  .card-content {
+    padding: 2rem;
+  }
+  
+  .heading {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+  }
+  
+  .title {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  
+  hr {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 1rem 0;
+  }
+}
+
+// Responsive Adjustments
+@media screen and (max-width: 768px) {
+  .dashboard-metrics {
+    padding: 2rem 1rem;
+  }
+  
+  .metric-card .metric-number {
+    font-size: 2rem;
+  }
+  
+  .publication-item {
+    .level {
+      flex-direction: column;
+      
+      .level-right {
+        margin-top: 1rem;
+      }
+    }
+  }
+  
+  .teaching-card {
+    .table {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Dark Mode Support
+[data-theme="dark"] {
+  .dashboard-metrics {
+    background-color: #2a2a2a;
+  }
+  
+  .metric-card {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .publication-item {
+    background-color: #333;
+  }
+  
+  .project-card {
+    background-color: #333;
+  }
+  
+  .teaching-card {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .teaching-stats {
+    color: #fff;
+  }
+}

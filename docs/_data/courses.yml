@@ -1,0 +1,163 @@
+- code: DU-823220
+  title: "Logique Séquentielle – SAP et Grafcet"
+  semester: "S3"
+  description: "Industrial logic and computer systems for automation and control"
+  syllabus: "/teaching/courses/logique-industrielle/"
+  level: "Graduate"
+  hours_cm: "22"
+  hours_tp: "22"
+  evaluation: "DS, Note de Classe, Note de TP"
+
+- code: SIMULATION-MEDICALE
+  title: "Simulation Médicale"
+  semester: "Fall 2024"
+  description: "Medical simulation techniques and medical robotics applications"
+  syllabus: "/teaching/courses/simulation-medicale/"
+  level: "Graduate"
+  hours_cm: "10"
+  evaluation: "Exposé, Note de Classe"
+
+- code: ROBOTIQUE-MEDICALE
+  title: "Robotique médicale"
+  semester: "Fall 2024"
+  description: "Advanced modeling techniques for real-time medical simulation systems"
+  syllabus: "/teaching/courses/modeling-medical-sim/"
+  level: "Graduate"
+  evaluation: "Exposé, Note de Classe"
+  start_date: "1 octobre 2024"
+  resources: "https://www.notion.so/Simulation-M-dicale-1944d150dfba80f0a850cd2be969c1ff"
+
+- code: DU-822150
+  title: "Initiation à la recherche"
+  semester: "S2"
+  description: "Introduction to research methodology and scientific presentation skills"
+  syllabus: "/teaching/courses/initiation-recherche/"
+  level: "Undergraduate"
+  hours_cm: "12.5"
+  hours_tp: "0"
+  evaluation: "Exposé"
+
+- code: DU-822240
+  title: "Logique Industrielle"
+  semester: "S2"
+  description: "Logique combinatoire et séquentielle : algèbre de Boole, Karnaugh, circuits intégrés, simulation sous Logisim, implémentation Python — passerelle vers le module SAP"
+  syllabus: "/teaching/courses/modelisation-production/"
+  level: "Undergraduate"
+  hours_cm: "20"
+  hours_tp: "8"
+  evaluation: "DS, Note de Classe, Note de TP"
+
+- code: GR-711302
+  title: "Automatique : Robotique"
+  semester: "S1"
+  description: "Automatic control systems applied to robotics with hands-on practical work"
+  syllabus: "/teaching/courses/gr-711302/"
+  level: "Graduate"
+  hours_tp: "21"
+  evaluation: "Note de Classe, Note de rapport"
+
+- code: GBA3-ROBOTIQUE-ABB
+  title: "TP Robotique ABB IRB140"
+  semester: "2025-2026"
+  description: "Simulation et programmation robotique industrielle avec RobotStudio, RAPID et GRAFCET. Applications en génie biologique et alimentaire."
+  syllabus: "/teaching/courses/gba3-robotique-abb/"
+  level: "Undergraduate"
+  hours_tp: "7"
+  evaluation: "Livrables (40%), Implication (25%), Réalisation (25%), Sauvegarde (10%)"
+
+- code: GR-712302
+  title: "Programmation"
+  semester: "Fall 2024"
+  description: "Advanced programming concepts and techniques for engineering applications"
+  syllabus: "/teaching/courses/gr-712302/"
+  level: "Undergraduate"
+  hours_tp: "20"
+  evaluation: "Note de Classe, Note de rapport"
+
+- code: GR-713301
+  title: "Automatique: Régulation de Système"
+  semester: "S3"
+  description: "System regulation and automatic control theory with practical applications"
+  syllabus: "/teaching/courses/gr-713301/"
+  level: "Graduate"
+  hours_tp: "32"
+  evaluation: "Note de Classe, Note de rapport"
+
+- code: GR-713302
+  title: "Analyse numérique : Optimisation"
+  semester: "S3"
+  description: "Numerical analysis and optimization methods for engineering problems"
+  syllabus: "/teaching/courses/analyse-numerique/"
+  level: "Graduate"
+  hours_tp: "16"
+  evaluation: "Note de Classe, Note de rapport"
+
+- code: GR-715201
+  title: "Usine Connectée & Industrie 4.0"
+  semester: "S5"
+  description: "Industry 4.0 and connected factory concepts: IoT integration, smart manufacturing, SCADA, digital twins, and industrial automation"
+  syllabus: "/teaching/courses/industrie-40/"
+  level: "Graduate"
+  hours_cm: "14.5"
+  hours_tp: "6"
+  evaluation: "Exposé, Note de Classe"
+
+- code: TESTS-MAINTENANCE
+  title: "Tests et Maintenance"
+  semester: "Fall 2024"
+  description: "Software testing methodologies and system maintenance practices"
+  syllabus: "/teaching/courses/tests-maintenance/"
+  level: "Undergraduate"
+  hours_tp: "8"
+  hours_td: "21.1"
+  evaluation: "Note de rapport"
+  status: "Pending"
+
+# Nouveaux cours de la filière Génie Industriel
+- code: DU-822110
+  title: "Mathématiques pour l'ingénieur"
+  semester: "S2"
+  description: "Advanced mathematics for engineering including Taylor series, differential equations, Fourier series, and Fourier transforms with practical applications"
+  syllabus: "/teaching/courses/mathematiques-ingenieur/"
+  level: "Undergraduate"
+  hours_cm: "18.75"
+  hours_tp: "20"
+  evaluation: "DS, Note de Classe, Note de TP"
+
+- code: DU-822160
+  title: "Introduction à la Sécurité Informatique"
+  semester: "S2"
+  description: "Introduction to cybersecurity fundamentals, data protection, authentication systems, and security best practices"
+  syllabus: "/teaching/courses/du-822160/"
+  level: "Undergraduate"
+  hours_cm: "6"
+  evaluation: "DS, Note de Classe"
+
+- code: DU-812170
+  title: "Culture Numérique et Sécurité des Données"
+  semester: "S2"
+  description: "Digital culture and data security covering cybersecurity fundamentals, data protection, GDPR compliance, and modern security practices"
+  syllabus: "/teaching/courses/du-812170/"
+  level: "Formation Continue"
+  hours_cm: "2.5"
+  evaluation: "Exposé, Note de Classe"
+
+- code: DU-816260
+  title: "Usine Connectée"
+  semester: "S6"
+  description: "Advanced connected factory concepts for continuous education, focusing on IoT implementation and smart manufacturing"
+  syllabus: "/teaching/courses/du-816260/"
+  level: "Formation Continue"
+  hours_cm: "7.5"
+  evaluation: "Exposé, Note de Classe"
+
+# Nouveau cours Master Automatique/Robotique
+- code: OA-ROBOTIQUE-MEDICALE
+  title: "Module IA Robotique & Santé"
+  semester: "S3"
+  description: "Medical robotics applications including surgical robots, rehabilitation systems, and medical simulation"
+  syllabus: "/teaching/courses/robotique-medicale/"
+  level: "Master"
+  hours_td: "4"
+  hours_tp: "8"
+  evaluation: "Note de Classe, Note de rapport"
