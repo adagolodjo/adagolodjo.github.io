@@ -314,7 +314,7 @@ image: /assets/images/projects/robotique.jpg
         📄 Support de Cours Complet
       </h5>
       <p style="margin-bottom: 1rem; font-size: 0.95rem;">Le document PDF complet avec toutes les notions, exemples et exercices est disponible :</p>
-      <a href="https://nextcloud.univ-lille.fr/index.php/s/ZzpAcRjbzEgeoYF" 
+      <a href="https://nextcloud.univ-lille.fr/index.php/s/arMc4K5fptgyZfW" 
          target="_blank" 
          rel="noopener noreferrer"
          style="display: inline-flex; align-items: center; gap: 0.5rem; background: #2c3e50; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: var(--transition); box-shadow: 0 2px 8px rgba(44, 62, 80, 0.3);"
@@ -626,7 +626,7 @@ image: /assets/images/projects/robotique.jpg
     <div class="objective-card">
       <h4>📄 Support de cours officiel</h4>
       <p>Accédez au document PDF complet du cours avec toutes les notions détaillées :</p>
-      <a href="https://nextcloud.univ-lille.fr/index.php/s/ZzpAcRjbzEgeoYF" 
+      <a href="https://nextcloud.univ-lille.fr/index.php/s/arMc4K5fptgyZfW" 
          target="_blank" 
          rel="noopener noreferrer"
          style="display: inline-flex; align-items: center; gap: 0.5rem; background: #2c3e50; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 1rem; transition: var(--transition); box-shadow: 0 2px 8px rgba(44, 62, 80, 0.2);"
