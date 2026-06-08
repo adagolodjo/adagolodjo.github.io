@@ -3,7 +3,7 @@
 # Author ID: 2251436
 # To update manually: python3 scripts/fetch_stats.py
 
-updated: "2026-06-01"
+updated: "2026-06-08"
 citations: 192
 h_index: 7
 paper_count: 12
