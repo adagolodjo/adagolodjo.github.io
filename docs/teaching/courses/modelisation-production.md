@@ -206,11 +206,11 @@ permalink: /teaching/courses/modelisation-production/
 <div class="li-resources">
   <h4><i class="fas fa-chalkboard"></i> Supports CTD</h4>
   <div class="li-res-row">
-    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 1 — Numération</a>
-    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 2 — Algèbre de Boole</a>
-    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 3 — Karnaugh</a>
-    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 4 — Circuits intégrés</a>
-    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 5 — Additionneurs</a>
+    <a href="https://nextcloud.univ-lille.fr/index.php/s/RJqzWYwbwdLDW2o" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> CTD 1 — Numération</a>
+    <a href="https://nextcloud.univ-lille.fr/index.php/s/qJCowwQea5NS5Qi" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> CTD 2 — Algèbre de Boole</a>
+    <a href="https://nextcloud.univ-lille.fr/index.php/s/8xTnRDMctQwRqSm" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> CTD 3 — Karnaugh</a>
+    <a href="https://nextcloud.univ-lille.fr/index.php/s/tSPnznqqpMEgWZN" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> CTD 4 — Circuits intégrés</a>
+    <a href="https://nextcloud.univ-lille.fr/index.php/s/FRBHKLjYeZcjAQa" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> CTD 5 — Additionneurs</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 6 — Comparateurs</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 7 — Codeurs/Décodeurs</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 8 — MUX/DEMUX</a>
