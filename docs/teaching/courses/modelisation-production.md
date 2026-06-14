@@ -211,9 +211,9 @@ permalink: /teaching/courses/modelisation-production/
     <a href="https://nextcloud.univ-lille.fr/index.php/s/8xTnRDMctQwRqSm" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> CTD 3 — Karnaugh</a>
     <a href="https://nextcloud.univ-lille.fr/index.php/s/tSPnznqqpMEgWZN" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> CTD 4 — Circuits intégrés</a>
     <a href="https://nextcloud.univ-lille.fr/index.php/s/FRBHKLjYeZcjAQa" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> CTD 5 — Additionneurs</a>
-    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 6 — Comparateurs</a>
-    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 7 — Codeurs/Décodeurs</a>
-    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 8 — MUX/DEMUX</a>
+    <a href="https://nextcloud.univ-lille.fr/index.php/s/ZPZtRzcCHSCWpFg" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> CTD 6 — Comparateurs</a>
+    <a href="https://nextcloud.univ-lille.fr/index.php/s/xYCbyGAnHeqCadk" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> CTD 7 — Codeurs/Décodeurs</a>
+    <a href="https://nextcloud.univ-lille.fr/index.php/s/ztmzaPWHwknEDPm" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> CTD 8 — MUX/DEMUX</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 9 — Séquentiel</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 10 — SAP & I4.0</a>
   </div>
@@ -229,6 +229,12 @@ permalink: /teaching/courses/modelisation-production/
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> Fiches de compétences APC</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> Fiche mémo — Karnaugh</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> Datasheets CI (7400, 7483, 7485…)</a>
+  </div>
+  <h4 style="color: var(--amber); margin-top: 1.2rem;"><i class="fas fa-file-alt"></i> DS passés (annales)</h4>
+  <p style="font-size: .85rem; color: #666; margin: -.4rem 0 .7rem .25rem;">Sujets des contrôles écrits des années précédentes — utile pour la révision.</p>
+  <div class="li-res-row">
+    <a href="https://nextcloud.univ-lille.fr/index.php/s/Wwe8Y3NT2L6RZmG" target="_blank" rel="noopener" class="li-pdf-btn" style="border-color: var(--amber); color: var(--amber);"><i class="fas fa-file-pdf"></i> DS 2023–2024</a>
+    <a href="https://nextcloud.univ-lille.fr/index.php/s/4jbKqYdcfaBxGXf" target="_blank" rel="noopener" class="li-pdf-btn" style="border-color: var(--amber); color: var(--amber);"><i class="fas fa-file-pdf"></i> DS 2024–2025</a>
   </div>
 </div>
 <!-- ═══════════════════════════════════════════════════════════════ -->
