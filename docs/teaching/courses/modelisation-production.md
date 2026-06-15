@@ -219,13 +219,14 @@ permalink: /teaching/courses/modelisation-production/
   </div>
   <h4><i class="fas fa-flask"></i> Sujets de TP</h4>
   <div class="li-res-row">
-    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> TP 1 — Python Portes</a>
+    <a href="https://nextcloud.univ-lille.fr/index.php/s/rtgM427ze9ACYPr" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> TP 1 — Python Portes</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> TP 2 — Logisim</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> TP 3 — Système de péage ⭐</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> TP 4 — Bilan SAP</a>
   </div>
   <h4><i class="fas fa-book"></i> Documents complémentaires</h4>
   <div class="li-res-row">
+    <a href="https://nextcloud.univ-lille.fr/index.php/s/tHfxQSpjAMSWJzL" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fab fa-python"></i> Intro Python (pré-requis)</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> Fiches de compétences APC</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> Fiche mémo — Karnaugh</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> Datasheets CI (7400, 7483, 7485…)</a>
