@@ -217,6 +217,11 @@ permalink: /teaching/courses/modelisation-production/
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 9 — Séquentiel</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> CTD 10 — SAP & I4.0</a>
   </div>
+  <h4><i class="fas fa-check-double"></i> TD corrigés</h4>
+  <p style="font-size: .85rem; color: #666; margin: -.4rem 0 .7rem .25rem;">Exercices avec corrections détaillées — utile pour s'entraîner et vérifier sa compréhension.</p>
+  <div class="li-res-row">
+    <a href="https://nextcloud.univ-lille.fr/index.php/s/sqCoEmPpYcP87aR" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> TD Additionneurs (avec correction)</a>
+  </div>
   <h4><i class="fas fa-flask"></i> Sujets de TP</h4>
   <div class="li-res-row">
     <a href="https://nextcloud.univ-lille.fr/index.php/s/rtgM427ze9ACYPr" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> TP 1 — Python Portes</a>
