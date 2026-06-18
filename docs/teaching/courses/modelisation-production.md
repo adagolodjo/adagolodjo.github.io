@@ -228,6 +228,7 @@ permalink: /teaching/courses/modelisation-production/
     <a href="https://nextcloud.univ-lille.fr/index.php/s/L6KpycHmZFaJ8xB" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> TP 2 — Comparateurs</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> TP 3 — Système de péage ⭐</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> TP 4 — Bilan SAP</a>
+    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-microchip"></i> TP 5 — Logisim</a>
   </div>
   <h4><i class="fas fa-book"></i> Documents complémentaires</h4>
   <div class="li-res-row">
