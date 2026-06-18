@@ -225,7 +225,7 @@ permalink: /teaching/courses/modelisation-production/
   <h4><i class="fas fa-flask"></i> Sujets de TP</h4>
   <div class="li-res-row">
     <a href="https://nextcloud.univ-lille.fr/index.php/s/rtgM427ze9ACYPr" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> TP 1 — Python Portes</a>
-    <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> TP 2 — Logisim</a>
+    <a href="https://nextcloud.univ-lille.fr/index.php/s/L6KpycHmZFaJ8xB" target="_blank" rel="noopener" class="li-pdf-btn"><i class="fas fa-file-pdf"></i> TP 2 — Logisim</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> TP 3 — Système de péage ⭐</a>
     <a href="#" class="li-pdf-btn placeholder"><i class="fas fa-file-pdf"></i> TP 4 — Bilan SAP</a>
   </div>
