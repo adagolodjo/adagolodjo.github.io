@@ -1,11 +1,19 @@
-# Academic stats — auto-updated weekly by GitHub Actions
-# Source: Semantic Scholar API (https://api.semanticscholar.org)
-# Author ID: 2251436
-# To update manually: python3 scripts/fetch_stats.py
+# Academic stats — maintained MANUALLY from ResearchGate
+# Profile: https://www.researchgate.net/profile/Yinoussa-Adagolodjo
+#
+# ResearchGate has no public API, so these values are updated by hand.
+# The weekly GitHub Action (update-stats.yml) is disabled — it used
+# Semantic Scholar, which under-counts (192 citations vs 254 on RG).
+# It can still be run manually from the Actions tab, but it will
+# overwrite these values with Semantic Scholar data — avoid unless
+# you switch the source back.
+#
+# How to update: open the RG profile, copy the current numbers below,
+# and bump the `updated` date.
 
-updated: "2026-06-29"
-citations: 195
-h_index: 7
-paper_count: 13
-source: "Semantic Scholar"
+updated: "2026-07-03"
+citations: 259
+h_index: 8
+paper_count: 18       # HAL archive / publications.yml
+source: "ResearchGate"
 semantic_scholar_author_id: "2251436"

@@ -400,18 +400,28 @@ image: /assets/images/notion-face.png
       University of Strasbourg / ICube Laboratory (2015–2018), under the supervision of
       Dr. Hadrien Courtecuisse and Prof. Michel de Mathelin.
     </p>
+    <div style="margin-top: 1.25rem; display: flex; gap: .75rem; flex-wrap: wrap;">
+      <a href="/assets/cv_yinoussa_adagolodjo.pdf" target="_blank" rel="noopener"
+         style="display: inline-flex; align-items: center; gap: .5rem; background: var(--about-primary); color: #fff; padding: .6rem 1.4rem; border-radius: .5rem; text-decoration: none; font-weight: 600; font-size: .9rem;">
+        <i class="fas fa-file-pdf"></i> Download CV (PDF)
+      </a>
+      <a href="{{ '/contact/' | relative_url }}"
+         style="display: inline-flex; align-items: center; gap: .5rem; border: 2px solid var(--about-primary); color: var(--about-primary); padding: .6rem 1.4rem; border-radius: .5rem; text-decoration: none; font-weight: 600; font-size: .9rem;">
+        <i class="fas fa-envelope"></i> Contact
+      </a>
+    </div>
   </div>
 </div>
 
 <!-- ===== STATS BAR ===== -->
 <div class="about-stats">
   <div class="about-stat">
-    <span class="about-stat-num">18</span>
+    <span class="about-stat-num">{{ site.data.publications | size }}</span>
     <span class="about-stat-label">Publications</span>
   </div>
   <div class="about-stat">
-    <span class="about-stat-num">9</span>
-    <span class="about-stat-label">Active Projects</span>
+    <span class="about-stat-num">{% assign ap = site.projects | where_exp: "p", "p.path contains 'index'" %}{{ ap | size }}</span>
+    <span class="about-stat-label">Research Projects</span>
   </div>
   <div class="about-stat">
     <span class="about-stat-num">200+</span>
@@ -440,9 +450,9 @@ image: /assets/images/notion-face.png
     <div class="timeline-place"><i class="fas fa-map-marker-alt"></i> University of Lille · DEFROST Team, Inria · Villeneuve d'Ascq, France</div>
     <ul class="timeline-details">
       <li>Research in medical robotics and real-time simulation for healthcare</li>
-      <li>PI on ANR projects: ProstateBot, Maestro, ACCESS</li>
+      <li>Involved in ANR &amp; Inria collaborative projects: COSSEROOTS, IRE, ADAGIO, Active Prostate Phantom</li>
       <li>Supervision of PhD students and postdoctoral researchers</li>
-      <li>200+ contact hours/semester — 18 courses across 3 levels</li>
+      <li>200+ contact hours/year — {{ site.data.courses | size }} courses across 3 levels</li>
     </ul>
   </div>
 
@@ -459,21 +469,13 @@ image: /assets/images/notion-face.png
 
   <div class="timeline-item">
     <div class="timeline-period">2015 — 2018</div>
-    <div class="timeline-role">Doctoral Researcher</div>
-    <div class="timeline-place"><i class="fas fa-map-marker-alt"></i> ICube Laboratory · University of Strasbourg · Strasbourg, France</div>
+    <div class="timeline-role">Ph.D. in Robotics &amp; Computer Science</div>
+    <div class="timeline-place"><i class="fas fa-graduation-cap"></i> ICube Laboratory · University of Strasbourg · Strasbourg, France</div>
     <ul class="timeline-details">
-      <li>PhD: robotic needle insertion using inverse FEM simulation (CONECT project)</li>
+      <li>Thesis: <em>« CONECT — Couplage de la Robotique et de la Simulation Médicale pour des Procédures Automatisées »</em> (defended 2018)</li>
+      <li>Robotic needle insertion using inverse FEM simulation</li>
       <li>Augmented reality for open liver surgery and deformable organ registration</li>
       <li>Advisors: Dr. Hadrien Courtecuisse · Prof. Michel de Mathelin</li>
-    </ul>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-period">2018</div>
-    <div class="timeline-role">Ph.D. in Robotics & Computer Science</div>
-    <div class="timeline-place"><i class="fas fa-graduation-cap"></i> University of Strasbourg · Strasbourg, France</div>
-    <ul class="timeline-details">
-      <li>Thesis: <em>« CONECT — Couplage de la Robotique et de la Simulation Médicale pour des Procédures Automatisées »</em></li>
     </ul>
   </div>
 
@@ -597,7 +599,7 @@ image: /assets/images/notion-face.png
 ---
 
 <!-- ===== INVITED TALKS & CONFERENCES ===== -->
-<h2 class="about-section-title"><i class="fas fa-microphone-alt"></i> Invited Talks &amp; Conferences</h2>
+<h2 class="about-section-title"><i class="fas fa-microphone-alt"></i> Invited Talks, Press &amp; Conferences</h2>
 
 <ul class="talks-list">
 
@@ -612,6 +614,21 @@ image: /assets/images/notion-face.png
         <i class="fas fa-map-marker-alt"></i>
         <strong>COSUR 2025</strong> — Summer School on Control of Surgical Robots ·
         Lisbon, Portugal (pre-event of CRAS 2025)
+      </div>
+    </div>
+  </li>
+
+  <li class="talk-item">
+    <div class="talk-date">Dec 2024</div>
+    <div class="talk-body">
+      <div class="talk-title">
+        Featured by Inria — Prostate Cancer: Digital Sciences to the Rescue of Diagnosis
+        <span class="talk-badge" style="background:#E65100; border-color:#E65100;">Press</span>
+      </div>
+      <div class="talk-venue">
+        <i class="fas fa-newspaper"></i>
+        <a href="https://www.inria.fr/fr/cancer-prostate-diagnostic-ia-robotique" target="_blank" rel="noopener">Article Inria (FR)</a> ·
+        <a href="{{ '/blog/' | relative_url }}">Read the story + video</a>
       </div>
     </div>
   </li>
