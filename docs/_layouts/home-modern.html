@@ -86,6 +86,7 @@ layout: default
           <div class="quick-links hero-quicklinks">
             <a href="{{ '/research/projects/' | relative_url }}" class="hero-blue">Projects</a> ·
             <a href="{{ '/publications/' | relative_url }}" class="hero-turquoise">Publications</a> ·
+            <a href="{{ '/research/software/' | relative_url }}" class="hero-blue">Software</a> ·
             <a href="{{ '/teaching/' | relative_url }}" class="hero-pink">Teaching</a>
           </div>
         </div>
@@ -114,13 +115,18 @@ layout: default
 <section class="home-stats-bar full-bleed">
   <div class="home-stats-inner">
     <div class="home-stat-item">
-      <span class="home-stat-number">18+</span>
+      <span class="home-stat-number">{{ site.data.publications | size }}+</span>
       <span class="home-stat-label">Publications</span>
     </div>
     <div class="home-stat-divider" aria-hidden="true"></div>
     <div class="home-stat-item">
-      <span class="home-stat-number">9</span>
-      <span class="home-stat-label">Active Projects</span>
+      <span class="home-stat-number">{{ site.data.stats.citations }}</span>
+      <span class="home-stat-label">Citations</span>
+    </div>
+    <div class="home-stat-divider" aria-hidden="true"></div>
+    <div class="home-stat-item">
+      <span class="home-stat-number">{% assign fp = site.projects | where_exp: "p", "p.path contains 'index'" %}{{ fp | size }}</span>
+      <span class="home-stat-label">Research Projects</span>
     </div>
     <div class="home-stat-divider" aria-hidden="true"></div>
     <div class="home-stat-item">
@@ -164,6 +170,31 @@ layout: default
       <a href="{{ '/about/' | relative_url }}" class="home-about-cta">
         Full biography <i class="fas fa-arrow-right"></i>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- Latest News Section -->
+<section class="home-news-section full-bleed" style="padding: 3.5rem 2rem; background: #f5fafa;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.75rem;">
+      <h2 class="title is-3" style="color: #013A3C; margin-bottom: 0;">Latest News</h2>
+      <a href="{{ '/blog/' | relative_url }}" style="color: #016064; font-weight: 600; font-size: .9rem;">All posts <i class="fas fa-arrow-right" style="font-size: .75rem;"></i></a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+      {% for post in site.posts limit:3 %}
+      <a href="{{ post.url | relative_url }}" style="text-decoration: none; display: block;">
+        <article style="background: #fff; border: 1px solid #d3e9ea; border-radius: .75rem; padding: 1.4rem 1.5rem; height: 100%; transition: box-shadow .2s, transform .2s;"
+                 onmouseover="this.style.boxShadow='0 8px 24px rgba(1,96,100,.12)'; this.style.transform='translateY(-3px)';"
+                 onmouseout="this.style.boxShadow='none'; this.style.transform='none';">
+          <p style="font-size: .78rem; color: #48AAAD; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .5rem;">
+            <i class="far fa-calendar"></i> {{ post.date | date: "%b %d, %Y" }}
+          </p>
+          <h3 style="font-size: 1.02rem; color: #013A3C; font-weight: 700; line-height: 1.45; margin-bottom: .6rem;">{{ post.title }}</h3>
+          <p style="font-size: .86rem; color: #555; line-height: 1.6; margin-bottom: 0;">{{ post.excerpt | strip_html | truncatewords: 22 }}</p>
+        </article>
+      </a>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -283,16 +314,16 @@ layout: default
       <div class="project-content">
         <h3 class="project-title">ROBOCOP Project</h3>
         <p class="project-description">
-          Innovative approaches to improve hearing technologies through advanced 
-          robotic assistance and precision surgical procedures for cochlear implants.
+          Robotic co-manipulation for prostate biopsy — enhancing needle placement
+          accuracy while keeping the clinician in control through shared autonomy.
         </p>
         <div class="project-tags">
-          <span class="tag tag-primary">Hearing Technology</span>
-          <span class="tag tag-secondary">Medical Devices</span>
+          <span class="tag tag-primary">Robotic Biopsy</span>
+          <span class="tag tag-secondary">Co-Manipulation</span>
         </div>
         <div class="project-meta">
-          <span class="project-status active">Active</span>
-          <span class="project-year">2023-2026</span>
+          <span class="project-status completed">Completed</span>
+          <span class="project-year">2017-2021</span>
         </div>
       </div>
       </div>
@@ -344,8 +375,8 @@ layout: default
       <div class="project-content">
         <h3 class="project-title">COSSEROOTS Project</h3>
         <p class="project-description">
-          Developing a soft robotic model designed to mimic the mechanical behavior 
-          of a healthy human prostate, enabling realistic simulation for medical research and training.
+          Applying Cosserat rod theory to the modeling and control of slender
+          deformable robots for medical and industrial applications.
         </p>
         <div class="project-tags">
           <span class="tag tag-accent">Soft Robotics</span>

@@ -124,6 +124,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules/
+  - 99_archived/
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/

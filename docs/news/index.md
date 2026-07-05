@@ -1,22 +1,15 @@
 ---
-layout: page
+layout: default
 title: News & Updates
-subtitle: Latest News and Announcements
 permalink: /news/
+sitemap: false
 ---
 
-## Latest News
+<script>window.location.replace("{{ '/blog/' | relative_url }}");</script>
+<meta http-equiv="refresh" content="0; url={{ '/blog/' | relative_url }}">
 
-{% for post in site.posts limit:5 %}
-### [{{ post.title }}]({{ post.url }})
-*{{ post.date | date: "%B %d, %Y" }}*
-
-{{ post.excerpt }}
-
-[Read more]({{ post.url }})
-
----
-{% endfor %}
-
-[View all posts](/blog/)
-
+<div style="padding: 8rem 2rem 4rem; text-align: center;">
+  <p>This page has moved. You are being redirected to
+    <a href="{{ '/blog/' | relative_url }}">the Blog &amp; News page</a>.
+  </p>
+</div>

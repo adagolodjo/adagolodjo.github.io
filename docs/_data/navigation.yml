@@ -14,6 +14,8 @@
   dropdown:
     - name: Courses
       link: /teaching/courses/
+    - name: Resources
+      link: /teaching/resources/
 - name: Blog & News
   link: /blog/
 - name: Contact

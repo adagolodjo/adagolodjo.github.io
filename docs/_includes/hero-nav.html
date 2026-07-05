@@ -11,7 +11,14 @@
         <a href="{{ '/research/software/' | relative_url }}">Software &amp; Code</a>
       </div>
     </span>
-    <a href="{{ '/teaching/' | relative_url }}" class="nav-item{% if page.url contains '/teaching/' %} is-active{% endif %}" {% if page.url contains '/teaching/' %}aria-current="page"{% endif %}>Teaching</a>
+    <span class="nav-dropdown">
+      <a href="{{ '/teaching/' | relative_url }}" class="nav-item{% if page.url contains '/teaching/' %} is-active{% endif %}" {% if page.url contains '/teaching/' %}aria-current="page"{% endif %}>Teaching ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="{{ '/teaching/' | relative_url }}">Overview</a>
+        <a href="{{ '/teaching/courses/' | relative_url }}">Courses</a>
+        <a href="{{ '/teaching/resources/' | relative_url }}">Resources</a>
+      </div>
+    </span>
     <a href="{{ '/blog/' | relative_url }}" class="nav-item{% if page.url contains '/blog/' %} is-active{% endif %}" {% if page.url contains '/blog/' %}aria-current="page"{% endif %}>Blog & News</a>
   </div>
   <div class="nav-center">
@@ -50,6 +57,8 @@
     <a class="mobile-nav-item" href="{{ '/publications/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Publications</a>
     <a class="mobile-nav-item" href="{{ '/research/software/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Software &amp; Code</a>
     <a class="mobile-nav-item" href="{{ '/teaching/' | relative_url }}">Teaching</a>
+    <a class="mobile-nav-item" href="{{ '/teaching/courses/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Courses</a>
+    <a class="mobile-nav-item" href="{{ '/teaching/resources/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Resources</a>
     <a class="mobile-nav-item" href="{{ '/blog/' | relative_url }}">Blog & News</a>
     <button class="mobile-nav-close" aria-label="Close menu">✕</button>
   </div>

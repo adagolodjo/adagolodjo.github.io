@@ -1,10 +1,11 @@
 name: Update Academic Stats
 
-# Runs every Monday at 07:00 UTC (08:00 Paris time)
-# Can also be triggered manually from the Actions tab
+# DISABLED (2026-07-03): stats.yml is now maintained manually from
+# ResearchGate (no public API — cannot be automated). This workflow
+# fetches Semantic Scholar data, which under-counts citations.
+# It only runs on manual trigger now; running it will OVERWRITE the
+# manual ResearchGate values in docs/_data/stats.yml.
 on:
-  schedule:
-    - cron: '0 7 * * 1'
   workflow_dispatch:
 
 permissions:
