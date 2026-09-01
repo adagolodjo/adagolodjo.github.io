@@ -63,7 +63,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
       {% assign featured_post = site.posts.first %}
       {% if featured_post %}
       <div class="blog-featured-card">
-        <div class="blog-featured-badge"><i class="fas fa-star"></i> Article en vedette</div>
+        <div class="blog-featured-badge"><i class="fas fa-star"></i> Featured Article</div>
         {% if featured_post.image %}
         <div class="blog-featured-image">
           <img src="{{ featured_post.image }}" alt="{{ featured_post.title }}" loading="lazy">
@@ -88,7 +88,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
           <p class="blog-featured-excerpt">{{ featured_post.excerpt | strip_html | truncatewords: 40 }}</p>
           <div class="blog-featured-actions">
             <a href="{{ featured_post.url }}" class="blog-btn-primary">
-              Lire l'article <i class="fas fa-arrow-right"></i>
+              Read article <i class="fas fa-arrow-right"></i>
             </a>
             {% if featured_post.external_link %}
             <a href="{{ featured_post.external_link }}" class="blog-btn-secondary" target="_blank">
@@ -219,13 +219,13 @@ subtitle: Thoughts on Research, Teaching, and Technology
         {% if site.posts.size > 7 %}
         <div class="blog-loadmore-wrap">
           <button class="blog-btn-primary" id="load-more-posts">
-            <i class="fas fa-plus"></i> Charger plus d'articles
+            <i class="fas fa-plus"></i> Load more posts
           </button>
           <div class="blog-progress-wrap">
             <div class="blog-progress-bar" id="posts-progress-bar"></div>
           </div>
           <p class="blog-progress-label" id="posts-progress">
-            Affichage de {{ 6 | at_most: site.posts.size | minus: 1 }} sur {{ site.posts.size | minus: 1 }} articles
+            Showing {{ 6 | at_most: site.posts.size | minus: 1 }} of {{ site.posts.size | minus: 1 }} posts
           </p>
         </div>
         {% endif %}
@@ -251,40 +251,6 @@ subtitle: Thoughts on Research, Teaching, and Technology
 
     <!-- Enhanced Sidebar -->
     <div class="column is-4">
-      <!-- Quick Stats with Animation -->
-      <div class="box stats-box">
-        <h3 class="title is-5">
-          <span class="icon is-small">
-            <i class="fas fa-chart-line"></i>
-          </span>
-          Blog Statistics
-        </h3>
-        <div class="stats-grid">
-          <div class="stat-item">
-            <span class="stat-number" data-count="{{ site.posts.size }}">0</span>
-            <span class="stat-label">Total Posts</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-count="{{ site.categories.size }}">0</span>
-            <span class="stat-label">Categories</span>
-          </div>
-          {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-          <div class="stat-item">
-            <span class="stat-number" data-count="{{ postsByYear.size }}">0</span>
-            <span class="stat-label">Years Active</span>
-          </div>
-          {% assign totalWords = 0 %}
-          {% for post in site.posts %}
-            {% assign postWords = post.content | number_of_words %}
-            {% assign totalWords = totalWords | plus: postWords %}
-          {% endfor %}
-          <div class="stat-item">
-            <span class="stat-number" data-count="{{ totalWords | divided_by: 1000 }}">0</span>
-            <span class="stat-label">K Words Written</span>
-          </div>
-        </div>
-      </div>
-
       <!-- Enhanced Categories with Icons -->
       <div class="box">
         <h3 class="title is-5">
@@ -323,25 +289,6 @@ subtitle: Thoughts on Research, Teaching, and Technology
               </span>
               <span class="tag is-light">{{ category[1].size }}</span>
             </a>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-
-      <!-- Recent Activity Timeline -->
-      <div class="box">
-        <h3 class="title is-5">
-          <span class="icon is-small"><i class="fas fa-clock"></i></span>
-          Recent Activity
-        </h3>
-        <div class="timeline is-small">
-          {% for post in site.posts limit:5 %}
-          <div class="timeline-item">
-            <div class="timeline-marker is-primary is-small"></div>
-            <div class="timeline-content">
-              <p class="heading">{{ post.date | date: "%B %d" }}</p>
-              <p><a href="{{ post.url }}" class="has-text-dark">{{ post.title | truncate: 50 }}</a></p>
-            </div>
           </div>
           {% endfor %}
         </div>
@@ -421,40 +368,6 @@ subtitle: Thoughts on Research, Teaching, and Technology
         </div>
       </div>
 
-      <!-- Popular Posts -->
-      {% assign popular_posts = site.posts | sort: 'views' | reverse %}
-      {% if popular_posts.size > 0 %}
-      <div class="box">
-        <h3 class="title is-5">
-          <span class="icon is-small">
-            <i class="fas fa-fire"></i>
-          </span>
-          Popular Posts
-        </h3>
-        <div class="popular-posts">
-          {% for post in popular_posts limit:3 %}
-          <div class="popular-post">
-            <div class="media">
-              <div class="media-content">
-                <p class="title is-6">
-                  <a href="{{ post.url }}" class="has-text-dark">{{ post.title }}</a>
-                </p>
-                <p class="subtitle is-7 has-text-grey">
-                  {{ post.date | date: "%b %d, %Y" }}
-                </p>
-              </div>
-              <div class="media-right">
-                <span class="icon has-text-warning">
-                  <i class="fas fa-star"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-          {% unless forloop.last %}<hr class="my-2">{% endunless %}
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
     </div>
   </div>
 </div>
@@ -517,7 +430,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
   gap: 0.4rem;
   background: rgba(255,255,255,0.12);
   border: 1px solid rgba(255,255,255,0.25);
-  color: #a9c4ff;
+  color: #5CC8CB;
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -614,7 +527,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
   border-color: rgba(255,255,255,0.5);
 }
 .blog-pill.is-active {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #016064, #48AAAD);
   border-color: transparent;
   color: #fff;
   box-shadow: 0 4px 15px rgba(102,126,234,0.5);
@@ -634,7 +547,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
 =========================== */
 .blog-featured-card {
   position: relative;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: linear-gradient(135deg, #013A3C 0%, #014D50 50%, #016064 100%);
   border-radius: 1.25rem;
   overflow: hidden;
   margin-bottom: 2rem;
@@ -651,7 +564,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
   left: 1.2rem;
   z-index: 2;
   background: linear-gradient(135deg, #f7971e, #ffd200);
-  color: #1a1a2e;
+  color: #013A3C;
   font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -688,7 +601,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
 .blog-featured-meta i { margin-right: 0.25rem; }
 .blog-featured-cat {
   background: rgba(102,126,234,0.3);
-  color: #a9c4ff;
+  color: #5CC8CB;
   border-radius: 100px;
   padding: 0.15rem 0.6rem;
   font-weight: 600;
@@ -701,7 +614,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
   line-height: 1.25;
 }
 .blog-featured-title a { color: inherit; text-decoration: none; }
-.blog-featured-title a:hover { color: #a9c4ff; }
+.blog-featured-title a:hover { color: #5CC8CB; }
 .blog-featured-excerpt {
   color: rgba(255,255,255,0.7);
   line-height: 1.65;
@@ -721,7 +634,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #016064, #48AAAD);
   color: #fff;
   font-weight: 700;
   font-size: 0.9rem;
@@ -775,7 +688,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
 }
 .blog-progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, #667eea, #764ba2);
+  background: linear-gradient(90deg, #016064, #48AAAD);
   border-radius: 100px;
   transition: width 0.5s ease;
   width: 0%;
@@ -834,7 +747,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
   text-decoration: none;
   transition: color 0.2s;
 }
-.archive-posts-list a:hover { color: #667eea; }
+.archive-posts-list a:hover { color: #016064; }
 
 /* ===========================
    POST CARDS
@@ -848,7 +761,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
   box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 .category-tag:hover {
-  background-color: #667eea !important;
+  background-color: #016064 !important;
   color: white !important;
 }
 
@@ -898,7 +811,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
-  background-color: #667eea;
+  background-color: #016064;
   border: 2px solid white;
   z-index: 1;
 }
@@ -910,7 +823,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
 .stats-box .stat-number {
   font-size: 2rem;
   font-weight: bold;
-  color: #667eea;
+  color: #016064;
   transition: all 0.3s ease;
 }
 .stats-grid {
@@ -921,7 +834,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
 }
 .stat-item:hover .stat-number {
   transform: scale(1.1);
-  color: #764ba2;
+  color: #48AAAD;
 }
 
 /* ===========================
@@ -965,7 +878,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
 
 /* Accessibility */
 .button:focus, .input:focus, .category-filter:focus, .card:focus-within {
-  outline: 2px solid #667eea;
+  outline: 2px solid #016064;
   outline-offset: 2px;
 }
 
