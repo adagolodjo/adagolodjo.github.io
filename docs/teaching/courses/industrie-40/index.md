@@ -368,7 +368,7 @@ image: /assets/images/projects/industrie-40.jpg
     <h1>Industrie 4.0</h1>
     <p class="subtitle">Introduction aux concepts de l'Industrie 4.0, IoT et fabrication intelligente</p>
     <div class="hero-badges">
-      <span class="hero-badge">🏭 INDUSTRIE-40</span>
+      <span class="hero-badge">🏭 INDUSTRIE-4.0</span>
       <span class="hero-badge">⏱️ 4.5h CM + 6h TP</span>
       <span class="hero-badge">🎆 Graduate</span>
       <span class="hero-badge">🔥 Technologies Avancées</span>
@@ -378,31 +378,29 @@ image: /assets/images/projects/industrie-40.jpg
 
 <nav class="course-nav">
   <div class="nav-links">
-    <a href="#objectifs" class="nav-link">🎧 Objectifs</a>
-    <a href="#programme" class="nav-link">📚 Programme</a>
-    <a href="#ressources" class="nav-link">💾 Ressources</a>
-    <a href="#evaluation" class="nav-link">📊 Évaluation</a>
-    <a href="#technologies" class="nav-link">💻 Technologies</a>
+    <a href="#objectifs" class="nav-link"> Objectifs</a>
+    <a href="#programme" class="nav-link"> Programme</a>
+    <a href="#ressources" class="nav-link"> Ressources</a>
+    <a href="#evaluation" class="nav-link"> Évaluation</a>
+    <a href="#technologies" class="nav-link"> Technologies</a>
     <a href="#contact" class="nav-link">📞 Contact</a>
   </div>
 </nav>
 
 <div class="section-card" id="description">
   <div class="section-header">
-    <div class="section-icon">🏢</div>
     <h2 class="section-title">Description du cours</h2>
   </div>
   
   <p class="lead">Ce cours introduit les étudiants aux concepts et technologies qui propulsent la Quatrième Révolution Industrielle (Industrie 4.0). Les étudiants exploreront comment les systèmes cyber-physiques, l'Internet des Objets (IoT), l'intelligence artificielle et l'analyse de données transforment les processus de fabrication et industriels.</p>
   
   <div class="info-box">
-    <strong>🎆 Prérequis:</strong> Connaissances de base des processus de fabrication, compétences en programmation (Python ou similaire), compréhension des réseaux informatiques et familiarité avec les concepts de bases de données.
+    <strong>Prérequis:</strong> Connaissances de base des processus de fabrication, compétences en programmation (Python ou similaire), compréhension des réseaux informatiques et familiarité avec les concepts de bases de données.
   </div>
 </div>
 
 <div class="section-card" id="objectifs">
   <div class="section-header">
-    <div class="section-icon">🎧</div>
     <h2 class="section-title">Objectifs pédagogiques</h2>
   </div>
   
@@ -413,17 +411,17 @@ image: /assets/images/projects/industrie-40.jpg
     </div>
     
     <div class="objective-card">
-      <h4>📊 Impact de la transformation</h4>
+      <h4>Impact de la transformation</h4>
       <p>Analyser l'impact de la transformation numérique sur les processus de fabrication.</p>
     </div>
     
     <div class="objective-card">
-      <h4>💻 Solutions IoT</h4>
+      <h4> Solutions IoT</h4>
       <p>Concevoir et implémenter des solutions IoT pour les applications industrielles.</p>
     </div>
     
     <div class="objective-card">
-      <h4>🔍 Évaluation des systèmes</h4>
+      <h4>Évaluation des systèmes</h4>
       <p>Évaluer les avantages et les défis des systèmes de fabrication intelligente.</p>
     </div>
   </div>
@@ -431,7 +429,6 @@ image: /assets/images/projects/industrie-40.jpg
 
 <div class="section-card" id="programme">
   <div class="section-header">
-    <div class="section-icon">📚</div>
     <h2 class="section-title">Programme détaillé</h2>
   </div>
   
@@ -533,7 +530,7 @@ image: /assets/images/projects/industrie-40.jpg
         </h4>
         <p>Contexte historique, technologies clés et transformation numérique</p>
         <div style="margin-top: 1rem;">
-          <a href="https://nextcloud.univ-lille.fr/index.php/s/PLiRRWmcHcE62jJ" 
+          <a href="https://nextcloud.univ-lille.fr/index.php/s/yLnNcYHz7B28SCN" 
              class="nav-link" 
              style="display: inline-flex; background: var(--industry-color); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; transition: var(--transition);" 
              target="_blank" 
@@ -550,7 +547,7 @@ image: /assets/images/projects/industrie-40.jpg
         </h4>
         <p>Applications des intelligences artificielles génératives dans l'industrie 4.0</p>
         <div style="margin-top: 1rem;">
-          <a href="https://nextcloud.univ-lille.fr/index.php/s/EsZQd6gipb8dstp" 
+          <a href="https://nextcloud.univ-lille.fr/index.php/s/yLnNcYHz7B28SCN" 
              class="nav-link" 
              style="display: inline-flex; background: var(--industry-color); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; transition: var(--transition);" 
              target="_blank" 
