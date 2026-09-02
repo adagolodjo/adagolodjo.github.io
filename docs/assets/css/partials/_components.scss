@@ -339,3 +339,10 @@ $card-shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
     color: darken($primary, 10%);
   }
 }
+// ── Phosphor icons (inline SVG via {% include ph.html %}) ──────────────
+.ph-icon {
+  display: inline-block;
+  vertical-align: -0.125em;   // baseline alignment with adjacent text
+  flex-shrink: 0;
+  line-height: 1;
+}
