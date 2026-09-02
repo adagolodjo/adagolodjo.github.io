@@ -577,32 +577,32 @@ grid-template-columns: 1fr;
 
 <div class="course-hero">
 <div class="course-hero-content">
-<h1>⚙️ Logique Séquentielle - SAP et Grafcet</h1>
+<h1>{% include ph.html name="gear-six" %} Logique Séquentielle - SAP et Grafcet</h1>
 <p class="subtitle">Description de la commande séquentielle des SAP </p>
 <div class="hero-badges">
-<span class="hero-badge">📚 Niveau Licence/BAC+4 </span>
+<span class="hero-badge">{% include ph.html name="books" %} Niveau Licence/BAC+4 </span>
 <span class="hero-badge">⏱️ 22h CMTD + 12h TP</span>
 <span class="hero-badge"> Automatisation</span>
-<span class="hero-badge">👥 Systèmes industriels</span>
+<span class="hero-badge">{% include ph.html name="users" %} Systèmes industriels</span>
 </div>
 </div>
 </div>
 
 <nav class="course-nav">
 <div class="nav-links">
-<a href="#presentation" class="nav-link active">📋 Présentation</a>
+<a href="#presentation" class="nav-link active">{% include ph.html name="clipboard-text" %} Présentation</a>
 <a href="#objectifs" class="nav-link"> Objectifs</a>
-<a href="#planning" class="nav-link">📅 Planning</a>
+<a href="#planning" class="nav-link">{% include ph.html name="calendar-blank" %} Planning</a>
 <a href="#cas-pratiques" class="nav-link">🏢 Cas pratiques</a>
-<a href="#ressources" class="nav-link">📚 Ressources</a>
-<a href="#evaluation" class="nav-link">📊 Évaluation</a>
-<a href="#contact" class="nav-link">📞 Contact</a>
+<a href="#ressources" class="nav-link">{% include ph.html name="books" %} Ressources</a>
+<a href="#evaluation" class="nav-link">{% include ph.html name="chart-bar" %} Évaluation</a>
+<a href="#contact" class="nav-link">{% include ph.html name="phone" %} Contact</a>
 </div>
 </nav>
 
 <section id="presentation" class="section-card">
 <div class="section-header">
-<div class="section-icon">📋</div>
+<div class="section-icon">{% include ph.html name="clipboard-text" %}</div>
 <h2 class="section-title">Présentation du cours</h2>
 </div>
 
@@ -611,17 +611,17 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 </p>
 
 <div class="info-box">
-<h4>📊 Informations générales</h4>
+<h4>{% include ph.html name="chart-bar" %} Informations générales</h4>
 <p><strong>Durée :</strong> 22h de CMTD  + 22h de travaux pratiques<br>
 <strong>Volume de travail personnel estimé :</strong> = temps_consacré * attention<br>
 <strong>Langue d'enseignement :</strong> Français<br>
 <strong>Évaluation :</strong> DS, Note de Classe, Note de TP</p>
 </div>
 
-<h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">✅ Prérequis</h3>
+<h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">{% include ph.html name="check-circle" %} Prérequis</h3>
 
 <div class="prerequisite-item">
-<div class="prerequisite-icon">⚡</div>
+<div class="prerequisite-icon">{% include ph.html name="lightning" %}</div>
 <div>
 <strong>Algèbre de Boole</strong>
 <p style="margin: 0; color: #666; font-size: 0.95rem;">Notions d'Algèbre de Boole, Tableau de Véritée, fonction cannonique, Tablea de Karneau</p>
@@ -629,7 +629,7 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 </div>
 
 <div class="prerequisite-item">
-<div class="prerequisite-icon">💻</div>
+<div class="prerequisite-icon">{% include ph.html name="desktop" %}</div>
 <div>
 <strong>Algorithmique</strong>
 <p style="margin: 0; color: #666; font-size: 0.95rem;">Bases de la programmation et de la logique algorithmique</p>
@@ -637,7 +637,7 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 </div>
 
 <div class="prerequisite-item">
-<div class="prerequisite-icon">🏭</div>
+<div class="prerequisite-icon">{% include ph.html name="factory" %}</div>
 <div>
 <strong>Connaissances industrielles</strong>
 <p style="margin: 0; color: #666; font-size: 0.95rem;">Notions de base sur les processus industriels et la production</p>
@@ -655,7 +655,7 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 
 <section id="objectifs" class="section-card">
 <div class="section-header">
-<div class="section-icon">🎯</div>
+<div class="section-icon">{% include ph.html name="target" %}</div>
 <h2 class="section-title">Objectifs pédagogiques</h2>
 </div>
 
@@ -669,11 +669,11 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 <p>Maîtriser l'architecture Partie Opérative / Partie Commande et les enjeux de l'automatisation industrielle.</p>
 </div>
 <div class="objective-card">
-<h4>📈 Maîtriser l'outil GRAFCET</h4>
+<h4>{% include ph.html name="trend-up" %} Maîtriser l'outil GRAFCET</h4>
 <p>Concevoir et analyser des systèmes séquentiels avec l'outil GRAFCET (normes IEC 60848), structures parallèles et temporisations.</p>
 </div>
 <div class="objective-card">
-<h4>🔧 Implémenter sur Automates Programmables</h4>
+<h4>{% include ph.html name="wrench" %} Implémenter sur Automates Programmables</h4>
 <p>Programmer des API en Ladder et Structured Text, gérer les E/S analogiques et numériques.</p>
 </div>
 <div class="objective-card">
@@ -681,11 +681,11 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 <p>Mettre en œuvre les protocoles Modbus, Profibus et réseaux Ethernet industriels pour l'intégration système.</p>
 </div>
 <div class="objective-card">
-<h4>⚙️ Gérer les modes avec GEMMA</h4>
+<h4>{% include ph.html name="gear-six" %} Gérer les modes avec GEMMA</h4>
 <p>Appliquer le guide GEMMA pour la gestion des modes de marche et d'arrêt, modes dégradés et sécurités.</p>
 </div>
 <div class="objective-card">
-<h4>📊 Résoudre des cas industriels concrets</h4>
+<h4>{% include ph.html name="chart-bar" %} Résoudre des cas industriels concrets</h4>
 <p>Analyser et concevoir des solutions d'automatisation : station de lavage, ligne pharmaceutique, parking intelligent.</p>
 </div>
 </div>
@@ -693,7 +693,7 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 
 <section id="planning" class="section-card">
 <div class="section-header">
-<div class="section-icon">📅</div>
+<div class="section-icon">{% include ph.html name="calendar-blank" %}</div>
 <h2 class="section-title">Planning du cours</h2>
 </div>
 <div class="timeline">
@@ -703,7 +703,7 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 <h4>Introduction aux SAP et automatisation</h4>
 <div class="timeline-details">Définition des SAP, architecture PO/PC, objectifs de l'automatisation, domaines d'application industriels.</div>
 <ul>
-<li><a href="https://nextcloud.univ-lille.fr/index.php/s/6KfTaK7roAG4PcL" target="_blank" rel="noopener noreferrer">📊 Parie 1-2 (PDF)</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/6KfTaK7roAG4PcL" target="_blank" rel="noopener noreferrer">{% include ph.html name="chart-bar" %} Parie 1-2 (PDF)</a></li>
 </ul>
 </div>
 </div>
@@ -713,7 +713,7 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 <h4>Algèbre de Boole et logique séquentielle</h4>
 <div class="timeline-details">Rappels booléens, différences combinatoire/séquentiel, outils de description, chronogrammes.
 <ul>
-<li><a href=" https://nextcloud.univ-lille.fr/index.php/s/6KfTaK7roAG4PcL" target="_blank" rel="noopener noreferrer">📊 Parie 1-2 (PDF)</a></li>
+<li><a href=" https://nextcloud.univ-lille.fr/index.php/s/6KfTaK7roAG4PcL" target="_blank" rel="noopener noreferrer">{% include ph.html name="chart-bar" %} Parie 1-2 (PDF)</a></li>
 </ul>
 </div>
 </div>
@@ -815,7 +815,7 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 </div>
 
 <div class="info-box" style="margin-top: 2rem;">
-<h4>📈 Bénéfices Mesurés de l'Automatisation</h4>
+<h4>{% include ph.html name="trend-up" %} Bénéfices Mesurés de l'Automatisation</h4>
 <p>
 <strong>Productivité</strong> : +15 à 30% en moyenne •
 <strong>Qualité</strong> : Réduction erreurs humaines -40% •
@@ -828,25 +828,25 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 
 <section id="ressources" class="section-card">
 <div class="section-header">
-<div class="section-icon">📚</div>
+<div class="section-icon">{% include ph.html name="books" %}</div>
 <h2 class="section-title">Ressources et bibliographie</h2>
 </div>
 <div class="resources-grid">
 <div class="resource-card">
-<div class="resource-icon">📄</div>
+<div class="resource-icon">{% include ph.html name="file-text" %}</div>
 <h4>Supports de cours</h4>
 <ul>
-<li><a href="https://nextcloud.univ-lille.fr/index.php/s/pqtkmsterkeYdJA" target="_blank" rel="noopener noreferrer">📊 Logique séquentielle et Grafcet (PDF)</a></li>
-<li><a href="https://nextcloud.univ-lille.fr/index.php/s/KyQsrfbqgLCFf2s" target="_blank" rel="noopener noreferrer">📋 TD Grafcet - Gestion de priorités (PDF)</a></li>
-<li><a href="https://nextcloud.univ-lille.fr/index.php/s/AztKTgwstE5y4mq" target="_blank" rel="noopener noreferrer">✅ Correction exercice 1 - Priorités (PDF)</a></li>
-<li><a href="./exercice_cours_partie_3.pdf" target="_blank">📝 Exercices Cours Partie 3 (PDF)</a></li>
-<li><a href="./sujets_grafcet_1.pdf" target="_blank">📋 Sujets GRAFCET 1 (PDF)</a></li>
-<li><a href="https://nextcloud.univ-lille.fr/index.php/s/y33aTe6XRxZrtjL" target="_blank" rel="noopener noreferrer">📐 Partie 5 : Grafcet - Structuration Systèmes complexes (PDF)</a></li>
-<li><a href="https://nextcloud.univ-lille.fr/index.php/s/y33aTe6XRxZrtjL" target="_blank" rel="noopener noreferrer">⚙️ Partie 6 : Grafcet - Mise en œuvre de la commande (PDF)</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/pqtkmsterkeYdJA" target="_blank" rel="noopener noreferrer">{% include ph.html name="chart-bar" %} Logique séquentielle et Grafcet (PDF)</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/KyQsrfbqgLCFf2s" target="_blank" rel="noopener noreferrer">{% include ph.html name="clipboard-text" %} TD Grafcet - Gestion de priorités (PDF)</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/AztKTgwstE5y4mq" target="_blank" rel="noopener noreferrer">{% include ph.html name="check-circle" %} Correction exercice 1 - Priorités (PDF)</a></li>
+<li><a href="./exercice_cours_partie_3.pdf" target="_blank">{% include ph.html name="note-pencil" %} Exercices Cours Partie 3 (PDF)</a></li>
+<li><a href="./sujets_grafcet_1.pdf" target="_blank">{% include ph.html name="clipboard-text" %} Sujets GRAFCET 1 (PDF)</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/y33aTe6XRxZrtjL" target="_blank" rel="noopener noreferrer">{% include ph.html name="ruler" %} Partie 5 : Grafcet - Structuration Systèmes complexes (PDF)</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/y33aTe6XRxZrtjL" target="_blank" rel="noopener noreferrer">{% include ph.html name="gear-six" %} Partie 6 : Grafcet - Mise en œuvre de la commande (PDF)</a></li>
 </ul>
 </div>
 <div class="resource-card">
-<div class="resource-icon">🔬</div>
+<div class="resource-icon">{% include ph.html name="flask" %}</div>
 <h4>Documents de TP</h4>
 <ul>
 <li><strong>🏢 Ascenseur</strong>
@@ -861,9 +861,9 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 <li><a href="#" target="_blank">Schéma réseau ferroviaire (PDF)</a></li>
 </ul>
 </li>
-<li><strong>⚙️ TP Festo Persage</strong>
+<li><strong>{% include ph.html name="gear-six" %} TP Festo Persage</strong>
 <ul style="margin-top: 0.5rem;">
-<li><a href="https://nextcloud.univ-lille.fr/index.php/s/cXMy5XPnxaaZqe2" target="_blank" rel="noopener noreferrer">📁 Documents TP Festo Persage</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/cXMy5XPnxaaZqe2" target="_blank" rel="noopener noreferrer">{% include ph.html name="folder" %} Documents TP Festo Persage</a></li>
 </ul>
 </li>
 <li><strong>📦 Tri de Caisses</strong>
@@ -883,14 +883,14 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/PF6dff7Z8DBKkRE" target="_blank" rel="noopener noreferrer">Cours Robotino (PDF)</a></li>
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/XLd68t4skomc2cE" target="_blank" rel="noopener noreferrer">Sujet TP Robotino (PDF)</a></li>
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/YFS42JgSxKiYEnY" target="_blank" rel="noopener noreferrer">Data-sheet Robotino (PDF)</a></li>
-<li><a href="https://nextcloud.univ-lille.fr/index.php/s/JMDBfGGDx5pNQGo" target="_blank" rel="noopener noreferrer">🎥 Vidéo tutoriel Robotino</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/JMDBfGGDx5pNQGo" target="_blank" rel="noopener noreferrer">{% include ph.html name="video-camera" %} Vidéo tutoriel Robotino</a></li>
 </ul>
 </li>
 
 </ul>
 </div>
 <div class="resource-card">
-<div class="resource-icon">📚</div>
+<div class="resource-icon">{% include ph.html name="books" %}</div>
 <h4>Manuels de référence</h4>
 <ul>
 <li>Du Grafcet au réseau de Pétri (2° Ed.) - Claude Foulard, Hassane Alla, René David (1992)</li>
@@ -902,7 +902,7 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 </ul>
 </div>
 <div class="resource-card">
-<div class="resource-icon">💻</div>
+<div class="resource-icon">{% include ph.html name="desktop" %}</div>
 <h4>Logiciels et outils</h4>
 <ul>
 <li><a href="https://new.siemens.com/global/en/products/automation/industry-software/automation-software/tia-portal.html" target="_blank">TIA Portal (Siemens)</a></li>
@@ -911,7 +911,7 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 </ul>
 </div>
 <div class="resource-card">
-<div class="resource-icon">🔧</div>
+<div class="resource-icon">{% include ph.html name="wrench" %}</div>
 <h4>Normes et standards</h4>
 <ul>
 <li><a href="https://webstore.iec.ch/publication/3684" target="_blank">IEC 60848 - GRAFCET</a></li>
@@ -936,7 +936,7 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 
 <section id="evaluation" class="section-card">
 <div class="section-header">
-<div class="section-icon">📊</div>
+<div class="section-icon">{% include ph.html name="chart-bar" %}</div>
 <h2 class="section-title">Modalités d'évaluation</h2>
 </div>
 <div class="evaluation-grid">
@@ -960,7 +960,7 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 
 <section id="contact" class="section-card">
 <div class="section-header">
-<div class="section-icon">📞</div>
+<div class="section-icon">{% include ph.html name="phone" %}</div>
 <h2 class="section-title">Contact & encadrement</h2>
 </div>
 <div class="contact-info">
@@ -969,7 +969,7 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 <span><strong>Responsable du cours :</strong> Dr. Yinoussa Adagolodjo</span>
 </div>
 <div class="contact-item">
-<span class="contact-icon">✉️</span>
+<span class="contact-icon">{% include ph.html name="envelope" %}</span>
 <span><strong>Email :</strong> Remplir formulaire de contact sur la page d'accueil</span>
 </div>
 <div class="contact-item">
