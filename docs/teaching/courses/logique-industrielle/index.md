@@ -582,7 +582,7 @@ grid-template-columns: 1fr;
 <div class="hero-badges">
 <span class="hero-badge">📚 Niveau Licence/BAC+4 </span>
 <span class="hero-badge">⏱️ 22h CMTD + 12h TP</span>
-<span class="hero-badge">🎯 Automatisation</span>
+<span class="hero-badge"> Automatisation</span>
 <span class="hero-badge">👥 Systèmes industriels</span>
 </div>
 </div>
@@ -591,7 +591,7 @@ grid-template-columns: 1fr;
 <nav class="course-nav">
 <div class="nav-links">
 <a href="#presentation" class="nav-link active">📋 Présentation</a>
-<a href="#objectifs" class="nav-link">🎯 Objectifs</a>
+<a href="#objectifs" class="nav-link"> Objectifs</a>
 <a href="#planning" class="nav-link">📅 Planning</a>
 <a href="#cas-pratiques" class="nav-link">🏢 Cas pratiques</a>
 <a href="#ressources" class="nav-link">📚 Ressources</a>
@@ -702,6 +702,9 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 <div class="timeline-content">
 <h4>Introduction aux SAP et automatisation</h4>
 <div class="timeline-details">Définition des SAP, architecture PO/PC, objectifs de l'automatisation, domaines d'application industriels.</div>
+<ul>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/6KfTaK7roAG4PcL" target="_blank" rel="noopener noreferrer">📊 Parie 1-2 (PDF)</a></li>
+</ul>
 </div>
 </div>
 <div class="timeline-item">
@@ -710,7 +713,7 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 <h4>Algèbre de Boole et logique séquentielle</h4>
 <div class="timeline-details">Rappels booléens, différences combinatoire/séquentiel, outils de description, chronogrammes.
 <ul>
-<li><a href="https://nextcloud.univ-lille.fr/index.php/s/w8ZSmFqDbCi5q9J" target="_blank" rel="noopener noreferrer">📊 Parie 2 (PDF)</a></li>
+<li><a href=" https://nextcloud.univ-lille.fr/index.php/s/6KfTaK7roAG4PcL" target="_blank" rel="noopener noreferrer">📊 Parie 1-2 (PDF)</a></li>
 </ul>
 </div>
 </div>
