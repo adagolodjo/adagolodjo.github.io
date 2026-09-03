@@ -723,6 +723,9 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 <div class="timeline-content">
 <h4>Fondements du GRAFCET (IEC 60848)</h4>
 <div class="timeline-details">Étapes, transitions, réceptivités, structures ET/OU, règles d'évolution, temporisations.</div>
+<ul>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/dxX8YpFdkcbCrcw" target="_blank" rel="noopener noreferrer">{% include ph.html name="chart-bar" %} Parie 1-2 (PDF)</a></li>
+</ul>
 </div>
 </div>
 <div class="timeline-item">
