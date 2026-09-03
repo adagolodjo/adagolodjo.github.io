@@ -581,7 +581,7 @@ grid-template-columns: 1fr;
 <p class="subtitle">Description de la commande séquentielle des SAP </p>
 <div class="hero-badges">
 <span class="hero-badge">{% include ph.html name="books" %} Niveau Licence/BAC+4 </span>
-<span class="hero-badge">⏱️ 22h CMTD + 12h TP</span>
+<span class="hero-badge">{% include ph.html name="timer" %} 22h CMTD + 12h TP</span>
 <span class="hero-badge"> Automatisation</span>
 <span class="hero-badge">{% include ph.html name="users" %} Systèmes industriels</span>
 </div>
@@ -593,7 +593,7 @@ grid-template-columns: 1fr;
 <a href="#presentation" class="nav-link active">{% include ph.html name="clipboard-text" %} Présentation</a>
 <a href="#objectifs" class="nav-link"> Objectifs</a>
 <a href="#planning" class="nav-link">{% include ph.html name="calendar-blank" %} Planning</a>
-<a href="#cas-pratiques" class="nav-link">🏢 Cas pratiques</a>
+<a href="#cas-pratiques" class="nav-link">{% include ph.html name="buildings" %} Cas pratiques</a>
 <a href="#ressources" class="nav-link">{% include ph.html name="books" %} Ressources</a>
 <a href="#evaluation" class="nav-link">{% include ph.html name="chart-bar" %} Évaluation</a>
 <a href="#contact" class="nav-link">{% include ph.html name="phone" %} Contact</a>
@@ -665,7 +665,7 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 
 <div class="objectives-grid">
 <div class="objective-card">
-<h4>🏢 Comprendre les Systèmes Automatisés de Production (SAP)</h4>
+<h4>{% include ph.html name="buildings" %} Comprendre les Systèmes Automatisés de Production (SAP)</h4>
 <p>Maîtriser l'architecture Partie Opérative / Partie Commande et les enjeux de l'automatisation industrielle.</p>
 </div>
 <div class="objective-card">
@@ -677,7 +677,7 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 <p>Programmer des API en Ladder et Structured Text, gérer les E/S analogiques et numériques.</p>
 </div>
 <div class="objective-card">
-<h4>📡 Appréhender les communications industrielles</h4>
+<h4>{% include ph.html name="broadcast" %} Appréhender les communications industrielles</h4>
 <p>Mettre en œuvre les protocoles Modbus, Profibus et réseaux Ethernet industriels pour l'intégration système.</p>
 </div>
 <div class="objective-card">
@@ -782,7 +782,7 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 
 <section id="cas-pratiques" class="section-card">
 <div class="section-header">
-<div class="section-icon">🏢</div>
+<div class="section-icon">{% include ph.html name="buildings" %}</div>
 <h2 class="section-title">Études de Cas Industrielles</h2>
 </div>
 
@@ -792,27 +792,27 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 
 <div class="objectives-grid">
 <div class="objective-card">
-<h4>🚗 Station de Lavage Automatique</h4>
+<h4>{% include ph.html name="car" %} Station de Lavage Automatique</h4>
 <p><strong>Système sécurisé</strong> avec détection véhicule, cycle optimisé (5 min max), gestion modes économiques et interface client intuitive. GRAFCET complet avec phases brossage, rinçage, séchage.</p>
 </div>
 <div class="objective-card">
-<h4>💊 Ligne Pharmaceutique</h4>
+<h4>{% include ph.html name="pill" %} Ligne Pharmaceutique</h4>
 <p><strong>Traçabilité complète</strong> (lot, date, heure), contrôle qualité à chaque étape, validation avant progression, rejet automatique des défauts. Contraintes réglementaires strictes.</p>
 </div>
 <div class="objective-card">
-<h4>🅿️ Parking Intelligent IoT</h4>
+<h4>{% include ph.html name="car-simple" %} Parking Intelligent IoT</h4>
 <p><strong>Innovations Industrie 4.0</strong> : capteurs IoT, IA intégrée, optimisation attribution place optimale, paiement connecté (QR code, NFC), analytics temps réel.</p>
 </div>
 <div class="objective-card">
-<h4>🚢 Port Automatisé</h4>
+<h4>{% include ph.html name="boat" %} Port Automatisé</h4>
 <p><strong>Système complexe</strong> avec 3 grues, 20 AGV, 5 zones stockage. Algorithme d'optimisation avec gestion priorités dynamiques. Coût immobilisation : 5000€/heure. ROI < 18 mois.</p>
 </div>
 <div class="objective-card">
-<h4>🚗 Ligne Automobile</h4>
+<h4>{% include ph.html name="car-profile" %} Ligne Automobile</h4>
 <p><strong>Multi-postes synchronisés</strong> : 6 postes en série (soudage, assemblage, peinture), 2 robots mobiles partagés, 3 convoyeurs, système contrôle qualité global.</p>
 </div>
 <div class="objective-card">
-<h4>🏠 Porte de Garage Intelligente</h4>
+<h4>{% include ph.html name="garage" %} Porte de Garage Intelligente</h4>
 <p><strong>Projet pratique</strong> : télécommande, fins de course, sécurité photocellule, éclairage automatique 2 minutes, mode hiver avec préchauffage moteur. Exercice d'évaluation.</p>
 </div>
 </div>
@@ -852,13 +852,13 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 <div class="resource-icon">{% include ph.html name="flask" %}</div>
 <h4>Documents de TP</h4>
 <ul>
-<li><strong>🏢 Ascenseur</strong>
+<li><strong>{% include ph.html name="elevator" %} Ascenseur</strong>
 <ul style="margin-top: 0.5rem;">
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/43itcnbmEodCske" target="_blank">Sujet TP Ascenseur (PDF)</a></li>
 <li><a href="#" target="_blank">Cahier des charges Ascenseur (PDF)</a></li>
 </ul>
 </li>
-<li><strong>🚦 Traffic Train</strong>
+<li><strong>{% include ph.html name="traffic-signal" %} Traffic Train</strong>
 <ul style="margin-top: 0.5rem;">
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/cXMy5XPnxaaZqe2" target="_blank">Sujet TP Traffic Train (PDF)</a></li>
 <li><a href="#" target="_blank">Schéma réseau ferroviaire (PDF)</a></li>
@@ -869,7 +869,7 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/cXMy5XPnxaaZqe2" target="_blank" rel="noopener noreferrer">{% include ph.html name="folder" %} Documents TP Festo Persage</a></li>
 </ul>
 </li>
-<li><strong>📦 Tri de Caisses</strong>
+<li><strong>{% include ph.html name="package" %} Tri de Caisses</strong>
 <ul style="margin-top: 0.5rem;">
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/GpCJMEAEMJH2jkH" target="_blank">Manuel de référence (PDF)</a></li>
 <li><a href="#" target="_blank">Cahier des charges Tri (PDF)</a></li>
@@ -881,7 +881,7 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/iwWdNAfMrjg2Bmc" target="_blank">Annex 1 - Programming PLCs with Unity Pro (PDF)</a></li>
 </ul>
 </li>
-<li><strong>🤖 Robotino</strong>
+<li><strong>{% include ph.html name="robot" %} Robotino</strong>
 <ul style="margin-top: 0.5rem;">
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/PF6dff7Z8DBKkRE" target="_blank" rel="noopener noreferrer">Cours Robotino (PDF)</a></li>
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/XLd68t4skomc2cE" target="_blank" rel="noopener noreferrer">Sujet TP Robotino (PDF)</a></li>
@@ -924,7 +924,7 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 </ul>
 </div>
 <div class="resource-card">
-<div class="resource-icon">🌍</div>
+<div class="resource-icon">{% include ph.html name="globe-hemisphere-west" %}</div>
 <h4>Ressources industrielles</h4>
 <ul>
 <li><a href="https://www.siemens.com/global/en/products/automation.html" target="_blank">Siemens - Automation industrielle</a></li>
@@ -968,7 +968,7 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 </div>
 <div class="contact-info">
 <div class="contact-item">
-<span class="contact-icon">👨‍🏫</span>
+<span class="contact-icon">{% include ph.html name="chalkboard-teacher" %}</span>
 <span><strong>Responsable du cours :</strong> Dr. Yinoussa Adagolodjo</span>
 </div>
 <div class="contact-item">
@@ -976,7 +976,7 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 <span><strong>Email :</strong> Remplir formulaire de contact sur la page d'accueil</span>
 </div>
 <div class="contact-item">
-<span class="contact-icon">🏢</span>
+<span class="contact-icon">{% include ph.html name="buildings" %}</span>
 <span><strong>Bureau :</strong> Bâtiment Polytech, Université de Lille</span>
 </div>
 <div class="contact-item">
