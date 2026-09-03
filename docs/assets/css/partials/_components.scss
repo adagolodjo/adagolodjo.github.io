@@ -342,6 +342,8 @@ $card-shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
 // ── Phosphor icons (inline SVG via {% include ph.html %}) ──────────────
 .ph-icon {
   display: inline-block;
+  width: 1em;                 // size follows font-size (em survives in CSS,
+  height: 1em;                // unlike SVG width/height attrs stripped by typogrify)
   vertical-align: -0.125em;   // baseline alignment with adjacent text
   flex-shrink: 0;
   line-height: 1;

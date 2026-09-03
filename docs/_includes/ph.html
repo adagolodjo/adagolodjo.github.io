@@ -33,6 +33,11 @@
   {%- when "lightning" -%}{%- assign _p = '<path fill="currentColor" d="M215.79 118.17a8 8 0 0 0-5-5.66L153.18 90.9l14.66-73.33a8 8 0 0 0-13.69-7l-112 120a8 8 0 0 0 3 13l57.63 21.61l-14.62 73.25a8 8 0 0 0 13.69 7l112-120a8 8 0 0 0 1.94-7.26M109.37 214l10.47-52.38a8 8 0 0 0-5-9.06L62 132.71l84.62-90.66l-10.46 52.38a8 8 0 0 0 5 9.06l52.8 19.8Z"/>' -%}
 {%- endcase -%}
 {%- if _p != "" -%}
-{%- assign _size = include.size | default: "1em" -%}
-<svg class="ph-icon{% if include.class %} {{ include.class }}{% endif %}" xmlns="http://www.w3.org/2000/svg" width="{{ _size }}" height="{{ _size }}" viewBox="0 0 256 256" fill="currentColor" {% if include.label %}role="img" aria-label="{{ include.label }}"{% else %}aria-hidden="true"{% endif %}>{{ _p }}</svg>
+{%- comment -%}
+  Size comes from CSS: .ph-icon { width:1em; height:1em } scales the icon to the
+  surrounding font-size. To resize, set font-size on the container (or pass `sz`).
+  NB: the option is `sz`, NOT `size` — `include.size` collides with Liquid's
+  built-in `.size` property (it returns the PARAMETER COUNT, not a "size" arg).
+{%- endcomment -%}
+<svg class="ph-icon{% if include.class %} {{ include.class }}{% endif %}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"{% if include.sz %} style="font-size:{{ include.sz }}"{% endif %} {% if include.label %}role="img" aria-label="{{ include.label }}"{% else %}aria-hidden="true"{% endif %}>{{ _p }}</svg>
 {%- endif -%}
