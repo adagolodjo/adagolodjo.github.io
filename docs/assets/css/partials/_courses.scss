@@ -1,0 +1,508 @@
+// ============================================================
+// COURSE PAGES — shared theme
+//
+// Replaces the ~200-570 lines of inline <style> that each course
+// page used to carry. Those blocks redefined GLOBAL variable names
+// (--primary-color, --border-radius…) on :root, which hijacked the
+// site theme for the whole page. Everything here is prefixed
+// --course-* and scoped to .course-page, so it can never leak.
+//
+// Base palette = site Ocean/Teal. Each course adds a discreet
+// per-track accent via `track:` in its front matter, which
+// _layouts/page.html turns into [data-track="…"].
+// ============================================================
+
+.course-page {
+  // ── Structural base (Ocean / Teal) ──────────────────────
+  --course-ink:         #013A3C;
+  --course-primary:     #016064;
+  --course-primary-lt:  #48AAAD;
+  --course-surface:     #ffffff;
+  --course-bg-soft:     #F0FAFA;
+  --course-border:      #D3E9EA;
+  --course-muted:       #5A7274;
+  --course-radius:      14px;
+  --course-radius-sm:   10px;
+  --course-shadow:      0 4px 18px rgba(1, 96, 100, .09);
+  --course-shadow-hi:   0 12px 34px rgba(1, 96, 100, .16);
+  --course-transition:  all .28s cubic-bezier(.4, 0, .2, 1);
+
+  // ── Accent — defaults to Ocean, overridden per track ─────
+  --course-accent:      #016064;
+  --course-accent-ink:  #013A3C;
+  --course-accent-wash: #E0F7FA;
+}
+
+// ── Track accents ─────────────────────────────────────────
+// Used sparingly: section icons, card left borders, badges.
+// Each has an -ink variant (text-safe contrast) and a -wash tint.
+.course-page[data-track="industrie"] {
+  --course-accent: #B26B00; --course-accent-ink: #8A5200; --course-accent-wash: #FFF3E0;
+}
+.course-page[data-track="medical"] {
+  --course-accent: #B02A5B; --course-accent-ink: #8E2049; --course-accent-wash: #FDE9F0;
+}
+.course-page[data-track="numerique"] {
+  --course-accent: #4A4DA6; --course-accent-ink: #3A3C85; --course-accent-wash: #EDEEFA;
+}
+.course-page[data-track="maths"] {
+  --course-accent: #2F7D4F; --course-accent-ink: #256540; --course-accent-wash: #E6F4EC;
+}
+
+// ============================================================
+// Components
+// ============================================================
+.content.course-page {
+
+  // ── Hero ────────────────────────────────────────────────
+  .course-hero {
+    background: linear-gradient(135deg, var(--course-ink) 0%, var(--course-primary) 55%, var(--course-primary-lt) 100%);
+    color: #fff;
+    padding: 3.5rem 2rem;
+    border-radius: var(--course-radius);
+    margin-bottom: 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    h1 {
+      color: #fff;
+      font-size: 2.6rem;
+      margin-bottom: .75rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    .subtitle {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, .88);
+      margin-bottom: 1.5rem;
+    }
+  }
+  .course-hero-content { position: relative; z-index: 2; }
+
+  .hero-badges {
+    display: flex;
+    justify-content: center;
+    gap: .6rem;
+    flex-wrap: wrap;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    background: rgba(255, 255, 255, .16);
+    border: 1px solid rgba(255, 255, 255, .28);
+    padding: .4rem 1rem;
+    border-radius: 999px;
+    font-size: .85rem;
+    font-weight: 600;
+  }
+
+  // ── Sticky section nav ──────────────────────────────────
+  .course-nav {
+    background: var(--course-surface);
+    border: 1px solid var(--course-border);
+    border-radius: var(--course-radius);
+    box-shadow: var(--course-shadow);
+    padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 84px;               // clears the fixed site navbar
+    z-index: 50;
+  }
+  .nav-links {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    padding: .5rem 1.1rem;
+    background: var(--course-bg-soft);
+    color: var(--course-primary);
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: .88rem;
+    transition: var(--course-transition);
+
+    &:hover,
+    &.active {
+      background: var(--course-primary);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+  }
+
+  // ── Section cards ───────────────────────────────────────
+  .section-card {
+    background: var(--course-surface);
+    border: 1px solid var(--course-border);
+    border-radius: var(--course-radius);
+    box-shadow: var(--course-shadow);
+    padding: 2rem;
+    margin-bottom: 1.75rem;
+    transition: var(--course-transition);
+
+    &:hover { box-shadow: var(--course-shadow-hi); }
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: .85rem;
+    border-bottom: 2px solid var(--course-border);
+  }
+  .section-icon {
+    font-size: 1.9rem;
+    margin-right: .9rem;
+    color: var(--course-accent);   // ← track accent
+    display: inline-flex;
+  }
+  .section-title {
+    color: var(--course-ink);
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  // ── Objectives ──────────────────────────────────────────
+  .objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+  }
+  .objective-card {
+    background: var(--course-bg-soft);
+    padding: 1.25rem 1.4rem;
+    border-radius: var(--course-radius-sm);
+    border-left: 4px solid var(--course-accent);
+    transition: var(--course-transition);
+
+    &:hover { transform: translateX(6px); background: var(--course-accent-wash); }
+    h4 { color: var(--course-ink); margin-bottom: .4rem; font-weight: 700; }
+  }
+
+  // ── Prerequisites ───────────────────────────────────────
+  .prerequisite-item {
+    display: flex;
+    align-items: center;
+    padding: .9rem 1rem;
+    background: var(--course-bg-soft);
+    border-radius: var(--course-radius-sm);
+    margin-bottom: .75rem;
+    transition: var(--course-transition);
+
+    &:hover { background: var(--course-accent-wash); transform: translateX(5px); }
+  }
+  .prerequisite-icon {
+    font-size: 1.4rem;
+    margin-right: .9rem;
+    color: var(--course-primary);
+    display: inline-flex;
+  }
+
+  // ── Timeline (programme) ────────────────────────────────
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 15px; top: 0; bottom: 0;
+      width: 2px;
+      background: var(--course-primary-lt);
+    }
+  }
+  .timeline-item {
+    position: relative;
+    margin: 0 0 1.5rem 2rem;
+    background: var(--course-surface);
+    padding: 1.25rem 1.4rem;
+    border: 1px solid var(--course-border);
+    border-left: 4px solid var(--course-primary-lt);
+    border-radius: var(--course-radius-sm);
+    box-shadow: 0 2px 10px rgba(1, 96, 100, .05);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -2.75rem; top: 1.4rem;
+      width: 12px; height: 12px;
+      background: var(--course-accent);
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 3px var(--course-accent);
+    }
+  }
+  .timeline-week {
+    font-weight: 700;
+    color: var(--course-accent-ink);   // ← track accent
+    font-size: 1.02rem;
+    margin-bottom: .35rem;
+  }
+  .timeline-content h4 { color: var(--course-ink); margin-bottom: .4rem; }
+  .timeline-details {
+    color: var(--course-muted);
+    font-size: .93rem;
+    margin-top: .4rem;
+    font-style: italic;
+  }
+
+  // ── Evaluation ──────────────────────────────────────────
+  .evaluation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+  }
+  .eval-item {
+    text-align: center;
+    padding: 1.75rem 1rem;
+    background: linear-gradient(160deg, var(--course-bg-soft), #fff);
+    border: 1px solid var(--course-border);
+    border-radius: var(--course-radius);
+    box-shadow: var(--course-shadow);
+    transition: var(--course-transition);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--course-primary), var(--course-accent));
+    }
+    &:hover { transform: translateY(-6px); box-shadow: var(--course-shadow-hi); }
+  }
+  .eval-percentage {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--course-primary);
+    display: block;
+    margin-bottom: .35rem;
+    line-height: 1;
+  }
+  .eval-title { font-weight: 700; color: var(--course-ink); margin-bottom: .35rem; }
+  .eval-description { font-size: .88rem; color: var(--course-muted); }
+
+  // ── Resources (dark band) ───────────────────────────────
+  .resources-section {
+    background: linear-gradient(135deg, var(--course-ink) 0%, var(--course-primary) 100%);
+    color: #fff;
+    padding: 2.5rem;
+    border-radius: var(--course-radius);
+    margin: 2.5rem 0;
+    text-align: center;
+
+    h2, h3, h4 { color: #fff; }
+  }
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.75rem;
+  }
+  .resource-card {
+    background: rgba(255, 255, 255, .1);
+    padding: 1.6rem;
+    border-radius: var(--course-radius-sm);
+    border: 1px solid rgba(255, 255, 255, .2);
+    transition: var(--course-transition);
+    text-align: left;
+
+    &:hover { background: rgba(255, 255, 255, .18); transform: translateY(-4px); }
+    h4 { color: #fff; margin-bottom: .75rem; font-weight: 700; }
+  }
+  .resource-icon {
+    font-size: 2.2rem;
+    margin-bottom: .75rem;
+    color: var(--course-primary-lt);
+    display: inline-flex;
+  }
+  .resource-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: #fff;
+    color: var(--course-primary);
+    padding: .6rem 1.3rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: .9rem;
+    margin-top: .9rem;
+    transition: var(--course-transition);
+
+    &:hover { background: var(--course-bg-soft); transform: scale(1.04); }
+  }
+
+  // ── Contact band ────────────────────────────────────────
+  .contact-section {
+    background: var(--course-ink);
+    color: #fff;
+    padding: 2.5rem;
+    border-radius: var(--course-radius);
+    margin-top: 2.5rem;
+
+    h2, h3, h4 { color: #fff; }
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-top: 1.75rem;
+  }
+  .contact-info { display: flex; flex-direction: column; gap: .75rem; }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    padding: .9rem 1rem;
+    background: rgba(255, 255, 255, .1);
+    border-radius: var(--course-radius-sm);
+    transition: var(--course-transition);
+
+    &:hover { background: rgba(255, 255, 255, .18); }
+  }
+  .contact-icon { font-size: 1.4rem; color: var(--course-primary-lt); display: inline-flex; }
+  .office-hours {
+    background: rgba(255, 255, 255, .1);
+    padding: 1.6rem;
+    border-radius: var(--course-radius-sm);
+    border-left: 4px solid var(--course-primary-lt);
+
+    h4 { color: #fff; margin-bottom: .9rem; }
+  }
+  .office-hours-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: .45rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .12);
+      &:last-child { border-bottom: none; }
+    }
+  }
+
+  // ── Skills ──────────────────────────────────────────────
+  .skills-tags { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: .9rem; }
+  .skill-tag {
+    background: var(--course-accent-wash);
+    color: var(--course-accent-ink);
+    border: 1px solid var(--course-accent);
+    padding: .35rem .9rem;
+    border-radius: 999px;
+    font-size: .82rem;
+    font-weight: 600;
+  }
+
+  // ── Bibliography ────────────────────────────────────────
+  .bibliography-section {
+    background: var(--course-bg-soft);
+    padding: 1.75rem;
+    border-radius: var(--course-radius-sm);
+    margin-top: 1.75rem;
+
+    h4 { color: var(--course-ink); margin-bottom: 1.25rem; font-weight: 700; }
+  }
+  .bibliography-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.25rem;
+  }
+  .bibliography-category {
+    background: var(--course-surface);
+    padding: 1.3rem;
+    border: 1px solid var(--course-border);
+    border-radius: var(--course-radius-sm);
+
+    h5 {
+      color: var(--course-accent-ink);
+      margin-bottom: .9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    ul { list-style: none; padding: 0; }
+    li { margin-bottom: .65rem; font-size: .93rem; line-height: 1.45; color: var(--course-muted); }
+  }
+
+  // ── Info callout ────────────────────────────────────────
+  .info-box {
+    background: var(--course-accent-wash);
+    border-left: 4px solid var(--course-accent);
+    padding: 1.25rem 1.4rem;
+    border-radius: var(--course-radius-sm);
+    margin: 1.75rem 0;
+
+    h4 { color: var(--course-accent-ink); margin-bottom: .75rem; }
+  }
+
+  // ── Practical info ──────────────────────────────────────
+  .practical-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.75rem;
+  }
+  .practical-card {
+    background: var(--course-surface);
+    padding: 1.3rem;
+    border: 1px solid var(--course-border);
+    border-radius: var(--course-radius-sm);
+    box-shadow: var(--course-shadow);
+    transition: var(--course-transition);
+
+    &:hover { box-shadow: var(--course-shadow-hi); }
+    h4 {
+      color: var(--course-ink);
+      margin-bottom: .75rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+  }
+
+  // ── Responsive ──────────────────────────────────────────
+  @media (max-width: 768px) {
+    .course-hero { padding: 2.5rem 1.25rem; h1 { font-size: 1.9rem; } }
+    .course-nav  { position: static; }
+    .nav-links   { justify-content: flex-start; overflow-x: auto; padding-bottom: .4rem; }
+    .contact-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+    .timeline { padding-left: 1rem; }
+    .timeline-item { margin-left: 1rem; &::before { left: -1.75rem; } }
+    .bibliography-grid,
+    .practical-info-grid { grid-template-columns: 1fr; }
+    .resources-section,
+    .contact-section { padding: 1.75rem 1.25rem; }
+  }
+}
+
+// ── Dark mode ─────────────────────────────────────────────
+[data-theme="dark"] .content.course-page {
+  --course-surface:  #172A2B;
+  --course-bg-soft:  #122223;
+  --course-border:   #24494B;
+  --course-ink:      #E4F3F3;
+  --course-muted:    #9BB6B7;
+  --course-shadow:   0 4px 18px rgba(0, 0, 0, .3);
+  --course-shadow-hi:0 12px 34px rgba(0, 0, 0, .45);
+
+  .section-title,
+  .objective-card h4,
+  .timeline-content h4,
+  .eval-title,
+  .practical-card h4,
+  .bibliography-section h4 { color: var(--course-ink); }
+
+  .nav-link { color: var(--course-primary-lt); }
+}
