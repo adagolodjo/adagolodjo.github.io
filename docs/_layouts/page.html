@@ -16,8 +16,13 @@ layout: default
 {% else %}
 <section class="section">
   <div class="container">
-    <div class="content">
-      {{ content }} 
+    {%- comment -%}
+      Pages declaring `track:` in front matter (course pages) get the shared
+      course theme from partials/_courses.scss, scoped by .course-page and
+      accented per track via [data-track].
+    {%- endcomment -%}
+    <div class="content{% if page.track %} course-page{% endif %}"{% if page.track %} data-track="{{ page.track }}"{% endif %}>
+      {{ content }}
     </div>
   </div>
 </section>
