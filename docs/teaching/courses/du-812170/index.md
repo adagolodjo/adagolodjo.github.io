@@ -4,268 +4,9 @@ title: DU-812170 - Culture Numérique et Sécurité des Données
 subtitle: Culture numérique et sécurité des données
 permalink: /teaching/courses/du-812170/
 image: /assets/images/projects/robotique.jpg
+track: numerique
 ---
 
-<style>
-:root {
-  --primary-color: #2c3e50;
-  --secondary-color: #3498db;
-  --accent-color: #e74c3c;
-  --success-color: #27ae60;
-  --warning-color: #f39c12;
-  --digital-color: #9b59b6;
-  --light-bg: #f8f9fa;
-  --card-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  --card-shadow-hover: 0 12px 40px rgba(0,0,0,0.15);
-  --border-radius: 16px;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.course-hero {
-  background: linear-gradient(135deg, var(--digital-color) 0%, var(--secondary-color) 100%);
-  color: white;
-  padding: 4rem 2rem;
-  border-radius: var(--border-radius);
-  margin-bottom: 3rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.course-hero::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='white' fill-opacity='0.1'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20v20h40V20c0-11.046-8.954-20-20-20z'/%3E%3C/g%3E%3C/svg%3E");
-  animation: float 20s linear infinite;
-  z-index: 1;
-}
-
-.course-hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.course-hero h1 {
-  color: white;
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 300;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.course-hero .subtitle {
-  font-size: 1.3rem;
-  opacity: 0.95;
-  margin-bottom: 2rem;
-}
-
-.hero-badges {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.hero-badge {
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-weight: 500;
-  border: 1px solid rgba(255,255,255,0.3);
-}
-
-.course-nav {
-  background: white;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  position: sticky;
-  top: 20px;
-  z-index: 100;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.nav-link {
-  padding: 0.75rem 1.5rem;
-  background: var(--light-bg);
-  color: var(--primary-color);
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: 500;
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.nav-link:hover, .nav-link.active {
-  background: var(--secondary-color);
-  color: white;
-  transform: translateY(-2px);
-}
-
-.section-card {
-  background: white;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  padding: 2.5rem;
-  margin-bottom: 2rem;
-  transition: var(--transition);
-}
-
-.section-card:hover {
-  box-shadow: var(--card-shadow-hover);
-}
-
-.section-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--light-bg);
-}
-
-.section-icon {
-  font-size: 2rem;
-  margin-right: 1rem;
-  color: var(--digital-color);
-}
-
-.section-title {
-  color: var(--primary-color);
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.objectives-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.objective-card {
-  background: var(--light-bg);
-  padding: 1.5rem;
-  border-radius: 12px;
-  border-left: 4px solid var(--success-color);
-  transition: var(--transition);
-}
-
-.objective-card:hover {
-  transform: translateX(8px);
-  background: #e8f5e8;
-}
-
-.objective-card h4 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.module-card {
-  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  border-left: 4px solid var(--digital-color);
-  margin: 2rem 0;
-  transition: var(--transition);
-}
-
-.module-card:hover {
-  transform: translateX(8px);
-  box-shadow: var(--card-shadow);
-}
-
-.module-title {
-  color: var(--digital-color);
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.info-box {
-  background: linear-gradient(135deg, #e8f4f8, #d4edda);
-  border-left: 4px solid var(--digital-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin: 2rem 0;
-}
-
-.info-box h4 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.warning-box {
-  background: linear-gradient(135deg, #fff3e0, #ffecb3);
-  border-left: 4px solid var(--warning-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin: 2rem 0;
-}
-
-.warning-box h4 {
-  color: var(--warning-color);
-  margin-bottom: 1rem;
-}
-
-.checklist {
-  list-style: none;
-  padding: 0;
-}
-
-.checklist li {
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #eee;
-}
-
-.checklist li:last-child {
-  border-bottom: none;
-}
-
-.checklist li::before {
-  content: "✓";
-  color: var(--success-color);
-  font-weight: bold;
-  margin-right: 0.5rem;
-}
-
-@keyframes float {
-  0% { transform: translateX(-50px); }
-  100% { transform: translateX(calc(100vw + 50px)); }
-}
-
-@media (max-width: 768px) {
-  .course-hero h1 {
-    font-size: 2.5rem;
-  }
-  
-  .nav-links {
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
-  }
-}
-</style>
 
 <div class="course-hero">
   <div class="course-hero-content">
@@ -309,15 +50,15 @@ image: /assets/images/projects/robotique.jpg
     <strong>Volume :</strong> 5 heures de travaux pratiques<br>
     <strong>Évaluation :</strong> Note de Projet et Évaluation en classe</p>
     
-    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(155, 89, 182, 0.1); border-radius: 8px; border-left: 4px solid var(--digital-color);">
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(155, 89, 182, 0.1); border-radius: 8px; border-left: 4px solid var(--course-accent);">
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
         📄 Support de Cours Complet
       </h5>
       <p style="margin-bottom: 1rem; font-size: 0.95rem;">Le document PDF complet avec toutes les notions, exemples et exercices est disponible :</p>
       <a href="https://nextcloud.univ-lille.fr/index.php/s/arMc4K5fptgyZfW" 
          target="_blank" 
          rel="noopener noreferrer"
-         style="display: inline-flex; align-items: center; gap: 0.5rem; background: #2c3e50; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: var(--transition); box-shadow: 0 2px 8px rgba(44, 62, 80, 0.3);"
+         style="display: inline-flex; align-items: center; gap: 0.5rem; background: #2c3e50; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: var(--course-transition); box-shadow: 0 2px 8px rgba(44, 62, 80, 0.3);"
          onmouseover="this.style.background='#1a252f'; this.style.transform='translateY(-2px)'" 
          onmouseout="this.style.background='#2c3e50'; this.style.transform='translateY(0)'">
         📥 Accéder au PDF du cours (Nextcloud)
@@ -376,10 +117,10 @@ image: /assets/images/projects/robotique.jpg
     </div>
     <p><strong>Objectifs :</strong> Appréhender le fonctionnement des ordinateurs, des algorithmes et de l'IA. Comprendre la nature des données et leur impact.</p>
     
-    <h4 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">Contenu détaillé :</h4>
+    <h4 style="color: var(--course-ink); margin-top: 1.5rem; margin-bottom: 1rem;">Contenu détaillé :</h4>
     
     <div style="margin-bottom: 1rem;">
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">1. Architecture et Systèmes</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">1. Architecture et Systèmes</h5>
       <ul>
         <li>Composants d'un ordinateur (CPU, RAM, Stockage)</li>
         <li>Rôle du système d'exploitation (OS)</li>
@@ -388,7 +129,7 @@ image: /assets/images/projects/robotique.jpg
     </div>
     
     <div style="margin-bottom: 1rem;">
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">2. Algorithmique et Programmation</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">2. Algorithmique et Programmation</h5>
       <ul>
         <li>Qu'est-ce qu'un algorithme ?</li>
         <li>Exemples concrets et impact sur la vie quotidienne</li>
@@ -397,7 +138,7 @@ image: /assets/images/projects/robotique.jpg
     </div>
     
     <div style="margin-bottom: 1rem;">
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">3. Introduction à l'Intelligence Artificielle</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">3. Introduction à l'Intelligence Artificielle</h5>
       <ul>
         <li>Définitions : IA, Machine Learning, Deep Learning</li>
         <li>Exemples d'applications (reconnaissance d'image, traduction)</li>
@@ -406,7 +147,7 @@ image: /assets/images/projects/robotique.jpg
     </div>
     
     <div>
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">4. La Donnée</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">4. La Donnée</h5>
       <ul>
         <li>Cycle de vie d'une donnée (création, stockage, traitement, suppression)</li>
         <li>Données personnelles, sensibles, anonymes</li>
@@ -421,10 +162,10 @@ image: /assets/images/projects/robotique.jpg
     </div>
     <p><strong>Objectifs :</strong> Être conscient des risques (personnels, confidentialité, économiques, sociétaux) et de ses propres biais cognitifs.</p>
     
-    <h4 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">Contenu détaillé :</h4>
+    <h4 style="color: var(--course-ink); margin-top: 1.5rem; margin-bottom: 1rem;">Contenu détaillé :</h4>
     
     <div style="margin-bottom: 1rem;">
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">1. Cybersécurité et Menaces</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">1. Cybersécurité et Menaces</h5>
       <ul>
         <li>Ingénierie sociale et hameçonnage (phishing)</li>
         <li>Logiciels malveillants (virus, rançongiciels)</li>
@@ -433,7 +174,7 @@ image: /assets/images/projects/robotique.jpg
     </div>
     
     <div style="margin-bottom: 1rem;">
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">2. Protection de la Vie Privée</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">2. Protection de la Vie Privée</h5>
       <ul>
         <li>Identité numérique et empreinte digitale</li>
         <li>Modèles économiques des plateformes (capitalisme de surveillance)</li>
@@ -442,7 +183,7 @@ image: /assets/images/projects/robotique.jpg
     </div>
     
     <div style="margin-bottom: 1rem;">
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">3. Désinformation et Esprit Critique</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">3. Désinformation et Esprit Critique</h5>
       <ul>
         <li>Reconnaître une fausse information (fake news)</li>
         <li>Bulles de filtres et chambres d'écho</li>
@@ -450,7 +191,7 @@ image: /assets/images/projects/robotique.jpg
     </div>
     
     <div>
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">4. Biais Cognitifs</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">4. Biais Cognitifs</h5>
       <ul>
         <li>Présentation des biais courants (confirmation, disponibilité, etc.)</li>
         <li>Comment les algorithmes peuvent amplifier ces biais</li>
@@ -464,10 +205,10 @@ image: /assets/images/projects/robotique.jpg
     </div>
     <p><strong>Objectifs :</strong> Choisir de manière raisonnée ses outils numériques et être capable de justifier son choix.</p>
     
-    <h4 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">Contenu détaillé :</h4>
+    <h4 style="color: var(--course-ink); margin-top: 1.5rem; margin-bottom: 1rem;">Contenu détaillé :</h4>
     
     <div style="margin-bottom: 1rem;">
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">1. Écosystèmes Logiciels</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">1. Écosystèmes Logiciels</h5>
       <ul>
         <li>Logiciels libres (Open Source) vs. Logiciels propriétaires</li>
         <li>Licences et droits d'usage</li>
@@ -475,7 +216,7 @@ image: /assets/images/projects/robotique.jpg
     </div>
     
     <div style="margin-bottom: 1rem;">
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">2. Services en Ligne (Cloud)</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">2. Services en Ligne (Cloud)</h5>
       <ul>
         <li>Analyse des offres GAFAM (Google, Apple, Facebook, Amazon, Microsoft)</li>
         <li>Alternatives respectueuses de la vie privée (Proton, Framasoft, etc.)</li>
@@ -483,7 +224,7 @@ image: /assets/images/projects/robotique.jpg
     </div>
     
     <div>
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">3. Critères de Choix d'un Outil</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">3. Critères de Choix d'un Outil</h5>
       <ul>
         <li>Grille d'analyse : Sécurité, Pérennité, Interopérabilité, Éthique, Coût</li>
         <li>Mise en situation : choisir un outil pour un projet d'ingénieur</li>
@@ -497,10 +238,10 @@ image: /assets/images/projects/robotique.jpg
     </div>
     <p><strong>Objectifs :</strong> Connaître, comprendre et appliquer la charte de l'université sur les SIAG.</p>
     
-    <h4 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">Contenu détaillé :</h4>
+    <h4 style="color: var(--course-ink); margin-top: 1.5rem; margin-bottom: 1rem;">Contenu détaillé :</h4>
     
     <div style="margin-bottom: 1rem;">
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">1. Règlement Général sur la Protection des Données (RGPD)</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">1. Règlement Général sur la Protection des Données (RGPD)</h5>
       <ul>
         <li>Principes clés (consentement, droit à l'oubli, etc.)</li>
         <li>Impact pour l'utilisateur et le futur ingénieur</li>
@@ -508,7 +249,7 @@ image: /assets/images/projects/robotique.jpg
     </div>
     
     <div>
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">2. Charte du bon usage des Systèmes d'Information et des Applications de Gestion (SIAG)</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">2. Charte du bon usage des Systèmes d'Information et des Applications de Gestion (SIAG)</h5>
       <ul>
         <li>Lecture et analyse de la charte SIAG de l'Université de Lille</li>
         <li>Droits et devoirs de l'étudiant</li>
@@ -523,10 +264,10 @@ image: /assets/images/projects/robotique.jpg
     </div>
     <p><strong>Objectifs :</strong> Maîtriser les fondamentaux de l'IA générative et du prompt engineering pour optimiser son usage professionnel des outils d'intelligence artificielle.</p>
     
-    <h4 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">Contenu détaillé :</h4>
+    <h4 style="color: var(--course-ink); margin-top: 1.5rem; margin-bottom: 1rem;">Contenu détaillé :</h4>
     
     <div style="margin-bottom: 1rem;">
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">1. Introduction à l'IA Générative</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">1. Introduction à l'IA Générative</h5>
       <ul>
         <li>Comprendre les modèles de langage (LLMs) et leur fonctionnement</li>
         <li>Panorama des outils d'IA générative (ChatGPT, Claude, Gemini, etc.)</li>
@@ -536,7 +277,7 @@ image: /assets/images/projects/robotique.jpg
     </div>
     
     <div style="margin-bottom: 1rem;">
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">2. Techniques de Prompt Engineering</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">2. Techniques de Prompt Engineering</h5>
       <ul>
         <li>Principes de base d'un prompt efficace</li>
         <li>Structure et formulation des requêtes</li>
@@ -546,7 +287,7 @@ image: /assets/images/projects/robotique.jpg
     </div>
     
     <div style="margin-bottom: 1rem;">
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">3. Cas d'Usage pour l'Ingénieur</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">3. Cas d'Usage pour l'Ingénieur</h5>
       <ul>
         <li>Aide à la rédaction technique et documentation</li>
         <li>Analyse et débogage de code</li>
@@ -556,7 +297,7 @@ image: /assets/images/projects/robotique.jpg
     </div>
     
     <div>
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem;">4. Bonnes Pratiques et Responsabilité</h5>
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem;">4. Bonnes Pratiques et Responsabilité</h5>
       <ul>
         <li>Vérification et validation des résultats</li>
         <li>Protection des données sensibles</li>
@@ -565,15 +306,15 @@ image: /assets/images/projects/robotique.jpg
       </ul>
     </div>
     
-    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(155, 89, 182, 0.1); border-radius: 8px; border-left: 4px solid var(--digital-color);">
-      <h5 style="color: var(--digital-color); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(155, 89, 182, 0.1); border-radius: 8px; border-left: 4px solid var(--course-accent);">
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
         📄 Support de cours Module 5
       </h5>
       <p style="margin-bottom: 1rem; font-size: 0.95rem;">Document PDF détaillé sur l'IA générative et le prompt engineering :</p>
       <a href="https://nextcloud.univ-lille.fr/index.php/s/EsZQd6gipb8dstp" 
          target="_blank" 
          rel="noopener noreferrer"
-         style="display: inline-flex; align-items: center; gap: 0.5rem; background: #9b59b6; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: var(--transition); box-shadow: 0 2px 8px rgba(155, 89, 182, 0.3);"
+         style="display: inline-flex; align-items: center; gap: 0.5rem; background: #9b59b6; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: var(--course-transition); box-shadow: 0 2px 8px rgba(155, 89, 182, 0.3);"
          onmouseover="this.style.background='#8e44ad'; this.style.transform='translateY(-2px)'" 
          onmouseout="this.style.background='#9b59b6'; this.style.transform='translateY(0)'">
         📥 Télécharger le PDF du Module 5
@@ -629,7 +370,7 @@ image: /assets/images/projects/robotique.jpg
       <a href="https://nextcloud.univ-lille.fr/index.php/s/arMc4K5fptgyZfW" 
          target="_blank" 
          rel="noopener noreferrer"
-         style="display: inline-flex; align-items: center; gap: 0.5rem; background: #2c3e50; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 1rem; transition: var(--transition); box-shadow: 0 2px 8px rgba(44, 62, 80, 0.2);"
+         style="display: inline-flex; align-items: center; gap: 0.5rem; background: #2c3e50; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 1rem; transition: var(--course-transition); box-shadow: 0 2px 8px rgba(44, 62, 80, 0.2);"
          onmouseover="this.style.background='#1a252f'" 
          onmouseout="this.style.background='#2c3e50'">
         📥 Télécharger le PDF
@@ -681,7 +422,7 @@ image: /assets/images/projects/robotique.jpg
 
 ## 📞 Contact & encadrement
 
-<div style="background: var(--primary-color); color: white; padding: 2rem; border-radius: var(--border-radius); margin-top: 2rem;">
+<div style="background: var(--primary-color); color: white; padding: 2rem; border-radius: var(--course-radius); margin-top: 2rem;">
   <p><strong>👨‍🏫 Responsable du cours :</strong> Dr. Yinoussa Adagolodjo</p>
   <p><strong>✉️ Email :</strong> Utiliser le formulaire de contact sur la page d'accueil</p>
   <p><strong>🏢 Bureau :</strong> Bâtiment Polytech, Université de Lille</p>

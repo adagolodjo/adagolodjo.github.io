@@ -4,364 +4,9 @@ title: "Industrie 4.0"
 subtitle: "Introduction aux concepts de l'Industrie 4.0, IoT et fabrication intelligente"
 permalink: /teaching/courses/industrie-40/
 image: /assets/images/projects/industrie-40.jpg
+track: industrie
 ---
 
-<style>
-:root {
-  --primary-color: #2c3e50;
-  --secondary-color: #3498db;
-  --accent-color: #e74c3c;
-  --success-color: #27ae60;
-  --warning-color: #f39c12;
-  --industry-color: #e67e22;
-  --tech-color: #1abc9c;
-  --light-bg: #f8f9fa;
-  --card-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  --card-shadow-hover: 0 12px 40px rgba(0,0,0,0.15);
-  --border-radius: 16px;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.course-hero {
-  background: linear-gradient(135deg, var(--industry-color) 0%, var(--tech-color) 100%);
-  color: white;
-  padding: 4rem 2rem;
-  border-radius: var(--border-radius);
-  margin-bottom: 3rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.course-hero::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='white' fill-opacity='0.1'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20v20h40V20c0-11.046-8.954-20-20-20z'/%3E%3C/g%3E%3C/svg%3E");
-  animation: float 20s linear infinite;
-  z-index: 1;
-}
-
-.course-hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.course-hero h1 {
-  color: white;
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 300;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.course-hero .subtitle {
-  font-size: 1.3rem;
-  opacity: 0.95;
-  margin-bottom: 2rem;
-}
-
-.hero-badges {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.hero-badge {
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-weight: 500;
-  border: 1px solid rgba(255,255,255,0.3);
-}
-
-.course-nav {
-  background: white;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  position: sticky;
-  top: 20px;
-  z-index: 100;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.nav-link {
-  padding: 0.75rem 1.5rem;
-  background: var(--light-bg);
-  color: var(--primary-color);
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: 500;
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.nav-link:hover, .nav-link.active {
-  background: var(--secondary-color);
-  color: white;
-  transform: translateY(-2px);
-}
-
-.section-card {
-  background: white;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  padding: 2.5rem;
-  margin-bottom: 2rem;
-  transition: var(--transition);
-}
-
-.section-card:hover {
-  box-shadow: var(--card-shadow-hover);
-}
-
-.section-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--light-bg);
-}
-
-.section-icon {
-  font-size: 2rem;
-  margin-right: 1rem;
-  color: var(--industry-color);
-}
-
-.section-title {
-  color: var(--primary-color);
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.objectives-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.objective-card {
-  background: var(--light-bg);
-  padding: 1.5rem;
-  border-radius: 12px;
-  border-left: 4px solid var(--success-color);
-  transition: var(--transition);
-}
-
-.objective-card:hover {
-  transform: translateX(8px);
-  background: #e8f5e8;
-}
-
-.info-box {
-  background: linear-gradient(135deg, #fff3cd, #d1ecf1);
-  border-left: 4px solid var(--industry-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin: 2rem 0;
-}
-
-.timeline {
-  position: relative;
-  padding-left: 2rem;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 15px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--secondary-color);
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 2rem;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  margin-left: 2rem;
-  border-left: 4px solid var(--secondary-color);
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -2.75rem;
-  top: 1.5rem;
-  width: 12px;
-  height: 12px;
-  background: var(--secondary-color);
-  border-radius: 50%;
-  border: 3px solid white;
-  box-shadow: 0 0 0 3px var(--secondary-color);
-}
-
-.evaluation-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.eval-item {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: linear-gradient(135deg, var(--light-bg), white);
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-
-.eval-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--industry-color), var(--tech-color));
-}
-
-.eval-item:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--card-shadow-hover);
-}
-
-.eval-percentage {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--industry-color);
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.eval-title {
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.eval-description {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.resources-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.resource-card {
-  background: rgba(230, 126, 34, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 16px;
-  border: 1px solid rgba(230, 126, 34, 0.2);
-  transition: var(--transition);
-}
-
-.resource-card:hover {
-  background: rgba(230, 126, 34, 0.2);
-  transform: translateY(-5px);
-}
-
-.resource-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: var(--industry-color);
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  background: rgba(230, 126, 34, 0.1);
-  border-radius: 12px;
-  transition: var(--transition);
-}
-
-.contact-item:hover {
-  background: rgba(230, 126, 34, 0.2);
-}
-
-.contact-icon {
-  font-size: 1.5rem;
-  color: var(--industry-color);
-}
-
-.tech-stack {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.tech-item {
-  background: rgba(26, 188, 156, 0.1);
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  border: 1px solid rgba(26, 188, 156, 0.2);
-}
-
-@keyframes float {
-  0% { transform: translateX(-50px); }
-  100% { transform: translateX(calc(100vw + 50px)); }
-}
-
-@media (max-width: 768px) {
-  .course-hero h1 {
-    font-size: 2.5rem;
-  }
-  
-  .nav-links {
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
-  }
-  
-  .timeline {
-    padding-left: 1rem;
-  }
-  
-  .timeline-item {
-    margin-left: 1rem;
-  }
-}
-</style>
 
 <div class="course-hero">
   <div class="course-hero-content">
@@ -432,7 +77,7 @@ image: /assets/images/projects/industrie-40.jpg
     <h2 class="section-title">Programme détaillé</h2>
   </div>
   
-  <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">🎧 Cours Magistraux (CM - 4.5h)</h3>
+  <h3 style="color: var(--course-accent-ink); margin-bottom: 1rem;">🎧 Cours Magistraux (CM - 4.5h)</h3>
   
   <div class="timeline">
     <div class="timeline-item">
@@ -476,7 +121,7 @@ image: /assets/images/projects/industrie-40.jpg
     </div>
   </div>
   
-  <h3 style="color: var(--tech-color); margin: 2rem 0 1rem;">🔧 Travaux Pratiques (TP - 6h)</h3>
+  <h3 style="color: var(--course-accent-ink); margin: 2rem 0 1rem;">🔧 Travaux Pratiques (TP - 6h)</h3>
   
   <div class="timeline">
     <div class="timeline-item">
@@ -519,20 +164,20 @@ image: /assets/images/projects/industrie-40.jpg
   
   <!-- Ressources du cours par partie -->
   <div style="margin-bottom: 3rem;">
-    <h3 style="color: var(--industry-color); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
+    <h3 style="color: var(--course-accent-ink); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
       <span>📁</span> Supports de cours
     </h3>
     
     <div class="timeline" style="margin-left: 0; padding-left: 0;">
-      <div class="timeline-item" style="margin-left: 0; border-left: 4px solid var(--industry-color); background: linear-gradient(135deg, rgba(230, 126, 34, 0.1), rgba(230, 126, 34, 0.05));">
-        <h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--industry-color);">
+      <div class="timeline-item" style="margin-left: 0; border-left: 4px solid var(--course-accent); background: linear-gradient(135deg, rgba(230, 126, 34, 0.1), rgba(230, 126, 34, 0.05));">
+        <h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--course-accent-ink);">
           <span>📊</span> Partie 1 : Introduction à l'Industrie 4.0
         </h4>
         <p>Contexte historique, technologies clés et transformation numérique</p>
         <div style="margin-top: 1rem;">
           <a href="https://nextcloud.univ-lille.fr/index.php/s/yLnNcYHz7B28SCN" 
              class="nav-link" 
-             style="display: inline-flex; background: var(--industry-color); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; transition: var(--transition);" 
+             style="display: inline-flex; background: var(--course-primary); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; transition: var(--course-transition);" 
              target="_blank" 
              rel="noopener noreferrer">
             <span style="margin-right: 0.5rem;">📥</span>
@@ -541,15 +186,15 @@ image: /assets/images/projects/industrie-40.jpg
         </div>
       </div>
       
-      <div class="timeline-item" style="margin-left: 0; border-left: 4px solid var(--industry-color); background: linear-gradient(135deg, rgba(230, 126, 34, 0.1), rgba(230, 126, 34, 0.05));">
-        <h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--industry-color);">
+      <div class="timeline-item" style="margin-left: 0; border-left: 4px solid var(--course-accent); background: linear-gradient(135deg, rgba(230, 126, 34, 0.1), rgba(230, 126, 34, 0.05));">
+        <h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--course-accent-ink);">
           <span>🤖</span> IA Génératives et Automatisation
         </h4>
         <p>Applications des intelligences artificielles génératives dans l'industrie 4.0</p>
         <div style="margin-top: 1rem;">
           <a href="https://nextcloud.univ-lille.fr/index.php/s/yLnNcYHz7B28SCN" 
              class="nav-link" 
-             style="display: inline-flex; background: var(--industry-color); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; transition: var(--transition);" 
+             style="display: inline-flex; background: var(--course-primary); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; transition: var(--course-transition);" 
              target="_blank" 
              rel="noopener noreferrer">
             <span style="margin-right: 0.5rem;">📥</span>
@@ -601,20 +246,20 @@ image: /assets/images/projects/industrie-40.jpg
   
   <!-- Section Projets et évaluations -->
   <div style="margin-bottom: 3rem;">
-    <h3 style="color: var(--tech-color); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
+    <h3 style="color: var(--course-accent-ink); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
       <span>📁</span> Projets et évaluations
     </h3>
     
     <div class="timeline" style="margin-left: 0; padding-left: 0;">
-      <div class="timeline-item" style="margin-left: 0; border-left: 4px solid var(--tech-color); background: linear-gradient(135deg, rgba(26, 188, 156, 0.1), rgba(26, 188, 156, 0.05));">
-        <h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--tech-color);">
+      <div class="timeline-item" style="margin-left: 0; border-left: 4px solid var(--course-accent); background: linear-gradient(135deg, rgba(26, 188, 156, 0.1), rgba(26, 188, 156, 0.05));">
+        <h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--course-accent-ink);">
           <span>📝</span> Consignes pour le projet
         </h4>
         <p>Attendus, modalités et critères d'évaluation du projet final</p>
         <div style="margin-top: 1rem;">
           <a href="https://nextcloud.univ-lille.fr/index.php/s/JJE9imY56iZDwpx" 
              class="nav-link" 
-             style="display: inline-flex; background: var(--tech-color); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; transition: var(--transition);" 
+             style="display: inline-flex; background: var(--course-primary); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; transition: var(--course-transition);" 
              target="_blank" 
              rel="noopener noreferrer">
             <span style="margin-right: 0.5rem;">📥</span>
@@ -627,7 +272,7 @@ image: /assets/images/projects/industrie-40.jpg
   
   <!-- Ressources complémentaires -->
   <div>
-    <h3 style="color: var(--secondary-color); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
+    <h3 style="color: var(--course-accent-ink); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
       <span>📚</span> Ressources complémentaires
     </h3>
     

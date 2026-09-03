@@ -4,423 +4,9 @@ title: GBA3 - TP Robotique ABB IRB140
 subtitle: Simulation et Programmation Robotique Industrielle
 permalink: /teaching/courses/gba3-robotique-abb/
 image: /assets/images/projects/robotique.jpg
+track: industrie
 ---
 
-<style>
-:root {
-  --primary-color: #2c3e50;
-  --secondary-color: #3498db;
-  --accent-color: #e74c3c;
-  --success-color: #27ae60;
-  --warning-color: #f39c12;
-  --robotics-color: #e67e22;
-  --light-bg: #f8f9fa;
-  --card-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  --card-shadow-hover: 0 12px 40px rgba(0,0,0,0.15);
-  --border-radius: 16px;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.course-hero {
-  background: linear-gradient(135deg, var(--robotics-color) 0%, var(--secondary-color) 100%);
-  color: white;
-  padding: 4rem 2rem;
-  border-radius: var(--border-radius);
-  margin-bottom: 3rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.course-hero::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='white' fill-opacity='0.1'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20v20h40V20c0-11.046-8.954-20-20-20z'/%3E%3C/g%3E%3C/svg%3E");
-  animation: float 20s linear infinite;
-  z-index: 1;
-}
-
-.course-hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.course-hero h1 {
-  color: white;
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 300;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.course-hero .subtitle {
-  font-size: 1.3rem;
-  opacity: 0.95;
-  margin-bottom: 2rem;
-}
-
-.hero-badges {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.hero-badge {
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-weight: 500;
-  border: 1px solid rgba(255,255,255,0.3);
-}
-
-.course-nav {
-  background: white;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  position: sticky;
-  top: 20px;
-  z-index: 100;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.nav-link {
-  padding: 0.75rem 1.5rem;
-  background: var(--light-bg);
-  color: var(--primary-color);
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: 500;
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.nav-link:hover, .nav-link.active {
-  background: var(--secondary-color);
-  color: white;
-  transform: translateY(-2px);
-}
-
-.section-card {
-  background: white;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  padding: 2.5rem;
-  margin-bottom: 2rem;
-  transition: var(--transition);
-}
-
-.section-card:hover {
-  box-shadow: var(--card-shadow-hover);
-}
-
-.section-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--light-bg);
-}
-
-.section-icon {
-  font-size: 2rem;
-  margin-right: 1rem;
-  color: var(--robotics-color);
-}
-
-.section-title {
-  color: var(--primary-color);
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.objectives-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.objective-card {
-  background: var(--light-bg);
-  padding: 1.5rem;
-  border-radius: 12px;
-  border-left: 4px solid var(--success-color);
-  transition: var(--transition);
-}
-
-.objective-card:hover {
-  transform: translateX(8px);
-  background: #e8f5e8;
-}
-
-.objective-card h4 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.prerequisite-item {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  background: var(--light-bg);
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  transition: var(--transition);
-}
-
-.prerequisite-item:hover {
-  background: #e3f2fd;
-  transform: translateX(5px);
-}
-
-.prerequisite-icon {
-  font-size: 1.5rem;
-  margin-right: 1rem;
-  color: var(--secondary-color);
-}
-
-.timeline {
-  position: relative;
-  padding-left: 2rem;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 15px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--secondary-color);
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 2rem;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  margin-left: 2rem;
-  border-left: 4px solid var(--secondary-color);
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -2.75rem;
-  top: 1.5rem;
-  width: 12px;
-  height: 12px;
-  background: var(--secondary-color);
-  border-radius: 50%;
-  border: 3px solid white;
-  box-shadow: 0 0 0 3px var(--secondary-color);
-}
-
-.timeline-seance {
-  font-weight: 600;
-  color: var(--robotics-color);
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-.timeline-content h4 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.timeline-details {
-  color: #666;
-  font-size: 0.95rem;
-  margin-top: 0.5rem;
-  font-style: italic;
-}
-
-.evaluation-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.eval-item {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: linear-gradient(135deg, var(--light-bg), white);
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-
-.eval-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--robotics-color), var(--secondary-color));
-}
-
-.eval-item:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--card-shadow-hover);
-}
-
-.eval-percentage {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--robotics-color);
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.eval-title {
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.eval-description {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.info-box {
-  background: linear-gradient(135deg, #e8f4f8, #d4edda);
-  border-left: 4px solid var(--robotics-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin: 2rem 0;
-}
-
-.info-box h4 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.warning-box {
-  background: linear-gradient(135deg, #fff3e0, #ffecb3);
-  border-left: 4px solid var(--warning-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin: 2rem 0;
-}
-
-.warning-box h4 {
-  color: var(--warning-color);
-  margin-bottom: 1rem;
-}
-
-.exercise-card {
-  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  border-left: 4px solid var(--robotics-color);
-  margin: 2rem 0;
-  transition: var(--transition);
-}
-
-.exercise-card:hover {
-  transform: translateX(8px);
-  box-shadow: var(--card-shadow);
-}
-
-.exercise-title {
-  color: var(--robotics-color);
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.safety-alert {
-  background: linear-gradient(135deg, #ffebee, #ffcdd2);
-  border-left: 4px solid var(--accent-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin: 2rem 0;
-}
-
-.safety-alert h4 {
-  color: var(--accent-color);
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.checklist {
-  list-style: none;
-  padding: 0;
-}
-
-.checklist li {
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #eee;
-}
-
-.checklist li:last-child {
-  border-bottom: none;
-}
-
-.checklist li::before {
-  content: "✓";
-  color: var(--success-color);
-  font-weight: bold;
-  margin-right: 0.5rem;
-}
-
-@keyframes float {
-  0% { transform: translateX(-50px); }
-  100% { transform: translateX(calc(100vw + 50px)); }
-}
-
-@media (max-width: 768px) {
-  .course-hero h1 {
-    font-size: 2.5rem;
-  }
-  
-  .nav-links {
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
-  }
-  
-  .timeline {
-    padding-left: 1rem;
-  }
-  
-  .timeline-item {
-    margin-left: 1rem;
-  }
-}
-</style>
 
 <div class="course-hero">
   <div class="course-hero-content">
@@ -477,15 +63,15 @@ image: /assets/images/projects/robotique.jpg
     <strong>Format :</strong> Groupes de TP<br>
     <strong>Matériel :</strong> Station RobotStudio + Robot ABB IRB 140</p>
     
-    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(230, 126, 34, 0.1); border-radius: 8px; border-left: 4px solid var(--robotics-color);">
-      <h5 style="color: var(--robotics-color); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(230, 126, 34, 0.1); border-radius: 8px; border-left: 4px solid var(--course-accent);">
+      <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
         📄 Document TP Complet
       </h5>
       <p style="margin-bottom: 1rem; font-size: 0.95rem;">Le document PDF détaillé avec toutes les étapes, captures d'écran et instructions complètes est disponible :</p>
       <a href="https://nextcloud.univ-lille.fr/index.php/s/9FB727j462rFDjE" 
          target="_blank" 
          rel="noopener noreferrer"
-         style="display: inline-flex; align-items: center; gap: 0.5rem; background: #2c3e50; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: var(--transition); box-shadow: 0 2px 8px rgba(44, 62, 80, 0.3);"
+         style="display: inline-flex; align-items: center; gap: 0.5rem; background: #2c3e50; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: var(--course-transition); box-shadow: 0 2px 8px rgba(44, 62, 80, 0.3);"
          onmouseover="this.style.background='#1a252f'; this.style.transform='translateY(-2px)'" 
          onmouseout="this.style.background='#2c3e50'; this.style.transform='translateY(0)'">
         📥 Accéder au PDF du TP (Nextcloud)
@@ -493,7 +79,7 @@ image: /assets/images/projects/robotique.jpg
     </div>
   </div>
 
-  <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">✅ Prérequis</h3>
+  <h3 style="color: var(--course-ink); margin-bottom: 1.5rem;">✅ Prérequis</h3>
   
   <div class="prerequisite-item">
     <div class="prerequisite-icon">🔧</div>
@@ -519,7 +105,7 @@ image: /assets/images/projects/robotique.jpg
     </div>
   </div>
 
-  <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">🤖 Le robot IRB 140</h3>
+  <h3 style="color: var(--course-ink); margin-bottom: 1.5rem;">🤖 Le robot IRB 140</h3>
   <p>Le robot <strong>IRB 140</strong> est un robot manipulateur articulé à six degrés de liberté, caractérisé par sa robustesse et sa précision exceptionnelle de 0,03 mm. Compact (800 mm de hauteur, 98 kg), il s'intègre parfaitement aux espaces restreints et se prête idéalement aux applications de manutention, usinage et assemblage de précision.</p>
 </section>
 
@@ -596,7 +182,7 @@ image: /assets/images/projects/robotique.jpg
     <h2 class="section-title">Organisation du TP</h2>
   </div>
 
-  <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+  <h3 style="color: var(--course-ink); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
     🏢 Lieu et modalités
   </h3>
   
@@ -683,11 +269,11 @@ image: /assets/images/projects/robotique.jpg
     </ul>
   </div>
 
-  <h3 style="color: var(--primary-color); margin: 2rem 0 1.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+  <h3 style="color: var(--course-ink); margin: 2rem 0 1.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
     ✅ Procédure de fin de séance
   </h3>
   
-  <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 2rem; border-radius: var(--border-radius); border-left: 4px solid var(--success-color); margin: 2rem 0;">
+  <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 2rem; border-radius: var(--course-radius); border-left: 4px solid var(--success-color); margin: 2rem 0;">
     <h4 style="color: var(--success-color); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
       📋 Check-list obligatoire
     </h4>
@@ -703,8 +289,8 @@ image: /assets/images/projects/robotique.jpg
     </ul>
   </div>
 
-  <h4 style="color: var(--primary-color); margin: 2rem 0 1rem 0;">📁 Convention de nommage des fichiers</h4>
-  <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.9rem; line-height: 1.6; border-left: 4px solid var(--secondary-color);">
+  <h4 style="color: var(--course-ink); margin: 2rem 0 1rem 0;">📁 Convention de nommage des fichiers</h4>
+  <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.9rem; line-height: 1.6; border-left: 4px solid var(--course-accent);">
     Dossier principal : <strong>GBA3_TP_Robotique_Groupe[X]</strong><br>
     ├── Séance1/<br>
     │&nbsp;&nbsp;&nbsp;├── [Nom1]_[Nom2]_Exercice1.rspag<br>
@@ -715,7 +301,7 @@ image: /assets/images/projects/robotique.jpg
     &nbsp;&nbsp;&nbsp;&nbsp;└── [Nom1]_[Nom2]_GRAFCET.pdf
   </div>
 
-  <h3 style="color: var(--primary-color); margin: 2rem 0 1.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+  <h3 style="color: var(--course-ink); margin: 2rem 0 1.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
     🌟 Conseils pour réussir
   </h3>
   
@@ -817,7 +403,7 @@ image: /assets/images/projects/robotique.jpg
     <h2 class="section-title">Modalités d'évaluation</h2>
   </div>
   
-  <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 1.5rem;">
+  <p style="color: var(--course-ink); font-weight: 600; margin-bottom: 1.5rem;">
     Note collégiale par groupe avec possibilité de différenciation individuelle
   </p>
 
@@ -867,7 +453,7 @@ image: /assets/images/projects/robotique.jpg
     </ul>
   </div>
 
-  <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Avant de commencer</h3>
+  <h3 style="color: var(--course-ink); margin-bottom: 1.5rem;">Avant de commencer</h3>
   <ul class="checklist">
     <li>Vérifier que l'espace de travail du robot est dégagé</li>
     <li>Repérer les arrêts d'urgence (boutons rouges)</li>
@@ -875,7 +461,7 @@ image: /assets/images/projects/robotique.jpg
     <li>Valider TOUJOURS le programme en simulation avant l'exécution réelle</li>
   </ul>
 
-  <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Procédure de fin de séance</h3>
+  <h3 style="color: var(--course-ink); margin-bottom: 1.5rem;">Procédure de fin de séance</h3>
   <ul class="checklist">
     <li>Sauvegarder tous les fichiers dans le dossier dédié</li>
     <li>Exporter les programmes vers le répertoire du groupe</li>
@@ -909,7 +495,7 @@ image: /assets/images/projects/robotique.jpg
       <a href="https://nextcloud.univ-lille.fr/index.php/s/9FB727j462rFDjE" 
          target="_blank" 
          rel="noopener noreferrer"
-         style="display: inline-flex; align-items: center; gap: 0.5rem; background: #2c3e50; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 1rem; transition: var(--transition); box-shadow: 0 2px 8px rgba(44, 62, 80, 0.2);"
+         style="display: inline-flex; align-items: center; gap: 0.5rem; background: #2c3e50; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 1rem; transition: var(--course-transition); box-shadow: 0 2px 8px rgba(44, 62, 80, 0.2);"
          onmouseover="this.style.background='#1a252f'" 
          onmouseout="this.style.background='#2c3e50'">
         📥 Télécharger le PDF du TP
@@ -965,7 +551,7 @@ image: /assets/images/projects/robotique.jpg
 
 ## 📞 Contact & encadrement
 
-<div style="background: var(--primary-color); color: white; padding: 2rem; border-radius: var(--border-radius); margin-top: 2rem;">
+<div style="background: var(--primary-color); color: white; padding: 2rem; border-radius: var(--course-radius); margin-top: 2rem;">
   <p><strong>👨‍🏫 Responsable du cours :</strong> Dr. Yinoussa Adagolodjo</p>
   <p><strong>✉️ Email :</strong> Remplir formulaire de contact sur la page d'accueil</p>
   <p><strong>🏢 Bureau :</strong> Bâtiment Polytech, Université de Lille</p>
