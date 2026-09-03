@@ -197,11 +197,11 @@ permalink: /teaching/
 <!-- Stats -->
 <div class="teach-stats">
   <div class="teach-stat">
-    <div class="teach-stat-num">18</div>
+    <div class="teach-stat-num">16</div>
     <div class="teach-stat-lbl">Cours enseignés</div>
   </div>
   <div class="teach-stat">
-    <div class="teach-stat-num">200+</div>
+    <div class="teach-stat-num">130+</div>
     <div class="teach-stat-lbl">h / semestre</div>
   </div>
   <div class="teach-stat">
