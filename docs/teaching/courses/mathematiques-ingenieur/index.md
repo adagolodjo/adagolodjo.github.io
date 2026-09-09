@@ -10,20 +10,20 @@ track: maths
 
 <div class="course-hero">
   <div class="course-hero-content">
-    <h1>📐 Mathématiques pour l'ingénieur</h1>
+    <h1>{% include ph.html name="ruler" %} Mathématiques pour l'ingénieur</h1>
     <p class="subtitle">Mathématiques avancées avec applications pratiques en ingénierie</p>
     <div class="hero-badges">
-      <span class="hero-badge">🎓 Niveau Graduate</span>
-      <span class="hero-badge">⏱️ 18.75h CM + 20h TP</span>
-      <span class="hero-badge">🎯 Fondamentaux</span>
-      <span class="hero-badge">📊 S2</span>
+      <span class="hero-badge">{% include ph.html name="graduation-cap" %} Niveau Graduate</span>
+      <span class="hero-badge">{% include ph.html name="timer" %} 18.75h CM + 20h TP</span>
+      <span class="hero-badge">{% include ph.html name="target" %} Fondamentaux</span>
+      <span class="hero-badge">{% include ph.html name="chart-bar" %} S2</span>
     </div>
   </div>
 </div>
 
 <section class="section-card">
   <div class="section-header">
-    <div class="section-icon">📋</div>
+    <div class="section-icon">{% include ph.html name="clipboard-text" %}</div>
     <h2 class="section-title">Présentation du cours</h2>
   </div>
   
@@ -32,7 +32,7 @@ track: maths
   </p>
 
   <div class="info-box">
-    <h4>📊 Informations générales</h4>
+    <h4>{% include ph.html name="chart-bar" %} Informations générales</h4>
     <p><strong>Code :</strong> DU-822110<br>
     <strong>Durée :</strong> 18.75h de cours magistraux + 20h de travaux pratiques<br>
     <strong>Semestre :</strong> S2<br>
@@ -43,7 +43,7 @@ track: maths
 
 <section class="section-card">
   <div class="section-header">
-    <div class="section-icon">🎯</div>
+    <div class="section-icon">{% include ph.html name="target" %}</div>
     <h2 class="section-title">Objectifs pédagogiques</h2>
   </div>
 
@@ -53,27 +53,27 @@ track: maths
 
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>📈 Maîtriser les séries de Taylor</h4>
+      <h4>{% include ph.html name="trend-up" %} Maîtriser les séries de Taylor</h4>
       <p>Développer et utiliser les séries de Taylor pour l'approximation de fonctions et l'analyse de comportements locaux.</p>
     </div>
     <div class="objective-card">
-      <h4>🔍 Résoudre les équations différentielles</h4>
+      <h4>{% include ph.html name="magnifying-glass" %} Résoudre les équations différentielles</h4>
       <p>Appliquer les méthodes de résolution des équations différentielles ordinaires et aux dérivées partielles.</p>
     </div>
     <div class="objective-card">
-      <h4>〰️ Utiliser les séries de Fourier</h4>
+      <h4>〰 Utiliser les séries de Fourier</h4>
       <p>Décomposer des signaux périodiques en séries de Fourier et comprendre leurs applications en ingénierie.</p>
     </div>
     <div class="objective-card">
-      <h4>🔄 Appliquer les transformées de Fourier</h4>
+      <h4>{% include ph.html name="arrows-clockwise" %} Appliquer les transformées de Fourier</h4>
       <p>Utiliser les transformées de Fourier pour l'analyse fréquentielle et le traitement du signal.</p>
     </div>
     <div class="objective-card">
-      <h4>🔧 Applications pratiques</h4>
+      <h4>{% include ph.html name="wrench" %} Applications pratiques</h4>
       <p>Modéliser des problèmes d'ingénierie concrets : vibrations, circuits électriques, transfert de chaleur.</p>
     </div>
     <div class="objective-card">
-      <h4>💻 Outils numériques</h4>
+      <h4>{% include ph.html name="desktop" %} Outils numériques</h4>
       <p>Utiliser MATLAB/Python pour les calculs mathématiques avancés et la visualisation.</p>
     </div>
   </div>
@@ -81,7 +81,7 @@ track: maths
 
 <section class="section-card">
   <div class="section-header">
-    <div class="section-icon">📅</div>
+    <div class="section-icon">{% include ph.html name="calendar-blank" %}</div>
     <h2 class="section-title">Programme détaillé</h2>
   </div>
   
@@ -138,7 +138,7 @@ track: maths
 
 <section class="section-card">
   <div class="section-header">
-    <div class="section-icon">📊</div>
+    <div class="section-icon">{% include ph.html name="chart-bar" %}</div>
     <h2 class="section-title">Modalités d'évaluation</h2>
   </div>
   
@@ -165,13 +165,13 @@ track: maths
 
 <section class="section-card">
   <div class="section-header">
-    <div class="section-icon">📚</div>
+    <div class="section-icon">{% include ph.html name="books" %}</div>
     <h2 class="section-title">Ressources et bibliographie</h2>
   </div>
   
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
     <div style="background: rgba(155, 77, 202, 0.1); backdrop-filter: blur(10px); padding: 2rem; border-radius: 16px; border: 1px solid rgba(155, 77, 202, 0.2);">
-      <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--course-accent-ink);">📖</div>
+      <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--course-accent-ink);">{% include ph.html name="book-open" %}</div>
       <h4 style="margin-bottom: 1rem; font-weight: 600;">Ouvrages de référence</h4>
       <ul>
         <li>Advanced Engineering Mathematics - Kreyszig</li>
@@ -181,7 +181,7 @@ track: maths
     </div>
     
     <div style="background: rgba(155, 77, 202, 0.1); backdrop-filter: blur(10px); padding: 2rem; border-radius: 16px; border: 1px solid rgba(155, 77, 202, 0.2);">
-      <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--course-accent-ink);">💻</div>
+      <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--course-accent-ink);">{% include ph.html name="desktop" %}</div>
       <h4 style="margin-bottom: 1rem; font-weight: 600;">Outils logiciels</h4>
       <ul>
         <li>MATLAB/Simulink (Symbolic Math Toolbox)</li>
@@ -192,7 +192,7 @@ track: maths
     </div>
     
     <div style="background: rgba(155, 77, 202, 0.1); backdrop-filter: blur(10px); padding: 2rem; border-radius: 16px; border: 1px solid rgba(155, 77, 202, 0.2);">
-      <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--course-accent-ink);">🔗</div>
+      <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--course-accent-ink);">{% include ph.html name="link" %}</div>
       <h4 style="margin-bottom: 1rem; font-weight: 600;">Ressources en ligne</h4>
       <ul>
         <li>Khan Academy (Calculus & Differential Equations)</li>
@@ -206,25 +206,25 @@ track: maths
 
 <section class="section-card">
   <div class="section-header">
-    <div class="section-icon">📞</div>
+    <div class="section-icon">{% include ph.html name="phone" %}</div>
     <h2 class="section-title">Contact & encadrement</h2>
   </div>
   
   <div style="display: flex; flex-direction: column; gap: 1rem;">
     <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(155, 77, 202, 0.1); border-radius: 12px;">
-      <span style="font-size: 1.5rem; color: var(--course-accent-ink);">👨‍🏫</span>
+      <span style="font-size: 1.5rem; color: var(--course-accent-ink);">{% include ph.html name="chalkboard-teacher" %}</span>
       <span><strong>Responsable du cours :</strong> Dr. Yinoussa Adagolodjo</span>
     </div>
     <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(155, 77, 202, 0.1); border-radius: 12px;">
-      <span style="font-size: 1.5rem; color: var(--course-accent-ink);">✉️</span>
+      <span style="font-size: 1.5rem; color: var(--course-accent-ink);">{% include ph.html name="envelope" %}</span>
       <span><strong>Email :</strong> Remplir formulaire de contact sur la page d'accueil</span>
     </div>
     <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(155, 77, 202, 0.1); border-radius: 12px;">
-      <span style="font-size: 1.5rem; color: var(--course-accent-ink);">🏢</span>
+      <span style="font-size: 1.5rem; color: var(--course-accent-ink);">{% include ph.html name="buildings" %}</span>
       <span><strong>Bureau :</strong> Bâtiment Polytech, Université de Lille</span>
     </div>
     <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(155, 77, 202, 0.1); border-radius: 12px;">
-      <span style="font-size: 1.5rem; color: var(--course-accent-ink);">⏰</span>
+      <span style="font-size: 1.5rem; color: var(--course-accent-ink);">{% include ph.html name="alarm" %}</span>
       <span><strong>Permanence :</strong> Sur rendez-vous (contact par email)</span>
     </div>
   </div>

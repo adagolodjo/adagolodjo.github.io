@@ -13,10 +13,10 @@ track: industrie
     <h1>Industrie 4.0</h1>
     <p class="subtitle">Introduction aux concepts de l'Industrie 4.0, IoT et fabrication intelligente</p>
     <div class="hero-badges">
-      <span class="hero-badge">🏭 INDUSTRIE-4.0</span>
-      <span class="hero-badge">⏱️ 4.5h CM + 6h TP</span>
-      <span class="hero-badge">🎆 Graduate</span>
-      <span class="hero-badge">🔥 Technologies Avancées</span>
+      <span class="hero-badge">{% include ph.html name="factory" %} INDUSTRIE-4.0</span>
+      <span class="hero-badge">{% include ph.html name="timer" %} 4.5h CM + 6h TP</span>
+      <span class="hero-badge">{% include ph.html name="sparkle" %} Graduate</span>
+      <span class="hero-badge">{% include ph.html name="fire" %} Technologies Avancées</span>
     </div>
   </div>
 </div>
@@ -28,7 +28,7 @@ track: industrie
     <a href="#ressources" class="nav-link"> Ressources</a>
     <a href="#evaluation" class="nav-link"> Évaluation</a>
     <a href="#technologies" class="nav-link"> Technologies</a>
-    <a href="#contact" class="nav-link">📞 Contact</a>
+    <a href="#contact" class="nav-link">{% include ph.html name="phone" %} Contact</a>
   </div>
 </nav>
 
@@ -51,7 +51,7 @@ track: industrie
   
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>🔧 Principes fondamentaux</h4>
+      <h4>{% include ph.html name="wrench" %} Principes fondamentaux</h4>
       <p>Comprendre les principes fondamentaux et les piliers de l'Industrie 4.0.</p>
     </div>
     
@@ -77,11 +77,11 @@ track: industrie
     <h2 class="section-title">Programme détaillé</h2>
   </div>
   
-  <h3 style="color: var(--course-accent-ink); margin-bottom: 1rem;">🎧 Cours Magistraux (CM - 4.5h)</h3>
+  <h3 style="color: var(--course-accent-ink); margin-bottom: 1rem;">{% include ph.html name="headphones" %} Cours Magistraux (CM - 4.5h)</h3>
   
   <div class="timeline">
     <div class="timeline-item">
-      <h4>🔍 Module 1: Introduction à l'Industrie 4.0</h4>
+      <h4>{% include ph.html name="magnifying-glass" %} Module 1: Introduction à l'Industrie 4.0</h4>
       <ul>
         <li>Contexte historique : De l'Industrie 1.0 à 4.0</li>
         <li>Technologies clés et facteurs facilitateurs</li>
@@ -91,7 +91,7 @@ track: industrie
     </div>
     
     <div class="timeline-item">
-      <h4>📊 Module 2: Systèmes Cyber-Physiques (CPS)</h4>
+      <h4>{% include ph.html name="chart-bar" %} Module 2: Systèmes Cyber-Physiques (CPS)</h4>
       <ul>
         <li>Architecture et composants des CPS</li>
         <li>Intégration des systèmes physiques et numériques</li>
@@ -101,7 +101,7 @@ track: industrie
     </div>
     
     <div class="timeline-item">
-      <h4>💻 Module 3: Internet des Objets (IoT) Industriel</h4>
+      <h4>{% include ph.html name="desktop" %} Module 3: Internet des Objets (IoT) Industriel</h4>
       <ul>
         <li>Fondamentaux de l'IoT industriel (IIoT)</li>
         <li>Réseaux de capteurs et collecte de données</li>
@@ -111,7 +111,7 @@ track: industrie
     </div>
     
     <div class="timeline-item">
-      <h4>🧠 Module 4: Analyse de données et IA</h4>
+      <h4>{% include ph.html name="brain" %} Module 4: Analyse de données et IA</h4>
       <ul>
         <li>Big data dans la fabrication</li>
         <li>Applications de l'apprentissage automatique</li>
@@ -121,11 +121,11 @@ track: industrie
     </div>
   </div>
   
-  <h3 style="color: var(--course-accent-ink); margin: 2rem 0 1rem;">🔧 Travaux Pratiques (TP - 6h)</h3>
+  <h3 style="color: var(--course-accent-ink); margin: 2rem 0 1rem;">{% include ph.html name="wrench" %} Travaux Pratiques (TP - 6h)</h3>
   
   <div class="timeline">
     <div class="timeline-item">
-      <h4>🔮 TP 1: Implémentation de capteurs IoT</h4>
+      <h4>{% include ph.html name="sparkle" %} TP 1: Implémentation de capteurs IoT</h4>
       <ul>
         <li>Expérience pratique avec les capteurs industriels</li>
         <li>Acquisition et traitement des données</li>
@@ -135,7 +135,7 @@ track: industrie
     </div>
     
     <div class="timeline-item">
-      <h4>🎆 TP 2: Simulation de fabrication intelligente</h4>
+      <h4>{% include ph.html name="sparkle" %} TP 2: Simulation de fabrication intelligente</h4>
       <ul>
         <li>Concepts de jumeaux numériques</li>
         <li>Simulation de processus de fabrication</li>
@@ -145,7 +145,7 @@ track: industrie
     </div>
     
     <div class="timeline-item">
-      <h4>📈 TP 3: Étude de cas Industrie 4.0</h4>
+      <h4>{% include ph.html name="trend-up" %} TP 3: Étude de cas Industrie 4.0</h4>
       <ul>
         <li>Analyse de projets de transformation industrielle réels</li>
         <li>Conception d'un concept d'usine intelligente</li>
@@ -158,20 +158,20 @@ track: industrie
 
 <div class="section-card" id="ressources">
   <div class="section-header">
-    <div class="section-icon">💾</div>
+    <div class="section-icon">{% include ph.html name="floppy-disk" %}</div>
     <h2 class="section-title">Ressources pédagogiques</h2>
   </div>
   
   <!-- Ressources du cours par partie -->
   <div style="margin-bottom: 3rem;">
     <h3 style="color: var(--course-accent-ink); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
-      <span>📁</span> Supports de cours
+      <span>{% include ph.html name="folder" %}</span> Supports de cours
     </h3>
     
     <div class="timeline" style="margin-left: 0; padding-left: 0;">
       <div class="timeline-item" style="margin-left: 0; border-left: 4px solid var(--course-accent); background: linear-gradient(135deg, rgba(230, 126, 34, 0.1), rgba(230, 126, 34, 0.05));">
         <h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--course-accent-ink);">
-          <span>📊</span> Partie 1 : Introduction à l'Industrie 4.0
+          <span>{% include ph.html name="chart-bar" %}</span> Partie 1 : Introduction à l'Industrie 4.0
         </h4>
         <p>Contexte historique, technologies clés et transformation numérique</p>
         <div style="margin-top: 1rem;">
@@ -180,7 +180,7 @@ track: industrie
              style="display: inline-flex; background: var(--course-primary); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; transition: var(--course-transition);" 
              target="_blank" 
              rel="noopener noreferrer">
-            <span style="margin-right: 0.5rem;">📥</span>
+            <span style="margin-right: 0.5rem;">{% include ph.html name="download-simple" %}</span>
             Télécharger les supports (PDF + exercices)
           </a>
         </div>
@@ -188,7 +188,7 @@ track: industrie
       
       <div class="timeline-item" style="margin-left: 0; border-left: 4px solid var(--course-accent); background: linear-gradient(135deg, rgba(230, 126, 34, 0.1), rgba(230, 126, 34, 0.05));">
         <h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--course-accent-ink);">
-          <span>🤖</span> IA Génératives et Automatisation
+          <span>{% include ph.html name="robot" %}</span> IA Génératives et Automatisation
         </h4>
         <p>Applications des intelligences artificielles génératives dans l'industrie 4.0</p>
         <div style="margin-top: 1rem;">
@@ -197,7 +197,7 @@ track: industrie
              style="display: inline-flex; background: var(--course-primary); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; transition: var(--course-transition);" 
              target="_blank" 
              rel="noopener noreferrer">
-            <span style="margin-right: 0.5rem;">📥</span>
+            <span style="margin-right: 0.5rem;">{% include ph.html name="download-simple" %}</span>
             Télécharger le document IA (PDF)
           </a>
         </div>
@@ -205,12 +205,12 @@ track: industrie
       
       <div class="timeline-item" style="margin-left: 0; border-left: 4px solid #95a5a6; background: rgba(149, 165, 166, 0.1); opacity: 0.7;">
         <h4 style="display: flex; align-items: center; gap: 0.5rem; color: #7f8c8d;">
-          <span>🔧</span> Partie 2 : Systèmes Cyber-Physiques (CPS)
+          <span>{% include ph.html name="wrench" %}</span> Partie 2 : Systèmes Cyber-Physiques (CPS)
         </h4>
         <p>Architecture, intégration et surveillance en temps réel</p>
         <div style="margin-top: 1rem;">
           <span style="display: inline-flex; background: #95a5a6; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500;">
-            <span style="margin-right: 0.5rem;">⏳</span>
+            <span style="margin-right: 0.5rem;">{% include ph.html name="hourglass-medium" %}</span>
             Bientôt disponible
           </span>
         </div>
@@ -218,12 +218,12 @@ track: industrie
       
       <div class="timeline-item" style="margin-left: 0; border-left: 4px solid #95a5a6; background: rgba(149, 165, 166, 0.1); opacity: 0.7;">
         <h4 style="display: flex; align-items: center; gap: 0.5rem; color: #7f8c8d;">
-          <span>📡</span> Partie 3 : Internet des Objets (IoT) Industriel
+          <span>{% include ph.html name="broadcast" %}</span> Partie 3 : Internet des Objets (IoT) Industriel
         </h4>
         <p>IIoT, réseaux de capteurs et protocoles de communication</p>
         <div style="margin-top: 1rem;">
           <span style="display: inline-flex; background: #95a5a6; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500;">
-            <span style="margin-right: 0.5rem;">⏳</span>
+            <span style="margin-right: 0.5rem;">{% include ph.html name="hourglass-medium" %}</span>
             Bientôt disponible
           </span>
         </div>
@@ -231,12 +231,12 @@ track: industrie
       
       <div class="timeline-item" style="margin-left: 0; border-left: 4px solid #95a5a6; background: rgba(149, 165, 166, 0.1); opacity: 0.7;">
         <h4 style="display: flex; align-items: center; gap: 0.5rem; color: #7f8c8d;">
-          <span>🧠</span> Partie 4 : Analyse de données et IA
+          <span>{% include ph.html name="brain" %}</span> Partie 4 : Analyse de données et IA
         </h4>
         <p>Big data, apprentissage automatique et maintenance prédictive</p>
         <div style="margin-top: 1rem;">
           <span style="display: inline-flex; background: #95a5a6; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500;">
-            <span style="margin-right: 0.5rem;">⏳</span>
+            <span style="margin-right: 0.5rem;">{% include ph.html name="hourglass-medium" %}</span>
             Bientôt disponible
           </span>
         </div>
@@ -247,13 +247,13 @@ track: industrie
   <!-- Section Projets et évaluations -->
   <div style="margin-bottom: 3rem;">
     <h3 style="color: var(--course-accent-ink); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
-      <span>📁</span> Projets et évaluations
+      <span>{% include ph.html name="folder" %}</span> Projets et évaluations
     </h3>
     
     <div class="timeline" style="margin-left: 0; padding-left: 0;">
       <div class="timeline-item" style="margin-left: 0; border-left: 4px solid var(--course-accent); background: linear-gradient(135deg, rgba(26, 188, 156, 0.1), rgba(26, 188, 156, 0.05));">
         <h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--course-accent-ink);">
-          <span>📝</span> Consignes pour le projet
+          <span>{% include ph.html name="note-pencil" %}</span> Consignes pour le projet
         </h4>
         <p>Attendus, modalités et critères d'évaluation du projet final</p>
         <div style="margin-top: 1rem;">
@@ -262,7 +262,7 @@ track: industrie
              style="display: inline-flex; background: var(--course-primary); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; transition: var(--course-transition);" 
              target="_blank" 
              rel="noopener noreferrer">
-            <span style="margin-right: 0.5rem;">📥</span>
+            <span style="margin-right: 0.5rem;">{% include ph.html name="download-simple" %}</span>
             Télécharger les consignes (PDF)
           </a>
         </div>
@@ -273,12 +273,12 @@ track: industrie
   <!-- Ressources complémentaires -->
   <div>
     <h3 style="color: var(--course-accent-ink); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
-      <span>📚</span> Ressources complémentaires
+      <span>{% include ph.html name="books" %}</span> Ressources complémentaires
     </h3>
     
     <div class="resources-grid">
       <div class="resource-card">
-        <div class="resource-icon">📚</div>
+        <div class="resource-icon">{% include ph.html name="books" %}</div>
         <h4>Documentation technique</h4>
         <ul>
           <li>Études de cas industriels et livres blancs</li>
@@ -288,7 +288,7 @@ track: industrie
       </div>
       
       <div class="resource-card">
-        <div class="resource-icon">🔍</div>
+        <div class="resource-icon">{% include ph.html name="magnifying-glass" %}</div>
         <h4>Recherche actuelle</h4>
         <ul>
           <li>Recherche actuelle en fabrication intelligente</li>
@@ -298,7 +298,7 @@ track: industrie
       </div>
       
       <div class="resource-card">
-        <div class="resource-icon">💼</div>
+        <div class="resource-icon">{% include ph.html name="briefcase" %}</div>
         <h4>Perspectives carrière</h4>
         <ul>
           <li>Conseil en digitalisation industrielle</li>
@@ -311,13 +311,13 @@ track: industrie
   </div>
   
   <div class="info-box" style="margin-top: 2rem;">
-    <strong>📌 Note importante :</strong> Les ressources sont hébergées sur Nextcloud de l'Université de Lille. Vous aurez besoin de vos identifiants universitaires pour accéder aux contenus protégés. En cas de problème d'accès, contactez l'enseignant.
+    <strong>{% include ph.html name="push-pin" %} Note importante :</strong> Les ressources sont hébergées sur Nextcloud de l'Université de Lille. Vous aurez besoin de vos identifiants universitaires pour accéder aux contenus protégés. En cas de problème d'accès, contactez l'enseignant.
   </div>
 </div>
 
 <div class="section-card" id="evaluation">
   <div class="section-header">
-    <div class="section-icon">📊</div>
+    <div class="section-icon">{% include ph.html name="chart-bar" %}</div>
     <h2 class="section-title">Modalités d'évaluation</h2>
   </div>
   
@@ -338,51 +338,51 @@ track: industrie
 
 <div class="section-card" id="technologies">
   <div class="section-header">
-    <div class="section-icon">💻</div>
+    <div class="section-icon">{% include ph.html name="desktop" %}</div>
     <h2 class="section-title">Technologies et outils</h2>
   </div>
   
   <div class="tech-stack">
     <div class="tech-item">
-      <h5>📱 Plateformes IoT</h5>
+      <h5>{% include ph.html name="device-mobile" %} Plateformes IoT</h5>
       <p>Arduino, Raspberry Pi, Node-RED</p>
     </div>
     
     <div class="tech-item">
-      <h5>🏭 Logiciels de simulation</h5>
+      <h5>{% include ph.html name="factory" %} Logiciels de simulation</h5>
       <p>Factory I/O, Plant Simulation</p>
     </div>
     
     <div class="tech-item">
-      <h5>📊 Visualisation données</h5>
+      <h5>{% include ph.html name="chart-bar" %} Visualisation données</h5>
       <p>Grafana, Power BI, Tableau</p>
     </div>
     
     <div class="tech-item">
-      <h5>🔗 Protocoles industriels</h5>
+      <h5>{% include ph.html name="link" %} Protocoles industriels</h5>
       <p>MQTT, OPC-UA, Modbus</p>
     </div>
     
     <div class="tech-item">
-      <h5>☁️ Plateformes cloud</h5>
+      <h5>{% include ph.html name="cloud" %} Plateformes cloud</h5>
       <p>AWS IoT, Azure IoT, Google Cloud</p>
     </div>
     
     <div class="tech-item">
-      <h5>🐍 Programmation</h5>
+      <h5>{% include ph.html name="code" %} Programmation</h5>
       <p>Python, JavaScript, C++</p>
     </div>
 </div>
 
 <div class="section-card" id="contact">
   <div class="section-header">
-    <div class="section-icon">📞</div>
+    <div class="section-icon">{% include ph.html name="phone" %}</div>
     <h2 class="section-title">Informations de contact</h2>
   </div>
   
   <div class="contact-info">
     <div class="contact-item">
-      <div class="contact-icon">👨‍🏫</div>
+      <div class="contact-icon">{% include ph.html name="chalkboard-teacher" %}</div>
       <div>
         <strong>Enseignant responsable</strong><br>
         Dr. Yinoussa Adagolodjo
@@ -390,7 +390,7 @@ track: industrie
     </div>
     
     <div class="contact-item">
-      <div class="contact-icon">✉️</div>
+      <div class="contact-icon">{% include ph.html name="envelope" %}</div>
       <div>
         <strong>Email</strong><br>
         <a href="/contact/">Utiliser le formulaire de contact</a>
@@ -398,7 +398,7 @@ track: industrie
     </div>
     
     <div class="contact-item">
-      <div class="contact-icon">🏢</div>
+      <div class="contact-icon">{% include ph.html name="buildings" %}</div>
       <div>
         <strong>Lieu des cours</strong><br>
         Laboratoire Technologies Avancées, UFR Sciences
@@ -406,7 +406,7 @@ track: industrie
     </div>
     
     <div class="contact-item">
-      <div class="contact-icon">🕰️</div>
+      <div class="contact-icon">{% include ph.html name="clock" %}</div>
       <div>
         <strong>Permanences</strong><br>
         Sur rendez-vous - Consulter la page de contact

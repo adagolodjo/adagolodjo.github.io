@@ -10,31 +10,31 @@ track: numerique
 
 <div class="course-hero">
   <div class="course-hero-content">
-    <h1>💻 Culture Numérique et Sécurité des Données</h1>
+    <h1>{% include ph.html name="desktop" %} Culture Numérique et Sécurité des Données</h1>
     <p class="subtitle">DU-812170 - Formation Continue / Première année cycle ingénieur</p>
     <div class="hero-badges">
-      <span class="hero-badge">📚 DU-812170</span>
-      <span class="hero-badge">⏱️ 5h TP</span>
-      <span class="hero-badge">📅 Semestre 2</span>
-      <span class="hero-badge">🔒 Cybersécurité</span>
-      <span class="hero-badge">🛡️ RGPD</span>
+      <span class="hero-badge">{% include ph.html name="books" %} DU-812170</span>
+      <span class="hero-badge">{% include ph.html name="timer" %} 5h TP</span>
+      <span class="hero-badge">{% include ph.html name="calendar-blank" %} Semestre 2</span>
+      <span class="hero-badge">{% include ph.html name="lock" %} Cybersécurité</span>
+      <span class="hero-badge">{% include ph.html name="shield-check" %} RGPD</span>
     </div>
   </div>
 </div>
 
 <nav class="course-nav">
   <div class="nav-links">
-    <a href="#presentation" class="nav-link active">📋 Présentation</a>
-    <a href="#objectifs" class="nav-link">🎯 Objectifs</a>
-    <a href="#programme" class="nav-link">📚 Programme</a>
-    <a href="#competences" class="nav-link">🔧 Compétences</a>
-    <a href="#ressources" class="nav-link">📚 Ressources</a>
+    <a href="#presentation" class="nav-link active">{% include ph.html name="clipboard-text" %} Présentation</a>
+    <a href="#objectifs" class="nav-link">{% include ph.html name="target" %} Objectifs</a>
+    <a href="#programme" class="nav-link">{% include ph.html name="books" %} Programme</a>
+    <a href="#competences" class="nav-link">{% include ph.html name="wrench" %} Compétences</a>
+    <a href="#ressources" class="nav-link">{% include ph.html name="books" %} Ressources</a>
   </div>
 </nav>
 
 <section id="presentation" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📋</div>
+    <div class="section-icon">{% include ph.html name="clipboard-text" %}</div>
     <h2 class="section-title">Présentation du cours</h2>
   </div>
   
@@ -43,7 +43,7 @@ track: numerique
   </p>
 
   <div class="info-box">
-    <h4>📊 Informations générales</h4>
+    <h4>{% include ph.html name="chart-bar" %} Informations générales</h4>
     <p><strong>Code :</strong> DU-812170<br>
     <strong>Niveau :</strong> Formation Continue / Première année cycle ingénieur<br>
     <strong>Semestre :</strong> S2<br>
@@ -52,16 +52,16 @@ track: numerique
     
     <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(155, 89, 182, 0.1); border-radius: 8px; border-left: 4px solid var(--course-accent);">
       <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        📄 Support de Cours Complet
+        {% include ph.html name="file-text" %} Support de Cours Complet
       </h5>
       <p style="margin-bottom: 1rem; font-size: 0.95rem;">Le document PDF complet avec toutes les notions, exemples et exercices est disponible :</p>
       <a href="https://nextcloud.univ-lille.fr/index.php/s/arMc4K5fptgyZfW" 
          target="_blank" 
          rel="noopener noreferrer"
-         style="display: inline-flex; align-items: center; gap: 0.5rem; background: #2c3e50; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: var(--course-transition); box-shadow: 0 2px 8px rgba(44, 62, 80, 0.3);"
-         onmouseover="this.style.background='#1a252f'; this.style.transform='translateY(-2px)'" 
-         onmouseout="this.style.background='#2c3e50'; this.style.transform='translateY(0)'">
-        📥 Accéder au PDF du cours (Nextcloud)
+         style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--course-ink); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: var(--course-transition); box-shadow: 0 2px 8px rgba(44, 62, 80, 0.3);"
+         onmouseover="this.style.background='var(--course-ink)'; this.style.transform='translateY(-2px)'" 
+         onmouseout="this.style.background='var(--course-ink)'; this.style.transform='translateY(0)'">
+        {% include ph.html name="download-simple" %} Accéder au PDF du cours (Nextcloud)
       </a>
     </div>
   </div>
@@ -69,7 +69,7 @@ track: numerique
 
 <section id="objectifs" class="section-card">
   <div class="section-header">
-    <div class="section-icon">🎯</div>
+    <div class="section-icon">{% include ph.html name="target" %}</div>
     <h2 class="section-title">Objectifs pédagogiques</h2>
   </div>
 
@@ -79,27 +79,27 @@ track: numerique
 
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>🛡️ Identifier les risques numériques</h4>
+      <h4>{% include ph.html name="shield-check" %} Identifier les risques numériques</h4>
       <p>Être conscient des risques personnels, de confidentialité, économiques et sociétaux liés aux outils numériques.</p>
     </div>
     <div class="objective-card">
-      <h4>💾 Comprendre les données</h4>
+      <h4>{% include ph.html name="floppy-disk" %} Comprendre les données</h4>
       <p>Appréhender la nature des données, leur cycle de vie et leur impact sur la société.</p>
     </div>
     <div class="objective-card">
-      <h4>📜 Appliquer la charte SIAG</h4>
+      <h4>{% include ph.html name="scroll" %} Appliquer la charte SIAG</h4>
       <p>Connaître, comprendre et appliquer la charte de l'université sur les Systèmes d'Information.</p>
     </div>
     <div class="objective-card">
-      <h4>🤖 Comprendre l'IA et les algorithmes</h4>
+      <h4>{% include ph.html name="robot" %} Comprendre l'IA et les algorithmes</h4>
       <p>Disposer des connaissances pour appréhender le fonctionnement des ordinateurs, algorithmes et IA.</p>
     </div>
     <div class="objective-card">
-      <h4>🔍 Choisir ses outils de manière raisonnée</h4>
+      <h4>{% include ph.html name="magnifying-glass" %} Choisir ses outils de manière raisonnée</h4>
       <p>Sélectionner des outils numériques adaptés et justifier ses choix de manière argumentée.</p>
     </div>
     <div class="objective-card">
-      <h4>🧠 Développer son esprit critique</h4>
+      <h4>{% include ph.html name="brain" %} Développer son esprit critique</h4>
       <p>Reconnaître les biais cognitifs, la désinformation et adopter une posture critique face au numérique.</p>
     </div>
   </div>
@@ -107,13 +107,13 @@ track: numerique
 
 <section id="programme" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📚</div>
+    <div class="section-icon">{% include ph.html name="books" %}</div>
     <h2 class="section-title">Programme du cours</h2>
   </div>
 
   <div class="module-card">
     <div class="module-title">
-      <span>💻</span> Module 1 : Fondamentaux du Numérique et Nature des Données
+      <span>{% include ph.html name="desktop" %}</span> Module 1 : Fondamentaux du Numérique et Nature des Données
     </div>
     <p><strong>Objectifs :</strong> Appréhender le fonctionnement des ordinateurs, des algorithmes et de l'IA. Comprendre la nature des données et leur impact.</p>
     
@@ -158,7 +158,7 @@ track: numerique
 
   <div class="module-card">
     <div class="module-title">
-      <span>⚠️</span> Module 2 : Risques, Menaces et Biais Cognitifs
+      <span>{% include ph.html name="warning" %}</span> Module 2 : Risques, Menaces et Biais Cognitifs
     </div>
     <p><strong>Objectifs :</strong> Être conscient des risques (personnels, confidentialité, économiques, sociétaux) et de ses propres biais cognitifs.</p>
     
@@ -201,7 +201,7 @@ track: numerique
 
   <div class="module-card">
     <div class="module-title">
-      <span>🔧</span> Module 3 : Outils Numériques et Responsabilité
+      <span>{% include ph.html name="wrench" %}</span> Module 3 : Outils Numériques et Responsabilité
     </div>
     <p><strong>Objectifs :</strong> Choisir de manière raisonnée ses outils numériques et être capable de justifier son choix.</p>
     
@@ -234,7 +234,7 @@ track: numerique
 
   <div class="module-card">
     <div class="module-title">
-      <span>📜</span> Module 4 : Cadre Légal et Charte Universitaire
+      <span>{% include ph.html name="scroll" %}</span> Module 4 : Cadre Légal et Charte Universitaire
     </div>
     <p><strong>Objectifs :</strong> Connaître, comprendre et appliquer la charte de l'université sur les SIAG.</p>
     
@@ -260,7 +260,7 @@ track: numerique
 
   <div class="module-card">
     <div class="module-title">
-      <span>🤖</span> Module 5 : Ma Minute Prompte - L'IA Générative pour l'Ingénieur de Demain
+      <span>{% include ph.html name="robot" %}</span> Module 5 : Ma Minute Prompte - L'IA Générative pour l'Ingénieur de Demain
     </div>
     <p><strong>Objectifs :</strong> Maîtriser les fondamentaux de l'IA générative et du prompt engineering pour optimiser son usage professionnel des outils d'intelligence artificielle.</p>
     
@@ -308,7 +308,7 @@ track: numerique
     
     <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(155, 89, 182, 0.1); border-radius: 8px; border-left: 4px solid var(--course-accent);">
       <h5 style="color: var(--course-accent-ink); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-        📄 Support de cours Module 5
+        {% include ph.html name="file-text" %} Support de cours Module 5
       </h5>
       <p style="margin-bottom: 1rem; font-size: 0.95rem;">Document PDF détaillé sur l'IA générative et le prompt engineering :</p>
       <a href="https://nextcloud.univ-lille.fr/index.php/s/EsZQd6gipb8dstp" 
@@ -317,7 +317,7 @@ track: numerique
          style="display: inline-flex; align-items: center; gap: 0.5rem; background: #9b59b6; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: var(--course-transition); box-shadow: 0 2px 8px rgba(155, 89, 182, 0.3);"
          onmouseover="this.style.background='#8e44ad'; this.style.transform='translateY(-2px)'" 
          onmouseout="this.style.background='#9b59b6'; this.style.transform='translateY(0)'">
-        📥 Télécharger le PDF du Module 5
+        {% include ph.html name="download-simple" %} Télécharger le PDF du Module 5
       </a>
     </div>
   </div>
@@ -325,33 +325,33 @@ track: numerique
 
 <section id="competences" class="section-card">
   <div class="section-header">
-    <div class="section-icon">🔧</div>
+    <div class="section-icon">{% include ph.html name="wrench" %}</div>
     <h2 class="section-title">Compétences développées</h2>
   </div>
 
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>🌐 Écosystème numérique</h4>
+      <h4>{% include ph.html name="globe" %} Écosystème numérique</h4>
       <p>Compréhension globale de l'environnement numérique et de ses enjeux techniques et sociétaux.</p>
     </div>
     <div class="objective-card">
-      <h4>🔒 Sécurité des données</h4>
+      <h4>{% include ph.html name="lock" %} Sécurité des données</h4>
       <p>Maîtrise des enjeux de cybersécurité et protection des données personnelles.</p>
     </div>
     <div class="objective-card">
-      <h4>📋 Application du RGPD</h4>
+      <h4>{% include ph.html name="clipboard-text" %} Application du RGPD</h4>
       <p>Connaissance pratique des principes de protection des données et conformité réglementaire.</p>
     </div>
     <div class="objective-card">
-      <h4>✅ Bonnes pratiques</h4>
+      <h4>{% include ph.html name="check-circle" %} Bonnes pratiques</h4>
       <p>Adoption de comportements sécurisés et responsables dans l'usage du numérique.</p>
     </div>
     <div class="objective-card">
-      <h4>🧠 Esprit critique</h4>
+      <h4>{% include ph.html name="brain" %} Esprit critique</h4>
       <p>Capacité d'analyse et de discernement face à l'information numérique et aux biais.</p>
     </div>
     <div class="objective-card">
-      <h4>🎯 Choix d'outils</h4>
+      <h4>{% include ph.html name="target" %} Choix d'outils</h4>
       <p>Capacité à évaluer et sélectionner des outils numériques de manière éclairée et argumentée.</p>
     </div>
   </div>
@@ -359,25 +359,25 @@ track: numerique
 
 <section id="ressources" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📚</div>
+    <div class="section-icon">{% include ph.html name="books" %}</div>
     <h2 class="section-title">Ressources et documents</h2>
   </div>
 
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>📄 Support de cours officiel</h4>
+      <h4>{% include ph.html name="file-text" %} Support de cours officiel</h4>
       <p>Accédez au document PDF complet du cours avec toutes les notions détaillées :</p>
       <a href="https://nextcloud.univ-lille.fr/index.php/s/arMc4K5fptgyZfW" 
          target="_blank" 
          rel="noopener noreferrer"
-         style="display: inline-flex; align-items: center; gap: 0.5rem; background: #2c3e50; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 1rem; transition: var(--course-transition); box-shadow: 0 2px 8px rgba(44, 62, 80, 0.2);"
-         onmouseover="this.style.background='#1a252f'" 
-         onmouseout="this.style.background='#2c3e50'">
-        📥 Télécharger le PDF
+         style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--course-ink); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 1rem; transition: var(--course-transition); box-shadow: 0 2px 8px rgba(44, 62, 80, 0.2);"
+         onmouseover="this.style.background='var(--course-ink)'" 
+         onmouseout="this.style.background='var(--course-ink)'">
+        {% include ph.html name="download-simple" %} Télécharger le PDF
       </a>
     </div>
     <div class="objective-card">
-      <h4>📖 Références</h4>
+      <h4>{% include ph.html name="book-open" %} Références</h4>
       <ul>
         <li>Charte SIAG de l'Université de Lille</li>
         <li>Guide RGPD de la CNIL</li>
@@ -386,7 +386,7 @@ track: numerique
       </ul>
     </div>
     <div class="objective-card">
-      <h4>🔗 Ressources complémentaires</h4>
+      <h4>{% include ph.html name="link" %} Ressources complémentaires</h4>
       <ul>
         <li>CNIL : Comprendre le RGPD</li>
         <li>Cybermalveillance.gouv.fr</li>
@@ -395,7 +395,7 @@ track: numerique
       </ul>
     </div>
     <div class="objective-card">
-      <h4>💡 Conseils pratiques</h4>
+      <h4>{% include ph.html name="lightbulb" %} Conseils pratiques</h4>
       <ul>
         <li>Activer l'authentification à deux facteurs</li>
         <li>Utiliser un gestionnaire de mots de passe</li>
@@ -406,7 +406,7 @@ track: numerique
   </div>
 
   <div class="info-box">
-    <h4>🎓 Applications pour les futurs ingénieurs</h4>
+    <h4>{% include ph.html name="graduation-cap" %} Applications pour les futurs ingénieurs</h4>
     <p><strong>Les compétences de ce cours sont essentielles pour :</strong></p>
     <ul>
       <li><strong>Projets industriels :</strong> Gérer la sécurité des données techniques et de production</li>
@@ -420,13 +420,13 @@ track: numerique
 
 ---
 
-## 📞 Contact & encadrement
+## {% include ph.html name="phone" %} Contact & encadrement
 
 <div style="background: var(--primary-color); color: white; padding: 2rem; border-radius: var(--course-radius); margin-top: 2rem;">
-  <p><strong>👨‍🏫 Responsable du cours :</strong> Dr. Yinoussa Adagolodjo</p>
-  <p><strong>✉️ Email :</strong> Utiliser le formulaire de contact sur la page d'accueil</p>
-  <p><strong>🏢 Bureau :</strong> Bâtiment Polytech, Université de Lille</p>
-  <p><strong>⏰ Permanence :</strong> Sur rendez-vous (contact par email)</p>
+  <p><strong>{% include ph.html name="chalkboard-teacher" %} Responsable du cours :</strong> Dr. Yinoussa Adagolodjo</p>
+  <p><strong>{% include ph.html name="envelope" %} Email :</strong> Utiliser le formulaire de contact sur la page d'accueil</p>
+  <p><strong>{% include ph.html name="buildings" %} Bureau :</strong> Bâtiment Polytech, Université de Lille</p>
+  <p><strong>{% include ph.html name="alarm" %} Permanence :</strong> Sur rendez-vous (contact par email)</p>
 </div>
 
 ---

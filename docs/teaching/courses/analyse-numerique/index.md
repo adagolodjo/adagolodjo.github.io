@@ -10,31 +10,31 @@ track: maths
 
 <div class="course-hero">
   <div class="course-hero-content">
-    <h1>📊 Analyse numérique : Optimisation</h1>
+    <h1>{% include ph.html name="chart-bar" %} Analyse numérique : Optimisation</h1>
     <p class="subtitle">Méthodes numériques et d'optimisation pour l'ingénierie</p>
     <div class="hero-badges">
-      <span class="hero-badge">🎓 Niveau Graduate</span>
-      <span class="hero-badge">⏱️ 16h TP</span>
-      <span class="hero-badge">🎯 Optimisation</span>
-      <span class="hero-badge">🔢 Méthodes numériques</span>
+      <span class="hero-badge">{% include ph.html name="graduation-cap" %} Niveau Graduate</span>
+      <span class="hero-badge">{% include ph.html name="timer" %} 16h TP</span>
+      <span class="hero-badge">{% include ph.html name="target" %} Optimisation</span>
+      <span class="hero-badge">{% include ph.html name="hash" %} Méthodes numériques</span>
     </div>
   </div>
 </div>
 
 <nav class="course-nav">
   <div class="nav-links">
-    <a href="#presentation" class="nav-link active">📋 Présentation</a>
-    <a href="#objectifs" class="nav-link">🎯 Objectifs</a>
-    <a href="#planning" class="nav-link">📅 Planning</a>
-    <a href="#evaluation" class="nav-link">📊 Évaluation</a>
-    <a href="#ressources" class="nav-link">📚 Ressources</a>
-    <a href="#contact" class="nav-link">📞 Contact</a>
+    <a href="#presentation" class="nav-link active">{% include ph.html name="clipboard-text" %} Présentation</a>
+    <a href="#objectifs" class="nav-link">{% include ph.html name="target" %} Objectifs</a>
+    <a href="#planning" class="nav-link">{% include ph.html name="calendar-blank" %} Planning</a>
+    <a href="#evaluation" class="nav-link">{% include ph.html name="chart-bar" %} Évaluation</a>
+    <a href="#ressources" class="nav-link">{% include ph.html name="books" %} Ressources</a>
+    <a href="#contact" class="nav-link">{% include ph.html name="phone" %} Contact</a>
   </div>
 </nav>
 
 <section id="presentation" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📋</div>
+    <div class="section-icon">{% include ph.html name="clipboard-text" %}</div>
     <h2 class="section-title">Présentation du cours</h2>
   </div>
   
@@ -43,17 +43,17 @@ track: maths
   </p>
 
   <div class="info-box">
-    <h4>📊 Informations générales</h4>
+    <h4>{% include ph.html name="chart-bar" %} Informations générales</h4>
     <p><strong>Durée :</strong> 16h de travaux pratiques<br>
     <strong>Volume de travail personnel estimé :</strong> 25-30 heures<br>
     <strong>Langue d'enseignement :</strong> Français<br>
     <strong>Évaluation :</strong> Note de Classe, Note de rapport</p>
   </div>
 
-  <h3 style="color: var(--course-ink); margin-bottom: 1.5rem;">✅ Prérequis</h3>
+  <h3 style="color: var(--course-ink); margin-bottom: 1.5rem;">{% include ph.html name="check-circle" %} Prérequis</h3>
   
   <div class="prerequisite-item">
-    <div class="prerequisite-icon">📐</div>
+    <div class="prerequisite-icon">{% include ph.html name="ruler" %}</div>
     <div>
       <strong>Mathématiques avancées</strong>
       <p style="margin: 0; color: #666; font-size: 0.95rem;">Algèbre linéaire, calcul différentiel et intégral, équations différentielles</p>
@@ -61,7 +61,7 @@ track: maths
   </div>
   
   <div class="prerequisite-item">
-    <div class="prerequisite-icon">💻</div>
+    <div class="prerequisite-icon">{% include ph.html name="desktop" %}</div>
     <div>
       <strong>Programmation scientifique</strong>
       <p style="margin: 0; color: #666; font-size: 0.95rem;">Python ou MATLAB, manipulation de matrices, visualisation</p>
@@ -69,7 +69,7 @@ track: maths
   </div>
 
   <div class="prerequisite-item">
-    <div class="prerequisite-icon">🔢</div>
+    <div class="prerequisite-icon">{% include ph.html name="hash" %}</div>
     <div>
       <strong>Méthodes numériques de base</strong>
       <p style="margin: 0; color: #666; font-size: 0.95rem;">Résolution d'équations, intégration numérique, approximation</p>
@@ -87,7 +87,7 @@ track: maths
 
 <section id="objectifs" class="section-card">
   <div class="section-header">
-    <div class="section-icon">🎯</div>
+    <div class="section-icon">{% include ph.html name="target" %}</div>
     <h2 class="section-title">Objectifs pédagogiques</h2>
   </div>
 
@@ -97,27 +97,27 @@ track: maths
 
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>🔍 Analyser les problèmes d'optimisation</h4>
+      <h4>{% include ph.html name="magnifying-glass" %} Analyser les problèmes d'optimisation</h4>
       <p>Identifier et formuler mathématiquement les problèmes d'optimisation en ingénierie.</p>
     </div>
     <div class="objective-card">
-      <h4>⚙️ Implémenter des algorithmes</h4>
+      <h4>{% include ph.html name="gear-six" %} Implémenter des algorithmes</h4>
       <p>Programmer et utiliser des méthodes d'optimisation (gradient, Newton, génétiques).</p>
     </div>
     <div class="objective-card">
-      <h4>📈 Choisir les méthodes appropriées</h4>
+      <h4>{% include ph.html name="trend-up" %} Choisir les méthodes appropriées</h4>
       <p>Sélectionner l'algorithme optimal selon le type de problème et les contraintes.</p>
     </div>
     <div class="objective-card">
-      <h4>💻 Utiliser des outils professionnels</h4>
+      <h4>{% include ph.html name="desktop" %} Utiliser des outils professionnels</h4>
       <p>Maîtriser MATLAB/Python et les bibliothèques d'optimisation (SciPy, cvxpy).</p>
     </div>
     <div class="objective-card">
-      <h4>📊 Analyser les performances</h4>
+      <h4>{% include ph.html name="chart-bar" %} Analyser les performances</h4>
       <p>Évaluer la convergence, la stabilité et la robustesse des solutions.</p>
     </div>
     <div class="objective-card">
-      <h4>🎯 Résoudre des cas concrets</h4>
+      <h4>{% include ph.html name="target" %} Résoudre des cas concrets</h4>
       <p>Appliquer l'optimisation à des problèmes réels d'ingénierie et d'industrie.</p>
     </div>
   </div>
@@ -125,7 +125,7 @@ track: maths
 
 <section id="planning" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📅</div>
+    <div class="section-icon">{% include ph.html name="calendar-blank" %}</div>
     <h2 class="section-title">Planning des travaux pratiques</h2>
   </div>
   <div class="timeline">
@@ -162,7 +162,7 @@ track: maths
 
 <section id="evaluation" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📊</div>
+    <div class="section-icon">{% include ph.html name="chart-bar" %}</div>
     <h2 class="section-title">Modalités d'évaluation</h2>
   </div>
   <div class="evaluation-grid">
@@ -181,12 +181,12 @@ track: maths
 
 <section id="ressources" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📚</div>
+    <div class="section-icon">{% include ph.html name="books" %}</div>
     <h2 class="section-title">Ressources et bibliographie</h2>
   </div>
   <div class="resources-grid">
     <div class="resource-card">
-      <div class="resource-icon">📖</div>
+      <div class="resource-icon">{% include ph.html name="book-open" %}</div>
       <h4>Ouvrages de référence</h4>
       <ul>
         <li><a href="#" target="_blank">Numerical Optimization - Nocedal & Wright</a></li>
@@ -194,7 +194,7 @@ track: maths
       </ul>
     </div>
     <div class="resource-card">
-      <div class="resource-icon">💻</div>
+      <div class="resource-icon">{% include ph.html name="desktop" %}</div>
       <h4>Outils logiciels</h4>
       <ul>
         <li>MATLAB Optimization Toolbox</li>
@@ -207,24 +207,24 @@ track: maths
 
 <section id="contact" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📞</div>
+    <div class="section-icon">{% include ph.html name="phone" %}</div>
     <h2 class="section-title">Contact & encadrement</h2>
   </div>
   <div class="contact-info">
     <div class="contact-item">
-      <span class="contact-icon">👨‍🏫</span>
+      <span class="contact-icon">{% include ph.html name="chalkboard-teacher" %}</span>
       <span><strong>Responsable du cours :</strong> Dr. Yinoussa Adagolodjo</span>
     </div>
     <div class="contact-item">
-      <span class="contact-icon">✉️</span>
+      <span class="contact-icon">{% include ph.html name="envelope" %}</span>
       <span><strong>Email :</strong> Remplir formulaire de contact sur la page d'accueil</span>
     </div>
     <div class="contact-item">
-      <span class="contact-icon">🏢</span>
+      <span class="contact-icon">{% include ph.html name="buildings" %}</span>
       <span><strong>Bureau :</strong> Bâtiment Polytech, Université de Lille</span>
     </div>
     <div class="contact-item">
-      <span class="contact-icon">⏰</span>
+      <span class="contact-icon">{% include ph.html name="alarm" %}</span>
       <span><strong>Permanence :</strong> Sur rendez-vous (contact par email)</span>
     </div>
   </div>

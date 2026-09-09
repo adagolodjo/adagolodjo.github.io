@@ -413,7 +413,7 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 <span><strong>Bureau :</strong> Bâtiment Polytech, Université de Lille</span>
 </div>
 <div class="contact-item">
-<span class="contact-icon">⏰</span>
+<span class="contact-icon">{% include ph.html name="alarm" %}</span>
 <span><strong>Permanence :</strong> Sur rendez-vous (contact par email)</span>
 </div>
 </div>

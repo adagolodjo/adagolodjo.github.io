@@ -15,7 +15,7 @@ permalink: /teaching/courses/modelisation-production/
   --amber:       #f59e0b;
   --amber-pale:  #fffbeb;
   --card-radius: 14px;
-  --shadow:      0 4px 18px rgba(1,96,100,0.10);
+  --li-shadow:      0 4px 18px rgba(1,96,100,0.10);
 }
 
 /* Hero */
@@ -36,7 +36,7 @@ permalink: /teaching/courses/modelisation-production/
 .li-infobar {
   display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;
   background: white; border-radius: var(--card-radius); padding: 1.2rem 1.5rem;
-  box-shadow: var(--shadow); margin-bottom: 2rem;
+  box-shadow: var(--li-shadow); margin-bottom: 2rem;
 }
 .li-info { text-align: center; }
 .li-info-val { font-size: 1.5rem; font-weight: 700; color: var(--teal); }
@@ -53,7 +53,7 @@ permalink: /teaching/courses/modelisation-production/
 /* Competence cards */
 .li-comp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
 .li-comp-card {
-  background: white; border-radius: var(--card-radius); box-shadow: var(--shadow);
+  background: white; border-radius: var(--card-radius); box-shadow: var(--li-shadow);
   padding: 1.3rem 1.5rem; border-top: 4px solid var(--teal-light);
 }
 .li-comp-card.c1 { border-top-color: #3b82f6; }
@@ -74,7 +74,7 @@ permalink: /teaching/courses/modelisation-production/
 /* Sessions accordion-style */
 .li-sessions { display: flex; flex-direction: column; gap: .6rem; }
 .li-session {
-  background: white; border-radius: 10px; box-shadow: var(--shadow);
+  background: white; border-radius: 10px; box-shadow: var(--li-shadow);
   border-left: 4px solid var(--teal-light); padding: .9rem 1.2rem;
 }
 .li-session.c1 { border-left-color: #3b82f6; }
@@ -100,7 +100,7 @@ permalink: /teaching/courses/modelisation-production/
 /* TP cards */
 .li-tp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
 .li-tp-card {
-  background: white; border-radius: var(--card-radius); box-shadow: var(--shadow);
+  background: white; border-radius: var(--card-radius); box-shadow: var(--li-shadow);
   padding: 1.2rem 1.4rem; border-top: 4px solid var(--teal);
 }
 .li-tp-card.star { border-top-color: var(--amber); background: var(--amber-pale); }
@@ -152,7 +152,7 @@ permalink: /teaching/courses/modelisation-production/
 /* Resources grid */
 .li-resources {
   background: white; border-radius: var(--card-radius);
-  box-shadow: var(--shadow); padding: 1.3rem 1.5rem;
+  box-shadow: var(--li-shadow); padding: 1.3rem 1.5rem;
   margin-bottom: 1.8rem;
 }
 .li-resources h4 { color: var(--teal-dark); font-size: .88rem; font-weight: 700; margin: .8rem 0 .5rem; }

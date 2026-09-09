@@ -10,20 +10,20 @@ track: medical
 
 <div class="course-hero">
   <div class="course-hero-content">
-    <h1>🏥 Module IA Robotique & Santé</h1>
+    <h1>{% include ph.html name="hospital" %} Module IA Robotique & Santé</h1>
     <p class="subtitle">Intelligence artificielle, robotique médicale et systèmes de rééducation</p>
     <div class="hero-badges">
-      <span class="hero-badge">🎓 Master</span>
-      <span class="hero-badge">⏱️ 4h TD + 8h TP</span>
-      <span class="hero-badge">🎯 S3</span>
-      <span class="hero-badge">🏥 Médical</span>
+      <span class="hero-badge">{% include ph.html name="graduation-cap" %} Master</span>
+      <span class="hero-badge">{% include ph.html name="timer" %} 4h TD + 8h TP</span>
+      <span class="hero-badge">{% include ph.html name="target" %} S3</span>
+      <span class="hero-badge">{% include ph.html name="hospital" %} Médical</span>
     </div>
   </div>
 </div>
 
 <section class="section-card">
   <div class="section-header">
-    <div class="section-icon">📋</div>
+    <div class="section-icon">{% include ph.html name="clipboard-text" %}</div>
     <h2 class="section-title">Présentation du cours</h2>
   </div>
   
@@ -32,7 +32,7 @@ track: medical
   </p>
 
   <div class="info-box">
-    <h4>📊 Informations générales</h4>
+    <h4>{% include ph.html name="chart-bar" %} Informations générales</h4>
     <p><strong>Code :</strong> OA-ROBOTIQUE-MEDICALE<br>
     <strong>Durée :</strong> 4h de travaux dirigés + 8h de travaux pratiques<br>
     <strong>Semestre :</strong> S3<br>
@@ -43,7 +43,7 @@ track: medical
 
 <section class="section-card">
   <div class="section-header">
-    <div class="section-icon">🎯</div>
+    <div class="section-icon">{% include ph.html name="target" %}</div>
     <h2 class="section-title">Objectifs pédagogiques</h2>
   </div>
 
@@ -53,27 +53,27 @@ track: medical
 
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>🏥 Comprendre la robotique chirurgicale</h4>
+      <h4>{% include ph.html name="hospital" %} Comprendre la robotique chirurgicale</h4>
       <p>Maîtriser les principes et technologies des robots chirurgicaux (Da Vinci, etc.) et leurs applications.</p>
     </div>
     <div class="objective-card">
-      <h4>🦾 Concevoir des systèmes de rééducation</h4>
+      <h4>{% include ph.html name="robot" %} Concevoir des systèmes de rééducation</h4>
       <p>Développer des robots de rééducation pour la récupération motrice et cognitive des patients.</p>
     </div>
     <div class="objective-card">
-      <h4>🧠 Intégrer l'IA médicale</h4>
+      <h4>{% include ph.html name="brain" %} Intégrer l'IA médicale</h4>
       <p>Utiliser l'intelligence artificielle pour l'aide au diagnostic et la planification d'interventions.</p>
     </div>
     <div class="objective-card">
-      <h4>🔒 Assurer la sécurité médicale</h4>
+      <h4>{% include ph.html name="lock" %} Assurer la sécurité médicale</h4>
       <p>Implémenter les protocoles de sécurité et certification pour les dispositifs médicaux robotisés.</p>
     </div>
     <div class="objective-card">
-      <h4>👥 Optimiser l'interaction patient-robot</h4>
+      <h4>{% include ph.html name="users" %} Optimiser l'interaction patient-robot</h4>
       <p>Concevoir des interfaces intuitives et acceptables pour les patients et praticiens.</p>
     </div>
     <div class="objective-card">
-      <h4>⚖️ Intégrer les aspects éthiques</h4>
+      <h4>{% include ph.html name="scales" %} Intégrer les aspects éthiques</h4>
       <p>Comprendre les enjeux éthiques et réglementaires de la robotique médicale.</p>
     </div>
   </div>
@@ -81,7 +81,7 @@ track: medical
 
 <section class="section-card">
   <div class="section-header">
-    <div class="section-icon">📅</div>
+    <div class="section-icon">{% include ph.html name="calendar-blank" %}</div>
     <h2 class="section-title">Programme détaillé</h2>
   </div>
   
@@ -130,7 +130,7 @@ track: medical
 
 <section class="section-card">
   <div class="section-header">
-    <div class="section-icon">📊</div>
+    <div class="section-icon">{% include ph.html name="chart-bar" %}</div>
     <h2 class="section-title">Modalités d'évaluation</h2>
   </div>
   
@@ -151,25 +151,25 @@ track: medical
 
 <section class="section-card">
   <div class="section-header">
-    <div class="section-icon">🔬</div>
+    <div class="section-icon">{% include ph.html name="flask" %}</div>
     <h2 class="section-title">Applications pratiques</h2>
   </div>
   
   <div class="objectives-grid">
     <div class="objective-card" style="border-left-color: var(--course-accent);">
-      <h4>🔬 Chirurgie mini-invasive</h4>
+      <h4>{% include ph.html name="flask" %} Chirurgie mini-invasive</h4>
       <p>Simulation de procédures laparoscopiques avec robots Da Vinci, précision sub-millimétrique.</p>
     </div>
     <div class="objective-card" style="border-left-color: var(--course-accent);">
-      <h4>🦴 Orthopédie robotisée</h4>
+      <h4>{% include ph.html name="bone" %} Orthopédie robotisée</h4>
       <p>Planification et exécution robotisée de prothèses, robots de rééducation post-opératoire.</p>
     </div>
     <div class="objective-card" style="border-left-color: var(--course-accent);">
-      <h4>🧠 Neurochirurgie assistée</h4>
+      <h4>{% include ph.html name="brain" %} Neurochirurgie assistée</h4>
       <p>Navigation stéréotaxique, stimulation cérébrale profonde, robots de biopsie.</p>
     </div>
     <div class="objective-card" style="border-left-color: var(--course-accent);">
-      <h4>💊 Pharmacie automatisée</h4>
+      <h4>{% include ph.html name="pill" %} Pharmacie automatisée</h4>
       <p>Robots de préparation et distribution médicamenteuse, traçabilité complète.</p>
     </div>
   </div>
@@ -177,13 +177,13 @@ track: medical
 
 <section class="section-card">
   <div class="section-header">
-    <div class="section-icon">📚</div>
+    <div class="section-icon">{% include ph.html name="books" %}</div>
     <h2 class="section-title">Ressources et bibliographie</h2>
   </div>
   
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
     <div style="background: rgba(233, 30, 99, 0.1); backdrop-filter: blur(10px); padding: 2rem; border-radius: 16px; border: 1px solid rgba(233, 30, 99, 0.2);">
-      <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--course-accent-ink);">📖</div>
+      <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--course-accent-ink);">{% include ph.html name="book-open" %}</div>
       <h4 style="margin-bottom: 1rem; font-weight: 600;">Ouvrages spécialisés</h4>
       <ul>
         <li>Medical Robotics - Taylor & Stoianovici</li>
@@ -193,7 +193,7 @@ track: medical
     </div>
     
     <div style="background: rgba(233, 30, 99, 0.1); backdrop-filter: blur(10px); padding: 2rem; border-radius: 16px; border: 1px solid rgba(233, 30, 99, 0.2);">
-      <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--course-accent-ink);">💻</div>
+      <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--course-accent-ink);">{% include ph.html name="desktop" %}</div>
       <h4 style="margin-bottom: 1rem; font-weight: 600;">Outils de simulation</h4>
       <ul>
         <li>3D Slicer (imagerie médicale)</li>
@@ -204,7 +204,7 @@ track: medical
     </div>
     
     <div style="background: rgba(233, 30, 99, 0.1); backdrop-filter: blur(10px); padding: 2rem; border-radius: 16px; border: 1px solid rgba(233, 30, 99, 0.2);">
-      <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--course-accent-ink);">🏛️</div>
+      <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--course-accent-ink);">{% include ph.html name="bank" %}</div>
       <h4 style="margin-bottom: 1rem; font-weight: 600;">Normes et certification</h4>
       <ul>
         <li>ISO 14155 (investigations cliniques)</li>
@@ -218,25 +218,25 @@ track: medical
 
 <section class="section-card">
   <div class="section-header">
-    <div class="section-icon">📞</div>
+    <div class="section-icon">{% include ph.html name="phone" %}</div>
     <h2 class="section-title">Contact & encadrement</h2>
   </div>
   
   <div style="display: flex; flex-direction: column; gap: 1rem;">
     <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(233, 30, 99, 0.1); border-radius: 12px;">
-      <span style="font-size: 1.5rem; color: var(--course-accent-ink);">👨‍🏫</span>
+      <span style="font-size: 1.5rem; color: var(--course-accent-ink);">{% include ph.html name="chalkboard-teacher" %}</span>
       <span><strong>Responsable du cours :</strong> Dr. Yinoussa Adagolodjo</span>
     </div>
     <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(233, 30, 99, 0.1); border-radius: 12px;">
-      <span style="font-size: 1.5rem; color: var(--course-accent-ink);">✉️</span>
+      <span style="font-size: 1.5rem; color: var(--course-accent-ink);">{% include ph.html name="envelope" %}</span>
       <span><strong>Email :</strong> Remplir formulaire de contact sur la page d'accueil</span>
     </div>
     <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(233, 30, 99, 0.1); border-radius: 12px;">
-      <span style="font-size: 1.5rem; color: var(--course-accent-ink);">🏢</span>
+      <span style="font-size: 1.5rem; color: var(--course-accent-ink);">{% include ph.html name="buildings" %}</span>
       <span><strong>Bureau :</strong> Bâtiment Polytech, Université de Lille</span>
     </div>
     <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(233, 30, 99, 0.1); border-radius: 12px;">
-      <span style="font-size: 1.5rem; color: var(--course-accent-ink);">⏰</span>
+      <span style="font-size: 1.5rem; color: var(--course-accent-ink);">{% include ph.html name="alarm" %}</span>
       <span><strong>Permanence :</strong> Sur rendez-vous (contact par email)</span>
     </div>
   </div>

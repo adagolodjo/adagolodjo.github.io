@@ -10,37 +10,37 @@ track: numerique
 
 <div class="course-hero">
   <div class="course-hero-content">
-    <h1>🧪 Tests et Maintenance</h1>
+    <h1>{% include ph.html name="test-tube" %} Tests et Maintenance</h1>
     <p class="subtitle">Méthodologies de test logiciel et maintenance des systèmes</p>
     <div class="hero-badges">
-      <span class="hero-badge">🎓 Niveau Graduate</span>
-      <span class="hero-badge">⏱️ 8h TP + 21.1h TD</span>
-      <span class="hero-badge">🎯 Tests logiciels</span>
-      <span class="hero-badge">⚠️ En développement</span>
+      <span class="hero-badge">{% include ph.html name="graduation-cap" %} Niveau Graduate</span>
+      <span class="hero-badge">{% include ph.html name="timer" %} 8h TP + 21.1h TD</span>
+      <span class="hero-badge">{% include ph.html name="target" %} Tests logiciels</span>
+      <span class="hero-badge">{% include ph.html name="warning" %} En développement</span>
     </div>
   </div>
 </div>
 
 <div class="pending-status">
-  <div class="status-icon">⚠️</div>
+  <div class="status-icon">{% include ph.html name="warning" %}</div>
   <strong>Statut : Cours en développement</strong><br>
   Ce cours est actuellement en phase de développement. Le contenu et les modalités peuvent évoluer.
 </div>
 
 <nav class="course-nav">
   <div class="nav-links">
-    <a href="#presentation" class="nav-link active">📋 Présentation</a>
-    <a href="#objectifs" class="nav-link">🎯 Objectifs</a>
-    <a href="#planning" class="nav-link">📅 Planning</a>
-    <a href="#evaluation" class="nav-link">📊 Évaluation</a>
-    <a href="#ressources" class="nav-link">📚 Ressources</a>
-    <a href="#contact" class="nav-link">📞 Contact</a>
+    <a href="#presentation" class="nav-link active">{% include ph.html name="clipboard-text" %} Présentation</a>
+    <a href="#objectifs" class="nav-link">{% include ph.html name="target" %} Objectifs</a>
+    <a href="#planning" class="nav-link">{% include ph.html name="calendar-blank" %} Planning</a>
+    <a href="#evaluation" class="nav-link">{% include ph.html name="chart-bar" %} Évaluation</a>
+    <a href="#ressources" class="nav-link">{% include ph.html name="books" %} Ressources</a>
+    <a href="#contact" class="nav-link">{% include ph.html name="phone" %} Contact</a>
   </div>
 </nav>
 
 <section id="presentation" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📋</div>
+    <div class="section-icon">{% include ph.html name="clipboard-text" %}</div>
     <h2 class="section-title">Présentation du cours</h2>
   </div>
   
@@ -49,7 +49,7 @@ track: numerique
   </p>
 
   <div class="info-box">
-    <h4>📊 Informations générales</h4>
+    <h4>{% include ph.html name="chart-bar" %} Informations générales</h4>
     <p><strong>Durée :</strong> 8h de travaux pratiques + 21.1h de travaux dirigés<br>
     <strong>Volume de travail personnel estimé :</strong> 35-40 heures<br>
     <strong>Langue d'enseignement :</strong> Français<br>
@@ -57,10 +57,10 @@ track: numerique
     <strong>Statut :</strong> En développement</p>
   </div>
 
-  <h3 style="color: var(--course-ink); margin-bottom: 1.5rem;">✅ Prérequis</h3>
+  <h3 style="color: var(--course-ink); margin-bottom: 1.5rem;">{% include ph.html name="check-circle" %} Prérequis</h3>
   
   <div class="prerequisite-item">
-    <div class="prerequisite-icon">💻</div>
+    <div class="prerequisite-icon">{% include ph.html name="desktop" %}</div>
     <div>
       <strong>Programmation orientée objet</strong>
       <p style="margin: 0; color: #666; font-size: 0.95rem;">Java, C#, Python ou équivalent, concepts d'architecture logicielle</p>
@@ -68,7 +68,7 @@ track: numerique
   </div>
   
   <div class="prerequisite-item">
-    <div class="prerequisite-icon">🏗️</div>
+    <div class="prerequisite-icon">{% include ph.html name="crane-tower" %}</div>
     <div>
       <strong>Génie logiciel</strong>
       <p style="margin: 0; color: #666; font-size: 0.95rem;">Cycle de développement, méthodologies Agile, gestion de versions</p>
@@ -76,7 +76,7 @@ track: numerique
   </div>
 
   <div class="prerequisite-item">
-    <div class="prerequisite-icon">🗄️</div>
+    <div class="prerequisite-icon">{% include ph.html name="archive" %}</div>
     <div>
       <strong>Systèmes d'information</strong>
       <p style="margin: 0; color: #666; font-size: 0.95rem;">Bases de données, architectures distribuées, services web</p>
@@ -95,7 +95,7 @@ track: numerique
 
 <section id="objectifs" class="section-card">
   <div class="section-header">
-    <div class="section-icon">🎯</div>
+    <div class="section-icon">{% include ph.html name="target" %}</div>
     <h2 class="section-title">Objectifs pédagogiques</h2>
   </div>
 
@@ -105,27 +105,27 @@ track: numerique
 
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>🧪 Concevoir des stratégies de test</h4>
+      <h4>{% include ph.html name="test-tube" %} Concevoir des stratégies de test</h4>
       <p>Élaborer des plans de test complets couvrant les différents niveaux (unitaire, intégration, système).</p>
     </div>
     <div class="objective-card">
-      <h4>⚙️ Automatiser les tests</h4>
+      <h4>{% include ph.html name="gear-six" %} Automatiser les tests</h4>
       <p>Mettre en place des pipelines d'intégration continue avec tests automatisés.</p>
     </div>
     <div class="objective-card">
-      <h4>📊 Analyser la qualité logicielle</h4>
+      <h4>{% include ph.html name="chart-bar" %} Analyser la qualité logicielle</h4>
       <p>Utiliser des métriques de qualité et des outils d'analyse statique du code.</p>
     </div>
     <div class="objective-card">
-      <h4>🔧 Maintenir les systèmes</h4>
+      <h4>{% include ph.html name="wrench" %} Maintenir les systèmes</h4>
       <p>Appliquer les bonnes pratiques de maintenance préventive et corrective.</p>
     </div>
     <div class="objective-card">
-      <h4>🐛 Déboguer efficacement</h4>
+      <h4>{% include ph.html name="bug" %} Déboguer efficacement</h4>
       <p>Maîtriser les techniques de débogage et d'analyse des défauts logiciels.</p>
     </div>
     <div class="objective-card">
-      <h4>📈 Optimiser les performances</h4>
+      <h4>{% include ph.html name="trend-up" %} Optimiser les performances</h4>
       <p>Identifier et résoudre les problèmes de performance et de scalabilité.</p>
     </div>
   </div>
@@ -133,7 +133,7 @@ track: numerique
 
 <section id="planning" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📅</div>
+    <div class="section-icon">{% include ph.html name="calendar-blank" %}</div>
     <h2 class="section-title">Planning du cours</h2>
   </div>
   <div class="timeline">
@@ -177,7 +177,7 @@ track: numerique
 
 <section id="evaluation" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📊</div>
+    <div class="section-icon">{% include ph.html name="chart-bar" %}</div>
     <h2 class="section-title">Modalités d'évaluation</h2>
   </div>
   <div class="evaluation-grid">
@@ -191,12 +191,12 @@ track: numerique
 
 <section id="ressources" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📚</div>
+    <div class="section-icon">{% include ph.html name="books" %}</div>
     <h2 class="section-title">Ressources et outils</h2>
   </div>
   <div class="resources-grid">
     <div class="resource-card">
-      <div class="resource-icon">📖</div>
+      <div class="resource-icon">{% include ph.html name="book-open" %}</div>
       <h4>Ouvrages de référence</h4>
       <ul>
         <li><a href="#" target="_blank">Clean Code - Robert Martin</a></li>
@@ -204,7 +204,7 @@ track: numerique
       </ul>
     </div>
     <div class="resource-card">
-      <div class="resource-icon">🛠️</div>
+      <div class="resource-icon">{% include ph.html name="toolbox" %}</div>
       <h4>Outils de test</h4>
       <ul>
         <li>JUnit, pytest, Jest</li>
@@ -213,7 +213,7 @@ track: numerique
       </ul>
     </div>
     <div class="resource-card">
-      <div class="resource-icon">🔄</div>
+      <div class="resource-icon">{% include ph.html name="arrows-clockwise" %}</div>
       <h4>Plateformes CI/CD</h4>
       <ul>
         <li>Jenkins, GitLab CI</li>
@@ -226,24 +226,24 @@ track: numerique
 
 <section id="contact" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📞</div>
+    <div class="section-icon">{% include ph.html name="phone" %}</div>
     <h2 class="section-title">Contact & encadrement</h2>
   </div>
   <div class="contact-info">
     <div class="contact-item">
-      <span class="contact-icon">👨‍🏫</span>
+      <span class="contact-icon">{% include ph.html name="chalkboard-teacher" %}</span>
       <span><strong>Responsable du cours :</strong> Dr. Yinoussa Adagolodjo</span>
     </div>
     <div class="contact-item">
-      <span class="contact-icon">✉️</span>
+      <span class="contact-icon">{% include ph.html name="envelope" %}</span>
       <span><strong>Email :</strong> Remplir formulaire de contact sur la page d'accueil</span>
     </div>
     <div class="contact-item">
-      <span class="contact-icon">🏢</span>
+      <span class="contact-icon">{% include ph.html name="buildings" %}</span>
       <span><strong>Bureau :</strong> Bâtiment Polytech, Université de Lille</span>
     </div>
     <div class="contact-item">
-      <span class="contact-icon">⏰</span>
+      <span class="contact-icon">{% include ph.html name="alarm" %}</span>
       <span><strong>Permanence :</strong> Sur rendez-vous (contact par email)</span>
     </div>
   </div>

@@ -10,7 +10,7 @@ redirect_to: /teaching/courses/mathematiques-ingenieur/
 window.location.replace("/teaching/courses/mathematiques-ingenieur/");
 </script>
 
-# 🔄 Redirection en cours...
+# {% include ph.html name="arrows-clockwise" %} Redirection en cours...
 
 Ce cours a été déplacé vers une nouvelle URL.
 

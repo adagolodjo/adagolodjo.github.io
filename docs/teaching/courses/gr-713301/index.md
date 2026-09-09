@@ -13,61 +13,61 @@ track: industrie
     <h1>Automatique: Régulation de Système</h1>
     <p class="subtitle">Théorie du contrôle automatique et régulation de système</p>
     <div class="hero-badges">
-      <span class="hero-badge">🏭 GR-713301</span>
-      <span class="hero-badge">⏱️ 16h TP</span>
-      <span class="hero-badge">📅 Semestre 3</span>
-      <span class="hero-badge">🔧 Niveau Graduate</span>
+      <span class="hero-badge">{% include ph.html name="factory" %} GR-713301</span>
+      <span class="hero-badge">{% include ph.html name="timer" %} 16h TP</span>
+      <span class="hero-badge">{% include ph.html name="calendar-blank" %} Semestre 3</span>
+      <span class="hero-badge">{% include ph.html name="wrench" %} Niveau Graduate</span>
     </div>
   </div>
 </div>
 
 <nav class="course-nav">
   <div class="nav-links">
-    <a href="#objectifs" class="nav-link">🎧 Objectifs</a>
-    <a href="#programme" class="nav-link">📚 Programme</a>
-    <a href="#evaluation" class="nav-link">📊 Évaluation</a>
-    <a href="#ressources" class="nav-link">💾 Ressources</a>
-    <a href="#contact" class="nav-link">📞 Contact</a>
+    <a href="#objectifs" class="nav-link">{% include ph.html name="headphones" %} Objectifs</a>
+    <a href="#programme" class="nav-link">{% include ph.html name="books" %} Programme</a>
+    <a href="#evaluation" class="nav-link">{% include ph.html name="chart-bar" %} Évaluation</a>
+    <a href="#ressources" class="nav-link">{% include ph.html name="floppy-disk" %} Ressources</a>
+    <a href="#contact" class="nav-link">{% include ph.html name="phone" %} Contact</a>
   </div>
 </nav>
 
 <div class="section-card" id="description">
   <div class="section-header">
-    <div class="section-icon">🎛️</div>
+    <div class="section-icon">{% include ph.html name="sliders" %}</div>
     <h2 class="section-title">Description du cours</h2>
   </div>
   
   <p class="lead">Ce cours pratique d'automatique met l'accent sur l'identification paramétrique et la régulation temps réel de systèmes physiques. Les étudiants travaillent sur trois types de procédés industriels : thermique (chauffage d'air), hydraulique (régulation de niveau) et électromécanique (moteur CC).</p>
   
   <div class="info-box">
-    <strong>🎯 Organisation :</strong> Formation en binômes avec rotation sur les 3 procédés. Première séance dédiée au développement d'outils MATLAB d'identification, puis 3 séances de TP temps réel sur maquettes industrielles avec système d'acquisition Speedgoat.
+    <strong>{% include ph.html name="target" %} Organisation :</strong> Formation en binômes avec rotation sur les 3 procédés. Première séance dédiée au développement d'outils MATLAB d'identification, puis 3 séances de TP temps réel sur maquettes industrielles avec système d'acquisition Speedgoat.
   </div>
 </div>
 
 <div class="section-card" id="objectifs">
   <div class="section-header">
-    <div class="section-icon">🎧</div>
+    <div class="section-icon">{% include ph.html name="headphones" %}</div>
     <h2 class="section-title">Objectifs pédagogiques</h2>
   </div>
   
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>🔧 Identification de systèmes</h4>
+      <h4>{% include ph.html name="wrench" %} Identification de systèmes</h4>
       <p>Développer et valider des méthodes d'identification paramétrique sur des systèmes physiques réels (thermique, hydraulique, électromécanique).</p>
     </div>
     
     <div class="objective-card">
-      <h4>📊 Régulation temps réel</h4>
+      <h4>{% include ph.html name="chart-bar" %} Régulation temps réel</h4>
       <p>Concevoir et implémenter des régulateurs P, PI, PID sur des procédés industriels avec système d'acquisition Speedgoat.</p>
     </div>
     
     <div class="objective-card">
-      <h4>🎛️ Analyse de performances</h4>
+      <h4>{% include ph.html name="sliders" %} Analyse de performances</h4>
       <p>Évaluer la précision, rapidité, robustesse et stabilité des systèmes régulés en conditions réelles.</p>
     </div>
     
     <div class="objective-card">
-      <h4>💻 Outils professionnels</h4>
+      <h4>{% include ph.html name="desktop" %} Outils professionnels</h4>
       <p>Maîtriser MATLAB/Simulink pour l'identification, la simulation et la commande temps réel de systèmes automatiques.</p>
     </div>
   </div>
@@ -75,13 +75,13 @@ track: industrie
 
 <div class="section-card" id="programme">
   <div class="section-header">
-    <div class="section-icon">📚</div>
+    <div class="section-icon">{% include ph.html name="books" %}</div>
     <h2 class="section-title">Programme détaillé</h2>
   </div>
   
   <div class="timeline">
     <div class="timeline-item">
-      <h4>🔍 TP 1: Identification et outils de simulation</h4>
+      <h4>{% include ph.html name="magnifying-glass" %} TP 1: Identification et outils de simulation</h4>
       <ul>
         <li>Développement d'outils d'identification paramétrique en MATLAB</li>
         <li>Méthodes graphiques : premier ordre et méthode de Broïda</li>
@@ -92,7 +92,7 @@ track: industrie
     </div>
     
     <div class="timeline-item">
-      <h4>🌡️ TP 2: Régulation thermique</h4>
+      <h4>{% include ph.html name="thermometer" %} TP 2: Régulation thermique</h4>
       <ul>
         <li>Processus de chauffage d'air avec résistance et ventilation</li>
         <li>Identification avec retard pur et constante de temps</li>
@@ -103,7 +103,7 @@ track: industrie
     </div>
     
     <div class="timeline-item">
-      <h4>💧 TP 3: Régulation de niveau</h4>
+      <h4>{% include ph.html name="drop" %} TP 3: Régulation de niveau</h4>
       <ul>
         <li>Système hydraulique avec pompe et réservoirs</li>
         <li>Identification autour d'un point de fonctionnement</li>
@@ -114,7 +114,7 @@ track: industrie
     </div>
     
     <div class="timeline-item">
-      <h4>⚡ TP 4: Régulation de vitesse moteur</h4>
+      <h4>{% include ph.html name="lightning" %} TP 4: Régulation de vitesse moteur</h4>
       <ul>
         <li>Moteur à courant continu avec génératrice tachymétrique</li>
         <li>Régulateurs proportionnel (P) et proportionnel-intégral (PI)</li>
@@ -128,7 +128,7 @@ track: industrie
 
 <div class="section-card" id="evaluation">
   <div class="section-header">
-    <div class="section-icon">📊</div>
+    <div class="section-icon">{% include ph.html name="chart-bar" %}</div>
     <h2 class="section-title">Modalités d'évaluation</h2>
   </div>
   
@@ -153,7 +153,7 @@ track: industrie
   </div>
   
   <div class="info-box" style="margin-top: 1.5rem; background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #e17055;">
-    <strong>⚠️ Règles importantes :</strong><br>
+    <strong>{% include ph.html name="warning" %} Règles importantes :</strong><br>
     • <strong>Temps passé sur le téléphone = temps non consacré au TP</strong><br>
     • Interrogations possibles en début de séance pour vérifier la préparation<br>
     • Notes pratiques collectives par binôme, interrogations individuelles<br>
@@ -161,19 +161,19 @@ track: industrie
   </div>
   
   <div class="info-box" style="margin-top: 1rem;">
-    <strong>📋 Modalités spéciales :</strong> Les résultats d'identification de la séance 2 doivent être partagés sur Moodle® dès la fin de séance pour permettre aux autres binômes de paramétrer leurs régulateurs. Organisation en rotation : chaque binôme effectue l'identification sur un procédé et la régulation sur les deux autres.
+    <strong>{% include ph.html name="clipboard-text" %} Modalités spéciales :</strong> Les résultats d'identification de la séance 2 doivent être partagés sur Moodle® dès la fin de séance pour permettre aux autres binômes de paramétrer leurs régulateurs. Organisation en rotation : chaque binôme effectue l'identification sur un procédé et la régulation sur les deux autres.
   </div>
 </div>
 
 <div class="section-card" id="ressources">
   <div class="section-header">
-    <div class="section-icon">💾</div>
+    <div class="section-icon">{% include ph.html name="floppy-disk" %}</div>
     <h2 class="section-title">Ressources pédagogiques</h2>
   </div>
   
   <div class="resources-grid">
     <div class="resource-card">
-      <div class="resource-icon">🔧</div>
+      <div class="resource-icon">{% include ph.html name="wrench" %}</div>
       <h4>Systèmes expérimentaux</h4>
       <ul>
         <li><strong>Processus thermique :</strong> Chauffage d'air avec ventilation</li>
@@ -184,7 +184,7 @@ track: industrie
     </div>
     
     <div class="resource-card">
-      <div class="resource-icon">💻</div>
+      <div class="resource-icon">{% include ph.html name="desktop" %}</div>
       <h4>Logiciels et acquisition</h4>
       <ul>
         <li><strong>MATLAB/Simulink :</strong> Identification et simulation temps réel</li>
@@ -195,15 +195,15 @@ track: industrie
     </div>
     
     <div class="resource-card">
-      <div class="resource-icon">📄</div>
+      <div class="resource-icon">{% include ph.html name="file-text" %}</div>
       <h4>Documentation TP</h4>
       <ul>
         <li><strong>Supports détaillés :</strong> 4 fascicules de TP complets</li>
         <li><strong>Procédures expérimentales :</strong> Protocoles step-by-step</li>
         <li><strong>Méthodes d'identification :</strong> Premier ordre et Broïda</li>
         <li><strong>Consignes sécurité :</strong> Manipulations en conditions réelles</li>
-        <li><strong>📚 <a href="https://nextcloud.univ-lille.fr/index.php/s/QeEH255YiJeEMmT" target="_blank" rel="noopener" style="color: var(--course-accent-ink); text-decoration: none; font-weight: bold;">Rappels Matlab</a></strong> - Cours théorique de base</li>
-        <li><strong>📥 <a href="https://nextcloud.univ-lille.fr/index.php/s/Cj6tFw3gFrspLkc" target="_blank" rel="noopener" style="color: var(--course-accent-ink); text-decoration: none; font-weight: bold;">Télécharger les supports PDF</a></strong></li>
+        <li><strong>{% include ph.html name="books" %} <a href="https://nextcloud.univ-lille.fr/index.php/s/QeEH255YiJeEMmT" target="_blank" rel="noopener" style="color: var(--course-accent-ink); text-decoration: none; font-weight: bold;">Rappels Matlab</a></strong> - Cours théorique de base</li>
+        <li><strong>{% include ph.html name="download-simple" %} <a href="https://nextcloud.univ-lille.fr/index.php/s/Cj6tFw3gFrspLkc" target="_blank" rel="noopener" style="color: var(--course-accent-ink); text-decoration: none; font-weight: bold;">Télécharger les supports PDF</a></strong></li>
       </ul>
     </div>
   </div>
@@ -211,13 +211,13 @@ track: industrie
 
 <div class="section-card" id="contact">
   <div class="section-header">
-    <div class="section-icon">📞</div>
+    <div class="section-icon">{% include ph.html name="phone" %}</div>
     <h2 class="section-title">Informations de contact</h2>
   </div>
   
   <div class="contact-info">
     <div class="contact-item">
-      <div class="contact-icon">👨‍🏫</div>
+      <div class="contact-icon">{% include ph.html name="chalkboard-teacher" %}</div>
       <div>
         <strong>Équipe enseignante</strong><br>
         Prof. Jean-Yves Dieulot & Dr. Yinoussa Adagolodjo
@@ -225,7 +225,7 @@ track: industrie
     </div>
     
     <div class="contact-item">
-      <div class="contact-icon">✉️</div>
+      <div class="contact-icon">{% include ph.html name="envelope" %}</div>
       <div>
         <strong>Email</strong><br>
         Utiliser le formulaire de contact sur la page d'accueil
@@ -233,7 +233,7 @@ track: industrie
     </div>
     
     <div class="contact-item">
-      <div class="contact-icon">🏢</div>
+      <div class="contact-icon">{% include ph.html name="buildings" %}</div>
       <div>
         <strong>Lieux des TP</strong><br>
         Salle B302 (Simulation) et C008 (Temps réel)
@@ -241,7 +241,7 @@ track: industrie
     </div>
     
     <div class="contact-item">
-      <div class="contact-icon">🕰️</div>
+      <div class="contact-icon">{% include ph.html name="clock" %}</div>
       <div>
         <strong>Horaires</strong><br>
         Créneaux variables selon planning - Consulter l'emploi du temps
