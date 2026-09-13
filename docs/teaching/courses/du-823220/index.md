@@ -11,7 +11,7 @@ redirect_to: /teaching/courses/logique-industrielle/
 window.location.replace("/teaching/courses/logique-industrielle/");
 </script>
 
-# 🔄 Redirection en cours...
+# {% include ph.html name="arrows-clockwise" %} Redirection en cours...
 
 Ce cours a été déplacé vers une nouvelle URL.
 
@@ -19,7 +19,7 @@ Ce cours a été déplacé vers une nouvelle URL.
 
 Si la redirection ne fonctionne pas, [cliquez ici](/teaching/courses/logique-industrielle/).
 
-## 📋 Informations du cours
+## {% include ph.html name="clipboard-text" %} Informations du cours
 
 - **Code**: DU-823220
 - **Titre**: Logique Séquentielle – SAP et Grafcet  

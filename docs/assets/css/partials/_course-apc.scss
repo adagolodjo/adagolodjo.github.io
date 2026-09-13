@@ -1,0 +1,309 @@
+// ============================================================
+// COURSE — APC layout (Approche Par Compétences)
+//
+// Used by /teaching/courses/modelisation-production/. This page has
+// its own component vocabulary (competences, sessions, TP cards,
+// a skills table) that does not map onto the generic course layout
+// in _courses.scss, so it keeps its own partial.
+//
+// The li-* class names are preserved — only the scope moved out of
+// the page's inline <style>. Variables prefixed --apc-*, scoped to
+// .course-apc, so nothing leaks to the global theme (the old block
+// redefined --shadow on :root).
+//
+// Enabled with `page_kind: course-apc` in the page front matter.
+// ============================================================
+
+.course-apc {
+  --apc-ink:       #013A3C;
+  --apc-primary:   #016064;
+  --apc-light:     #48AAAD;
+  --apc-pale:      #E0F7FA;
+  --apc-mid:       #5CC8CB;
+  --apc-amber:     #B26B00;   // darkened from #f59e0b for text contrast
+  --apc-amber-mid: #f59e0b;   // decorative only (borders, rules)
+  --apc-amber-pale:#FFF8E1;
+  --apc-amber-ink: #8A5200;
+  --apc-surface:   #ffffff;
+  --apc-border:    #D3E9EA;
+  --apc-muted:     #5A7274;
+  --apc-radius:    14px;
+  --apc-shadow:    0 4px 18px rgba(1, 96, 100, .10);
+
+  // Competence accents (C1 analyse, C2 conception, C3 mise en œuvre)
+  --apc-c1:        #2563EB;
+  --apc-c1-wash:   #DBEAFE;
+  --apc-c1-ink:    #1D4ED8;
+  --apc-c2:        #016064;
+  --apc-c2-wash:   #E0F7FA;
+  --apc-c2-ink:    #013A3C;
+  --apc-c3:        #B26B00;
+  --apc-c3-wash:   #FFF3E0;
+  --apc-c3-ink:    #8A5200;
+  --apc-c12:       #7C3AED;
+  --apc-c12-wash:  #EDE9FE;
+  --apc-c12-ink:   #5B21B6;
+  --apc-c23:       #059669;
+  --apc-c23-wash:  #D1FAE5;
+  --apc-c23-ink:   #065F46;
+}
+
+.content.course-apc {
+
+  // ── Hero ────────────────────────────────────────────────
+  .li-hero {
+    background: linear-gradient(135deg, var(--apc-ink) 0%, var(--apc-primary) 60%, var(--apc-light) 100%);
+    color: #fff;
+    padding: 2.5rem 2rem 2rem;
+    border-radius: var(--apc-radius);
+    margin-bottom: 2rem;
+    text-align: center;
+
+    h1 { color: #fff; font-size: 2rem; margin-bottom: .3rem; }
+    .sub { color: var(--apc-mid); font-size: 1.05rem; margin-bottom: .8rem; }
+  }
+  .li-badges {
+    display: flex; flex-wrap: wrap; gap: .5rem;
+    justify-content: center; margin-top: .8rem;
+  }
+  .li-badge {
+    display: inline-flex; align-items: center; gap: .35rem;
+    background: rgba(255, 255, 255, .15);
+    border: 1px solid rgba(255, 255, 255, .25);
+    color: #fff;
+    padding: .3rem .85rem; border-radius: 999px;
+    font-size: .8rem; font-weight: 600;
+  }
+
+  // ── Info bar ────────────────────────────────────────────
+  .li-infobar {
+    display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;
+    background: var(--apc-surface);
+    border: 1px solid var(--apc-border);
+    border-radius: var(--apc-radius);
+    padding: 1.2rem 1.5rem;
+    box-shadow: var(--apc-shadow);
+    margin-bottom: 2rem;
+  }
+  .li-info     { text-align: center; }
+  .li-info-val { font-size: 1.5rem; font-weight: 700; color: var(--apc-primary); }
+  .li-info-lbl { font-size: .75rem; color: var(--apc-muted); margin-top: .15rem; }
+
+  // ── Section titles ──────────────────────────────────────
+  .li-section {
+    display: flex; align-items: center; gap: .6rem;
+    font-size: 1.2rem; font-weight: 700;
+    color: var(--apc-ink);
+    border-bottom: 2px solid var(--apc-light);
+    padding-bottom: .4rem;
+    margin: 2rem 0 1.2rem;
+  }
+
+  // ── Competence cards ────────────────────────────────────
+  .li-comp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem; margin-bottom: 1.5rem;
+  }
+  .li-comp-card {
+    background: var(--apc-surface);
+    border: 1px solid var(--apc-border);
+    border-top: 4px solid var(--apc-light);
+    border-radius: var(--apc-radius);
+    box-shadow: var(--apc-shadow);
+    padding: 1.3rem 1.5rem;
+
+    &.c1 { border-top-color: var(--apc-c1); }
+    &.c2 { border-top-color: var(--apc-c2); }
+    &.c3 { border-top-color: var(--apc-c3); }
+  }
+  .li-comp-title  { font-weight: 700; font-size: 1rem; color: var(--apc-ink); margin-bottom: .3rem; }
+  .li-comp-badge {
+    display: inline-block; padding: .2rem .6rem; border-radius: 999px;
+    font-size: .72rem; font-weight: 700; margin-bottom: .6rem;
+  }
+  .c1 .li-comp-badge { background: var(--apc-c1-wash); color: var(--apc-c1-ink); }
+  .c2 .li-comp-badge { background: var(--apc-c2-wash); color: var(--apc-c2-ink); }
+  .c3 .li-comp-badge { background: var(--apc-c3-wash); color: var(--apc-c3-ink); }
+  .li-comp-verbs  { font-size: .82rem; color: var(--apc-muted); font-style: italic; margin-bottom: .7rem; }
+  .li-comp-skills {
+    margin: 0 0 0 1rem; padding: 0;
+    li { font-size: .83rem; color: var(--apc-muted); line-height: 1.7; }
+  }
+
+  // ── Sessions ────────────────────────────────────────────
+  .li-sessions { display: flex; flex-direction: column; gap: .6rem; }
+  .li-session {
+    background: var(--apc-surface);
+    border: 1px solid var(--apc-border);
+    border-left: 4px solid var(--apc-light);
+    border-radius: var(--apc-radius);
+    box-shadow: var(--apc-shadow);
+    padding: .9rem 1.2rem;
+
+    &.c1  { border-left-color: var(--apc-c1); }
+    &.c2  { border-left-color: var(--apc-c2); }
+    &.c3  { border-left-color: var(--apc-c3); }
+    &.c12 { border-left-color: var(--apc-c12); }
+    &.c23 { border-left-color: var(--apc-c23); }
+  }
+  .li-session-head  { display: flex; align-items: center; gap: .7rem; margin-bottom: .35rem; }
+  .li-session-num   { font-weight: 700; color: var(--apc-ink); font-size: .9rem; min-width: 50px; }
+  .li-session-title { font-weight: 600; color: var(--apc-ink); font-size: .92rem; }
+  .li-session-tag {
+    margin-left: auto; font-size: .7rem; font-weight: 700;
+    padding: .15rem .5rem; border-radius: 999px; white-space: nowrap;
+  }
+  .tag-c1  { background: var(--apc-c1-wash);  color: var(--apc-c1-ink); }
+  .tag-c2  { background: var(--apc-c2-wash);  color: var(--apc-c2-ink); }
+  .tag-c3  { background: var(--apc-c3-wash);  color: var(--apc-c3-ink); }
+  .tag-c12 { background: var(--apc-c12-wash); color: var(--apc-c12-ink); }
+  .tag-c23 { background: var(--apc-c23-wash); color: var(--apc-c23-ink); }
+  .li-session-obj {
+    margin: 0 0 0 1.1rem; padding: 0;
+    li { font-size: .82rem; color: var(--apc-muted); line-height: 1.65; }
+  }
+
+  // ── TP cards ────────────────────────────────────────────
+  .li-tp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  .li-tp-card {
+    background: var(--apc-surface);
+    border: 1px solid var(--apc-border);
+    border-top: 4px solid var(--apc-primary);
+    border-radius: var(--apc-radius);
+    box-shadow: var(--apc-shadow);
+    padding: 1.2rem 1.4rem;
+
+    // ⭐ the flagship TP of the module
+    &.star {
+      border-top-color: var(--apc-amber-mid);
+      background: var(--apc-amber-pale);
+
+      .li-tp-num         { color: var(--apc-amber-ink); }
+      .li-tp-deliverable { background: #FEF3C7; }
+    }
+  }
+  .li-tp-num {
+    font-size: .72rem; font-weight: 700; color: var(--apc-primary);
+    text-transform: uppercase; letter-spacing: .06em; margin-bottom: .3rem;
+  }
+  .li-tp-title   { font-weight: 700; color: var(--apc-ink); margin-bottom: .4rem; font-size: .95rem; }
+  .li-tp-context {
+    font-size: .83rem; color: var(--apc-muted); font-style: italic;
+    margin-bottom: .6rem;
+    border-left: 3px solid var(--apc-light);
+    padding-left: .6rem;
+  }
+  .li-tp-obj {
+    margin: 0 0 .7rem 1rem; padding: 0;
+    li { font-size: .82rem; color: var(--apc-muted); line-height: 1.65; }
+  }
+  .li-tp-deliverable {
+    background: var(--apc-pale);
+    border-radius: var(--apc-radius);
+    padding: .45rem .7rem;
+    font-size: .8rem;
+    color: var(--apc-ink);
+  }
+
+  // ── Skills table ────────────────────────────────────────
+  .li-table {
+    width: 100%; border-collapse: collapse;
+    font-size: .85rem; margin-bottom: 1.5rem;
+
+    th {
+      background: var(--apc-primary); color: #fff;
+      padding: .6rem .8rem; text-align: left;
+    }
+    td {
+      padding: .55rem .8rem;
+      border-bottom: 1px solid var(--apc-border);
+      vertical-align: top;
+      color: var(--apc-muted);
+    }
+    tr:hover td { background: var(--apc-pale); }
+    .star-row td { background: var(--apc-amber-pale); font-weight: 600; color: var(--apc-ink); }
+  }
+
+  // ── Bridge callout ──────────────────────────────────────
+  .li-bridge {
+    background: linear-gradient(135deg, var(--apc-pale) 0%, var(--apc-surface) 100%);
+    border: 2px solid var(--apc-light);
+    border-radius: var(--apc-radius);
+    padding: 1.3rem 1.6rem;
+    margin: 1.5rem 0;
+
+    h4 { color: var(--apc-ink); margin-bottom: .5rem; }
+    ul { margin: 0 0 0 1.1rem; }
+    li { font-size: .88rem; color: var(--apc-muted); line-height: 1.8; }
+  }
+
+  // ── PDF buttons ─────────────────────────────────────────
+  .li-pdf-btn {
+    display: inline-flex; align-items: center; gap: .35rem;
+    font-size: .72rem; font-weight: 600;
+    padding: .25rem .7rem; border-radius: 8px;
+    text-decoration: none;
+    transition: background .2s, color .2s, border-color .2s;
+    border: 1.5px solid var(--apc-light);
+    color: var(--apc-primary);
+    background: var(--apc-pale);
+    white-space: nowrap;
+
+    &:hover { background: var(--apc-primary); color: #fff; border-color: var(--apc-primary); }
+
+    // Not yet published — inert, and announced as such to screen readers
+    &.placeholder {
+      border-style: dashed; opacity: .55;
+      color: var(--apc-muted); background: transparent; border-color: var(--apc-border);
+      cursor: not-allowed; pointer-events: none;
+    }
+  }
+
+  // ── Resources block ─────────────────────────────────────
+  .li-resources {
+    background: var(--apc-surface);
+    border: 1px solid var(--apc-border);
+    border-radius: var(--apc-radius);
+    box-shadow: var(--apc-shadow);
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 1.8rem;
+
+    h4 {
+      color: var(--apc-ink); font-size: .88rem; font-weight: 700;
+      margin: .8rem 0 .5rem;
+      &:first-child { margin-top: 0; }
+    }
+  }
+  .li-res-row { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: .3rem; }
+
+  // ── Responsive ──────────────────────────────────────────
+  @media (max-width: 600px) {
+    .li-hero { padding: 1.75rem 1.25rem; h1 { font-size: 1.6rem; } }
+    .li-comp-grid, .li-tp-grid { grid-template-columns: 1fr; }
+    .li-infobar { gap: .7rem; }
+    .li-table { font-size: .78rem; }
+  }
+}
+
+// ── Dark mode ─────────────────────────────────────────────
+[data-theme="dark"] .content.course-apc {
+  --apc-surface:    #172A2B;
+  --apc-pale:       #122223;
+  --apc-border:     #24494B;
+  --apc-ink:        #E4F3F3;
+  --apc-muted:      #9BB6B7;
+  --apc-amber-pale: #2A2114;
+  --apc-shadow:     0 4px 18px rgba(0, 0, 0, .3);
+
+  .li-comp-title,
+  .li-session-title,
+  .li-tp-title,
+  .li-section,
+  .li-bridge h4,
+  .li-resources h4 { color: var(--apc-ink); }
+}

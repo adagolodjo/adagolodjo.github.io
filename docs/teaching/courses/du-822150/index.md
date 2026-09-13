@@ -10,7 +10,7 @@ redirect_to: /teaching/courses/initiation-recherche/
 window.location.replace("/teaching/courses/initiation-recherche/");
 </script>
 
-# 🔄 Redirection en cours...
+# {% include ph.html name="arrows-clockwise" %} Redirection en cours...
 
 Ce cours a été déplacé vers une nouvelle URL.
 

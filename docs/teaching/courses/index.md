@@ -3,394 +3,23 @@ layout: page
 title: Courses
 permalink: /teaching/courses/
 subtitle: Current and Past Courses
+page_kind: courses-index
 ---
 
-<style>
-:root {
-  --primary-color: #2c3e50;
-  --secondary-color: #3498db;
-  --accent-color: #e74c3c;
-  --success-color: #27ae60;
-  --warning-color: #f39c12;
-  --light-bg: #f8f9fa;
-  --card-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  --card-shadow-hover: 0 12px 40px rgba(0,0,0,0.15);
-  --border-radius: 16px;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.page-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  padding: 2rem 0;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
-  border-radius: var(--border-radius);
-  margin: -1rem -1rem 3rem -1rem;
-}
-
-.page-header h1 {
-  color: white;
-  margin-bottom: 0.5rem;
-  font-size: 2.5rem;
-  font-weight: 300;
-}
-
-.page-header .subtitle {
-  opacity: 0.9;
-  font-size: 1.2rem;
-}
-
-.section-header {
-  display: flex;
-  align-items: center;
-  margin: 3rem 0 2rem 0;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--secondary-color);
-}
-
-.section-header h2 {
-  margin: 0;
-  color: var(--primary-color);
-  font-weight: 600;
-}
-
-.section-header .icon {
-  margin-right: 0.75rem;
-  font-size: 1.5rem;
-  color: var(--secondary-color);
-}
-
-.courses-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.course-card {
-  background: #fff;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  padding: 2rem;
-  border: 1px solid #e9ecef;
-  transition: var(--transition);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  overflow: hidden;
-}
-
-.course-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, var(--secondary-color), var(--success-color));
-  transform: scaleX(0);
-  transition: var(--transition);
-  transform-origin: left;
-}
-
-.course-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--card-shadow-hover);
-}
-
-.course-card:hover::before {
-  transform: scaleX(1);
-}
-
-.course-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--primary-color);
-  line-height: 1.3;
-}
-
-.course-code {
-  background: var(--secondary-color);
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  display: inline-block;
-  margin-bottom: 0.5rem;
-}
-
-.course-meta {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
-}
-
-.meta-item {
-  display: flex;
-  align-items: center;
-  color: #666;
-}
-
-.meta-item .label {
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-right: 0.5rem;
-}
-
-.level-badge {
-  padding: 0.25rem 0.75rem;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.level-undergraduate { background: #e3f2fd; color: #1976d2; }
-.level-graduate { background: #f3e5f5; color: #7b1fa2; }
-.level-doctoral { background: #fff3e0; color: #f57c00; }
-
-.course-desc {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  flex-grow: 1;
-}
-
-.course-links {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.9rem;
-  transition: var(--transition);
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.btn-primary {
-  background: var(--secondary-color);
-  color: white;
-}
-
-.btn-secondary {
-  background: #6c757d;
-  color: white;
-}
-
-.btn-outline {
-  background: transparent;
-  border: 2px solid var(--secondary-color);
-  color: var(--secondary-color);
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.btn-primary:hover { background: #2980b9; }
-.btn-secondary:hover { background: #5a6268; }
-.btn-outline:hover {
-  background: var(--secondary-color);
-  color: white;
-}
-
-.teaching-philosophy {
-  background: var(--light-bg);
-  padding: 2.5rem;
-  border-radius: var(--border-radius);
-  margin: 3rem 0;
-  border-left: 5px solid var(--secondary-color);
-}
-
-.teaching-philosophy h2 {
-  color: var(--primary-color);
-  margin-bottom: 1.5rem;
-}
-
-.teaching-philosophy p {
-  line-height: 1.7;
-  margin-bottom: 1.2rem;
-  color: #555;
-}
-
-.resources-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.resource-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  transition: var(--transition);
-  text-align: center;
-}
-
-.resource-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--card-shadow-hover);
-}
-
-.resource-card .icon {
-  font-size: 2.5rem;
-  color: var(--secondary-color);
-  margin-bottom: 1rem;
-}
-
-.resource-card h3 {
-  margin-bottom: 0.5rem;
-  color: var(--primary-color);
-}
-
-.resource-card a {
-  color: var(--secondary-color);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.french-courses {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 2.5rem;
-  border-radius: var(--border-radius);
-  margin-top: 3rem;
-}
-
-.french-courses h2 {
-  color: white;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.french-courses-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-.french-course-link {
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  color: white;
-  text-decoration: none;
-  transition: var(--transition);
-  border: 1px solid rgba(255,255,255,0.2);
-}
-
-.french-course-link:hover {
-  background: rgba(255,255,255,0.2);
-  transform: translateY(-2px);
-  color: white;
-}
-
-.stats-bar {
-  display: flex;
-  justify-content: space-around;
-  background: white;
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  margin: 2rem 0;
-  text-align: center;
-}
-
-.stat-item h3 {
-  color: var(--secondary-color);
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.stat-item p {
-  color: #666;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .courses-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .course-meta {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
-  .page-header {
-    margin: -1rem -0.5rem 2rem -0.5rem;
-    padding: 1.5rem 1rem;
-  }
-
-  .page-header h1 {
-    font-size: 2rem;
-  }
-
-  .stats-bar {
-    flex-direction: column;
-    gap: 1rem;
-  }
-}
-
-.filter-tabs {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.filter-tab {
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--secondary-color);
-  border-radius: 25px;
-  background: transparent;
-  color: var(--secondary-color);
-  cursor: pointer;
-  transition: var(--transition);
-  font-weight: 500;
-}
-
-.filter-tab.active,
-.filter-tab:hover {
-  background: var(--secondary-color);
-  color: white;
-}
-</style>
 
 <!-- Breadcrumb Navigation -->
-<nav class="breadcrumb-nav" style="margin-bottom: 2rem; padding: 1rem; background: var(--light-bg); border-radius: 8px;">
+<nav class="breadcrumb-nav" style="margin-bottom: 2rem; padding: 1rem; background: var(--cidx-bg-soft); border-radius: 8px;">
   <ol style="list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
-    <li><a href="/" style="color: var(--secondary-color); text-decoration: none;">🏠 Accueil</a></li>
+    <li><a href="/" style="color: var(--cidx-primary); text-decoration: none;">{% include ph.html name="house" %} Accueil</a></li>
     <li style="color: #999;">›</li>
-    <li><a href="/teaching/" style="color: var(--secondary-color); text-decoration: none;">📚 Enseignement</a></li>
+    <li><a href="/teaching/" style="color: var(--cidx-primary); text-decoration: none;">{% include ph.html name="books" %} Enseignement</a></li>
     <li style="color: #999;">›</li>
-    <li style="color: var(--primary-color); font-weight: 600;">Cours</li>
+    <li style="color: var(--cidx-ink); font-weight: 600;">Cours</li>
   </ol>
 </nav>
 
 <div class="page-header">
-  <h1>📚 Enseignement & Cours</h1>
+  <h1>{% include ph.html name="books" %} Enseignement & Cours</h1>
   <p class="subtitle">Formation académique et développement des compétences</p>
 </div>
 
@@ -414,30 +43,30 @@ subtitle: Current and Past Courses
 </div>
 
 <div class="section-header">
-  <span class="icon">🎯</span>
+  <span class="icon">{% include ph.html name="target" %}</span>
   <h2>Cours Actuels</h2>
 </div>
 
 <!-- Bénéfices de recherche -->
-<div class="search-section" style="margin-bottom: 2rem; padding: 1.5rem; background: white; border-radius: var(--border-radius); box-shadow: var(--card-shadow);">
+<div class="search-section" style="margin-bottom: 2rem; padding: 1.5rem; background: white; border-radius: var(--cidx-radius); box-shadow: var(--cidx-shadow);">
   <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 250px;">
-      <input type="text" id="courseSearch" placeholder="🔍 Rechercher un cours..." 
-             style="width: 100%; padding: 0.75rem 1rem; border: 2px solid var(--border-medium); border-radius: 25px; font-size: 0.95rem; background: var(--light-bg);" 
+      <input type="text" id="courseSearch" placeholder="{% include ph.html name="magnifying-glass" %} Rechercher un cours..." 
+             style="width: 100%; padding: 0.75rem 1rem; border: 2px solid var(--cidx-border); border-radius: 25px; font-size: 0.95rem; background: var(--cidx-bg-soft);" 
              onkeyup="searchCourses()">
     </div>
     <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
       <select id="semesterFilter" onchange="applyCombinedFilters()" 
-              style="padding: 0.5rem 1rem; border: 2px solid var(--border-medium); border-radius: 8px; background: white;">
-        <option value="all">📅 Tous les semestres</option>
+              style="padding: 0.5rem 1rem; border: 2px solid var(--cidx-border); border-radius: 8px; background: white;">
+        <option value="all">{% include ph.html name="calendar-blank" %} Tous les semestres</option>
         <option value="S1">S1</option>
         <option value="S2">S2</option>
         <option value="S3">S3</option>
         <option value="Fall 2024">Fall 2024</option>
       </select>
       <select id="typeFilter" onchange="applyCombinedFilters()" 
-              style="padding: 0.5rem 1rem; border: 2px solid var(--border-medium); border-radius: 8px; background: white;">
-        <option value="all">🎯 Tous les types</option>
+              style="padding: 0.5rem 1rem; border: 2px solid var(--cidx-border); border-radius: 8px; background: white;">
+        <option value="all">{% include ph.html name="target" %} Tous les types</option>
         <option value="CM">Cours Magistraux</option>
         <option value="TP">Travaux Pratiques</option>
         <option value="TD">Travaux Dirigés</option>
@@ -463,7 +92,7 @@ subtitle: Current and Past Courses
       <div class="course-title">{{ course.title }}</div>
       <div class="course-meta">
         <div class="meta-item">
-          <span class="label">📅 Semestre:</span>
+          <span class="label">{% include ph.html name="calendar-blank" %} Semestre:</span>
           {{ course.semester }}
         </div>
         <div class="meta-item">
@@ -475,15 +104,15 @@ subtitle: Current and Past Courses
     <div class="course-links">
       {% if course.syllabus %}
         <a href="{{ course.syllabus }}" class="btn btn-secondary" target="_blank">
-          📄 Syllabus
+          {% include ph.html name="file-text" %} Syllabus
         </a>
       {% endif %}
       <a href="/teaching/courses/{{ course.code | downcase }}/" class="btn btn-primary">
-        🔗 Page du cours
+        {% include ph.html name="link" %} Page du cours
       </a>
       {% if course.materials %}
         <a href="{{ course.materials }}" class="btn btn-outline" target="_blank">
-          📚 Ressources
+          {% include ph.html name="books" %} Ressources
         </a>
       {% endif %}
     </div>
@@ -493,7 +122,7 @@ subtitle: Current and Past Courses
 </div>
 
 <div class="section-header">
-  <span class="icon">📚</span>
+  <span class="icon">{% include ph.html name="books" %}</span>
   <h2>Cours Précédents</h2>
 </div>
 
@@ -506,7 +135,7 @@ subtitle: Current and Past Courses
       <div class="course-title">{{ course.title }}</div>
       <div class="course-meta">
         <div class="meta-item">
-          <span class="label">📅 Semestre:</span>
+          <span class="label">{% include ph.html name="calendar-blank" %} Semestre:</span>
           {{ course.semester }}
         </div>
         <div class="meta-item">
@@ -518,11 +147,11 @@ subtitle: Current and Past Courses
     <div class="course-links">
       {% if course.syllabus %}
         <a href="{{ course.syllabus }}" class="btn btn-secondary" target="_blank">
-          📄 Syllabus
+          {% include ph.html name="file-text" %} Syllabus
         </a>
       {% endif %}
       <a href="/teaching/courses/{{ course.code | downcase }}/" class="btn btn-primary">
-        🔗 Page du cours
+        {% include ph.html name="link" %} Page du cours
       </a>
     </div>
   </div>
@@ -532,7 +161,7 @@ subtitle: Current and Past Courses
 
 <div class="teaching-philosophy">
   <div class="section-header">
-    <span class="icon">💡</span>
+    <span class="icon">{% include ph.html name="lightbulb" %}</span>
     <h2>Philosophie Pédagogique</h2>
   </div>
 
@@ -544,42 +173,42 @@ subtitle: Current and Past Courses
 
   <p><strong>Mes principes clés :</strong></p>
   <ul style="list-style: none; padding: 0;">
-    <li>🎯 <strong>Apprentissage centré sur l'étudiant</strong> - Adaptation aux différents styles d'apprentissage</li>
-    <li>🔬 <strong>Approche expérimentale</strong> - Learning by doing et projets concrets</li>
-    <li>🌐 <strong>Ouverture internationale</strong> - Perspectives globales et multiculturelles</li>
-    <li>🔄 <strong>Amélioration continue</strong> - Évolution constante des méthodes pédagogiques</li>
+    <li>{% include ph.html name="target" %} <strong>Apprentissage centré sur l'étudiant</strong> - Adaptation aux différents styles d'apprentissage</li>
+    <li>{% include ph.html name="flask" %} <strong>Approche expérimentale</strong> - Learning by doing et projets concrets</li>
+    <li>{% include ph.html name="globe" %} <strong>Ouverture internationale</strong> - Perspectives globales et multiculturelles</li>
+    <li>{% include ph.html name="arrows-clockwise" %} <strong>Amélioration continue</strong> - Évolution constante des méthodes pédagogiques</li>
   </ul>
 </div>
 
 <div class="section-header">
-  <span class="icon">🛠️</span>
+  <span class="icon">{% include ph.html name="toolbox" %}</span>
   <h2>Ressources Étudiants</h2>
 </div>
 
 <div class="resources-grid">
   <div class="resource-card">
-    <div class="icon">👥</div>
+    <div class="icon">{% include ph.html name="users" %}</div>
     <h3>Université de Lille</h3>
     <p>Portail étudiant et services pédagogiques</p>
     <a href="https://www.univ-lille.fr/etudes/" target="_blank">Accéder au portail →</a>
   </div>
 
   <div class="resource-card">
-    <div class="icon">💻</div>
+    <div class="icon">{% include ph.html name="desktop" %}</div>
     <h3>Polytech Lille</h3>
     <p>Ressources techniques et laboratoires</p>
     <a href="https://www.polytech-lille.fr/" target="_blank">Voir les ressources →</a>
   </div>
 
   <div class="resource-card">
-    <div class="icon">📋</div>
+    <div class="icon">{% include ph.html name="clipboard-text" %}</div>
     <h3>Moodle Lille</h3>
     <p>Plateforme de cours en ligne</p>
     <a href="https://moodle.univ-lille.fr/" target="_blank">Se connecter →</a>
   </div>
 
   <div class="resource-card">
-    <div class="icon">📖</div>
+    <div class="icon">{% include ph.html name="book-open" %}</div>
     <h3>Bibliothèque Universitaire</h3>
     <p>Ressources académiques et documentation</p>
     <a href="https://www.univ-lille.fr/bibliotheques/" target="_blank">Explorer →</a>
@@ -594,52 +223,52 @@ subtitle: Current and Past Courses
 
   <div class="french-courses-grid">
     <a href="/teaching/courses/initiation-recherche/" class="french-course-link">
-      🔍 Initiation à la recherche
+      {% include ph.html name="magnifying-glass" %} Initiation à la recherche
     </a>
     <a href="/teaching/courses/logique-industrielle/" class="french-course-link">
-      ⚙️ Logique Séquentielle – SAP et Grafcet
+      {% include ph.html name="gear-six" %} Logique Séquentielle – SAP et Grafcet
     </a>
     <a href="/teaching/courses/modelisation-production/" class="french-course-link">
-      🏭 Modélisation des systèmes de production
+      {% include ph.html name="factory" %} Modélisation des systèmes de production
     </a>
     <a href="/teaching/courses/gr-711302/" class="french-course-link">
-      🤖 GR-711302 Automatique : Robotique
+      {% include ph.html name="robot" %} GR-711302 Automatique : Robotique
     </a>
     <a href="/teaching/courses/gba3-robotique-abb/" class="french-course-link">
-      🦾 TP Robotique ABB IRB140 – GBA3
+      {% include ph.html name="robot" %} TP Robotique ABB IRB140 – GBA3
     </a>
     <a href="/teaching/courses/gr-712302/" class="french-course-link">
-      💻 GR-712302 Programmation
+      {% include ph.html name="desktop" %} GR-712302 Programmation
     </a>
     <a href="/teaching/courses/gr-713301/" class="french-course-link">
-      🎛️ GR-713301 Automatique : Régulation
+      {% include ph.html name="sliders" %} GR-713301 Automatique : Régulation
     </a>
     <a href="/teaching/courses/analyse-numerique/" class="french-course-link">
-      📊 Analyse numérique : Optimisation
+      {% include ph.html name="chart-bar" %} Analyse numérique : Optimisation
     </a>
     <a href="/teaching/courses/industrie-40/" class="french-course-link">
-      🏭 Usine Connectée &amp; Industrie 4.0
+      {% include ph.html name="factory" %} Usine Connectée &amp; Industrie 4.0
     </a>
     <a href="/teaching/courses/tests-maintenance/" class="french-course-link">
-      🔧 Tests et Maintenance
+      {% include ph.html name="wrench" %} Tests et Maintenance
     </a>
     <a href="/teaching/courses/simulation-medicale/" class="french-course-link">
-      🏥 Simulation Médicale
+      {% include ph.html name="hospital" %} Simulation Médicale
     </a>
     <a href="/teaching/courses/robotique-medicale/" class="french-course-link">
-      🤖 Module IA Robotique &amp; Santé
+      {% include ph.html name="robot" %} Module IA Robotique &amp; Santé
     </a>
     <a href="/teaching/courses/mathematiques-ingenieur/" class="french-course-link">
-      📐 Mathématiques pour l'ingénieur
+      {% include ph.html name="ruler" %} Mathématiques pour l'ingénieur
     </a>
     <a href="/teaching/courses/du-822160/" class="french-course-link">
-      🔐 Sécurité Informatique
+      {% include ph.html name="lock-key" %} Sécurité Informatique
     </a>
     <a href="/teaching/courses/du-812170/" class="french-course-link">
-      💾 Culture Numérique &amp; Sécurité des Données
+      {% include ph.html name="floppy-disk" %} Culture Numérique &amp; Sécurité des Données
     </a>
     <a href="/teaching/courses/du-816260/" class="french-course-link">
-      🏭 Usine Connectée (Formation Continue)
+      {% include ph.html name="factory" %} Usine Connectée (Formation Continue)
     </a>
   </div>
 </div>
@@ -718,16 +347,16 @@ function updateNoResultsMessage(count) {
       messageDiv.style.cssText = `
         text-align: center;
         padding: 3rem;
-        background: var(--light-bg);
-        border-radius: var(--border-radius);
+        background: var(--cidx-bg-soft);
+        border-radius: var(--cidx-radius);
         margin: 2rem 0;
         color: #666;
       `;
       messageDiv.innerHTML = `
-        <div style="font-size: 3rem; margin-bottom: 1rem;">🔍</div>
+        <div style="font-size: 3rem; margin-bottom: 1rem;">{% include ph.html name="magnifying-glass" %}</div>
         <h3 style="margin-bottom: 0.5rem;">Aucun cours trouvé</h3>
         <p>Essayez de modifier vos critères de recherche ou de filtrage.</p>
-        <button onclick="clearAllFilters()" style="margin-top: 1rem; padding: 0.5rem 1rem; background: var(--secondary-color); color: white; border: none; border-radius: 8px; cursor: pointer;">Réinitialiser les filtres</button>
+        <button onclick="clearAllFilters()" style="margin-top: 1rem; padding: 0.5rem 1rem; background: var(--cidx-primary); color: white; border: none; border-radius: 8px; cursor: pointer;">Réinitialiser les filtres</button>
       `;
       document.getElementById('current-courses').parentNode.appendChild(messageDiv);
     }
@@ -808,36 +437,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Add CSS animation
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  .search-section input:focus {
-    outline: none;
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
-  }
-  
-  .course-card {
-    transition: var(--transition);
-  }
-  
-  @media (max-width: 768px) {
-    .search-section > div {
-      flex-direction: column;
-      align-items: stretch;
-    }
-    
-    .search-section input {
-      margin-bottom: 1rem;
-    }
-  }
-`;
-document.head.appendChild(style);
 </script>
 
 ## Teaching Philosophy

@@ -1,0 +1,384 @@
+// ============================================================
+// COURSES INDEX (/teaching/courses/)
+//
+// The listing page had the same problem as the course pages: a
+// 372-line inline <style> redefining --primary-color and friends
+// on :root, hijacking the site theme. Its components are different
+// from a course page (cards, filters, stats), so it gets its own
+// partial rather than being squeezed into _courses.scss.
+//
+// Variables prefixed --cidx-*, scoped to .courses-index.
+// Selector uses both wrapper classes (.content.courses-index) to
+// outrank the global `body .section .content h1…h6` colour rule.
+// ============================================================
+
+.courses-index {
+  --cidx-ink:        #013A3C;
+  --cidx-primary:    #016064;
+  --cidx-primary-lt: #48AAAD;
+  --cidx-surface:    #ffffff;
+  --cidx-bg-soft:    #F0FAFA;
+  --cidx-border:     #D3E9EA;
+  --cidx-muted:      #5A7274;
+  --cidx-radius:     14px;
+  --cidx-radius-sm:  10px;
+  --cidx-shadow:     0 4px 18px rgba(1, 96, 100, .09);
+  --cidx-shadow-hi:  0 12px 34px rgba(1, 96, 100, .16);
+  --cidx-transition: all .28s cubic-bezier(.4, 0, .2, 1);
+}
+
+.content.courses-index {
+
+  // ── Page header ─────────────────────────────────────────
+  .page-header {
+    text-align: center;
+    background: linear-gradient(135deg, var(--cidx-ink) 0%, var(--cidx-primary) 60%, var(--cidx-primary-lt) 100%);
+    color: #fff;
+    border-radius: var(--cidx-radius);
+    padding: 2.5rem 1.5rem;
+    margin: 0 0 2.5rem;
+
+    h1 {
+      color: #fff;
+      margin-bottom: .4rem;
+      font-size: 2.2rem;
+      font-weight: 600;
+    }
+    .subtitle {
+      color: rgba(255, 255, 255, .88);
+      font-size: 1.1rem;
+    }
+  }
+
+  // ── Breadcrumb ──────────────────────────────────────────
+  .breadcrumb-nav {
+    background: var(--cidx-bg-soft);
+    border: 1px solid var(--cidx-border);
+    border-radius: var(--cidx-radius-sm);
+    padding: .75rem 1rem;
+    margin-bottom: 1.75rem;
+    font-size: .9rem;
+
+    a { color: var(--cidx-primary); font-weight: 600; }
+  }
+
+  // ── Section headers ─────────────────────────────────────
+  .section-header {
+    display: flex;
+    align-items: center;
+    margin: 2.5rem 0 1.5rem;
+    padding-bottom: .75rem;
+    border-bottom: 2px solid var(--cidx-border);
+
+    h2 { margin: 0; color: var(--cidx-ink); font-weight: 700; }
+    .icon {
+      margin-right: .7rem;
+      font-size: 1.4rem;
+      color: var(--cidx-primary);
+      display: inline-flex;
+    }
+  }
+
+  // ── Search & filters ────────────────────────────────────
+  .search-section {
+    background: var(--cidx-surface);
+    border: 1px solid var(--cidx-border);
+    border-radius: var(--cidx-radius);
+    box-shadow: var(--cidx-shadow);
+    padding: 1.25rem;
+    margin-bottom: 1.75rem;
+
+    input,
+    select {
+      border: 2px solid var(--cidx-border);
+      border-radius: var(--cidx-radius-sm);
+      padding: .5rem 1rem;
+      background: #fff;
+      font-family: inherit;
+
+      &:focus {
+        outline: none;
+        border-color: var(--cidx-primary-lt);
+        box-shadow: 0 0 0 3px rgba(72, 170, 173, .25);
+      }
+    }
+  }
+
+  .filter-tabs {
+    display: flex;
+    gap: .6rem;
+    margin-bottom: 1.75rem;
+    flex-wrap: wrap;
+  }
+  .filter-tab {
+    padding: .5rem 1.2rem;
+    border: 2px solid var(--cidx-primary);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--cidx-primary);
+    cursor: pointer;
+    transition: var(--cidx-transition);
+    font-weight: 600;
+    font-size: .88rem;
+    font-family: inherit;
+
+    &.active,
+    &:hover { background: var(--cidx-primary); color: #fff; }
+  }
+
+  // ── Course cards ────────────────────────────────────────
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .course-card {
+    background: var(--cidx-surface);
+    border: 1px solid var(--cidx-border);
+    border-radius: var(--cidx-radius);
+    box-shadow: var(--cidx-shadow);
+    padding: 1.75rem;
+    transition: var(--cidx-transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 4px;
+      background: linear-gradient(90deg, var(--cidx-primary), var(--cidx-primary-lt));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--cidx-transition);
+    }
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--cidx-shadow-hi);
+      &::before { transform: scaleX(1); }
+    }
+  }
+  .course-code {
+    background: var(--cidx-primary);
+    color: #fff;
+    padding: .22rem .8rem;
+    border-radius: 999px;
+    font-size: .8rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: .5rem;
+  }
+  .course-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: .9rem;
+    color: var(--cidx-ink);
+    line-height: 1.3;
+  }
+  .course-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .75rem;
+    margin-bottom: .9rem;
+    font-size: .92rem;
+  }
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    color: var(--cidx-muted);
+
+    .label { font-weight: 700; color: var(--cidx-ink); }
+  }
+  .course-desc {
+    font-size: .96rem;
+    color: var(--cidx-muted);
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+  .course-links { display: flex; gap: .6rem; flex-wrap: wrap; }
+
+  // ── Level badges (semantic, kept distinguishable) ───────
+  .level-badge {
+    padding: .22rem .75rem;
+    border-radius: 999px;
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    white-space: nowrap;
+  }
+  .level-undergraduate      { background: #E0F7FA; color: #01565A; }
+  .level-graduate           { background: #EDEEFA; color: #3A3C85; }
+  .level-master             { background: #EDEEFA; color: #3A3C85; }
+  .level-doctoral           { background: #FFF3E0; color: #8A5200; }
+  .level-formation.continue,
+  .level-formation          { background: #E6F4EC; color: #256540; }
+
+  // ── Buttons ─────────────────────────────────────────────
+  .btn {
+    padding: .55rem 1.15rem;
+    border-radius: var(--cidx-radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .88rem;
+    transition: var(--cidx-transition);
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    font-family: inherit;
+
+    &:hover { transform: translateY(-2px); box-shadow: var(--cidx-shadow); }
+  }
+  .btn-primary {
+    background: var(--cidx-primary);
+    border-color: var(--cidx-primary);
+    color: #fff;
+
+    &:hover { background: var(--cidx-ink); border-color: var(--cidx-ink); color: #fff; }
+  }
+  .btn-secondary {
+    background: var(--cidx-bg-soft);
+    border-color: var(--cidx-border);
+    color: var(--cidx-primary);
+
+    &:hover { background: var(--cidx-border); color: var(--cidx-ink); }
+  }
+  .btn-outline {
+    background: transparent;
+    border-color: var(--cidx-primary);
+    color: var(--cidx-primary);
+
+    &:hover { background: var(--cidx-primary); color: #fff; }
+  }
+
+  // ── Stats bar ───────────────────────────────────────────
+  .stats-bar {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: var(--cidx-surface);
+    border: 1px solid var(--cidx-border);
+    border-radius: var(--cidx-radius);
+    box-shadow: var(--cidx-shadow);
+    padding: 1.75rem;
+    margin: 1.75rem 0;
+    text-align: center;
+  }
+  .stat-item {
+    h3 { color: var(--cidx-primary); font-size: 1.9rem; margin-bottom: .3rem; }
+    p  { color: var(--cidx-muted); font-weight: 600; margin: 0; }
+  }
+
+  // ── Teaching philosophy ─────────────────────────────────
+  .teaching-philosophy {
+    background: var(--cidx-bg-soft);
+    padding: 2rem;
+    border-radius: var(--cidx-radius);
+    margin: 2.5rem 0;
+    border-left: 5px solid var(--cidx-primary-lt);
+
+    h2 { color: var(--cidx-ink); margin-bottom: 1.25rem; }
+    p  { line-height: 1.7; margin-bottom: 1rem; color: var(--cidx-muted); }
+  }
+
+  // ── Resource cards ──────────────────────────────────────
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.75rem;
+  }
+  .resource-card {
+    background: var(--cidx-surface);
+    border: 1px solid var(--cidx-border);
+    padding: 1.5rem;
+    border-radius: var(--cidx-radius);
+    box-shadow: var(--cidx-shadow);
+    transition: var(--cidx-transition);
+    text-align: center;
+
+    &:hover { transform: translateY(-4px); box-shadow: var(--cidx-shadow-hi); }
+
+    .icon {
+      font-size: 2.2rem;
+      color: var(--cidx-primary);
+      margin-bottom: .8rem;
+      display: inline-flex;
+    }
+    h3 { margin-bottom: .4rem; color: var(--cidx-ink); }
+    a  { color: var(--cidx-primary); text-decoration: none; font-weight: 600; }
+  }
+
+  // ── French courses band ─────────────────────────────────
+  .french-courses {
+    background: linear-gradient(135deg, var(--cidx-ink) 0%, var(--cidx-primary) 100%);
+    color: #fff;
+    padding: 2rem;
+    border-radius: var(--cidx-radius);
+    margin-top: 2.5rem;
+
+    h2 { color: #fff; margin-bottom: 1.5rem; text-align: center; }
+  }
+  .french-courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: .85rem;
+  }
+  .french-course-link {
+    background: rgba(255, 255, 255, .1);
+    padding: .9rem 1.25rem;
+    border-radius: var(--cidx-radius-sm);
+    color: #fff;
+    text-decoration: none;
+    transition: var(--cidx-transition);
+    border: 1px solid rgba(255, 255, 255, .2);
+
+    &:hover {
+      background: rgba(255, 255, 255, .2);
+      transform: translateY(-2px);
+      color: #fff;
+    }
+  }
+
+  // ── Animation (was injected by inline JS) ───────────────
+  @keyframes cidxFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  // ── Responsive ──────────────────────────────────────────
+  @media (max-width: 768px) {
+    .courses-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    .course-meta  { grid-template-columns: 1fr; gap: .4rem; }
+    .page-header  { padding: 1.75rem 1rem; h1 { font-size: 1.7rem; } }
+    .stats-bar    { flex-direction: column; gap: 1rem; }
+    .search-section > div { flex-direction: column; align-items: stretch; }
+    .search-section input { margin-bottom: 1rem; }
+    .french-courses, .teaching-philosophy { padding: 1.5rem 1.25rem; }
+  }
+}
+
+// ── Dark mode ─────────────────────────────────────────────
+[data-theme="dark"] .content.courses-index {
+  --cidx-surface: #172A2B;
+  --cidx-bg-soft: #122223;
+  --cidx-border:  #24494B;
+  --cidx-ink:     #E4F3F3;
+  --cidx-muted:   #9BB6B7;
+  --cidx-shadow:    0 4px 18px rgba(0, 0, 0, .3);
+  --cidx-shadow-hi: 0 12px 34px rgba(0, 0, 0, .45);
+
+  .course-title,
+  .section-header h2,
+  .resource-card h3,
+  .teaching-philosophy h2 { color: var(--cidx-ink); }
+}

@@ -1,0 +1,256 @@
+// ============================================================
+// TEACHING OVERVIEW (/teaching/)
+//
+// Last page in teaching/ that carried inline CSS. Its palette was
+// already Ocean/Teal, but its :root redefined --shadow and
+// --shadow-hover, overriding the site values for the whole page.
+//
+// Variables prefixed --teach-*, scoped to .teaching-overview.
+// The teach-* class names are unchanged; only the scope moved.
+// Enabled with `page_kind: teaching-overview`.
+// ============================================================
+
+.teaching-overview {
+  --teach-ink:     #013A3C;
+  --teach-primary: #016064;
+  --teach-light:   #48AAAD;
+  --teach-pale:    #E0F7FA;
+  --teach-mid:     #5CC8CB;
+  --teach-surface: #ffffff;
+  --teach-border:  #D3E9EA;
+  --teach-muted:   #5A7274;
+  --teach-radius:  14px;
+  --teach-shadow:  0 4px 18px rgba(1, 96, 100, .10);
+  --teach-shadow-hi: 0 10px 32px rgba(1, 96, 100, .18);
+}
+
+.content.teaching-overview {
+
+  // ── Hero ────────────────────────────────────────────────
+  .teach-hero {
+    background: linear-gradient(135deg, var(--teach-ink) 0%, var(--teach-primary) 60%, var(--teach-light) 100%);
+    color: #fff;
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+    border-radius: var(--teach-radius);
+    margin-bottom: 2.5rem;
+
+    h1 { color: #fff; font-size: 2.2rem; margin-bottom: .4rem; }
+    .lead { color: var(--teach-mid); font-size: 1.15rem; margin-bottom: .7rem; }
+    p {
+      color: rgba(255, 255, 255, .85);
+      max-width: 620px;
+      margin: 0 auto 1.4rem;
+      line-height: 1.7;
+    }
+  }
+
+  // ── Stats bar ───────────────────────────────────────────
+  .teach-stats {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    background: var(--teach-surface);
+    border: 1px solid var(--teach-border);
+    border-radius: var(--teach-radius);
+    padding: 1.4rem 2rem;
+    box-shadow: var(--teach-shadow);
+    margin: 0 auto 2.5rem;
+    max-width: 680px;
+  }
+  .teach-stat     { text-align: center; }
+  .teach-stat-num { font-size: 2rem; font-weight: 700; color: var(--teach-primary); line-height: 1; }
+  .teach-stat-lbl { font-size: .82rem; color: var(--teach-muted); margin-top: .25rem; }
+
+  // ── Section titles ──────────────────────────────────────
+  .teach-section-title {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--teach-ink);
+    border-bottom: 2px solid var(--teach-light);
+    padding-bottom: .5rem;
+    margin: 2.5rem 0 1.4rem;
+
+    .ph-icon { color: var(--teach-primary); }
+  }
+
+  // ── Level group headers ─────────────────────────────────
+  .teach-level-header {
+    background: var(--teach-pale);
+    color: var(--teach-ink);
+    font-weight: 600;
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    padding: .45rem 1rem;
+    border-radius: 6px;
+    margin: 1.4rem 0 .8rem;
+    border-left: 4px solid var(--teach-primary);
+  }
+
+  // ── Course cards ────────────────────────────────────────
+  .teach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .teach-card {
+    background: var(--teach-surface);
+    border: 1px solid var(--teach-border);
+    border-radius: var(--teach-radius);
+    box-shadow: var(--teach-shadow);
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow .25s, transform .25s;
+
+    &:hover { box-shadow: var(--teach-shadow-hi); transform: translateY(-3px); }
+  }
+  .teach-card-code {
+    display: inline-block;
+    background: var(--teach-primary);
+    color: #fff;
+    font-size: .72rem;
+    font-weight: 600;
+    padding: .18rem .65rem;
+    border-radius: 999px;
+    margin-bottom: .5rem;
+    letter-spacing: .04em;
+  }
+  .teach-card-title { font-weight: 700; color: var(--teach-ink); margin-bottom: .35rem; font-size: 1rem; }
+  .teach-card-meta {
+    font-size: .82rem;
+    color: var(--teach-muted);
+    margin-bottom: .6rem;
+    line-height: 1.6;
+
+    strong { color: var(--teach-ink); }
+  }
+  .teach-card-desc {
+    font-size: .88rem;
+    color: var(--teach-muted);
+    line-height: 1.55;
+    flex-grow: 1;
+    margin-bottom: .85rem;
+  }
+  .teach-card-links { display: flex; gap: .5rem; flex-wrap: wrap; }
+
+  // ── Buttons ─────────────────────────────────────────────
+  .teach-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    padding: .35rem .9rem;
+    border-radius: 7px;
+    font-size: .82rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1.5px solid transparent;
+    transition: background .2s, color .2s, border-color .2s;
+  }
+  .teach-btn-primary {
+    background: var(--teach-primary);
+    border-color: var(--teach-primary);
+    color: #fff;
+
+    &:hover { background: var(--teach-ink); border-color: var(--teach-ink); color: #fff; }
+  }
+  .teach-btn-outline {
+    border-color: var(--teach-primary);
+    color: var(--teach-primary);
+    background: transparent;
+
+    &:hover { background: var(--teach-pale); color: var(--teach-ink); }
+  }
+
+  // ── Philosophy box ──────────────────────────────────────
+  .teach-philosophy {
+    background: var(--teach-pale);
+    border-left: 5px solid var(--teach-primary);
+    border-radius: var(--teach-radius);
+    padding: 1.6rem 2rem;
+    margin: 2rem 0;
+
+    h3 { color: var(--teach-ink); margin-bottom: .8rem; }
+    ul { margin: .8rem 0 0 1.1rem; line-height: 1.9; color: var(--teach-muted); }
+  }
+
+  // ── Activities ──────────────────────────────────────────
+  .teach-activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .teach-activity-card {
+    background: var(--teach-surface);
+    border: 1px solid var(--teach-border);
+    border-top: 3px solid var(--teach-light);
+    border-radius: var(--teach-radius);
+    box-shadow: var(--teach-shadow);
+    padding: 1.1rem 1.3rem;
+
+    h4 { color: var(--teach-ink); font-size: .95rem; margin-bottom: .4rem; }
+    p, li { font-size: .86rem; color: var(--teach-muted); line-height: 1.6; }
+    ul { margin-left: 1rem; }
+  }
+
+  // ── CTA ─────────────────────────────────────────────────
+  .teach-cta {
+    text-align: center;
+    background: linear-gradient(135deg, var(--teach-primary) 0%, var(--teach-light) 100%);
+    border-radius: var(--teach-radius);
+    padding: 2rem 1.5rem;
+    margin: 2.5rem 0 1rem;
+    color: #fff;
+
+    h3 { color: #fff; margin-bottom: .6rem; }
+    p  { color: rgba(255, 255, 255, .88); margin-bottom: 1.1rem; }
+  }
+  .teach-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    background: #fff;
+    color: var(--teach-ink);
+    font-weight: 700;
+    padding: .65rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: .95rem;
+    transition: transform .2s, box-shadow .2s;
+
+    &:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0, 0, 0, .18); color: var(--teach-ink); }
+  }
+
+  // ── Responsive ──────────────────────────────────────────
+  @media (max-width: 600px) {
+    .teach-hero { padding: 2rem 1.25rem; h1 { font-size: 1.7rem; } }
+    .teach-stats { gap: 1rem; padding: 1rem; }
+    .teach-grid,
+    .teach-activities-grid { grid-template-columns: 1fr; }
+    .teach-philosophy { padding: 1.25rem 1.4rem; }
+  }
+}
+
+// ── Dark mode ─────────────────────────────────────────────
+[data-theme="dark"] .content.teaching-overview {
+  --teach-surface:   #172A2B;
+  --teach-pale:      #122223;
+  --teach-border:    #24494B;
+  --teach-ink:       #E4F3F3;
+  --teach-muted:     #9BB6B7;
+  --teach-shadow:    0 4px 18px rgba(0, 0, 0, .3);
+  --teach-shadow-hi: 0 10px 32px rgba(0, 0, 0, .45);
+
+  .teach-card-title,
+  .teach-section-title,
+  .teach-activity-card h4,
+  .teach-philosophy h3 { color: var(--teach-ink); }
+}

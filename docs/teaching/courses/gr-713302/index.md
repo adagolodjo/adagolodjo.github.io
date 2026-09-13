@@ -10,7 +10,7 @@ redirect_to: /teaching/courses/analyse-numerique/
 window.location.replace("/teaching/courses/analyse-numerique/");
 </script>
 
-# 🔄 Redirection en cours...
+# {% include ph.html name="arrows-clockwise" %} Redirection en cours...
 
 Ce cours a été déplacé vers une nouvelle URL.
 

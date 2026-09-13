@@ -27,6 +27,12 @@
   --course-shadow-hi:   0 12px 34px rgba(1, 96, 100, .16);
   --course-transition:  all .28s cubic-bezier(.4, 0, .2, 1);
 
+  // ── Semantic (callouts) ─────────────────────────────────
+  --course-danger:      #B3261E;
+  --course-danger-wash: #FCEBEA;
+  --course-warn:        #9A6700;
+  --course-warn-wash:   #FFF8E1;
+
   // ── Accent — defaults to Ocean, overridden per track ─────
   --course-accent:      #016064;
   --course-accent-ink:  #013A3C;
@@ -170,13 +176,22 @@
   }
 
   // ── Objectives ──────────────────────────────────────────
-  .objectives-grid {
+  // Several courses named this pattern differently (themes, competences,
+  // security topics). Same grid + accent-bordered card — aliased here
+  // rather than duplicated per page.
+  .objectives-grid,
+  .themes-grid,
+  .competences-grid,
+  .security-topics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.25rem;
     margin-top: 1.25rem;
   }
-  .objective-card {
+  .objective-card,
+  .theme-card,
+  .competence-card,
+  .security-topic {
     background: var(--course-bg-soft);
     padding: 1.25rem 1.4rem;
     border-radius: var(--course-radius-sm);
@@ -240,7 +255,8 @@
       box-shadow: 0 0 0 3px var(--course-accent);
     }
   }
-  .timeline-week {
+  .timeline-week,
+  .timeline-seance {                   // gba3 calls its steps "séances"
     font-weight: 700;
     color: var(--course-accent-ink);   // ← track accent
     font-size: 1.02rem;
@@ -469,6 +485,99 @@
       display: flex;
       align-items: center;
       gap: .5rem;
+    }
+  }
+
+  // ── Lead paragraph ──────────────────────────────────────
+  .lead {
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: var(--course-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  // ── Standalone panel (modules, exercises) ───────────────
+  .module-card,
+  .exercise-card {
+    background: var(--course-bg-soft);
+    padding: 1.75rem;
+    border: 1px solid var(--course-border);
+    border-left: 4px solid var(--course-accent);
+    border-radius: var(--course-radius);
+    margin: 1.75rem 0;
+    transition: var(--course-transition);
+
+    &:hover { box-shadow: var(--course-shadow); }
+  }
+  .module-title,
+  .exercise-title {
+    color: var(--course-accent-ink);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: .9rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  // ── Callouts ────────────────────────────────────────────
+  // Semantic, NOT track-accented: a safety warning must read as a
+  // warning whatever the course's colour.
+  .warning-box,
+  .safety-alert {
+    background: var(--course-danger-wash);
+    border-left: 4px solid var(--course-danger);
+    padding: 1.25rem 1.4rem;
+    border-radius: var(--course-radius-sm);
+    margin: 1.75rem 0;
+
+    h4 { color: var(--course-danger); margin-bottom: .6rem; }
+  }
+  .pending-status {
+    background: var(--course-warn-wash);
+    border: 1px solid var(--course-warn);
+    color: var(--course-warn);
+    padding: .9rem 1.1rem;
+    border-radius: var(--course-radius-sm);
+    margin: 1rem 0;
+    text-align: center;
+    font-weight: 600;
+  }
+  .status-icon { margin-right: .4rem; display: inline-flex; }
+
+  // ── Tech stack tiles ────────────────────────────────────
+  .tech-stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: .85rem;
+    margin-top: 1.25rem;
+  }
+  .tech-item {
+    background: var(--course-accent-wash);
+    border: 1px solid var(--course-accent);
+    color: var(--course-accent-ink);
+    padding: .85rem 1rem;
+    border-radius: var(--course-radius-sm);
+    text-align: center;
+    font-weight: 600;
+    font-size: .9rem;
+  }
+
+  // ── Checklist ───────────────────────────────────────────
+  .checklist {
+    list-style: none;
+    padding: 0;
+    margin-top: .9rem;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: .6rem;
+      padding: .5rem 0;
+      border-bottom: 1px solid var(--course-border);
+      color: var(--course-muted);
+
+      &:last-child { border-bottom: none; }
     }
   }
 

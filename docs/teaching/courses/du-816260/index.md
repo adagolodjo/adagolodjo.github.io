@@ -5,9 +5,9 @@ subtitle: "Concepts avancés d'usine connectée pour formation continue"
 permalink: /teaching/courses/du-816260/
 ---
 
-# 🏭 DU-816260 Usine Connectée
+# {% include ph.html name="factory" %} DU-816260 Usine Connectée
 
-## 📋 Informations du cours
+## {% include ph.html name="clipboard-text" %} Informations du cours
 
 - **Code**: DU-816260
 - **Niveau**: Formation Continue
@@ -15,11 +15,11 @@ permalink: /teaching/courses/du-816260/
 - **Volume**: 7.5h CM
 - **Évaluation**: Exposé, Note de Classe
 
-## 🎯 Description
+## {% include ph.html name="target" %} Description
 
 Concepts avancés d'usine connectée pour la formation continue, avec un focus sur l'implémentation IoT et la fabrication intelligente.
 
-## 📚 Thèmes abordés
+## {% include ph.html name="books" %} Thèmes abordés
 
 - Concepts avancés Industry 4.0
 - Implémentation IoT en milieu industriel
@@ -29,7 +29,7 @@ Concepts avancés d'usine connectée pour la formation continue, avec un focus s
 - Maintenance prédictive
 - Optimisation des flux de production
 
-## 🔧 Applications pratiques
+## {% include ph.html name="wrench" %} Applications pratiques
 
 - Études de cas industriels
 - Implémentation de solutions IoT
@@ -37,7 +37,7 @@ Concepts avancés d'usine connectée pour la formation continue, avec un focus s
 - Optimisation des processus connectés
 - ROI des projets Industry 4.0
 
-## 📞 Contact
+## {% include ph.html name="phone" %} Contact
 
 **Responsable**: Dr. Yinoussa Adagolodjo  
 **Email**: Utiliser le formulaire de contact sur la page d'accueil
