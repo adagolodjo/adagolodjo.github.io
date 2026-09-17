@@ -220,23 +220,23 @@ track: maths
       <div class="resource-icon">{% include ph.html name="magnifying-glass" %}</div>
       <h4>Guides méthodologiques</h4>
       <ul>
-        <li><a href="https://www.cairn.info/la-demarche-scientifique--9782100782342.htm" target="_blank">La démarche scientifique (Cairn)</a></li>
-        <li><a href="https://www.sup-numerique.gouv.fr/pid33288/la-recherche-documentaire.html" target="_blank">Recherche documentaire (SupNumérique)</a></li>
+        <li><a href="https://www.cairn.info/la-demarche-scientifique--9782100782342.htm" target="_blank" rel="noopener noreferrer">La démarche scientifique (Cairn)</a></li>
+        <li><a href="https://www.sup-numerique.gouv.fr/pid33288/la-recherche-documentaire.html" target="_blank" rel="noopener noreferrer">Recherche documentaire (SupNumérique)</a></li>
       </ul>
     </div>
     <div class="resource-card">
       <div class="resource-icon">{% include ph.html name="note-pencil" %}</div>
       <h4>Rédaction scientifique</h4>
       <ul>
-        <li><a href="https://www.univ-lille.fr/formation/ressources/rediger-un-memoire-ou-un-rapport/" target="_blank">Rédiger un mémoire ou un rapport (Univ. Lille)</a></li>
-        <li><a href="https://www.bib.umontreal.ca/ressources/guides/guide-redaction-scientifique.pdf" target="_blank">Guide de rédaction scientifique (UdeM)</a></li>
+        <li><a href="https://www.univ-lille.fr/formation/ressources/rediger-un-memoire-ou-un-rapport/" target="_blank" rel="noopener noreferrer">Rédiger un mémoire ou un rapport (Univ. Lille)</a></li>
+        <li><a href="https://www.bib.umontreal.ca/ressources/guides/guide-redaction-scientifique.pdf" target="_blank" rel="noopener noreferrer">Guide de rédaction scientifique (UdeM)</a></li>
       </ul>
     </div>
     <div class="resource-card">
       <div class="resource-icon">{% include ph.html name="microphone" %}</div>
       <h4>Communication orale</h4>
       <ul>
-        <li><a href="https://www.campusfrance.org/fr/news/comment-reussir-sa-presentation-orale" target="_blank">Réussir sa présentation orale (Campus France)</a></li>
+        <li><a href="https://www.campusfrance.org/fr/news/comment-reussir-sa-presentation-orale" target="_blank" rel="noopener noreferrer">Réussir sa présentation orale (Campus France)</a></li>
       </ul>
     </div>
   </div>

@@ -199,8 +199,8 @@ track: numerique
       <div class="resource-icon">{% include ph.html name="book-open" %}</div>
       <h4>Ouvrages de référence</h4>
       <ul>
-        <li><a href="#" target="_blank">Clean Code - Robert Martin</a></li>
-        <li><a href="#" target="_blank">The Art of Software Testing - Myers</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Clean Code - Robert Martin</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">The Art of Software Testing - Myers</a></li>
       </ul>
     </div>
     <div class="resource-card">

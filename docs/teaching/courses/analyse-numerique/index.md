@@ -189,8 +189,8 @@ track: maths
       <div class="resource-icon">{% include ph.html name="book-open" %}</div>
       <h4>Ouvrages de référence</h4>
       <ul>
-        <li><a href="#" target="_blank">Numerical Optimization - Nocedal & Wright</a></li>
-        <li><a href="#" target="_blank">Convex Optimization - Boyd & Vandenberghe</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Numerical Optimization - Nocedal & Wright</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Convex Optimization - Boyd & Vandenberghe</a></li>
       </ul>
     </div>
     <div class="resource-card">

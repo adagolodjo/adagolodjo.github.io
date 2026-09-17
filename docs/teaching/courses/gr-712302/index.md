@@ -197,9 +197,9 @@ track: numerique
       <div class="resource-icon">{% include ph.html name="book-open" %}</div>
       <h4>Littérature technique</h4>
       <ul>
-        <li><a href="#" target="_blank">Clean Code - Robert Martin</a></li>
-        <li><a href="#" target="_blank">Design Patterns - Gang of Four</a></li>
-        <li><a href="#" target="_blank">Effective Java - Joshua Bloch</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Clean Code - Robert Martin</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Design Patterns - Gang of Four</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Effective Java - Joshua Bloch</a></li>
       </ul>
     </div>
     <div class="resource-card">

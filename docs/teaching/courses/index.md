@@ -103,7 +103,7 @@ page_kind: courses-index
     </div>
     <div class="course-links">
       {% if course.syllabus %}
-        <a href="{{ course.syllabus }}" class="btn btn-secondary" target="_blank">
+        <a href="{{ course.syllabus }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
           {% include ph.html name="file-text" %} Syllabus
         </a>
       {% endif %}
@@ -111,7 +111,7 @@ page_kind: courses-index
         {% include ph.html name="link" %} Page du cours
       </a>
       {% if course.materials %}
-        <a href="{{ course.materials }}" class="btn btn-outline" target="_blank">
+        <a href="{{ course.materials }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
           {% include ph.html name="books" %} Ressources
         </a>
       {% endif %}
@@ -146,7 +146,7 @@ page_kind: courses-index
     </div>
     <div class="course-links">
       {% if course.syllabus %}
-        <a href="{{ course.syllabus }}" class="btn btn-secondary" target="_blank">
+        <a href="{{ course.syllabus }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
           {% include ph.html name="file-text" %} Syllabus
         </a>
       {% endif %}
@@ -190,28 +190,28 @@ page_kind: courses-index
     <div class="icon">{% include ph.html name="users" %}</div>
     <h3>Université de Lille</h3>
     <p>Portail étudiant et services pédagogiques</p>
-    <a href="https://www.univ-lille.fr/etudes/" target="_blank">Accéder au portail →</a>
+    <a href="https://www.univ-lille.fr/etudes/" target="_blank" rel="noopener noreferrer">Accéder au portail →</a>
   </div>
 
   <div class="resource-card">
     <div class="icon">{% include ph.html name="desktop" %}</div>
     <h3>Polytech Lille</h3>
     <p>Ressources techniques et laboratoires</p>
-    <a href="https://www.polytech-lille.fr/" target="_blank">Voir les ressources →</a>
+    <a href="https://www.polytech-lille.fr/" target="_blank" rel="noopener noreferrer">Voir les ressources →</a>
   </div>
 
   <div class="resource-card">
     <div class="icon">{% include ph.html name="clipboard-text" %}</div>
     <h3>Moodle Lille</h3>
     <p>Plateforme de cours en ligne</p>
-    <a href="https://moodle.univ-lille.fr/" target="_blank">Se connecter →</a>
+    <a href="https://moodle.univ-lille.fr/" target="_blank" rel="noopener noreferrer">Se connecter →</a>
   </div>
 
   <div class="resource-card">
     <div class="icon">{% include ph.html name="book-open" %}</div>
     <h3>Bibliothèque Universitaire</h3>
     <p>Ressources académiques et documentation</p>
-    <a href="https://www.univ-lille.fr/bibliotheques/" target="_blank">Explorer →</a>
+    <a href="https://www.univ-lille.fr/bibliotheques/" target="_blank" rel="noopener noreferrer">Explorer →</a>
   </div>
 </div>
 

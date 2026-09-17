@@ -212,8 +212,8 @@ track: industrie
       <div class="resource-icon">{% include ph.html name="book-open" %}</div>
       <h4>Documentation technique</h4>
       <ul>
-        <li><a href="#" target="_blank">Introduction to Robotics - Craig</a></li>
-        <li><a href="#" target="_blank">ROS Documentation officielle</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Introduction to Robotics - Craig</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">ROS Documentation officielle</a></li>
       </ul>
     </div>
     <div class="resource-card">

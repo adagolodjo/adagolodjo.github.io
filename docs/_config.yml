@@ -129,5 +129,11 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  # LaTeX CV source — kept in the repo for editing but not served as
+  # a web page (the rendered .md page and .pdf remain the public copies)
+  - cv_yinoussa_adagolodjo.tex
+  - cv_yinoussa_adagolodjo.aux
+  - cv_yinoussa_adagolodjo.log
+  - cv_yinoussa_adagolodjo.out
 
 port: 4002
