@@ -10,31 +10,31 @@ track: maths
 
 <div class="course-hero">
   <div class="course-hero-content">
-    <h1>🔬 Initiation à la recherche</h1>
+    <h1>{% include ph.html name="flask" %} Initiation à la recherche</h1>
     <p class="subtitle">Découverte de la démarche scientifique et méthodologie de recherche</p>
     <div class="hero-badges">
-      <span class="hero-badge">📚 Niveau License</span>
-      <span class="hero-badge">⏱️ 8 semaines</span>
-      <span class="hero-badge">🎯 Méthodologie</span>
-      <span class="hero-badge">👥 Travail collaboratif</span>
+      <span class="hero-badge">{% include ph.html name="books" %} Niveau License</span>
+      <span class="hero-badge">{% include ph.html name="timer" %} 8 semaines</span>
+      <span class="hero-badge">{% include ph.html name="target" %} Méthodologie</span>
+      <span class="hero-badge">{% include ph.html name="users" %} Travail collaboratif</span>
     </div>
   </div>
 </div>
 
 <nav class="course-nav">
   <div class="nav-links">
-    <a href="#presentation" class="nav-link active">📋 Présentation</a>
-    <a href="#objectifs" class="nav-link">🎯 Objectifs</a>
-    <a href="#planning" class="nav-link">📅 Planning</a>
-    <a href="#evaluation" class="nav-link">📊 Évaluation</a>
-    <a href="#ressources" class="nav-link">📚 Ressources</a>
-    <a href="#contact" class="nav-link">📞 Contact</a>
+    <a href="#presentation" class="nav-link active">{% include ph.html name="clipboard-text" %} Présentation</a>
+    <a href="#objectifs" class="nav-link">{% include ph.html name="target" %} Objectifs</a>
+    <a href="#planning" class="nav-link">{% include ph.html name="calendar-blank" %} Planning</a>
+    <a href="#evaluation" class="nav-link">{% include ph.html name="chart-bar" %} Évaluation</a>
+    <a href="#ressources" class="nav-link">{% include ph.html name="books" %} Ressources</a>
+    <a href="#contact" class="nav-link">{% include ph.html name="phone" %} Contact</a>
   </div>
 </nav>
 
 <section id="presentation" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📋</div>
+    <div class="section-icon">{% include ph.html name="clipboard-text" %}</div>
     <h2 class="section-title">Présentation du cours</h2>
   </div>
   
@@ -43,17 +43,17 @@ track: maths
   </p>
 
   <div class="info-box">
-    <h4>📊 Informations générales</h4>
+    <h4>{% include ph.html name="chart-bar" %} Informations générales</h4>
     <p><strong>Durée :</strong> 8 semaines (24h de cours magistraux + 16h de travaux dirigés)<br>
     <strong>Volume de travail personnel estimé :</strong> 40-50 heures<br>
     <strong>Langue d'enseignement :</strong> Français<br>
     <strong>Prérequis académiques :</strong> Niveau de français académique B2 minimum</p>
   </div>
 
-  <h3 style="color: var(--course-ink); margin-bottom: 1.5rem;">✅ Prérequis</h3>
+  <h3 style="color: var(--course-ink); margin-bottom: 1.5rem;">{% include ph.html name="check-circle" %} Prérequis</h3>
   
   <div class="prerequisite-item">
-    <div class="prerequisite-icon">🧠</div>
+    <div class="prerequisite-icon">{% include ph.html name="brain" %}</div>
     <div>
       <strong>Curiosité scientifique</strong>
       <p style="margin: 0; color: #666; font-size: 0.95rem;">Intérêt pour la découverte et l'exploration de nouvelles connaissances</p>
@@ -61,7 +61,7 @@ track: maths
   </div>
   
   <div class="prerequisite-item">
-    <div class="prerequisite-icon">📝</div>
+    <div class="prerequisite-icon">{% include ph.html name="note-pencil" %}</div>
     <div>
       <strong>Bases en méthodologie</strong>
       <p style="margin: 0; color: #666; font-size: 0.95rem;">Notions élémentaires de rédaction académique et d'analyse critique</p>
@@ -69,7 +69,7 @@ track: maths
   </div>
 
   <div class="prerequisite-item">
-    <div class="prerequisite-icon">💻</div>
+    <div class="prerequisite-icon">{% include ph.html name="desktop" %}</div>
     <div>
       <strong>Maîtrise informatique de base</strong>
       <p style="margin: 0; color: #666; font-size: 0.95rem;">Utilisation des outils bureautiques et de recherche en ligne</p>
@@ -87,7 +87,7 @@ track: maths
 
 <section id="objectifs" class="section-card">
   <div class="section-header">
-    <div class="section-icon">🎯</div>
+    <div class="section-icon">{% include ph.html name="target" %}</div>
     <h2 class="section-title">Objectifs pédagogiques</h2>
   </div>
 
@@ -97,27 +97,27 @@ track: maths
 
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>🔍 Comprendre le processus de recherche</h4>
+      <h4>{% include ph.html name="magnifying-glass" %} Comprendre le processus de recherche</h4>
       <p>Maîtriser les étapes clés de la démarche scientifique, de l'observation à la validation des résultats.</p>
     </div>
     <div class="objective-card">
-      <h4>❓ Formuler une problématique</h4>
+      <h4>{% include ph.html name="question" %} Formuler une problématique</h4>
       <p>Apprendre à poser les bonnes questions et à définir un cadre de recherche cohérent et structuré.</p>
     </div>
     <div class="objective-card">
-      <h4>📚 Maîtriser la recherche documentaire</h4>
+      <h4>{% include ph.html name="books" %} Maîtriser la recherche documentaire</h4>
       <p>Naviguer efficacement dans les bases de données académiques et évaluer la qualité des sources.</p>
     </div>
     <div class="objective-card">
-      <h4>✍️ Rédiger un rapport scientifique</h4>
+      <h4>{% include ph.html name="pencil-simple" %} Rédiger un rapport scientifique</h4>
       <p>Structurer et rédiger un document respectant les standards académiques internationaux.</p>
     </div>
     <div class="objective-card">
-      <h4>🗣️ Communiquer ses résultats</h4>
+      <h4>{% include ph.html name="megaphone" %} Communiquer ses résultats</h4>
       <p>Présenter efficacement ses travaux à l'oral devant un public académique et défendre ses idées.</p>
     </div>
     <div class="objective-card">
-      <h4>🔬 Développer l'esprit critique</h4>
+      <h4>{% include ph.html name="flask" %} Développer l'esprit critique</h4>
       <p>Analyser et évaluer de manière objective la littérature scientifique et adopter une posture réflexive face aux résultats.</p>
     </div>
   </div>
@@ -125,7 +125,7 @@ track: maths
 
 <section id="planning" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📅</div>
+    <div class="section-icon">{% include ph.html name="calendar-blank" %}</div>
     <h2 class="section-title">Planning du cours</h2>
   </div>
   <div class="timeline">
@@ -183,7 +183,7 @@ track: maths
 
 <section id="evaluation" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📊</div>
+    <div class="section-icon">{% include ph.html name="chart-bar" %}</div>
     <h2 class="section-title">Modalités d’évaluation</h2>
   </div>
   <div class="evaluation-grid">
@@ -212,12 +212,12 @@ track: maths
 
 <section id="ressources" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📚</div>
+    <div class="section-icon">{% include ph.html name="books" %}</div>
     <h2 class="section-title">Ressources et bibliographie</h2>
   </div>
   <div class="resources-grid">
     <div class="resource-card">
-      <div class="resource-icon">🔎</div>
+      <div class="resource-icon">{% include ph.html name="magnifying-glass" %}</div>
       <h4>Guides méthodologiques</h4>
       <ul>
         <li><a href="https://www.cairn.info/la-demarche-scientifique--9782100782342.htm" target="_blank">La démarche scientifique (Cairn)</a></li>
@@ -225,7 +225,7 @@ track: maths
       </ul>
     </div>
     <div class="resource-card">
-      <div class="resource-icon">📝</div>
+      <div class="resource-icon">{% include ph.html name="note-pencil" %}</div>
       <h4>Rédaction scientifique</h4>
       <ul>
         <li><a href="https://www.univ-lille.fr/formation/ressources/rediger-un-memoire-ou-un-rapport/" target="_blank">Rédiger un mémoire ou un rapport (Univ. Lille)</a></li>
@@ -233,7 +233,7 @@ track: maths
       </ul>
     </div>
     <div class="resource-card">
-      <div class="resource-icon">🎤</div>
+      <div class="resource-icon">{% include ph.html name="microphone" %}</div>
       <h4>Communication orale</h4>
       <ul>
         <li><a href="https://www.campusfrance.org/fr/news/comment-reussir-sa-presentation-orale" target="_blank">Réussir sa présentation orale (Campus France)</a></li>
@@ -244,24 +244,24 @@ track: maths
 
 <section id="contact" class="section-card">
   <div class="section-header">
-    <div class="section-icon">📞</div>
+    <div class="section-icon">{% include ph.html name="phone" %}</div>
     <h2 class="section-title">Contact & encadrement</h2>
   </div>
   <div class="contact-info">
     <div class="contact-item">
-      <span class="contact-icon">👨‍🏫</span>
+      <span class="contact-icon">{% include ph.html name="chalkboard-teacher" %}</span>
       <span><strong>Responsable du cours :</strong> Dr. Yinoussa Adagolodjo</span>
     </div>
     <div class="contact-item">
-      <span class="contact-icon">✉️</span>
+      <span class="contact-icon">{% include ph.html name="envelope" %}</span>
       <span><strong>Email :</strong> Remplir formulaire de contact sur la page d'accueil</span>
     </div>
     <div class="contact-item">
-      <span class="contact-icon">🏢</span>
+      <span class="contact-icon">{% include ph.html name="buildings" %}</span>
       <span><strong>Bureau :</strong> Bâtiment Polytech, Université de Lille</span>
     </div>
     <div class="contact-item">
-      <span class="contact-icon">⏰</span>
+      <span class="contact-icon">{% include ph.html name="alarm" %}</span>
       <span><strong>Permanence :</strong> Sur rendez-vous (contact par email)</span>
     </div>
   </div>
