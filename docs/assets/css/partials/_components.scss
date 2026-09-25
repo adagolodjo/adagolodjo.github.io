@@ -232,6 +232,13 @@ $card-shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
     }
   }
 
+  .project-year {
+    font-size: 0.8rem;
+    color: $grey;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
   .project-footer {
     display: flex;
     justify-content: space-between;
@@ -295,6 +302,54 @@ $card-shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
     }
   }
 }
+
+// Status badge on the project image (research/projects listing)
+// Uses its own class name (project-status-badge) so it never collides with
+// .project-status on the home page's featured-projects section, which has a
+// different layout (flex meta row, not an image overlay).
+.project-status-badge {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  z-index: 3;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  color: #fff;
+  backdrop-filter: blur(4px);
+
+  &.active    { background: rgba(34, 139, 34, 0.85); }   // matches --success-color
+  &.completed { background: rgba(1, 96, 100, 0.85); }    // matches --primary-color
+}
+
+// Filter tabs for the projects listing — scoped names (projects-filter-*)
+// so they don't collide with .filter-tab/.filter-tabs used on teaching
+// pages, which rely on --cidx-* variables not available on this page.
+.projects-filter-tabs {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0 0.5rem;
+}
+.projects-filter-tab {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid $primary;
+  border-radius: 999px;
+  background: transparent;
+  color: $primary;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.88rem;
+  font-family: inherit;
+  transition: background $transition-speed $transition-easing, color $transition-speed $transition-easing;
+
+  &.active,
+  &:hover { background: $primary; color: #fff; }
+}
+.project-card[hidden] { display: none; }
 
 // Animation de chargement
 @keyframes loading {

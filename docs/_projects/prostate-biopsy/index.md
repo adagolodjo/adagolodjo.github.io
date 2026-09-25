@@ -5,6 +5,8 @@ subtitle: AI & Robotic Assistance for Prostate Cancer Diagnosis
 permalink: /research/projects/prostate-biopsy/
 image: /assets/images/projects/prostate-new.jpg
 description: "Combining AI-based image analysis and robotics to improve prostate cancer diagnosis and targeted biopsies."
+status: active
+keywords: ["AI Diagnosis", "Medical Imaging", "Robotic Biopsy", "Prostate Cancer", "MRI"]
 ---
 
 ![Prostate Biopsy Project](/assets/images/projects/prostate-new.jpg)
