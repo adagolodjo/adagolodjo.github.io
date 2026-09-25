@@ -199,18 +199,18 @@ track: medical
       <div class="resource-icon">{% include ph.html name="wrench" %}</div>
       <h4>Frameworks de simulation</h4>
       <ul>
-        <li><a href="https://www.sofa-framework.org" target="_blank">SOFA Framework</a></li>
-        <li><a href="#" target="_blank">FEBio (biomécanique)</a></li>
-        <li><a href="#" target="_blank">Environnements simulation médicale</a></li>
+        <li><a href="https://www.sofa-framework.org" target="_blank" rel="noopener noreferrer">SOFA Framework</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">FEBio (biomécanique)</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Environnements simulation médicale</a></li>
       </ul>
     </div>
     <div class="resource-card">
       <div class="resource-icon">{% include ph.html name="book-open" %}</div>
       <h4>Matériel pédagogique</h4>
       <ul>
-        <li><a href="https://www.notion.so/Simulation-M-dicale-1944d150dfba80f0a850cd2be969c1ff" target="_blank">Supports de cours sur Notion</a></li>
-        <li><a href="#" target="_blank">Littérature scientifique</a></li>
-        <li><a href="#" target="_blank">Documentation SOFA</a></li>
+        <li><a href="https://www.notion.so/Simulation-M-dicale-1944d150dfba80f0a850cd2be969c1ff" target="_blank" rel="noopener noreferrer">Supports de cours sur Notion</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Littérature scientifique</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Documentation SOFA</a></li>
       </ul>
     </div>
     <div class="resource-card">

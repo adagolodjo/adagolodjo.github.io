@@ -397,7 +397,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
         </div>
       </a>
       <a href="https://scholar.google.com/citations?hl=fr&user=ZBdWJ9EAAAAJ"
-         target="_blank" rel="noopener"
+         target="_blank" rel="noopener noreferrer"
          class="stat-card stat-card-link" data-aos="fade-left" data-aos-delay="300">
         <div class="stat-icon"><i class="fas fa-quote-left"></i></div>
         <div class="stat-text">
@@ -406,7 +406,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
         </div>
       </a>
       <a href="https://www.researchgate.net/profile/Yinoussa-Adagolodjo?ev=hdr_xprf"
-         target="_blank" rel="noopener"
+         target="_blank" rel="noopener noreferrer"
          class="stat-card stat-card-link" data-aos="fade-left" data-aos-delay="400">
         <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
         <div class="stat-text">
@@ -642,7 +642,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
               <span>Explore Project</span>
               <i class="fas fa-arrow-right"></i>
             </a>
-            <a href="https://www.inria.fr/fr/cancer-prostate-diagnostic-ia-robotique" class="btn-secondary" target="_blank" rel="noopener">
+            <a href="https://www.inria.fr/fr/cancer-prostate-diagnostic-ia-robotique" class="btn-secondary" target="_blank" rel="noopener noreferrer">
               <span>Reference Article</span>
               <i class="fas fa-external-link-alt"></i>
             </a>
@@ -793,7 +793,7 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
               <span>Explore Project</span>
               <i class="fas fa-arrow-right"></i>
             </a>
-            <a href="https://anr.fr/Projet-ANR-23-CE19-0022" class="btn-secondary" target="_blank" rel="noopener">
+            <a href="https://anr.fr/Projet-ANR-23-CE19-0022" class="btn-secondary" target="_blank" rel="noopener noreferrer">
               <span>ANR Project</span>
               <i class="fas fa-external-link-alt"></i>
             </a>
@@ -1046,19 +1046,19 @@ description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications,
               <span>Explore Project</span>
               <i class="fas fa-arrow-right"></i>
             </a>
-            <a href="https://www.youtube.com/watch?v=nxV17n9-dXY" target="_blank" class="btn-secondary" style="flex: 1; justify-content: center; padding: 0.5rem; min-width: 80px;">
+            <a href="https://www.youtube.com/watch?v=nxV17n9-dXY" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="flex: 1; justify-content: center; padding: 0.5rem; min-width: 80px;">
               <i class="fab fa-youtube" style="color: #ff0000; font-size: 1.1rem;"></i>
               <span>Vidéo 1</span>
             </a>
-            <a href="https://www.youtube.com/watch?v=4C5SBtlDz-c" target="_blank" class="btn-secondary" style="flex: 1; justify-content: center; padding: 0.5rem; min-width: 80px;">
+            <a href="https://www.youtube.com/watch?v=4C5SBtlDz-c" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="flex: 1; justify-content: center; padding: 0.5rem; min-width: 80px;">
               <i class="fab fa-youtube" style="color: #ff0000; font-size: 1.1rem;"></i>
               <span>Vidéo 2</span>
             </a>
-            <a href="https://www.youtube.com/watch?v=0tMTJS7cuIg" target="_blank" class="btn-secondary" style="flex: 1; justify-content: center; padding: 0.5rem; min-width: 80px;">
+            <a href="https://www.youtube.com/watch?v=0tMTJS7cuIg" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="flex: 1; justify-content: center; padding: 0.5rem; min-width: 80px;">
               <i class="fab fa-youtube" style="color: #ff0000; font-size: 1.1rem;"></i>
               <span>Vidéo 3</span>
             </a>
-            <a href="https://www.youtube.com/watch?v=DblTXsN8uEY" target="_blank" class="btn-secondary" style="flex: 1; justify-content: center; padding: 0.5rem; min-width: 80px;">
+            <a href="https://www.youtube.com/watch?v=DblTXsN8uEY" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="flex: 1; justify-content: center; padding: 0.5rem; min-width: 80px;">
               <i class="fab fa-youtube" style="color: #ff0000; font-size: 1.1rem;"></i>
               <span>Vidéo 4</span>
             </a>

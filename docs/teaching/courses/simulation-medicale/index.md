@@ -196,18 +196,18 @@ track: medical
       <div class="resource-icon">{% include ph.html name="wrench" %}</div>
       <h4>Frameworks de simulation</h4>
       <ul>
-        <li><a href="https://www.sofa-framework.org" target="_blank">SOFA Framework</a></li>
-        <li><a href="#" target="_blank">FEBio (biomécanique)</a></li>
-        <li><a href="#" target="_blank">GMSH (maillage)</a></li>
+        <li><a href="https://www.sofa-framework.org" target="_blank" rel="noopener noreferrer">SOFA Framework</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">FEBio (biomécanique)</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">GMSH (maillage)</a></li>
       </ul>
     </div>
     <div class="resource-card">
       <div class="resource-icon">{% include ph.html name="book-open" %}</div>
       <h4>Documentation scientifique</h4>
       <ul>
-        <li><a href="#" target="_blank">IEEE Transactions on Biomedical Engineering</a></li>
-        <li><a href="#" target="_blank">Medical Image Analysis Journal</a></li>
-        <li><a href="#" target="_blank">Computer Methods in Biomechanics</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">IEEE Transactions on Biomedical Engineering</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Medical Image Analysis Journal</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Computer Methods in Biomechanics</a></li>
       </ul>
     </div>
     <div class="resource-card">

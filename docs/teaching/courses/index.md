@@ -103,7 +103,7 @@ page_kind: courses-index
     </div>
     <div class="course-links">
       {% if course.syllabus %}
-        <a href="{{ course.syllabus }}" class="btn btn-secondary" target="_blank">
+        <a href="{{ course.syllabus }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
           {% include ph.html name="file-text" %} Syllabus
         </a>
       {% endif %}
@@ -111,7 +111,7 @@ page_kind: courses-index
         {% include ph.html name="link" %} Page du cours
       </a>
       {% if course.materials %}
-        <a href="{{ course.materials }}" class="btn btn-outline" target="_blank">
+        <a href="{{ course.materials }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
           {% include ph.html name="books" %} Ressources
         </a>
       {% endif %}
@@ -119,100 +119,6 @@ page_kind: courses-index
   </div>
 {% endif %}
 {% endfor %}
-</div>
-
-<div class="section-header">
-  <span class="icon">{% include ph.html name="books" %}</span>
-  <h2>Cours Précédents</h2>
-</div>
-
-<div class="courses-grid">
-{% for course in site.data.courses %}
-{% if course.semester contains "2023" %}
-  <div class="course-card" data-level="{{ course.level | downcase }}">
-    <div>
-      <div class="course-code">{{ course.code }}</div>
-      <div class="course-title">{{ course.title }}</div>
-      <div class="course-meta">
-        <div class="meta-item">
-          <span class="label">{% include ph.html name="calendar-blank" %} Semestre:</span>
-          {{ course.semester }}
-        </div>
-        <div class="meta-item">
-          <span class="level-badge level-{{ course.level | downcase }}">{{ course.level }}</span>
-        </div>
-      </div>
-      <div class="course-desc">{{ course.description }}</div>
-    </div>
-    <div class="course-links">
-      {% if course.syllabus %}
-        <a href="{{ course.syllabus }}" class="btn btn-secondary" target="_blank">
-          {% include ph.html name="file-text" %} Syllabus
-        </a>
-      {% endif %}
-      <a href="/teaching/courses/{{ course.code | downcase }}/" class="btn btn-primary">
-        {% include ph.html name="link" %} Page du cours
-      </a>
-    </div>
-  </div>
-{% endif %}
-{% endfor %}
-</div>
-
-<div class="teaching-philosophy">
-  <div class="section-header">
-    <span class="icon">{% include ph.html name="lightbulb" %}</span>
-    <h2>Philosophie Pédagogique</h2>
-  </div>
-
-  <p>Mon approche pédagogique privilégie l'apprentissage par la pratique, les applications concrètes et le développement de l'esprit critique. Je m'efforce de créer un environnement d'apprentissage inclusif où les étudiants de tous horizons peuvent s'épanouir et apporter leurs perspectives uniques.</p>
-
-  <p>Dans les cours techniques, je m'attache à équilibrer les fondements théoriques avec la mise en pratique, donnant aux étudiants les outils nécessaires pour appliquer les concepts à des problèmes du monde réel. J'intègre l'apprentissage par projets et encourage la collaboration, car ces méthodes reflètent la pratique professionnelle de l'informatique.</p>
-
-  <p>Je m'engage à améliorer continuellement mes méthodes d'enseignement en me basant sur les retours des étudiants et la recherche pédagogique. Je m'efforce de rester à jour avec les développements tant en informatique qu'en matière de meilleures pratiques pédagogiques.</p>
-
-  <p><strong>Mes principes clés :</strong></p>
-  <ul style="list-style: none; padding: 0;">
-    <li>{% include ph.html name="target" %} <strong>Apprentissage centré sur l'étudiant</strong> - Adaptation aux différents styles d'apprentissage</li>
-    <li>{% include ph.html name="flask" %} <strong>Approche expérimentale</strong> - Learning by doing et projets concrets</li>
-    <li>{% include ph.html name="globe" %} <strong>Ouverture internationale</strong> - Perspectives globales et multiculturelles</li>
-    <li>{% include ph.html name="arrows-clockwise" %} <strong>Amélioration continue</strong> - Évolution constante des méthodes pédagogiques</li>
-  </ul>
-</div>
-
-<div class="section-header">
-  <span class="icon">{% include ph.html name="toolbox" %}</span>
-  <h2>Ressources Étudiants</h2>
-</div>
-
-<div class="resources-grid">
-  <div class="resource-card">
-    <div class="icon">{% include ph.html name="users" %}</div>
-    <h3>Université de Lille</h3>
-    <p>Portail étudiant et services pédagogiques</p>
-    <a href="https://www.univ-lille.fr/etudes/" target="_blank">Accéder au portail →</a>
-  </div>
-
-  <div class="resource-card">
-    <div class="icon">{% include ph.html name="desktop" %}</div>
-    <h3>Polytech Lille</h3>
-    <p>Ressources techniques et laboratoires</p>
-    <a href="https://www.polytech-lille.fr/" target="_blank">Voir les ressources →</a>
-  </div>
-
-  <div class="resource-card">
-    <div class="icon">{% include ph.html name="clipboard-text" %}</div>
-    <h3>Moodle Lille</h3>
-    <p>Plateforme de cours en ligne</p>
-    <a href="https://moodle.univ-lille.fr/" target="_blank">Se connecter →</a>
-  </div>
-
-  <div class="resource-card">
-    <div class="icon">{% include ph.html name="book-open" %}</div>
-    <h3>Bibliothèque Universitaire</h3>
-    <p>Ressources académiques et documentation</p>
-    <a href="https://www.univ-lille.fr/bibliotheques/" target="_blank">Explorer →</a>
-  </div>
 </div>
 
 <div class="french-courses">
@@ -270,6 +176,100 @@ page_kind: courses-index
     <a href="/teaching/courses/du-816260/" class="french-course-link">
       {% include ph.html name="factory" %} Usine Connectée (Formation Continue)
     </a>
+  </div>
+</div>
+
+<div class="section-header">
+  <span class="icon">{% include ph.html name="books" %}</span>
+  <h2>Cours Précédents</h2>
+</div>
+
+<div class="courses-grid">
+{% for course in site.data.courses %}
+{% if course.semester contains "2023" %}
+  <div class="course-card" data-level="{{ course.level | downcase }}">
+    <div>
+      <div class="course-code">{{ course.code }}</div>
+      <div class="course-title">{{ course.title }}</div>
+      <div class="course-meta">
+        <div class="meta-item">
+          <span class="label">{% include ph.html name="calendar-blank" %} Semestre:</span>
+          {{ course.semester }}
+        </div>
+        <div class="meta-item">
+          <span class="level-badge level-{{ course.level | downcase }}">{{ course.level }}</span>
+        </div>
+      </div>
+      <div class="course-desc">{{ course.description }}</div>
+    </div>
+    <div class="course-links">
+      {% if course.syllabus %}
+        <a href="{{ course.syllabus }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+          {% include ph.html name="file-text" %} Syllabus
+        </a>
+      {% endif %}
+      <a href="/teaching/courses/{{ course.code | downcase }}/" class="btn btn-primary">
+        {% include ph.html name="link" %} Page du cours
+      </a>
+    </div>
+  </div>
+{% endif %}
+{% endfor %}
+</div>
+
+<div class="teaching-philosophy">
+  <div class="section-header">
+    <span class="icon">{% include ph.html name="lightbulb" %}</span>
+    <h2>Philosophie Pédagogique</h2>
+  </div>
+
+  <p>Mon approche pédagogique privilégie l'apprentissage par la pratique, les applications concrètes et le développement de l'esprit critique. Je m'efforce de créer un environnement d'apprentissage inclusif où les étudiants de tous horizons peuvent s'épanouir et apporter leurs perspectives uniques.</p>
+
+  <p>Dans les cours techniques, je m'attache à équilibrer les fondements théoriques avec la mise en pratique, donnant aux étudiants les outils nécessaires pour appliquer les concepts à des problèmes du monde réel. J'intègre l'apprentissage par projets et encourage la collaboration, car ces méthodes reflètent la pratique professionnelle de l'informatique.</p>
+
+  <p>Je m'engage à améliorer continuellement mes méthodes d'enseignement en me basant sur les retours des étudiants et la recherche pédagogique. Je m'efforce de rester à jour avec les développements tant en informatique qu'en matière de meilleures pratiques pédagogiques.</p>
+
+  <p><strong>Mes principes clés :</strong></p>
+  <ul style="list-style: none; padding: 0;">
+    <li>{% include ph.html name="target" %} <strong>Apprentissage centré sur l'étudiant</strong> - Adaptation aux différents styles d'apprentissage</li>
+    <li>{% include ph.html name="flask" %} <strong>Approche expérimentale</strong> - Learning by doing et projets concrets</li>
+    <li>{% include ph.html name="globe" %} <strong>Ouverture internationale</strong> - Perspectives globales et multiculturelles</li>
+    <li>{% include ph.html name="arrows-clockwise" %} <strong>Amélioration continue</strong> - Évolution constante des méthodes pédagogiques</li>
+  </ul>
+</div>
+
+<div class="section-header">
+  <span class="icon">{% include ph.html name="toolbox" %}</span>
+  <h2>Ressources Étudiants</h2>
+</div>
+
+<div class="resources-grid">
+  <div class="resource-card">
+    <div class="icon">{% include ph.html name="users" %}</div>
+    <h3>Université de Lille</h3>
+    <p>Portail étudiant et services pédagogiques</p>
+    <a href="https://www.univ-lille.fr/etudes/" target="_blank" rel="noopener noreferrer">Accéder au portail →</a>
+  </div>
+
+  <div class="resource-card">
+    <div class="icon">{% include ph.html name="desktop" %}</div>
+    <h3>Polytech Lille</h3>
+    <p>Ressources techniques et laboratoires</p>
+    <a href="https://www.polytech-lille.fr/" target="_blank" rel="noopener noreferrer">Voir les ressources →</a>
+  </div>
+
+  <div class="resource-card">
+    <div class="icon">{% include ph.html name="clipboard-text" %}</div>
+    <h3>Moodle Lille</h3>
+    <p>Plateforme de cours en ligne</p>
+    <a href="https://moodle.univ-lille.fr/" target="_blank" rel="noopener noreferrer">Se connecter →</a>
+  </div>
+
+  <div class="resource-card">
+    <div class="icon">{% include ph.html name="book-open" %}</div>
+    <h3>Bibliothèque Universitaire</h3>
+    <p>Ressources académiques et documentation</p>
+    <a href="https://www.univ-lille.fr/bibliotheques/" target="_blank" rel="noopener noreferrer">Explorer →</a>
   </div>
 </div>
 

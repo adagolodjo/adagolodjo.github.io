@@ -91,7 +91,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
               Read article <i class="fas fa-arrow-right"></i>
             </a>
             {% if featured_post.external_link %}
-            <a href="{{ featured_post.external_link }}" class="blog-btn-secondary" target="_blank">
+            <a href="{{ featured_post.external_link }}" class="blog-btn-secondary" target="_blank" rel="noopener noreferrer">
               Source <i class="fas fa-external-link-alt"></i>
             </a>
             {% endif %}

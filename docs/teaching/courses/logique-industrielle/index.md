@@ -275,8 +275,8 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/pqtkmsterkeYdJA" target="_blank" rel="noopener noreferrer">{% include ph.html name="chart-bar" %} Logique séquentielle et Grafcet (PDF)</a></li>
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/KyQsrfbqgLCFf2s" target="_blank" rel="noopener noreferrer">{% include ph.html name="clipboard-text" %} TD Grafcet - Gestion de priorités (PDF)</a></li>
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/AztKTgwstE5y4mq" target="_blank" rel="noopener noreferrer">{% include ph.html name="check-circle" %} Correction exercice 1 - Priorités (PDF)</a></li>
-<li><a href="./exercice_cours_partie_3.pdf" target="_blank">{% include ph.html name="note-pencil" %} Exercices Cours Partie 3 (PDF)</a></li>
-<li><a href="./sujets_grafcet_1.pdf" target="_blank">{% include ph.html name="clipboard-text" %} Sujets GRAFCET 1 (PDF)</a></li>
+<li><a href="./exercice_cours_partie_3.pdf" target="_blank" rel="noopener noreferrer">{% include ph.html name="note-pencil" %} Exercices Cours Partie 3 (PDF)</a></li>
+<li><a href="./sujets_grafcet_1.pdf" target="_blank" rel="noopener noreferrer">{% include ph.html name="clipboard-text" %} Sujets GRAFCET 1 (PDF)</a></li>
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/y33aTe6XRxZrtjL" target="_blank" rel="noopener noreferrer">{% include ph.html name="ruler" %} Partie 5 : Grafcet - Structuration Systèmes complexes (PDF)</a></li>
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/y33aTe6XRxZrtjL" target="_blank" rel="noopener noreferrer">{% include ph.html name="gear-six" %} Partie 6 : Grafcet - Mise en œuvre de la commande (PDF)</a></li>
 </ul>
@@ -287,14 +287,14 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 <ul>
 <li><strong>{% include ph.html name="elevator" %} Ascenseur</strong>
 <ul style="margin-top: 0.5rem;">
-<li><a href="https://nextcloud.univ-lille.fr/index.php/s/43itcnbmEodCske" target="_blank">Sujet TP Ascenseur (PDF)</a></li>
-<li><a href="#" target="_blank">Cahier des charges Ascenseur (PDF)</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/43itcnbmEodCske" target="_blank" rel="noopener noreferrer">Sujet TP Ascenseur (PDF)</a></li>
+<li><a href="#" target="_blank" rel="noopener noreferrer">Cahier des charges Ascenseur (PDF)</a></li>
 </ul>
 </li>
 <li><strong>{% include ph.html name="traffic-signal" %} Traffic Train</strong>
 <ul style="margin-top: 0.5rem;">
-<li><a href="https://nextcloud.univ-lille.fr/index.php/s/cXMy5XPnxaaZqe2" target="_blank">Sujet TP Traffic Train (PDF)</a></li>
-<li><a href="#" target="_blank">Schéma réseau ferroviaire (PDF)</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/cXMy5XPnxaaZqe2" target="_blank" rel="noopener noreferrer">Sujet TP Traffic Train (PDF)</a></li>
+<li><a href="#" target="_blank" rel="noopener noreferrer">Schéma réseau ferroviaire (PDF)</a></li>
 </ul>
 </li>
 <li><strong>{% include ph.html name="gear-six" %} TP Festo Persage</strong>
@@ -304,14 +304,14 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 </li>
 <li><strong>{% include ph.html name="package" %} Tri de Caisses</strong>
 <ul style="margin-top: 0.5rem;">
-<li><a href="https://nextcloud.univ-lille.fr/index.php/s/GpCJMEAEMJH2jkH" target="_blank">Manuel de référence (PDF)</a></li>
-<li><a href="#" target="_blank">Cahier des charges Tri (PDF)</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/GpCJMEAEMJH2jkH" target="_blank" rel="noopener noreferrer">Manuel de référence (PDF)</a></li>
+<li><a href="#" target="_blank" rel="noopener noreferrer">Cahier des charges Tri (PDF)</a></li>
 </ul>
 </li>
 <li><strong>Unity Pro</strong>
 <ul style="margin-top: 0.5rem;">
-<li><a href="https://nextcloud.univ-lille.fr/index.php/s/FKfop7bET8SdDpi" target="_blank">Sujet TP Tri de Caisses (PDF)</a></li>
-<li><a href="https://nextcloud.univ-lille.fr/index.php/s/iwWdNAfMrjg2Bmc" target="_blank">Annex 1 - Programming PLCs with Unity Pro (PDF)</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/FKfop7bET8SdDpi" target="_blank" rel="noopener noreferrer">Sujet TP Tri de Caisses (PDF)</a></li>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/iwWdNAfMrjg2Bmc" target="_blank" rel="noopener noreferrer">Annex 1 - Programming PLCs with Unity Pro (PDF)</a></li>
 </ul>
 </li>
 <li><strong>{% include ph.html name="robot" %} Robotino</strong>
@@ -330,10 +330,10 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 <h4>Manuels de référence</h4>
 <ul>
 <li>Du Grafcet au réseau de Pétri (2° Ed.) - Claude Foulard, Hassane Alla, René David (1992)</li>
-<li><a href="https://www.technologuepro.com/cours-automate-programmable-industriel/Cours-Grafcet-notions-de-base.htm" target="_blank">Cours Grafcet - Notions de base (TechnologuePro)</a></li>
-<li><a href="https://www.technologuepro.com/cours-automate-programmable-industriel/Les-automates-programmables-industriels-API.htm" target="_blank">Les automates programmables industriels - API (TechnologuePro)</a></li>
-<li><a href="http://robert.cireddu.free.fr/Ressources/AII/Rappels%20sur%20le%20GRAFCET/index.htm" target="_blank">Rappels sur le GRAFCET</a></li>
-<li><a href="https://www.youtube.com/@prof_lepep" target="_blank">Quelques resources vidéo</a></li>
+<li><a href="https://www.technologuepro.com/cours-automate-programmable-industriel/Cours-Grafcet-notions-de-base.htm" target="_blank" rel="noopener noreferrer">Cours Grafcet - Notions de base (TechnologuePro)</a></li>
+<li><a href="https://www.technologuepro.com/cours-automate-programmable-industriel/Les-automates-programmables-industriels-API.htm" target="_blank" rel="noopener noreferrer">Les automates programmables industriels - API (TechnologuePro)</a></li>
+<li><a href="http://robert.cireddu.free.fr/Ressources/AII/Rappels%20sur%20le%20GRAFCET/index.htm" target="_blank" rel="noopener noreferrer">Rappels sur le GRAFCET</a></li>
+<li><a href="https://www.youtube.com/@prof_lepep" target="_blank" rel="noopener noreferrer">Quelques resources vidéo</a></li>
 
 </ul>
 </div>
@@ -341,29 +341,29 @@ Le cours s'appuie sur des <strong>études de cas réelles</strong> issues de l'i
 <div class="resource-icon">{% include ph.html name="desktop" %}</div>
 <h4>Logiciels et outils</h4>
 <ul>
-<li><a href="https://new.siemens.com/global/en/products/automation/industry-software/automation-software/tia-portal.html" target="_blank">TIA Portal (Siemens)</a></li>
-<li><a href="https://www.rockwellautomation.com/en-us/products/software/factorytalk/designsuite/studio-5000.html" target="_blank">Studio 5000 (Rockwell)</a></li>
-<li><a href="https://www.schneider-electric.com/en/product-range/1056-ecostruxure-machine-expert/" target="_blank">EcoStruxure Machine Expert (Schneider)</a></li>
+<li><a href="https://new.siemens.com/global/en/products/automation/industry-software/automation-software/tia-portal.html" target="_blank" rel="noopener noreferrer">TIA Portal (Siemens)</a></li>
+<li><a href="https://www.rockwellautomation.com/en-us/products/software/factorytalk/designsuite/studio-5000.html" target="_blank" rel="noopener noreferrer">Studio 5000 (Rockwell)</a></li>
+<li><a href="https://www.schneider-electric.com/en/product-range/1056-ecostruxure-machine-expert/" target="_blank" rel="noopener noreferrer">EcoStruxure Machine Expert (Schneider)</a></li>
 </ul>
 </div>
 <div class="resource-card">
 <div class="resource-icon">{% include ph.html name="wrench" %}</div>
 <h4>Normes et standards</h4>
 <ul>
-<li><a href="https://webstore.iec.ch/publication/3684" target="_blank">IEC 60848 - GRAFCET</a></li>
-<li><a href="https://webstore.iec.ch/publication/4552" target="_blank">IEC 61131 - Automates programmables</a></li>
-<li><a href="https://webstore.iec.ch/publication/22273" target="_blank">IEC 61508 - Sécurité fonctionnelle</a></li>
-<li><a href="https://www.afe.asso.fr/" target="_blank">AFCET - Association GRAFCET</a></li>
+<li><a href="https://webstore.iec.ch/publication/3684" target="_blank" rel="noopener noreferrer">IEC 60848 - GRAFCET</a></li>
+<li><a href="https://webstore.iec.ch/publication/4552" target="_blank" rel="noopener noreferrer">IEC 61131 - Automates programmables</a></li>
+<li><a href="https://webstore.iec.ch/publication/22273" target="_blank" rel="noopener noreferrer">IEC 61508 - Sécurité fonctionnelle</a></li>
+<li><a href="https://www.afe.asso.fr/" target="_blank" rel="noopener noreferrer">AFCET - Association GRAFCET</a></li>
 </ul>
 </div>
 <div class="resource-card">
 <div class="resource-icon">{% include ph.html name="globe-hemisphere-west" %}</div>
 <h4>Ressources industrielles</h4>
 <ul>
-<li><a href="https://www.siemens.com/global/en/products/automation.html" target="_blank">Siemens - Automation industrielle</a></li>
-<li><a href="https://www.rockwellautomation.com/en-us.html" target="_blank">Rockwell Automation</a></li>
-<li><a href="https://www.schneider-electric.com/en/work/solutions/for-business/industrial-automation/" target="_blank">Schneider Electric - Automation</a></li>
-<li><a href="https://www.omron.com/global/en/products/category/automation-systems/" target="_blank">Omron - Automation Systems</a></li>
+<li><a href="https://www.siemens.com/global/en/products/automation.html" target="_blank" rel="noopener noreferrer">Siemens - Automation industrielle</a></li>
+<li><a href="https://www.rockwellautomation.com/en-us.html" target="_blank" rel="noopener noreferrer">Rockwell Automation</a></li>
+<li><a href="https://www.schneider-electric.com/en/work/solutions/for-business/industrial-automation/" target="_blank" rel="noopener noreferrer">Schneider Electric - Automation</a></li>
+<li><a href="https://www.omron.com/global/en/products/category/automation-systems/" target="_blank" rel="noopener noreferrer">Omron - Automation Systems</a></li>
 </ul>
 </div>
 

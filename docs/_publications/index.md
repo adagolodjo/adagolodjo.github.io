@@ -445,7 +445,7 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
     <span class="pub-stat-label">Theses</span>
   </div>
   <a href="https://hal.science/search/index?q=Adagolodjo"
-     target="_blank" rel="noopener" class="hal-sync-badge">
+     target="_blank" rel="noopener noreferrer" class="hal-sync-badge">
     <span class="hal-sync-dot"></span>
     Synced with HAL Science
     <i class="fas fa-external-link-alt" style="font-size:0.65rem;opacity:0.6;"></i>
@@ -599,7 +599,7 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
 
 <div id="pub-no-results">
   <i class="fas fa-search" style="font-size:2rem;color:#48AAAD;margin-bottom:0.75rem;display:block;"></i>
-  No publications match your search. <a href="https://hal.science/search/index?q=Adagolodjo" target="_blank">Search on HAL ↗</a>
+  No publications match your search. <a href="https://hal.science/search/index?q=Adagolodjo" target="_blank" rel="noopener noreferrer">Search on HAL ↗</a>
 </div>
 
 <!-- ── HAL live sync ─────────────────────────────────────────── -->
@@ -609,7 +609,7 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
     <p class="hal-live-desc">
       This page loads publications statically from a curated YAML list.
       Click to verify synchronization with the live HAL API
-      (<a href="https://hal.science/search/index?q=Adagolodjo" target="_blank" rel="noopener">hal.science</a>).
+      (<a href="https://hal.science/search/index?q=Adagolodjo" target="_blank" rel="noopener noreferrer">hal.science</a>).
     </p>
   </div>
   <div>
@@ -623,19 +623,19 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
 <!-- ── External profiles ─────────────────────────────────────── -->
 <div class="pub-profiles">
   <a href="https://hal.science/search/index?q=Adagolodjo"
-     target="_blank" rel="noopener" class="pub-profile-btn pub-profile-hal">
+     target="_blank" rel="noopener noreferrer" class="pub-profile-btn pub-profile-hal">
     <i class="fas fa-archive"></i> HAL Science
   </a>
   <a href="https://scholar.google.com/citations?user=ZBdWJ9EAAAAJ&hl=fr"
-     target="_blank" rel="noopener" class="pub-profile-btn pub-profile-scholar">
+     target="_blank" rel="noopener noreferrer" class="pub-profile-btn pub-profile-scholar">
     <i class="fas fa-graduation-cap"></i> Google Scholar
   </a>
   <a href="https://www.researchgate.net/profile/Yinoussa-Adagolodjo?ev=hdr_xprf"
-     target="_blank" rel="noopener" class="pub-profile-btn pub-profile-rg">
+     target="_blank" rel="noopener noreferrer" class="pub-profile-btn pub-profile-rg">
     <i class="fas fa-flask"></i> ResearchGate
   </a>
   <a href="https://www.semanticscholar.org/author/Yinoussa-Adagolodjo/2251436"
-     target="_blank" rel="noopener" class="pub-profile-btn pub-profile-orcid">
+     target="_blank" rel="noopener noreferrer" class="pub-profile-btn pub-profile-orcid">
     <i class="fas fa-atom"></i> Semantic Scholar
   </a>
 </div>
@@ -720,7 +720,7 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
       status.innerHTML =
         '<i class="fas fa-exclamation-triangle" style="color:#E65100"></i> ' +
         'HAL API unreachable. ' +
-        '<a href="https://hal.science/search/index?q=Adagolodjo" target="_blank">View on HAL ↗</a>';
+        '<a href="https://hal.science/search/index?q=Adagolodjo" target="_blank" rel="noopener noreferrer">View on HAL ↗</a>';
       btn.innerHTML = '<i class="fas fa-cloud-download-alt"></i> Retry';
       btn.disabled = false;
     }
