@@ -417,3 +417,78 @@
     }
   }
 }
+
+// ===========================================
+// SINGLE POST — Share buttons
+// (used by _layouts/post.html; every blog post)
+// ===========================================
+.post-share {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 2.5rem 0 1.5rem;
+  padding: 1.1rem 1.4rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+.post-share-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.post-share-buttons {
+  display: flex;
+  gap: 0.6rem;
+}
+.post-share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover, &:focus-visible {
+    background: var(--primary-dark);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(1, 96, 100, 0.25);
+  }
+  &:focus-visible { outline: 2px solid var(--primary-light); outline-offset: 2px; }
+}
+.post-share-copy {
+  position: relative;
+
+  &.is-copied {
+    background: var(--success-color);
+    &:hover { background: var(--success-color); }
+  }
+  &.is-copied::after {
+    content: 'Link copied!';
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text-color);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .post-share { justify-content: center; text-align: center; }
+}
