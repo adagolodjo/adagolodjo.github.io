@@ -5,6 +5,9 @@ subtitle: Cosserat Theory for Soft Robotics Control
 permalink: /research/projects/cosseroots/
 image: /assets/images/projects/cosseroots-new.png
 description: "Research project applying Cosserat's theory to advance the control of slender deformation robots for medical and industrial applications."
+start_date: 2021-01-01
+status: active
+keywords: ["Cosserat Rod Theory", "Soft Robotics", "Real-Time Simulation", "Control Theory", "FEM"]
 ---
 
 <div class="project-hero-section">

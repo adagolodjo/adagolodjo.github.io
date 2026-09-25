@@ -103,72 +103,81 @@ image: /assets/images/notion-face.png
 }
 .about-section-title i { color: var(--about-light); font-size: 1.1rem; }
 
-/* ---- Timeline ---- */
+/* ---- Timeline (flat, dark card — no rail/dots) ---- */
 .timeline {
-  position: relative;
-  padding-left: 2rem;
-}
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0.55rem;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, var(--about-primary), var(--about-light), rgba(72,170,173,0.1));
-  border-radius: 2px;
+  background: linear-gradient(160deg, var(--about-dark) 0%, var(--about-primary) 100%);
+  border-radius: var(--about-radius);
+  overflow: hidden;
 }
 .timeline-item {
-  position: relative;
-  margin-bottom: 2rem;
+  padding: 1.6rem 1.9rem;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
 }
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -1.68rem;
-  top: 0.4rem;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--about-primary);
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 2px var(--about-light);
-}
-.timeline-item.current::before {
-  background: var(--about-light);
-  box-shadow: 0 0 0 3px rgba(72,170,173,0.3);
-  width: 14px;
-  height: 14px;
-  left: -1.75rem;
-}
-.timeline-period {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--about-primary);
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  margin-bottom: 0.2rem;
+.timeline-item:last-child { border-bottom: none; }
+.timeline-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.5rem;
+  margin-bottom: 0.35rem;
 }
 .timeline-role {
-  font-size: 1rem;
+  font-size: 1.04rem;
   font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 0.1rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.timeline-current-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--about-dark);
+  background: var(--about-light);
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.timeline-period {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--about-light);
+  white-space: nowrap;
 }
 .timeline-place {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 0.5rem;
+  font-size: 0.86rem;
+  color: rgba(255,255,255,0.62);
+  margin-bottom: 0.85rem;
 }
-.timeline-place i { color: var(--about-light); margin-right: 0.3rem; }
+.timeline-place i { margin-right: 0.3rem; }
 .timeline-details {
-  font-size: 0.88rem;
-  color: #555;
-  line-height: 1.6;
+  list-style: none;
   margin: 0;
-  padding-left: 1rem;
+  padding: 0;
 }
-.timeline-details li { margin-bottom: 0.2rem; }
+.timeline-details li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.86rem;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.65;
+  margin-bottom: 0.25rem;
+}
+.timeline-details li::before {
+  content: '\2013';
+  position: absolute;
+  left: 0;
+  color: var(--about-light);
+}
+.timeline-details a { color: #fff; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.4); }
+.timeline-details a:hover { text-decoration-color: #fff; }
+
+@media (max-width: 600px) {
+  .timeline-item { padding: 1.3rem 1.3rem; }
+}
 
 /* ---- Research cards ---- */
 .research-grid {
@@ -445,9 +454,11 @@ image: /assets/images/notion-face.png
 <div class="timeline">
 
   <div class="timeline-item current">
-    <div class="timeline-period">2022 — Present</div>
-    <div class="timeline-role">Assistant Professor (Maître de Conférences)</div>
-    <div class="timeline-place"><i class="fas fa-map-marker-alt"></i> University of Lille · DEFROST Team, Inria · Villeneuve d'Ascq, France</div>
+    <div class="timeline-item-head">
+      <div class="timeline-role">Assistant Professor (Maître de Conférences) <span class="timeline-current-badge">Actuel</span></div>
+      <div class="timeline-period">2022 — Present</div>
+    </div>
+    <div class="timeline-place">University of Lille · DEFROST Team, Inria · Villeneuve d'Ascq, France</div>
     <ul class="timeline-details">
       <li>Research in medical robotics and real-time simulation for healthcare</li>
       <li>Involved in ANR &amp; Inria collaborative projects: COSSEROOTS, IRE, ADAGIO, Active Prostate Phantom</li>
@@ -457,9 +468,11 @@ image: /assets/images/notion-face.png
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-period">2019 — 2022</div>
-    <div class="timeline-role">Postdoctoral Research Engineer</div>
-    <div class="timeline-place"><i class="fas fa-map-marker-alt"></i> Inria · DEFROST Team · Lille, France</div>
+    <div class="timeline-item-head">
+      <div class="timeline-role">Postdoctoral Research Engineer</div>
+      <div class="timeline-period">2019 — 2022</div>
+    </div>
+    <div class="timeline-place">Inria · DEFROST Team · Lille, France</div>
     <ul class="timeline-details">
       <li>Constraint-based control for soft and hybrid robotic systems (ROBOCOP, COSSEROOTS)</li>
       <li>Real-time FEM simulation for robotic cochlear implant insertion</li>
@@ -468,9 +481,11 @@ image: /assets/images/notion-face.png
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-period">2015 — 2018</div>
-    <div class="timeline-role">Ph.D. in Robotics &amp; Computer Science</div>
-    <div class="timeline-place"><i class="fas fa-graduation-cap"></i> ICube Laboratory · University of Strasbourg · Strasbourg, France</div>
+    <div class="timeline-item-head">
+      <div class="timeline-role">Ph.D. in Robotics &amp; Computer Science</div>
+      <div class="timeline-period">2015 — 2018</div>
+    </div>
+    <div class="timeline-place">ICube Laboratory · University of Strasbourg · Strasbourg, France</div>
     <ul class="timeline-details">
       <li>Thesis: <em>« CONECT — Couplage de la Robotique et de la Simulation Médicale pour des Procédures Automatisées »</em> (defended 2018)</li>
       <li>Robotic needle insertion using inverse FEM simulation</li>
