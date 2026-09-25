@@ -61,6 +61,16 @@
   
   <!-- Dark Mode Toggle Script -->
   <script>
+    // Swaps every icon sharing the .theme-icon-glyph class (nav button,
+    // and the separate blog-page toggle in blog-improvements.html) so all
+    // toggle buttons on a page stay in sync with the actual theme.
+    function syncThemeIcons(theme) {
+      document.querySelectorAll('.theme-icon-glyph').forEach(function (icon) {
+        icon.classList.remove('fa-moon', 'fa-sun');
+        icon.classList.add(theme === 'dark' ? 'fa-sun' : 'fa-moon');
+      });
+    }
+
     function toggleDarkMode() {
       const body = document.body;
       const currentTheme = body.getAttribute('data-theme');
@@ -68,12 +78,14 @@
       
       body.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
+      syncThemeIcons(newTheme);
     }
     
     // Load saved theme
     document.addEventListener('DOMContentLoaded', function() {
       const savedTheme = localStorage.getItem('theme') || 'light';
       document.body.setAttribute('data-theme', savedTheme);
+      syncThemeIcons(savedTheme);
       
       // Initialize AOS (Animate On Scroll)
       if (typeof AOS !== 'undefined') {

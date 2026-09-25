@@ -4,7 +4,7 @@
 <div class="theme-toggle-container">
   <button class="button is-small theme-toggle" id="theme-toggle" title="Toggle dark mode">
     <span class="icon">
-      <i class="fas fa-moon" id="theme-icon"></i>
+      <i class="fas fa-moon theme-icon-glyph" id="theme-icon"></i>
     </span>
   </button>
 </div>
@@ -409,26 +409,23 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Dark Mode Toggle
   const themeToggle = document.getElementById('theme-toggle');
-  const themeIcon = document.getElementById('theme-icon');
   const body = document.body;
   
-  // Check for saved theme or default to light
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  body.setAttribute('data-theme', savedTheme);
-  updateThemeIcon(savedTheme);
-  
+  // Theme state itself is already initialised by the shared script in
+  // head.html (which runs first and calls syncThemeIcons() on load), so
+  // this only needs to wire up its own button. It calls the same global
+  // syncThemeIcons() — defined in head.html — instead of only touching
+  // its own icon, so clicking THIS button also updates the nav's icon
+  // (previously it only ever touched #theme-icon, leaving the nav's
+  // .theme-icon-glyph out of sync with the real theme).
   themeToggle.addEventListener('click', function() {
     const currentTheme = body.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     
     body.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
-    updateThemeIcon(newTheme);
+    if (typeof syncThemeIcons === 'function') { syncThemeIcons(newTheme); }
   });
-  
-  function updateThemeIcon(theme) {
-    themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-  }
   
   // Floating Action Button
   const mainFab = document.getElementById('main-fab');

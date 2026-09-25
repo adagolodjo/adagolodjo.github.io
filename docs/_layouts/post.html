@@ -19,9 +19,61 @@ layout: default
     {{ content }}
   </div>
 
+  {%- assign share_url = page.url | absolute_url | url_encode -%}
+  {%- assign share_title = page.title | url_encode -%}
+  <div class="post-share">
+    <span class="post-share-label">Share this article</span>
+    <div class="post-share-buttons">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_url }}"
+         target="_blank" rel="noopener noreferrer"
+         class="post-share-btn post-share-linkedin" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+      </a>
+      <a href="https://twitter.com/intent/tweet?url={{ share_url }}&text={{ share_title }}"
+         target="_blank" rel="noopener noreferrer"
+         class="post-share-btn post-share-x" aria-label="Share on X (Twitter)" title="Share on X (Twitter)">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      <button type="button" class="post-share-btn post-share-copy"
+              data-share-url="{{ page.url | absolute_url }}"
+              aria-label="Copy link to this article" title="Copy link">
+        <i class="fas fa-link" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var copyBtn = document.querySelector('.post-share-copy');
+  if (!copyBtn) return;
+  copyBtn.addEventListener('click', function () {
+    var url = copyBtn.getAttribute('data-share-url');
+    var done = function () {
+      copyBtn.classList.add('is-copied');
+      setTimeout(function () { copyBtn.classList.remove('is-copied'); }, 1800);
+    };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(url).then(done).catch(function () { fallbackCopy(url, done); });
+    } else {
+      fallbackCopy(url, done);
+    }
+  });
+  function fallbackCopy(text, done) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (e) { /* clipboard unavailable, no-op */ }
+    document.body.removeChild(ta);
+  }
+});
+</script>
