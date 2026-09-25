@@ -121,6 +121,64 @@ page_kind: courses-index
 {% endfor %}
 </div>
 
+<div class="french-courses">
+  <div class="section-header">
+    <span class="icon">🇫🇷</span>
+    <h2>Catalogue Complet des Cours</h2>
+  </div>
+
+  <div class="french-courses-grid">
+    <a href="/teaching/courses/initiation-recherche/" class="french-course-link">
+      {% include ph.html name="magnifying-glass" %} Initiation à la recherche
+    </a>
+    <a href="/teaching/courses/logique-industrielle/" class="french-course-link">
+      {% include ph.html name="gear-six" %} Logique Séquentielle – SAP et Grafcet
+    </a>
+    <a href="/teaching/courses/modelisation-production/" class="french-course-link">
+      {% include ph.html name="factory" %} Modélisation des systèmes de production
+    </a>
+    <a href="/teaching/courses/gr-711302/" class="french-course-link">
+      {% include ph.html name="robot" %} GR-711302 Automatique : Robotique
+    </a>
+    <a href="/teaching/courses/gba3-robotique-abb/" class="french-course-link">
+      {% include ph.html name="robot" %} TP Robotique ABB IRB140 – GBA3
+    </a>
+    <a href="/teaching/courses/gr-712302/" class="french-course-link">
+      {% include ph.html name="desktop" %} GR-712302 Programmation
+    </a>
+    <a href="/teaching/courses/gr-713301/" class="french-course-link">
+      {% include ph.html name="sliders" %} GR-713301 Automatique : Régulation
+    </a>
+    <a href="/teaching/courses/analyse-numerique/" class="french-course-link">
+      {% include ph.html name="chart-bar" %} Analyse numérique : Optimisation
+    </a>
+    <a href="/teaching/courses/industrie-40/" class="french-course-link">
+      {% include ph.html name="factory" %} Usine Connectée &amp; Industrie 4.0
+    </a>
+    <a href="/teaching/courses/tests-maintenance/" class="french-course-link">
+      {% include ph.html name="wrench" %} Tests et Maintenance
+    </a>
+    <a href="/teaching/courses/simulation-medicale/" class="french-course-link">
+      {% include ph.html name="hospital" %} Simulation Médicale
+    </a>
+    <a href="/teaching/courses/robotique-medicale/" class="french-course-link">
+      {% include ph.html name="robot" %} Module IA Robotique &amp; Santé
+    </a>
+    <a href="/teaching/courses/mathematiques-ingenieur/" class="french-course-link">
+      {% include ph.html name="ruler" %} Mathématiques pour l'ingénieur
+    </a>
+    <a href="/teaching/courses/du-822160/" class="french-course-link">
+      {% include ph.html name="lock-key" %} Sécurité Informatique
+    </a>
+    <a href="/teaching/courses/du-812170/" class="french-course-link">
+      {% include ph.html name="floppy-disk" %} Culture Numérique &amp; Sécurité des Données
+    </a>
+    <a href="/teaching/courses/du-816260/" class="french-course-link">
+      {% include ph.html name="factory" %} Usine Connectée (Formation Continue)
+    </a>
+  </div>
+</div>
+
 <div class="section-header">
   <span class="icon">{% include ph.html name="books" %}</span>
   <h2>Cours Précédents</h2>
@@ -212,64 +270,6 @@ page_kind: courses-index
     <h3>Bibliothèque Universitaire</h3>
     <p>Ressources académiques et documentation</p>
     <a href="https://www.univ-lille.fr/bibliotheques/" target="_blank" rel="noopener noreferrer">Explorer →</a>
-  </div>
-</div>
-
-<div class="french-courses">
-  <div class="section-header">
-    <span class="icon">🇫🇷</span>
-    <h2>Catalogue Complet des Cours</h2>
-  </div>
-
-  <div class="french-courses-grid">
-    <a href="/teaching/courses/initiation-recherche/" class="french-course-link">
-      {% include ph.html name="magnifying-glass" %} Initiation à la recherche
-    </a>
-    <a href="/teaching/courses/logique-industrielle/" class="french-course-link">
-      {% include ph.html name="gear-six" %} Logique Séquentielle – SAP et Grafcet
-    </a>
-    <a href="/teaching/courses/modelisation-production/" class="french-course-link">
-      {% include ph.html name="factory" %} Modélisation des systèmes de production
-    </a>
-    <a href="/teaching/courses/gr-711302/" class="french-course-link">
-      {% include ph.html name="robot" %} GR-711302 Automatique : Robotique
-    </a>
-    <a href="/teaching/courses/gba3-robotique-abb/" class="french-course-link">
-      {% include ph.html name="robot" %} TP Robotique ABB IRB140 – GBA3
-    </a>
-    <a href="/teaching/courses/gr-712302/" class="french-course-link">
-      {% include ph.html name="desktop" %} GR-712302 Programmation
-    </a>
-    <a href="/teaching/courses/gr-713301/" class="french-course-link">
-      {% include ph.html name="sliders" %} GR-713301 Automatique : Régulation
-    </a>
-    <a href="/teaching/courses/analyse-numerique/" class="french-course-link">
-      {% include ph.html name="chart-bar" %} Analyse numérique : Optimisation
-    </a>
-    <a href="/teaching/courses/industrie-40/" class="french-course-link">
-      {% include ph.html name="factory" %} Usine Connectée &amp; Industrie 4.0
-    </a>
-    <a href="/teaching/courses/tests-maintenance/" class="french-course-link">
-      {% include ph.html name="wrench" %} Tests et Maintenance
-    </a>
-    <a href="/teaching/courses/simulation-medicale/" class="french-course-link">
-      {% include ph.html name="hospital" %} Simulation Médicale
-    </a>
-    <a href="/teaching/courses/robotique-medicale/" class="french-course-link">
-      {% include ph.html name="robot" %} Module IA Robotique &amp; Santé
-    </a>
-    <a href="/teaching/courses/mathematiques-ingenieur/" class="french-course-link">
-      {% include ph.html name="ruler" %} Mathématiques pour l'ingénieur
-    </a>
-    <a href="/teaching/courses/du-822160/" class="french-course-link">
-      {% include ph.html name="lock-key" %} Sécurité Informatique
-    </a>
-    <a href="/teaching/courses/du-812170/" class="french-course-link">
-      {% include ph.html name="floppy-disk" %} Culture Numérique &amp; Sécurité des Données
-    </a>
-    <a href="/teaching/courses/du-816260/" class="french-course-link">
-      {% include ph.html name="factory" %} Usine Connectée (Formation Continue)
-    </a>
   </div>
 </div>
 
