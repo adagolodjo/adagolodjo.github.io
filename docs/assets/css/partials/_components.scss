@@ -36,6 +36,19 @@ $card-shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
   }
 }
 
+// Visually-hidden but screen-reader-accessible text
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 // Accessible skip link
 .skip-link {
   position: absolute;
@@ -402,4 +415,35 @@ $card-shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
   vertical-align: -0.125em;   // baseline alignment with adjacent text
   flex-shrink: 0;
   line-height: 1;
+}
+
+// ── Insight box (encadré "question clé" style slide de conférence) ─────
+// Réutilisable dans les articles de blog / pages projet pour isoler une
+// idée ou une question de recherche centrale du reste du texte.
+.insight-box {
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 1.25rem 1.5rem;
+  margin: 1.75rem 0;
+  background: var(--card-bg);
+  color: var(--text-color);
+
+  .insight-label {
+    font-weight: $weight-bold;
+    color: var(--border-color);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+    line-height: 1.65;
+  }
+
+  .insight-highlight {
+    color: var(--border-color);
+    font-weight: $weight-medium;
+  }
 }

@@ -103,7 +103,16 @@
     gap: var(--spacing-lg);
     
     @include respond-to(mobile) {
-      gap: var(--spacing-md);
+      gap: var(--spacing-sm);
+    }
+  }
+
+  // Sur mobile, ces liens sont déjà dupliqués dans #mobile-nav (le menu
+  // hamburger) — les masquer évite le double affichage qui casse la mise
+  // en page (liens desktop + hamburger se chevauchant sur petit écran).
+  .nav-left {
+    @include respond-to(mobile) {
+      display: none;
     }
   }
 
@@ -314,6 +323,12 @@
       &::before {
         opacity: 1;
       }
+    }
+
+    // Masqué sur mobile : place limitée à côté du hamburger, ces liens
+    // restent accessibles depuis le footer du site.
+    @include respond-to(mobile) {
+      display: none;
     }
   }
 
@@ -604,6 +619,11 @@
     z-index: 2;
   }
 
+  .hero-keyword-cloud {
+    position: relative;
+    z-index: 2;
+  }
+
   .hero-description {
     color: rgba(255,255,255,0.9) !important;
     max-width: 700px;
@@ -712,6 +732,86 @@
   font-weight: $weight-medium;
   text-shadow: 0 2px 20px rgba($primary-dark, 0.5);
   max-width: 600px;
+}
+
+// ===========================================
+// MOSAÏQUE DE MOTS-CLÉS (remplace le tagline "Robotics & AR for Healthcare")
+// Inspirée du style "word cloud" des slides de conférence
+// ===========================================
+
+.hero-keyword-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.6em;
+  row-gap: 0.15em;
+  margin-bottom: var(--spacing-xl);
+  max-width: 720px;
+
+  .kw {
+    line-height: 1.15;
+    white-space: nowrap;
+  }
+
+  .kw-sm {
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
+    font-weight: $weight-medium;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .kw-md {
+    font-size: clamp(1.05rem, 2.8vw, 1.5rem);
+    font-weight: $weight-bold;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .kw-lg {
+    font-size: clamp(1.3rem, 3.8vw, 2.1rem);
+    font-weight: $weight-bold;
+  }
+
+  .kw-xl {
+    font-size: clamp(1.7rem, 5vw, 2.8rem);
+    font-weight: $weight-black;
+  }
+
+  // Réutilise les dégradés déjà définis pour le nom/tagline du hero
+  .kw-teal {
+    -webkit-background-clip: text;
+    background: linear-gradient(135deg, #64ffda 0%, $primary-light 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 12px rgba($primary-light, 0.4));
+  }
+
+  .kw-turquoise {
+    -webkit-background-clip: text;
+    background: linear-gradient(135deg, #3be8ff 0%, #00bcd4 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 12px rgba(#3be8ff, 0.4));
+  }
+
+  .kw-pink {
+    -webkit-background-clip: text;
+    background: linear-gradient(135deg, #e17ecf 0%, #c2185b 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 12px rgba(#e17ecf, 0.4));
+  }
+
+  @include respond-to(mobile) {
+    .kw {
+      white-space: normal;
+    }
+  }
+
+  // Variante centrée pour les héros de section (universal-hero)
+  &.hero-keyword-cloud--centered {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 // ===========================================

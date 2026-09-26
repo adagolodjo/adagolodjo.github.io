@@ -4,6 +4,19 @@ title: Research
 permalink: /research/
 subtitle: Projects & Publications
 description: "Explore Dr. Yinoussa Adagolodjo's research projects, publications, and contributions to robotics and healthcare technology."
+keyword_cloud:
+  - { text: "Medical Robotics", size: xl, color: teal }
+  - { text: "contact", size: sm }
+  - { text: "Soft Robotics", size: lg, color: turquoise }
+  - { text: "deformation", size: sm }
+  - { text: "Control Theory", size: lg, color: pink }
+  - { text: "FEM", size: sm }
+  - { text: "Cosserat Theory", size: md, color: teal }
+  - { text: "needle insertion", size: sm }
+  - { text: "Real-Time Simulation", size: md }
+  - { text: "patient-specific anatomy", size: sm }
+  - { text: "Augmented Reality", size: md, color: turquoise }
+  - { text: "uncertainty", size: sm }
 ---
 
 
