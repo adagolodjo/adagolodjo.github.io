@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Keynote at COSUR 2026: Soft Robot Simulation with SOFA"
+title: "Keynote at COSUR 2026: What Does a Surgical Robot Really Need to Know About the Human Body?"
 date: 2026-09-15
 categories: [news, conference, education]
 tags: [summer-school, surgical-robots, soft-robotics, sofa-framework, cosur, simulation]
 author: Adagolodjo Yinoussa
 image: /assets/images/posts/cosur-2026-group-photo.webp
-excerpt: "Delivered a keynote on soft robot simulation with the SOFA framework at the COSUR 2026 Summer School on Control of Surgical Robots, hosted by the University of Leeds."
+excerpt: "Delivered a keynote — 'What Does a Surgical Robot Really Need to Know About the Human Body?' — at the COSUR 2026 Summer School on Control of Surgical Robots, hosted by the University of Leeds."
 ---
 
 I had the pleasure of giving **Keynote 4** at the **COSUR 2026 Summer School on Control of Surgical Robots**, held **September 14–16, 2026** at the School of Electronic and Electrical Engineering, University of Leeds, UK — a pre-event of the [CRAS 2026 conference](https://cras-eu.org/cras-2026/).
@@ -22,9 +22,23 @@ I had the pleasure of giving **Keynote 4** at the **COSUR 2026 Summer School on 
 
 ## My Keynote
 
-**Topic**: *Soft Robot Simulation / SOFA*
+**Title**: *What Does a Surgical Robot Really Need to Know About the Human Body?*
 
-I presented the [SOFA framework](https://www.sofa-framework.org/) and our [Cosserat plugin](https://github.com/SofaDefrost/Cosserat) as tools for real-time simulation of soft and continuum robots in medical contexts — covering the Cosserat rod formulation, constraint-based control, and how these models support the kind of interactive, patient-specific simulation that surgical robotics increasingly relies on.
+The talk started from a simple framing question — not *how much* anatomy a surgical robot needs, but *what physical information* it actually needs: geometry, stiffness, deformation, contact, friction, viscoelasticity, patient-specific anatomy, uncertainty, boundary conditions, topology.
+
+<figure style="margin: 1.5rem 0;">
+  <img src="/assets/images/posts/cosur-2026-slide-question.webp" alt="Slide from the talk listing the physical properties a surgical robot may need to know about the human body: geometry, stiffness, deformation, contact, friction, viscoelasticity, patient-specific anatomy, uncertainty, boundary conditions, topology" loading="lazy" style="width: 100%; border-radius: 0.75rem;">
+  <figcaption style="font-size: 0.85rem; color: var(--text-muted, #7a7a7a); margin-top: 0.5rem; text-align: center;">
+    Slide 2 of the talk: the physical properties on the table.
+  </figcaption>
+</figure>
+
+<div class="insight-box">
+  <p class="insight-label">The real question</p>
+  <p>Not <em>how much</em> anatomy — but <strong>what physical information</strong> is actually necessary to perform a given task. <span class="insight-highlight">Does the answer depend on the task?</span></p>
+</div>
+
+I used the [SOFA framework](https://www.sofa-framework.org/) and our [Cosserat plugin](https://github.com/SofaDefrost/Cosserat) to illustrate this, covering the Cosserat rod formulation, constraint-based control, and how these models support the kind of interactive, patient-specific simulation that surgical robotics increasingly relies on.
 
 ## About COSUR 2026
 
