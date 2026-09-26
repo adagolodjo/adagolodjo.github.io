@@ -2,7 +2,14 @@
   <div class="container">
     <img src="/assets/images/notion-face.png" alt="{{ site.author.name }}" class="profile-image">
     <h1 class="title is-2">{{ page.title | default: site.title }}</h1>
-    {% if page.subtitle %}
+    {% if page.keyword_cloud %}
+      <p class="hero-keyword-cloud hero-keyword-cloud--centered" aria-hidden="true">
+        {% for kw in page.keyword_cloud %}
+          <span class="kw kw-{{ kw.size | default: 'sm' }}{% if kw.color %} kw-{{ kw.color }}{% endif %}">{{ kw.text }}</span>
+        {% endfor %}
+      </p>
+      {% if page.subtitle %}<span class="sr-only">{{ page.subtitle }}</span>{% endif %}
+    {% elsif page.subtitle %}
       <p class="subtitle is-4">{{ page.subtitle }}</p>
     {% endif %}
     {% if page.description %}
