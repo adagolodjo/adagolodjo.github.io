@@ -73,14 +73,26 @@
   border-bottom: 1px solid rgba(white, 0.1);
   @include smooth-transition(all, var(--hero-animation-speed), cubic-bezier(0.4, 0, 0.2, 1));
 
-  // État scrollé avec morphing plus subtil
+  // État scrollé : la nav se contracte en pilule flottante
   &.scrolled {
+    top: var(--spacing-sm);
+    left: var(--spacing-xl);
+    right: var(--spacing-xl);
+    border-radius: var(--border-radius-full);
+    padding-top: calc(var(--spacing-md) * 0.55);
+    padding-bottom: calc(var(--spacing-md) * 0.55);
     background: linear-gradient(180deg, #{$primary-dark}f5 0%, #{$primary-dark}e6 100%);
     box-shadow: 
       0 4px 32px rgba($primary-dark, 0.3),
       0 1px 0 rgba(white, 0.1);
     -webkit-backdrop-filter: var(--hero-backdrop-blur) contrast(1.2);
     backdrop-filter: var(--hero-backdrop-blur) contrast(1.2);
+
+    @include respond-to(mobile) {
+      left: var(--spacing-sm);
+      right: var(--spacing-sm);
+      border-radius: var(--border-radius-lg);
+    }
   }
 
   // Conteneurs flexibles optimisés
@@ -218,6 +230,21 @@
       border-right: 5px solid transparent;
       border-bottom: 5px solid #{$primary-dark}f5;
     }
+  }
+
+  // Badge compteur (ex: Publications 18) dans les menus déroulants
+  .nav-count {
+    display: inline-block;
+    margin-left: 0.4rem;
+    padding: 0.05rem 0.5rem;
+    font-size: 0.72rem;
+    font-weight: $weight-bold;
+    color: $primary-light;
+    background: rgba($primary-light, 0.18);
+    border: 1px solid rgba($primary-light, 0.3);
+    border-radius: var(--border-radius-full);
+    line-height: 1.5;
+    vertical-align: middle;
   }
   // ── End dropdown nav ──────────────────────────────────────
 
@@ -520,6 +547,24 @@
     inset: 0;
     background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20v-40c11.046 0 20 8.954 20 20z'/%3E%3C/g%3E%3C/svg%3E");
     animation: patternMove 30s linear infinite;
+  }
+
+  // Mot en filigrane derrière le titre de section (ex: "RESEARCH", "TEACHING")
+  &::after {
+    content: attr(data-watermark);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -52%);
+    z-index: 1;
+    font-size: clamp(4rem, 14vw, 11rem);
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.045);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
   }
 
   .profile-image {
@@ -1254,6 +1299,19 @@
       color: $primary-light;
       background: rgba(white, 0.1);
       transform: scale(1.1);
+    }
+
+    .nav-count {
+      display: inline-block;
+      margin-left: 0.4rem;
+      padding: 0.05rem 0.55rem;
+      font-size: 0.6em;
+      font-weight: $weight-bold;
+      color: $primary-light;
+      background: rgba($primary-light, 0.18);
+      border: 1px solid rgba($primary-light, 0.3);
+      border-radius: var(--border-radius-full);
+      vertical-align: middle;
     }
   }
 

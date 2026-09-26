@@ -1,3 +1,6 @@
+{%- assign nav_pub_count = site.data.publications | size -%}
+{%- assign nav_project_count = site.projects | where_exp: "p", "p.path contains 'index'" | size -%}
+{%- assign nav_course_count = site.data.courses | size -%}
 <nav class="hero-nav" role="navigation" aria-label="Primary">
   <div class="nav-left">
     <a href="{{ '/' | relative_url }}" class="nav-item{% if page.url == '/' %} is-active{% endif %}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
@@ -6,8 +9,8 @@
       <a href="{{ '/research/' | relative_url }}" class="nav-item{% if page.url contains '/research/' %} is-active{% endif %}" {% if page.url contains '/research/' %}aria-current="page"{% endif %}>Research ▾</a>
       <div class="nav-dropdown-menu">
         <a href="{{ '/research/' | relative_url }}">Overview</a>
-        <a href="{{ '/research/projects/' | relative_url }}">Active Projects</a>
-        <a href="{{ '/publications/' | relative_url }}">Publications</a>
+        <a href="{{ '/research/projects/' | relative_url }}">Active Projects <span class="nav-count">{{ nav_project_count }}</span></a>
+        <a href="{{ '/publications/' | relative_url }}">Publications <span class="nav-count">{{ nav_pub_count }}</span></a>
         <a href="{{ '/research/software/' | relative_url }}">Software &amp; Code</a>
       </div>
     </span>
@@ -15,7 +18,7 @@
       <a href="{{ '/teaching/' | relative_url }}" class="nav-item{% if page.url contains '/teaching/' %} is-active{% endif %}" {% if page.url contains '/teaching/' %}aria-current="page"{% endif %}>Teaching ▾</a>
       <div class="nav-dropdown-menu">
         <a href="{{ '/teaching/' | relative_url }}">Overview</a>
-        <a href="{{ '/teaching/courses/' | relative_url }}">Courses</a>
+        <a href="{{ '/teaching/courses/' | relative_url }}">Courses <span class="nav-count">{{ nav_course_count }}</span></a>
         <a href="{{ '/teaching/resources/' | relative_url }}">Resources</a>
       </div>
     </span>
@@ -53,11 +56,11 @@
     <a class="mobile-nav-item" href="{{ '/' | relative_url }}">Home</a>
     <a class="mobile-nav-item" href="{{ '/about/' | relative_url }}">About</a>
     <a class="mobile-nav-item" href="{{ '/research/' | relative_url }}">Research</a>
-    <a class="mobile-nav-item" href="{{ '/research/projects/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Active Projects</a>
-    <a class="mobile-nav-item" href="{{ '/publications/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Publications</a>
+    <a class="mobile-nav-item" href="{{ '/research/projects/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Active Projects <span class="nav-count">{{ nav_project_count }}</span></a>
+    <a class="mobile-nav-item" href="{{ '/publications/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Publications <span class="nav-count">{{ nav_pub_count }}</span></a>
     <a class="mobile-nav-item" href="{{ '/research/software/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Software &amp; Code</a>
     <a class="mobile-nav-item" href="{{ '/teaching/' | relative_url }}">Teaching</a>
-    <a class="mobile-nav-item" href="{{ '/teaching/courses/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Courses</a>
+    <a class="mobile-nav-item" href="{{ '/teaching/courses/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Courses <span class="nav-count">{{ nav_course_count }}</span></a>
     <a class="mobile-nav-item" href="{{ '/teaching/resources/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Resources</a>
     <a class="mobile-nav-item" href="{{ '/blog/' | relative_url }}">Blog & News</a>
     <button class="mobile-nav-close" aria-label="Close menu">✕</button>
