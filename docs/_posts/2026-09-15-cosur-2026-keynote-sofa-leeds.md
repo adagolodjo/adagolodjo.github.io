@@ -24,14 +24,19 @@ I had the pleasure of giving **Keynote 4** at the **COSUR 2026 Summer School on 
 
 **Title**: *What Does a Surgical Robot Really Need to Know About the Human Body?*
 
-The talk started from a simple framing question: not *how much* anatomy a surgical robot needs, but *what physical information* — geometry, stiffness, deformation, contact, friction, viscoelasticity, patient-specific anatomy, uncertainty — is actually necessary to perform a given task, and whether the answer changes depending on the task itself.
+The talk started from a simple framing question — not *how much* anatomy a surgical robot needs, but *what physical information* it actually needs: geometry, stiffness, deformation, contact, friction, viscoelasticity, patient-specific anatomy, uncertainty, boundary conditions, topology.
 
 <figure style="margin: 1.5rem 0;">
   <img src="/assets/images/posts/cosur-2026-slide-question.webp" alt="Slide from the talk listing the physical properties a surgical robot may need to know about the human body: geometry, stiffness, deformation, contact, friction, viscoelasticity, patient-specific anatomy, uncertainty, boundary conditions, topology" loading="lazy" style="width: 100%; border-radius: 0.75rem;">
   <figcaption style="font-size: 0.85rem; color: var(--text-muted, #7a7a7a); margin-top: 0.5rem; text-align: center;">
-    The real question: not how much anatomy, but what physical information is necessary for a given task.
+    Slide 2 of the talk: the physical properties on the table.
   </figcaption>
 </figure>
+
+<div class="insight-box">
+  <p class="insight-label">The real question</p>
+  <p>Not <em>how much</em> anatomy — but <strong>what physical information</strong> is actually necessary to perform a given task. <span class="insight-highlight">Does the answer depend on the task?</span></p>
+</div>
 
 I used the [SOFA framework](https://www.sofa-framework.org/) and our [Cosserat plugin](https://github.com/SofaDefrost/Cosserat) to illustrate this, covering the Cosserat rod formulation, constraint-based control, and how these models support the kind of interactive, patient-specific simulation that surgical robotics increasingly relies on.
 
