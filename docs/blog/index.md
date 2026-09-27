@@ -9,33 +9,33 @@ subtitle: Thoughts on Research, Teaching, and Technology
   <div class="blog-hero-bg"></div>
   <div class="blog-hero-content">
     <div class="blog-hero-text">
-      <span class="blog-hero-badge"><i class="fas fa-flask"></i> Research Blog</span>
+      <span class="blog-hero-badge">{%- include ph.html name="flask" -%} Research Blog</span>
       <h1 class="blog-hero-title">Research &amp; Insights</h1>
       <p class="blog-hero-subtitle">Exploring the frontiers of robotics, sharing teaching experiences, and discussing breakthroughs in medical &amp; soft robotics.</p>
     </div>
     <!-- Glassmorphism Search & Filters -->
     <div class="blog-search-glass">
       <div class="blog-search-row">
-        <span class="blog-search-icon"><i class="fas fa-search"></i></span>
+        <span class="blog-search-icon">{%- include ph.html name="magnifying-glass" -%}</span>
         <input type="text" id="blog-search" placeholder="Search posts, topics or keywords… (⌘K)" class="blog-search-input">
         <button id="clear-search" class="blog-search-clear" title="Clear">
-          <i class="fas fa-times"></i>
+          {%- include ph.html name="x" -%}
         </button>
       </div>
       <!-- Scrollable Filter Pills -->
       <div class="blog-pills-row">
         <button class="blog-pill is-active" data-category="all">
-          <i class="fas fa-th-large"></i> All Posts
+          {%- include ph.html name="squares-four" -%} All Posts
         </button>
         {% for category in site.categories %}
         <button class="blog-pill" data-category="{{ category[0] | slugify }}">
           {% assign cat_slug = category[0] | slugify %}
-          {% if cat_slug == 'research' %}<i class="fas fa-microscope"></i>
-          {% elsif cat_slug == 'teaching' %}<i class="fas fa-chalkboard-teacher"></i>
-          {% elsif cat_slug == 'robotics' %}<i class="fas fa-robot"></i>
-          {% elsif cat_slug == 'medical' %}<i class="fas fa-heartbeat"></i>
-          {% elsif cat_slug == 'technology' %}<i class="fas fa-laptop-code"></i>
-          {% else %}<i class="fas fa-tag"></i>
+          {% if cat_slug == 'research' %}{%- include ph.html name="microscope" -%}
+          {% elsif cat_slug == 'teaching' %}{%- include ph.html name="chalkboard-teacher" -%}
+          {% elsif cat_slug == 'robotics' %}{%- include ph.html name="robot" -%}
+          {% elsif cat_slug == 'medical' %}{%- include ph.html name="heartbeat" -%}
+          {% elsif cat_slug == 'technology' %}{%- include ph.html name="code" -%}
+          {% else %}{%- include ph.html name="tag" -%}
           {% endif %}
           {{ category[0] | capitalize }}
           <span class="blog-pill-count">{{ category[1].size }}</span>
@@ -63,7 +63,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
       {% assign featured_post = site.posts.first %}
       {% if featured_post %}
       <div class="blog-featured-card">
-        <div class="blog-featured-badge"><i class="fas fa-star"></i> Featured Article</div>
+        <div class="blog-featured-badge">{%- include ph.html name="star" -%} Featured Article</div>
         {% if featured_post.image %}
         <div class="blog-featured-image">
           <img src="{{ featured_post.image }}" alt="{{ featured_post.title }}" loading="lazy">
@@ -72,9 +72,9 @@ subtitle: Thoughts on Research, Teaching, and Technology
         {% endif %}
         <div class="blog-featured-body">
           <div class="blog-featured-meta">
-            <span><i class="far fa-calendar-alt"></i> {{ featured_post.date | date: "%B %d, %Y" }}</span>
+            <span>{%- include ph.html name="calendar-blank" -%} {{ featured_post.date | date: "%B %d, %Y" }}</span>
             <span>
-              <i class="far fa-clock"></i>
+              {%- include ph.html name="clock" -%}
               {% assign words = featured_post.content | number_of_words %}
               {% if words < 360 %}1 min{% else %}{{ words | divided_by:200 }} min{% endif %} read
             </span>
@@ -88,11 +88,11 @@ subtitle: Thoughts on Research, Teaching, and Technology
           <p class="blog-featured-excerpt">{{ featured_post.excerpt | strip_html | truncatewords: 40 }}</p>
           <div class="blog-featured-actions">
             <a href="{{ featured_post.url }}" class="blog-btn-primary">
-              Read article <i class="fas fa-arrow-right"></i>
+              Read article {%- include ph.html name="arrow-right" -%}
             </a>
             {% if featured_post.external_link %}
             <a href="{{ featured_post.external_link }}" class="blog-btn-secondary" target="_blank" rel="noopener noreferrer">
-              Source <i class="fas fa-external-link-alt"></i>
+              Source {%- include ph.html name="arrow-square-out" -%}
             </a>
             {% endif %}
           </div>
@@ -105,7 +105,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
         <div class="section-header">
           <h2 class="title is-3">
             <span class="icon is-medium">
-              <i class="fas fa-newspaper"></i>
+              {%- include ph.html name="newspaper" -%}
             </span>
             <span id="posts-section-title">Recent Posts</span>
           </h2>
@@ -160,12 +160,12 @@ subtitle: Thoughts on Research, Teaching, and Technology
                     </p>
                     <p class="subtitle is-6 has-text-grey">
                       <span class="icon is-small">
-                        <i class="far fa-calendar-alt"></i>
+                        {%- include ph.html name="calendar-blank" -%}
                       </span>
                       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
                       <span class="ml-3">
                         <span class="icon is-small">
-                          <i class="far fa-clock"></i>
+                          {%- include ph.html name="clock" -%}
                         </span>
                         {% assign words = post.content | number_of_words %}
                         {% if words < 360 %}
@@ -191,19 +191,19 @@ subtitle: Thoughts on Research, Teaching, and Technology
                   <a href="{{ post.url }}" class="card-footer-item has-text-primary">
                     <span>Read More</span>
                     <span class="icon is-small ml-2">
-                      <i class="fas fa-arrow-right"></i>
+                      {%- include ph.html name="arrow-right" -%}
                     </span>
                   </a>
                   <div class="card-footer-item">
                     <div class="buttons are-small">
                       <button class="button is-white share-button" data-title="{{ post.title }}" data-url="{{ site.url }}{{ post.url }}" title="Share this post">
                         <span class="icon is-small">
-                          <i class="fas fa-share-alt"></i>
+                          {%- include ph.html name="share-network" -%}
                         </span>
                       </button>
                       <button class="button is-white bookmark-button" data-post="{{ post.url }}" title="Bookmark this post">
                         <span class="icon is-small">
-                          <i class="far fa-bookmark"></i>
+                          {%- include ph.html name="bookmark" -%}
                         </span>
                       </button>
                     </div>
@@ -219,7 +219,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
         {% if site.posts.size > 7 %}
         <div class="blog-loadmore-wrap">
           <button class="blog-btn-primary" id="load-more-posts">
-            <i class="fas fa-plus"></i> Load more posts
+            {%- include ph.html name="plus" -%} Load more posts
           </button>
           <div class="blog-progress-wrap">
             <div class="blog-progress-bar" id="posts-progress-bar"></div>
@@ -234,13 +234,13 @@ subtitle: Thoughts on Research, Teaching, and Technology
         <div class="empty-state" id="empty-state" style="display: none;">
           <div class="has-text-centered py-6">
             <span class="icon is-large has-text-grey-light">
-              <i class="fas fa-search fa-3x"></i>
+              {%- include ph.html name="magnifying-glass" class="fa-3x" -%}
             </span>
             <p class="title is-4 has-text-grey">No posts found</p>
             <p class="subtitle has-text-grey">Try adjusting your search or filter criteria</p>
             <button class="button is-primary is-outlined" id="reset-filters">
               <span class="icon is-small">
-                <i class="fas fa-refresh"></i>
+                {%- include ph.html name="arrows-clockwise" -%}
               </span>
               <span>Show All Posts</span>
             </button>
@@ -255,7 +255,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
       <div class="box">
         <h3 class="title is-5">
           <span class="icon is-small">
-            <i class="fas fa-folder-open"></i>
+            {%- include ph.html name="folder-open" -%}
           </span>
           Categories
         </h3>
@@ -282,7 +282,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
                     {% endif %}
                   {% endfor %}
                   {% unless found_icon %}
-                    <i class="fas fa-tag"></i>
+                    {%- include ph.html name="tag" -%}
                   {% endunless %}
                 </span>
                 <span>{{ category[0] | capitalize }}</span>
@@ -297,7 +297,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
       <!-- Archives par année -->
       <div class="box">
         <h3 class="title is-5">
-          <span class="icon is-small"><i class="fas fa-archive"></i></span>
+          <span class="icon is-small">{%- include ph.html name="archive" -%}</span>
           Archives
         </h3>
         {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
@@ -325,7 +325,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
       <div class="box has-text-centered subscribe-box">
         <h3 class="title is-5">
           <span class="icon is-small">
-            <i class="fas fa-bell"></i>
+            {%- include ph.html name="bell" -%}
           </span>
           Stay Connected
         </h3>
@@ -333,13 +333,13 @@ subtitle: Thoughts on Research, Teaching, and Technology
         <div class="buttons is-centered">
           <a href="/feed.xml" class="button is-warning">
             <span class="icon is-small">
-              <i class="fas fa-rss"></i>
+              {%- include ph.html name="rss" -%}
             </span>
             <span>RSS Feed</span>
           </a>
           <a href="/contact/" class="button is-info">
             <span class="icon is-small">
-              <i class="fas fa-envelope"></i>
+              {%- include ph.html name="envelope" -%}
             </span>
             <span>Contact Me</span>
           </a>
@@ -1203,7 +1203,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navigator.clipboard.writeText(url).then(() => {
           // Show temporary success message
           const originalText = this.innerHTML;
-          this.innerHTML = '<span class="icon is-small"><i class="fas fa-check"></i></span>';
+          this.innerHTML = '<span class="icon is-small">{%- include ph.html name="check" -%}</span>';
           setTimeout(() => {
             this.innerHTML = originalText;
           }, 2000);

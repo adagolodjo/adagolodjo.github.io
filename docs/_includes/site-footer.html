@@ -11,12 +11,12 @@
         </div>
       </div>
       <p class="footer-team">
-        <i class="fas fa-flask"></i>
+        {%- include ph.html name="flask" -%}
         DEFROST Team — CRIStAL UMR 9189
       </p>
       <p class="footer-tagline">Robotics &amp; AR for Healthcare</p>
       <a href="/assets/cv_yinoussa_adagolodjo.pdf" class="footer-cv-btn" target="_blank" rel="noopener">
-        <i class="fas fa-file-alt"></i> Download CV
+        {%- include ph.html name="file-text" -%} Download CV
       </a>
     </div>
 
@@ -25,19 +25,19 @@
       <h3 class="footer-col-title">Navigation</h3>
       <nav class="footer-nav-list">
         <a href="{{ '/about/' | relative_url }}" class="footer-nav-link">
-          <i class="fas fa-user"></i> About
+          {%- include ph.html name="user" -%} About
         </a>
         <a href="{{ '/research/' | relative_url }}" class="footer-nav-link">
-          <i class="fas fa-microscope"></i> Research
+          {%- include ph.html name="microscope" -%} Research
         </a>
         <a href="{{ '/publications/' | relative_url }}" class="footer-nav-link">
-          <i class="fas fa-book-open"></i> Publications
+          {%- include ph.html name="book-open" -%} Publications
         </a>
         <a href="{{ '/teaching/' | relative_url }}" class="footer-nav-link">
-          <i class="fas fa-chalkboard-teacher"></i> Teaching
+          {%- include ph.html name="chalkboard-teacher" -%} Teaching
         </a>
         <a href="{{ '/contact/' | relative_url }}" class="footer-nav-link">
-          <i class="fas fa-envelope"></i> Contact
+          {%- include ph.html name="envelope" -%} Contact
         </a>
       </nav>
     </div>
@@ -47,16 +47,16 @@
       <h3 class="footer-col-title">Contact</h3>
       <ul class="footer-contact-list">
         <li>
-          <i class="fas fa-envelope footer-icon"></i>
+          {%- include ph.html name="envelope" class="footer-icon" -%}
           <span class="footer-email-wrap">
             {%- assign _em = "yinoussa.adagolodjo@univ-lille.fr" -%}
             <a href="mailto:{{ _em | encode_email }}" title="{{ _em | encode_email }}" class="footer-email-link">
-              Écrire un email <i class="fas fa-external-link-alt" style="font-size:0.7em;opacity:0.6;"></i>
+              Écrire un email {%- include ph.html name="arrow-square-out" style="font-size:0.7em;opacity:0.6;" -%}
             </a>
           </span>
         </li>
         <li>
-          <i class="fas fa-map-marker-alt footer-icon"></i>
+          {%- include ph.html name="map-pin" class="footer-icon" -%}
           <span>
             Bâtiment Polytech<br>
             59655 Villeneuve d'Ascq<br>
@@ -64,7 +64,7 @@
           </span>
         </li>
         <li>
-          <i class="fas fa-clock footer-icon"></i>
+          {%- include ph.html name="clock" class="footer-icon" -%}
           <span>Lun–Ven &nbsp;08:00–18:00<br>
             <small>ou sur rendez-vous</small>
           </span>
@@ -88,7 +88,7 @@
         </a>
         <a href="https://scholar.google.com/citations?user=ZBdWJ9EAAAAJ&hl=fr"
            class="footer-social-btn scholar" target="_blank" rel="noopener" aria-label="Google Scholar">
-          <i class="fas fa-graduation-cap"></i>
+          {%- include ph.html name="graduation-cap" -%}
           <span>Scholar</span>
         </a>
         <a href="https://www.researchgate.net/profile/Yinoussa-Adagolodjo"
@@ -98,12 +98,12 @@
         </a>
         <a href="https://hal.science/search/index?q=Adagolodjo"
            class="footer-social-btn hal" target="_blank" rel="noopener" aria-label="HAL Science">
-          <i class="fas fa-archive"></i>
+          {%- include ph.html name="archive" -%}
           <span>HAL</span>
         </a>
         <a href="https://www.inria.fr/fr/defrost"
            class="footer-social-btn inria" target="_blank" rel="noopener" aria-label="DEFROST Team">
-          <i class="fas fa-robot"></i>
+          {%- include ph.html name="robot" -%}
           <span>DEFROST</span>
         </a>
       </div>
@@ -117,7 +117,7 @@
       &copy; {{ 'now' | date: "%Y" }} Dr. Yinoussa Adagolodjo — Tous droits réservés
     </span>
     <span class="footer-built">
-      Fait avec <i class="fas fa-heart footer-heart"></i> · Jekyll &amp; GitHub Pages
+      Fait avec {%- include ph.html name="heart" class="footer-heart" -%} · Jekyll &amp; GitHub Pages
     </span>
   </div>
 </footer>

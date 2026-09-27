@@ -384,11 +384,11 @@ keyword_cloud:
       <p class="hero-subtitle">Advancing the frontiers of medical robotics and intelligent healthcare systems</p>
       <div class="hero-actions">
         <a href="#featured-projects" class="btn-primary">
-          <i class="fas fa-flask"></i>
+          {%- include ph.html name="flask" -%}
           <span>Explore Projects</span>
         </a>
         <a href="/publications/" class="btn-secondary">
-          <i class="fas fa-book-open"></i>
+          {%- include ph.html name="book-open" -%}
           <span>Publications</span>
         </a>
       </div>
@@ -396,14 +396,14 @@ keyword_cloud:
 
     <div class="research-stats">
       <div class="stat-card" data-aos="fade-left" data-aos-delay="100">
-        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+        <div class="stat-icon">{%- include ph.html name="share-network" -%}</div>
         <div class="stat-text">
           <div class="stat-number" data-count="9">0</div>
           <div class="stat-label">Active Projects</div>
         </div>
       </div>
       <a href="/publications/" class="stat-card stat-card-link" data-aos="fade-left" data-aos-delay="200">
-        <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
+        <div class="stat-icon">{%- include ph.html name="file-text" -%}</div>
         <div class="stat-text">
           <div class="stat-number" data-count="18">0</div>
           <div class="stat-label">Publications</div>
@@ -412,7 +412,7 @@ keyword_cloud:
       <a href="https://scholar.google.com/citations?hl=fr&user=ZBdWJ9EAAAAJ"
          target="_blank" rel="noopener noreferrer"
          class="stat-card stat-card-link" data-aos="fade-left" data-aos-delay="300">
-        <div class="stat-icon"><i class="fas fa-quote-left"></i></div>
+        <div class="stat-icon">{%- include ph.html name="quotes" -%}</div>
         <div class="stat-text">
           <div class="stat-number" id="live-citations" data-count="{{ site.data.stats.citations | default: 285 }}">0</div>
           <div class="stat-label">Citations</div>
@@ -421,7 +421,7 @@ keyword_cloud:
       <a href="https://www.researchgate.net/profile/Yinoussa-Adagolodjo?ev=hdr_xprf"
          target="_blank" rel="noopener noreferrer"
          class="stat-card stat-card-link" data-aos="fade-left" data-aos-delay="400">
-        <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+        <div class="stat-icon">{%- include ph.html name="trend-up" -%}</div>
         <div class="stat-text">
           <div class="stat-number" id="live-hindex" data-count="{{ site.data.stats.h_index | default: 8 }}">0</div>
           <div class="stat-label">h-index</div>
@@ -441,23 +441,23 @@ keyword_cloud:
     
     <div class="domain-filters">
       <button class="domain-filter active" data-filter="all" onclick="document.getElementById('featured-projects').scrollIntoView({behavior:'smooth'})">
-        <i class="fas fa-th-large"></i>
+        {%- include ph.html name="squares-four" -%}
         <span>All Research</span>
       </button>
       <button class="domain-filter" data-filter="medical-robotics">
-        <i class="fas fa-robot"></i>
+        {%- include ph.html name="robot" -%}
         <span>Medical Robotics</span>
       </button>
       <button class="domain-filter" data-filter="soft-robotics">
-        <i class="fas fa-hand-paper"></i>
+        {%- include ph.html name="hand-palm" -%}
         <span>Soft Robotics</span>
       </button>
       <button class="domain-filter" data-filter="simulation">
-        <i class="fas fa-desktop"></i>
+        {%- include ph.html name="desktop" -%}
         <span>Modeling & Simulation</span>
       </button>
       <button class="domain-filter" data-filter="augmented-reality">
-        <i class="fas fa-vr-cardboard"></i>
+        {%- include ph.html name="cube" -%}
         <span>Augmented Reality</span>
       </button>
     </div>
@@ -496,7 +496,7 @@ keyword_cloud:
         <div class="focus-areas-grid">
           <div class="focus-card" data-tilt>
             <div class="focus-icon gradient-medical">
-              <i class="fas fa-robot"></i>
+              {%- include ph.html name="robot" -%}
             </div>
             <h3>Surgical Robotics</h3>
             <p>Precision robotic systems for minimally invasive procedures</p>
@@ -507,7 +507,7 @@ keyword_cloud:
           
           <div class="focus-card" data-tilt>
             <div class="focus-icon gradient-simulation">
-              <i class="fas fa-cube"></i>
+              {%- include ph.html name="cube" -%}
             </div>
             <h3>Real-time Simulation</h3>
             <p>Advanced FEM modeling for surgical planning and training</p>
@@ -518,7 +518,7 @@ keyword_cloud:
           
           <div class="focus-card" data-tilt>
             <div class="focus-icon gradient-ar">
-              <i class="fas fa-vr-cardboard"></i>
+              {%- include ph.html name="cube" -%}
             </div>
             <h3>AR & Visualization</h3>
             <p>Immersive technologies for enhanced surgical guidance</p>
@@ -529,7 +529,7 @@ keyword_cloud:
           
           <div class="focus-card" data-tilt>
             <div class="focus-icon gradient-soft">
-              <i class="fas fa-hand-paper"></i>
+              {%- include ph.html name="hand-palm" -%}
             </div>
             <h3>Soft Robotics</h3>
             <p>Biomimetic systems for delicate medical applications</p>
@@ -554,7 +554,7 @@ keyword_cloud:
     <div class="timeline-container">
       <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
         <div class="timeline-dot">
-          <i class="fas fa-graduation-cap"></i>
+          {%- include ph.html name="graduation-cap" -%}
         </div>
         <div class="timeline-content">
           <div class="timeline-date">2015-2018</div>
@@ -570,7 +570,7 @@ keyword_cloud:
       
       <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
         <div class="timeline-dot">
-          <i class="fas fa-microscope"></i>
+          {%- include ph.html name="microscope" -%}
         </div>
         <div class="timeline-content">
           <div class="timeline-date">2019-2022</div>
@@ -586,7 +586,7 @@ keyword_cloud:
       
       <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
         <div class="timeline-dot">
-          <i class="fas fa-star"></i>
+          {%- include ph.html name="star" -%}
         </div>
         <div class="timeline-content">
           <div class="timeline-date">2022-Present</div>
@@ -631,15 +631,15 @@ keyword_cloud:
           
           <div class="project-highlights">
             <div class="highlight-item">
-              <i class="fas fa-search-plus"></i>
+              {%- include ph.html name="magnifying-glass" -%}
               <span>Multi-chamber phantom</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-bullseye"></i>
+              {%- include ph.html name="target" -%}
               <span>Biopsy targeting training</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-hand-paper"></i>
+              {%- include ph.html name="hand-palm" -%}
               <span>Haptic DRE feedback</span>
             </div>
           </div>
@@ -653,11 +653,11 @@ keyword_cloud:
           <div class="project-actions">
             <a href="/research/projects/prostatebot/" class="btn-primary">
               <span>Explore Project</span>
-              <i class="fas fa-arrow-right"></i>
+              {%- include ph.html name="arrow-right" -%}
             </a>
             <a href="https://www.inria.fr/fr/cancer-prostate-diagnostic-ia-robotique" class="btn-secondary" target="_blank" rel="noopener noreferrer">
               <span>Reference Article</span>
-              <i class="fas fa-external-link-alt"></i>
+              {%- include ph.html name="arrow-square-out" -%}
             </a>
           </div>
         </div>
@@ -681,15 +681,15 @@ keyword_cloud:
           
           <div class="project-highlights">
             <div class="highlight-item">
-              <i class="fas fa-microscope"></i>
+              {%- include ph.html name="microscope" -%}
               <span>Smart endoscopy</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-digital-tachograph"></i>
+              {%- include ph.html name="chart-bar" -%}
               <span>Digital twin technology</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-heartbeat"></i>
+              {%- include ph.html name="heartbeat" -%}
               <span>Patient safety focus</span>
             </div>
           </div>
@@ -703,10 +703,10 @@ keyword_cloud:
           <div class="project-actions">
             <a href="/research/projects/ire/" class="btn-primary">
               <span>Explore IRE</span>
-              <i class="fas fa-arrow-right"></i>
+              {%- include ph.html name="arrow-right" -%}
             </a>
             <button class="btn-secondary" data-modal="ire-video">
-              <i class="fas fa-play"></i>
+              {%- include ph.html name="play" -%}
               <span>Watch Demo</span>
             </button>
           </div>
@@ -731,15 +731,15 @@ keyword_cloud:
           
           <div class="project-highlights">
             <div class="highlight-item">
-              <i class="fas fa-brain"></i>
+              {%- include ph.html name="brain" -%}
               <span>Adaptive AI systems</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-laptop-medical"></i>
+              {%- include ph.html name="desktop" -%}
               <span>Digital health tools</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-user-nurse"></i>
+              {%- include ph.html name="stethoscope" -%}
               <span>Clinical integration</span>
             </div>
           </div>
@@ -753,10 +753,10 @@ keyword_cloud:
           <div class="project-actions">
             <a href="/research/projects/adagio/" class="btn-primary">
               <span>View Details</span>
-              <i class="fas fa-arrow-right"></i>
+              {%- include ph.html name="arrow-right" -%}
             </a>
             <button class="btn-secondary" data-modal="adagio-video">
-              <i class="fas fa-play"></i>
+              {%- include ph.html name="play" -%}
               <span>Watch Demo</span>
             </button>
           </div>
@@ -782,15 +782,15 @@ keyword_cloud:
 
           <div class="project-highlights">
             <div class="highlight-item">
-              <i class="fas fa-microscope"></i>
+              {%- include ph.html name="microscope" -%}
               <span>In vivo mass spectrometry</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-wave-square"></i>
+              {%- include ph.html name="broadcast" -%}
               <span>Real-time tissue imaging</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-robot"></i>
+              {%- include ph.html name="robot" -%}
               <span>Robot-assisted guidance</span>
             </div>
           </div>
@@ -804,11 +804,11 @@ keyword_cloud:
           <div class="project-actions">
             <a href="/research/projects/maestro/" class="btn-primary">
               <span>Explore Project</span>
-              <i class="fas fa-arrow-right"></i>
+              {%- include ph.html name="arrow-right" -%}
             </a>
             <a href="https://anr.fr/Projet-ANR-23-CE19-0022" class="btn-secondary" target="_blank" rel="noopener noreferrer">
               <span>ANR Project</span>
-              <i class="fas fa-external-link-alt"></i>
+              {%- include ph.html name="arrow-square-out" -%}
             </a>
           </div>
         </div>
@@ -832,15 +832,15 @@ keyword_cloud:
 
           <div class="project-highlights">
             <div class="highlight-item">
-              <i class="fas fa-heart"></i>
+              {%- include ph.html name="heart" -%}
               <span>Cardiac valve implantation</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-route"></i>
+              {%- include ph.html name="map-pin" -%}
               <span>Cardiovascular navigation</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-feather"></i>
+              {%- include ph.html name="note-pencil" -%}
               <span>Eversion soft robotics</span>
             </div>
           </div>
@@ -854,10 +854,10 @@ keyword_cloud:
           <div class="project-actions">
             <a href="/research/projects/tavi-growing-robot/" class="btn-primary">
               <span>Explore Project</span>
-              <i class="fas fa-arrow-right"></i>
+              {%- include ph.html name="arrow-right" -%}
             </a>
             <button class="btn-secondary" data-modal="growing-video">
-              <i class="fas fa-play"></i>
+              {%- include ph.html name="play" -%}
               <span>Watch Demo</span>
             </button>
           </div>
@@ -882,15 +882,15 @@ keyword_cloud:
           
           <div class="project-highlights">
             <div class="highlight-item">
-              <i class="fas fa-wave-square"></i>
+              {%- include ph.html name="broadcast" -%}
               <span>Advanced control theory</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-cogs"></i>
+              {%- include ph.html name="gear-six" -%}
               <span>Flexible manipulation</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-industry"></i>
+              {%- include ph.html name="factory" -%}
               <span>Industrial applications</span>
             </div>
           </div>
@@ -904,10 +904,10 @@ keyword_cloud:
           <div class="project-actions">
             <a href="/research/projects/cosseroots/" class="btn-primary">
               <span>Discover More</span>
-              <i class="fas fa-arrow-right"></i>
+              {%- include ph.html name="arrow-right" -%}
             </a>
             <button class="btn-secondary" data-modal="cosseroots-video">
-              <i class="fas fa-play"></i>
+              {%- include ph.html name="play" -%}
               <span>Watch Demo</span>
             </button>
           </div>
@@ -934,15 +934,15 @@ keyword_cloud:
           
           <div class="project-highlights">
             <div class="highlight-item">
-              <i class="fas fa-ear"></i>
+              {%- include ph.html name="ear" -%}
               <span>Improved hearing outcomes</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-robot"></i>
+              {%- include ph.html name="robot" -%}
               <span>Autonomous positioning</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-user-md"></i>
+              {%- include ph.html name="stethoscope" -%}
               <span>Surgeon assistance</span>
             </div>
           </div>
@@ -956,10 +956,10 @@ keyword_cloud:
           <div class="project-actions">
             <a href="/research/projects/robocop/" class="btn-primary">
               <span>Learn More</span>
-              <i class="fas fa-arrow-right"></i>
+              {%- include ph.html name="arrow-right" -%}
             </a>
             <button class="btn-secondary" data-modal="robocop-video">
-              <i class="fas fa-play"></i>
+              {%- include ph.html name="play" -%}
               <span>Watch Demo</span>
             </button>
           </div>
@@ -985,15 +985,15 @@ keyword_cloud:
 
           <div class="project-highlights">
             <div class="highlight-item">
-              <i class="fas fa-ear"></i>
+              {%- include ph.html name="ear" -%}
               <span>Cochlear implant precision</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-cube"></i>
+              {%- include ph.html name="cube" -%}
               <span>Patient-specific simulation</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-vr-cardboard"></i>
+              {%- include ph.html name="cube" -%}
               <span>Augmented reality guidance</span>
             </div>
           </div>
@@ -1007,10 +1007,10 @@ keyword_cloud:
           <div class="project-actions">
             <a href="/research/projects/access/" class="btn-primary">
               <span>Explore Project</span>
-              <i class="fas fa-arrow-right"></i>
+              {%- include ph.html name="arrow-right" -%}
             </a>
             <button class="btn-secondary" data-modal="robocop-video">
-              <i class="fas fa-play"></i>
+              {%- include ph.html name="play" -%}
               <span>Watch Demo</span>
             </button>
           </div>
@@ -1035,15 +1035,15 @@ keyword_cloud:
           
           <div class="project-highlights">
             <div class="highlight-item">
-              <i class="fas fa-bullseye"></i>
+              {%- include ph.html name="target" -%}
               <span>95% accuracy improvement</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-clock"></i>
+              {%- include ph.html name="clock" -%}
               <span>50% faster procedures</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-shield-alt"></i>
+              {%- include ph.html name="shield-check" -%}
               <span>Enhanced patient safety</span>
             </div>
           </div>
@@ -1057,7 +1057,7 @@ keyword_cloud:
           <div class="project-actions" style="flex-wrap: wrap; gap: 0.5rem;">
             <a href="/research/projects/conect/" class="btn-primary" style="flex: 1 1 100%; justify-content: center;">
               <span>Explore Project</span>
-              <i class="fas fa-arrow-right"></i>
+              {%- include ph.html name="arrow-right" -%}
             </a>
             <a href="https://www.youtube.com/watch?v=nxV17n9-dXY" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="flex: 1; justify-content: center; padding: 0.5rem; min-width: 80px;">
               <i class="fab fa-youtube" style="color: #ff0000; font-size: 1.1rem;"></i>
@@ -1083,10 +1083,10 @@ keyword_cloud:
     <!-- Carousel Controls -->
     <div class="carousel-nav">
       <button class="carousel-btn" id="carouselPrev" aria-label="Previous Project">
-        <i class="fas fa-chevron-left"></i>
+        {%- include ph.html name="caret-left" -%}
       </button>
       <button class="carousel-btn" id="carouselNext" aria-label="Next Project">
-        <i class="fas fa-chevron-right"></i>
+        {%- include ph.html name="caret-right" -%}
       </button>
     </div>
   </div>
@@ -1104,48 +1104,48 @@ keyword_cloud:
     <div class="impact-grid">
       <div class="impact-card" data-aos="fade-up" data-aos-delay="100">
         <div class="impact-icon">
-          <i class="fas fa-quote-right"></i>
+          {%- include ph.html name="quotes" -%}
         </div>
         <div class="impact-number" id="live-citations-impact" data-count="{{ site.data.stats.citations | default: 285 }}">0</div>
         <div class="impact-label">Citations</div>
         <div class="impact-trend positive">
-          <i class="fas fa-graduation-cap"></i>
+          {%- include ph.html name="graduation-cap" -%}
           <span>Google Scholar</span>
         </div>
       </div>
       
       <div class="impact-card" data-aos="fade-up" data-aos-delay="200">
         <div class="impact-icon">
-          <i class="fas fa-chart-line"></i>
+          {%- include ph.html name="trend-up" -%}
         </div>
         <div class="impact-number" data-count="{{ site.data.stats.h_index | default: 8 }}">0</div>
         <div class="impact-label">H-Index</div>
         <div class="impact-trend positive">
-          <i class="fas fa-arrow-up"></i>
+          {%- include ph.html name="arrow-up" -%}
           <span>ResearchGate</span>
         </div>
       </div>
       
       <div class="impact-card" data-aos="fade-up" data-aos-delay="300">
         <div class="impact-icon">
-          <i class="fas fa-microphone-alt"></i>
+          {%- include ph.html name="microphone" -%}
         </div>
         <div class="impact-number" data-count="4">0</div>
         <div class="impact-label">Invited Talks</div>
         <div class="impact-trend positive">
-          <i class="fas fa-globe"></i>
+          {%- include ph.html name="globe" -%}
           <span>2024 – 2025</span>
         </div>
       </div>
       
       <div class="impact-card" data-aos="fade-up" data-aos-delay="400">
         <div class="impact-icon">
-          <i class="fas fa-project-diagram"></i>
+          {%- include ph.html name="share-network" -%}
         </div>
         <div class="impact-number" data-count="9">0</div>
         <div class="impact-label">Active Projects</div>
         <div class="impact-trend positive">
-          <i class="fas fa-flask"></i>
+          {%- include ph.html name="flask" -%}
           <span>ANR · Inria · EU</span>
         </div>
       </div>
@@ -1208,11 +1208,11 @@ keyword_cloud:
     <div class="news-actions">
       <a href="/blog/" class="btn-primary">
         <span>Blog &amp; News</span>
-        <i class="fas fa-newspaper"></i>
+        {%- include ph.html name="newspaper" -%}
       </a>
       <a href="/publications/" class="btn-secondary">
         <span>Browse Publications</span>
-        <i class="fas fa-book-open"></i>
+        {%- include ph.html name="book-open" -%}
       </a>
     </div>
   </div>
@@ -1227,11 +1227,11 @@ keyword_cloud:
       <div class="cta-actions">
         <a href="/contact/" class="btn-primary large">
           <span>Start Collaboration</span>
-          <i class="fas fa-handshake"></i>
+          {%- include ph.html name="handshake" -%}
         </a>
         <a href="/publications/" class="btn-secondary large">
           <span>Browse Publications</span>
-          <i class="fas fa-file-alt"></i>
+          {%- include ph.html name="file-text" -%}
         </a>
       </div>
     </div>

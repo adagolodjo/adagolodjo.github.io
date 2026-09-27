@@ -15,7 +15,7 @@ keywords: ["Cosserat Rod Theory", "Soft Robotics", "Real-Time Simulation", "Cont
   <div class="project-hero-grid">
     <div class="hero-left">
       <div class="project-badges">
-        <span class="badge-glass active"><i class="fas fa-circle" style="font-size: 0.6rem; margin-right: 6px; position: relative; top: -2px;"></i> {{ page.status }}</span>
+        <span class="badge-glass active"><span style="display:inline-block;width:0.5em;height:0.5em;border-radius:50%;background:currentColor;margin-right:6px;position:relative;top:-1px;"></span> {{ page.status }}</span>
         <span class="badge-glass">Started 2021</span>
       </div>
       <h1 class="project-title-hero">{{ page.title }}</h1>
@@ -42,17 +42,17 @@ The COSSEROOTS project addresses the fundamental challenge of modeling and contr
 
 <div class="features-grid">
   <div class="feature-glass-card">
-    <i class="fas fa-project-diagram feature-icon"></i>
+    {%- include ph.html name="share-network" class="feature-icon" -%}
     <h3>Cosserat Modeling</h3>
     <p>Advanced mathematical frameworks based on Cosserat rod formulation for large-deformation physics.</p>
   </div>
   <div class="feature-glass-card">
-    <i class="fas fa-microchip feature-icon"></i>
+    {%- include ph.html name="cpu" class="feature-icon" -%}
     <h3>Real-Time Solvers</h3>
     <p>Optimized numerical methods enabling interactive simulation rates for closed-loop control.</p>
   </div>
   <div class="feature-glass-card">
-    <i class="fas fa-gamepad feature-icon"></i>
+    {%- include ph.html name="game-controller" class="feature-icon" -%}
     <h3>Inverse Control</h3>
     <p>Computing required actuator inputs to achieve desired shapes or follow specific trajectories.</p>
   </div>

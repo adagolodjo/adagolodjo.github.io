@@ -161,7 +161,7 @@ description: "Open-source software contributions by Dr. Yinoussa Adagolodjo — 
 <!-- Card 1 — Cosserat Plugin -->
 <div class="software-card">
   <div class="sw-header">
-    <div class="sw-icon"><i class="fas fa-code-branch"></i></div>
+    <div class="sw-icon">{%- include ph.html name="code" -%}</div>
     <div class="sw-title-block">
       <h3>Cosserat Plugin for SOFA</h3>
       <p class="sw-org">SofaDefrost · SOFA Framework ecosystem</p>
@@ -179,12 +179,12 @@ description: "Open-source software contributions by Dr. Yinoussa Adagolodjo — 
   </p>
 
   <ul class="sw-features">
-    <li><i class="fas fa-check"></i> Geometric-exact Cosserat rod model</li>
-    <li><i class="fas fa-check"></i> Real-time FEM deformation</li>
-    <li><i class="fas fa-check"></i> Needle &amp; catheter simulation</li>
-    <li><i class="fas fa-check"></i> Continuum robot kinematics</li>
-    <li><i class="fas fa-check"></i> SOFA constraint integration</li>
-    <li><i class="fas fa-check"></i> Python scripting support</li>
+    <li>{%- include ph.html name="check" -%} Geometric-exact Cosserat rod model</li>
+    <li>{%- include ph.html name="check" -%} Real-time FEM deformation</li>
+    <li>{%- include ph.html name="check" -%} Needle &amp; catheter simulation</li>
+    <li>{%- include ph.html name="check" -%} Continuum robot kinematics</li>
+    <li>{%- include ph.html name="check" -%} SOFA constraint integration</li>
+    <li>{%- include ph.html name="check" -%} Python scripting support</li>
   </ul>
 
   <div class="sw-actions">
@@ -192,7 +192,7 @@ description: "Open-source software contributions by Dr. Yinoussa Adagolodjo — 
       <i class="fab fa-github"></i> GitHub Repository
     </a>
     <a href="https://sofadefrost.github.io/Cosserat/" target="_blank" rel="noopener" class="sw-btn-outline">
-      <i class="fas fa-book"></i> Documentation
+      {%- include ph.html name="book" -%} Documentation
     </a>
   </div>
 </div>
@@ -200,7 +200,7 @@ description: "Open-source software contributions by Dr. Yinoussa Adagolodjo — 
 <!-- Card 2 — SoftRobots.Inverse -->
 <div class="software-card">
   <div class="sw-header">
-    <div class="sw-icon"><i class="fas fa-robot"></i></div>
+    <div class="sw-icon">{%- include ph.html name="robot" -%}</div>
     <div class="sw-title-block">
       <h3>SoftRobots.Inverse Plugin</h3>
       <p class="sw-org">SofaDefrost · SOFA Framework ecosystem</p>
@@ -217,12 +217,12 @@ description: "Open-source software contributions by Dr. Yinoussa Adagolodjo — 
   </p>
 
   <ul class="sw-features">
-    <li><i class="fas fa-check"></i> Inverse kinematics solver</li>
-    <li><i class="fas fa-check"></i> Cable &amp; pneumatic actuators</li>
-    <li><i class="fas fa-check"></i> Real-time control loop</li>
-    <li><i class="fas fa-check"></i> Cosserat rod integration</li>
-    <li><i class="fas fa-check"></i> Contact-based objectives</li>
-    <li><i class="fas fa-check"></i> Compatible with SoftRobots plugin</li>
+    <li>{%- include ph.html name="check" -%} Inverse kinematics solver</li>
+    <li>{%- include ph.html name="check" -%} Cable &amp; pneumatic actuators</li>
+    <li>{%- include ph.html name="check" -%} Real-time control loop</li>
+    <li>{%- include ph.html name="check" -%} Cosserat rod integration</li>
+    <li>{%- include ph.html name="check" -%} Contact-based objectives</li>
+    <li>{%- include ph.html name="check" -%} Compatible with SoftRobots plugin</li>
   </ul>
 
   <div class="sw-actions">
@@ -235,7 +235,7 @@ description: "Open-source software contributions by Dr. Yinoussa Adagolodjo — 
 <!-- Card 3 — SOFA Framework -->
 <div class="software-card">
   <div class="sw-header">
-    <div class="sw-icon"><i class="fas fa-cubes"></i></div>
+    <div class="sw-icon">{%- include ph.html name="cube" -%}</div>
     <div class="sw-title-block">
       <h3>SOFA Framework</h3>
       <p class="sw-org">sofa-framework · Open-source medical simulation</p>
@@ -252,17 +252,17 @@ description: "Open-source software contributions by Dr. Yinoussa Adagolodjo — 
   </p>
 
   <ul class="sw-features">
-    <li><i class="fas fa-check"></i> Real-time physics simulation</li>
-    <li><i class="fas fa-check"></i> FEM &amp; constraint solvers</li>
-    <li><i class="fas fa-check"></i> Medical robotics toolkit</li>
-    <li><i class="fas fa-check"></i> Python &amp; C++ API</li>
-    <li><i class="fas fa-check"></i> Cross-platform (Linux, macOS, Win)</li>
-    <li><i class="fas fa-check"></i> Active international community</li>
+    <li>{%- include ph.html name="check" -%} Real-time physics simulation</li>
+    <li>{%- include ph.html name="check" -%} FEM &amp; constraint solvers</li>
+    <li>{%- include ph.html name="check" -%} Medical robotics toolkit</li>
+    <li>{%- include ph.html name="check" -%} Python &amp; C++ API</li>
+    <li>{%- include ph.html name="check" -%} Cross-platform (Linux, macOS, Win)</li>
+    <li>{%- include ph.html name="check" -%} Active international community</li>
   </ul>
 
   <div class="sw-actions">
     <a href="https://www.sofa-framework.org/" target="_blank" rel="noopener" class="sw-btn-primary">
-      <i class="fas fa-globe"></i> Official Website
+      {%- include ph.html name="globe" -%} Official Website
     </a>
     <a href="https://github.com/sofa-framework/sofa" target="_blank" rel="noopener" class="sw-btn-outline">
       <i class="fab fa-github"></i> GitHub Repository

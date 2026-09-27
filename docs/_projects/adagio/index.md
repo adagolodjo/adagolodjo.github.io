@@ -15,7 +15,7 @@ keywords: ["AI", "Digital Health", "Medical Interventions", "Adaptive Systems", 
   <div class="project-hero-grid">
     <div class="hero-left">
       <div class="project-badges">
-        <span class="badge-glass active"><i class="fas fa-circle" style="font-size: 0.6rem; margin-right: 6px; position: relative; top: -2px;"></i> {{ page.status }}</span>
+        <span class="badge-glass active"><span style="display:inline-block;width:0.5em;height:0.5em;border-radius:50%;background:currentColor;margin-right:6px;position:relative;top:-1px;"></span> {{ page.status }}</span>
         <span class="badge-glass">Started 2026</span>
       </div>
       <h1 class="project-title-hero">{{ page.title }}</h1>
@@ -50,22 +50,22 @@ The **ADAGIO** project focuses on developing adaptive digital tools and AI-drive
 
 <div class="features-grid">
   <div class="feature-glass-card">
-    <i class="fas fa-brain feature-icon"></i>
+    {%- include ph.html name="brain" class="feature-icon" -%}
     <h3>Context-Aware Guidance</h3>
     <p>Systems that adapt to the specific surgical context.</p>
   </div>
   <div class="feature-glass-card">
-    <i class="fas fa-sync feature-icon"></i>
+    {%- include ph.html name="arrows-clockwise" class="feature-icon" -%}
     <h3>Real-Time Learning</h3>
     <p>Continuous improvement from procedural feedback.</p>
   </div>
   <div class="feature-glass-card">
-    <i class="fas fa-chart-line feature-icon"></i>
+    {%- include ph.html name="trend-up" class="feature-icon" -%}
     <h3>Predictive Systems</h3>
     <p>Anticipating surgical needs before they arise.</p>
   </div>
   <div class="feature-glass-card">
-    <i class="fas fa-laptop-medical feature-icon"></i>
+    {%- include ph.html name="desktop" class="feature-icon" -%}
     <h3>Digital Platform</h3>
     <p>Seamless embedding in existing OR environments.</p>
   </div>

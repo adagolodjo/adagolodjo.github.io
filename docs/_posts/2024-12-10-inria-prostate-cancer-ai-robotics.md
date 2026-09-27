@@ -43,7 +43,7 @@ We used **Cosserat rod theory** and **finite element methods (FEM)** — impleme
 <noscript>
 <div style="background:#f0f9f9; border:1px solid #b0d8d9; border-radius:0.75rem; padding:1.5rem; text-align:center; margin:1.5rem 0;">
   <p style="margin-bottom:1rem;">
-    <i class="fas fa-play-circle fa-3x" style="color:#016064;"></i>
+    {%- include ph.html name="play-circle" class="fa-3x" style="color:#016064;" -%}
   </p>
   <p style="font-weight:600; color:#013A3C; margin-bottom:0.75rem;">
     Inria — Cancer de la prostate : les sciences du numérique au secours du diagnostic
@@ -51,7 +51,7 @@ We used **Cosserat rod theory** and **finite element methods (FEM)** — impleme
   <a href="https://mediatheque.inria.fr/Mediatheque/media/89377"
      target="_blank" rel="noopener"
      style="display:inline-flex; align-items:center; gap:0.5rem; background:#016064; color:#fff; padding:0.6rem 1.5rem; border-radius:0.5rem; text-decoration:none; font-weight:600;">
-    <i class="fas fa-play"></i> Regarder la vidéo sur Inria Mediatheque
+    {%- include ph.html name="play" -%} Regarder la vidéo sur Inria Mediatheque
   </a>
 </div>
 </noscript>
@@ -59,7 +59,7 @@ We used **Cosserat rod theory** and **finite element methods (FEM)** — impleme
 <div style="text-align:center; margin-top:0.5rem;">
   <a href="https://mediatheque.inria.fr/Mediatheque/media/89377" target="_blank" rel="noopener"
      style="font-size:0.85rem; color:#016064;">
-    <i class="fas fa-external-link-alt"></i> Ouvrir la vidéo sur la Mediatheque Inria
+    {%- include ph.html name="arrow-square-out" -%} Ouvrir la vidéo sur la Mediatheque Inria
   </a>
 </div>
 
@@ -71,14 +71,14 @@ The Inria article gives an accessible overview of the multiple facets of this pr
   <a href="https://www.inria.fr/fr/cancer-prostate-diagnostic-ia-robotique"
      target="_blank" rel="noopener"
      class="button is-primary">
-    <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+    <span class="icon">{%- include ph.html name="arrow-square-out" -%}</span>
     <span>Read the Inria Article (FR)</span>
   </a>
   &nbsp;
   <a href="https://www.inria.fr/en/prostate-cancer-diagnosis-ai-robotics"
      target="_blank" rel="noopener"
      class="button is-outlined is-primary">
-    <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+    <span class="icon">{%- include ph.html name="arrow-square-out" -%}</span>
     <span>Read in English</span>
   </a>
 </div>

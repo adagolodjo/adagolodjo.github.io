@@ -3,8 +3,9 @@
 <!-- Dark Mode Toggle -->
 <div class="theme-toggle-container">
   <button class="button is-small theme-toggle" id="theme-toggle" title="Toggle dark mode">
-    <span class="icon">
-      <i class="fas fa-moon theme-icon-glyph" id="theme-icon"></i>
+    <span class="icon theme-icon-glyph" id="theme-icon">
+      {%- include ph.html name="moon" class="icon-moon" -%}
+      {%- include ph.html name="sun" class="icon-sun" -%}
     </span>
   </button>
 </div>
@@ -82,13 +83,13 @@
   <div class="panel-heading">
     <span class="icon-text">
       <span class="icon">
-        <i class="fas fa-bookmark"></i>
+        {%- include ph.html name="bookmark" -%}
       </span>
       <span>Reading List</span>
     </span>
     <button class="button is-small" id="toggle-reading-list">
       <span class="icon">
-        <i class="fas fa-chevron-right"></i>
+        {%- include ph.html name="caret-right" -%}
       </span>
     </button>
   </div>
@@ -102,7 +103,7 @@
   <div class="box">
     <h4 class="title is-5">
       <span class="icon">
-        <i class="fas fa-envelope"></i>
+        {%- include ph.html name="envelope" -%}
       </span>
       Stay Updated
     </h4>
@@ -124,20 +125,20 @@
 <!-- Floating Action Button -->
 <div class="floating-actions">
   <button class="fab main-fab" id="main-fab" title="Quick actions">
-    <i class="fas fa-plus"></i>
+    {%- include ph.html name="plus" -%}
   </button>
   <div class="fab-menu" id="fab-menu">
     <button class="fab sub-fab" id="scroll-to-top" title="Scroll to top">
-      <i class="fas fa-arrow-up"></i>
+      {%- include ph.html name="arrow-up" -%}
     </button>
     <button class="fab sub-fab" id="advanced-search-trigger" title="Advanced search">
-      <i class="fas fa-search-plus"></i>
+      {%- include ph.html name="magnifying-glass" -%}
     </button>
     <button class="fab sub-fab" id="toggle-reading-list-fab" title="Reading list">
-      <i class="fas fa-bookmark"></i>
+      {%- include ph.html name="bookmark" -%}
     </button>
     <button class="fab sub-fab" id="share-blog-fab" title="Share blog">
-      <i class="fas fa-share-alt"></i>
+      {%- include ph.html name="share-network" -%}
     </button>
   </div>
 </div>

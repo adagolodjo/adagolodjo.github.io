@@ -15,7 +15,7 @@ keywords: ["Needle Insertion", "Robotic Control", "Augmented Reality", "Medical 
   <div class="project-hero-grid">
     <div class="hero-left">
       <div class="project-badges">
-        <span class="badge-glass"><i class="fas fa-check" style="font-size: 0.6rem; margin-right: 6px; position: relative; top: -2px;"></i> Completed</span>
+        <span class="badge-glass">{%- include ph.html name="check" style="font-size: 0.6rem; margin-right: 6px; position: relative; top: -2px;" -%} Completed</span>
         <span class="badge-glass">2020-2023</span>
       </div>
       <h1 class="project-title-hero">{{ page.title }}</h1>
@@ -42,17 +42,17 @@ The CONECT project brought together researchers from leading institutions to dev
 
 <div class="features-grid">
   <div class="feature-glass-card">
-    <i class="fas fa-project-diagram feature-icon"></i>
+    {%- include ph.html name="share-network" class="feature-icon" -%}
     <h3>Real-time Simulation</h3>
     <p>Advanced FEM algorithms for interactive soft tissue modeling and GPU-accelerated computation.</p>
   </div>
   <div class="feature-glass-card">
-    <i class="fas fa-robot feature-icon"></i>
+    {%- include ph.html name="robot" class="feature-icon" -%}
     <h3>Robotic Control</h3>
     <p>Precise needle manipulation with force feedback integration and automated path planning.</p>
   </div>
   <div class="feature-glass-card">
-    <i class="fas fa-glasses feature-icon"></i>
+    {%- include ph.html name="eyeglasses" class="feature-icon" -%}
     <h3>Augmented Reality</h3>
     <p>Real-time surgical guidance with 3D visualization of internal structures and interactive planning.</p>
   </div>

@@ -66,7 +66,7 @@
 
       <!-- Source note -->
       <p class="has-text-centered is-size-7 has-text-grey mt-3">
-        <i class="fas fa-sync-alt"></i>&nbsp;
+        {%- include ph.html name="arrows-clockwise" -%}&nbsp;
         Data source: ResearchGate —
         last updated {{ site.data.stats.updated }}.
         <a href="https://www.researchgate.net/profile/Yinoussa-Adagolodjo" target="_blank" rel="noopener">Verify ↗</a>
@@ -139,7 +139,7 @@
       </div>
       <div class="has-text-centered mt-5">
         <a href="/publications/" class="button is-primary is-outlined">
-          <span class="icon"><i class="fas fa-book-open"></i></span>
+          <span class="icon">{%- include ph.html name="book-open" -%}</span>
           <span>View All {{ site.data.stats.paper_count }} Publications</span>
         </a>
       </div>
@@ -181,7 +181,7 @@
       </div>
       <div class="has-text-centered mt-5">
         <a href="/research/projects/" class="button is-primary is-outlined">
-          <span class="icon"><i class="fas fa-flask"></i></span>
+          <span class="icon">{%- include ph.html name="flask" -%}</span>
           <span>View All {{ project_count }} Projects</span>
         </a>
       </div>
@@ -240,7 +240,7 @@
       </div>
       <div class="has-text-centered mt-5">
         <a href="/teaching/" class="button is-primary is-outlined">
-          <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
+          <span class="icon">{%- include ph.html name="chalkboard-teacher" -%}</span>
           <span>View Teaching Page</span>
         </a>
       </div>

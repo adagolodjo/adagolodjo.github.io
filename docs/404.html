@@ -1,11 +1,25 @@
 ---
 permalink: /404.html
-layout: default
+layout: page
+title: "404"
+subtitle: "This page wandered off the simulation grid"
+description: "The page you're looking for doesn't exist — it may have been moved, renamed, or never deployed. Let's get you back on track."
 ---
 
-<div class="page-404-container">
-  <h1 class="page-404-title">404</h1>
+<div class="page-404-content">
+  <div class="page-404-icon">{% include ph.html name="robot" %}</div>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <p class="page-404-message">
+    Whatever you were looking for isn't here — maybe a broken link, a typo, or a page that got restructured along the way.
+  </p>
+
+  <div class="page-404-links">
+    <a href="{{ '/' | relative_url }}" class="button is-primary is-medium">
+      {% include ph.html name="house" %} Back Home
+    </a>
+    <a href="{{ '/research/' | relative_url }}" class="button is-link is-outlined is-medium">Research</a>
+    <a href="{{ '/teaching/' | relative_url }}" class="button is-link is-outlined is-medium">Teaching</a>
+    <a href="{{ '/blog/' | relative_url }}" class="button is-link is-outlined is-medium">Blog</a>
+    <a href="{{ '/contact/' | relative_url }}" class="button is-link is-outlined is-medium">Contact</a>
+  </div>
 </div>

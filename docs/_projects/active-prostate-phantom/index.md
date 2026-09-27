@@ -15,7 +15,7 @@ keywords: ["Medical Simulation", "Robotic Surgery", "Phantom Development", "Pros
   <div class="project-hero-grid">
     <div class="hero-left">
       <div class="project-badges">
-        <span class="badge-glass active"><i class="fas fa-circle" style="font-size: 0.6rem; margin-right: 6px; position: relative; top: -2px;"></i> {{ page.status }}</span>
+        <span class="badge-glass active"><span style="display:inline-block;width:0.5em;height:0.5em;border-radius:50%;background:currentColor;margin-right:6px;position:relative;top:-1px;"></span> {{ page.status }}</span>
         <span class="badge-glass">Started 2023</span>
       </div>
       <h1 class="project-title-hero">{{ page.title }}</h1>
@@ -42,17 +42,17 @@ The Active Prostate Phantom project focuses on developing an advanced pneumatica
 
 <div class="features-grid">
   <div class="feature-glass-card">
-    <i class="fas fa-lungs feature-icon"></i>
+    {%- include ph.html name="stethoscope" class="feature-icon" -%}
     <h3>Multiple Chambers</h3>
     <p>Independently controlled pneumatic chambers for precise volume adjustments and dynamic conditions.</p>
   </div>
   <div class="feature-glass-card">
-    <i class="fas fa-user-md feature-icon"></i>
+    {%- include ph.html name="stethoscope" class="feature-icon" -%}
     <h3>Realistic Simulation</h3>
     <p>Based on MRI dataset analysis for accurate modeling of physical measurements and anatomy.</p>
   </div>
   <div class="feature-glass-card">
-    <i class="fas fa-microscope feature-icon"></i>
+    {%- include ph.html name="microscope" class="feature-icon" -%}
     <h3>Validation Platform</h3>
     <p>Designed for testing robotic-assisted systems and training via accurate FEM integration.</p>
   </div>

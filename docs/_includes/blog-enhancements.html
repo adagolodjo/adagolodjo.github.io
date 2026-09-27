@@ -11,7 +11,7 @@
     <h4>Table of Contents</h4>
     <button class="button is-small" id="toc-toggle">
       <span class="icon">
-        <i class="fas fa-chevron-up"></i>
+        {%- include ph.html name="caret-up" -%}
       </span>
     </button>
   </div>
@@ -22,7 +22,7 @@
 <div class="related-posts-section">
   <h3 class="title is-4">
     <span class="icon is-medium">
-      <i class="fas fa-link"></i>
+      {%- include ph.html name="link" -%}
     </span>
     Related Posts
   </h3>
@@ -36,7 +36,7 @@
   <div class="box">
     <h4 class="title is-5">
       <span class="icon">
-        <i class="fas fa-list"></i>
+        {%- include ph.html name="list" -%}
       </span>
       Post Series
     </h4>
@@ -47,14 +47,14 @@
     <div class="series-navigation">
       <button class="button is-outlined" id="series-prev" style="display: none;">
         <span class="icon">
-          <i class="fas fa-chevron-left"></i>
+          {%- include ph.html name="caret-left" -%}
         </span>
         <span>Previous</span>
       </button>
       <button class="button is-outlined" id="series-next" style="display: none;">
         <span>Next</span>
         <span class="icon">
-          <i class="fas fa-chevron-right"></i>
+          {%- include ph.html name="caret-right" -%}
         </span>
       </button>
     </div>
@@ -85,7 +85,7 @@
     </button>
     <button class="button is-light" id="copy-link">
       <span class="icon">
-        <i class="fas fa-link"></i>
+        {%- include ph.html name="link" -%}
       </span>
       <span>Copy Link</span>
     </button>
@@ -97,7 +97,7 @@
   <div class="comments-header">
     <h3 class="title is-4">
       <span class="icon is-medium">
-        <i class="fas fa-comments"></i>
+        {%- include ph.html name="chats-circle" -%}
       </span>
       Discussion
     </h3>
@@ -389,7 +389,7 @@ document.addEventListener('DOMContentLoaded', function() {
     copyLinkBtn.addEventListener('click', function() {
       navigator.clipboard.writeText(window.location.href).then(() => {
         const originalText = this.innerHTML;
-        this.innerHTML = '<span class="icon"><i class="fas fa-check"></i></span><span>Copied!</span>';
+        this.innerHTML = '<span class="icon">{%- include ph.html name="check" -%}</span><span>Copied!</span>';
         this.classList.add('is-success');
         
         setTimeout(() => {

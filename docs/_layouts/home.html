@@ -18,7 +18,7 @@ layout: default
     </div>
     <div class="nav-right">
       <a href="https://scholar.google.com/citations?hl=fr&user=ZBdWJ9EAAAAJ" class="social-icon" target="_blank" rel="noopener noreferrer" title="Google Scholar">
-        <i class="fas fa-graduation-cap"></i>
+        {%- include ph.html name="graduation-cap" -%}
       </a>
       <a href="https://github.com/adagolodjo" class="social-icon" target="_blank" rel="noopener noreferrer" title="GitHub">
         <i class="fab fa-github"></i>
@@ -30,7 +30,7 @@ layout: default
         <i class="fab fa-orcid"></i>
       </a>
       <button class="theme-toggle" onclick="toggleDarkMode()" title="Toggle theme">
-        <i class="fas fa-moon theme-icon-glyph"></i>
+        {%- include ph.html name="moon" class="theme-icon-glyph" -%}
       </button>
     </div>
   </nav>
@@ -81,7 +81,7 @@ layout: default
           <div class="hero-actions">
             <a href="/assets/cv_yinoussa_adagolodjo.pdf" class="cta-button primary" target="_blank" rel="noopener noreferrer">
               <span>Resume</span>
-              <i class="fas fa-external-link-alt"></i>
+              {%- include ph.html name="arrow-square-out" -%}
             </a>
             <a href="{{ '/contact/' | relative_url }}" class="cta-button secondary">
               Contact
@@ -94,7 +94,7 @@ layout: default
     <!-- Decorative Elements -->
     <div class="decorative-elements">
       <div class="lightbulb-icon">
-        <i class="fas fa-lightbulb"></i>
+        {%- include ph.html name="lightbulb" -%}
       </div>
       <div class="floating-particles">
         <div class="particle particle-1"></div>

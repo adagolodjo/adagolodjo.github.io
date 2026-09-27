@@ -118,23 +118,23 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="field is-grouped">
         <div class="control">
           <button class="button is-primary" type="submit">
-            <span class="icon"><i class="fas fa-paper-plane"></i></span>
+            <span class="icon">{%- include ph.html name="paper-plane-tilt" -%}</span>
             <span>Send Message</span>
           </button>
         </div>
       </div>
     </form>
     <p style="font-size:0.88rem; color:#888; margin-top:0.75rem;">
-      <i class="fas fa-lock" style="color:#48AAAD;margin-right:0.3rem;"></i>
+      {%- include ph.html name="lock" style="color:#48AAAD;margin-right:0.3rem;" -%}
       Your email address will not be displayed or shared. Messages are sent directly and securely.
     </p>
     <!-- Success banner (shown after redirect with ?sent=1) -->
     <div id="form-success" style="display:none;" class="notification is-success is-light mt-4">
-      <i class="fas fa-check-circle"></i> Thank you! Your message has been sent. I’ll reply within 24–48 hours.
+      {%- include ph.html name="check-circle" -%} Thank you! Your message has been sent. I’ll reply within 24–48 hours.
     </div>
     <script>
-      if (window.location.search.includes(‘sent=1’)) {
-        document.getElementById(‘form-success’).style.display = ‘block’;
+      if (window.location.search.includes('sent=1')) {
+        document.getElementById('form-success').style.display = 'block';
       }
     </script>
   </div>

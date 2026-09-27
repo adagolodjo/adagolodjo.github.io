@@ -382,9 +382,9 @@ image: /assets/images/notion-face.png
   <div class="about-profile-img">
     <img src="/assets/images/notion-face.png" alt="Dr. Yinoussa Adagolodjo">
     <div class="about-profile-badges">
-      <span class="badge badge-teal"><i class="fas fa-university"></i> Univ. Lille</span>
-      <span class="badge badge-blue"><i class="fas fa-robot"></i> DEFROST / Inria</span>
-      <span class="badge badge-purple"><i class="fas fa-flask"></i> CRIStAL UMR 9189</span>
+      <span class="badge badge-teal">{%- include ph.html name="buildings" -%} Univ. Lille</span>
+      <span class="badge badge-blue">{%- include ph.html name="robot" -%} DEFROST / Inria</span>
+      <span class="badge badge-purple">{%- include ph.html name="flask" -%} CRIStAL UMR 9189</span>
     </div>
   </div>
   <div class="about-bio">
@@ -412,11 +412,11 @@ image: /assets/images/notion-face.png
     <div style="margin-top: 1.25rem; display: flex; gap: .75rem; flex-wrap: wrap;">
       <a href="/assets/cv_yinoussa_adagolodjo.pdf" target="_blank" rel="noopener"
          style="display: inline-flex; align-items: center; gap: .5rem; background: var(--about-primary); color: #fff; padding: .6rem 1.4rem; border-radius: .5rem; text-decoration: none; font-weight: 600; font-size: .9rem;">
-        <i class="fas fa-file-pdf"></i> Download CV (PDF)
+        {%- include ph.html name="file-pdf" -%} Download CV (PDF)
       </a>
       <a href="{{ '/contact/' | relative_url }}"
          style="display: inline-flex; align-items: center; gap: .5rem; border: 2px solid var(--about-primary); color: var(--about-primary); padding: .6rem 1.4rem; border-radius: .5rem; text-decoration: none; font-weight: 600; font-size: .9rem;">
-        <i class="fas fa-envelope"></i> Contact
+        {%- include ph.html name="envelope" -%} Contact
       </a>
     </div>
   </div>
@@ -449,7 +449,7 @@ image: /assets/images/notion-face.png
 ---
 
 <!-- ===== CAREER TIMELINE ===== -->
-<h2 class="about-section-title"><i class="fas fa-briefcase"></i> Career</h2>
+<h2 class="about-section-title">{%- include ph.html name="briefcase" -%} Career</h2>
 
 <div class="timeline">
 
@@ -499,11 +499,11 @@ image: /assets/images/notion-face.png
 ---
 
 <!-- ===== RESEARCH INTERESTS ===== -->
-<h2 class="about-section-title"><i class="fas fa-microscope"></i> Research Interests</h2>
+<h2 class="about-section-title">{%- include ph.html name="microscope" -%} Research Interests</h2>
 
 <div class="research-grid">
   <div class="research-card">
-    <div class="research-card-icon"><i class="fas fa-robot"></i></div>
+    <div class="research-card-icon">{%- include ph.html name="robot" -%}</div>
     <h3>Medical Robotics</h3>
     <ul>
       <li>Robotic-assisted surgical interventions</li>
@@ -512,7 +512,7 @@ image: /assets/images/notion-face.png
     </ul>
   </div>
   <div class="research-card">
-    <div class="research-card-icon"><i class="fas fa-cube"></i></div>
+    <div class="research-card-icon">{%- include ph.html name="cube" -%}</div>
     <h3>Real-time FEM Simulation</h3>
     <ul>
       <li>Real-time deformation of soft tissues</li>
@@ -521,7 +521,7 @@ image: /assets/images/notion-face.png
     </ul>
   </div>
   <div class="research-card">
-    <div class="research-card-icon"><i class="fas fa-hand-paper"></i></div>
+    <div class="research-card-icon">{%- include ph.html name="hand-palm" -%}</div>
     <h3>Soft & Continuum Robotics</h3>
     <ul>
       <li>Vine-inspired eversion robots</li>
@@ -530,7 +530,7 @@ image: /assets/images/notion-face.png
     </ul>
   </div>
   <div class="research-card">
-    <div class="research-card-icon"><i class="fas fa-vr-cardboard"></i></div>
+    <div class="research-card-icon">{%- include ph.html name="cube" -%}</div>
     <h3>Augmented Reality</h3>
     <ul>
       <li>Intraoperative AR guidance</li>
@@ -543,7 +543,7 @@ image: /assets/images/notion-face.png
 ---
 
 <!-- ===== TECHNICAL SKILLS ===== -->
-<h2 class="about-section-title"><i class="fas fa-code"></i> Technical Skills</h2>
+<h2 class="about-section-title">{%- include ph.html name="code" -%} Technical Skills</h2>
 
 <div class="skills-grid">
   <div class="skill-group">
@@ -601,7 +601,7 @@ image: /assets/images/notion-face.png
 ---
 
 <!-- ===== PROFESSIONAL SERVICE ===== -->
-<h2 class="about-section-title"><i class="fas fa-users"></i> Professional Service</h2>
+<h2 class="about-section-title">{%- include ph.html name="users" -%} Professional Service</h2>
 
 <ul class="service-list">
   <li>Reviewer — <em>IEEE Transactions on Robotics</em></li>
@@ -614,7 +614,7 @@ image: /assets/images/notion-face.png
 ---
 
 <!-- ===== INVITED TALKS & CONFERENCES ===== -->
-<h2 class="about-section-title"><i class="fas fa-microphone-alt"></i> Invited Talks, Press &amp; Conferences</h2>
+<h2 class="about-section-title">{%- include ph.html name="microphone" -%} Invited Talks, Press &amp; Conferences</h2>
 
 <ul class="talks-list">
 
@@ -626,7 +626,7 @@ image: /assets/images/notion-face.png
         <span class="talk-badge">Invited Lecture</span>
       </div>
       <div class="talk-venue">
-        <i class="fas fa-map-marker-alt"></i>
+        {%- include ph.html name="map-pin" -%}
         <strong>COSUR 2025</strong> — Summer School on Control of Surgical Robots ·
         Lisbon, Portugal (pre-event of CRAS 2025)
       </div>
@@ -641,7 +641,7 @@ image: /assets/images/notion-face.png
         <span class="talk-badge" style="background:#E65100; border-color:#E65100;">Press</span>
       </div>
       <div class="talk-venue">
-        <i class="fas fa-newspaper"></i>
+        {%- include ph.html name="newspaper" -%}
         <a href="https://www.inria.fr/fr/cancer-prostate-diagnostic-ia-robotique" target="_blank" rel="noopener">Article Inria (FR)</a> ·
         <a href="{{ '/blog/' | relative_url }}">Read the story + video</a>
       </div>
@@ -656,7 +656,7 @@ image: /assets/images/notion-face.png
         <span class="talk-badge">Invited Speaker</span>
       </div>
       <div class="talk-venue">
-        <i class="fas fa-map-marker-alt"></i>
+        {%- include ph.html name="map-pin" -%}
         <strong>LACORO 2024</strong> — Latin American Conference on Operations Research ·
         Rancagua, Chile
       </div>
@@ -671,7 +671,7 @@ image: /assets/images/notion-face.png
         <span class="talk-badge">Invited Speaker</span>
       </div>
       <div class="talk-venue">
-        <i class="fas fa-map-marker-alt"></i>
+        {%- include ph.html name="map-pin" -%}
         <strong>Journées Scientifiques Inria Chile 2024</strong> ·
         Gabriela Mistral Cultural Center, Santiago, Chile
         (official pre-event of the AI Action Summit)
@@ -687,7 +687,7 @@ image: /assets/images/notion-face.png
         <span class="talk-badge">Invited Speaker</span>
       </div>
       <div class="talk-venue">
-        <i class="fas fa-map-marker-alt"></i>
+        {%- include ph.html name="map-pin" -%}
         <strong>CAIR Hong Kong Forum</strong> — AI and Robotics in Healthcare ·
         Hong Kong Institute of Science &amp; Technology
       </div>
@@ -704,13 +704,13 @@ image: /assets/images/notion-face.png
   <p>I am open to research collaborations, PhD/postdoc applications, and industrial partnerships in medical robotics and simulation.</p>
   <div class="about-cta-btns">
     <a href="/contact/" class="btn-cta-primary">
-      <i class="fas fa-envelope"></i> Get in touch
+      {%- include ph.html name="envelope" -%} Get in touch
     </a>
     <a href="/publications/" class="btn-cta-secondary">
-      <i class="fas fa-book-open"></i> View Publications
+      {%- include ph.html name="book-open" -%} View Publications
     </a>
     <a href="/assets/cv_yinoussa_adagolodjo.pdf" class="btn-cta-secondary" target="_blank" rel="noopener">
-      <i class="fas fa-file-alt"></i> Download CV
+      {%- include ph.html name="file-text" -%} Download CV
     </a>
   </div>
 </div>

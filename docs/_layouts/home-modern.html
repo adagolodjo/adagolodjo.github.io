@@ -89,7 +89,7 @@ layout: default
           <div class="hero-actions">
             <a href="/assets/cv_yinoussa_adagolodjo.pdf" class="cta-button primary hero-btn" target="_blank" rel="noopener">
               <span>Resume</span>
-              <i class="fas fa-external-link-alt"></i>
+              {%- include ph.html name="arrow-square-out" -%}
             </a>
             <a href="{{ '/contact/' | relative_url }}" class="cta-button secondary hero-btn">
               Contact
@@ -110,7 +110,7 @@ layout: default
     <div class="decorative-elements">
       <div class="floating-bulb">
         <div class="lightbulb-icon" aria-hidden="true">
-          <i class="fas fa-lightbulb" aria-hidden="true"></i>
+          {%- include ph.html name="lightbulb" -%}
         </div>
       </div>
       <div class="floating-particles">
@@ -166,7 +166,7 @@ layout: default
       <img src="/assets/images/notion-face.png" alt="Dr. Yinoussa Adagolodjo" loading="lazy" width="220" height="220">
     </div>
     <div class="home-about-body">
-      <p class="home-about-label"><i class="fas fa-user-circle"></i> About me</p>
+      <p class="home-about-label">{%- include ph.html name="user-circle" -%} About me</p>
       <h2 class="home-about-title">Robotics research at the frontier of medicine</h2>
       <p class="home-about-desc">
         I am an Assistant Professor at the <strong>University of Lille</strong> within the
@@ -176,12 +176,12 @@ layout: default
         invasive procedures safer, more precise, and more accessible.
       </p>
       <div class="home-about-badges">
-        <span class="home-badge"><i class="fas fa-university"></i> Univ. Lille</span>
-        <span class="home-badge"><i class="fas fa-flask"></i> DEFROST · Inria</span>
-        <span class="home-badge"><i class="fas fa-atom"></i> CRIStAL UMR 9189</span>
+        <span class="home-badge">{%- include ph.html name="buildings" -%} Univ. Lille</span>
+        <span class="home-badge">{%- include ph.html name="flask" -%} DEFROST · Inria</span>
+        <span class="home-badge">{%- include ph.html name="atom" -%} CRIStAL UMR 9189</span>
       </div>
       <a href="{{ '/about/' | relative_url }}" class="home-about-cta">
-        Full biography <i class="fas fa-arrow-right"></i>
+        Full biography {%- include ph.html name="arrow-right" -%}
       </a>
     </div>
   </div>
@@ -192,7 +192,7 @@ layout: default
   <div style="max-width: 1100px; margin: 0 auto;">
     <div style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.75rem;">
       <h2 class="title is-3" style="color: #013A3C; margin-bottom: 0;">Latest News</h2>
-      <a href="{{ '/blog/' | relative_url }}" style="color: #016064; font-weight: 600; font-size: .9rem;">All posts <i class="fas fa-arrow-right" style="font-size: .75rem;"></i></a>
+      <a href="{{ '/blog/' | relative_url }}" style="color: #016064; font-weight: 600; font-size: .9rem;">All posts {%- include ph.html name="arrow-right" style="font-size: .75rem;" -%}</a>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
       {% for post in site.posts limit:3 %}
@@ -201,7 +201,7 @@ layout: default
                  onmouseover="this.style.boxShadow='0 8px 24px rgba(1,96,100,.12)'; this.style.transform='translateY(-3px)';"
                  onmouseout="this.style.boxShadow='none'; this.style.transform='none';">
           <p style="font-size: .78rem; color: #48AAAD; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .5rem;">
-            <i class="far fa-calendar"></i> {{ post.date | date: "%b %d, %Y" }}
+            {%- include ph.html name="calendar-blank" -%} {{ post.date | date: "%b %d, %Y" }}
           </p>
           <h3 style="font-size: 1.02rem; color: #013A3C; font-weight: 700; line-height: 1.45; margin-bottom: .6rem;">{{ post.title }}</h3>
           <p style="font-size: .86rem; color: #555; line-height: 1.6; margin-bottom: 0;">{{ post.excerpt | strip_html | truncatewords: 22 }}</p>
@@ -230,7 +230,7 @@ layout: default
           <img src="/assets/images/projects/prostate-new.jpg" alt="Active Prostate Phantom" loading="lazy" width="800" height="600">
           <div class="project-overlay">
             <div class="overlay-content">
-              <i class="fas fa-heart-pulse"></i>
+              {%- include ph.html name="heartbeat" -%}
               <span>Explore Project</span>
             </div>
           </div>
@@ -260,7 +260,7 @@ layout: default
           <img src="/assets/images/projects/growing-robot-new.png" alt="Growing Robot" loading="lazy" width="800" height="600">
           <div class="project-overlay">
             <div class="overlay-content">
-              <i class="fas fa-seedling"></i>
+              {%- include ph.html name="leaf" -%}
               <span>Explore Innovation</span>
             </div>
           </div>
@@ -290,7 +290,7 @@ layout: default
         <img src="/assets/images/projects/colon.jpg" alt="IRE Project" loading="lazy" width="800" height="600">
         <div class="project-overlay">
           <div class="overlay-content">
-            <i class="fas fa-eye"></i>
+            {%- include ph.html name="eye" -%}
             <span>View Details</span>
           </div>
         </div>
@@ -319,7 +319,7 @@ layout: default
           <video src="/assets/images/forceView.mp4" autoplay loop muted playsinline preload="metadata" poster="/assets/images/projects/robocop.jpg" width="800" height="600"></video>
           <div class="project-overlay">
             <div class="overlay-content">
-              <i class="fas fa-play-circle"></i>
+              {%- include ph.html name="play-circle" -%}
               <span>View Demo</span>
             </div>
           </div>
@@ -350,7 +350,7 @@ layout: default
           <img src="/assets/images/projects/conect-new.png" alt="CONECT Project" loading="lazy" width="800" height="600">
           <div class="project-overlay">
             <div class="overlay-content">
-              <i class="fas fa-microscope"></i>
+              {%- include ph.html name="microscope" -%}
               <span>Explore Research</span>
             </div>
           </div>
@@ -380,7 +380,7 @@ layout: default
           <img src="/assets/images/projects/cosseroots-new.png" alt="COSSEROOTS Project" loading="lazy" width="800" height="600">
           <div class="project-overlay">
             <div class="overlay-content">
-              <i class="fas fa-robot"></i>
+              {%- include ph.html name="robot" -%}
               <span>View Innovation</span>
             </div>
           </div>
@@ -420,7 +420,7 @@ layout: default
     <div class="final-cta-actions">
       <a href="{{ '/contact/' | relative_url }}" class="final-cta-btn primary">
         <span>Get In Touch</span>
-        <i class="fas fa-arrow-right"></i>
+        {%- include ph.html name="arrow-right" -%}
       </a>
       <a href="{{ '/publications/' | relative_url }}" class="final-cta-btn secondary">Explore Publications</a>
     </div>

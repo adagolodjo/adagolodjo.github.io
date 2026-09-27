@@ -37,7 +37,7 @@ layout: default
       <button type="button" class="post-share-btn post-share-copy"
               data-share-url="{{ page.url | absolute_url }}"
               aria-label="Copy link to this article" title="Copy link">
-        <i class="fas fa-link" aria-hidden="true"></i>
+        {%- include ph.html name="link" -%}
       </button>
     </div>
   </div>

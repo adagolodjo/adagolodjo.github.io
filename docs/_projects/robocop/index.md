@@ -15,7 +15,7 @@ keywords: ["Robotic Biopsy", "Co-Manipulation", "Prostate Cancer", "Shared Contr
   <div class="project-hero-grid">
     <div class="hero-left">
       <div class="project-badges">
-        <span class="badge-glass"><i class="fas fa-check" style="font-size: 0.6rem; margin-right: 6px; position: relative; top: -2px;"></i> Completed</span>
+        <span class="badge-glass">{%- include ph.html name="check" style="font-size: 0.6rem; margin-right: 6px; position: relative; top: -2px;" -%} Completed</span>
         <span class="badge-glass">2017-2021</span>
       </div>
       <h1 class="project-title-hero">{{ page.title }}</h1>
@@ -42,17 +42,17 @@ The ROBOCOP project successfully developed a new generation of robotic assistant
 
 <div class="features-grid">
   <div class="feature-glass-card">
-    <i class="fas fa-handshake feature-icon"></i>
+    {%- include ph.html name="handshake" class="feature-icon" -%}
     <h3>Co-Manipulation</h3>
     <p>Surgeon and robot share control of the ultrasound probe, maintaining physician autonomy while enhancing stability.</p>
   </div>
   <div class="feature-glass-card">
-    <i class="fas fa-bullseye feature-icon"></i>
+    {%- include ph.html name="target" class="feature-icon" -%}
     <h3>Needle Guidance</h3>
     <p>Precise targeting mechanism for the biopsy needle ensures accurate sampling of suspected tumors.</p>
   </div>
   <div class="feature-glass-card">
-    <i class="fas fa-layer-group feature-icon"></i>
+    {%- include ph.html name="stack" class="feature-icon" -%}
     <h3>Image Fusion</h3>
     <p>Real-time elastic registration fuses pre-operative MRI with intra-operative ultrasound.</p>
   </div>

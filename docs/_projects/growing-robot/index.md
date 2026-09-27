@@ -15,7 +15,7 @@ keywords: ["Growing Robots", "Soft Robotics", "Eversion", "TAVI", "Medical Robot
   <div class="project-hero-grid">
     <div class="hero-left">
       <div class="project-badges">
-        <span class="badge-glass active"><i class="fas fa-circle" style="font-size: 0.6rem; margin-right: 6px; position: relative; top: -2px;"></i> {{ page.status }}</span>
+        <span class="badge-glass active"><span style="display:inline-block;width:0.5em;height:0.5em;border-radius:50%;background:currentColor;margin-right:6px;position:relative;top:-1px;"></span> {{ page.status }}</span>
         <span class="badge-glass">Started 2024</span>
       </div>
       <h1 class="project-title-hero">{{ page.title }}</h1>
@@ -42,17 +42,17 @@ The Growing Robot project represents a paradigm shift in medical robotics, devel
 
 <div class="features-grid">
   <div class="feature-glass-card">
-    <i class="fas fa-leaf feature-icon"></i>
+    {%- include ph.html name="leaf" class="feature-icon" -%}
     <h3>Tip Extension</h3>
     <p>Navigates by everting material from the tip, completely eliminating sliding friction against surrounding tissue.</p>
   </div>
   <div class="feature-glass-card">
-    <i class="fas fa-compass feature-icon"></i>
+    {%- include ph.html name="compass" class="feature-icon" -%}
     <h3>Active Steering</h3>
     <p>Multi-chamber pneumatic steering allows precise navigation through complex bifurcating pathways.</p>
   </div>
   <div class="feature-glass-card">
-    <i class="fas fa-cogs feature-icon"></i>
+    {%- include ph.html name="gear-six" class="feature-icon" -%}
     <h3>Smart Materials</h3>
     <p>Variable stiffness capabilities adapt to the required mechanical properties of different anatomical regions.</p>
   </div>

@@ -448,7 +448,7 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
      target="_blank" rel="noopener noreferrer" class="hal-sync-badge">
     <span class="hal-sync-dot"></span>
     Synced with HAL Science
-    <i class="fas fa-external-link-alt" style="font-size:0.65rem;opacity:0.6;"></i>
+    {%- include ph.html name="arrow-square-out" style="font-size:0.65rem;opacity:0.6;" -%}
   </a>
 </div>
 
@@ -479,7 +479,7 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
   </button>
   {% endif %}
   <div class="pub-search-wrap">
-    <i class="fas fa-search"></i>
+    {%- include ph.html name="magnifying-glass" -%}
     <input type="text" id="pub-search-input" placeholder="Search publications…" autocomplete="off">
   </div>
 </div>
@@ -567,19 +567,19 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
           {% if pub.doi %}
             <a href="https://doi.org/{{ pub.doi }}" class="pub-btn pub-btn-doi"
                target="_blank" rel="noopener noreferrer">
-              <i class="fas fa-external-link-alt"></i> DOI
+              {%- include ph.html name="arrow-square-out" -%} DOI
             </a>
           {% endif %}
           {% if pub.hal_url %}
             <a href="{{ pub.hal_url }}" class="pub-btn pub-btn-hal"
                target="_blank" rel="noopener noreferrer">
-              <i class="fas fa-archive"></i> HAL
+              {%- include ph.html name="archive" -%} HAL
             </a>
           {% endif %}
           {% if pub.pdf_url %}
             <a href="{{ pub.pdf_url }}" class="pub-btn pub-btn-pdf"
                target="_blank" rel="noopener noreferrer">
-              <i class="fas fa-file-pdf"></i> PDF
+              {%- include ph.html name="file-pdf" -%} PDF
             </a>
           {% endif %}
         </div>
@@ -598,14 +598,14 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
 </div><!-- /#pub-list -->
 
 <div id="pub-no-results">
-  <i class="fas fa-search" style="font-size:2rem;color:#48AAAD;margin-bottom:0.75rem;display:block;"></i>
+  {%- include ph.html name="magnifying-glass" style="font-size:2rem;color:#48AAAD;margin-bottom:0.75rem;display:block;" -%}
   No publications match your search. <a href="https://hal.science/search/index?q=Adagolodjo" target="_blank" rel="noopener noreferrer">Search on HAL ↗</a>
 </div>
 
 <!-- ── HAL live sync ─────────────────────────────────────────── -->
 <div class="hal-live-box">
   <div class="hal-live-text">
-    <div class="hal-live-title"><i class="fas fa-sync-alt"></i> Live HAL Science synchronization</div>
+    <div class="hal-live-title">{%- include ph.html name="arrows-clockwise" -%} Live HAL Science synchronization</div>
     <p class="hal-live-desc">
       This page loads publications statically from a curated YAML list.
       Click to verify synchronization with the live HAL API
@@ -614,7 +614,7 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
   </div>
   <div>
     <button class="hal-fetch-btn" id="hal-fetch-btn" onclick="pubFetchHAL()">
-      <i class="fas fa-cloud-download-alt"></i> Check HAL API
+      {%- include ph.html name="download-simple" -%} Check HAL API
     </button>
     <div id="hal-fetch-status"></div>
   </div>
@@ -624,19 +624,19 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
 <div class="pub-profiles">
   <a href="https://hal.science/search/index?q=Adagolodjo"
      target="_blank" rel="noopener noreferrer" class="pub-profile-btn pub-profile-hal">
-    <i class="fas fa-archive"></i> HAL Science
+    {%- include ph.html name="archive" -%} HAL Science
   </a>
   <a href="https://scholar.google.com/citations?user=ZBdWJ9EAAAAJ&hl=fr"
      target="_blank" rel="noopener noreferrer" class="pub-profile-btn pub-profile-scholar">
-    <i class="fas fa-graduation-cap"></i> Google Scholar
+    {%- include ph.html name="graduation-cap" -%} Google Scholar
   </a>
   <a href="https://www.researchgate.net/profile/Yinoussa-Adagolodjo?ev=hdr_xprf"
      target="_blank" rel="noopener noreferrer" class="pub-profile-btn pub-profile-rg">
-    <i class="fas fa-flask"></i> ResearchGate
+    {%- include ph.html name="flask" -%} ResearchGate
   </a>
   <a href="https://www.semanticscholar.org/author/Yinoussa-Adagolodjo/2251436"
      target="_blank" rel="noopener noreferrer" class="pub-profile-btn pub-profile-orcid">
-    <i class="fas fa-atom"></i> Semantic Scholar
+    {%- include ph.html name="atom" -%} Semantic Scholar
   </a>
 </div>
 
@@ -696,7 +696,7 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
     var btn    = document.getElementById('hal-fetch-btn');
     var status = document.getElementById('hal-fetch-status');
     btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Fetching…';
+    btn.innerHTML = '<svg class="ph-icon fa-spin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M224 48v48a8 8 0 0 1-8 8h-48a8 8 0 0 1 0-16h28.69l-14.63-14.63a79.56 79.56 0 0 0-56.13-23.43h-.45a79.52 79.52 0 0 0-55.89 22.77a8 8 0 0 1-11.18-11.44a96 96 0 0 1 135 .79L208 76.69V48a8 8 0 0 1 16 0m-37.59 135.29a80 80 0 0 1-112.47-.66L59.31 168H88a8 8 0 0 0 0-16H40a8 8 0 0 0-8 8v48a8 8 0 0 0 16 0v-28.69l14.63 14.63A95.43 95.43 0 0 0 130 222.06h.53a95.36 95.36 0 0 0 67.07-27.33a8 8 0 0 0-11.18-11.44Z"/></svg> Fetching\u2026';
     status.innerHTML = '';
 
     var HAL_URL =
@@ -712,16 +712,16 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
       var docs = (data.response && data.response.docs) ? data.response.docs : [];
       var count = docs.length;
       status.innerHTML =
-        '<i class="fas fa-check-circle" style="color:#2E7D32"></i> ' +
+        '{%- include ph.html name="check-circle" style="color:#2E7D32" -%} ' +
         'HAL returned <strong>' + count + '</strong> publication' + (count !== 1 ? 's' : '') +
         ' — list is up to date.';
-      btn.innerHTML = '<i class="fas fa-check"></i> Up to date';
+      btn.innerHTML = '{%- include ph.html name="check" -%} Up to date';
     } catch (err) {
       status.innerHTML =
-        '<i class="fas fa-exclamation-triangle" style="color:#E65100"></i> ' +
+        '{%- include ph.html name="warning" style="color:#E65100" -%} ' +
         'HAL API unreachable. ' +
         '<a href="https://hal.science/search/index?q=Adagolodjo" target="_blank" rel="noopener noreferrer">View on HAL ↗</a>';
-      btn.innerHTML = '<i class="fas fa-cloud-download-alt"></i> Retry';
+      btn.innerHTML = '{%- include ph.html name="download-simple" -%} Retry';
       btn.disabled = false;
     }
   };

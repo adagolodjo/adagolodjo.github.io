@@ -447,3 +447,21 @@ $card-shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
     font-weight: $weight-medium;
   }
 }
+
+// ── Dark mode toggle icon (moon/sun) ────────────────────────────────────
+// Two Phosphor icons live in the DOM; CSS shows only the one matching the
+// current theme. JS (syncThemeIcons in head.html) just toggles .is-dark.
+.theme-icon-glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  .icon-sun {
+    display: none;
+  }
+
+  &.is-dark {
+    .icon-moon { display: none; }
+    .icon-sun { display: inline-flex; }
+  }
+}

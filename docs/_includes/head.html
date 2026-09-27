@@ -65,9 +65,8 @@
     // and the separate blog-page toggle in blog-improvements.html) so all
     // toggle buttons on a page stay in sync with the actual theme.
     function syncThemeIcons(theme) {
-      document.querySelectorAll('.theme-icon-glyph').forEach(function (icon) {
-        icon.classList.remove('fa-moon', 'fa-sun');
-        icon.classList.add(theme === 'dark' ? 'fa-sun' : 'fa-moon');
+      document.querySelectorAll('.theme-icon-glyph').forEach(function (wrap) {
+        wrap.classList.toggle('is-dark', theme === 'dark');
       });
     }
 
