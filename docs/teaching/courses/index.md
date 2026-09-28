@@ -456,7 +456,7 @@ subtitle: Current and Past Courses
 
 <div class="courses-grid" id="current-courses">
 {% for course in site.data.courses %}
-{% if course.semester contains "2024" %}
+{% unless course.current == false %}
   <div class="course-card" data-level="{{ course.level | downcase }}">
     <div>
       <div class="course-code">{{ course.code }}</div>
@@ -488,7 +488,7 @@ subtitle: Current and Past Courses
       {% endif %}
     </div>
   </div>
-{% endif %}
+{% endunless %}
 {% endfor %}
 </div>
 
@@ -499,7 +499,7 @@ subtitle: Current and Past Courses
 
 <div class="courses-grid">
 {% for course in site.data.courses %}
-{% if course.semester contains "2023" %}
+{% if course.current == false %}
   <div class="course-card" data-level="{{ course.level | downcase }}">
     <div>
       <div class="course-code">{{ course.code }}</div>
