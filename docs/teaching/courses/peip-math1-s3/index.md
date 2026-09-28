@@ -53,6 +53,9 @@ track: maths
     <div class="objective-card">
       <h4>{% include ph.html name="hash" %} Raisonner et dénombrer</h4>
       <p>Logique, ensembles, combinatoire — applications aux plans d'expériences.</p>
+      <ul>
+        <li><a href="https://nextcloud.univ-lille.fr/index.php/f/405454196" target="_blank" rel="noopener noreferrer">{% include ph.html name="chart-bar" %} Parie 1 (PDF)</a></li>
+      </ul>
     </div>
     <div class="objective-card">
       <h4>{% include ph.html name="broadcast" %} Modéliser le périodique</h4>
