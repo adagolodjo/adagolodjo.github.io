@@ -70,14 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="card" style="margin-bottom:2rem;">
   <div class="card-content">
     <h2 class="title is-5">Contact Form</h2>
-    <!--
-      FORMSPREE SETUP (one-time, free):
-      1. Go to https://formspree.io and sign up / log in
-      2. Create a new form → copy your form ID (e.g. "xpwzvgkr")
-      3. Replace VOTRE_ID_FORMSPREE below with that ID
-      Without this step the form will redirect to the Formspree website.
-    -->
-    <form action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+    <form action="https://formspree.io/f/xnpnoedw" method="POST">
       <!-- honeypot anti-spam -->
       <input type="text" name="_gotcha" style="display:none">
       <!-- redirect after success -->
