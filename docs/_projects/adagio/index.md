@@ -73,10 +73,10 @@ The **ADAGIO** project focuses on developing adaptive digital tools and AI-drive
 
 ## Medical Applications
 
-- 🔬 **Minimally Invasive Surgery**: AI-guided endoscopic and laparoscopic procedures
-- 🏥 **Complex Interventions**: Assistance in high-risk, multi-step procedures
-- 👨‍🏫 **Training & Simulation**: Adaptive training platforms for surgical residents
-- 📊 **Quality Monitoring**: Real-time quality control during procedures
+- {% include ph.html name="microscope" %} **Minimally Invasive Surgery**: AI-guided endoscopic and laparoscopic procedures
+- {% include ph.html name="hospital" %} **Complex Interventions**: Assistance in high-risk, multi-step procedures
+- {% include ph.html name="chalkboard-teacher" %} **Training & Simulation**: Adaptive training platforms for surgical residents
+- {% include ph.html name="chart-bar" %} **Quality Monitoring**: Real-time quality control during procedures
 
 ## Research Approach
 

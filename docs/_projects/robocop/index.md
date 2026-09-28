@@ -60,10 +60,10 @@ The ROBOCOP project successfully developed a new generation of robotic assistant
 
 ## Clinical Impact
 
-- 🎯 **Targeting Accuracy**: improved from 10mm to 3mm
-- 🧠 **Cognitive Load**: Significant reduction compared to cognitive fusion
-- ⏳ **Procedure Time**: Maintained standard duration
-- 👨‍⚕️ **Integration**: Seamless alignment with clinical workflow
+- {% include ph.html name="target" %} **Targeting Accuracy**: improved from 10mm to 3mm
+- {% include ph.html name="brain" %} **Cognitive Load**: Significant reduction compared to cognitive fusion
+- {% include ph.html name="hourglass-medium" %} **Procedure Time**: Maintained standard duration
+- {% include ph.html name="stethoscope" %} **Integration**: Seamless alignment with clinical workflow
 
 ## Technical Innovations
 

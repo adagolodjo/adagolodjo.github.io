@@ -60,10 +60,10 @@ The COSSEROOTS project addresses the fundamental challenge of modeling and contr
 
 ## Technical Impact
 
-- 💻 **Simulation Speed**: Achieved >1000Hz computation rates
-- 🎯 **Accuracy**: Sub-millimeter error in shape prediction
-- 🤖 **Control**: Stable inverse kinematics for underactuated systems
-- 🔗 **Integration**: Direct coupling with SOFA simulation framework
+- {% include ph.html name="desktop" %} **Simulation Speed**: Achieved >1000Hz computation rates
+- {% include ph.html name="target" %} **Accuracy**: Sub-millimeter error in shape prediction
+- {% include ph.html name="robot" %} **Control**: Stable inverse kinematics for underactuated systems
+- {% include ph.html name="link" %} **Integration**: Direct coupling with SOFA simulation framework
 
 ### Research Goals
 - Develop advanced control strategies for soft robots using Cosserat theory

@@ -87,8 +87,8 @@ The Inria article gives an accessible overview of the multiple facets of this pr
 
 This work connects to ongoing projects in the DEFROST team:
 
-- 🔬 **[COSSEROOTS](/research/projects/cosseroots/)** — extending Cosserat-based control to growing soft robots
-- 🤖 **[CONECT](/research/projects/conect/)** — autonomous needle insertion guidance
-- 🧲 **[Active Prostate Phantom](/research/projects/active-prostate-phantom/)** — hardware phantom for validating biopsy robots
+- {% include ph.html name="microscope" %} **[COSSEROOTS](/research/projects/cosseroots/)** — extending Cosserat-based control to growing soft robots
+- {% include ph.html name="robot" %} **[CONECT](/research/projects/conect/)** — autonomous needle insertion guidance
+- {% include ph.html name="magnet-straight" %} **[Active Prostate Phantom](/research/projects/active-prostate-phantom/)** — hardware phantom for validating biopsy robots
 
 The [Cosserat plugin](https://github.com/SofaDefrost/Cosserat) and the [SoftRobots.Inverse plugin](https://github.com/SofaDefrost/SoftRobots.Inverse) are both open-source and freely available for the research community.

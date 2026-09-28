@@ -1421,7 +1421,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  console.log('🚀 Enhanced blog loaded successfully!');
+  console.log('Enhanced blog loaded successfully!');
 });
 
 </script>

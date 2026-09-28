@@ -60,10 +60,10 @@ The Growing Robot project represents a paradigm shift in medical robotics, devel
 
 ## Target Applications
 
-- 🧠 **Endovascular Surgery**: Navigation through tortuous brain vasculature
-- 🫁 **Bronchoscopy**: Reaching deep peripheral lung nodules
-- 🦠 **Gastroenterology**: Exploring narrow intestinal strictures
-- 👶 **Pediatric Surgery**: Navigating extremely confined infantile anatomies
+- {% include ph.html name="brain" %} **Endovascular Surgery**: Navigation through tortuous brain vasculature
+- {% include ph.html name="wind" %} **Bronchoscopy**: Reaching deep peripheral lung nodules
+- {% include ph.html name="virus" %} **Gastroenterology**: Exploring narrow intestinal strictures
+- {% include ph.html name="baby" %} **Pediatric Surgery**: Navigating extremely confined infantile anatomies
 The technology has significant applications in cardiovascular interventions, particularly in Transcatheter Aortic Valve Implantation (TAVI) procedures.
 
 **Project Focus Areas:**

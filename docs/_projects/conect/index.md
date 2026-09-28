@@ -60,10 +60,10 @@ The CONECT project brought together researchers from leading institutions to dev
 
 ## Clinical Applications
 
-- 🏥 **Minimally invasive surgery**: Enhanced accuracy
-- 🔬 **Biopsy procedures**: Targeted tissue sampling
-- 💊 **Targeted drug delivery**: Precision treatment
-- ☢️ **Interventional radiology**: Advanced guidance
+- {% include ph.html name="hospital" %} **Minimally invasive surgery**: Enhanced accuracy
+- {% include ph.html name="microscope" %} **Biopsy procedures**: Targeted tissue sampling
+- {% include ph.html name="pill" %} **Targeted drug delivery**: Precision treatment
+- {% include ph.html name="radioactive" %} **Interventional radiology**: Advanced guidance
 
 ## Publications
 

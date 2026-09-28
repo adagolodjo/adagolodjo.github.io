@@ -1498,7 +1498,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Add CSS animations (moved to <style> tag at the top of the file)
     
-    console.log('🚀 Enhanced research page loaded successfully with advanced features!');
+    console.log('Enhanced research page loaded successfully with advanced features!');
     
   } catch (error) {
     console.error('Error initializing research page:', error);

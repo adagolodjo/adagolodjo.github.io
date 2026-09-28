@@ -60,10 +60,10 @@ The Active Prostate Phantom project focuses on developing an advanced pneumatica
 
 ## Technical Approach
 
-- 📐 **Design Methodology**: Shape analysis of magnetic resonance imaging (MRI) datasets
-- 💻 **Modeling**: Finite element method (FEM) for accurate simulation
-- ✅ **Validation**: 3D reconstruction and physical measurement comparison
-- ⚙️ **Control System**: Pneumatic actuation with independent chamber control
+- {% include ph.html name="ruler" %} **Design Methodology**: Shape analysis of magnetic resonance imaging (MRI) datasets
+- {% include ph.html name="desktop" %} **Modeling**: Finite element method (FEM) for accurate simulation
+- {% include ph.html name="check-circle" %} **Validation**: 3D reconstruction and physical measurement comparison
+- {% include ph.html name="gear-six" %} **Control System**: Pneumatic actuation with independent chamber control
 
 **Project Start Date:** November 2023
 
