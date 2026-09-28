@@ -215,7 +215,7 @@ lang: fr
 </style>
 
 <div class="page-header">
-  <h1>📚 Enseignement & Pédagogie</h1>
+  <h1>{% include ph.html name="books" %} Enseignement & Pédagogie</h1>
   <p class="subtitle">Formation académique et développement des compétences en ingénierie</p>
 </div>
 
@@ -238,22 +238,22 @@ lang: fr
   </div>
 </div>
 
-## 🎯 Approche Pédagogique
+## {% include ph.html name="target" %} Approche Pédagogique
 
 Ma philosophie d'enseignement s'articule autour de **l'apprentissage par la pratique** et **l'innovation pédagogique**. Je privilégie une approche moderne qui combine théorie solide et applications concrètes, permettant aux étudiants de développer les compétences essentielles pour l'industrie 4.0.
 
 ### Principes Fondamentaux
 
-- **🔬 Apprentissage Expérientiel** : Learning by doing avec des projets industriels réels
-- **🌐 Ouverture Internationale** : Perspectives globales et multiculturelles
-- **💡 Innovation Technologique** : Intégration des dernières technologies (IA, IoT, robotique)
-- **🔄 Amélioration Continue** : Évolution constante basée sur les retours étudiants
+- **{% include ph.html name="microscope" %} Apprentissage Expérientiel** : Learning by doing avec des projets industriels réels
+- **{% include ph.html name="globe-hemisphere-west" %} Ouverture Internationale** : Perspectives globales et multiculturelles
+- **{% include ph.html name="lightbulb" %} Innovation Technologique** : Intégration des dernières technologies (IA, IoT, robotique)
+- **{% include ph.html name="arrows-clockwise" %} Amélioration Continue** : Évolution constante basée sur les retours étudiants
 
-## 📖 Domaines d'Enseignement
+## {% include ph.html name="book-open" %} Domaines d'Enseignement
 
 <div class="section-card">
   <div class="section-header">
-    <span class="icon">🤖</span>
+    <span class="icon">{% include ph.html name="robot" %} </span>
     <h2>Automatique & Robotique</h2>
   </div>
   
@@ -262,21 +262,21 @@ Ma philosophie d'enseignement s'articule autour de **l'apprentissage par la prat
       <div class="course-code">GR-711302</div>
       <div class="course-title">Automatique : Robotique</div>
       <div class="course-desc">Systèmes de contrôle automatique appliqués à la robotique avec travaux pratiques intensifs.</div>
-      <a href="/teaching/courses/gr-711302/" class="btn btn-primary">📖 Détails du cours</a>
+      <a href="/teaching/courses/gr-711302/" class="btn btn-primary">{% include ph.html name="book-open" %} Détails du cours</a>
     </div>
     
     <div class="course-card">
       <div class="course-code">DU-823220</div>
       <div class="course-title">Logique Séquentielle - SAP et Grafcet</div>
       <div class="course-desc">Maîtrise des systèmes automatisés de production et programmation d'automates industriels.</div>
-      <a href="/teaching/courses/logique-industrielle/" class="btn btn-primary">📖 Détails du cours</a>
+      <a href="/teaching/courses/logique-industrielle/" class="btn btn-primary">{% include ph.html name="book-open" %} Détails du cours</a>
     </div>
   </div>
 </div>
 
 <div class="section-card">
   <div class="section-header">
-    <span class="icon">🏥</span>
+    <span class="icon">{% include ph.html name="hospital" %} </span>
     <h2>Simulation & Robotique Médicale</h2>
   </div>
   
@@ -285,21 +285,21 @@ Ma philosophie d'enseignement s'articule autour de **l'apprentissage par la prat
       <div class="course-code">SIMULATION-MEDICALE</div>
       <div class="course-title">Simulation Médicale</div>
       <div class="course-desc">Applications de la simulation et robotique en médecine, technologies de pointe pour la santé.</div>
-      <a href="/teaching/courses/simulation-medicale/" class="btn btn-primary">📖 Détails du cours</a>
+      <a href="/teaching/courses/simulation-medicale/" class="btn btn-primary">{% include ph.html name="book-open" %} Détails du cours</a>
     </div>
     
     <div class="course-card">
       <div class="course-code">ROBOTIQUE-MEDICALE</div>
       <div class="course-title">Robotique médicale</div>
       <div class="course-desc">Conception et utilisation de robots médicaux (chirurgie, rééducation, assistance), appuyées par la simulation et l'IA pour la santé.</div>
-      <a href="/teaching/courses/modeling-medical-sim/" class="btn btn-primary">📖 Détails du cours</a>
+      <a href="/teaching/courses/modeling-medical-sim/" class="btn btn-primary">{% include ph.html name="book-open" %} Détails du cours</a>
     </div>
   </div>
 </div>
 
 <div class="section-card">
   <div class="section-header">
-    <span class="icon">🏭</span>
+    <span class="icon">{% include ph.html name="factory" %} </span>
     <h2>Industrie 4.0 & Innovation</h2>
   </div>
   
@@ -308,56 +308,56 @@ Ma philosophie d'enseignement s'articule autour de **l'apprentissage par la prat
       <div class="course-code">GR-715201</div>
       <div class="course-title">Usine 4.0</div>
       <div class="course-desc">Introduction aux concepts Industrie 4.0, IoT et fabrication intelligente.</div>
-      <a href="/teaching/courses/industrie-40/" class="btn btn-primary">📖 Détails du cours</a>
+      <a href="/teaching/courses/industrie-40/" class="btn btn-primary">{% include ph.html name="book-open" %} Détails du cours</a>
     </div>
     
     <div class="course-card">
       <div class="course-code">DU-822160</div>
       <div class="course-title">Introduction à la Sécurité Informatique</div>
       <div class="course-desc">Fondamentaux de la cybersécurité, protection des données et bonnes pratiques.</div>
-      <a href="#" class="btn btn-primary">📖 Détails du cours</a>
+      <a href="#" class="btn btn-primary">{% include ph.html name="book-open" %} Détails du cours</a>
     </div>
   </div>
 </div>
 
-## 🎓 Méthodologie Pédagogique
+## {% include ph.html name="graduation-cap" %} Méthodologie Pédagogique
 
 <div class="philosophy-section">
-  <h2>💡 Innovation & Adaptation</h2>
+  <h2>{% include ph.html name="lightbulb" %} Innovation & Adaptation</h2>
   
   <p>Mon enseignement intègre les <strong>dernières avancées technologiques</strong> et s'adapte aux besoins évolutifs de l'industrie. J'utilise des outils numériques modernes, des simulateurs professionnels et des plateformes collaboratives pour enrichir l'expérience d'apprentissage.</p>
   
   <p><strong>Outils pédagogiques utilisés :</strong></p>
   <ul>
-    <li>🔧 <strong>Simulateurs professionnels</strong> (MATLAB/Simulink, ROS, TIA Portal)</li>
-    <li>📱 <strong>Plateformes interactives</strong> (Notion, GitHub, plateformes de cours en ligne)</li>
-    <li>🤝 <strong>Projets collaboratifs</strong> avec l'industrie et laboratoires de recherche</li>
-    <li>📊 <strong>Évaluation continue</strong> avec feedback personnalisé</li>
+    <li>{% include ph.html name="wrench" %} <strong>Simulateurs professionnels</strong> (MATLAB/Simulink, ROS, TIA Portal)</li>
+    <li>{% include ph.html name="device-mobile" %} <strong>Plateformes interactives</strong> (Notion, GitHub, plateformes de cours en ligne)</li>
+    <li>{% include ph.html name="handshake" %} <strong>Projets collaboratifs</strong> avec l'industrie et laboratoires de recherche</li>
+    <li>{% include ph.html name="chart-bar" %} <strong>Évaluation continue</strong> avec feedback personnalisé</li>
   </ul>
   
   <p>Cette approche permet aux étudiants de développer non seulement des <strong>compétences techniques solides</strong>, mais aussi des <strong>soft skills</strong> essentielles : travail en équipe, communication technique, résolution de problèmes complexes et adaptabilité.</p>
 </div>
 
-## 📚 Ressources & Support
+## {% include ph.html name="books" %} Ressources & Support
 
 ### Pour les Étudiants
-- **📖 Documentation complète** : Supports de cours, exercices et projets disponibles en ligne
-- **🎯 Suivi personnalisé** : Permanences et accompagnement individuel
-- **🔗 Réseau professionnel** : Connections avec l'industrie et opportunités de stage
+- **{% include ph.html name="book-open" %} Documentation complète** : Supports de cours, exercices et projets disponibles en ligne
+- **{% include ph.html name="target" %} Suivi personnalisé** : Permanences et accompagnement individuel
+- **{% include ph.html name="link" %} Réseau professionnel** : Connections avec l'industrie et opportunités de stage
 
 ### Pour les Enseignants
-- **🤝 Collaboration pédagogique** : Partage d'expériences et bonnes pratiques
-- **📈 Recherche en pédagogie** : Développement de nouvelles méthodes d'enseignement
-- **🌍 Réseaux internationaux** : Partenariats avec universités européennes
+- **{% include ph.html name="handshake" %} Collaboration pédagogique** : Partage d'expériences et bonnes pratiques
+- **{% include ph.html name="trend-up" %} Recherche en pédagogie** : Développement de nouvelles méthodes d'enseignement
+- **{% include ph.html name="globe" %} Réseaux internationaux** : Partenariats avec universités européennes
 
 ---
 
-## 🔗 Liens Utiles
+## {% include ph.html name="link" %} Liens Utiles
 
-- **[📚 Catalogue complet des cours](/teaching/courses/)** - Vue d'ensemble de tous les enseignements
-- **[🎓 Formation continue](/)** - Programmes de formation pour professionnels
-- **[🔬 Projets étudiants](/projects/)** - Travaux et réalisations des étudiants
-- **[📞 Contact](/contact/)** - Pour questions et collaboration pédagogique
+- **[{% include ph.html name="books" %} Catalogue complet des cours](/teaching/courses/)** - Vue d'ensemble de tous les enseignements
+- **[{% include ph.html name="graduation-cap" %} Formation continue](/)** - Programmes de formation pour professionnels
+- **[{% include ph.html name="microscope" %} Projets étudiants](/projects/)** - Travaux et réalisations des étudiants
+- **[{% include ph.html name="phone" %} Contact](/contact/)** - Pour questions et collaboration pédagogique
 
 ---
 

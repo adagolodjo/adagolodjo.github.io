@@ -166,6 +166,9 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 <div class="timeline-content">
 <h4>Structures complexes et actions avancées</h4>
 <div class="timeline-details">Parallélisme, compteurs, variables, actions conditionnelles, macro-étapes, forçage.</div>
+<ul>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/bYYc7SrDdBsMgJP" target="_blank" rel="noopener noreferrer">{% include ph.html name="chart-bar" %} Parie 1-3 (PDF)</a></li>
+</ul>
 </div>
 </div>
 <div class="timeline-item">

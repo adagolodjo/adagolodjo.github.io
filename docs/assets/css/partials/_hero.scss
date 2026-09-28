@@ -93,6 +93,7 @@
       right: var(--spacing-sm);
       border-radius: var(--border-radius-lg);
     }
+
   }
 
   // Conteneurs flexibles optimisés
@@ -105,6 +106,31 @@
     @include respond-to(mobile) {
       gap: var(--spacing-sm);
     }
+  }
+
+  // La pilule (état .scrolled) a des marges gauche/droite : sans ça, le
+  // contenu de la page qui défile juste derrière ces marges resterait
+  // visible et se superposerait au texte, donnant une impression de mise
+  // en page cassée. Ce halo pleine largeur, fixe et flouté (élément frère
+  // réel, pas un pseudo-élément — plus fiable avec le flex container),
+  // masque cette bande derrière la pilule.
+  & + .hero-nav-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 84px;
+    z-index: calc(#{$z-fixed} - 1);
+    opacity: 0;
+    pointer-events: none;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    background: linear-gradient(180deg, #{$primary-dark}55 0%, transparent 100%);
+    @include smooth-transition(opacity, var(--hero-animation-speed));
+  }
+
+  &.scrolled + .hero-nav-backdrop {
+    opacity: 1;
   }
 
   // Sur mobile, ces liens sont déjà dupliqués dans #mobile-nav (le menu
