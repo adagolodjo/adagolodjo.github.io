@@ -85,7 +85,7 @@ page_kind: courses-index
 
 <div class="courses-grid" id="current-courses">
 {% for course in site.data.courses %}
-{% if course.semester contains "2024" %}
+{% unless course.current == false %}
   <div class="course-card" data-level="{{ course.level | downcase }}">
     <div>
       <div class="course-code">{{ course.code }}</div>
@@ -117,7 +117,7 @@ page_kind: courses-index
       {% endif %}
     </div>
   </div>
-{% endif %}
+{% endunless %}
 {% endfor %}
 </div>
 
@@ -186,7 +186,7 @@ page_kind: courses-index
 
 <div class="courses-grid">
 {% for course in site.data.courses %}
-{% if course.semester contains "2023" %}
+{% if course.current == false %}
   <div class="course-card" data-level="{{ course.level | downcase }}">
     <div>
       <div class="course-code">{{ course.code }}</div>
