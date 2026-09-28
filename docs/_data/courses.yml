@@ -161,3 +161,31 @@
   hours_td: "4"
   hours_tp: "8"
   evaluation: "Note de Classe, Note de rapport"
+
+# Mathématiques 1 — PeiP (3 semestres)
+- code: PEIP-MATH1-S1
+  title: "Mathématiques 1 — PeiP S1"
+  semester: "S1"
+  description: "Trigonometry and plane vectors for the PeiP engineering preparatory track"
+  syllabus: "/teaching/courses/peip-math1-s1/"
+  level: "Undergraduate"
+  hours_td: "6"
+  evaluation: "DS (à confirmer)"
+
+- code: PEIP-MATH1-S2
+  title: "Mathématiques 1 — PeiP S2"
+  semester: "S2"
+  description: "Taylor expansions, differential equations, multivariable functions, and descriptive statistics for biological and food engineering"
+  syllabus: "/teaching/courses/peip-math1-s2/"
+  level: "Undergraduate"
+  hours_td: "20"
+  evaluation: "DS (à confirmer)"
+
+- code: PEIP-MATH1-S3
+  title: "Mathématiques 1 — PeiP S3"
+  semester: "S3"
+  description: "Logic and combinatorics, complex numbers, polynomials, and plane/space geometry for engineering applications"
+  syllabus: "/teaching/courses/peip-math1-s3/"
+  level: "Undergraduate"
+  hours_td: "20"
+  evaluation: "DS (à confirmer)"
