@@ -96,6 +96,9 @@ track: maths
       <div>
         <h4>Nombres complexes</h4>
         <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; font-style: italic;">Application : signaux, régime sinusoïdal.</div>
+        <ul>
+          <li><a href="https://nextcloud.univ-lille.fr/index.php/f/405454196" target="_blank" rel="noopener noreferrer">{% include ph.html name="chart-bar" %} Parie 1 (PDF)</a></li>
+        </ul>
       </div>
     </div>
 
