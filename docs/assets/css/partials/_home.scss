@@ -1125,16 +1125,13 @@
 }
 
 // ===== DARK MODE SUPPORT =====
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-color: #e0e0e0;
-    --text-muted: #b0b0b0;
-    --text-light: #999;
-    --card-bg: #1a1a1a;
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
-  }
-  
+// Lié au thème du site (data-theme), pas à celui de l'OS : sinon un OS en
+// mode sombre imposait du texte clair sur le fond clair du thème par défaut.
+[data-theme="dark"] {
+  --text-light: #999;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+
   .project-card {
     background: rgba(6, 141, 136, 0.08);
     

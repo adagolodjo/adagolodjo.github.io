@@ -17,7 +17,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
     <div class="blog-search-glass">
       <div class="blog-search-row">
         <span class="blog-search-icon">{%- include ph.html name="magnifying-glass" -%}</span>
-        <input type="text" id="blog-search" placeholder="Search posts, topics or keywords… (⌘K)" class="blog-search-input">
+        <input type="text" id="blog-search" placeholder="Search posts, topics or keywords…" class="blog-search-input">
         <button id="clear-search" class="blog-search-clear" title="Clear">
           {%- include ph.html name="x" -%}
         </button>
@@ -439,7 +439,10 @@ subtitle: Thoughts on Research, Teaching, and Technology
   border-radius: 100px;
   margin-bottom: 1rem;
 }
-.blog-hero-title {
+/* Extra specificity on purpose: must outrank the site-wide
+   `body .section .content h1` colour, which made the title dark grey on the
+   dark hero. */
+.blog-hero .blog-hero-text h1.blog-hero-title {
   font-size: clamp(2rem, 5vw, 3.2rem);
   font-weight: 800;
   color: #fff;
@@ -477,6 +480,7 @@ subtitle: Thoughts on Research, Teaching, and Technology
 .blog-search-icon { color: rgba(255,255,255,0.7); }
 .blog-search-input {
   flex: 1;
+  min-width: 0; /* lets the input shrink inside the row on narrow screens */
   background: transparent;
   border: none;
   outline: none;
