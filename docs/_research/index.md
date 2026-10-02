@@ -405,7 +405,7 @@ keyword_cloud:
       <a href="/publications/" class="stat-card stat-card-link" data-aos="fade-left" data-aos-delay="200">
         <div class="stat-icon">{%- include ph.html name="file-text" -%}</div>
         <div class="stat-text">
-          <div class="stat-number" data-count="18">0</div>
+          <div class="stat-number" data-count="{{ site.data.publications | size }}">0</div>
           <div class="stat-label">Publications</div>
         </div>
       </a>
@@ -478,7 +478,7 @@ keyword_cloud:
         
         <div class="key-metrics">
           <div class="metric">
-            <div class="metric-value">18+</div>
+            <div class="metric-value">{{ site.data.publications | size }}+</div>
             <div class="metric-label">Publications</div>
           </div>
           <div class="metric">

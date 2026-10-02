@@ -169,6 +169,9 @@ Ce cours aborde la <b>description de la commande séquentielle des Systèmes Aut
 <ul>
 <li><a href="https://nextcloud.univ-lille.fr/index.php/s/bYYc7SrDdBsMgJP" target="_blank" rel="noopener noreferrer">{% include ph.html name="chart-bar" %} Parie 1-3 (PDF)</a></li>
 </ul>
+<ul>
+<li><a href="https://nextcloud.univ-lille.fr/index.php/s/Ec2CWa3gK99P29d" target="_blank" rel="noopener noreferrer">{% include ph.html name="chart-bar" %} Parie 1-3 (PDF)</a></li>
+</ul>
 </div>
 </div>
 <div class="timeline-item">
