@@ -1,0 +1,31 @@
+# Research areas shown on /research/ and used to filter /publications/?area=<id>.
+# A publication belongs to an area when one of its `keywords` (in
+# publications.yml) appears in the area's `keywords` list.
+
+- id: surgical-robotics
+  title: "Surgical Robotics"
+  description: "Precision robotic systems for minimally invasive procedures"
+  icon: "robot"
+  gradient: "gradient-medical"
+  keywords: ["Needle Insertion", "Robotic Surgery", "Robotic Control", "Medical Robotics", "Medical Robots", "Hybrid Arms", "Motion Planning", "Robotics"]
+
+- id: simulation
+  title: "Real-time Simulation"
+  description: "Advanced FEM modeling for surgical planning and training"
+  icon: "cube"
+  gradient: "gradient-simulation"
+  keywords: ["FEM", "FEM Simulation", "Medical Simulation", "Deformable Models", "Real-time", "Haptic Rendering", "Haptic Feedback", "Hyperelastic Models", "Domain Decomposition", "GPU Computing", "Biomechanics"]
+
+- id: augmented-reality
+  title: "AR & Visualization"
+  description: "Immersive technologies for enhanced surgical guidance"
+  icon: "eyeglasses"
+  gradient: "gradient-ar"
+  keywords: ["Augmented Reality", "Non-rigid Registration", "Pose Estimation", "Liver Surgery"]
+
+- id: soft-robotics
+  title: "Soft Robotics"
+  description: "Biomimetic systems for delicate medical applications"
+  icon: "hand-palm"
+  gradient: "gradient-soft"
+  keywords: ["Soft Robotics", "Growing Robots", "Cosserat Rod", "Cosserat Model", "Electroactive Polymer", "Micro-robotics", "TAVI", "Kinematics"]

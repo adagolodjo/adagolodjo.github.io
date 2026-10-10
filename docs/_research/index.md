@@ -285,6 +285,20 @@ keyword_cloud:
     box-shadow: 0 20px 35px rgba(1,96,100,0.45), 0 0 20px rgba(72,170,173,0.3);
   }
 
+  /* Focus card → filtered publications link */
+  .focus-pubs-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #016064;
+    text-decoration: none;
+  }
+  .focus-pubs-link:hover { text-decoration: underline; }
+  [data-theme="dark"] .focus-pubs-link { color: #5CC8CB; }
+
   /* ===========================
      ENHANCED: Progress Bars
   =========================== */
@@ -494,49 +508,24 @@ keyword_cloud:
       
       <div class="overview-visual" data-aos="fade-left">
         <div class="focus-areas-grid">
+          {%- for area in site.data.research_areas %}
+          {%- assign area_count = 0 -%}
+          {%- for pub in site.data.publications -%}
+            {%- for kw in pub.keywords -%}
+              {%- if area.keywords contains kw -%}{%- assign area_count = area_count | plus: 1 -%}{%- break -%}{%- endif -%}
+            {%- endfor -%}
+          {%- endfor %}
           <div class="focus-card" data-tilt>
-            <div class="focus-icon gradient-medical">
-              {%- include ph.html name="robot" -%}
+            <div class="focus-icon {{ area.gradient }}">
+              {%- include ph.html name=area.icon -%}
             </div>
-            <h3>Surgical Robotics</h3>
-            <p>Precision robotic systems for minimally invasive procedures</p>
-            <div class="focus-progress">
-              <div class="progress-bar" data-progress="85"></div>
-            </div>
+            <h3>{{ area.title }}</h3>
+            <p>{{ area.description }}</p>
+            <a class="focus-pubs-link" href="{{ '/publications/' | relative_url }}?area={{ area.id }}">
+              {{ area_count }} publication{% if area_count != 1 %}s{% endif %} {%- include ph.html name="arrow-right" -%}
+            </a>
           </div>
-          
-          <div class="focus-card" data-tilt>
-            <div class="focus-icon gradient-simulation">
-              {%- include ph.html name="cube" -%}
-            </div>
-            <h3>Real-time Simulation</h3>
-            <p>Advanced FEM modeling for surgical planning and training</p>
-            <div class="focus-progress">
-              <div class="progress-bar" data-progress="92"></div>
-            </div>
-          </div>
-          
-          <div class="focus-card" data-tilt>
-            <div class="focus-icon gradient-ar">
-              {%- include ph.html name="cube" -%}
-            </div>
-            <h3>AR & Visualization</h3>
-            <p>Immersive technologies for enhanced surgical guidance</p>
-            <div class="focus-progress">
-              <div class="progress-bar" data-progress="78"></div>
-            </div>
-          </div>
-          
-          <div class="focus-card" data-tilt>
-            <div class="focus-icon gradient-soft">
-              {%- include ph.html name="hand-palm" -%}
-            </div>
-            <h3>Soft Robotics</h3>
-            <p>Biomimetic systems for delicate medical applications</p>
-            <div class="focus-progress">
-              <div class="progress-bar" data-progress="88"></div>
-            </div>
-          </div>
+          {%- endfor %}
         </div>
       </div>
     </div>

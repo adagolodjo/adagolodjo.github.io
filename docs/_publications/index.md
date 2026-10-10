@@ -435,6 +435,38 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
   color: var(--text-color, #1A3A3C);
 }
 
+.pub-area-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 0 0 1.25rem;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  background: rgba(72, 170, 173, 0.1);
+  border: 1px solid rgba(72, 170, 173, 0.35);
+  color: #016064;
+  font-size: 0.9rem;
+}
+.pub-area-banner[hidden] { display: none; }
+.pub-area-clear {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #016064;
+  background: transparent;
+  color: #016064;
+  cursor: pointer;
+}
+.pub-area-clear:hover { background: #016064; color: #fff; }
+[data-theme="dark"] .pub-area-banner { color: #5CC8CB; }
+[data-theme="dark"] .pub-area-clear { color: #5CC8CB; border-color: #5CC8CB; }
 [data-theme="dark"] .pub-badge-rank { color: #5CC8CB; border-color: rgba(92, 200, 203, 0.4); }
 [data-theme="dark"] .pub-badge-oa   { color: #81C784; border-color: rgba(129, 199, 132, 0.4); }
 [data-theme="dark"] .pub-btn-cite   { color: #CE93D8; border-color: #CE93D8; }
@@ -539,6 +571,13 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
   </div>
 </div>
 
+<div class="pub-area-banner" id="pub-area-banner" hidden>
+  {%- include ph.html name="tag" -%}
+  <span>Research area: <strong id="pub-area-name"></strong></span>
+  <button type="button" class="pub-area-clear" id="pub-area-clear">{%- include ph.html name="x" -%} Show all</button>
+</div>
+<script type="application/json" id="pub-areas-data">{{ site.data.research_areas | jsonify }}</script>
+
 <!-- ── Publication list ─────────────────────────────────────── -->
 <div id="pub-list">
 
@@ -558,6 +597,7 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
     <div class="pub-card"
          data-type="{{ pub.type }}"
          data-year="{{ pub.year }}"
+         data-keywords="{{ pub.keywords | join: '|' | escape }}"
          data-search="{{ search_text | escape }}">
 
       <!-- Left: type badge -->
@@ -730,6 +770,24 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
   var searchInput = document.getElementById('pub-search-input');
   if (searchInput) searchInput.addEventListener('input', applyFilters);
 
+  /* ── Research area filter (?area=<id>, from /research/) ── */
+  var areaKeywords = null;
+  var areas = JSON.parse(document.getElementById('pub-areas-data').textContent || '[]');
+  var areaId = new URLSearchParams(window.location.search).get('area');
+  var area = areas.find(function (a) { return a.id === areaId; });
+  var banner = document.getElementById('pub-area-banner');
+  if (area) {
+    areaKeywords = area.keywords;
+    document.getElementById('pub-area-name').textContent = area.title;
+    banner.hidden = false;
+  }
+  document.getElementById('pub-area-clear').addEventListener('click', function () {
+    areaKeywords = null;
+    banner.hidden = true;
+    history.replaceState(null, '', window.location.pathname);
+    applyFilters();
+  });
+
   function applyFilters() {
     var activeBtn   = document.querySelector('.pub-filter-tab.active');
     var activeFilter = activeBtn ? activeBtn.dataset.filter : 'all';
@@ -740,7 +798,10 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
     document.querySelectorAll('.pub-card').forEach(function (card) {
       var typeOk   = (activeFilter === 'all') || (card.dataset.type === activeFilter);
       var searchOk = !term || (card.dataset.search || '').includes(term);
-      var show     = typeOk && searchOk;
+      var areaOk   = !areaKeywords || (card.dataset.keywords || '').split('|').some(function (k) {
+        return areaKeywords.indexOf(k) !== -1;
+      });
+      var show     = typeOk && searchOk && areaOk;
       card.classList.toggle('pub-hidden', !show);
       if (show) anyVisible = true;
     });
@@ -754,6 +815,8 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
     var noRes = document.getElementById('pub-no-results');
     if (noRes) noRes.style.display = anyVisible ? 'none' : 'block';
   }
+
+  if (area) applyFilters();
 
   /* ── Citation export (BibTeX / APA / MLA) ────────────────── */
   var PARTICLES = ['de', 'du', 'des', 'van', 'von', 'der', 'den', 'le', 'la', 'di', 'da'];
