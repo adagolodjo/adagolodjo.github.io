@@ -136,7 +136,8 @@ $card-shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
     display: block;
     width: calc(100% + #{$card-padding * 2});
     height: 220px;
-    margin: -$card-padding -$card-padding 1.5rem -$card-padding;
+    // Parenthesised: unwrapped, Sass reads "-$a -$b" as a subtraction.
+    margin: (-$card-padding) (-$card-padding) 1.5rem (-$card-padding);
     overflow: hidden;
     border-radius: $card-border-radius $card-border-radius 0 0;
     transition: transform $transition-speed $transition-easing;
