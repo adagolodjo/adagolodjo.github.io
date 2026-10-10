@@ -8,6 +8,8 @@ description: "Research project applying Cosserat's theory to advance the control
 start_date: 2021-01-01
 status: active
 keywords: ["Cosserat Rod Theory", "Soft Robotics", "Real-Time Simulation", "Control Theory", "FEM"]
+venue: "RA-L 2021"
+venue_url: "https://hal.science/hal-03192168v1"
 ---
 
 <div class="project-hero-section">

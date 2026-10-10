@@ -175,6 +175,14 @@ layout: default
         robotics, and augmented reality for surgical assistance. The goal: make minimally
         invasive procedures safer, more precise, and more accessible.
       </p>
+      <ul class="home-roles">
+        {%- for r in site.data.roles %}
+        <li class="home-role">
+          {%- include ph.html name=r.icon -%}
+          <span><strong>{{ r.role }}</strong> — {{ r.where }}</span>
+        </li>
+        {%- endfor %}
+      </ul>
       <div class="home-about-badges">
         <span class="home-badge">{%- include ph.html name="buildings" -%} Univ. Lille</span>
         <span class="home-badge">{%- include ph.html name="flask" -%} DEFROST · Inria</span>
@@ -248,6 +256,7 @@ layout: default
         <div class="project-meta">
           <span class="project-status active">Active</span>
           <span class="project-year">2023-Present</span>
+          <a class="project-venue" href="https://hal.science/hal-05216849v1" target="_blank" rel="noopener noreferrer" title="Related publication">{%- include ph.html name="file-text" -%} IROS 2025</a>
         </div>
       </div>
       </div>
@@ -278,6 +287,7 @@ layout: default
         <div class="project-meta">
           <span class="project-status active">Active</span>
           <span class="project-year">2022-Present</span>
+          <a class="project-venue" href="https://hal.science/hal-04390298v1" target="_blank" rel="noopener noreferrer" title="Related publication">{%- include ph.html name="file-text" -%} RoboSoft 2023</a>
         </div>
       </div>
       </div>
@@ -337,6 +347,7 @@ layout: default
         <div class="project-meta">
           <span class="project-status completed">Completed</span>
           <span class="project-year">2017-2021</span>
+          <a class="project-venue" href="https://inria.hal.science/hal-03729071v1" target="_blank" rel="noopener noreferrer" title="Related publication">{%- include ph.html name="file-text" -%} RA-L 2022</a>
         </div>
       </div>
       </div>
@@ -398,6 +409,7 @@ layout: default
         <div class="project-meta">
           <span class="project-status active">Active</span>
           <span class="project-year">2021-2024</span>
+          <a class="project-venue" href="https://hal.science/hal-03192168v1" target="_blank" rel="noopener noreferrer" title="Related publication">{%- include ph.html name="file-text" -%} RA-L 2021</a>
         </div>
       </div>
       </div>
@@ -410,6 +422,16 @@ layout: default
       <span class="mr-05">See all projects</span>
       <span class="featured-arrow">→</span>
     </a>
+  </div>
+</section>
+
+<section class="home-talks-section full-bleed">
+  <div class="home-talks-inner">
+    <div class="home-talks-header">
+      <h2 class="home-talks-title">{%- include ph.html name="microphone" -%} Recent Talks</h2>
+      <a href="{{ '/about/#talks' | relative_url }}" class="home-talks-all">All talks {%- include ph.html name="arrow-right" -%}</a>
+    </div>
+    {% include talks-list.html limit=3 no_press=true %}
   </div>
 </section>
 

@@ -1302,3 +1302,75 @@
     justify-content: center;
   }
 }
+
+// ===== ROLES (About teaser) =====
+.home-roles {
+  list-style: none;
+  margin: 0 0 1.4rem;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+  max-width: 680px;
+}
+.home-role {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-muted, #4a5568);
+
+  .ph-icon { color: $primary-light; flex-shrink: 0; margin-top: 0.2rem; }
+  strong { color: var(--text-color); font-weight: $weight-semibold; }
+}
+
+// ===== RECENT TALKS =====
+.home-talks-section { padding: 3.5rem 2rem; }
+.home-talks-inner { max-width: 1100px; margin: 0 auto; }
+.home-talks-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.home-talks-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: $weight-bold;
+  color: var(--text-color);
+  margin: 0;
+  .ph-icon { color: $primary-light; }
+}
+.home-talks-all {
+  color: $primary;
+  font-weight: $weight-semibold;
+  font-size: 0.9rem;
+  .ph-icon { font-size: 0.75rem; margin-left: 0.25rem; }
+}
+
+// ===== PROJECT VENUE BADGE (homepage + projects listing) =====
+.project-venue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: $weight-bold;
+  color: $primary;
+  background: rgba($primary-light, 0.12);
+  border: 1px solid rgba($primary-light, 0.35);
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover { background: rgba($primary-light, 0.22); color: $primary-dark; }
+}
+
+[data-theme="dark"] {
+  .home-talks-all { color: $primary-light; }
+  .project-venue { color: $primary-light; }
+}

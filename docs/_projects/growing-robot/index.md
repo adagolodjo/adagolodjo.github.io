@@ -8,6 +8,8 @@ description: "Development of innovative vine-inspired growing robots using evers
 start_date: 2023-01-01
 status: active
 keywords: ["Growing Robots", "Soft Robotics", "Eversion", "TAVI", "Medical Robotics", "Kinematics", "Quasi-Statics"]
+venue: "RoboSoft 2023"
+venue_url: "https://hal.science/hal-04390298v1"
 ---
 
 <div class="project-hero-section">

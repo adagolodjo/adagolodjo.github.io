@@ -289,52 +289,6 @@ image: /assets/images/notion-face.png
   margin-top: 0.4rem;
 }
 
-/* ---- Invited talks ---- */
-.talks-list { list-style: none; padding: 0; margin: 0; }
-.talk-item {
-  display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 1rem;
-  padding: 0.9rem 0;
-  border-bottom: 1px solid rgba(1,96,100,0.08);
-  align-items: start;
-}
-.talk-item:last-child { border-bottom: none; }
-.talk-date {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--about-primary);
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  padding-top: 0.1rem;
-}
-.talk-body { }
-.talk-title {
-  font-size: 0.93rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 0.15rem;
-}
-.talk-venue {
-  font-size: 0.84rem;
-  color: #555;
-}
-.talk-venue i { color: var(--about-light); margin-right: 0.25rem; }
-.talk-badge {
-  display: inline-block;
-  background: rgba(1,96,100,0.08);
-  color: var(--about-primary);
-  border: 1px solid rgba(1,96,100,0.2);
-  border-radius: 20px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  padding: 0.1rem 0.55rem;
-  margin-left: 0.4rem;
-  vertical-align: middle;
-}
-
 /* ---- CTA ---- */
 .about-cta {
   margin-top: 3rem;
@@ -614,87 +568,9 @@ image: /assets/images/notion-face.png
 ---
 
 <!-- ===== INVITED TALKS & CONFERENCES ===== -->
-<h2 class="about-section-title">{%- include ph.html name="microphone" -%} Invited Talks, Press &amp; Conferences</h2>
+<h2 class="about-section-title" id="talks">{%- include ph.html name="microphone" -%} Invited Talks, Press &amp; Conferences</h2>
 
-<ul class="talks-list">
-
-  <li class="talk-item">
-    <div class="talk-date">Sep 2025</div>
-    <div class="talk-body">
-      <div class="talk-title">
-        Modeling and Control of Deformable Robots Using the Finite Element Method
-        <span class="talk-badge">Invited Lecture</span>
-      </div>
-      <div class="talk-venue">
-        {%- include ph.html name="map-pin" -%}
-        <strong>COSUR 2025</strong> — Summer School on Control of Surgical Robots ·
-        Lisbon, Portugal (pre-event of CRAS 2025)
-      </div>
-    </div>
-  </li>
-
-  <li class="talk-item">
-    <div class="talk-date">Dec 2024</div>
-    <div class="talk-body">
-      <div class="talk-title">
-        Featured by Inria — Prostate Cancer: Digital Sciences to the Rescue of Diagnosis
-        <span class="talk-badge" style="background:#E65100; border-color:#E65100;">Press</span>
-      </div>
-      <div class="talk-venue">
-        {%- include ph.html name="newspaper" -%}
-        <a href="https://www.inria.fr/fr/cancer-prostate-diagnostic-ia-robotique" target="_blank" rel="noopener">Article Inria (FR)</a> ·
-        <a href="{{ '/blog/' | relative_url }}">Read the story + video</a>
-      </div>
-    </div>
-  </li>
-
-  <li class="talk-item">
-    <div class="talk-date">Dec 2024</div>
-    <div class="talk-body">
-      <div class="talk-title">
-        Computational Robotics and AI in Medical Applications
-        <span class="talk-badge">Invited Speaker</span>
-      </div>
-      <div class="talk-venue">
-        {%- include ph.html name="map-pin" -%}
-        <strong>LACORO 2024</strong> — Latin American Conference on Operations Research ·
-        Rancagua, Chile
-      </div>
-    </div>
-  </li>
-
-  <li class="talk-item">
-    <div class="talk-date">Dec 2024</div>
-    <div class="talk-body">
-      <div class="talk-title">
-        AI and Scientific Computing for Surgical Robotics
-        <span class="talk-badge">Invited Speaker</span>
-      </div>
-      <div class="talk-venue">
-        {%- include ph.html name="map-pin" -%}
-        <strong>Journées Scientifiques Inria Chile 2024</strong> ·
-        Gabriela Mistral Cultural Center, Santiago, Chile
-        (official pre-event of the AI Action Summit)
-      </div>
-    </div>
-  </li>
-
-  <li class="talk-item">
-    <div class="talk-date">Mar 2024</div>
-    <div class="talk-body">
-      <div class="talk-title">
-        Robotics and Augmented Reality for Healthcare Applications
-        <span class="talk-badge">Invited Speaker</span>
-      </div>
-      <div class="talk-venue">
-        {%- include ph.html name="map-pin" -%}
-        <strong>CAIR Hong Kong Forum</strong> — AI and Robotics in Healthcare ·
-        Hong Kong Institute of Science &amp; Technology
-      </div>
-    </div>
-  </li>
-
-</ul>
+{% include talks-list.html %}
 
 ---
 

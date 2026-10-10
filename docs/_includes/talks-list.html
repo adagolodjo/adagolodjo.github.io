@@ -1,0 +1,30 @@
+{%- comment -%}
+  Renders talks from _data/talks.yml.
+  Params: limit (number), no_press (true to skip Press entries).
+{%- endcomment -%}
+{%- assign shown = 0 -%}
+<ul class="talks-list">
+{%- for talk in site.data.talks -%}
+  {%- if include.no_press and talk.type == "Press" -%}{%- continue -%}{%- endif -%}
+  {%- if include.limit and shown >= include.limit -%}{%- break -%}{%- endif -%}
+  {%- assign shown = shown | plus: 1 -%}
+  <li class="talk-item">
+    <div class="talk-date">{{ talk.date }}</div>
+    <div class="talk-body">
+      <div class="talk-title">
+        {% if talk.post %}<a href="{{ talk.post | relative_url }}">{{ talk.title }}</a>{% else %}{{ talk.title }}{% endif %}
+        <span class="talk-badge{% if talk.type == 'Press' %} talk-badge-press{% elsif talk.type == 'Keynote' %} talk-badge-keynote{% endif %}">{{ talk.type }}</span>
+      </div>
+      <div class="talk-venue">
+        {%- if talk.type == "Press" -%}
+          {%- include ph.html name="newspaper" -%}
+          <strong>{{ talk.event }}</strong>{% if talk.external %} · <a href="{{ talk.external }}" target="_blank" rel="noopener noreferrer">Original article</a>{% endif %}
+        {%- else -%}
+          {%- include ph.html name="map-pin" -%}
+          <strong>{{ talk.event }}</strong>{% if talk.event_detail %} — {{ talk.event_detail }}{% endif %}{% if talk.location != "" %} · {{ talk.location }}{% endif %}
+        {%- endif -%}
+      </div>
+    </div>
+  </li>
+{%- endfor -%}
+</ul>

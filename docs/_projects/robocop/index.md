@@ -8,6 +8,8 @@ description: "The ROBOCOP project aims to develop a new generation of robotic as
 start_date: 2017-01-01
 status: completed
 keywords: ["Robotic Biopsy", "Co-Manipulation", "Prostate Cancer", "Shared Control", "Interventional Radiology"]
+venue: "RA-L 2022"
+venue_url: "https://inria.hal.science/hal-03729071v1"
 ---
 
 <div class="project-hero-section">

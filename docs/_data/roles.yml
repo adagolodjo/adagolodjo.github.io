@@ -1,0 +1,21 @@
+# Current roles and responsibilities shown on the homepage About teaser.
+# Source: CV (cv_yinoussa_adagolodjo.tex). Keep it short — 5-6 lines max.
+
+- icon: "graduation-cap"
+  role: "Assistant Professor in Computer Science"
+  where: "University of Lille · since 2022"
+- icon: "flask"
+  role: "Permanent member"
+  where: "DEFROST team · Inria / CRIStAL UMR 9189"
+- icon: "briefcase"
+  role: "PI & permanent member"
+  where: "ROBOCOP and IRE research projects"
+- icon: "users"
+  role: "Supervisor"
+  where: "PhD students and postdoctoral researchers"
+- icon: "code"
+  role: "Lead developer"
+  where: "Cosserat plugin for SOFA (open source)"
+- icon: "magnifying-glass"
+  role: "Reviewer"
+  where: "IEEE T-RO · T-MRB · RA-L · ICRA · IROS"

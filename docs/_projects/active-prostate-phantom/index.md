@@ -8,6 +8,8 @@ description: "Development of a pneumatically actuated prostate phantom with mult
 start_date: 2023-11-01
 status: active
 keywords: ["Medical Simulation", "Robotic Surgery", "Phantom Development", "Prostate Cancer", "Haptic Feedback"]
+venue: "IROS 2025"
+venue_url: "https://hal.science/hal-05216849v1"
 ---
 
 <div class="project-hero-section">

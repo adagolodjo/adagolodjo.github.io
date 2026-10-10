@@ -47,6 +47,7 @@ permalink: /research/projects/
       {% endif %}
       <div class="project-footer">
         <a href="{{ project.url | relative_url }}" class="button is-primary">Learn More →</a>
+        {% if project.venue %}<a class="project-venue" href="{{ project.venue_url }}" target="_blank" rel="noopener noreferrer" title="Related publication">{%- include ph.html name="file-text" -%} {{ project.venue }}</a>{% endif %}
         {% if project.start_date %}<span class="project-year">Since {{ project.start_date | date: "%Y" }}</span>{% endif %}
       </div>
     </div>
