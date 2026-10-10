@@ -10,6 +10,8 @@
   conference: "IROS 2025 – IEEE/RSJ International Conference on Intelligent Robots and Systems"
   hal_id: "hal-05216849"
   hal_url: "https://hal.science/hal-05216849v1"
+  pdf_url: "https://hal.science/hal-05216849/document"
+  core_rank: "A"
   abstract: "Pneumatically actuated prostate phantom with multiple independently controlled chambers for simulating benign prostatic hyperplasia with validated FEM modeling."
   keywords: ["Medical Robots", "Soft Robotics", "FEM Simulation"]
 
@@ -20,6 +22,7 @@
   conference: "RoboSoft 2025 – IEEE International Conference on Soft Robotics"
   hal_id: "hal-05153184"
   hal_url: "https://hal.science/hal-05153184v1"
+  pdf_url: "https://hal.science/hal-05153184/document"
   doi: "10.1109/RoboSoft63089.2025.11020816"
   abstract: "Soft robotic phantom integrating a beating ventricle with instrumented apex and biomechanical simulation for pacemaker device evaluation."
   keywords: ["Soft Robotics", "Medical Simulation", "Biomechanics"]
@@ -31,6 +34,7 @@
   conference: "Workshop on Haptics and Simulation"
   hal_id: "hal-04886503"
   hal_url: "https://hal.science/hal-04886503v1"
+  pdf_url: "https://hal.science/hal-04886503/document"
   doi: "10.5281/zenodo.12549463"
   abstract: "FEM-based digital simulation with haptic feedback for prostate cancer screening training with realistic mechanical property replication."
   keywords: ["Medical Simulation", "Haptic Feedback", "Augmented Reality"]
@@ -42,6 +46,7 @@
   conference: "HSMR 2024 – Hamlyn Symposium on Medical Robotics"
   hal_id: "hal-04646160"
   hal_url: "https://hal.science/hal-04646160v1"
+  pdf_url: "https://hal.science/hal-04646160/document"
   abstract: "Growing robot using silicone-coated materials for transcatheter aortic valve implantation with improved navigation and reduced tissue perforation risk."
   keywords: ["Medical Robotics", "Soft Robotics", "TAVI"]
 
@@ -52,6 +57,7 @@
   conference: "RoboSoft 2023 – IEEE International Conference on Soft Robotics"
   hal_id: "hal-04390298"
   hal_url: "https://hal.science/hal-04390298v1"
+  pdf_url: "https://hal.science/hal-04390298/document"
   doi: "10.1109/RoboSoft55895.2023.10122073"
   abstract: "Combined kinematic and quasi-static modeling using Cosserat rod models and FEA to parameterize inflatable device deployment behavior."
   keywords: ["Growing Robots", "Kinematics", "Cosserat Rod", "Soft Robotics"]
@@ -63,6 +69,7 @@
   conference: "IEEE MEMS 2023 – International Conference on Micro Electro Mechanical Systems"
   hal_id: "hal-03946253"
   hal_url: "https://inria.hal.science/hal-03946253v1"
+  pdf_url: "https://inria.hal.science/hal-03946253/document"
   doi: "10.1109/MEMS49605.2023.10052348"
   abstract: "Functionalized electrode array with electronic conducting polymer micro-actuators able to bend under electrical stimulation, reducing cochlear implant insertion trauma."
   keywords: ["Cochlear Implant", "MEMS", "Electroactive Polymer"]
@@ -75,6 +82,7 @@
   journal: "IEEE Robotics and Automation Letters"
   hal_id: "hal-03729071"
   hal_url: "https://inria.hal.science/hal-03729071v1"
+  pdf_url: "https://inria.hal.science/hal-03729071/document"
   doi: "10.1109/LRA.2022.3152322"
   abstract: "Hybridized rigid-soft robot system with FEM modeling for automated transrectal prostate biopsy with force-limited interaction control."
   keywords: ["Soft Robotics", "Hybrid Arms", "Motion Planning"]
@@ -95,6 +103,7 @@
   journal: "IEEE Robotics and Automation Letters"
   hal_id: "hal-03192168"
   hal_url: "https://hal.science/hal-03192168v1"
+  pdf_url: "https://hal.science/hal-03192168/document"
   doi: "10.1109/LRA.2021.3061977"
   abstract: "Combined FEM and Discrete Cosserat Modeling approach for soft robot mechanics, actuation, kinematics, and contact simulation."
   keywords: ["Soft Robotics", "FEM", "Cosserat Model", "Kinematics"]
@@ -106,6 +115,7 @@
   journal: "IEEE Transactions on Robotics"
   hal_id: "hal-02144487"
   hal_url: "https://inria.hal.science/hal-02144487v1"
+  pdf_url: "https://inria.hal.science/hal-02144487/document"
   doi: "10.1109/TRO.2019.2897858"
   abstract: "Real-time inverse FE simulation for robotic needle control accounting for tissue and needle deformations using constraint-based interaction models."
   keywords: ["Needle Insertion", "FEM", "Robotics", "Deformable Models"]
@@ -128,6 +138,7 @@
   conference: "PhD Thesis — Université de Strasbourg"
   hal_id: "tel-01939268"
   hal_url: "https://inria.hal.science/tel-01939268v1"
+  pdf_url: "https://inria.hal.science/tel-01939268/document"
   abstract: "PhD thesis on autonomous robotic system for flexible needle insertion with inverse FE simulation, corrective and predictive steps, and AR surgical guidance."
   keywords: ["Needle Insertion", "FEM", "Robotic Surgery", "Augmented Reality"]
 
@@ -138,6 +149,8 @@
   conference: "ICRA 2018 – IEEE International Conference on Robotics and Automation"
   hal_id: "hal-01792837"
   hal_url: "https://inria.hal.science/hal-01792837v1"
+  pdf_url: "https://inria.hal.science/hal-01792837/document"
+  core_rank: "A*"
   abstract: "AR system for open liver surgery with marker tracking and real-time model deformation for tumor localization during hepatic resection."
   keywords: ["Augmented Reality", "Non-rigid Registration", "Liver Surgery"]
 
@@ -148,6 +161,8 @@
   conference: "IROS 2017 – IEEE/RSJ International Conference on Intelligent Robots and Systems"
   hal_id: "hal-01578815"
   hal_url: "https://hal.science/hal-01578815v1"
+  pdf_url: "https://hal.science/hal-01578815/document"
+  core_rank: "A"
   abstract: "Semi-automatic deformable model registration using 2D silhouettes from monocular camera with projective constraints for real-time surgical AR."
   keywords: ["Augmented Reality", "Deformable Models", "Pose Estimation"]
 
@@ -158,6 +173,8 @@
   conference: "IROS 2016 – IEEE/RSJ International Conference on Intelligent Robots and Systems"
   hal_id: "hal-01353925"
   hal_url: "https://hal.science/hal-01353925v1"
+  pdf_url: "https://hal.science/hal-01353925/document"
+  core_rank: "A"
   abstract: "Inverse FE simulation method providing real-time robot displacements to maintain needle trajectory on deformable tissue phantom."
   keywords: ["Needle Insertion", "FEM", "Robotic Control", "Medical Robotics"]
 
@@ -168,6 +185,8 @@
   conference: "IROS 2015 – IEEE/RSJ International Conference on Intelligent Robots and Systems"
   hal_id: "hal-01184113"
   hal_url: "https://hal.science/hal-01184113v1"
+  pdf_url: "https://hal.science/hal-01184113/document"
+  core_rank: "A"
   doi: "10.1109/IROS.2015.7353432"
   abstract: "Implicit time integration and asynchronous preconditioning for real-time haptic rendering of hyperelastic materials with contact friction."
   keywords: ["Haptic Rendering", "Hyperelastic Models", "Friction", "Real-time"]
@@ -179,5 +198,6 @@
   conference: "DD23 – International Conference on Domain Decomposition Methods"
   hal_id: "hal-01229514"
   hal_url: "https://inria.hal.science/hal-01229514v1"
+  pdf_url: "https://inria.hal.science/hal-01229514/document"
   abstract: "Domain decomposition method for FE mesh to optimize GPU computing around the needle insertion contact problem."
   keywords: ["Domain Decomposition", "Needle Insertion", "GPU Computing", "FEM"]

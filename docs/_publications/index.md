@@ -388,6 +388,61 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
 }
 
 /* ── Dark mode ───────────────────────────────────────────── */
+/* Rank / open-access badges */
+.pub-badge-rank,
+.pub-badge-oa {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.66rem;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+}
+.pub-badge-rank { background: rgba(1, 96, 100, 0.1); color: #016064; border: 1px solid rgba(1, 96, 100, 0.35); }
+.pub-badge-oa   { background: rgba(46, 125, 50, 0.1); color: #2E7D32; border: 1px solid rgba(46, 125, 50, 0.35); }
+
+/* Cite panel */
+.pub-btn-cite { color: #6A1B9A; border-color: #6A1B9A; cursor: pointer; font-family: inherit; }
+.pub-cite { margin-top: 0.6rem; border: 1px solid rgba(72, 170, 173, 0.35); border-radius: 8px; overflow: hidden; }
+.pub-cite[hidden] { display: none; }
+.pub-cite-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem; padding: 0.35rem 0.5rem; background: rgba(72, 170, 173, 0.08); }
+.pub-cite-fmt,
+.pub-cite-copy {
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #016064;
+  cursor: pointer;
+}
+.pub-cite-fmt.active { background: #016064; color: #fff; }
+.pub-cite-copy { margin-left: auto; border-color: #016064; }
+.pub-cite-copy.is-copied { background: #2E7D32; border-color: #2E7D32; color: #fff; }
+.pub-cite-text {
+  margin: 0;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: transparent;
+  color: var(--text-color, #1A3A3C);
+}
+
+[data-theme="dark"] .pub-badge-rank { color: #5CC8CB; border-color: rgba(92, 200, 203, 0.4); }
+[data-theme="dark"] .pub-badge-oa   { color: #81C784; border-color: rgba(129, 199, 132, 0.4); }
+[data-theme="dark"] .pub-btn-cite   { color: #CE93D8; border-color: #CE93D8; }
+[data-theme="dark"] .pub-me         { color: #5CC8CB; }
+[data-theme="dark"] .pub-kw         { color: #90CFD1; background: rgba(72, 170, 173, 0.12); border-color: rgba(72, 170, 173, 0.3); }
+[data-theme="dark"] .pub-cite-fmt,
+[data-theme="dark"] .pub-cite-copy  { color: #5CC8CB; }
+[data-theme="dark"] .pub-cite-fmt.active { background: #48AAAD; color: #01272A; }
 [data-theme="dark"] .pub-card       { background: #013A3C; border-color: rgba(72,170,173,0.3); }
 [data-theme="dark"] .pub-title      { color: #E0F7FA; }
 [data-theme="dark"] .pub-authors    { color: #B0D4D6; }
@@ -551,6 +606,8 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
             <em>{{ pub.conference }}</em>
           {% endif %}
           <span class="pub-venue-year">· {{ pub.year }}</span>
+          {% if pub.core_rank %}<span class="pub-badge-rank" title="CORE 2023 conference ranking">CORE {{ pub.core_rank }}</span>{% endif %}
+          {% if pub.pdf_url %}<span class="pub-badge-oa" title="Full text freely available on HAL">Open Access</span>{% endif %}
         </div>
 
         <!-- Keywords -->
@@ -582,7 +639,21 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
               {%- include ph.html name="file-pdf" -%} PDF
             </a>
           {% endif %}
+          <button type="button" class="pub-btn pub-btn-cite" aria-expanded="false">
+            {%- include ph.html name="quotes" -%} Cite
+          </button>
         </div>
+
+        <div class="pub-cite" hidden>
+          <div class="pub-cite-bar" role="tablist">
+            <button type="button" class="pub-cite-fmt active" data-fmt="bibtex">BibTeX</button>
+            <button type="button" class="pub-cite-fmt" data-fmt="apa">APA</button>
+            <button type="button" class="pub-cite-fmt" data-fmt="mla">MLA</button>
+            <button type="button" class="pub-cite-copy">Copy</button>
+          </div>
+          <pre class="pub-cite-text"></pre>
+        </div>
+        <script type="application/json" class="pub-json">{{ pub | jsonify }}</script>
 
         <!-- Abstract (collapsed) -->
         {% if pub.abstract %}
@@ -683,6 +754,145 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
     var noRes = document.getElementById('pub-no-results');
     if (noRes) noRes.style.display = anyVisible ? 'none' : 'block';
   }
+
+  /* ── Citation export (BibTeX / APA / MLA) ────────────────── */
+  var PARTICLES = ['de', 'du', 'des', 'van', 'von', 'der', 'den', 'le', 'la', 'di', 'da'];
+
+  function splitName(full) {
+    var parts = full.trim().split(/\s+/);
+    var i = parts.length - 1;
+    while (i > 1 && PARTICLES.indexOf(parts[i - 1].toLowerCase()) !== -1) i--;
+    return { given: parts.slice(0, i).join(' '), family: parts.slice(i).join(' ') };
+  }
+
+  function initials(given) {
+    return given.split(/[\s-]+/).filter(Boolean).map(function (g) {
+      return g.charAt(0).toUpperCase() + '.';
+    }).join(' ');
+  }
+
+  function venueName(p) {
+    if (p.journal) return p.journal;
+    var c = p.conference || '';
+    var dash = c.indexOf(' – ');
+    if (dash !== -1) return c.slice(dash + 3);
+    return c.replace(/^PhD Thesis\s*—\s*/, '');
+  }
+
+  function names(p) { return (p.authors || '').split(/,\s*/).filter(Boolean).map(splitName); }
+
+  function bibtex(p) {
+    var a = names(p);
+    var first = a.length ? a[0].family : 'anon';
+    var word = (p.title.match(/[A-Za-z]{4,}/) || ['paper'])[0];
+    var key = (first + p.year + word).normalize('NFD').replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+    var kind = p.type === 'journal' ? 'article' : (p.type === 'thesis' ? 'phdthesis' : 'inproceedings');
+    var esc = function (t) { return String(t).replace(/&/g, '\\&'); };
+    var f = [
+      ['title', '{' + esc(p.title) + '}'],
+      ['author', a.map(function (n) { return n.family + ', ' + n.given; }).join(' and ')],
+      [kind === 'article' ? 'journal' : (kind === 'phdthesis' ? 'school' : 'booktitle'), esc(venueName(p))],
+      ['year', p.year]
+    ];
+    if (p.volume) f.push(['volume', p.volume]);
+    if (p.issue) f.push(['number', p.issue]);
+    if (p.pages) f.push(['pages', String(p.pages).replace(/-+/, '--')]);
+    if (p.doi) f.push(['doi', p.doi]);
+    if (p.hal_url) f.push(['url', p.hal_url]);
+    if (p.hal_id) f.push(['note', 'HAL: ' + p.hal_id]);
+    return '@' + kind + '{' + key + ',\n' + f.map(function (x) {
+      return '  ' + x[0] + ' = {' + x[1] + '}';
+    }).join(',\n') + '\n}';
+  }
+
+  function apa(p) {
+    var a = names(p).map(function (n) { return n.family + ', ' + initials(n.given); });
+    var who = a.length < 2 ? (a[0] || '') :
+      a.slice(0, -1).join(', ') + ', & ' + a[a.length - 1];
+    var out = who + ' (' + p.year + '). ' + p.title + '. ';
+    if (p.type === 'thesis') out += '[Doctoral dissertation, ' + venueName(p) + ']. ';
+    else {
+      out += venueName(p);
+      if (p.volume) out += ', ' + p.volume + (p.issue ? '(' + p.issue + ')' : '');
+      if (p.pages) out += ', ' + String(p.pages).replace(/-+/, '–');
+      out += '. ';
+    }
+    if (p.doi) out += 'https://doi.org/' + p.doi;
+    else if (p.hal_url) out += p.hal_url;
+    return out.trim();
+  }
+
+  function mla(p) {
+    var a = names(p);
+    var who = '';
+    if (a.length === 1) who = a[0].family + ', ' + a[0].given;
+    else if (a.length === 2) who = a[0].family + ', ' + a[0].given + ', and ' + a[1].given + ' ' + a[1].family;
+    else if (a.length > 2) who = a[0].family + ', ' + a[0].given + ', et al';
+    var out = who + '. \u201C' + p.title + '.\u201D ';
+    if (p.type === 'thesis') out += 'PhD dissertation, ' + venueName(p) + ', ' + p.year + '.';
+    else {
+      out += venueName(p);
+      if (p.volume) out += ', vol. ' + p.volume;
+      if (p.issue) out += ', no. ' + p.issue;
+      out += ', ' + p.year;
+      if (p.pages) out += ', pp. ' + String(p.pages).replace(/-+/, '–');
+      out += '.';
+    }
+    if (p.doi) out += ' https://doi.org/' + p.doi + '.';
+    return out;
+  }
+
+  var FORMATTERS = { bibtex: bibtex, apa: apa, mla: mla };
+
+  function copyText(text, done) {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(done).catch(function () { fallbackCopy(text, done); });
+    } else {
+      fallbackCopy(text, done);
+    }
+  }
+  function fallbackCopy(text, done) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (e) { /* clipboard unavailable */ }
+    document.body.removeChild(ta);
+  }
+
+  document.querySelectorAll('.pub-card').forEach(function (card) {
+    var btn = card.querySelector('.pub-btn-cite');
+    var panel = card.querySelector('.pub-cite');
+    var out = card.querySelector('.pub-cite-text');
+    var json = card.querySelector('.pub-json');
+    if (!btn || !panel || !json) return;
+    var data = JSON.parse(json.textContent);
+    var render = function (fmt) {
+      out.textContent = FORMATTERS[fmt](data);
+      panel.querySelectorAll('.pub-cite-fmt').forEach(function (b) {
+        b.classList.toggle('active', b.dataset.fmt === fmt);
+      });
+    };
+    btn.addEventListener('click', function () {
+      var open = panel.hidden;
+      panel.hidden = !open;
+      btn.setAttribute('aria-expanded', String(open));
+      if (open && !out.textContent) render('bibtex');
+    });
+    panel.querySelectorAll('.pub-cite-fmt').forEach(function (b) {
+      b.addEventListener('click', function () { render(b.dataset.fmt); });
+    });
+    var copyBtn = panel.querySelector('.pub-cite-copy');
+    copyBtn.addEventListener('click', function () {
+      copyText(out.textContent, function () {
+        copyBtn.textContent = 'Copied!';
+        copyBtn.classList.add('is-copied');
+        setTimeout(function () { copyBtn.textContent = 'Copy'; copyBtn.classList.remove('is-copied'); }, 1600);
+      });
+    });
+  });
 
   /* ── Abstract toggle ─────────────────────────────────────── */
   window.pubToggleAbstract = function (btn) {
