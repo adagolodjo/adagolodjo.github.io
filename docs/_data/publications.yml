@@ -3,12 +3,25 @@
 # Author: Yinoussa Adagolodjo
 # Last updated: May 2025
 
+- type: preprint
+  year: 2026
+  title: "Compliance-Based Sensor Placement for Force Sensing on a Sensorized Prostate Phantom"
+  authors: "Sizhe Tian, Yinoussa Adagolodjo, Jeremie Dequidt"
+  journal: "arXiv preprint arXiv:2606.06977"
+  hal_id: "hal-05644036"
+  hal_url: "https://hal.science/hal-05644036v1"
+  pdf_url: "https://hal.science/hal-05644036/document"
+  doi: "10.48550/arXiv.2606.06977"
+  abstract: "Compliance-based sensor placement on a sensorized prostate phantom for Digital Rectal Examination training: a weighted greedy selection of pressure and displacement sensors from an FEM-derived compliance matrix, improving force reconstructability in the clinically relevant region by 22.5% over a QR-based strategy."
+  keywords: ["Medical Simulation", "Sensor Placement", "FEM"]
+
 - type: conference
   year: 2025
   title: "Active Prostate Phantom with Multiple Chambers"
   authors: "Sizhe Tian, Yinoussa Adagolodjo, Jeremie Dequidt"
   conference: "IROS 2025 – IEEE/RSJ International Conference on Intelligent Robots and Systems"
   hal_id: "hal-05216849"
+  doi: "10.1109/IROS60139.2025.11246726"
   hal_url: "https://hal.science/hal-05216849v1"
   pdf_url: "https://hal.science/hal-05216849/document"
   core_rank: "A"
@@ -45,6 +58,7 @@
   authors: "Flavie Przybylski, Yinoussa Adagolodjo, Jérémie Dequidt, Christian Duriez, Pierre Berthet-Rayne"
   conference: "HSMR 2024 – Hamlyn Symposium on Medical Robotics"
   hal_id: "hal-04646160"
+  doi: "10.31256/HSMR2024.45"
   hal_url: "https://hal.science/hal-04646160v1"
   pdf_url: "https://hal.science/hal-04646160/document"
   abstract: "Growing robot using silicone-coated materials for transcatheter aortic valve implantation with improved navigation and reduced tissue perforation risk."
@@ -148,6 +162,7 @@
   authors: "Yinoussa Adagolodjo, Nicolas Golse, Eric Vibert, Michel de Mathelin, Stéphane Cotin, Hadrien Courtecuisse"
   conference: "ICRA 2018 – IEEE International Conference on Robotics and Automation"
   hal_id: "hal-01792837"
+  doi: "10.1109/ICRA.2018.8462909"
   hal_url: "https://inria.hal.science/hal-01792837v1"
   pdf_url: "https://inria.hal.science/hal-01792837/document"
   core_rank: "A*"
@@ -160,6 +175,7 @@
   authors: "Yinoussa Adagolodjo, Raffaella Trivisonne, Nazim Haouchine, Stéphane Cotin, Hadrien Courtecuisse"
   conference: "IROS 2017 – IEEE/RSJ International Conference on Intelligent Robots and Systems"
   hal_id: "hal-01578815"
+  doi: "10.1109/IROS.2017.8202205"
   hal_url: "https://hal.science/hal-01578815v1"
   pdf_url: "https://hal.science/hal-01578815/document"
   core_rank: "A"
@@ -172,6 +188,7 @@
   authors: "Yinoussa Adagolodjo, Laurent Goffin, Michel de Mathelin, Hadrien Courtecuisse"
   conference: "IROS 2016 – IEEE/RSJ International Conference on Intelligent Robots and Systems"
   hal_id: "hal-01353925"
+  doi: "10.1109/IROS.2016.7759422"
   hal_url: "https://hal.science/hal-01353925v1"
   pdf_url: "https://hal.science/hal-01353925/document"
   core_rank: "A"

@@ -377,6 +377,7 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
 .pub-profile-scholar { background: #1A73E8; color: white !important; }
 .pub-profile-rg      { background: #00CCBB; color: white !important; }
 .pub-profile-orcid   { background: #A6CE39; color: #1A3A3C !important; }
+.pub-profile-s2      { background: #1857B6; color: white !important; }
 
 /* ── No results message ──────────────────────────────────── */
 #pub-no-results {
@@ -424,7 +425,8 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
 .pub-cite-fmt.active { background: #016064; color: #fff; }
 .pub-cite-copy { margin-left: auto; border-color: #016064; }
 .pub-cite-copy.is-copied { background: #2E7D32; border-color: #2E7D32; color: #fff; }
-.pub-cite-text {
+/* .pub-cite prefix outranks Bulma's `.content pre { white-space: pre }` */
+.pub-cite .pub-cite-text {
   margin: 0;
   padding: 0.7rem 0.9rem;
   font-size: 0.76rem;
@@ -502,12 +504,14 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
 {% assign theses     = pubs | where: "type", "thesis" %}
 {% assign posters    = pubs | where: "type", "poster" %}
 {% assign workshops  = pubs | where: "type", "workshop" %}
+{% assign preprints  = pubs | where: "type", "preprint" %}
 {% assign total      = pubs | size %}
 {% assign j_count    = journals  | size %}
 {% assign c_count    = confs     | size %}
 {% assign t_count    = theses    | size %}
 {% assign p_count    = posters   | size %}
 {% assign w_count    = workshops | size %}
+{% assign pr_count   = preprints | size %}
 {% assign years      = pubs | map: "year" | uniq | sort | reverse %}
 
 <!-- ── Stats banner ─────────────────────────────────────────── -->
@@ -565,6 +569,11 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
     Workshops <span class="pub-filter-count">{{ w_count }}</span>
   </button>
   {% endif %}
+  {% if pr_count > 0 %}
+  <button class="pub-filter-tab" data-filter="preprint">
+    Preprints <span class="pub-filter-count">{{ pr_count }}</span>
+  </button>
+  {% endif %}
   <div class="pub-search-wrap">
     {%- include ph.html name="magnifying-glass" -%}
     <input type="text" id="pub-search-input" placeholder="Search publications…" autocomplete="off">
@@ -612,6 +621,8 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
           <span class="pub-type-badge pub-badge-poster">Poster</span>
         {% elsif pub.type == "workshop" %}
           <span class="pub-type-badge pub-badge-workshop">Workshop</span>
+        {% elsif pub.type == "preprint" %}
+          <span class="pub-type-badge pub-badge-poster">Preprint</span>
         {% else %}
           <span class="pub-type-badge pub-badge-conference">Other</span>
         {% endif %}
@@ -737,6 +748,10 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
      target="_blank" rel="noopener noreferrer" class="pub-profile-btn pub-profile-hal">
     {%- include ph.html name="archive" -%} HAL Science
   </a>
+  <a href="https://orcid.org/0000-0002-1547-7421"
+     target="_blank" rel="noopener noreferrer" class="pub-profile-btn pub-profile-orcid">
+    <i class="fab fa-orcid" aria-hidden="true"></i> ORCID
+  </a>
   <a href="https://scholar.google.com/citations?user=ZBdWJ9EAAAAJ&hl=fr"
      target="_blank" rel="noopener noreferrer" class="pub-profile-btn pub-profile-scholar">
     {%- include ph.html name="graduation-cap" -%} Google Scholar
@@ -746,7 +761,7 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
     {%- include ph.html name="flask" -%} ResearchGate
   </a>
   <a href="https://www.semanticscholar.org/author/Yinoussa-Adagolodjo/2251436"
-     target="_blank" rel="noopener noreferrer" class="pub-profile-btn pub-profile-orcid">
+     target="_blank" rel="noopener noreferrer" class="pub-profile-btn pub-profile-s2">
     {%- include ph.html name="atom" -%} Semantic Scholar
   </a>
 </div>
@@ -849,12 +864,12 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo �
     var first = a.length ? a[0].family : 'anon';
     var word = (p.title.match(/[A-Za-z]{4,}/) || ['paper'])[0];
     var key = (first + p.year + word).normalize('NFD').replace(/[^A-Za-z0-9]/g, '').toLowerCase();
-    var kind = p.type === 'journal' ? 'article' : (p.type === 'thesis' ? 'phdthesis' : 'inproceedings');
+    var kind = p.type === 'journal' ? 'article' : (p.type === 'thesis' ? 'phdthesis' : (p.type === 'preprint' ? 'misc' : 'inproceedings'));
     var esc = function (t) { return String(t).replace(/&/g, '\\&'); };
     var f = [
       ['title', '{' + esc(p.title) + '}'],
       ['author', a.map(function (n) { return n.family + ', ' + n.given; }).join(' and ')],
-      [kind === 'article' ? 'journal' : (kind === 'phdthesis' ? 'school' : 'booktitle'), esc(venueName(p))],
+      [{ article: 'journal', phdthesis: 'school', misc: 'howpublished' }[kind] || 'booktitle', esc(venueName(p))],
       ['year', p.year]
     ];
     if (p.volume) f.push(['volume', p.volume]);
