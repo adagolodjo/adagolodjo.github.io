@@ -1375,3 +1375,18 @@
   .home-talks-all { color: $primary-light; }
   .project-venue { color: $primary-light; }
 }
+
+// ===== FEATURED PROJECTS GRID =====
+// Fixed column counts that divide the 6 featured projects evenly
+// (auto-fill produced 4 + 2 on wide screens).
+.featured-section .projects-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+
+  @media (max-width: 1024px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (max-width: 640px)  { grid-template-columns: minmax(0, 1fr); padding-left: var(--spacing-md); padding-right: var(--spacing-md); }
+}

@@ -153,7 +153,8 @@ image: /assets/images/notion-face.png
   margin-bottom: 0.85rem;
 }
 .timeline-place i { margin-right: 0.3rem; }
-.timeline-details {
+/* .content prefix: outranks Bulma's `.content ul` (disc bullets + indent) */
+.content ul.timeline-details {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -268,7 +269,7 @@ image: /assets/images/notion-face.png
 .lang-level { font-size: 0.75rem; color: #777; margin-top: 0.1rem; }
 
 /* ---- Service ---- */
-.service-list { list-style: none; padding: 0; margin: 0; }
+.content ul.service-list { list-style: none; padding: 0; margin: 0; }
 .service-list li {
   display: flex;
   align-items: baseline;

@@ -468,7 +468,8 @@ $card-shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
 }
 
 // ── Talks list (_includes/talks-list.html — homepage + About) ──────────
-.talks-list { list-style: none; padding: 0; margin: 0; }
+.talks-list,
+.content ul.talks-list { list-style: none; padding: 0; margin: 0; }
 .talk-item {
   display: grid;
   grid-template-columns: 110px 1fr;

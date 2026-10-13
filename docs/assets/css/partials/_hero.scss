@@ -78,7 +78,7 @@
     top: var(--spacing-sm);
     left: var(--spacing-xl);
     right: var(--spacing-xl);
-    border-radius: var(--border-radius-full);
+    border-radius: 999px; // a % radius on a wide bar draws an ellipse, not a pill
     padding-top: calc(var(--spacing-md) * 0.55);
     padding-bottom: calc(var(--spacing-md) * 0.55);
     background: linear-gradient(180deg, #{$primary-dark}f5 0%, #{$primary-dark}e6 100%);
@@ -208,6 +208,17 @@
 
     > .nav-item::after {
       // keep the underline indicator but also add chevron space
+    }
+
+    // Invisible bridge over the gap between the tab and its menu: without it
+    // the pointer leaves .nav-dropdown on the way down and the menu closes.
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: 0.9rem;
     }
   }
 
