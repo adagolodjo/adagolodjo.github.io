@@ -615,3 +615,156 @@
 
   .nav-link { color: var(--course-primary-lt); }
 }
+
+// ── Competency-based approach (APC) blocks ───────────────────────────────
+// Used by course pages organised around competencies (e.g. Industrie 4.0).
+.content.course-page {
+  .apc-compare {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+  }
+  .apc-compare-col {
+    background: var(--course-bg-soft);
+    border: 1px solid var(--course-border);
+    border-radius: var(--course-radius-sm);
+    padding: 1.1rem 1.3rem;
+
+    h4 { display: flex; align-items: center; gap: .45rem; color: var(--course-ink); font-weight: 700; margin-bottom: .6rem; }
+    ul { margin: 0 0 0 1.1rem; }
+    li { margin-bottom: .3rem; }
+  }
+  .apc-compare-col--target { border-color: var(--course-accent); background: var(--course-accent-wash); }
+
+  .apc-competencies {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: .9rem;
+    margin-top: 1.25rem;
+
+    @media (max-width: 900px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (max-width: 480px) { grid-template-columns: minmax(0, 1fr); }
+  }
+  .apc-comp {
+    --c: var(--course-accent);
+    background: var(--course-surface);
+    border: 1px solid var(--course-border);
+    border-top: 4px solid var(--c);
+    border-radius: var(--course-radius-sm);
+    padding: 1rem;
+    box-shadow: var(--course-shadow);
+
+    p { margin: .4rem 0 0; font-size: .92rem; line-height: 1.5; color: var(--course-muted); }
+    strong { color: var(--course-ink); }
+  }
+  .apc-comp-tag {
+    display: inline-block;
+    font-weight: 800;
+    font-size: .8rem;
+    color: #fff;
+    background: var(--c);
+    border-radius: 6px;
+    padding: .1rem .5rem;
+  }
+  .apc-comp--c1 { --c: #C0392B; }
+  .apc-comp--c2 { --c: #016064; }
+  .apc-comp--c3 { --c: #B7950B; }
+  .apc-comp--c4 { --c: #2F7D4F; }
+  .apc-comp--c5 { --c: #2E5FA8; }
+
+  .apc-flow {
+    margin: 1.4rem 0 0;
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--course-muted);
+    strong { color: var(--course-accent-ink); }
+  }
+
+  .apc-subtitle { color: var(--course-accent-ink); margin: 2rem 0 .9rem; font-size: 1.15rem; font-weight: 700; }
+
+  .apc-table-wrap { overflow-x: auto; margin-bottom: 1.25rem; }
+  .apc-levels {
+    width: 100%;
+    min-width: 640px;
+    border-collapse: collapse;
+    font-size: .88rem;
+
+    th, td { padding: .65rem .8rem; border: 1px solid var(--course-border); text-align: left; vertical-align: top; }
+    thead th { background: var(--course-primary); color: #fff; font-weight: 700; }
+    thead th span { font-weight: 400; opacity: .85; }
+    tbody th { background: var(--course-bg-soft); color: var(--course-ink); font-weight: 700; white-space: nowrap; }
+    td { color: var(--course-muted); }
+    td.apc-target { background: var(--course-accent-wash); color: var(--course-ink); font-weight: 600; }
+    thead th.apc-target { background: var(--course-accent); }
+  }
+
+  .apc-formation { margin: .5rem 0 1.75rem; }
+  .apc-formation-title {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--course-accent-ink);
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid var(--course-accent);
+    margin-bottom: 1rem;
+  }
+  .apc-fil-rouge {
+    background: var(--course-accent-wash);
+    border-left: 4px solid var(--course-accent);
+    border-radius: 8px;
+    padding: .75rem 1rem;
+    color: var(--course-ink);
+    font-size: .92rem;
+  }
+}
+
+[data-theme="dark"] .content.course-page {
+  .apc-levels tbody th { color: var(--course-ink); }
+  .apc-levels td.apc-target,
+  .apc-compare-col--target,
+  .apc-fil-rouge { background: rgba(178, 107, 0, .15); color: var(--course-ink); }
+}
+
+.content.course-page {
+  .apc-sequence {
+    list-style: none;
+    counter-reset: seq;
+    margin: 0 0 1.5rem;
+    padding: 0;
+
+    li {
+      counter-increment: seq;
+      display: flex;
+      align-items: baseline;
+      gap: .6rem;
+      padding: .5rem 0;
+      border-bottom: 1px solid var(--course-border);
+      color: var(--course-ink);
+      font-size: .93rem;
+
+      &::before {
+        content: counter(seq);
+        flex-shrink: 0;
+        width: 1.6rem;
+        font-weight: 700;
+        color: var(--course-muted);
+      }
+      &:last-child { border-bottom: none; }
+    }
+  }
+  .apc-seq-c {
+    flex-shrink: 0;
+    min-width: 4.6rem;
+    text-align: center;
+    font-size: .72rem;
+    font-weight: 800;
+    color: var(--course-accent-ink);
+    background: var(--course-accent-wash);
+    border: 1px solid var(--course-accent);
+    border-radius: 5px;
+    padding: .05rem .4rem;
+  }
+}
