@@ -1,0 +1,12 @@
+{%- comment -%}
+  Publications of a research project, from _data/publications.yml (field `project`).
+  Usage: {% include project-publications.html project="robocop" %}
+{%- endcomment -%}
+{%- assign project_pubs = site.data.publications | where: "project", include.project -%}
+{%- if project_pubs.size > 0 %}
+## Publications
+
+{% for paper in project_pubs -%}
+- **{{ paper.title }}** ({{ paper.year }}) — {{ paper.authors }}. *{% if paper.journal %}{{ paper.journal }}{% else %}{{ paper.conference }}{% endif %}*.{% if paper.hal_url %} [HAL]({{ paper.hal_url }}){% endif %}{% if paper.doi %} · [DOI](https://doi.org/{{ paper.doi }}){% endif %}
+{% endfor %}
+{%- endif %}

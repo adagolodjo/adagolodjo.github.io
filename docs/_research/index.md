@@ -551,8 +551,7 @@ keyword_cloud:
           <p class="timeline-description">CONECT Project - Pioneered robotic needle insertion techniques with advanced FEM simulation, laying the foundation for precision surgical robotics.</p>
           <div class="timeline-achievements">
             <span class="achievement-tag">PhD Thesis</span>
-            <span class="achievement-tag">3 Publications</span>
-            <span class="achievement-tag">Best Paper Award</span>
+            <span class="achievement-tag">{{ site.data.publications | where: "project", "conect" | size }} Publications</span>
           </div>
         </div>
       </div>
@@ -616,7 +615,7 @@ keyword_cloud:
             <h3 class="project-title">ProstateBot</h3>
             <div class="project-year">2023-Present</div>
           </div>
-          <p class="project-description">Development of a pneumatically actuated active prostate phantom for training prostate biopsy robots and digital rectal examination (DRE) techniques. Design, modeling, and control of the robotic systems.</p>
+          <p class="project-description">Region-funded PhD thesis (Sizhe Tian): sensorized, pneumatically actuated prostate phantoms to teach the digital rectal examination (DRE) to urology trainees and to improve the algorithms of needle-insertion robots.</p>
           
           <div class="project-highlights">
             <div class="highlight-item">
@@ -658,15 +657,15 @@ keyword_cloud:
           <img src="/assets/images/projects/colon.jpg" alt="IRE Project" loading="lazy">
           <div class="project-overlay">
             <div class="project-status active">Flagship</div>
-            <div class="project-impact">€5M Funding</div>
+            <div class="project-impact">European Project</div>
           </div>
         </div>
         <div class="project-content">
           <div class="project-header">
             <h3 class="project-title">IRE Project</h3>
-            <div class="project-year">2023-Present</div>
+            <div class="project-year">2024-Present</div>
           </div>
-          <p class="project-description">AI-powered soft robotic endoscopes and digital twins for safer, more effective minimally invasive procedures.</p>
+          <p class="project-description">European project on soft robotic endoscopes with real-time simulation, augmented reality guidance, computer vision and machine learning for minimally invasive surgery.</p>
           
           <div class="project-highlights">
             <div class="highlight-item">
@@ -708,7 +707,7 @@ keyword_cloud:
           <img src="/assets/images/projects/bladder_2.jpg" alt="ADAGIO Project" loading="lazy">
           <div class="project-overlay">
             <div class="project-status active">Active</div>
-            <div class="project-impact">AI Innovation</div>
+            <div class="project-impact">Continuum Robots</div>
           </div>
         </div>
         <div class="project-content">
@@ -716,7 +715,7 @@ keyword_cloud:
             <h3 class="project-title">ADAGIO Project</h3>
             <div class="project-year">2026-Present</div>
           </div>
-          <p class="project-description">Adaptive AI-driven tools and intelligent systems for complex medical interventions, designed to learn and adapt to diverse surgical environments.</p>
+          <p class="project-description">National project on tendon-actuated continuum robots for the endoscopic drainage of the gallbladder in acute cholecystitis: stabilization of stent placement through precise robot control.</p>
           
           <div class="project-highlights">
             <div class="highlight-item">
@@ -858,16 +857,16 @@ keyword_cloud:
         <div class="project-image">
           <img src="/assets/images/projects/cosseroots-new.png" alt="COSSEROOTS Project" loading="lazy">
           <div class="project-overlay">
-            <div class="project-status active">Active</div>
-            <div class="project-impact">Innovation Award</div>
+            <div class="project-status completed">Completed</div>
+            <div class="project-impact">Cosserat Theory</div>
           </div>
         </div>
         <div class="project-content">
           <div class="project-header">
             <h3 class="project-title">COSSEROOTS Project</h3>
-            <div class="project-year">2021-Present</div>
+            <div class="project-year">2021-2022</div>
           </div>
-          <p class="project-description">Applying Cosserat's theory to advance control of slender deformable robots for medical and industrial applications.</p>
+          <p class="project-description">Cosserat rod theory for the modeling and control of slender, continuum soft robots — implemented in the open-source Cosserat plugin for SOFA.</p>
           
           <div class="project-highlights">
             <div class="highlight-item">
@@ -1011,16 +1010,16 @@ keyword_cloud:
         <div class="project-image">
           <img src="/assets/images/projects/conect-new.png" alt="CONECT Project" loading="lazy">
           <div class="project-overlay">
-            <div class="project-status active">Active</div>
-            <div class="project-impact">High Impact</div>
+            <div class="project-status completed">Completed</div>
+            <div class="project-impact">PhD Project</div>
           </div>
         </div>
         <div class="project-content">
           <div class="project-header">
             <h3 class="project-title">CONECT Project</h3>
-            <div class="project-year">2015-2019</div>
+            <div class="project-year">2015-2018</div>
           </div>
-          <p class="project-description">Pioneering robotic integration in operating rooms for needle insertion precision, featuring finite element simulations and augmented reality guidance.</p>
+          <p class="project-description">PhD project (ICube, University of Strasbourg): robotic insertion of flexible needles in deformable tissue using inverse real-time FEM simulation, and augmented reality for surgery.</p>
           
           <div class="project-highlights">
             <div class="highlight-item">

@@ -1,15 +1,15 @@
 ---
 layout: page
 title: ROBOCOP Project
-subtitle: Robotic Co-Manipulation for Prostate Biopsy
+subtitle: Robotic Cochlear Implant Procedure
 permalink: /research/projects/robocop/
-image: /assets/images/projects/robocop.jpg
-description: "The ROBOCOP project aims to develop a new generation of robotic assistants for prostate biopsy, enhancing accuracy while maintaining surgeon autonomy through shared control."
-start_date: 2017-01-01
+image: /assets/images/projects/robocop_1.png
+description: "Robotization of cochlear implant insertion: real-time FEM simulation of the electrode array, surgical navigation and safe, automated insertion."
+start_date: 2019-01-01
 status: completed
-keywords: ["Robotic Biopsy", "Co-Manipulation", "Prostate Cancer", "Shared Control", "Interventional Radiology"]
-venue: "RA-L 2022"
-venue_url: "https://inria.hal.science/hal-03729071v1"
+keywords: ["Cochlear Implant", "Real-time FEM", "Surgical Robotics", "Electroactive Polymer"]
+venue: "IEEE MEMS 2023"
+venue_url: "https://inria.hal.science/hal-03946253v1"
 ---
 
 <div class="project-hero-section">
@@ -18,7 +18,7 @@ venue_url: "https://inria.hal.science/hal-03729071v1"
     <div class="hero-left">
       <div class="project-badges">
         <span class="badge-glass">{%- include ph.html name="check" style="font-size: 0.6rem; margin-right: 6px; position: relative; top: -2px;" -%} Completed</span>
-        <span class="badge-glass">2017-2021</span>
+        <span class="badge-glass">2019-2023</span>
       </div>
       <h1 class="project-title-hero">{{ page.title }}</h1>
       <p class="project-subtitle-hero">{{ page.description }}</p>
@@ -40,164 +40,37 @@ venue_url: "https://inria.hal.science/hal-03729071v1"
 
 ## Project Overview
 
-The ROBOCOP project successfully developed a new generation of robotic assistants for prostate biopsy. The system uses a co-manipulation approach where the robot and the surgeon share control of the ultrasound probe, combining human expertise with robotic precision.
+ROBOCOP (2019–2023) aimed at automating the insertion of cochlear implants. Inserting the electrode array into the cochlea is a delicate gesture: the array is flexible, the cochlea is a narrow spiral, and insertion forces can damage the inner-ear structures that preserve residual hearing.
+
+The project combined **real-time finite element simulation** of the electrode array (SOFA), **surgical navigation** and **robotic control**, together with the design of an **actuated electrode array** based on electroactive polymer micro-actuators that can bend under electrical stimulation to reduce insertion trauma.
 
 <div class="features-grid">
   <div class="feature-glass-card">
-    {%- include ph.html name="handshake" class="feature-icon" -%}
-    <h3>Co-Manipulation</h3>
-    <p>Surgeon and robot share control of the ultrasound probe, maintaining physician autonomy while enhancing stability.</p>
+    {%- include ph.html name="cube" class="feature-icon" -%}
+    <h3>Real-time FEM</h3>
+    <p>Simulation of the flexible electrode array and its contacts with the cochlear walls during insertion.</p>
   </div>
   <div class="feature-glass-card">
-    {%- include ph.html name="target" class="feature-icon" -%}
-    <h3>Needle Guidance</h3>
-    <p>Precise targeting mechanism for the biopsy needle ensures accurate sampling of suspected tumors.</p>
+    {%- include ph.html name="robot" class="feature-icon" -%}
+    <h3>Automated Insertion</h3>
+    <p>Robotic insertion driven by the simulation, with navigation and safety constraints.</p>
   </div>
   <div class="feature-glass-card">
-    {%- include ph.html name="stack" class="feature-icon" -%}
-    <h3>Image Fusion</h3>
-    <p>Real-time elastic registration fuses pre-operative MRI with intra-operative ultrasound.</p>
+    {%- include ph.html name="lightning" class="feature-icon" -%}
+    <h3>Smart Electrode Array</h3>
+    <p>Electroactive polymer micro-actuators to steer the array and limit trauma (IEEE MEMS 2023).</p>
   </div>
 </div>
 
-## Clinical Impact
+## My Role
 
-- {% include ph.html name="target" %} **Targeting Accuracy**: improved from 10mm to 3mm
-- {% include ph.html name="brain" %} **Cognitive Load**: Significant reduction compared to cognitive fusion
-- {% include ph.html name="hourglass-medium" %} **Procedure Time**: Maintained standard duration
-- {% include ph.html name="stethoscope" %} **Integration**: Seamless alignment with clinical workflow
+- Postdoctoral researcher on the project from 2019, then **principal investigator** from 2022 after joining the University of Lille as Assistant Professor.
+- Simulation and control of the electrode array insertion with SOFA.
 
-## Technical Innovations
+{% include project-publications.html project="robocop" %}
 
-### Robotic Control Systems
-- **Precision Manipulation**: Advanced control algorithms for delicate surgical procedures
-- **Force Feedback**: Real-time haptic feedback for surgeon guidance
-- **Path Planning**: Automated trajectory planning for optimal implant placement
-- **Safety Protocols**: Multiple safety layers to ensure patient protection
+## Follow-up: ACCESS (2024–present)
 
-### Surgical Assistance
-- **Real-time Imaging**: Integration of medical imaging for surgical guidance
-- **3D Visualization**: Advanced visualization systems for surgical planning
-- **Instrument Tracking**: Real-time tracking of surgical instruments
-- **Collision Avoidance**: Intelligent systems to prevent tissue damage
+ROBOCOP ended in 2023. Its follow-up, **ACCESS**, builds a patient-specific digital twin for cochlear implant surgery: physical simulation of inner-ear structures, medical image processing and augmented reality for intraoperative guidance.
 
-### Clinical Integration
-- **Workflow Optimization**: Streamlined surgical procedures
-- **Training Systems**: Virtual reality training for surgeons
-- **Quality Assurance**: Automated quality checks during procedures
-- **Data Collection**: Comprehensive data gathering for research and improvement
-
-## Clinical Applications
-
-### Primary Applications
-- **Cochlear Implant Surgery**: Primary focus on hearing restoration
-- **Otologic Procedures**: Various ear-related surgical interventions
-- **Minimally Invasive Surgery**: Reduced trauma and faster recovery
-- **Pediatric Cases**: Specialized approaches for children
-
-### Future Applications
-- **Other Implant Procedures**: Expanding to other types of implants
-- **General Otolaryngology**: Broader applications in ear, nose, and throat surgery
-- **Training and Education**: Medical education and surgical training
-- **Research Platform**: Foundation for future medical robotics research
-
-## Research Team
-
-### Principal Investigator
-- **Dr. Yinoussa Adagolodjo** - Assistant Professor, University of Lille
-
-### Research Team
-- **PhD Students**: Currently recruiting for advanced research positions
-- **Research Engineers**: Specialized in robotics and medical applications
-- **Clinical Partners**: Collaboration with medical professionals
-- **Industry Partners**: Technology transfer and commercialization
-
-### Collaborations
-- **University of Lille**: Academic research and development
-- **Medical Centers**: Clinical validation and testing
-- **Industry Partners**: Technology development and commercialization
-- **International Partners**: Global research network
-
-## Publications
-
-### Key Papers
-{% for paper in site.data.publications %}
-{% if paper.project == "robocop" %}
-- {{ paper.authors }} ({{ paper.year }}). "{{ paper.title }}." *{{ paper.journal }}*.
-{% endif %}
-{% endfor %}
-
-### Conference Presentations
-- **2023**: IEEE International Conference on Medical Robotics
-- **2022**: International Conference on Medical Image Computing
-- **2021**: European Robotics Forum
-
-## Current Status
-
-### Development Phase
-- **Phase 1**: System design and initial prototyping (Completed)
-- **Phase 2**: Laboratory testing and validation (In Progress)
-- **Phase 3**: Clinical trials and evaluation (Planned)
-- **Phase 4**: Commercialization and deployment (Future)
-
-### Achievements
-- **Prototype Development**: Functional robotic system prototype
-- **Laboratory Validation**: Successful testing in controlled environments
-- **Patent Applications**: Intellectual property protection
-- **Research Publications**: Peer-reviewed publications in leading journals
-
-## Future Directions
-
-### Short-term Goals (1-2 years)
-- Complete clinical validation studies
-- Obtain regulatory approvals
-- Establish clinical partnerships
-- Publish comprehensive results
-
-### Long-term Vision (3-5 years)
-- Commercial deployment in medical centers
-- International expansion and adoption
-- Development of next-generation systems
-- Training and education programs
-
-## Funding and Support
-
-### Current Funding
-- **Research Grants**: Multiple research funding sources
-- **Industry Partnerships**: Collaborative funding arrangements
-- **Academic Support**: University resources and facilities
-
-### Future Funding Opportunities
-- **Government Grants**: National and international funding programs
-- **Industry Investment**: Commercial partnership opportunities
-- **Philanthropic Support**: Foundation and charitable organization funding
-
-## Get Involved
-
-### For Researchers
-- **PhD Positions**: Currently recruiting PhD students
-- **Postdoctoral Opportunities**: Research positions available
-- **Collaboration**: Open to research partnerships
-- **Visiting Scholars**: Welcome visiting researchers
-
-### For Medical Professionals
-- **Clinical Trials**: Participate in validation studies
-- **Training Programs**: Access to training and education
-- **Consultation**: Expert consultation services
-- **Partnership**: Clinical partnership opportunities
-
-### For Industry Partners
-- **Technology Transfer**: Licensing and commercialization
-- **Joint Development**: Collaborative product development
-- **Investment**: Investment and funding opportunities
-- **Partnership**: Strategic partnership arrangements
-
-## Roadmap
-
-- [ ] Finaliser le système de retour haptique
-- [ ] Lancer les essais cliniques
-- [ ] Déposer un brevet sur l'algorithme de trajectoire
-- [ ] Publier les résultats dans une revue internationale
-
-[Contact us](/contact/) for more information about this project and opportunities for involvement.
-
+[Contact me](/contact/) for more information about this project.

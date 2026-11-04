@@ -1,13 +1,13 @@
 ---
 layout: page
 title: ADAGIO Project
-subtitle: Adaptive Digital AI-Guided Interventions and Operations
+subtitle: Continuum Robots for Endoscopic Gallbladder Drainage
 permalink: /research/projects/adagio/
 image: /assets/images/projects/bladder_2.jpg
-description: "Research project developing adaptive digital tools and AI-driven assistance for complex medical interventions, with intelligent systems that learn and adapt to surgical environments."
+description: "National project on tendon-actuated continuum robots for the endoscopic drainage of the gallbladder in acute cholecystitis."
 start_date: 2026-01-01
 status: active
-keywords: ["AI", "Digital Health", "Medical Interventions", "Adaptive Systems", "Surgical Assistance"]
+keywords: ["Continuum Robots", "Tendon Actuation", "Endoscopy", "Stent Placement"]
 ---
 
 <div class="project-hero-section">
@@ -38,72 +38,33 @@ keywords: ["AI", "Digital Health", "Medical Interventions", "Adaptive Systems", 
 
 ## Project Overview
 
-The **ADAGIO** project focuses on developing adaptive digital tools and AI-driven assistance systems for complex medical interventions. By combining machine learning, real-time simulation, and clinical expertise, ADAGIO creates intelligent systems that learn and adapt to diverse surgical environments, improving outcomes and safety for patients.
+**ADAGIO** — *tendon-Actuated continuum robots for enDoscopic drAinage of the Gallbladder In acute chOlecystitis* — is a **national project** started in January 2026, in which I take part as a team member.
 
-**Project Focus Areas:**
-- Adaptive AI systems for surgical guidance
-- Digital health tools for clinical integration
-- Real-time learning from surgical data
-- Intelligent decision support for medical interventions
-
-## Key Innovations
+Acute cholecystitis can be treated by draining the gallbladder endoscopically, which requires placing a stent accurately through a flexible endoscope. My work in the project focuses on a **stabilization method for stent placement**, based on the precise control of tendon-actuated continuum robots.
 
 <div class="features-grid">
   <div class="feature-glass-card">
-    {%- include ph.html name="brain" class="feature-icon" -%}
-    <h3>Context-Aware Guidance</h3>
-    <p>Systems that adapt to the specific surgical context.</p>
+    {%- include ph.html name="robot" class="feature-icon" -%}
+    <h3>Continuum Robots</h3>
+    <p>Tendon-actuated flexible robots compatible with endoscopic access.</p>
   </div>
   <div class="feature-glass-card">
-    {%- include ph.html name="arrows-clockwise" class="feature-icon" -%}
-    <h3>Real-Time Learning</h3>
-    <p>Continuous improvement from procedural feedback.</p>
+    {%- include ph.html name="target" class="feature-icon" -%}
+    <h3>Stabilized Stent Placement</h3>
+    <p>Control strategies that keep the tool tip stable during stent deployment.</p>
   </div>
   <div class="feature-glass-card">
-    {%- include ph.html name="trend-up" class="feature-icon" -%}
-    <h3>Predictive Systems</h3>
-    <p>Anticipating surgical needs before they arise.</p>
-  </div>
-  <div class="feature-glass-card">
-    {%- include ph.html name="desktop" class="feature-icon" -%}
-    <h3>Digital Platform</h3>
-    <p>Seamless embedding in existing OR environments.</p>
+    {%- include ph.html name="cube" class="feature-icon" -%}
+    <h3>Model-based Control</h3>
+    <p>Mechanical models of the continuum robot for precise, real-time control.</p>
   </div>
 </div>
 
-## Medical Applications
-
-- {% include ph.html name="microscope" %} **Minimally Invasive Surgery**: AI-guided endoscopic and laparoscopic procedures
-- {% include ph.html name="hospital" %} **Complex Interventions**: Assistance in high-risk, multi-step procedures
-- {% include ph.html name="chalkboard-teacher" %} **Training & Simulation**: Adaptive training platforms for surgical residents
-- {% include ph.html name="chart-bar" %} **Quality Monitoring**: Real-time quality control during procedures
-
-## Research Approach
-
-1. **Data Collection**: Gathering rich procedural datasets from clinical partners
-2. **Model Development**: Building adaptive AI models trained on surgical data
-3. **Simulation Validation**: Testing in high-fidelity simulation environments
-4. **Clinical Trials**: Controlled validation in clinical settings
-
-## Publications
-
-### Key Papers
-{% for paper in site.data.publications %}
-{% if paper.project == "adagio" %}
-- {{ paper.authors }} ({{ paper.year }}). "{{ paper.title }}." *{{ paper.journal }}*.
-{% endif %}
-{% endfor %}
-
-## Team
-
-- **Principal Investigator**: Dr. Yinoussa Adagolodjo
-- **PhD Students**: Recruited for AI and medical robotics research
-- **Clinical Partners**: Healthcare institutions for validation
+{% include project-publications.html project="adagio" %}
 
 ## Related Projects
 
-- [IRE Project](/research/projects/ire/) — Soft robotic endoscopes and digital twins
-- [Growing Robot](/research/projects/growing-robot/) — Vine-inspired soft robotics
-- [COSSEROOTS](/research/projects/cosseroots/) — Cosserat theory for soft robot control
+- [IRE Project](/research/projects/ire/) — intelligent soft robotic endoscopes
+- [COSSEROOTS](/research/projects/cosseroots/) — Cosserat models for slender soft robots
 
-[Contact us](/contact/) for collaboration opportunities.
+[Contact me](/contact/) for more information about this project.

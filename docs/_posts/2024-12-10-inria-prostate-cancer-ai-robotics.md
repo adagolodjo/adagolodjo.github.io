@@ -3,10 +3,10 @@ layout: post
 title: "Featured on Inria: Prostate Cancer Diagnosis and the Role of AI & Robotics"
 date: 2024-12-10
 categories: [news, press, research]
-tags: [prostate-cancer, medical-robotics, ROBOCOP, DEFROST, inria, AI, soft-robotics, needle-insertion]
+tags: [prostate-cancer, medical-robotics, CoBra, DEFROST, inria, AI, soft-robotics, needle-insertion]
 image: /assets/images/posts/inria-prostate-cancer-video.png
 author: Adagolodjo Yinoussa
-excerpt: "Inria published a feature on our work combining robotics, soft-body simulation and AI to improve prostate biopsy precision — part of the ROBOCOP project with the DEFROST team."
+excerpt: "Inria published a feature on our work combining robotics, soft-body simulation and AI to improve prostate biopsy precision — from a collaboration of the DEFROST team with the European CoBra project."
 ---
 
 I am honoured to be featured in an article published by **Inria** on the use of digital sciences — AI, simulation and robotics — to improve the diagnosis of prostate cancer.
@@ -19,7 +19,7 @@ Prostate cancer is one of the most common cancers in men. Confirming the diagnos
 
 ## Our Contribution: Deformable Robotics meets Medical Imaging
 
-As part of the [**ROBOCOP project**](/research/projects/robocop/) (2017–2021), our team at the [DEFROST group](https://team.inria.fr/defrost/) (Inria / CRIStAL UMR 9189 / University of Lille) developed a robotic system that carries a flexible ultrasound probe and biopsy needle. Because the robot's end-effector is itself **soft and deformable**, controlling it requires mathematical models that go beyond classical rigid-body robotics.
+Through a collaboration with the European **CoBra project**, our team at the [DEFROST group](https://team.inria.fr/defrost/) (Inria / CRIStAL UMR 9189 / University of Lille) developed a robotic system that carries a flexible ultrasound probe and biopsy needle. Because the robot's end-effector is itself **soft and deformable**, controlling it requires mathematical models that go beyond classical rigid-body robotics.
 
 We used **Cosserat rod theory** and **finite element methods (FEM)** — implemented in the [SOFA framework](https://www.sofa-framework.org/) and our [Cosserat plugin](https://github.com/SofaDefrost/Cosserat) — to model the deformations in real time. These models allow the robot to:
 

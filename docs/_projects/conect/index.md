@@ -1,13 +1,15 @@
 ---
 layout: page
 title: CONECT Project
-subtitle: Control of Needle Insertion in Robotic Surgery
+subtitle: Robotic Needle Insertion Guided by Real-time FEM Simulation
 permalink: /research/projects/conect/
 image: /assets/images/projects/conect-new.png
-description: "The CONECT project focuses on developing innovative solutions for robotic needle insertion procedures, combining real-time simulation with augmented reality guidance for enhanced surgical precision."
-start_date: 2020-01-01
+description: "My PhD project at ICube (University of Strasbourg): robotic insertion of flexible needles in deformable tissue using inverse real-time finite element simulation, and augmented reality for surgery."
+start_date: 2015-01-01
 status: completed
-keywords: ["Needle Insertion", "Robotic Control", "Augmented Reality", "Medical Robotics", "FEM Simulation"]
+keywords: ["Needle Insertion", "Inverse FEM", "Augmented Reality", "Medical Robotics"]
+venue: "IEEE T-RO 2019"
+venue_url: "https://inria.hal.science/hal-02144487v1"
 ---
 
 <div class="project-hero-section">
@@ -16,7 +18,7 @@ keywords: ["Needle Insertion", "Robotic Control", "Augmented Reality", "Medical 
     <div class="hero-left">
       <div class="project-badges">
         <span class="badge-glass">{%- include ph.html name="check" style="font-size: 0.6rem; margin-right: 6px; position: relative; top: -2px;" -%} Completed</span>
-        <span class="badge-glass">2020-2023</span>
+        <span class="badge-glass">2015-2018</span>
       </div>
       <h1 class="project-title-hero">{{ page.title }}</h1>
       <p class="project-subtitle-hero">{{ page.description }}</p>
@@ -38,56 +40,28 @@ keywords: ["Needle Insertion", "Robotic Control", "Augmented Reality", "Medical 
 
 ## Project Overview
 
-The CONECT project brought together researchers from leading institutions to develop innovative solutions for robotic needle insertion procedures. By combining real-time simulation with augmented reality guidance, the project aimed to enhance surgical precision and reduce complications during minimally invasive interventions.
+CONECT — *Couplage de la rObotique et de la simulatioN médicalE pour des proCédures automaTisées* — was my **PhD project** (2015–2018) at the ICube laboratory, University of Strasbourg, supervised by Dr. Hadrien Courtecuisse and Prof. Michel de Mathelin.
+
+The goal was to control a robot inserting a **flexible needle** into **deformable tissue**. Both the needle and the tissue deform during insertion, so the target moves. A real-time finite element simulation, solved as an **inverse problem**, computes at each step the robot motion that keeps the needle on its planned trajectory.
 
 <div class="features-grid">
   <div class="feature-glass-card">
     {%- include ph.html name="share-network" class="feature-icon" -%}
-    <h3>Real-time Simulation</h3>
-    <p>Advanced FEM algorithms for interactive soft tissue modeling and GPU-accelerated computation.</p>
+    <h3>Inverse FEM Simulation</h3>
+    <p>Real-time finite element models of needle and tissue, inverted to compute robot commands.</p>
   </div>
   <div class="feature-glass-card">
     {%- include ph.html name="robot" class="feature-icon" -%}
-    <h3>Robotic Control</h3>
-    <p>Precise needle manipulation with force feedback integration and automated path planning.</p>
+    <h3>Robotic Needle Insertion</h3>
+    <p>Constraint-based needle–tissue interaction, with corrective and predictive steps during insertion.</p>
   </div>
   <div class="feature-glass-card">
     {%- include ph.html name="eyeglasses" class="feature-icon" -%}
     <h3>Augmented Reality</h3>
-    <p>Real-time surgical guidance with 3D visualization of internal structures and interactive planning.</p>
+    <p>Registration of deformable organ models for surgical AR, applied to open liver surgery.</p>
   </div>
 </div>
 
-## Clinical Applications
+{% include project-publications.html project="conect" %}
 
-- {% include ph.html name="hospital" %} **Minimally invasive surgery**: Enhanced accuracy
-- {% include ph.html name="microscope" %} **Biopsy procedures**: Targeted tissue sampling
-- {% include ph.html name="pill" %} **Targeted drug delivery**: Precision treatment
-- {% include ph.html name="radioactive" %} **Interventional radiology**: Advanced guidance
-
-## Publications
-
-### Key Papers
-
-{% for paper in site.data.publications %}
-{% if paper.project == "conect" %}
-
-- {{ paper.authors }} ({{ paper.year }}). "{{ paper.title }}." *{{ paper.journal }}*.
-{% endif %}
-{% endfor %}
-
-## Team Members
-
-- Principal Investigator: Dr. Yinoussa Adagolodjo
-- Research Engineers
-- PhD Students
-- Clinical Partners
-
-[Contact us](/contact/) for more information about this project.
-
-## Roadmap
-
-- [ ] Intégrer la réalité augmentée au prototype
-- [ ] Tester la précision de l'insertion d'aiguille
-- [ ] Rédiger un rapport de validation clinique
-- [ ] Déployer le système en salle d'opération simulée
+[Contact me](/contact/) for more information about this work.

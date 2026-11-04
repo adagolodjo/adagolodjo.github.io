@@ -4,10 +4,10 @@ title: IRE Project
 subtitle: Intelligent Robotic Endoscopes
 permalink: /research/projects/ire/
 image: /assets/images/projects/colon.jpg
-description: "The IRE project focuses on developing innovative solutions for robotic endoscopy, combining real-time simulation with augmented reality guidance for enhanced surgical precision."
-start_date: 2022-01-01
+description: "European project on intelligent soft robotic endoscopes for minimally invasive surgery, combining real-time simulation, augmented reality guidance, computer vision and machine learning."
+start_date: 2024-01-01
 status: active
-keywords: ["Robotic Endoscopy", "Soft Robotics", "Real-Time Simulation", "Augmented Reality", "Surgical Precision"]
+keywords: ["Robotic Endoscopy", "Soft Robotics", "Real-Time Simulation", "Augmented Reality"]
 ---
 
 <div class="project-hero-section">
@@ -16,7 +16,7 @@ keywords: ["Robotic Endoscopy", "Soft Robotics", "Real-Time Simulation", "Augmen
     <div class="hero-left">
       <div class="project-badges">
         <span class="badge-glass active"><span style="display:inline-block;width:0.5em;height:0.5em;border-radius:50%;background:currentColor;margin-right:6px;position:relative;top:-1px;"></span> {{ page.status }}</span>
-        <span class="badge-glass">Started 2022</span>
+        <span class="badge-glass">Started 2024</span>
       </div>
       <h1 class="project-title-hero">{{ page.title }}</h1>
       <p class="project-subtitle-hero">{{ page.description }}</p>
@@ -38,42 +38,31 @@ keywords: ["Robotic Endoscopy", "Soft Robotics", "Real-Time Simulation", "Augmen
 
 ## Project Overview
 
-Our research aims to revolutionize minimally invasive surgery through intelligent robotic endoscopes. By integrating advanced computer vision, machine learning, and real-time simulation, we're creating next-generation surgical tools that enhance precision and patient outcomes.
+IRE (Intelligent Robotic Endoscopes) is a **European project** in which I take part as a team member of DEFROST (Inria / CRIStAL, University of Lille). The project targets soft robotic endoscopes for minimally invasive surgery, guided in real time by simulation, augmented reality, computer vision and machine learning.
 
 <div class="features-grid">
   <div class="feature-glass-card">
     {%- include ph.html name="robot" class="feature-icon" -%}
-    <h3>Robotic Control</h3>
-    <p>Advanced navigation algorithms for flexible robotic endoscopes covering tortuous pathways.</p>
+    <h3>Soft Robotic Endoscopes</h3>
+    <p>Modeling and control of flexible endoscopes navigating tortuous anatomical pathways.</p>
   </div>
   <div class="feature-glass-card">
     {%- include ph.html name="cube" class="feature-icon" -%}
-    <h3>Augmented Reality</h3>
-    <p>Real-time visual guidance enhancing the surgeon's perception during procedures.</p>
+    <h3>Real-time Simulation</h3>
+    <p>Physics-based models of the endoscope and its environment (SOFA) running alongside the procedure.</p>
   </div>
   <div class="feature-glass-card">
-    {%- include ph.html name="code" class="feature-icon" -%}
-    <h3>Digital Twins</h3>
-    <p>Real-time physics-based simulation models running parallel to physical procedures.</p>
+    {%- include ph.html name="eyeglasses" class="feature-icon" -%}
+    <h3>Augmented Reality</h3>
+    <p>Visual guidance combining simulation, computer vision and machine learning.</p>
   </div>
 </div>
 
-## Publications
+{% include project-publications.html project="ire" %}
 
-### Key Papers
+## Related Projects
 
-{% for paper in site.data.publications %}
-{% if paper.project == "ire" %}
+- [ADAGIO](/research/projects/adagio/) — continuum robots for endoscopic gallbladder drainage
+- [COSSEROOTS](/research/projects/cosseroots/) — Cosserat models for slender soft robots
 
-- {{ paper.authors }} ({{ paper.year }}). "{{ paper.title }}." *{{ paper.journal }}*.
-{% endif %}
-{% endfor %}
-
-[Contact us](/contact/) for more information about this project.
-
-## Roadmap
-
-- [ ] Optimize endoscopic navigation algorithm
-- [ ] Integrate AI for tissue detection
-- [ ] Conduct preclinical trials
-- [ ] Present at medical conference
+[Contact me](/contact/) for more information about this project.

@@ -42,6 +42,13 @@ venue_url: "https://hal.science/hal-05216849v1"
 
 The Active Prostate Phantom project focuses on developing an advanced pneumatically actuated prostate phantom with multiple independently controlled chambers. This innovative phantom allows for precise volumetric adjustments to replicate both asymmetric and symmetric benign prostatic hyperplasia (BPH), providing a realistic platform for medical training and robotic system validation.
 
+This work is the PhD thesis of **Sizhe Tian**, funded by a **regional PhD grant** (Hauts-de-France) obtained by Yinoussa Adagolodjo. The same phantoms serve two goals:
+
+1. **Teaching the digital rectal examination (DRE)** to urology trainees, with a phantom that reproduces realistic prostate conditions and measures the forces applied by the examiner.
+2. **Improving the algorithms of needle-insertion robots**, using the phantom as a controllable and instrumented test bench.
+
+It follows the team's earlier prostate work in collaboration with the European CoBra project on robotic transrectal biopsy ([RA-L 2022](https://inria.hal.science/hal-03729071v1)).
+
 <div class="features-grid">
   <div class="feature-glass-card">
     {%- include ph.html name="stethoscope" class="feature-icon" -%}
@@ -93,19 +100,7 @@ The simulation results demonstrated strong agreement with physical measurements:
 
 These results validate the phantom's potential as a reliable platform for robotic system validation and medical training applications.
 
-## Publications
-
-### Conference Papers
-
-- **"Active Prostate Phantom with Multiple Chambers"** (2025)
-  - Authors: Sizhe Tian, Yinoussa Adagolodjo, Jeremie Dequidt
-  - Conference: IROS 2025 (IEEE/RSJ International Conference on Intelligent Robots and Systems)
-  - HAL ID: [hal-05216849](https://hal.science/hal-05216849)
-  - Keywords: Simulation and Animation, Medical Robots and Systems, Soft Robot Applications
-
-- **"Using Haptic Feedback in Digital Rectal Examination Training"**
-  - Published during the project development phase
-  - Focus on haptic feedback integration for medical training applications
+{% include project-publications.html project="prostate-phantom" %}
 
 ## Applications
 
