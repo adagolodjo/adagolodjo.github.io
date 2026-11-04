@@ -563,6 +563,7 @@ image: /assets/images/notion-face.png
   <li>Reviewer — <em>IEEE Transactions on Medical Robotics and Bionics</em></li>
   <li>Reviewer — <em>IEEE Robotics and Automation Letters (RA-L)</em></li>
   <li>Reviewer — ICRA · IROS · International Conference on Medical Robotics</li>
+  <li>PhD jury member — Claire Martin, <em>Modeling and resolution of needle-tissue interactions for a fast and stable haptic rendering: Application to hepatic percutaneous procedures</em>, Université de Strasbourg, Dec. 2025 (<a href="https://hal.science/tel-05470170v1" target="_blank" rel="noopener">HAL</a>)</li>
   <li>Member — IEEE Robotics and Automation Society</li>
 </ul>
 
