@@ -583,7 +583,7 @@ keyword_cloud:
           <p class="timeline-description">Contributes to several cutting-edge projects, including COSSEROOTS, IRE and ADAGIO, pushing the boundaries of soft robotics for medical applications.</p>
           <div class="timeline-achievements">
             <span class="achievement-tag">Assistant Professor</span>
-            <span class="achievement-tag">18+ Publications</span>
+            <span class="achievement-tag">{{ site.data.publications | size }} Publications</span>
             <span class="achievement-tag">3 ANR Projects</span>
           </div>
         </div>
@@ -917,7 +917,7 @@ keyword_cloud:
         <div class="project-content">
           <div class="project-header">
             <h3 class="project-title">ROBOCOP Project</h3>
-            <div class="project-year">2019-2021</div>
+            <div class="project-year">2019-2023</div>
           </div>
           <p class="project-description">Cochlear implant robotization project using advanced robotic assistance and precision surgical procedures to improve hearing technologies.</p>
           
@@ -955,7 +955,7 @@ keyword_cloud:
         </div>
       </div>
 
-      <!-- ACCESS — Digital Twin for Cochlear Implant Surgery (ROBOCOP sub-project) -->
+      <!-- ACCESS — Digital Twin for Cochlear Implant Surgery (follow-up of ROBOCOP) -->
       <div class="project-card" data-category="medical-robotics simulation ai-healthcare augmented-reality" data-aos="fade-up" data-aos-delay="500">
         <div class="project-image">
           <img src="/assets/images/projects/access-cochlear.jpg" alt="ACCESS Project" loading="lazy"
@@ -968,7 +968,7 @@ keyword_cloud:
         <div class="project-content">
           <div class="project-header">
             <h3 class="project-title">ACCESS</h3>
-            <div class="project-year">2022-Present</div>
+            <div class="project-year">2024-Present</div>
           </div>
           <p class="project-description">Development of a patient-specific digital twin to assist cochlear implant surgery: physical simulation of inner ear structures, medical image processing, and augmented reality for intraoperative guidance.</p>
 
@@ -1163,9 +1163,9 @@ keyword_cloud:
         </div>
         
         <div class="news-card">
-          <div class="news-date">2023–2026</div>
-          <h3 class="news-title">ROBOCOP — cochlear implant robotics</h3>
-          <p class="news-excerpt">Active phase of ROBOCOP: robotization of cochlear implant insertion with force-feedback control and patient-specific digital twin (ACCESS sub-project).</p>
+          <div class="news-date">2024–present</div>
+          <h3 class="news-title">ACCESS — cochlear implant digital twin</h3>
+          <p class="news-excerpt">Follow-up of ROBOCOP (2019–2023): patient-specific digital twin and force-feedback control for robotized cochlear implant insertion.</p>
           <div class="news-tags">
             <span class="news-tag">Medical Robotics</span>
             <span class="news-tag">Digital Twin</span>
