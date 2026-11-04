@@ -267,7 +267,7 @@
   z-index: 1000;
 }
 
-.fab {
+button.fab {
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -338,7 +338,7 @@
 }
 
 /* Focus States */
-.fab:focus,
+button.fab:focus,
 .theme-toggle:focus {
   outline: 2px solid #3273dc;
   outline-offset: 2px;
@@ -379,7 +379,7 @@
 
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-  .fab,
+  button.fab,
   .post-card,
   .theme-toggle {
     transition: none;
@@ -393,7 +393,7 @@
 
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
-  .fab {
+  button.fab {
     background: #000;
     border: 2px solid #fff;
   }

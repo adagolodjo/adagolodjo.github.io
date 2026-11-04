@@ -44,6 +44,12 @@
     <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" class="social-icon" target="_blank" title="LinkedIn" rel="noopener">
       <i class="fab fa-linkedin"></i>
     </a>
+    <a href="https://www.youtube.com/{{ site.author.youtube }}" class="social-icon" target="_blank" title="YouTube" rel="noopener">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://x.com/{{ site.author.x }}" class="social-icon" target="_blank" title="X" rel="noopener">
+      <i class="fab fa-x-twitter"></i>
+    </a>
     <a href="https://hal.science/search/index?q=Adagolodjo" class="social-icon" target="_blank" title="HAL Science" rel="noopener">
       {%- include ph.html name="archive" -%}
     </a>
@@ -66,6 +72,14 @@
     <a class="mobile-nav-item" href="{{ '/teaching/courses/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Courses <span class="nav-count">{{ nav_course_count }}</span></a>
     <a class="mobile-nav-item" href="{{ '/teaching/resources/' | relative_url }}" style="padding-left:2rem; font-size:0.9rem; opacity:0.85;">↳ Resources</a>
     <a class="mobile-nav-item" href="{{ '/blog/' | relative_url }}">Blog & News</a>
+    <div class="mobile-nav-social">
+      <a href="https://www.youtube.com/{{ site.author.youtube }}" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://x.com/{{ site.author.x }}" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://github.com/adagolodjo" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://scholar.google.com/citations?hl=fr&user=ZBdWJ9EAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">{%- include ph.html name="graduation-cap" -%}</a>
+      <a href="https://hal.science/search/index?q=Adagolodjo" target="_blank" rel="noopener" aria-label="HAL Science">{%- include ph.html name="archive" -%}</a>
+    </div>
     <button class="mobile-nav-close" aria-label="Close menu">{%- include ph.html name="x" -%}</button>
   </div>
 </nav>

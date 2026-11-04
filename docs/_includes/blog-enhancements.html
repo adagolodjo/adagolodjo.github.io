@@ -65,11 +65,11 @@
 <div class="social-sharing-enhanced">
   <h4 class="title is-6">Share this post</h4>
   <div class="buttons are-medium">
-    <button class="button is-twitter" data-platform="twitter">
+    <button class="button is-x" data-platform="x">
       <span class="icon">
-        <i class="fab fa-twitter"></i>
+        <i class="fab fa-x-twitter"></i>
       </span>
-      <span>Tweet</span>
+      <span>Post</span>
     </button>
     <button class="button is-linkedin" data-platform="linkedin">
       <span class="icon">
@@ -210,8 +210,8 @@
   border-radius: 6px;
 }
 
-.button.is-twitter {
-  background-color: #1da1f2;
+.button.is-x {
+  background-color: #000;
   color: white;
 }
 
@@ -366,8 +366,8 @@ document.addEventListener('DOMContentLoaded', function() {
       
       let shareUrl = '';
       switch (platform) {
-        case 'twitter':
-          shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+        case 'x':
+          shareUrl = `https://x.com/intent/post?url=${url}&text=${title}&via={{ site.author.x }}`;
           break;
         case 'linkedin':
           shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;

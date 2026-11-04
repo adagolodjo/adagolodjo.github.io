@@ -142,6 +142,23 @@
     }
   }
 
+  // Plus d'icônes sociales à droite : on resserre avant le passage en mobile
+  .nav-right {
+    @media (max-width: 1279px) {
+      gap: var(--spacing-sm);
+    }
+  }
+
+  // Sous 1024 px : liens et icônes sociales sont dans le menu plein écran (.mobile-nav)
+  @media (max-width: 1023px) {
+    padding: var(--spacing-sm) var(--spacing-md);
+
+    .nav-left,
+    .nav-right .social-icon {
+      display: none;
+    }
+  }
+
   // Items de navigation avec micro-interactions
   .nav-item {
     color: white;
@@ -1361,7 +1378,7 @@
   border-radius: var(--border-radius-md);
   @include smooth-transition(all, 0.3s);
 
-  @include respond-to(mobile) {
+  @media (max-width: 1023px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1412,8 +1429,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: var(--spacing-xl);
+  justify-content: safe center;
+  gap: var(--spacing-md);
+  box-sizing: border-box;
+  padding: 4.5rem var(--spacing-md) var(--spacing-lg);
+  overflow-y: auto;
   transform: translateY(-100%);
   @include smooth-transition(transform, 0.4s, cubic-bezier(0.4, 0, 0.2, 1));
   opacity: 0;
@@ -1426,10 +1446,10 @@
   .mobile-nav-item {
     color: white;
     text-decoration: none;
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
     font-weight: $weight-bold;
     @include smooth-transition(all, 0.3s);
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-lg);
     border-radius: var(--border-radius-lg);
 
     &:hover {
@@ -1449,6 +1469,28 @@
       border: 1px solid rgba($primary-light, 0.3);
       border-radius: var(--border-radius-full);
       vertical-align: middle;
+    }
+  }
+
+  .mobile-nav-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
+
+    a {
+      color: white;
+      font-size: var(--text-xl);
+      padding: var(--spacing-sm);
+      border-radius: var(--border-radius-md);
+      @include smooth-transition(all, 0.3s);
+
+      &:hover,
+      &:focus {
+        color: $primary-light;
+        background: rgba(white, 0.1);
+      }
     }
   }
 
