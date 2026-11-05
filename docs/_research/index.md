@@ -704,7 +704,7 @@ keyword_cloud:
       <!-- ADAGIO Project (AI & assistance) -->
       <div class="project-card" data-category="ai-healthcare simulation" data-aos="fade-up" data-aos-delay="250">
         <div class="project-image">
-          <img src="/assets/images/projects/bladder_2.jpg" alt="ADAGIO Project" loading="lazy">
+          <img src="/assets/images/projects/adagio.webp" alt="ADAGIO Project — liver, gallbladder and biliary tract model" loading="lazy">
           <div class="project-overlay">
             <div class="project-status active">Active</div>
             <div class="project-impact">Continuum Robots</div>

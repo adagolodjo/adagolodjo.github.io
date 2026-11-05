@@ -18,22 +18,19 @@ venue_url: "https://hal.science/hal-03192168v1"
   <div class="project-hero-grid">
     <div class="hero-left">
       <div class="project-badges">
-        <span class="badge-glass">{%- include ph.html name="check" style="font-size: 0.6rem; margin-right: 6px; position: relative; top: -2px;" -%} Completed</span>
+        <span class="badge-glass">{%- include ph.html name="check" class="badge-icon" -%} Completed</span>
         <span class="badge-glass">2021-2022</span>
       </div>
-      <h1 class="project-title-hero">{{ page.title }}</h1>
-      <p class="project-subtitle-hero">{{ page.description }}</p>
-      
-      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+      <div class="project-hero-tags">
         {% for tag in page.keywords limit:3 %}
-          <span style="background: rgba(255,255,255,0.1); padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; color: #a5b4fc;">#{{ tag }}</span>
+          <span class="project-hero-tag">#{{ tag }}</span>
         {% endfor %}
       </div>
     </div>
     
     <div class="hero-right">
       <div class="project-hero-image-wrapper">
-        <img src="{{ page.image }}" alt="{{ page.title }}">
+        <img src="{{ page.image }}" alt="{{ page.title }}" loading="lazy">
       </div>
     </div>
   </div>

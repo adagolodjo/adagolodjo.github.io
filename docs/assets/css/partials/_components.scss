@@ -528,3 +528,9 @@ $card-shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
   .talk-badge-keynote { background: $primary-light; color: #01272A; }
   .talk-badge-press { background: #E65100; color: #fff; border-color: #E65100; }
 }
+
+// ADAGIO image is a tall portrait: frame the gallbladder and biliary tract
+// (lower half) instead of the esophagus when cropped into landscape cards.
+img[src$="/projects/adagio.webp"] {
+  object-position: center 72%;
+}

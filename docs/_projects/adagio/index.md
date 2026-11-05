@@ -3,7 +3,7 @@ layout: page
 title: ADAGIO Project
 subtitle: Continuum Robots for Endoscopic Gallbladder Drainage
 permalink: /research/projects/adagio/
-image: /assets/images/projects/bladder_2.jpg
+image: /assets/images/projects/adagio.webp
 description: "National project on tendon-actuated continuum robots for the endoscopic drainage of the gallbladder in acute cholecystitis."
 start_date: 2026-01-01
 status: active
@@ -15,22 +15,19 @@ keywords: ["Continuum Robots", "Tendon Actuation", "Endoscopy", "Stent Placement
   <div class="project-hero-grid">
     <div class="hero-left">
       <div class="project-badges">
-        <span class="badge-glass active"><span style="display:inline-block;width:0.5em;height:0.5em;border-radius:50%;background:currentColor;margin-right:6px;position:relative;top:-1px;"></span> {{ page.status }}</span>
+        <span class="badge-glass active"><span class="badge-dot" aria-hidden="true"></span> {{ page.status }}</span>
         <span class="badge-glass">Started 2026</span>
       </div>
-      <h1 class="project-title-hero">{{ page.title }}</h1>
-      <p class="project-subtitle-hero">{{ page.description }}</p>
-      
-      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+      <div class="project-hero-tags">
         {% for tag in page.keywords limit:3 %}
-          <span style="background: rgba(255,255,255,0.1); padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; color: #a5b4fc;">#{{ tag }}</span>
+          <span class="project-hero-tag">#{{ tag }}</span>
         {% endfor %}
       </div>
     </div>
     
     <div class="hero-right">
       <div class="project-hero-image-wrapper">
-        <img src="{{ page.image }}" alt="{{ page.title }}">
+        <img src="{{ page.image }}" alt="{{ page.title }}" loading="lazy">
       </div>
     </div>
   </div>
