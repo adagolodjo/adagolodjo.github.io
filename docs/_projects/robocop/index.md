@@ -1,13 +1,14 @@
 ---
 layout: page
-title: ROBOCOP Project
-subtitle: Robotic Cochlear Implant Procedure
+title: ROBOCOP / ACCESS
+subtitle: Robotic Cochlear Implant Insertion and Patient-Specific Digital Twin
 permalink: /research/projects/robocop/
 image: /assets/images/projects/robocop_1.png
-description: "Robotization of cochlear implant insertion: real-time FEM simulation of the electrode array, surgical navigation and safe, automated insertion."
+description: "Robotization of cochlear implant insertion (ROBOCOP, 2019–2023), continued by ACCESS (2024–2029): a patient-specific digital twin for cochlear implant surgery."
 start_date: 2019-01-01
-status: completed
-keywords: ["Cochlear Implant", "Real-time FEM", "Surgical Robotics", "Electroactive Polymer"]
+end_date: 2029-12-31
+status: active
+keywords: ["Cochlear Implant", "Real-time FEM", "Digital Twin", "Surgical Robotics"]
 venue: "IEEE MEMS 2023"
 venue_url: "https://inria.hal.science/hal-03946253v1"
 ---
@@ -17,8 +18,8 @@ venue_url: "https://inria.hal.science/hal-03946253v1"
   <div class="project-hero-grid">
     <div class="hero-left">
       <div class="project-badges">
-        <span class="badge-glass">{%- include ph.html name="check" style="font-size: 0.6rem; margin-right: 6px; position: relative; top: -2px;" -%} Completed</span>
-        <span class="badge-glass">2019-2023</span>
+        <span class="badge-glass active"><span style="display:inline-block;width:0.5em;height:0.5em;border-radius:50%;background:currentColor;margin-right:6px;position:relative;top:-1px;"></span> {{ page.status }}</span>
+        <span class="badge-glass">2019-2029</span>
       </div>
       <h1 class="project-title-hero">{{ page.title }}</h1>
       <p class="project-subtitle-hero">{{ page.description }}</p>
@@ -40,9 +41,9 @@ venue_url: "https://inria.hal.science/hal-03946253v1"
 
 ## Project Overview
 
-ROBOCOP (2019–2023) aimed at automating the insertion of cochlear implants. Inserting the electrode array into the cochlea is a delicate gesture: the array is flexible, the cochlea is a narrow spiral, and insertion forces can damage the inner-ear structures that preserve residual hearing.
+This line of research on **cochlear implant surgery** runs in two phases: **ROBOCOP** (2019–2023), on the robotization of the insertion, followed by **ACCESS** (2024–2029), on a patient-specific digital twin of the procedure.
 
-The project combined **real-time finite element simulation** of the electrode array (SOFA), **surgical navigation** and **robotic control**, together with the design of an **actuated electrode array** based on electroactive polymer micro-actuators that can bend under electrical stimulation to reduce insertion trauma.
+Inserting the electrode array into the cochlea is a delicate gesture: the array is flexible, the cochlea is a narrow spiral, and insertion forces can damage the inner-ear structures that preserve residual hearing.
 
 <div class="features-grid">
   <div class="feature-glass-card">
@@ -56,21 +57,25 @@ The project combined **real-time finite element simulation** of the electrode ar
     <p>Robotic insertion driven by the simulation, with navigation and safety constraints.</p>
   </div>
   <div class="feature-glass-card">
-    {%- include ph.html name="lightning" class="feature-icon" -%}
-    <h3>Smart Electrode Array</h3>
-    <p>Electroactive polymer micro-actuators to steer the array and limit trauma (IEEE MEMS 2023).</p>
+    {%- include ph.html name="ear" class="feature-icon" -%}
+    <h3>Patient-Specific Digital Twin</h3>
+    <p>Physical simulation of inner-ear structures from medical images, with augmented reality for intraoperative guidance.</p>
   </div>
 </div>
 
+## Phase 1 — ROBOCOP (2019–2023)
+
+ROBOCOP aimed at automating cochlear implant insertion. It combined **real-time finite element simulation** of the electrode array (SOFA), **surgical navigation** and **robotic control**, together with the design of an **actuated electrode array** based on electroactive polymer micro-actuators that can bend under electrical stimulation to reduce insertion trauma (IEEE MEMS 2023).
+
+## Phase 2 — ACCESS (2024–2029)
+
+ACCESS continues ROBOCOP with a **patient-specific digital twin** for cochlear implant surgery: physical simulation of inner-ear structures, medical image processing and augmented reality for intraoperative guidance.
+
 ## My Role
 
-- Postdoctoral researcher on the project from 2019, then **principal investigator** from 2022 after joining the University of Lille as Assistant Professor.
-- Simulation and control of the electrode array insertion with SOFA.
+- Postdoctoral researcher on ROBOCOP from 2019, then **principal investigator** from 2022 after joining the University of Lille as Assistant Professor.
+- Principal investigator of ACCESS.
 
 {% include project-publications.html project="robocop" %}
-
-## Follow-up: ACCESS (2024–present)
-
-ROBOCOP ended in 2023. Its follow-up, **ACCESS**, builds a patient-specific digital twin for cochlear implant surgery: physical simulation of inner-ear structures, medical image processing and augmented reality for intraoperative guidance.
 
 [Contact me](/contact/) for more information about this project.

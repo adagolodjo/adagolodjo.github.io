@@ -14,11 +14,16 @@ permalink: /research/projects/
   <button class="projects-filter-tab" data-filter="completed">Terminés</button>
 </div>
 
+{%- assign active_projects = site.projects | where: "status", "active" | sort: "start_date", "first" | reverse -%}
+{%- assign completed_projects = site.projects | where: "status", "completed" | sort: "start_date", "first" | reverse -%}
+{%- assign ordered_projects = active_projects | concat: completed_projects -%}
 <div class="projects-grid" id="projects-grid">
-{% for project in site.projects %}
+{% for project in ordered_projects %}
   {% if project.path contains "index.md" %}
     {% capture excerpt %}
-      {% if project.content contains more_sep %}
+      {% if project.description %}
+        {{ project.description }}
+      {% elsif project.content contains more_sep %}
         {{ project.content | split: more_sep | first | strip_html | truncatewords: 30 }}
       {% else %}
         {{ project.content | strip_html | truncatewords: 30 }}
@@ -48,7 +53,7 @@ permalink: /research/projects/
       <div class="project-footer">
         <a href="{{ project.url | relative_url }}" class="button is-primary">Learn More →</a>
         {% if project.venue %}<a class="project-venue" href="{{ project.venue_url }}" target="_blank" rel="noopener noreferrer" title="Related publication">{%- include ph.html name="file-text" -%} {{ project.venue }}</a>{% endif %}
-        {% if project.start_date %}<span class="project-year">Since {{ project.start_date | date: "%Y" }}</span>{% endif %}
+        {% if project.start_date %}<span class="project-year">{% if project.end_date %}{{ project.start_date | date: "%Y" }}–{{ project.end_date | date: "%Y" }}{% else %}Since {{ project.start_date | date: "%Y" }}{% endif %}</span>{% endif %}
       </div>
     </div>
   {% endif %}

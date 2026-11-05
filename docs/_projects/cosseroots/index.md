@@ -6,6 +6,7 @@ permalink: /research/projects/cosseroots/
 image: /assets/images/projects/cosseroots-new.png
 description: "Research project applying Cosserat rod theory to the modeling and control of slender, continuum soft robots."
 start_date: 2021-01-01
+end_date: 2022-12-31
 status: completed
 keywords: ["Cosserat Rod Theory", "Soft Robotics", "Real-Time Simulation", "FEM"]
 venue: "RA-L 2021"

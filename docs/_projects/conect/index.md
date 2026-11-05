@@ -6,6 +6,7 @@ permalink: /research/projects/conect/
 image: /assets/images/projects/conect-new.png
 description: "My PhD project at ICube (University of Strasbourg): robotic insertion of flexible needles in deformable tissue using inverse real-time finite element simulation, and augmented reality for surgery."
 start_date: 2015-01-01
+end_date: 2018-12-31
 status: completed
 keywords: ["Needle Insertion", "Inverse FEM", "Augmented Reality", "Medical Robotics"]
 venue: "IEEE T-RO 2019"

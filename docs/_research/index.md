@@ -902,23 +902,23 @@ keyword_cloud:
         </div>
       </div>
 
-      <!-- ROBOCOP Project (completed clinical impact) -->
+      <!-- ROBOCOP / ACCESS — cochlear implant robotics and digital twin -->
       <div class="project-card" data-category="medical-robotics" data-aos="fade-up" data-aos-delay="450">
         <div class="project-image">
           <video autoplay loop muted playsinline>
             <source src="/assets/images/forceView.mp4" type="video/mp4">
           </video>
           <div class="project-overlay">
-            <div class="project-status completed">Completed</div>
-            <div class="project-impact">Clinical Impact</div>
+            <div class="project-status active">Active</div>
+            <div class="project-impact">Digital Twin</div>
           </div>
         </div>
         <div class="project-content">
           <div class="project-header">
-            <h3 class="project-title">ROBOCOP Project</h3>
-            <div class="project-year">2019-2023</div>
+            <h3 class="project-title">ROBOCOP / ACCESS</h3>
+            <div class="project-year">2019-2029</div>
           </div>
-          <p class="project-description">Cochlear implant robotization project using advanced robotic assistance and precision surgical procedures to improve hearing technologies.</p>
+          <p class="project-description">Robotized cochlear implant insertion (ROBOCOP, 2019–2023), continued by ACCESS (2024–2029): a patient-specific digital twin with physical simulation, medical imaging and augmented reality for intraoperative guidance.</p>
           
           <div class="project-highlights">
             <div class="highlight-item">
@@ -944,57 +944,6 @@ keyword_cloud:
           <div class="project-actions">
             <a href="/research/projects/robocop/" class="btn-primary">
               <span>Learn More</span>
-              {%- include ph.html name="arrow-right" -%}
-            </a>
-            <button class="btn-secondary" data-modal="robocop-video">
-              {%- include ph.html name="play" -%}
-              <span>Watch Demo</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- ACCESS — Digital Twin for Cochlear Implant Surgery (follow-up of ROBOCOP) -->
-      <div class="project-card" data-category="medical-robotics simulation ai-healthcare augmented-reality" data-aos="fade-up" data-aos-delay="500">
-        <div class="project-image">
-          <img src="/assets/images/projects/access-cochlear.jpg" alt="ACCESS Project" loading="lazy"
-               onerror="this.onerror=null;this.src='/assets/images/projects/conect-new.png'">
-          <div class="project-overlay">
-            <div class="project-status active">Active</div>
-            <div class="project-impact">Digital Twin</div>
-          </div>
-        </div>
-        <div class="project-content">
-          <div class="project-header">
-            <h3 class="project-title">ACCESS</h3>
-            <div class="project-year">2024-Present</div>
-          </div>
-          <p class="project-description">Development of a patient-specific digital twin to assist cochlear implant surgery: physical simulation of inner ear structures, medical image processing, and augmented reality for intraoperative guidance.</p>
-
-          <div class="project-highlights">
-            <div class="highlight-item">
-              {%- include ph.html name="ear" -%}
-              <span>Cochlear implant precision</span>
-            </div>
-            <div class="highlight-item">
-              {%- include ph.html name="cube" -%}
-              <span>Patient-specific simulation</span>
-            </div>
-            <div class="highlight-item">
-              {%- include ph.html name="cube" -%}
-              <span>Augmented reality guidance</span>
-            </div>
-          </div>
-
-          <div class="project-tags">
-            <span class="tag medical-robotics">Cochlear Implant</span>
-            <span class="tag simulation">Digital Twin</span>
-            <span class="tag ai-healthcare">Augmented Reality</span>
-          </div>
-
-          <div class="project-actions">
-            <a href="/research/projects/access/" class="btn-primary">
-              <span>Explore Project</span>
               {%- include ph.html name="arrow-right" -%}
             </a>
             <button class="btn-secondary" data-modal="robocop-video">
@@ -1162,7 +1111,7 @@ keyword_cloud:
         </div>
         
         <div class="news-card">
-          <div class="news-date">2024–present</div>
+          <div class="news-date">2024–2029</div>
           <h3 class="news-title">ACCESS — cochlear implant digital twin</h3>
           <p class="news-excerpt">Follow-up of ROBOCOP (2019–2023): patient-specific digital twin and force-feedback control for robotized cochlear implant insertion.</p>
           <div class="news-tags">
