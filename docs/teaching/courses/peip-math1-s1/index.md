@@ -82,18 +82,18 @@ track: maths
 
   <div class="timeline">
     <div class="timeline-item">
-      <div style="font-weight: 600; color: var(--course-accent-ink); font-size: 1.1rem; margin-bottom: 0.5rem;">Séance 1-2 : Trigonométrie</div>
+      <div style="font-weight: 600; color: var(--course-accent-ink); font-size: 1.1rem; margin-bottom: 0.5rem;">S1-M1 — Trigonométrie (3h)</div>
       <div>
         <h4>Le cercle trigonométrique</h4>
-        <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; font-style: italic;">Cosinus, sinus, tangente, projection dans le plan pour calculs simples de physique. Formules essentielles (addition, duplication). Résolution d'équations trigonométriques simples (ex : cos(x) = a).</div>
+        <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; font-style: italic;">Cosinus, sinus, tangente, projection dans le plan pour calculs simples de physique. Formules essentielles (addition, duplication). Résolution d'équations trigonométriques simples (ex : cos(x) = a).<br>La première séance s'ouvre par un test de positionnement de 20 min, non noté, qui oriente le travail personnel.<br>Laiterie : inclinaison d'un convoyeur, projection du poids d'une palette sur la pente.</div>
       </div>
     </div>
 
     <div class="timeline-item">
-      <div style="font-weight: 600; color: var(--course-accent-ink); font-size: 1.1rem; margin-bottom: 0.5rem;">Séance 3 : Vecteurs du plan</div>
+      <div style="font-weight: 600; color: var(--course-accent-ink); font-size: 1.1rem; margin-bottom: 0.5rem;">S1-M2 — Vecteurs du plan (3h)</div>
       <div>
         <h4>Représentation et opérations</h4>
-        <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; font-style: italic;">Représentation, coordonnées, opérations (addition, multiplication par un scalaire). Produit scalaire et applications (orthogonalité, calcul d'angles). Applications en géométrie analytique (équations de droites).</div>
+        <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; font-style: italic;">Représentation, coordonnées, opérations (addition, multiplication par un scalaire). Produit scalaire et applications (orthogonalité, calcul d'angles). Applications en géométrie analytique (équations de droites).<br>Laiterie : forces exercées sur un bras de manutention, trajectoire d'un chariot.</div>
       </div>
     </div>
   </div>
@@ -117,7 +117,7 @@ track: maths
   </div>
 
   <div class="info-box">
-    <p>Modalités à confirmer avec la coordination pédagogique du parcours PeiP.</p>
+    <p>Test de positionnement en première séance (non noté). L'évaluation du parcours (contrôles individuels et deux SAÉ en S2 et S3) est détaillée sur les pages <a href="{{ '/teaching/courses/peip-math1-s2/' | relative_url }}">S2</a> et <a href="{{ '/teaching/courses/peip-math1-s3/' | relative_url }}">S3</a> ; modalités à confirmer avec la coordination pédagogique.</p>
   </div>
 </section>
 

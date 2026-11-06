@@ -175,17 +175,17 @@
 - code: PEIP-MATH1-S2
   title: "Mathématiques 1 — PeiP S2"
   semester: "S2"
-  description: "Taylor expansions, differential equations, multivariable functions, and descriptive statistics for biological and food engineering"
+  description: "Logic and sets, complex numbers, polynomials and rational fractions, plane and space geometry, first cross-cutting project (SAÉ)"
   syllabus: "/teaching/courses/peip-math1-s2/"
   level: "Undergraduate"
   hours_td: "20"
-  evaluation: "DS (à confirmer)"
+  evaluation: "Contrôle individuel + SAÉ (à confirmer)"
 
 - code: PEIP-MATH1-S3
   title: "Mathématiques 1 — PeiP S3"
   semester: "S3"
-  description: "Logic and combinatorics, complex numbers, polynomials, and plane/space geometry for engineering applications"
+  description: "Statistics, Taylor expansions, differential equations, Laplace transform and Fourier analysis for biological and food engineering"
   syllabus: "/teaching/courses/peip-math1-s3/"
   level: "Undergraduate"
   hours_td: "20"
-  evaluation: "DS (à confirmer)"
+  evaluation: "Contrôle individuel + SAÉ (à confirmer)"
