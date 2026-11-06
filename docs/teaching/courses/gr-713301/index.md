@@ -101,6 +101,7 @@ track: industrie
         <li>Régulateur de Smith pour compensation du retard</li>
       </ul>
       <p><strong>Durée:</strong> 4h TP • <strong>Lieu:</strong> Salle C008 (temps réel)</p>
+      <p><strong>{% include ph.html name="file-pdf" %} <a href="https://nextcloud.univ-lille.fr/index.php/s/WSG7Jit9Y9QYBmk" target="_blank" rel="noopener noreferrer" style="color: var(--course-accent-ink); text-decoration: none; font-weight: bold;">Exercices de TP (PDF)</a></strong></p>
     </div>
     
     <div class="timeline-item">
@@ -112,6 +113,7 @@ track: industrie
         <li>Tests de rejet de perturbation et adaptabilité</li>
       </ul>
       <p><strong>Durée:</strong> 4h TP • <strong>Lieu:</strong> Salle C008 (temps réel)</p>
+      <p><strong>{% include ph.html name="file-pdf" %} <a href="https://nextcloud.univ-lille.fr/index.php/s/WSG7Jit9Y9QYBmk" target="_blank" rel="noopener noreferrer" style="color: var(--course-accent-ink); text-decoration: none; font-weight: bold;">Exercices de TP (PDF)</a></strong></p>
     </div>
     
     <div class="timeline-item">
@@ -123,6 +125,7 @@ track: industrie
         <li>Validation théorique et optimisation des performances</li>
       </ul>
       <p><strong>Durée:</strong> 4h TP • <strong>Lieu:</strong> Salle C008 (temps réel)</p>
+      <p><strong>{% include ph.html name="file-pdf" %} <a href="https://nextcloud.univ-lille.fr/index.php/s/WSG7Jit9Y9QYBmk" target="_blank" rel="noopener noreferrer" style="color: var(--course-accent-ink); text-decoration: none; font-weight: bold;">Exercices de TP (PDF)</a></strong></p>
     </div>
   </div>
 </div>
@@ -205,7 +208,7 @@ track: industrie
         <li><strong>Consignes sécurité :</strong> Manipulations en conditions réelles</li>
         <li><strong>{% include ph.html name="books" %} <a href="https://nextcloud.univ-lille.fr/index.php/s/GCK54grmDooXWRH" target="_blank" rel="noopener" style="color: var(--course-accent-ink); text-decoration: none; font-weight: bold;">Rappels Matlab</a></strong> - Cours théorique de base</li>
         <li><strong>{% include ph.html name="download-simple" %} <a href="https://nextcloud.univ-lille.fr/index.php/s/Pbnzxf5LFbr8twa" target="_blank" rel="noopener noreferrer" style="color: var(--course-accent-ink); text-decoration: none; font-weight: bold;">Projet MATLAB (TP 1)</a></strong> - Consignes et fichiers à télécharger</li>
-        <li><strong>{% include ph.html name="download-simple" %} <a href="https://nextcloud.univ-lille.fr/index.php/s/Cj6tFw3gFrspLkc" target="_blank" rel="noopener" style="color: var(--course-accent-ink); text-decoration: none; font-weight: bold;">Télécharger les supports PDF</a></strong></li>
+        <li><strong>{% include ph.html name="download-simple" %} <a href="https://nextcloud.univ-lille.fr/index.php/s/Pbnzxf5LFbr8twa" target="_blank" rel="noopener" style="color: var(--course-accent-ink); text-decoration: none; font-weight: bold;">Télécharger les supports PDF</a></strong></li>
       </ul>
     </div>
   </div>
