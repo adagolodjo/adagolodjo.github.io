@@ -597,7 +597,7 @@
 
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
     gap: 2rem;
     max-width: 1400px;
     margin: 0 auto;
@@ -1258,4 +1258,32 @@
 .loading {
   opacity: 0.6;
   pointer-events: none;
+}
+
+// Responsive overrides for the overview section. The generic media rules above
+// (.overview-grid, .focus-areas-grid) lose against the nested selectors in
+// .research-overview, which kept two columns on phones and made the page
+// overflow horizontally (~700px wide at 375px).
+@media (max-width: 1024px) {
+  .research-overview .overview-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+
+    .overview-visual .focus-areas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+}
+
+@media (max-width: 768px) {
+  .research-overview .overview-grid {
+    gap: 2rem;
+
+    .overview-visual .focus-areas-grid { grid-template-columns: minmax(0, 1fr); }
+    .overview-content .key-metrics { grid-template-columns: minmax(0, 1fr); }
+  }
+}
+
+// Timeline cards could not shrink below their content width on phones.
+.research-timeline .timeline-content {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }

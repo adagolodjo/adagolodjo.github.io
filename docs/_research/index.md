@@ -386,11 +386,8 @@ keyword_cloud:
 </style>
 
 <!-- Research Hero Section -->
-<section class="research-hero">
-  <div class="hero-background">
-    <div class="hero-particles"></div>
-    <div class="hero-gradient"></div>
-  </div>
+<section class="research-hero research-hero--wall">
+  {% include research-wall.html cols=4 %}
   
   <div class="hero-content">
     <div class="hero-intro">
@@ -412,7 +409,8 @@ keyword_cloud:
       <div class="stat-card" data-aos="fade-left" data-aos-delay="100">
         <div class="stat-icon">{%- include ph.html name="share-network" -%}</div>
         <div class="stat-text">
-          <div class="stat-number" data-count="9">0</div>
+          {%- assign active_projects = site.projects | where: "status", "active" | size -%}
+          <div class="stat-number" data-count="{{ active_projects }}">0</div>
           <div class="stat-label">Active Projects</div>
         </div>
       </div>

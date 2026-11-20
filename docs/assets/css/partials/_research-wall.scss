@@ -1,0 +1,177 @@
+// Research wall — tilted columns of research visuals scrolling behind the
+// /research/ hero. Markup: _includes/research-wall.html · data: _data/research_wall.yml
+// Inspired by "wall" heroes: perspective plane + CSS-only infinite columns.
+
+$wall-gap: 14px;
+
+@keyframes wall-up {
+  from { transform: translateY(0); }
+  to   { transform: translateY(calc(-50% - #{$wall-gap / 2})); }
+}
+
+@keyframes wall-down {
+  from { transform: translateY(calc(-50% - #{$wall-gap / 2})); }
+  to   { transform: translateY(0); }
+}
+
+.research-hero.research-hero--wall {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  background: #011f21;
+
+  // Readability veil: opaque on the text side, clear on the wall side.
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background:
+      linear-gradient(90deg, rgba(1, 31, 33, 0.97) 0%, rgba(1, 31, 33, 0.9) 34%, rgba(1, 31, 33, 0.35) 58%, rgba(1, 31, 33, 0) 75%),
+      linear-gradient(0deg, rgba(1, 31, 33, 0.85) 0%, rgba(1, 31, 33, 0) 22%),
+      linear-gradient(180deg, rgba(1, 31, 33, 0.7) 0%, rgba(1, 31, 33, 0) 18%);
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1100px;
+    pointer-events: none; // let the wall receive hover/click outside the text
+
+    a, button { pointer-events: auto; }
+
+    .hero-intro { max-width: 30rem; }
+
+    // Stats as a compact row under the text
+    .research-stats {
+      grid-template-columns: repeat(4, auto);
+      gap: 0.65rem;
+      min-width: 0;
+
+      .stat-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+        padding: 0.7rem 0.9rem;
+        background: rgba(1, 31, 33, 0.55);
+
+        &:hover { transform: translateY(-2px); }
+      }
+    }
+  }
+}
+
+.research-wall {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.research-wall-plane {
+  position: absolute;
+  inset: -35% -22% -35% 38%;
+  display: flex;
+  gap: $wall-gap;
+  transform: perspective(1800px) rotateX(16deg) rotateY(-14deg) rotate(6deg);
+  transform-origin: 50% 40%;
+}
+
+.wall-col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $wall-gap;
+  animation: wall-up 70s linear infinite;
+  will-change: transform;
+
+  &--down { animation-name: wall-down; }
+
+  &:nth-child(2) { animation-duration: 81s; }
+  &:nth-child(3) { animation-duration: 92s; }
+  &:nth-child(4) { animation-duration: 103s; }
+  &:nth-child(5) { animation-duration: 114s; }
+
+  &:hover,
+  &:focus-within { animation-play-state: paused; }
+}
+
+.wall-tile {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  aspect-ratio: 16 / 10;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0b2b2d;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 18px 40px -12px rgba(0, 0, 0, 0.8);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  img,
+  video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.05);
+    box-shadow:
+      0 0 0 2px $primary-light,
+      0 26px 60px -10px rgba(0, 0, 0, 0.9);
+    outline: none;
+
+    .wall-tile-caption { opacity: 1; transform: translateY(0); }
+  }
+}
+
+.wall-tile-caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1.4rem 0.7rem 0.55rem;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  color: #fff;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+// Tablet / phone: wall fills the card behind a heavier veil, text centred
+@media (max-width: 768px) {
+  .research-hero.research-hero--wall {
+    min-height: 0;
+
+    &::after {
+      background: linear-gradient(180deg, rgba(1, 31, 33, 0.82), rgba(1, 31, 33, 0.92));
+    }
+
+    .hero-content {
+      align-items: center;
+
+      .research-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        padding: 0;
+
+        .stat-card { align-items: center; }
+        .stat-label { white-space: normal; text-align: center; }
+      }
+    }
+  }
+
+  .research-wall-plane { inset: -20% -40% -20% -10%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wall-col { animation: none; }
+  .wall-tile { transition: none; }
+}

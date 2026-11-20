@@ -1,0 +1,42 @@
+{%- comment -%}
+  Animated wall of research visuals (tilted columns scrolling up/down).
+  Data: _data/research_wall.yml · Styles: partials/_research-wall.scss
+  Each column shows every tile, starting at a different offset, and repeats
+  the list once so the CSS loop (translateY -50%) is seamless.
+  Params: cols (default 4)
+{%- endcomment -%}
+{%- assign tiles = site.data.research_wall.tiles -%}
+{%- assign n = tiles | size -%}
+{%- assign cols = include.cols | default: 4 -%}
+{%- assign last_col = cols | minus: 1 -%}
+{%- assign last_tile = n | minus: 1 -%}
+{%- assign step = n | divided_by: cols | at_least: 1 -%}
+<div class="research-wall" aria-label="Research visuals">
+  <div class="research-wall-plane">
+    {%- for c in (0..last_col) -%}
+    {%- assign offset = c | times: step -%}
+    {%- assign dir = c | modulo: 2 -%}
+    <div class="wall-col{% if dir == 1 %} wall-col--down{% endif %}">
+      {%- for copy in (0..1) -%}
+      {%- for i in (0..last_tile) -%}
+        {%- assign idx = i | plus: offset | modulo: n -%}
+        {%- assign t = tiles[idx] -%}
+        {%- assign href = t.url -%}
+        {%- if t.post -%}
+          {%- assign p = site.posts | where_exp: "x", "x.id contains t.post" | first -%}
+          {%- assign href = p.url -%}
+        {%- endif -%}
+        <a class="wall-tile" href="{{ href | relative_url }}" title="{{ t.title | escape }}"{% if copy == 1 %} tabindex="-1" aria-hidden="true"{% endif %}>
+          {%- if t.video and c == 0 and copy == 0 -%}
+          <video src="{{ t.video | relative_url }}" poster="{{ t.image | relative_url }}" muted loop autoplay playsinline preload="metadata" width="640" height="400" aria-label="{{ t.title | escape }}"></video>
+          {%- else -%}
+          <img src="{{ t.image | relative_url }}" alt="{% if copy == 0 %}{{ t.title | escape }}{% endif %}" width="640" height="400" loading="eager" decoding="async">
+          {%- endif -%}
+          <span class="wall-tile-caption">{{ t.title }}</span>
+        </a>
+      {%- endfor -%}
+      {%- endfor -%}
+    </div>
+    {%- endfor -%}
+  </div>
+</div>

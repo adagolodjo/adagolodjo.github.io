@@ -1,0 +1,42 @@
+# Research wall — animated tiles behind the /research/ hero
+# (rendered by _includes/research-wall.html, styled in partials/_research-wall.scss).
+#
+# Add a tile:
+#   1. Export a 16:10 image, 640×400, WebP (~20–50 KB) into assets/images/wall/.
+#        ffmpeg -i in.png -vf "crop='min(iw,ih*1.6)':'min(ih,iw/1.6)',scale=640:400" out.png
+#        cwebp -q 72 out.png -o assets/images/wall/name.webp
+#   2. Optional `video:` — MP4 H.264, 640×400, muted, a few seconds, < 500 KB
+#        ffmpeg -i in.mp4 -vf "crop='min(iw,ih*1.6)':'min(ih,iw/1.6)',scale=640:400,fps=24" \
+#               -an -c:v libx264 -crf 30 -pix_fmt yuv420p -movflags +faststart name.mp4
+#      `image` is then its poster. Only the first column plays videos (performance).
+#   3. `url` is the page opened on click (project page, news post…); `post` may be
+#      used instead of `url` with a post filename fragment.
+#
+# Use real visuals of the research only (simulations, robots, experiments).
+# Order matters: columns start at different offsets in this list, so alternate topics.
+tiles:
+  - image: /assets/images/wall/cochlea-forces-1.webp
+    video: /assets/images/wall/cochlea-forces.mp4
+    title: "Cochlear implant insertion — contact forces"
+    url: /research/projects/robocop/
+  - image: /assets/images/wall/adagio-liver.webp
+    title: "ADAGIO — liver needle insertion"
+    url: /research/projects/adagio/
+  - image: /assets/images/wall/cosseroots-tentacle.webp
+    title: "COSSEROOTS — inverse simulation of a cable-driven tentacle"
+    url: /research/projects/cosseroots/
+  - image: /assets/images/wall/conect-needle.webp
+    title: "CONECT — robotic needle insertion in deformable tissue"
+    url: /research/projects/conect/
+  - image: /assets/images/wall/cochlea-forces-21.webp
+    title: "Electrode array insertion — force map"
+    url: /research/projects/robocop/
+  - image: /assets/images/wall/growing-robot-sim.webp
+    title: "Growing robot — eversion simulation"
+    url: /research/projects/growing-robot/
+  - image: /assets/images/wall/inria-prostate-feature.webp
+    title: "Inria feature — simulation and AR for prostate biopsy"
+    post: inria-prostate-cancer-ai-robotics
+  - image: /assets/images/wall/robocop-cochlea.webp
+    title: "ROBOCOP / ACCESS — cochlear implant robotics"
+    url: /research/projects/robocop/
