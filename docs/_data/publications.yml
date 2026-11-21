@@ -93,6 +93,16 @@
   keywords: ["Cochlear Implant", "MEMS", "Electroactive Polymer"]
 
 
+- type: poster
+  year: 2023
+  title: "Real-Time Simulation of Active Cochlear Implant and its Insertion"
+  authors: "Lingxiao Xun, Yinoussa Adagolodjo, Gang Zheng, Alexandre Kruszewski, Christian Duriez"
+  conference: "CIAP 2023 – Conference on Implantable Auditory Prostheses (poster P57, Lake Tahoe, USA)"
+  project: "robocop"
+  url: "https://ciaphome.org/index_html_files/CIAP2023FullProgramBook.pdf#page=85"
+  abstract: "Real-time simulation of an actuated cochlear implant during insertion: discrete Cosserat beam model of the electrode array, electromechanical model of the electro-responsive polymer actuation, and regulation of contact and friction forces with the cochlear wall."
+  keywords: ["Cochlear Implant", "Cosserat Beam", "Real-time Simulation", "Electroactive Polymer"]
+
 - type: journal
   year: 2022
   title: "Planning of Soft-Rigid Hybrid Arms in Contact with Compliant Environment: Application to the Transrectal Biopsy of the Prostate"

@@ -636,6 +636,8 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo â€
             <a href="{{ pub.hal_url }}" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
           {% elsif pub.doi %}
             <a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
+          {% elsif pub.url %}
+            <a href="{{ pub.url }}" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
           {% else %}
             {{ pub.title }}
           {% endif %}
@@ -877,6 +879,7 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo â€
     if (p.pages) f.push(['pages', String(p.pages).replace(/-+/, '--')]);
     if (p.doi) f.push(['doi', p.doi]);
     if (p.hal_url) f.push(['url', p.hal_url]);
+    else if (p.url) f.push(['url', p.url]);
     if (p.hal_id) f.push(['note', 'HAL: ' + p.hal_id]);
     return '@' + kind + '{' + key + ',\n' + f.map(function (x) {
       return '  ' + x[0] + ' = {' + x[1] + '}';
@@ -897,6 +900,7 @@ description: "Complete list of scientific publications by Yinoussa Adagolodjo â€
     }
     if (p.doi) out += 'https://doi.org/' + p.doi;
     else if (p.hal_url) out += p.hal_url;
+    else if (p.url) out += p.url;
     return out.trim();
   }
 
