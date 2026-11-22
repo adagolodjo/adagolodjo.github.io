@@ -104,7 +104,7 @@ track: maths
         <h4>Modéliser le périodique</h4>
         <div style="color: #666; font-size: 0.95rem; margin-top: 0.5rem; font-style: italic;">Formes algébrique et exponentielle, module et argument, formules d'Euler et de Moivre, équations du second degré.<br>Application : signaux sinusoïdaux et filtres — amplitude et déphasage du signal d'un capteur de niveau.</div>
         <ul>
-          <li><a href="https://nextcloud.univ-lille.fr/index.php/s/4MMtZtYbwrKPjGH" target="_blank" rel="noopener noreferrer">{% include ph.html name="file-pdf" %} Cours — Nombres complexes (PDF)</a></li>
+          <li><a href="https://nextcloud.univ-lille.fr/index.php/s/ZLwtsigqZcgk7LD" target="_blank" rel="noopener noreferrer">{% include ph.html name="file-pdf" %} Cours — Nombres complexes (PDF)</a></li>
         </ul>
       </div>
     </div>
