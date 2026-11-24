@@ -189,3 +189,13 @@
   level: "Undergraduate"
   hours_td: "20"
   evaluation: "Contrôle individuel + SAÉ (à confirmer)"
+
+# Master — Vision-Language Models
+- code: DATA_DRIVEN_DIAGNOSIS
+  title: "Data-Driven Diagnosis — Vision-Language Models"
+  semester: "2026-2027"
+  description: "Vision-language models from CLIP to robot actions: zero-shot classification, visual question answering, open-vocabulary detection, LoRA fine-tuning and honest evaluation"
+  syllabus: "/teaching/courses/data_driven_diagnosis/"
+  level: "Master"
+  hours_tp: "8"
+  evaluation: "Rapport, jeu de données, notebook"

@@ -176,6 +176,9 @@ page_kind: courses-index
     <a href="/teaching/courses/du-816260/" class="french-course-link">
       {% include ph.html name="factory" %} Usine Connectée (Formation Continue)
     </a>
+    <a href="/teaching/courses/data_driven_diagnosis/" class="french-course-link">
+      {% include ph.html name="magnifying-glass" %} Data-Driven Diagnosis
+    </a>
   </div>
 </div>
 
