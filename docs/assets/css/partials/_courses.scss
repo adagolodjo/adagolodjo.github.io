@@ -325,22 +325,35 @@
     gap: 1.5rem;
     margin-top: 1.75rem;
   }
+  // Default: light card, as used inside a white .section-card.
   .resource-card {
-    background: rgba(255, 255, 255, .1);
+    background: var(--course-bg-soft);
     padding: 1.6rem;
     border-radius: var(--course-radius-sm);
-    border: 1px solid rgba(255, 255, 255, .2);
+    border: 1px solid var(--course-border);
+    border-top: 4px solid var(--course-accent);
     transition: var(--course-transition);
     text-align: left;
 
-    &:hover { background: rgba(255, 255, 255, .18); transform: translateY(-4px); }
-    h4 { color: #fff; margin-bottom: .75rem; font-weight: 700; }
+    &:hover { background: var(--course-surface); box-shadow: var(--course-shadow); transform: translateY(-4px); }
+    h4 { color: var(--course-ink); margin-bottom: .75rem; font-weight: 700; }
   }
   .resource-icon {
     font-size: 2.2rem;
     margin-bottom: .75rem;
-    color: var(--course-primary-lt);
+    color: var(--course-accent);
     display: inline-flex;
+  }
+  // Translucent card on the dark .resources-section band.
+  .resources-section {
+    .resource-card {
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .2);
+
+      &:hover { background: rgba(255, 255, 255, .18); }
+      h4 { color: #fff; }
+    }
+    .resource-icon { color: var(--course-primary-lt); }
   }
   .resource-link {
     display: inline-flex;
@@ -775,4 +788,22 @@
     border-radius: 5px;
     padding: .05rem .4rem;
   }
+}
+
+// ── Tutorial pages written in Markdown (page_kind: course-tutorial) ──
+// Long URLs, inline code, wide tables and code blocks must not widen the
+// page on a phone: wrap the text, scroll the tables and code blocks.
+.course-tutorial {
+  p a,
+  li a,
+  p code,
+  li code { overflow-wrap: anywhere; }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  pre { overflow-x: auto; }
 }

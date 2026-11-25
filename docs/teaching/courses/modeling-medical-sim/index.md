@@ -194,6 +194,11 @@ track: medical
     <div class="section-icon">{% include ph.html name="books" %}</div>
     <h2 class="section-title">Ressources et outils</h2>
   </div>
+  <div class="info-box">
+    <h4>{% include ph.html name="wrench" %} Tutoriel : installer SOFA</h4>
+    <p>Installer le binaire SOFA avec SofaPython3 (Linux, macOS, Windows), puis tester une première scène Python. À faire avant la première séance de TP (30 à 45 min).</p>
+    <p><a href="{{ '/teaching/courses/modeling-medical-sim/installation-sofa/' | relative_url }}">{% include ph.html name="link" %} Ouvrir le tutoriel d'installation</a></p>
+  </div>
   <div class="resources-grid">
     <div class="resource-card">
       <div class="resource-icon">{% include ph.html name="wrench" %}</div>
